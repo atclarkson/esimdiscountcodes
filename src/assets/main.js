@@ -1,186 +1,179 @@
+// Main application functionality
 document.addEventListener("DOMContentLoaded", function () {
+  // Copy to clipboard functionality
+  initCopyButtons();
+
+  // Feedback buttons (thumbs up/down)
+  initFeedbackButtons();
+
+  // Mobile menu toggle
+  initMobileMenu();
+
+  // Dropdown functionality
+  initDropdown();
+});
+
+// Copy button functionality
+function initCopyButtons() {
   const copyButtons = document.querySelectorAll(".copy-code-btn");
 
   copyButtons.forEach((button) => {
     button.addEventListener("click", function () {
       const code = this.dataset.code;
 
-      // Copy to clipboard
       navigator.clipboard
         .writeText(code)
         .then(() => {
-          // Show success state
-          this.classList.add("copied");
-          const originalText = this.innerHTML;
-          this.innerHTML = code + " <span>✓ Copied!</span>";
-
-          // Reset after 2 seconds
-          setTimeout(() => {
-            this.classList.remove("copied");
-            this.innerHTML = originalText;
-          }, 2000);
+          showCopySuccess(this, code);
         })
         .catch(() => {
           // Fallback for older browsers
-          const textArea = document.createElement("textarea");
-          textArea.value = code;
-          document.body.appendChild(textArea);
-          textArea.select();
-          document.execCommand("copy");
-          document.body.removeChild(textArea);
-
-          // Show success state
-          this.classList.add("copied");
-          const originalText = this.innerHTML;
-          this.innerHTML = code + " <span>✓ Copied!</span>";
-
-          setTimeout(() => {
-            this.classList.remove("copied");
-            this.innerHTML = originalText;
-          }, 2000);
+          fallbackCopyToClipboard(code);
+          showCopySuccess(this, code);
         });
     });
   });
-});
+}
+
+function showCopySuccess(button, code) {
+  button.classList.add("copied");
+  const originalText = button.innerHTML;
+  button.innerHTML = code + " <span>✓ Copied!</span>";
+
+  setTimeout(() => {
+    button.classList.remove("copied");
+    button.innerHTML = originalText;
+  }, 2000);
+}
+
+function fallbackCopyToClipboard(text) {
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textArea);
+}
 
 // Feedback button functionality
-document.addEventListener("DOMContentLoaded", function () {
-  // Existing copy button code...
-
-  // Feedback buttons
+function initFeedbackButtons() {
   const feedbackButtons = document.querySelectorAll(".feedback-btn");
 
   feedbackButtons.forEach((button) => {
     button.addEventListener("click", function (e) {
       e.stopPropagation();
-      const feedback = this.dataset.feedback;
-      const rect = this.getBoundingClientRect();
-      const couponCard = this.closest(".coupon-card");
-
-      // Get all feedback buttons in this card
-      const cardButtons = couponCard.querySelectorAll(".feedback-btn");
-
-      // Remove selected state from all buttons in this card
-      cardButtons.forEach((btn) => btn.classList.remove("selected"));
-
-      // Add selected state to clicked button
-      this.classList.add("selected");
-
-      // Get the center of the button relative to the viewport
-      const centerX = rect.left + rect.width / 2;
-      const centerY = rect.top + rect.height / 2;
-
-      if (feedback === "up") {
-        // Thumbs up - fireworks effect
-        this.classList.add("active-up");
-        createFireworks(centerX, centerY);
-
-        setTimeout(() => {
-          this.classList.remove("active-up");
-        }, 600);
-      } else if (feedback === "down") {
-        // Thumbs down - poop effect
-        this.classList.add("active-down");
-        createPoopEffect(centerX, centerY);
-
-        setTimeout(() => {
-          this.classList.remove("active-down");
-        }, 600);
-      }
+      handleFeedback(this);
     });
   });
+}
 
-  function createFireworks(x, y) {
-    const colors = ["#ffd700", "#ff6b6b", "#4ecdc4", "#45b7d1", "#f9ca24"];
+function handleFeedback(button) {
+  const feedback = button.dataset.feedback;
+  const rect = button.getBoundingClientRect();
+  const couponCard = button.closest(".coupon-card");
 
-    for (let i = 0; i < 12; i++) {
-      const firework = document.createElement("div");
-      firework.className = "firework";
-      firework.style.left = x + "px";
-      firework.style.top = y + "px";
-      firework.style.backgroundColor =
-        colors[Math.floor(Math.random() * colors.length)];
+  // Reset all buttons in this card
+  const cardButtons = couponCard.querySelectorAll(".feedback-btn");
+  cardButtons.forEach((btn) => btn.classList.remove("selected"));
 
-      const angle = (i * 30 * Math.PI) / 180;
-      const distance = 50 + Math.random() * 30;
-      const dx = Math.cos(angle) * distance;
-      const dy = Math.sin(angle) * distance;
+  // Mark this button as selected
+  button.classList.add("selected");
 
-      firework.style.setProperty("--dx", dx + "px");
-      firework.style.setProperty("--dy", dy + "px");
+  // Get button center position
+  const centerX = rect.left + rect.width / 2;
+  const centerY = rect.top + rect.height / 2;
 
-      document.body.appendChild(firework);
-
-      setTimeout(() => {
-        firework.remove();
-      }, 800);
-    }
+  if (feedback === "up") {
+    button.classList.add("active-up");
+    createFireworks(centerX, centerY);
+    setTimeout(() => button.classList.remove("active-up"), 600);
+  } else if (feedback === "down") {
+    button.classList.add("active-down");
+    createPoopEffect(centerX, centerY);
+    setTimeout(() => button.classList.remove("active-down"), 600);
   }
+}
 
-  function createPoopEffect(x, y) {
-    const poopEmojis = ["💩", "🤮", "🚫"];
+function createFireworks(x, y) {
+  const colors = ["#ffd700", "#ff6b6b", "#4ecdc4", "#45b7d1", "#f9ca24"];
 
-    // Only create 3 emojis with better spacing
-    for (let i = 0; i < 3; i++) {
-      const poop = document.createElement("div");
-      poop.className = "poop-particle";
-      poop.textContent = poopEmojis[i];
+  for (let i = 0; i < 12; i++) {
+    const firework = document.createElement("div");
+    firework.className = "firework";
+    firework.style.left = x + "px";
+    firework.style.top = y + "px";
+    firework.style.backgroundColor =
+      colors[Math.floor(Math.random() * colors.length)];
 
-      // Spread them out more horizontally and vertically
-      const offsetX = (i - 1) * 25; // -25, 0, 25
-      const offsetY = Math.random() * 10 - 5; // Random small vertical offset
+    const angle = (i * 30 * Math.PI) / 180;
+    const distance = 50 + Math.random() * 30;
+    const dx = Math.cos(angle) * distance;
+    const dy = Math.sin(angle) * distance;
 
-      poop.style.left = x + offsetX + "px";
-      poop.style.top = y + offsetY + "px";
+    firework.style.setProperty("--dx", dx + "px");
+    firework.style.setProperty("--dy", dy + "px");
 
-      document.body.appendChild(poop);
+    document.body.appendChild(firework);
 
-      setTimeout(() => {
-        poop.remove();
-      }, 1000);
-    }
+    setTimeout(() => firework.remove(), 800);
   }
-});
-// Mobile menu toggle
-document.addEventListener("DOMContentLoaded", function () {
+}
+
+function createPoopEffect(x, y) {
+  const poopEmojis = ["💩", "🤮", "🚫"];
+
+  for (let i = 0; i < 3; i++) {
+    const poop = document.createElement("div");
+    poop.className = "poop-particle";
+    poop.textContent = poopEmojis[i];
+
+    const offsetX = (i - 1) * 25; // -25, 0, 25
+    const offsetY = Math.random() * 10 - 5;
+
+    poop.style.left = x + offsetX + "px";
+    poop.style.top = y + offsetY + "px";
+
+    document.body.appendChild(poop);
+
+    setTimeout(() => poop.remove(), 1000);
+  }
+}
+
+// Mobile menu functionality
+function initMobileMenu() {
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
   const navMenu = document.querySelector(".nav-menu");
 
-  if (mobileMenuBtn && navMenu) {
-    mobileMenuBtn.addEventListener("click", function () {
-      navMenu.classList.toggle("active");
-    });
+  if (!mobileMenuBtn || !navMenu) return;
 
-    // Close menu when clicking outside
-    document.addEventListener("click", function (e) {
-      if (!mobileMenuBtn.contains(e.target) && !navMenu.contains(e.target)) {
-        navMenu.classList.remove("active");
-      }
-    });
-  }
-});
+  mobileMenuBtn.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", function (e) {
+    if (!mobileMenuBtn.contains(e.target) && !navMenu.contains(e.target)) {
+      navMenu.classList.remove("active");
+    }
+  });
+}
 
 // Dropdown functionality
-document.addEventListener("DOMContentLoaded", function () {
-  // Existing code...
-
-  // Dropdown toggle
+function initDropdown() {
   const dropdown = document.querySelector(".dropdown");
   const dropdownToggle = document.querySelector(".dropdown-toggle");
 
-  if (dropdown && dropdownToggle) {
-    dropdownToggle.addEventListener("click", function (e) {
-      e.preventDefault();
-      dropdown.classList.toggle("active");
-    });
+  if (!dropdown || !dropdownToggle) return;
 
-    // Close dropdown when clicking outside
-    document.addEventListener("click", function (e) {
-      if (!dropdown.contains(e.target)) {
-        dropdown.classList.remove("active");
-      }
-    });
-  }
+  dropdownToggle.addEventListener("click", function (e) {
+    e.preventDefault();
+    dropdown.classList.toggle("active");
+  });
 
-  // Existing mobile menu code...
-});
+  // Close dropdown when clicking outside
+  document.addEventListener("click", function (e) {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove("active");
+    }
+  });
+}
