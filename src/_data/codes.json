@@ -4,8 +4,10 @@
     "lastModified": "2025-07-20",
     "description": "International eSIM plans for travelers",
     "url": "https://holafly.com",
-    "affiliateUrl": "https://holafly.com?ref=YOURCODE",
+    "affiliateUrl": "https://holafly.sjv.io/7aQQ9d",
     "primaryCode": "ADAMANDLINDS",
+    "rating": 3.5,
+    "priceCategory": "Cheap",
     "brandColors": {
       "primary": "#E6485C",
       "secondary": "#292B2E",
@@ -24,7 +26,7 @@
         "type": "affiliate"
       },
       {
-        "code": "STEPHANDPETE", 
+        "code": "STEPHANDPETE",
         "discount": "SPECIAL DISCOUNT ON ANY ESIM PLAN",
         "description": "Get a special discount on any eSIM plan",
         "verified": true,
@@ -34,7 +36,7 @@
         "type": "public"
       },
       {
-        "code": "MIKEANDASHLEY", 
+        "code": "MIKEANDASHLEY",
         "discount": "5% OFF YOUR ESIM",
         "description": "5% off your eSIM. Enjoy your trip!",
         "verified": true,
@@ -44,7 +46,7 @@
         "type": "public"
       },
       {
-        "code": "MYESIMNOW5", 
+        "code": "MYESIMNOW5",
         "discount": "5% OFF YOUR NEXT ORDER",
         "description": "Get a discount of 5% off your next order",
         "verified": true,
@@ -57,10 +59,13 @@
   },
   "airalo": {
     "name": "Airalo",
+    "lastModified": "2025-07-20",
     "description": "World's first eSIM store for travelers",
     "url": "https://airalo.com",
     "affiliateUrl": null,
     "primaryCode": "NEWTOAIRALO15",
+    "rating": 4.0,
+    "priceCategory": "Average",
     "brandColors": {
       "primary": "#B6496F",
       "secondary": "#404040",
@@ -79,17 +84,7 @@
         "type": "public"
       },
       {
-        "code": "HAPPY20", 
-        "discount": "20% OFF UNTIL END OF JUNE 2025",
-        "description": "Save 20% until end of June 2025",
-        "verified": true,
-        "lastTested": "2025-07-20",
-        "expiryDate": "2025-06-30",
-        "isPrimary": false,
-        "type": "public"
-      },
-      {
-        "code": "AIRALOESIM10", 
+        "code": "AIRALOESIM10",
         "discount": "10% OFF ESIMS VALUED $10+",
         "description": "10% discount for existing customers on $10+ purchases",
         "verified": true,
@@ -99,7 +94,7 @@
         "type": "public"
       },
       {
-        "code": "JOHANN4201", 
+        "code": "JOHANN4201",
         "discount": "15% OFF OR €3 OFF ESIM PLANS",
         "description": "15% or €3 off eSIM plans",
         "verified": true,
@@ -109,7 +104,7 @@
         "type": "public"
       },
       {
-        "code": "BRIAN0890", 
+        "code": "BRIAN0890",
         "discount": "$3 OFF YOUR FIRST PURCHASE",
         "description": "Get $3 off your first Airalo eSIM purchase",
         "verified": true,
@@ -119,7 +114,7 @@
         "type": "public"
       },
       {
-        "code": "HAPPY3", 
+        "code": "HAPPY3",
         "discount": "$3 OFF ANY PURCHASE",
         "description": "Save $3 anytime on Airalo eSIM plans",
         "verified": true,
@@ -137,6 +132,8 @@
     "url": "https://simlocal.com",
     "affiliateUrl": "https://simlocal.com?ref=YOURCODE",
     "primaryCode": "ADAMANDLINDS",
+    "rating": 3.0,
+    "priceCategory": "Cheap",
     "brandColors": {
       "primary": "#009C8F",
       "secondary": "#3A474E",
@@ -155,7 +152,7 @@
         "type": "affiliate"
       },
       {
-        "code": "EMMANUEL", 
+        "code": "EMMANUEL",
         "discount": "SPECIAL 10% OFF ESIM",
         "description": "Special 10% off eSIM plans",
         "verified": true,
@@ -165,7 +162,7 @@
         "type": "public"
       },
       {
-        "code": "LUKEPALMS", 
+        "code": "LUKEPALMS",
         "discount": "10% OFF FIRST ESIM",
         "description": "10% off your first eSIM purchase",
         "verified": true,
@@ -175,7 +172,7 @@
         "type": "public"
       },
       {
-        "code": "SAVANNAH", 
+        "code": "SAVANNAH",
         "discount": "EXTRA 10% OFF YOUR PLAN",
         "description": "Extra 10% off your eSIM plan",
         "verified": true,
@@ -185,7 +182,7 @@
         "type": "public"
       },
       {
-        "code": "TWOROAMING", 
+        "code": "TWOROAMING",
         "discount": "5% OFF YOUR ORDER",
         "description": "5% off your SimLocal order",
         "verified": true,
@@ -202,14 +199,27 @@
     "description": "eSIM plans by NordVPN",
     "url": "https://saily.com",
     "affiliateUrl": null,
-    "primaryCode": null,
+    "primaryCode": "HELLOSAILY",
+    "rating": 4.3,
+    "priceCategory": "Cheap",
     "brandColors": {
       "primary": "#BD2426",
       "secondary": "#404040",
       "accent": "#FFFFFF"
     },
     "logo": "/assets/saily_logo.svg",
-    "codes": []
+    "codes": [
+      {
+        "code": "HELLOSAILY",
+        "discount": "15% OFF ALL PLANS",
+        "description": "Best Saily discount code - 15% off",
+        "verified": true,
+        "lastTested": "2025-07-20",
+        "expiryDate": null,
+        "isPrimary": true,
+        "type": "public"
+      }
+    ]
   },
   "ubigi": {
     "name": "Ubigi",
@@ -217,14 +227,57 @@
     "description": "Flexible data plans worldwide",
     "url": "https://ubigi.com",
     "affiliateUrl": null,
-    "primaryCode": null,
+    "primaryCode": "E3MQXBBY",
+    "rating": 2.5,
+    "priceCategory": "Expensive",
     "brandColors": {
       "primary": "#008FA4",
       "secondary": "#000000",
       "accent": "#FFFFFF"
     },
     "logo": "/assets/ubigi_logo.svg",
-    "codes": []
+    "codes": [
+      {
+        "code": "E3MQXBBY",
+        "discount": "20% OFF ALL PLANS",
+        "description": "Best Ubigi discount code - 20% off",
+        "verified": true,
+        "lastTested": "2025-07-20",
+        "expiryDate": null,
+        "isPrimary": true,
+        "type": "public"
+      },
+      {
+        "code": "ENCHANTEE",
+        "discount": "10% OFF STOREWIDE",
+        "description": "10% off storewide at Ubigi eSIM",
+        "verified": true,
+        "lastTested": "2025-07-20",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public"
+      },
+      {
+        "code": "DANNYANDDIGGY",
+        "discount": "10% OFF STOREWIDE",
+        "description": "10% off storewide at Ubigi eSIM",
+        "verified": true,
+        "lastTested": "2025-07-20",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public"
+      },
+      {
+        "code": "ESIMSR10",
+        "discount": "10% OFF FIRST PURCHASE ONLY",
+        "description": "10% off first purchase only",
+        "verified": true,
+        "lastTested": "2025-07-20",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public"
+      }
+    ]
   },
   "nomad": {
     "name": "Nomad",
@@ -232,13 +285,256 @@
     "description": "eSIM for digital nomads",
     "url": "https://nomad.com",
     "affiliateUrl": null,
-    "primaryCode": null,
+    "primaryCode": "WOLF",
+    "rating": 3.6,
+    "priceCategory": "Average",
     "brandColors": {
       "primary": "#0C94F2",
       "secondary": "#2869A1",
       "accent": "#78B6FF"
     },
-    "logo": "/assets/nomad_logo.svg",
+    "logo": "/assets/nomad_logo.png",
+    "codes": [
+      {
+        "code": "WOLF",
+        "discount": "10% OFF ALL PLANS",
+        "description": "Nomad discount code - 10% off",
+        "verified": true,
+        "lastTested": "2025-07-20",
+        "expiryDate": null,
+        "isPrimary": true,
+        "type": "public"
+      }
+    ]
+  },
+  "redteago": {
+    "name": "RedteaGO",
+    "lastModified": "2025-07-20",
+    "description": "Global eSIM connectivity solutions",
+    "url": "https://redteago.com",
+    "affiliateUrl": null,
+    "primaryCode": "REDTEAGO14",
+    "rating": 4.2,
+    "priceCategory": "Cheap",
+    "brandColors": {
+      "primary": "#4B74FB",
+      "secondary": "#00054B",
+      "accent": "#8ED1FC"
+    },
+    "logo": "/assets/redteago_logo.png",
+    "codes": [
+      {
+        "code": "REDTEAGO14",
+        "discount": "5% OFF ALL PLANS",
+        "description": "RedteaGO discount code - 5% off",
+        "verified": true,
+        "lastTested": "2025-07-20",
+        "expiryDate": null,
+        "isPrimary": true,
+        "type": "public"
+      }
+    ]
+  },
+  "bnesim": {
+    "name": "BNEsim",
+    "lastModified": "2025-07-20",
+    "description": "Affordable eSIM plans worldwide",
+    "url": "https://bnesim.com",
+    "affiliateUrl": null,
+    "primaryCode": null,
+    "rating": 4.1,
+    "priceCategory": "Cheap",
+    "brandColors": {
+      "primary": "#F5D89E",
+      "secondary": "#313131",
+      "accent": "#FFFFFF"
+    },
+    "logo": "/assets/bnesim_logo.svg",
+    "codes": []
+  },
+  "alosim": {
+    "name": "AloSIM",
+    "lastModified": "2025-07-20",
+    "description": "Simple eSIM plans for global travel",
+    "url": "https://alosim.com",
+    "affiliateUrl": null,
+    "primaryCode": "ALOSAVE",
+    "rating": 3.8,
+    "priceCategory": "Average",
+    "brandColors": {
+      "primary": "#1530BB",
+      "secondary": "#132B43",
+      "accent": "#FFFFFF"
+    },
+    "logo": "/assets/AloSIM_logo.svg",
+    "codes": [
+      {
+        "code": "ALOSAVE",
+        "discount": "15% OFF ALL PLANS",
+        "description": "Best AloSIM discount code - 15% off",
+        "verified": true,
+        "lastTested": "2025-07-20",
+        "expiryDate": null,
+        "isPrimary": true,
+        "type": "public"
+      }
+    ]
+  },
+  "airhub": {
+    "name": "Airhub",
+    "lastModified": "2025-07-20",
+    "description": "Global eSIM connectivity",
+    "url": "https://airhub.com",
+    "affiliateUrl": null,
+    "primaryCode": "2025",
+    "rating": 3.7,
+    "priceCategory": "Cheap",
+    "brandColors": {
+      "primary": "#D80027",
+      "secondary": "#004346",
+      "accent": "#FFFFFF"
+    },
+    "logo": "/assets/airhub_logo.png",
+    "codes": [
+      {
+        "code": "2025",
+        "discount": "5% OFF ALL PLANS",
+        "description": "Airhub discount code - 5% off",
+        "verified": true,
+        "lastTested": "2025-07-20",
+        "expiryDate": null,
+        "isPrimary": true,
+        "type": "public"
+      }
+    ]
+  },
+  "upesim": {
+    "name": "UPeSIM",
+    "lastModified": "2025-07-20",
+    "description": "Affordable eSIM connectivity",
+    "url": "https://upesim.com",
+    "affiliateUrl": null,
+    "primaryCode": "REDDIT10",
+    "rating": 3.1,
+    "priceCategory": "Average",
+    "brandColors": {
+      "primary": "#286CB5",
+      "secondary": "#1A2E35",
+      "accent": "#FF4F5A"
+    },
+    "logo": "/assets/upesim_logo.png",
+    "codes": [
+      {
+        "code": "REDDIT10",
+        "discount": "10% OFF ALL PLANS",
+        "description": "UPeSIM Reddit discount - 10% off",
+        "verified": true,
+        "lastTested": "2025-07-20",
+        "expiryDate": null,
+        "isPrimary": true,
+        "type": "public"
+      }
+    ]
+  },
+  "instabridge": {
+    "name": "Instabridge",
+    "lastModified": "2025-07-20",
+    "description": "Global eSIM and WiFi solutions",
+    "url": "https://instabridge.com",
+    "affiliateUrl": null,
+    "primaryCode": "DPF10",
+    "rating": 3.0,
+    "priceCategory": "Cheap",
+    "brandColors": {
+      "primary": "#FF7261",
+      "secondary": "#000000",
+      "accent": "#FFFFFF"
+    },
+    "logo": "/assets/instabridge_logo.svg",
+    "codes": [
+      {
+        "code": "DPF10",
+        "discount": "10% OFF ALL PLANS",
+        "description": "Instabridge discount - 10% off",
+        "verified": true,
+        "lastTested": "2025-07-20",
+        "expiryDate": null,
+        "isPrimary": true,
+        "type": "public"
+      }
+    ]
+  },
+  "globalesim": {
+    "name": "GlobaleSIM",
+    "lastModified": "2025-07-20",
+    "description": "Global eSIM connectivity",
+    "url": "https://globalesim.com",
+    "affiliateUrl": null,
+    "primaryCode": "ESIMSIO10",
+    "rating": 2.7,
+    "priceCategory": "Average",
+    "brandColors": {
+      "primary": "#2BB1BB",
+      "secondary": "#020381",
+      "accent": "#FECDA5"
+    },
+    "logo": "/assets/GlobaleSIM_logo.svg",
+    "codes": [
+      {
+        "code": "ESIMSIO10",
+        "discount": "10% OFF ALL PLANS",
+        "description": "GlobaleSIM discount - 10% off",
+        "verified": true,
+        "lastTested": "2025-07-20",
+        "expiryDate": null,
+        "isPrimary": true,
+        "type": "public"
+      }
+    ]
+  },
+  "yesim": {
+    "name": "Yesim",
+    "lastModified": "2025-07-20",
+    "description": "Global eSIM solutions",
+    "url": "https://yesim.com",
+    "affiliateUrl": null,
+    "primaryCode": "BONUS3",
+    "rating": 2.5,
+    "priceCategory": "Expensive",
+    "brandColors": {
+      "primary": "#FF7A00",
+      "secondary": "#013564",
+      "accent": "#FFFFFF"
+    },
+    "logo": "/assets/yesim_logo.png",
+    "codes": [
+      {
+        "code": "BONUS3",
+        "discount": "3 EUR BONUS",
+        "description": "Get 3 EUR bonus on your account",
+        "verified": true,
+        "lastTested": "2025-07-20",
+        "expiryDate": null,
+        "isPrimary": true,
+        "type": "public"
+      }
+    ]
+  },
+  "orange": {
+    "name": "Orange",
+    "lastModified": "2025-07-20",
+    "description": "European eSIM plans",
+    "url": "https://orange.com",
+    "affiliateUrl": null,
+    "primaryCode": null,
+    "rating": 2.0,
+    "priceCategory": "Expensive",
+    "brandColors": {
+      "primary": "#FF6600",
+      "secondary": "#000000",
+      "accent": "#FFFFFF"
+    },
+    "logo": "/assets/orange_logo.svg",
     "codes": []
   }
 }
