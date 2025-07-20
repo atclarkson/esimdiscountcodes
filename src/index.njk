@@ -1,0 +1,67 @@
+---
+layout: base.njk
+title: "eSIM Discount Codes - Best Promo Codes for International Travel"
+description: "Find verified discount codes for top eSIM providers. Save on Holafly, Airalo, Saily and more. Updated daily with working promo codes for international travel."
+---
+
+<div class="home-page">
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Find the Best eSIM Discount Codes</h1>
+        <p class="hero-subtitle">Save money on international eSIM plans with verified promo codes</p>
+        <div class="hero-stats">
+            <span>✅ 15+ verified codes</span>
+            <span>🌍 6 top providers</span>
+            <span>💰 Save up to 15%</span>
+        </div>
+    </section>
+
+    <!-- What is eSIM Section -->
+    <section class="what-is-esim">
+        <h2>What is an eSIM?</h2>
+        <p>An eSIM (embedded SIM) is a digital SIM card that lets you connect to mobile networks without a physical SIM card. Perfect for international travel, eSIMs eliminate expensive roaming charges and give you instant connectivity in 170+ countries.</p>
+        
+        <div class="esim-benefits">
+            <div class="benefit">
+                <h3>🚫 No Physical SIM</h3>
+                <p>Digital activation via QR code</p>
+            </div>
+            <div class="benefit">
+                <h3>🌍 Global Coverage</h3>
+                <p>Works in 170+ countries worldwide</p>
+            </div>
+            <div class="benefit">
+                <h3>💰 Cost Effective</h3>
+                <p>Much cheaper than roaming charges</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Providers Grid -->
+    <section class="providers-section">
+        <h2>Top eSIM Providers with Discount Codes</h2>
+        <div class="providers-grid">
+            {% for key, provider in codes %}
+            <a href="/{{ key }}" class="provider-card-link">
+                <div class="provider-card">
+                    <div class="provider-logo">
+                        {% if provider.logo %}
+                            <img src="{{ provider.logo }}" alt="{{ provider.name }} logo" class="logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="logo-fallback" style="display: none;">{{ provider.name }}</div>
+                        {% else %}
+                            <div class="logo-fallback">{{ provider.name }}</div>
+                        {% endif %}
+                    </div>
+                    <h3>{{ provider.name }} Discount Codes</h3>
+                    {% if provider.primaryCode %}
+                    <p class="discount">Save with code <strong>{{ provider.primaryCode }}</strong></p>
+                    {% else %}
+                    <p class="discount">Coming soon</p>
+                    {% endif %}
+                    <p>{{ provider.description }}</p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+</div>

@@ -1,0 +1,106 @@
+---
+layout: base.njk
+pagination:
+  data: providerEntries
+  size: 1
+  alias: providerEntry
+permalink: "/{{ providerEntry[0] }}/"
+eleventyComputed:
+  title: "{{ providerEntry[1].name }} Discount Codes & Promo Codes - Save Money July 2025"
+  description: "Save with verified {{ providerEntry[1].name }} discount codes. Best code: {{ providerEntry[1].primaryCode }} {% if providerEntry[1].codes[0] %}gives {{ providerEntry[1].codes[0].discount | lower }}{% endif %}. Updated daily with working promo codes."
+---
+
+{% set providerKey = providerEntry[0] %}
+{% set provider = providerEntry[1] %}
+
+<div class="provider-page" data-provider="{{ providerKey }}">
+    <!-- Breadcrumbs for SEO and UX -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="/">Home</a></li>
+            <li><span>{{ provider.name }} Discount Codes</span></li>
+        </ol>
+    </nav>
+
+    <!-- Provider Header with Logo (for all pages) -->
+    <header class="provider-header">
+        <div class="provider-logo">
+            {% if provider.logo %}
+                <img src="{{ provider.logo }}" alt="{{ provider.name }} logo" class="logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="logo-fallback" style="display: none;">{{ provider.name }}</div>
+            {% else %}
+                <div class="logo-fallback">{{ provider.name }}</div>
+            {% endif %}
+        </div>
+        <h1>{{ provider.name }} Discount Codes</h1>
+        <p class="subtitle">{{ provider.description }}</p>
+    </header>
+
+    {% if provider.codes and provider.codes.length > 0 %}
+        <!-- Has Codes -->
+        <section class="codes-section">
+            <h2>Top {{ provider.name }} Discount Codes For July 20th, 2025</h2>
+            
+            {% for code in provider.codes %}
+<div class="coupon-card {% if code.isPrimary %}primary-code{% endif %}">
+    <div class="coupon-header">
+        <h3>{{ code.discount }}</h3>
+        {% if code.verified %}
+        <span class="verified-badge">
+            <i class="fas fa-check-circle"></i> 
+            Last reported working {{ code.lastTested }}
+        </span>
+        {% endif %}
+    </div>
+    
+    <div class="coupon-code">
+        <button class="copy-code-btn" data-code="{{ code.code }}">
+            {{ code.code }} <span>Copy code</span>
+        </button>
+    </div>
+    
+    <p class="coupon-description">{{ code.description }}</p>
+    
+    <!-- Feedback buttons -->
+    <div class="feedback-buttons">
+        <button class="feedback-btn thumbs-up" data-feedback="up" title="This code worked!">
+            <i class="fas fa-thumbs-up"></i>
+        </button>
+        <button class="feedback-btn thumbs-down" data-feedback="down" title="This code didn't work">
+            <i class="fas fa-thumbs-down"></i>
+        </button>
+    </div>
+</div>
+{% endfor %}
+        </section>
+
+        <!-- Content Section (check for markdown files) -->
+        <section class="content-section">
+            {{ ("content/" + providerKey + ".md") | includeMarkdown | safe }}
+        </section>
+        
+    {% else %}
+        <!-- Coming Soon -->
+        <section class="coming-soon-section">
+            <div class="coming-soon-content">
+                <h2><i class="fas fa-clock"></i> Coming Soon</h2>
+                <p>We're working hard to bring you the best {{ provider.name }} discount codes and promo codes. Check back soon for verified codes that will save you money on your eSIM plans.</p>
+                
+                <div class="explore-section">
+                    <h3><i class="fas fa-compass"></i> Explore Other Providers</h3>
+                    <p>While you wait, check out our verified discount codes for other eSIM providers:</p>
+                    <div class="provider-links">
+                        {% for key, otherProvider in codes %}
+                            {% if otherProvider.codes and otherProvider.codes.length > 0 and key != providerKey %}
+                            <a href="/{{ key }}" class="provider-link">
+                                <span class="provider-name">{{ otherProvider.name }}</span>
+                                <span class="provider-offer">Save with verified codes</span>
+                            </a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+</div>

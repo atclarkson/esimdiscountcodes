@@ -1,0 +1,40 @@
+---
+layout: base.njk
+title: "Holafly Discount Codes & Promo Codes - Save 5% in July 2025"
+description: "Save up to 5% with verified Holafly discount codes. Best code ADAMANDLINDS gives 5% off all eSIM plans. Updated daily with working promo codes for international travel."
+---
+
+{% set provider = codes.holafly %}
+
+<div class="provider-page" data-provider="holafly">
+    <section class="codes-section">
+        <h2>Top {{ provider.name }} Discount Codes For July 20th, 2025</h2>
+        
+        {% for code in provider.codes %}
+        <div class="coupon-card {% if code.isPrimary %}primary-code{% endif %}">
+            <div class="coupon-header">
+                <h3>{{ code.discount }}</h3>
+                {% if code.verified %}
+                <span class="verified-badge">
+                    <i class="fas fa-check-circle"></i> 
+                    Last reported working {{ code.lastTested }}
+                </span>
+                {% endif %}
+            </div>
+            
+            <div class="coupon-code">
+                <button class="copy-code-btn" data-code="{{ code.code }}">
+                    {{ code.code }} <span>Copy code</span>
+                </button>
+            </div>
+            
+            <p class="coupon-description">{{ code.description }}</p>
+        </div>
+        {% endfor %}
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        {{ "content/holafly.md" | includeMarkdown | safe }}
+    </section>
+</div>
