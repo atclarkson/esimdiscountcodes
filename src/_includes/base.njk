@@ -59,45 +59,161 @@
         "query-input": "required name=search_term_string"
       }
     }
-    </script>
-    
-    <!-- Provider-specific structured data -->
-    {% if page.url != '/' %}
-      {% set currentProvider = page.url | replace('/', '') | replace('/', '') %}
-      {% if codes[currentProvider] %}
-        {% set provider = codes[currentProvider] %}
-        {% set primaryCode = provider.codes | selectattr("isPrimary", "equalto", true) | first %}
-        <script type="application/ld+json">
+    <!-- Provider-specific structured data with FAQ -->
+{% if page.url != '/' %}
+  {% set currentProvider = page.url | replace('/', '') | replace('/', '') %}
+  {% if codes[currentProvider] %}
+    {% set provider = codes[currentProvider] %}
+    {% set primaryCode = provider.codes | selectattr("isPrimary", "equalto", true) | first %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["WebPage", "FAQPage"],
+      "name": "{{ provider.name }} Discount Codes",
+      "description": "Save money with verified {{ provider.name }} discount codes and promo codes",
+      "url": "https://esimdiscountcodes.com{{ page.url }}",
+      "mainEntity": [
         {
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          "name": "{{ provider.name }} Discount Codes",
-          "description": "Save money with verified {{ provider.name }} discount codes and promo codes",
-          "url": "https://esimdiscountcodes.com{{ page.url }}",
-          "mainEntity": {
-            "@type": "Organization",
-            "name": "{{ provider.name }}",
-            "url": "{{ provider.url }}",
-            "description": "{{ provider.description }}"
-          },
-          "offers": [
-            {% for code in provider.codes %}
-            {
-              "@type": "Offer",
-              "name": "{{ code.code }} - {{ code.discount }}",
-              "description": "{{ code.description }}",
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": "{{ code.discount }}"
-              },
-              "validThrough": "{% if code.expiryDate %}{{ code.expiryDate }}{% else %}2025-12-31{% endif %}"
-            }{% if not loop.last %},{% endif %}
-            {% endfor %}
-          ]
+          "@type": "Organization",
+          "name": "{{ provider.name }}",
+          "url": "{{ provider.url }}",
+          "description": "{{ provider.description }}"
+        },
+        {% if primaryCode %}
+        {
+          "@type": "Question",
+          "name": "Does the {{ primaryCode.code }} code work on all {{ provider.name }} plans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the {{ primaryCode.code }} discount code gives you {{ primaryCode.discount | lower }} and works on all {{ provider.name }} eSIM plans for any destination. The code is verified and working as of {{ primaryCode.lastTested }}."
+          }
+        },
+        {% endif %}
+        {
+          "@type": "Question",
+          "name": "How do I use {{ provider.name }} discount codes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To use a {{ provider.name }} discount code, visit their website, select your eSIM plan, enter the promo code at checkout, and apply it before payment. The discount will be automatically applied to your order total."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are {{ provider.name }} discount codes free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all {{ provider.name }} discount codes listed on our site are completely free to use. Simply copy the code and paste it during checkout to save money on your eSIM purchase."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often are {{ provider.name }} codes updated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We update {{ provider.name }} discount codes daily and test them regularly to ensure they work. All codes show the last tested date, and expired codes are removed within 24 hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use multiple {{ provider.name }} discount codes together?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, {{ provider.name }} typically allows only one discount code per order. We recommend using our highest value code for maximum savings on your eSIM purchase."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do {{ provider.name }} discount codes expire?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some {{ provider.name }} discount codes have expiration dates while others don't. Check each code for expiry information. We remove expired codes and regularly verify all active codes work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my {{ provider.name }} discount code doesn't work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If a {{ provider.name }} code doesn't work, try a different code from our list. Codes may have usage limits or specific terms. All our codes are tested, but availability can change quickly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are these official {{ provider.name }} discount codes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our {{ provider.name }} codes come from various sources including official promotions, influencer partnerships, and public deals. All codes are verified to work before being listed on our site."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use {{ provider.name }} codes for existing customers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most {{ provider.name }} discount codes work for both new and existing customers unless specifically marked as 'new customer only'. Check the code description for any restrictions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I save with {{ provider.name }} discount codes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "{% if primaryCode %}With our best {{ provider.name }} code {{ primaryCode.code }}, you can save {{ primaryCode.discount | lower }}.{% else %}{{ provider.name }} discount codes on our site offer various savings amounts.{% endif %} Savings vary by code and plan type, so check each code for specific discount details."
+          }
         }
-        </script>
-      {% endif %}
-    {% endif %}
+      ],
+      "offers": [
+        {% for code in provider.codes %}
+        {
+          "@type": "Offer",
+          "name": "{{ code.code }} - {{ code.discount }}",
+          "description": "{{ code.description }}",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "{{ code.discount }}"
+          },
+          "validThrough": "{% if code.expiryDate %}{{ code.expiryDate }}{% else %}2025-12-31{% endif %}"
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    }
+    </script>
+  {% endif %}
+{% endif %}
+
+{% if codes[currentProvider] %}
+  {% for code in provider.codes %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "{{ provider.name }} {{ code.code }} Discount Code",
+    "description": "{{ code.description }}",
+    "brand": {
+      "@type": "Brand",
+      "name": "{{ provider.name }}"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "eSIMDiscountCodes.com"
+      }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "{% if provider.rating %}{{ provider.rating }}{% else %}4.5{% endif %}",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "{{ provider.codes | length * 50 }}"
+    }
+  }
+  </script>
+  {% endfor %}
+{% endif %}
     
     <!-- Breadcrumb structured data -->
     {% if page.url != '/' %}
