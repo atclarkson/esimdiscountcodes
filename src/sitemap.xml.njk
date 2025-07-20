@@ -1,0 +1,44 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage - high priority, changes daily -->
+  <url>
+    <loc>{{ site.url }}/</loc>
+    <lastmod>{{ buildTime | date("YYYY-MM-DD") }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Provider pages - medium-high priority, change weekly -->
+  {% for key, provider in codes %}
+  <url>
+    <loc>{{ site.url }}/{{ key }}/</loc>
+    <lastmod>{{ provider.lastModified | default(buildTime) | date("YYYY-MM-DD") }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  {% endfor %}
+  
+  <!-- About pages - low priority, change rarely -->
+  {% for item in about %}
+  <url>
+    <loc>{{ site.url }}{{ item.url }}</loc>
+    <lastmod>{{ buildTime | date("YYYY-MM-DD") }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  {% endfor %}
+  
+  <!-- Resource pages - medium priority, educational content -->
+  {% for item in resources %}
+  <url>
+    <loc>{{ site.url }}{{ item.url }}</loc>
+    <lastmod>{{ buildTime | date("YYYY-MM-DD") }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  {% endfor %}
+</urlset>

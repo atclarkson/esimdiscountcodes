@@ -1,6 +1,7 @@
 {
   "holafly": {
     "name": "Holafly",
+    "lastModified": "2025-07-20",
     "description": "International eSIM plans for travelers",
     "url": "https://holafly.com",
     "affiliateUrl": "https://holafly.com?ref=YOURCODE",
@@ -131,6 +132,7 @@
   },
   "simlocal": {
     "name": "SimLocal",
+    "lastModified": "2025-07-20",
     "description": "Local eSIM plans worldwide",
     "url": "https://simlocal.com",
     "affiliateUrl": "https://simlocal.com?ref=YOURCODE",
@@ -196,6 +198,7 @@
   },
   "saily": {
     "name": "Saily",
+    "lastModified": "2025-07-20",
     "description": "eSIM plans by NordVPN",
     "url": "https://saily.com",
     "affiliateUrl": null,
@@ -210,6 +213,7 @@
   },
   "ubigi": {
     "name": "Ubigi",
+    "lastModified": "2025-07-20",
     "description": "Flexible data plans worldwide",
     "url": "https://ubigi.com",
     "affiliateUrl": null,
@@ -224,6 +228,7 @@
   },
   "nomad": {
     "name": "Nomad",
+    "lastModified": "2025-07-20",
     "description": "eSIM for digital nomads",
     "url": "https://nomad.com",
     "affiliateUrl": null,

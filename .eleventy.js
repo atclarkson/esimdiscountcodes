@@ -2,10 +2,26 @@ module.exports = function(eleventyConfig) {
   // Copy CSS and assets
   eleventyConfig.addPassthroughCopy("src/style/style.css");
   eleventyConfig.addPassthroughCopy("src/assets");
-
-    // Add build timestamp
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
+  
+  // Add build timestamp
   eleventyConfig.addGlobalData("buildTime", () => {
     return new Date().toISOString();
+  });
+
+  // Add site data
+  eleventyConfig.addGlobalData("site", {
+    url: "https://esimdiscountcodes.com",
+    name: "eSIM Discount Codes"
+  });
+
+  // Add date filter for sitemap
+  eleventyConfig.addFilter("date", function(date, format) {
+    const d = new Date(date);
+    if (format === "YYYY-MM-DD") {
+      return d.toISOString().split('T')[0];
+    }
+    return d.toISOString();
   });
   
   // Add markdown processing
