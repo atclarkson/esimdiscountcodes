@@ -55,7 +55,48 @@
         "isPrimary": false,
         "type": "public"
       }
-    ]
+    ],
+    "totalScore": "3.5",
+    "easyToUse": true,
+    "support24h": true,
+    "liveChatSupport": true,
+    "oneESIMAllDestinations": false,
+    "reusableESIM": false,
+    "easyRefund": true,
+    "devicesSupported": true,
+    "fastSpeeds": true,
+    "hasShortTermPlans": false,
+    "prepaidPlans": true,
+    "securityFeatures": false,
+    "globalRegionalPackage": false,
+    "smsIncluded": false,
+    "callsIncluded": true,
+    "dataSharingSupported": true,
+    "localNumber": true,
+    "dataCalculator": true,
+    "onlineTopUp": true,
+    "minValidity": "1 day",
+    "destinationsAvailable": "190+",
+    "expirationAfterPurchase": "30 days",
+    "pricing": {
+      "countries": {
+        "United States": "$1.99 (1 day)",
+        "Italy": "$1.99 (1 day)",
+        "France": "$1.99 (1 day)",
+        "Spain": "$1.99 (1 day)",
+        "China": "$1.99 (1 day)",
+        "Thailand": "$1.99 (1 day)",
+        "Japan": "$1.99 (1 day)",
+        "Turkey": "$1.99 (1 day)",
+        "Malaysia": "$1.99 (1 day)",
+        "UAE": "$6.90 (1 day)"
+      },
+      "regions": {
+        "Global": "$9.90 (1 day)",
+        "Europe": "$1.99 (1 day)",
+        "Asia": "$1.99 (1 day)"
+      }
+    }
   },
   "airalo": {
     "name": "Airalo",
@@ -95,8 +136,8 @@
       },
       {
         "code": "JOHANN4201",
-        "discount": "15% OFF OR €3 OFF ESIM PLANS",
-        "description": "15% or €3 off eSIM plans",
+        "discount": "15% OFF OR \u20ac3 OFF ESIM PLANS",
+        "description": "15% or \u20ac3 off eSIM plans",
         "verified": true,
         "lastTested": "2025-07-20",
         "expiryDate": null,
@@ -123,75 +164,48 @@
         "isPrimary": false,
         "type": "public"
       }
-    ]
-  },
-  "simlocal": {
-    "name": "SimLocal",
-    "lastModified": "2025-07-21",
-    "description": "Local eSIM plans worldwide",
-    "url": "https://simlocal.com",
-    "affiliateUrl": "https://simlocal.com?ref=YOURCODE",
-    "primaryCode": "ADAMANDLINDS",
-    "rating": 3.0,
-    "priceCategory": "Cheap",
-    "brandColors": {
-      "primary": "#009C8F",
-      "secondary": "#3A474E",
-      "accent": "#E0F2F1"
-    },
-    "logo": "/assets/simlocal_logo.svg",
-    "codes": [
-      {
-        "code": "ADAMANDLINDS",
-        "discount": "10% OFF ALL PLANS",
-        "description": "Best SimLocal discount code",
-        "verified": true,
-        "lastTested": "2025-07-20",
-        "expiryDate": null,
-        "isPrimary": true,
-        "type": "affiliate"
+    ],
+    "totalScore": "4",
+    "easyToUse": true,
+    "support24h": true,
+    "liveChatSupport": false,
+    "oneESIMAllDestinations": false,
+    "reusableESIM": false,
+    "easyRefund": true,
+    "devicesSupported": true,
+    "fastSpeeds": true,
+    "hasShortTermPlans": true,
+    "prepaidPlans": true,
+    "securityFeatures": false,
+    "globalRegionalPackage": true,
+    "smsIncluded": "yes (global plan only)",
+    "callsIncluded": "yes (global plan only)",
+    "dataSharingSupported": true,
+    "localNumber": false,
+    "dataCalculator": true,
+    "onlineTopUp": true,
+    "minValidity": "7 days",
+    "destinationsAvailable": "200+",
+    "expirationAfterPurchase": "no expiration",
+    "pricing": {
+      "countries": {
+        "United States": "$4.50 (1GB)",
+        "Italy": "$4.50 (1GB)",
+        "France": "$4.50 (1GB)",
+        "Spain": "$4.50 (1GB)",
+        "China": "$5 (1GB)",
+        "Thailand": "$4.50 (1GB)",
+        "Japan": "$4.50 (1GB)",
+        "Turkey": "$4.50 (1GB)",
+        "Malaysia": "$4.50 (1GB)",
+        "UAE": "$4.50 (1GB)"
       },
-      {
-        "code": "EMMANUEL",
-        "discount": "SPECIAL 10% OFF ESIM",
-        "description": "Special 10% off eSIM plans",
-        "verified": true,
-        "lastTested": "2025-07-20",
-        "expiryDate": null,
-        "isPrimary": false,
-        "type": "public"
-      },
-      {
-        "code": "LUKEPALMS",
-        "discount": "10% OFF FIRST ESIM",
-        "description": "10% off your first eSIM purchase",
-        "verified": true,
-        "lastTested": "2025-07-20",
-        "expiryDate": null,
-        "isPrimary": false,
-        "type": "public"
-      },
-      {
-        "code": "SAVANNAH",
-        "discount": "EXTRA 10% OFF YOUR PLAN",
-        "description": "Extra 10% off your eSIM plan",
-        "verified": true,
-        "lastTested": "2025-07-20",
-        "expiryDate": null,
-        "isPrimary": false,
-        "type": "public"
-      },
-      {
-        "code": "TWOROAMING",
-        "discount": "5% OFF YOUR ORDER",
-        "description": "5% off your SimLocal order",
-        "verified": true,
-        "lastTested": "2025-07-20",
-        "expiryDate": null,
-        "isPrimary": false,
-        "type": "public"
+      "regions": {
+        "Global": "$9.49 (1GB)",
+        "Europe": "$5.27 (1GB)",
+        "Asia": "$5.27 (1GB)"
       }
-    ]
+    }
   },
   "saily": {
     "name": "Saily",
@@ -219,7 +233,50 @@
         "isPrimary": true,
         "type": "public"
       }
-    ]
+    ],
+    "easyToUse": true,
+    "support24h": true,
+    "emailSupport": true,
+    "liveChatSupport": true,
+    "reusableESIM": true,
+    "easyRefund": true,
+    "devicesSupported": true,
+    "hasShortTermPlans": true,
+    "prepaidPlans": true,
+    "securityFeatures": true,
+    "globalRegionalPackage": true,
+    "smsIncluded": false,
+    "callsIncluded": false,
+    "dataSharingSupported": true,
+    "localNumber": false,
+    "dataCalculator": true,
+    "unlimitedData": true,
+    "onlineTopUp": true,
+    "minValidity": "7 days",
+    "destinationsAvailable": "200+",
+    "expirationAfterPurchase": "30 days",
+    "totalScore": "4.3",
+    "oneESIMAllDestinations": true,
+    "fastSpeeds": true,
+    "pricing": {
+      "countries": {
+        "United States": "$3.99 (1GB)",
+        "Italy": "$3.99 (1GB)",
+        "France": "$3.99 (1GB)",
+        "Spain": "$3.99 (1GB)",
+        "China": "$4.49 (1GB)",
+        "Thailand": "$2.99 (1GB)",
+        "Japan": "$3.99 (1GB)",
+        "Turkey": "$3.99 (1GB)",
+        "Malaysia": "$3.99 (1GB)",
+        "UAE": "$3.99 (1GB)"
+      },
+      "regions": {
+        "Global": "$8.99 (1GB)",
+        "Europe": "$4.99 (1GB)",
+        "Asia": "$4.99 (1GB)"
+      }
+    }
   },
   "ubigi": {
     "name": "Ubigi",
@@ -277,7 +334,142 @@
         "isPrimary": false,
         "type": "public"
       }
-    ]
+    ],
+    "totalScore": "2.5",
+    "easyToUse": true,
+    "support24h": false,
+    "liveChatSupport": false,
+    "oneESIMAllDestinations": true,
+    "reusableESIM": true,
+    "easyRefund": false,
+    "devicesSupported": true,
+    "fastSpeeds": true,
+    "hasShortTermPlans": true,
+    "prepaidPlans": true,
+    "securityFeatures": false,
+    "globalRegionalPackage": true,
+    "smsIncluded": false,
+    "callsIncluded": false,
+    "dataSharingSupported": true,
+    "localNumber": false,
+    "dataCalculator": true,
+    "onlineTopUp": true,
+    "minValidity": "1 day",
+    "destinationsAvailable": "200+",
+    "expirationAfterPurchase": "18 months",
+    "pricing": {
+      "countries": {
+        "United States": "$4 (1GB)",
+        "Italy": "$5 (3GB)",
+        "France": "$4 (3GB)",
+        "Spain": "$5 (3GB)",
+        "China": "$5 (1GB)",
+        "Thailand": "$4 (1GB)",
+        "Japan": "$4 (1GB)",
+        "Turkey": "$4 (1GB)",
+        "Malaysia": "$6 (3GB)",
+        "UAE": "$5 (1GB)"
+      },
+      "regions": {
+        "Global": "$25 (1GB)",
+        "Europe": "$9 (3GB)",
+        "Asia": "$9 (1GB)"
+      }
+    }
+  },
+  "simlocal": {
+    "name": "SimLocal",
+    "lastModified": "2025-07-21",
+    "description": "Local eSIM plans worldwide",
+    "url": "https://simlocal.com",
+    "affiliateUrl": "https://simlocal.com?ref=YOURCODE",
+    "primaryCode": "ADAMANDLINDS",
+    "rating": 3.0,
+    "priceCategory": "Cheap",
+    "brandColors": {
+      "primary": "#009C8F",
+      "secondary": "#3A474E",
+      "accent": "#E0F2F1"
+    },
+    "logo": "/assets/simlocal_logo.svg",
+    "codes": [
+      {
+        "code": "ADAMANDLINDS",
+        "discount": "10% OFF ALL PLANS",
+        "description": "Best SimLocal discount code",
+        "verified": true,
+        "lastTested": "2025-07-21",
+        "expiryDate": null,
+        "isPrimary": true,
+        "type": "affiliate"
+      },
+      {
+        "code": "EMMANUEL",
+        "discount": "SPECIAL 10% OFF ESIM",
+        "description": "Special 10% off eSIM plans",
+        "verified": true,
+        "lastTested": "2025-07-20",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public"
+      },
+      {
+        "code": "LUKEPALMS",
+        "discount": "10% OFF FIRST ESIM",
+        "description": "10% off your first eSIM purchase",
+        "verified": true,
+        "lastTested": "2025-07-20",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public"
+      },
+      {
+        "code": "SAVANNAH",
+        "discount": "EXTRA 10% OFF YOUR PLAN",
+        "description": "Extra 10% off your eSIM plan",
+        "verified": true,
+        "lastTested": "2025-07-20",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public"
+      },
+      {
+        "code": "TWOROAMING",
+        "discount": "5% OFF YOUR ORDER",
+        "description": "5% off your SimLocal order",
+        "verified": true,
+        "lastTested": "2025-07-20",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public"
+      }
+    ],
+    "totalScore": "3",
+    "easyToUse": true,
+    "support24h": false,
+    "liveChatSupport": false,
+    "oneESIMAllDestinations": false,
+    "reusableESIM": false,
+    "easyRefund": true,
+    "devicesSupported": true,
+    "fastSpeeds": true,
+    "hasShortTermPlans": true,
+    "prepaidPlans": false,
+    "securityFeatures": true,
+    "globalRegionalPackage": false,
+    "smsIncluded": false,
+    "callsIncluded": false,
+    "dataSharingSupported": false,
+    "localNumber": false,
+    "dataCalculator": false,
+    "onlineTopUp": true,
+    "minValidity": true,
+    "destinationsAvailable": "150+",
+    "expirationAfterPurchase": "12 months",
+    "pricing": {
+      "countries": {},
+      "regions": {}
+    }
   },
   "nomad": {
     "name": "Nomad",
@@ -304,16 +496,87 @@
         "expiryDate": null,
         "isPrimary": true,
         "type": "public"
+      },
+      {
+        "code": "NOMTRAVEL20",
+        "discount": "20% OFF",
+        "description": "Nomad eSIM promo code - 20% off",
+        "verified": true,
+        "lastTested": "2025-07-21",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public"
+      },
+      {
+        "code": "TRAVELESIMEXPERT",
+        "discount": "15% OFF",
+        "description": "Nomad eSIM coupon - 15% off all regular plans",
+        "verified": true,
+        "lastTested": "2025-07-21",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public"
+      },
+      {
+        "code": "NOMCYBER20",
+        "discount": "20% OFF",
+        "description": "Nomad eSIM Cybernews promo code - 20% off",
+        "verified": true,
+        "lastTested": "2025-07-21",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public"
       }
-    ]
+    ],
+    "totalScore": "3.6",
+    "easyToUse": true,
+    "support24h": false,
+    "liveChatSupport": true,
+    "oneESIMAllDestinations": false,
+    "reusableESIM": false,
+    "easyRefund": true,
+    "devicesSupported": true,
+    "fastSpeeds": true,
+    "hasShortTermPlans": true,
+    "prepaidPlans": true,
+    "securityFeatures": false,
+    "globalRegionalPackage": true,
+    "smsIncluded": true,
+    "callsIncluded": false,
+    "dataSharingSupported": true,
+    "localNumber": false,
+    "dataCalculator": false,
+    "onlineTopUp": "yes ",
+    "minValidity": "7 days",
+    "destinationsAvailable": "200+",
+    "expirationAfterPurchase": "never",
+    "pricing": {
+      "countries": {
+        "United States": "$4.50 (1GB)",
+        "Italy": "$4.50 (1GB)",
+        "France": "$4.50 (1GB)",
+        "Spain": "$4.50 (1GB)",
+        "China": "$4 (1GB)",
+        "Thailand": "$5 (1GB)",
+        "Japan": "$6 (1GB)",
+        "Turkey": "$4.50 (1GB)",
+        "Malaysia": "$5 (1GB)",
+        "UAE": "$4.50 (1GB)"
+      },
+      "regions": {
+        "Global": "$12 (1GB)",
+        "Europe": "$5 (1GB)",
+        "Asia": "$7 (1GB)"
+      }
+    }
   },
   "redteago": {
     "name": "RedteaGO",
     "lastModified": "2025-07-20",
     "description": "Global eSIM connectivity solutions",
     "url": "https://redteago.com",
-    "affiliateUrl": null,
-    "primaryCode": "REDTEAGO14",
+    "affiliateUrl": "https://esim.redteago.com?c=2ml13vun",
+    "primaryCode": "RTGF946FR",
     "rating": 4.2,
     "priceCategory": "Cheap",
     "brandColors": {
@@ -324,16 +587,59 @@
     "logo": "/assets/redteago_logo.png",
     "codes": [
       {
-        "code": "REDTEAGO14",
+        "code": "RTGF946FR",
         "discount": "5% OFF ALL PLANS",
         "description": "RedteaGO discount code - 5% off",
         "verified": true,
-        "lastTested": "2025-07-20",
+        "lastTested": "2025-07-21",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public"
       }
-    ]
+    ],
+    "easyToUse": true,
+    "support24h": true,
+    "emailSupport": true,
+    "liveChatSupport": true,
+    "reusableESIM": true,
+    "easyRefund": false,
+    "devicesSupported": true,
+    "hasShortTermPlans": true,
+    "prepaidPlans": true,
+    "securityFeatures": false,
+    "globalRegionalPackage": true,
+    "smsIncluded": true,
+    "callsIncluded": true,
+    "dataSharingSupported": true,
+    "localNumber": true,
+    "dataCalculator": true,
+    "unlimitedData": true,
+    "onlineTopUp": true,
+    "minValidity": "15 days",
+    "destinationsAvailable": "150+",
+    "expirationAfterPurchase": "30 days",
+    "totalScore": "4.2",
+    "oneESIMAllDestinations": false,
+    "fastSpeeds": true,
+    "pricing": {
+      "countries": {
+        "United States": "$2 (1GB)",
+        "Italy": "$2.50 (1GB)",
+        "France": "$2.50 (1GB)",
+        "Spain": "$2 (1GB)",
+        "China": "$2 (1GB)",
+        "Thailand": "$2.50 (1GB)",
+        "Japan": "$2.50 (1GB)",
+        "Turkey": "$1.50 (1GB)",
+        "Malaysia": "$2 (1GB)",
+        "UAE": "$3.90 (1GB)"
+      },
+      "regions": {
+        "Global": "$31 (6GB)",
+        "Europe": "$2.79 (1GB)",
+        "Asia": "$31 (10GB)"
+      }
+    }
   },
   "bnesim": {
     "name": "BNEsim",
@@ -350,7 +656,48 @@
       "accent": "#FFFFFF"
     },
     "logo": "/assets/bnesim_logo.svg",
-    "codes": []
+    "codes": [],
+    "totalScore": "4.1",
+    "easyToUse": true,
+    "support24h": true,
+    "liveChatSupport": true,
+    "oneESIMAllDestinations": false,
+    "reusableESIM": true,
+    "easyRefund": true,
+    "devicesSupported": true,
+    "fastSpeeds": true,
+    "hasShortTermPlans": true,
+    "prepaidPlans": true,
+    "securityFeatures": false,
+    "globalRegionalPackage": true,
+    "smsIncluded": false,
+    "callsIncluded": false,
+    "dataSharingSupported": true,
+    "localNumber": false,
+    "dataCalculator": true,
+    "onlineTopUp": true,
+    "minValidity": "7 days",
+    "destinationsAvailable": "200+",
+    "expirationAfterPurchase": "no expiration",
+    "pricing": {
+      "countries": {
+        "United States": "$1.48 (1GB)",
+        "Italy": "$1.67 (1GB)",
+        "France": "$1.67 (1GB)",
+        "Spain": "$1.74 (1GB)",
+        "China": "$3.74 (1GB)",
+        "Thailand": "$2.06 (1GB)",
+        "Japan": "$2.81 (1GB)",
+        "Turkey": "$0.92 (1GB)",
+        "Malaysia": "$2.79 (1GB)",
+        "UAE": "$5.61 (1GB)"
+      },
+      "regions": {
+        "Global": "-",
+        "Europe": "$0.95 (1GB)",
+        "Asia": "$2.82 (1GB)"
+      }
+    }
   },
   "alosim": {
     "name": "AloSIM",
@@ -378,15 +725,56 @@
         "isPrimary": true,
         "type": "public"
       }
-    ]
+    ],
+    "totalScore": "3.8",
+    "easyToUse": true,
+    "support24h": true,
+    "liveChatSupport": true,
+    "oneESIMAllDestinations": false,
+    "reusableESIM": true,
+    "easyRefund": false,
+    "devicesSupported": true,
+    "fastSpeeds": true,
+    "hasShortTermPlans": true,
+    "prepaidPlans": true,
+    "securityFeatures": false,
+    "globalRegionalPackage": true,
+    "smsIncluded": false,
+    "callsIncluded": false,
+    "dataSharingSupported": true,
+    "localNumber": true,
+    "dataCalculator": true,
+    "onlineTopUp": true,
+    "minValidity": "7 days",
+    "destinationsAvailable": "200+",
+    "expirationAfterPurchase": "never",
+    "pricing": {
+      "countries": {
+        "United States": "$4.50 (1GB)",
+        "Italy": "$4.50 (1GB)",
+        "France": "$4.50 (1GB)",
+        "Spain": "$4.50 (1GB)",
+        "China": "$5 (1GB)",
+        "Thailand": "$5 (1GB)",
+        "Japan": "$4.50 (1GB)",
+        "Turkey": "$4.50 (1GB)",
+        "Malaysia": "$4.50 (1GB)",
+        "UAE": "$4.50 (1GB)"
+      },
+      "regions": {
+        "Global": "-",
+        "Europe": "$5 (1GB)",
+        "Asia": "$5 (1GB)"
+      }
+    }
   },
   "airhub": {
     "name": "Airhub",
-    "lastModified": "2025-07-20",
+    "lastModified": "2025-07-21",
     "description": "Global eSIM connectivity",
     "url": "https://airhub.com",
     "affiliateUrl": null,
-    "primaryCode": "2025",
+    "primaryCode": "SUMMER2025",
     "rating": 3.7,
     "priceCategory": "Cheap",
     "brandColors": {
@@ -405,8 +793,99 @@
         "expiryDate": null,
         "isPrimary": true,
         "type": "public"
+      },
+      {
+        "code": "SUMMER2025",
+        "discount": "5% OFF ALL PLANS",
+        "description": "Airhub discount code - 5% off",
+        "verified": true,
+        "lastTested": "2025-07-21",
+        "expiryDate": null,
+        "isPrimary": true,
+        "type": "public"
+      },
+      {
+        "code": "MARCHFOREGYPTCOPY",
+        "discount": "5% OFF",
+        "description": "All countries eSIM Travel Coupon Code - 5% off",
+        "verified": true,
+        "lastTested": "2025-07-21",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public"
+      },
+      {
+        "code": "NAMERICA4COPY",
+        "discount": "4% OFF",
+        "description": "North America eSIM Travel Coupon Code - 4% off",
+        "verified": true,
+        "lastTested": "2025-07-21",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public"
+      },
+      {
+        "code": "ESIMOFFER5COPY",
+        "discount": "5% OFF",
+        "description": "All countries eSIM Travel Coupon Code - 5% off",
+        "verified": true,
+        "lastTested": "2025-07-21",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public"
+      },
+      {
+        "code": "JPESIM5COPY",
+        "discount": "5% OFF",
+        "description": "Japan eSIM Travel Coupon Code - 5% off",
+        "verified": true,
+        "lastTested": "2025-07-21",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public"
       }
-    ]
+    ],
+    "totalScore": "3.7",
+    "easyToUse": true,
+    "support24h": true,
+    "liveChatSupport": false,
+    "oneESIMAllDestinations": false,
+    "reusableESIM": true,
+    "easyRefund": true,
+    "devicesSupported": true,
+    "fastSpeeds": true,
+    "hasShortTermPlans": true,
+    "prepaidPlans": true,
+    "securityFeatures": false,
+    "globalRegionalPackage": true,
+    "smsIncluded": true,
+    "callsIncluded": false,
+    "dataSharingSupported": true,
+    "localNumber": true,
+    "dataCalculator": true,
+    "onlineTopUp": true,
+    "minValidity": "5 days",
+    "destinationsAvailable": "190+",
+    "expirationAfterPurchase": "1 year",
+    "pricing": {
+      "countries": {
+        "United States": "$2.82 (3GB)",
+        "Italy": "$5 (3GB)",
+        "France": "$3.50 (3GB)",
+        "Spain": "$6 (3GB)",
+        "China": "$6 (3GB)",
+        "Thailand": "$0.85 (1GB)",
+        "Japan": "$1.55 (1GB)",
+        "Turkey": "$2.25 (1GB)",
+        "Malaysia": "$5.5 (4GB)",
+        "UAE": "$2.80 (1GB)"
+      },
+      "regions": {
+        "Global": "$11.5 (3GB)",
+        "Europe": "$4.5 (4GB)",
+        "Asia": "$9.93 (3GB)"
+      }
+    }
   },
   "upesim": {
     "name": "UPeSIM",
@@ -433,8 +912,69 @@
         "expiryDate": null,
         "isPrimary": true,
         "type": "public"
+      },
+      {
+        "code": "ESIMDB10",
+        "discount": "10% OFF",
+        "description": "New user promo code - 10% off",
+        "verified": true,
+        "lastTested": "2025-07-21",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public"
+      },
+      {
+        "code": "T-DEALZ-10",
+        "discount": "10% OFF",
+        "description": "Promo code - 10% off",
+        "verified": true,
+        "lastTested": "2025-07-21",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public"
       }
-    ]
+    ],
+    "totalScore": "3.1",
+    "easyToUse": false,
+    "support24h": true,
+    "liveChatSupport": false,
+    "oneESIMAllDestinations": true,
+    "reusableESIM": false,
+    "easyRefund": false,
+    "devicesSupported": true,
+    "fastSpeeds": true,
+    "hasShortTermPlans": false,
+    "prepaidPlans": true,
+    "securityFeatures": false,
+    "globalRegionalPackage": true,
+    "smsIncluded": false,
+    "callsIncluded": false,
+    "dataSharingSupported": true,
+    "localNumber": false,
+    "dataCalculator": true,
+    "onlineTopUp": true,
+    "minValidity": "7 days",
+    "destinationsAvailable": "200+",
+    "expirationAfterPurchase": "30 days",
+    "pricing": {
+      "countries": {
+        "United States": "$5.55 (1GB)",
+        "Italy": "$13 (5GB)",
+        "France": "$3.50 (1GB)",
+        "Spain": "$13 (5GB)",
+        "China": "$5.80 (1GB)",
+        "Thailand": "$3.50 (1GB)",
+        "Japan": "$5.80 (1GB)",
+        "Turkey": "$15 (4GB)",
+        "Malaysia": "$3.50 (1GB)",
+        "UAE": "$7 (1GB)"
+      },
+      "regions": {
+        "Global": "-",
+        "Europe": "$3.15 (1GB)",
+        "Asia": "$2.10 (1GB)"
+      }
+    }
   },
   "instabridge": {
     "name": "Instabridge",
@@ -461,8 +1001,69 @@
         "expiryDate": null,
         "isPrimary": true,
         "type": "public"
+      },
+      {
+        "code": "SP20",
+        "discount": "20% OFF",
+        "description": "Instabridge coupon code - 20% off all plans",
+        "verified": true,
+        "lastTested": "2025-07-21",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public"
+      },
+      {
+        "code": "TRAVELESIMEXPERT",
+        "discount": "20% OFF",
+        "description": "Instabridge new user coupon - 20% off all plans",
+        "verified": true,
+        "lastTested": "2025-07-21",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public"
       }
-    ]
+    ],
+    "totalScore": "3",
+    "easyToUse": true,
+    "support24h": false,
+    "liveChatSupport": true,
+    "oneESIMAllDestinations": false,
+    "reusableESIM": false,
+    "easyRefund": false,
+    "devicesSupported": true,
+    "fastSpeeds": true,
+    "hasShortTermPlans": true,
+    "prepaidPlans": true,
+    "securityFeatures": false,
+    "globalRegionalPackage": true,
+    "smsIncluded": false,
+    "callsIncluded": false,
+    "dataSharingSupported": true,
+    "localNumber": false,
+    "dataCalculator": true,
+    "onlineTopUp": true,
+    "minValidity": "7 days",
+    "destinationsAvailable": "190+",
+    "expirationAfterPurchase": "-",
+    "pricing": {
+      "countries": {
+        "United States": "$2 (1GB)",
+        "Italy": "$2 (1GB)",
+        "France": "$2 (1GB)",
+        "Spain": "$2 (1GB)",
+        "China": "$2.50 (1GB)",
+        "Thailand": "$1 (1GB)",
+        "Japan": "$2.50 (1GB)",
+        "Turkey": "$2 (1GB)",
+        "Malaysia": "$1 (1GB)",
+        "UAE": "$3 (1GB)"
+      },
+      "regions": {
+        "Global": "$8 (1GB)",
+        "Europe": "$2.8 (1GB)",
+        "Asia": "$3.5 (1GB)"
+      }
+    }
   },
   "globalesim": {
     "name": "GlobaleSIM",
@@ -490,7 +1091,48 @@
         "isPrimary": true,
         "type": "public"
       }
-    ]
+    ],
+    "totalScore": "2.7",
+    "easyToUse": false,
+    "support24h": false,
+    "liveChatSupport": false,
+    "oneESIMAllDestinations": false,
+    "reusableESIM": true,
+    "easyRefund": true,
+    "devicesSupported": true,
+    "fastSpeeds": true,
+    "hasShortTermPlans": true,
+    "prepaidPlans": true,
+    "securityFeatures": false,
+    "globalRegionalPackage": false,
+    "smsIncluded": true,
+    "callsIncluded": true,
+    "dataSharingSupported": true,
+    "localNumber": true,
+    "dataCalculator": true,
+    "onlineTopUp": true,
+    "minValidity": "7 days",
+    "destinationsAvailable": "150+",
+    "expirationAfterPurchase": "30 days after plan is finished",
+    "pricing": {
+      "countries": {
+        "United States": "$4 (1GB)",
+        "Italy": "$4 (1GB)",
+        "France": "$4 (1GB)",
+        "Spain": "$4 (1GB)",
+        "China": "$4 (1GB)",
+        "Thailand": "$7 (3GB)",
+        "Japan": "$4 (1GB)",
+        "Turkey": "$4 (1GB)",
+        "Malaysia": "$7 (3GB)",
+        "UAE": "$4 (1GB)"
+      },
+      "regions": {
+        "Global": "$8.50 (1GB)",
+        "Europe": "$6 (1GB)",
+        "Asia": "$11 (1GB)"
+      }
+    }
   },
   "yesim": {
     "name": "Yesim",
@@ -518,7 +1160,48 @@
         "isPrimary": true,
         "type": "public"
       }
-    ]
+    ],
+    "totalScore": "2.5",
+    "easyToUse": true,
+    "support24h": true,
+    "liveChatSupport": true,
+    "oneESIMAllDestinations": false,
+    "reusableESIM": false,
+    "easyRefund": true,
+    "devicesSupported": true,
+    "fastSpeeds": true,
+    "hasShortTermPlans": true,
+    "prepaidPlans": true,
+    "securityFeatures": false,
+    "globalRegionalPackage": true,
+    "smsIncluded": false,
+    "callsIncluded": false,
+    "dataSharingSupported": true,
+    "localNumber": true,
+    "dataCalculator": true,
+    "onlineTopUp": true,
+    "minValidity": "7 days",
+    "destinationsAvailable": "200+",
+    "expirationAfterPurchase": "12 months",
+    "pricing": {
+      "countries": {
+        "United States": "$8.40 (1 day)",
+        "Italy": "$8.40 (1 day)",
+        "France": "$8.40 (1 day)",
+        "Spain": "$8.40 (1 day)",
+        "China": "$6 (1 day)",
+        "Thailand": "$8.40 (1 day)",
+        "Japan": "$19.80 (7 days)",
+        "Turkey": "$7.70 (1 day)",
+        "Malaysia": "$24.20 (7 days)",
+        "UAE": "$7.70 (1 day)"
+      },
+      "regions": {
+        "Global": "$20.9 (3GB)",
+        "Europe": "$7.7 (1 day unlimited)",
+        "Asia": "$7.7 (1 day unlimited)"
+      }
+    }
   },
   "orange": {
     "name": "Orange",
@@ -535,6 +1218,47 @@
       "accent": "#FFFFFF"
     },
     "logo": "/assets/orange_logo.svg",
-    "codes": []
+    "codes": [],
+    "totalScore": "2",
+    "easyToUse": false,
+    "support24h": false,
+    "liveChatSupport": true,
+    "oneESIMAllDestinations": false,
+    "reusableESIM": false,
+    "easyRefund": true,
+    "devicesSupported": true,
+    "fastSpeeds": true,
+    "hasShortTermPlans": false,
+    "prepaidPlans": true,
+    "securityFeatures": false,
+    "globalRegionalPackage": true,
+    "smsIncluded": true,
+    "callsIncluded": true,
+    "dataSharingSupported": true,
+    "localNumber": true,
+    "dataCalculator": false,
+    "onlineTopUp": true,
+    "minValidity": "14 days",
+    "destinationsAvailable": "200+",
+    "expirationAfterPurchase": "6 months",
+    "pricing": {
+      "countries": {
+        "United States": "$23.99 (5GB)",
+        "Italy": "$8.99 (1GB)",
+        "France": "$5.99 (1GB)",
+        "Spain": "$5.99 (1GB)",
+        "China": "$17.99 (5GB)",
+        "Thailand": "$17.99 (2GB)",
+        "Japan": "$17.99 (2GB)",
+        "Turkey": "$23.99 (5GB)",
+        "Malaysia": "$16.99 (2GB)",
+        "UAE": "$23.99 (5GB)"
+      },
+      "regions": {
+        "Global": "$52.99 (20GB)",
+        "Europe": "$5.99 (1GB)",
+        "Asia": "-"
+      }
+    }
   }
 }
