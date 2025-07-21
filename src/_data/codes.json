@@ -1,7 +1,7 @@
 {
   "holafly": {
     "name": "Holafly",
-    "lastModified": "2025-07-20",
+    "lastModified": "2025-07-21",
     "description": "International eSIM plans for travelers",
     "url": "https://holafly.com",
     "affiliateUrl": "https://holafly.sjv.io/7aQQ9d",
@@ -20,7 +20,7 @@
         "discount": "5% OFF ALL PLANS & TOP-UPS",
         "description": "Best Holafly discount code",
         "verified": true,
-        "lastTested": "2025-07-20",
+        "lastTested": "2025-07-21",
         "expiryDate": null,
         "isPrimary": true,
         "type": "affiliate"
@@ -30,7 +30,7 @@
         "discount": "SPECIAL DISCOUNT ON ANY ESIM PLAN",
         "description": "Get a special discount on any eSIM plan",
         "verified": true,
-        "lastTested": "2025-07-20",
+        "lastTested": "2025-07-21",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public"
@@ -59,7 +59,7 @@
   },
   "airalo": {
     "name": "Airalo",
-    "lastModified": "2025-07-20",
+    "lastModified": "2025-07-21",
     "description": "World's first eSIM store for travelers",
     "url": "https://airalo.com",
     "affiliateUrl": null,
@@ -78,7 +78,7 @@
         "discount": "15% OFF FIRST ESIM PURCHASE",
         "description": "15% discount for new Airalo users",
         "verified": true,
-        "lastTested": "2025-07-20",
+        "lastTested": "2025-07-21",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public"
@@ -88,7 +88,7 @@
         "discount": "10% OFF ESIMS VALUED $10+",
         "description": "10% discount for existing customers on $10+ purchases",
         "verified": true,
-        "lastTested": "2025-07-20",
+        "lastTested": "2025-07-21",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public"
@@ -108,7 +108,7 @@
         "discount": "$3 OFF YOUR FIRST PURCHASE",
         "description": "Get $3 off your first Airalo eSIM purchase",
         "verified": true,
-        "lastTested": "2025-07-20",
+        "lastTested": "2025-07-19",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public"
@@ -118,7 +118,7 @@
         "discount": "$3 OFF ANY PURCHASE",
         "description": "Save $3 anytime on Airalo eSIM plans",
         "verified": true,
-        "lastTested": "2025-07-20",
+        "lastTested": "2025-07-16",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public"
@@ -127,7 +127,7 @@
   },
   "simlocal": {
     "name": "SimLocal",
-    "lastModified": "2025-07-20",
+    "lastModified": "2025-07-21",
     "description": "Local eSIM plans worldwide",
     "url": "https://simlocal.com",
     "affiliateUrl": "https://simlocal.com?ref=YOURCODE",

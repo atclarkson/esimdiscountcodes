@@ -1,0 +1,56 @@
+<!-- Footer -->
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>eSIM Providers</h3>
+      <ul>
+        {% for key, provider in codes %}
+        <li><a href="/{{ key }}">{{ provider.name }} Codes</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>About</h3>
+      <ul>
+        {% for item in about %}
+        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Resources</h3>
+      <ul>
+        {% for item in resources %}
+        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <!-- Disclaimer Section -->
+  <section class="disclaimer-section">
+    <div class="disclaimer-card">
+      <h3><i class="fas fa-info-circle"></i> Important Disclosure</h3>
+      <p>
+        <strong><i class="fas fa-handshake"></i> Affiliate Disclosure:</strong>
+        We may earn a commission when you purchase through our links.
+      </p>
+      <p>
+        <i class="fas fa-globe"></i> These discount codes are found on publicly
+        accessible areas of the internet and aggregated here for your
+        convenience. Some codes may generate affiliate revenue for their
+        original publishers. We may also include our own affiliate codes and
+        links to help support this website.
+      </p>
+      <p>
+        <i class="fas fa-clock"></i> All codes are verified regularly, but
+        availability and terms may change without notice. Always check the
+        merchant's website for current offers and terms.
+      </p>
+    </div>
+  </section>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 eSIMDiscountCodes.com. All rights reserved.</p>
+  </div>

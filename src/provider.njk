@@ -76,7 +76,7 @@ eleventyComputed:
 
         <!-- Content Section (check for markdown files) -->
         <section class="content-section">
-            {{ ("content/" + providerKey + ".md") | includeMarkdown | safe }}
+            {% include "content/" + providerKey + ".njk" %}
         </section>
         
     {% else %}
