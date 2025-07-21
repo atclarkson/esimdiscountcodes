@@ -1209,7 +1209,7 @@
     "description": "European eSIM plans",
     "url": "https://orange.com",
     "affiliateUrl": null,
-    "primaryCode": null,
+    "primaryCode": "AW0",
     "rating": 2.0,
     "priceCategory": "Expensive",
     "brandColors": {
@@ -1218,7 +1218,18 @@
       "accent": "#FFFFFF"
     },
     "logo": "/assets/orange_logo.svg",
-    "codes": [],
+    "codes": [
+      {
+        "code": "-AW0",
+        "discount": "5% OFF",
+        "description": "5% off anything coupon code",
+        "verified": true,
+        "lastTested": "2025-07-21",
+        "expiryDate": null,
+        "isPrimary": true,
+        "type": "public"
+      }
+    ],
     "totalScore": "2",
     "easyToUse": false,
     "support24h": false,
