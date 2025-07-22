@@ -1389,3 +1389,12 @@ main {
     display: none;
   }
 }
+
+.copy-code-btn {
+    border: 2px solid #3b82f6;  /* Add a blue border */
+    box-shadow: 0 2px 8px rgba(37,99,235,0.07);
+}
+.copy-code-btn:hover {
+    border-color: #2563eb;
+    box-shadow: 0 4px 16px rgba(37,99,235,0.14);
+}

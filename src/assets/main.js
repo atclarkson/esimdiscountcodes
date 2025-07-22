@@ -177,3 +177,59 @@ function initDropdown() {
     }
   });
 }
+
+// This will find all .last-reported spans and set them to "Last reported working X minutes ago"
+// document
+//   .querySelectorAll('.last-reported[data-random="minutes-ago"]')
+//   .forEach(function (el) {
+//     const minutes = Math.floor(Math.random() * 49) + 10;
+//     el.textContent = `Last reported working ${minutes} minute${
+//       minutes === 1 ? "" : "s"
+//     } ago`;
+//   });
+
+// document
+//   .querySelectorAll('.primary-last-reported[data-random="minutes-ago"]')
+//   .forEach(function (el) {
+//     const minutes = Math.floor(Math.random() * 10) + 1;
+//     el.textContent = `Last reported working ${minutes} minute${
+//       minutes === 1 ? "" : "s"
+//     } ago`;
+//   });
+
+const elements = Array.from(
+  document.querySelectorAll('.last-reported[data-random="minutes-ago"]')
+);
+let lastMinutes = 0;
+
+elements.forEach((el, idx) => {
+  let minutes;
+  if (idx < 2) {
+    // Minutes: 10–59, increasing
+    minutes = Math.max(
+      lastMinutes + Math.floor(Math.random() * 8) + 2,
+      lastMinutes + 1
+    );
+    if (minutes > 59) minutes = 59;
+    el.textContent = `Last reported working ${minutes} minute${
+      minutes === 1 ? "" : "s"
+    } ago`;
+  } else if (idx < 4) {
+    // Hours: 1–23, increasing
+    let hours = Math.floor(Math.max(1, lastMinutes / 60) + 1);
+    if (hours > 23) hours = 23;
+    el.textContent = `Last reported working ${hours} hour${
+      hours === 1 ? "" : "s"
+    } ago`;
+    minutes = hours * 60;
+  } else {
+    // Days: 1–7, increasing
+    let days = Math.floor(Math.max(1, lastMinutes / 60 / 24) + 1);
+    if (days > 7) days = 7;
+    el.textContent = `Last reported working ${days} day${
+      days === 1 ? "" : "s"
+    } ago`;
+    minutes = days * 24 * 60;
+  }
+  lastMinutes = minutes;
+});
