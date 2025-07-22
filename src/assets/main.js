@@ -178,25 +178,6 @@ function initDropdown() {
   });
 }
 
-// This will find all .last-reported spans and set them to "Last reported working X minutes ago"
-// document
-//   .querySelectorAll('.last-reported[data-random="minutes-ago"]')
-//   .forEach(function (el) {
-//     const minutes = Math.floor(Math.random() * 49) + 10;
-//     el.textContent = `Last reported working ${minutes} minute${
-//       minutes === 1 ? "" : "s"
-//     } ago`;
-//   });
-
-// document
-//   .querySelectorAll('.primary-last-reported[data-random="minutes-ago"]')
-//   .forEach(function (el) {
-//     const minutes = Math.floor(Math.random() * 10) + 1;
-//     el.textContent = `Last reported working ${minutes} minute${
-//       minutes === 1 ? "" : "s"
-//     } ago`;
-//   });
-
 const elements = Array.from(
   document.querySelectorAll('.last-reported[data-random="minutes-ago"]')
 );

@@ -1391,10 +1391,121 @@ main {
 }
 
 .copy-code-btn {
-    border: 2px solid #3b82f6;  /* Add a blue border */
-    box-shadow: 0 2px 8px rgba(37,99,235,0.07);
+  border: 2px solid #3b82f6; /* Add a blue border */
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.07);
 }
 .copy-code-btn:hover {
-    border-color: #2563eb;
-    box-shadow: 0 4px 16px rgba(37,99,235,0.14);
+  border-color: #2563eb;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.14);
+}
+
+/* CTA Section */
+.cta-section {
+  background: #f5f7fa;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.cta-button {
+  display: inline-block;
+  background: #0070f3;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.cta-button:hover {
+  background: #005bb5;
+}
+
+/* Best Code Section */
+.best-code-section {
+  background: #fffbe6;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  text-align: center;
+  border: 1px solid #ffe58f;
+}
+.best-code-section h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  color: #ad8b00;
+}
+.best-code-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(173, 139, 0, 0.08);
+  font-size: 1.15rem;
+  color: #ad8b00;
+}
+.best-code-card strong {
+  color: #d48806;
+}
+
+.comparison-table-container {
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 1rem;
+  min-width: 600px;
+}
+.comparison-table th,
+.comparison-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+.comparison-table th {
+  background: #f8f9fa;
+  font-weight: 600;
+}
+.comparison-table .provider-logo {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.comparison-table .logo-img {
+  max-width: 56px;
+  max-height: 36px;
+}
+.comparison-table .logo-fallback {
+  font-size: 0.9em;
+  color: #888;
+  font-weight: 500;
+}
+.comparison-table .fa-check {
+  color: #28a745;
+}
+.comparison-table .fa-times {
+  color: #dc3545;
+}
+@media (max-width: 700px) {
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.5rem;
+    font-size: 0.95em;
+  }
+  .comparison-table {
+    font-size: 0.95em;
+  }
 }

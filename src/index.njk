@@ -12,6 +12,8 @@ description: "Find verified discount codes for top eSIM providers. Save on Holaf
         {% set totalCodes = 0 %}
         {% set totalProviders = 0 %}
         {% set maxDiscount = 0 %}
+        {% set bestCode = null %}
+        {% set bestProvider = null %}
         
         {% for key, provider in codes %}
             {% if provider.codes and provider.codes.length > 0 %}
@@ -22,6 +24,39 @@ description: "Find verified discount codes for top eSIM providers. Save on Holaf
                     {% set discountNum = code.discount | replace('%', '') | replace('OFF', '') | replace('SPECIAL', '10') | replace('EXTRA', '10') | int %}
                     {% if discountNum > maxDiscount %}
                         {% set maxDiscount = discountNum %}
+                        {% set bestCode = code.code %}
+                        {% set bestProvider = provider.name %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+        
+        {% for key, provider in codes %}
+            {% if provider.codes and provider.codes.length > 0 %}
+                {% set totalProviders = totalProviders + 1 %}
+                {% set totalCodes = totalCodes + provider.codes.length %}
+                
+                {% for code in provider.codes %}
+                    {% set discountNum = code.discount | replace('%', '') | replace('OFF', '') | replace('SPECIAL', '10') | replace('EXTRA', '10') | int %}
+                    {% if discountNum > maxDiscount %}
+                        {% set maxDiscount = discountNum %}
+                        {% set bestCode = code.code %}
+                        {% set bestProvider = provider.name %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+        
+        {% for key, provider in codes %}
+            {% if provider.codes and provider.codes.length > 0 %}
+                {% set totalProviders = totalProviders + 1 %}
+                {% set totalCodes = totalCodes + provider.codes.length %}
+                
+                {% for code in provider.codes %}
+                    {% set discountNum = code.discount | replace('%', '') | replace('OFF', '') | replace('SPECIAL', '10') | replace('EXTRA', '10') | int %}
+                    {% if discountNum > maxDiscount %}
+                        {% set maxDiscount = discountNum %}
+                        {% set bestCode = provider.codes.code %}
                     {% endif %}
                 {% endfor %}
             {% endif %}
@@ -82,4 +117,104 @@ description: "Find verified discount codes for top eSIM providers. Save on Holaf
             {% endfor %}
         </div>
     </section>
+
+    
+    <section class="cta-section">
+        <h2>Ready to Save?</h2>
+        <p>Start using eSIMs today and enjoy hassle-free international connectivity.</p>
+        <a href="/search" class="cta-button">Browse All Discount Codes</a>
+    </section>
+
+    <section class="best-code-section">
+      <h2>Best Discount Code</h2>
+        <div class="best-code-card">
+            <p>Use code <strong>{{ bestCode }}</strong> for <strong>{{ maxDiscount }}% off</strong> at <strong>{{ bestProvider }}</strong> — our top verified discount!</p>
+        </div>
+    </section>
+
+    <div class="comparison-table-container">
+      <h2>Compare eSIM Providers</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th>Best Discount</th>
+            <th>Rating</th>
+            <th>Global Packages <i class="fa fa-globe"></i></th>
+            <th>SMS Plans <i class="fa fa-mobile-alt"></i></th>
+            <th>Unlimited Data Plans <i class="fa fa-bolt"></i></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for key, provider in codes %}
+          <tr>
+            <td>
+                <a href="/{{ key }}" class="provider-link-btn" style="display:inline-block;padding:6px 14px;background:#007bff;color:#fff;border-radius:4px;text-decoration:none;font-weight:500;transition:background 0.2s;width:104px;text-align:center;"
+                   onmouseover="this.style.background='#0056b3';"
+                   onmouseout="this.style.background='#007bff';">
+                {{ provider.name }}
+                </a>
+            </td>
+            <td>
+              <div class="provider-logo">
+                {% if provider.logo %}
+                  <img src="{{ provider.logo }}" alt="{{ provider.name }} logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                  <span class="logo-fallback" style="display:none;">{{ provider.name }}</span>
+                {% else %}
+                  <span class="logo-fallback">{{ provider.name }}</span>
+                {% endif %}
+              </div>
+            </td>
+            <td>
+                {% if provider.codes[0].code and provider.codes[0].discount %}
+                <span><strong>{{ provider.codes[0].discount }}</strong> <span style="color:#28a745;">({{ provider.codes[0].code }})</span></span>
+                {% else %}
+                <span>—</span>
+                {% endif %}
+            </td>
+            <td>
+              {% if provider.totalScore %}
+                <span class="star-rating">
+                  {% set score = provider.totalScore | int %}
+                  {% for i in range(1, 6) %}
+                    {% if i <= score %}
+                      <i class="fa fa-star" style="color: #ffc107;"></i>
+                    {% else %}
+                      <i class="fa fa-star" style="color: #e4e5e9;"></i>
+                    {% endif %}
+                  {% endfor %}
+                  <span class="score-label">{{ score }}/5</span>
+                </span>
+              {% else %}
+                <span>—</span>
+              {% endif %}
+            </td>
+            <td>
+              {% if provider.globalRegionalPackage %}
+                <i class="fa fa-check"></i>
+              {% else %}
+                <i class="fa fa-times"></i>
+              {% endif %}
+            </td>
+            <td>
+              {% if provider.smsIncluded %}
+                <i class="fa fa-check"></i>
+              {% else %}
+                <i class="fa fa-times"></i>
+              {% endif %}
+            </td>
+            <td>
+              {% if provider.unlimitedData %}
+                <i class="fa fa-check"></i>
+              {% else %}
+                <i class="fa fa-times"></i>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
 </div>
