@@ -12,13 +12,13 @@ eleventyExcludeFromCollections: true
     <priority>1.0</priority>
   </url>
   
-  <!-- Provider pages - medium-high priority, change weekly -->
+  <!-- Provider pages - medium-high priority, change daily or weekly -->
   {% for key, provider in codes %}
   <url>
     <loc>{{ site.url }}/{{ key }}/</loc>
-    <lastmod>{{ provider.lastModified | default(buildTime) | date("YYYY-MM-DD") }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>{% if provider.codesLastUpdated %}{{ provider.codesLastUpdated | date("YYYY-MM-DD") }}{% else %}{{ buildTime | date("YYYY-MM-DD") }}{% endif %}</lastmod>
+    <changefreq>{% if provider.isPopular %}daily{% else %}weekly{% endif %}</changefreq>
+    <priority>{% if provider.isPopular %}0.9{% else %}0.8{% endif %}</priority>
   </url>
   {% endfor %}
   
