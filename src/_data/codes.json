@@ -1,7 +1,7 @@
 {
   "holafly": {
     "name": "Holafly",
-    "lastModified": "2025-07-23",
+    "lastModified": "2025-07-24",
     "description": "International eSIM plans for travelers",
     "url": "https://holafly.com",
     "affiliateUrl": "https://holafly.sjv.io/7aQQ9d",
@@ -17,10 +17,10 @@
     "codes": [
       {
         "code": "ADAMANDLINDS",
-        "discount": "5% OFF ALL eSIM PLANS & TOP-UPS",
+        "discount": "5% OFF ALL eSIM PLANS and TOP-UPS",
         "description": "Best Holafly discount code",
         "verified": true,
-        "lastTested": "2025-07-23",
+        "lastTested": "2025-07-24",
         "expiryDate": null,
         "isPrimary": true,
         "type": "affiliate"
@@ -30,7 +30,7 @@
         "discount": "SPECIAL DISCOUNT ON ANY ESIM PLAN",
         "description": "Get a special discount on any eSIM plan",
         "verified": true,
-        "lastTested": "2025-07-21",
+        "lastTested": "2025-07-23",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public"
@@ -478,7 +478,7 @@
     "lastModified": "2025-07-20",
     "description": "eSIM for digital nomads",
     "url": "https://nomad.com",
-    "affiliateUrl": null,
+    "affiliateUrl": "https://www.getnomad.app/?rfsn=8767142.451ec7",
     "primaryCode": "WOLF",
     "rating": 3.6,
     "priceCategory": "Average",

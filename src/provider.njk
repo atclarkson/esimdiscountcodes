@@ -6,8 +6,8 @@ pagination:
   alias: providerEntry
 permalink: "/{{ providerEntry[0] }}/"
 eleventyComputed:
-  title: "{{ providerEntry[1].name }} Discount Codes & Promo Codes - Save Money July 2025"
-  description: "Save with verified {{ providerEntry[1].name }} discount codes. Best code: {{ providerEntry[1].primaryCode }} {% if providerEntry[1].codes[0] %}gives {{ providerEntry[1].codes[0].discount | lower }}{% endif %}. Updated daily with working promo codes."
+  title: "{{ providerEntry[1].primaryCode }} - {{ providerEntry[1].codes[0].discount }} Off {{ providerEntry[1].name }} eSIM (Verified July 2025)"
+  description: "✅ {{ providerEntry[1].primaryCode }}: {{ providerEntry[1].codes[0].discount }} off all {{ providerEntry[1].name }} eSIM plans. Verified working promo codes for 190+ countries. Save on international travel data - tested daily!"
 ---
 
 {% set providerKey = providerEntry[0] %}
