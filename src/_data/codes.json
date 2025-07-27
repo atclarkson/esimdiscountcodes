@@ -1,7 +1,7 @@
 {
   "holafly": {
     "name": "Holafly",
-    "lastModified": "2025-07-24",
+    "lastModified": "2025-07-27",
     "description": "International eSIM plans for travelers",
     "url": "https://holafly.com",
     "affiliateUrl": "https://holafly.sjv.io/7aQQ9d",
@@ -21,7 +21,7 @@
         "discount": "5% OFF ALL eSIM PLANS and TOP-UPS",
         "description": "Best Holafly discount code",
         "verified": true,
-        "lastTested": "2025-07-24",
+        "lastTested": "2025-07-27",
         "expiryDate": null,
         "isPrimary": true,
         "type": "affiliate"
@@ -31,7 +31,7 @@
         "discount": "SPECIAL DISCOUNT ON ANY ESIM PLAN",
         "description": "Get a special discount on any eSIM plan",
         "verified": true,
-        "lastTested": "2025-07-23",
+        "lastTested": "2025-07-26",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public"
@@ -41,7 +41,7 @@
         "discount": "5% OFF YOUR ESIM",
         "description": "5% off your eSIM. Enjoy your trip!",
         "verified": true,
-        "lastTested": "2025-07-20",
+        "lastTested": "2025-07-24",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public"
@@ -102,7 +102,7 @@
   },
   "airalo": {
     "name": "Airalo",
-    "lastModified": "2025-07-23",
+    "lastModified": "2025-07-27",
     "description": "World's first eSIM store for travelers",
     "url": "https://airalo.com",
     "affiliateUrl": null,
@@ -122,7 +122,7 @@
         "discount": "15% OFF FIRST ESIM PURCHASE",
         "description": "15% discount for new Airalo users",
         "verified": true,
-        "lastTested": "2025-07-21",
+        "lastTested": "2025-07-27",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public"
@@ -212,7 +212,7 @@
   },
   "saily": {
     "name": "Saily",
-    "lastModified": "2025-07-23",
+    "lastModified": "2025-07-27",
     "description": "eSIM plans by NordVPN",
     "url": "https://saily.com",
     "affiliateUrl": null,
@@ -284,7 +284,7 @@
   },
   "ubigi": {
     "name": "Ubigi",
-    "lastModified": "2025-07-20",
+    "lastModified": "2025-07-27",
     "description": "Flexible data plans worldwide",
     "url": "https://ubigi.com",
     "affiliateUrl": null,
@@ -304,7 +304,7 @@
         "discount": "20% OFF ALL PLANS",
         "description": "Best Ubigi discount code - 20% off",
         "verified": true,
-        "lastTested": "2025-07-20",
+        "lastTested": "2025-07-27",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public"
@@ -384,7 +384,7 @@
   },
   "simlocal": {
     "name": "SimLocal",
-    "lastModified": "2025-07-23",
+    "lastModified": "2025-07-27",
     "description": "Local eSIM plans worldwide",
     "url": "https://simlocal.com",
     "affiliateUrl": "https://simlocal.com?ref=YOURCODE",
