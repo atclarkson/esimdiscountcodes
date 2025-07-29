@@ -69,6 +69,66 @@
     [
       {
         "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "{{ provider.name }} Discount Codes",
+        "url": "https://esimdiscountcodes.com{{ page.url }}",
+        "description": "Save money with verified {{ provider.name }} discount codes and promo codes",
+        "dateCreated": "2022-10-08T00:00:00.000+00:00",
+        "dateModified": "{{ provider.lastModified }}T00:00:00.000+00:00"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "{{ provider.name }} eSIM",
+        "description": "{{ provider.description }}",
+        "image": "https://esimdiscountcodes.com{{ provider.logo }}",
+        "brand": {
+          "@type": "Brand",
+          "name": "{{ provider.name }}"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "{{ provider.rating }}",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "150"
+        },
+        "offers": [
+          {% for code in provider.codes %}
+          {
+            "@type": "Offer",
+            "name": "{{ code.code }} - {{ code.discount }}",
+            "description": "{{ code.description }}",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "{{ code.discount }}"
+            },
+            "validThrough": "{% if code.expiryDate %}{{ code.expiryDate }}{% else %}2025-12-31{% endif %}"
+          }{% if not loop.last %},{% endif %}
+          {% endfor %}
+        ]
+      },
+      {% for code in provider.codes %}
+      {
+        "@context": "https://schema.org",
+        "@type": "SaleEvent",
+        "name": "{{ code.discount }} at {{ provider.name }}",
+        "description": "{{ provider.name }} - {{ code.description }}",
+        "image": "https://esimdiscountcodes.com{{ provider.logo }}",
+        "startDate": "{{ code.lastTested }}",
+        "endDate": "{% if code.expiryDate %}{{ code.expiryDate }}{% else %}2025-12-31{% endif %}",
+        "performer": {
+          "@type": "Organization",
+          "name": "{{ provider.name }}"
+        },
+        "location": {
+          "@type": "VirtualLocation",
+          "url": "{{ provider.url }}"
+        }
+      },
+      {% endfor %}
+      {
+        "@context": "https://schema.org",
         "@type": "FAQPage",
         "name": "{{ provider.name }} Discount Codes",
         "description": "Save money with verified {{ provider.name }} discount codes and promo codes",
