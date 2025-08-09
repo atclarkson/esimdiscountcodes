@@ -4,10 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "eleventy --serve",
+    "dev": "eleventy --serve",
     "build": "eleventy",
-    "dev": "eleventy --serve"
+    "build:prod": "NODE_ENV=production eleventy",
+    "postbuild": "node scripts/ping-sitemaps.js",
+    "postbuild:prod": "node scripts/ping-sitemaps.js"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +17,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
     "markdown-it": "^14.0.0"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-rss": "^2.0.4"
   }
 }

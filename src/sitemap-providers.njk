@@ -1,0 +1,41 @@
+---
+permalink: /sitemap-providers.xml
+eleventyExcludeFromCollections: true
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for key, provider in codes %}
+  <url>
+    <loc>{{ ("/" + key + "/") | url | absoluteUrl(site.url) }}</loc>
+    <lastmod>
+      {% if provider.codesLastUpdated %}
+        {{ provider.codesLastUpdated | isoDate }}
+      {% else %}
+        {{ buildTime | isoDate }}
+      {% endif %}
+    </lastmod>
+    <changefreq>{% if provider.isPopular %}daily{% else %}weekly{% endif %}</changefreq>
+    <priority>{% if provider.isPopular %}0.9{% else %}0.8{% endif %}</priority>
+  </url>
+  {% endfor %}
+
+  {# Optional static groups #}
+  {% for item in about %}
+  <url>
+    <loc>{{ item.url | url | absoluteUrl(site.url) }}</loc>
+    <lastmod>{{ buildTime | isoDate }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  {% endfor %}
+
+  {% for item in resources %}
+  <url>
+    <loc>{{ item.url | url | absoluteUrl(site.url) }}</loc>
+    <lastmod>{{ buildTime | isoDate }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  {% endfor %}
+</urlset>

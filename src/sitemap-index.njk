@@ -1,0 +1,17 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>{{ "/sitemap-pages.xml" | url | absoluteUrl(site.url) }}</loc>
+  </sitemap>
+  <sitemap>
+    <loc>{{ "/sitemap-providers.xml" | url | absoluteUrl(site.url) }}</loc>
+  </sitemap>
+  <sitemap>
+    <loc>{{ "/sitemap-images.xml" | url | absoluteUrl(site.url) }}</loc>
+  </sitemap>
+</sitemapindex>
