@@ -6,12 +6,16 @@ pagination:
   alias: providerEntry
 permalink: "/{{ providerEntry[0] }}/"
 eleventyComputed:
-  title: "{{ providerEntry[1].primaryCode }} - {{ providerEntry[1].codes[0].discount }} Off {{ providerEntry[1].name }} eSIM (Verified August 2025)"
-  description: "✅ {{ providerEntry[1].primaryCode }}: {{ providerEntry[1].codes[0].discount }} off all {{ providerEntry[1].name }} eSIM plans. Verified working promo codes for 190+ countries. Save on international travel data - tested daily!"
+  title: "{{ providerEntry[1].primaryCode }} - {{ providerEntry[1].codes[0].discount }} Off {{ providerEntry[1].name }} eSIM (Verified {{ buildTime | fmtDate('LLLL yyyy') }})"
+  description: "✅ {{ providerEntry[1].primaryCode }}: {{ providerEntry[1].codes[0].discount }} off {{ providerEntry[1].name }} eSIM plans. Verified {{ buildTime | fmtDate('LLLL d, yyyy') }}. Save on travel data with tested codes."
 ---
 
 {% set providerKey = providerEntry[0] %}
 {% set provider = providerEntry[1] %}
+{% set buildPretty = buildTime | fmtDate("LLLL d, yyyy") %}
+{% set buildMonthYear = buildTime | fmtDate("LLLL yyyy") %}
+{% set lastModISO = (provider.codesLastUpdated or buildTime) | fmtISO %}
+
 
 <div class="provider-page" data-provider="{{ providerKey }}">
     <!-- Breadcrumbs for SEO and UX -->
@@ -39,7 +43,8 @@ eleventyComputed:
     {% if provider.codes and provider.codes.length > 0 %}
         <!-- Has Codes -->
         <section class="codes-section">
-            <h2>Top {{ provider.name }} Discount Codes For August 9th, 2025</h2>
+            <h2>Top {{ provider.name }} Discount Codes for {{ buildPretty }}</h2>
+
             
            {% for code in provider.codes %}
 <div class="coupon-card {% if code.isPrimary %}primary-code{% endif %}">

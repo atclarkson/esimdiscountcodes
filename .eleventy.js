@@ -1,45 +1,45 @@
 const markdownIt = require("markdown-it");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const { execSync } = require("node:child_process");
+const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
-  // Copy CSS and assets
+  // Passthrough
   eleventyConfig.addPassthroughCopy("src/style/style.css");
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
 
-  // RSS plugin gives absoluteUrl and friends
+  // RSS plugin
   eleventyConfig.addPlugin(pluginRss);
 
-  // Build timestamp
+  // Global data
   eleventyConfig.addGlobalData("buildTime", () => new Date().toISOString());
-
-  // Site data
   eleventyConfig.addGlobalData("site", {
     url: "https://esimdiscountcodes.com",
     name: "eSIM Discount Codes",
   });
 
-  // Legacy date filter you already had
+  // Existing date filter
   eleventyConfig.addFilter("date", function (date, format) {
     const d = new Date(date);
-    if (format === "YYYY-MM-DD") {
-      return d.toISOString().split("T")[0];
-    }
+    if (format === "YYYY-MM-DD") return d.toISOString().split("T")[0];
     return d.toISOString();
   });
 
-  // Clean ISO yyyy-mm-dd for sitemaps
-  eleventyConfig.addFilter("isoDate", function (date) {
-    const d = new Date(date);
-    return d.toISOString().split("T")[0];
-  });
+  // NEW: pretty and ISO date helpers (used in templates)
+  eleventyConfig.addFilter("fmtDate", (d, fmt = "LLLL d, yyyy") =>
+    DateTime.fromJSDate(new Date(d), { zone: "utc" }).toFormat(fmt)
+  );
+  eleventyConfig.addFilter("fmtISO", (d) =>
+    DateTime.fromJSDate(new Date(d), { zone: "utc" }).toISO()
+  );
 
-  // Git last modified date for a file path. Falls back to the given date.
+  // Git last modified
   eleventyConfig.addFilter("gitLastMod", function (inputPath, fallbackDate) {
     try {
-      const cmd = `git log -1 --format=%cI "${inputPath}"`;
-      const out = execSync(cmd, { stdio: ["ignore", "pipe", "ignore"] })
+      const out = execSync(`git log -1 --format=%cI "${inputPath}"`, {
+        stdio: ["ignore", "pipe", "ignore"],
+      })
         .toString()
         .trim();
       return out || fallbackDate;
@@ -48,15 +48,11 @@ module.exports = function (eleventyConfig) {
     }
   });
 
-  // Markdown config
-  const md = markdownIt({
-    html: true,
-    breaks: true,
-    linkify: true,
-  });
+  // Markdown
+  const md = markdownIt({ html: true, breaks: true, linkify: true });
   eleventyConfig.setLibrary("md", md);
 
-  // Include external markdown files into templates
+  // includeMarkdown filter
   eleventyConfig.addFilter("includeMarkdown", function (filePath) {
     const fs = require("fs");
     const path = require("path");
@@ -73,12 +69,13 @@ module.exports = function (eleventyConfig) {
     }
   });
 
-  // Provider entries for pagination
+  // providerEntries
   eleventyConfig.addGlobalData("providerEntries", () => {
     const codes = require("./src/_data/codes.json");
     return Object.entries(codes);
   });
 
+  // Keep this at the end. Nothing after this.
   return {
     dir: { input: "src", output: "_site" },
   };
