@@ -6,7 +6,7 @@ pagination:
   alias: providerEntry
 permalink: "/{{ providerEntry[0] }}/"
 eleventyComputed:
-  title: "{{ providerEntry[1].primaryCode }} - {{ providerEntry[1].codes[0].discount }} Off {{ providerEntry[1].name }} eSIM (Verified July 2025)"
+  title: "{{ providerEntry[1].primaryCode }} - {{ providerEntry[1].codes[0].discount }} Off {{ providerEntry[1].name }} eSIM (Verified August 2025)"
   description: "✅ {{ providerEntry[1].primaryCode }}: {{ providerEntry[1].codes[0].discount }} off all {{ providerEntry[1].name }} eSIM plans. Verified working promo codes for 190+ countries. Save on international travel data - tested daily!"
 ---
 
@@ -39,7 +39,7 @@ eleventyComputed:
     {% if provider.codes and provider.codes.length > 0 %}
         <!-- Has Codes -->
         <section class="codes-section">
-            <h2>Top {{ provider.name }} Discount Codes For July 21th, 2025</h2>
+            <h2>Top {{ provider.name }} Discount Codes For August 9th, 2025</h2>
             
            {% for code in provider.codes %}
 <div class="coupon-card {% if code.isPrimary %}primary-code{% endif %}">
