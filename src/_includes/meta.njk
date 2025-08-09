@@ -1,7 +1,17 @@
 {# meta.njk #}
+
+{# Canonical URL and OG image #}
 {% set canonical = page.url | url | absoluteUrl(site.url) %}
-{% set ogImageUrl = (ogImage or "/assets/og-image.jpg") | url | absoluteUrl(site.url) %}
-{% set modifiedISO = provider and provider.codesLastUpdated ? (provider.codesLastUpdated | fmtISO) : (buildTime | fmtISO) %}
+{% set _ogImage = ogImage or "/assets/og-image.jpg" %}
+{% set ogImageUrl = _ogImage | url | absoluteUrl(site.url) %}
+
+{# Modified date handling #}
+{% if provider and provider.codesLastUpdated %}
+  {% set modifiedISO = provider.codesLastUpdated | fmtISO %}
+{% else %}
+  {% set modifiedISO = buildTime | fmtISO %}
+{% endif %}
+
 {% set prettyDate = buildTime | fmtDate("LLLL d, yyyy") %}
 
 <title>{{ title or "eSIM Discount Codes" }}</title>
@@ -15,7 +25,7 @@
 <meta property="og:url" content="{{ canonical }}">
 <meta property="og:title" content="{{ title or 'eSIM Discount Codes' }}">
 <meta property="og:description" content="{{ description or 'Find verified eSIM discount codes and promo codes for top providers worldwide.' }}">
-<meta property="og:image" content="{{ ogImage }}">
+<meta property="og:image" content="{{ ogImageUrl }}">
 <meta property="og:site_name" content="eSIM Discount Codes">
 <meta property="og:locale" content="en_US">
 
@@ -24,7 +34,7 @@
 <meta name="twitter:url" content="{{ canonical }}">
 <meta name="twitter:title" content="{{ title or 'eSIM Discount Codes' }}">
 <meta name="twitter:description" content="{{ description or 'Find verified eSIM discount codes and promo codes for top providers worldwide.' }}">
-<meta name="twitter:image" content="{{ ogImage }}">
+<meta name="twitter:image" content="{{ ogImageUrl }}">
 
 {# Helpful crawl hints #}
 <meta name="last-modified" content="{{ modifiedISO }}">

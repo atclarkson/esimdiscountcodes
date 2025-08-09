@@ -10,9 +10,9 @@ layout: null
     <loc>{{ ("/" + key + "/") | url | absoluteUrl(site.url) }}</loc>
     <lastmod>
       {% if provider.codesLastUpdated %}
-        {{ provider.codesLastUpdated | isoDate }}
+        {{ provider.codesLastUpdated | date("YYYY-MM-DD") }}
       {% else %}
-        {{ buildTime | isoDate }}
+        {{ buildTime | date("YYYY-MM-DD") }}
       {% endif %}
     </lastmod>
     <changefreq>{% if provider.isPopular %}daily{% else %}weekly{% endif %}</changefreq>
@@ -24,7 +24,7 @@ layout: null
   {% for item in about %}
   <url>
     <loc>{{ item.url | url | absoluteUrl(site.url) }}</loc>
-    <lastmod>{{ buildTime | isoDate }}</lastmod>
+    <lastmod>{{ buildTime | date("YYYY-MM-DD") }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -33,7 +33,7 @@ layout: null
   {% for item in resources %}
   <url>
     <loc>{{ item.url | url | absoluteUrl(site.url) }}</loc>
-    <lastmod>{{ buildTime | isoDate }}</lastmod>
+    <lastmod>{{ buildTime | date("YYYY-MM-DD") }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
