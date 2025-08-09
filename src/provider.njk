@@ -8,6 +8,13 @@ permalink: "/{{ providerEntry[0] }}/"
 eleventyComputed:
   title: "{{ providerEntry[1].primaryCode }} - {{ providerEntry[1].codes[0].discount }} Off {{ providerEntry[1].name }} eSIM (Verified {{ buildTime | fmtDate('LLLL yyyy') }})"
   description: "✅ {{ providerEntry[1].primaryCode }}: {{ providerEntry[1].codes[0].discount }} off {{ providerEntry[1].name }} eSIM plans. Verified {{ buildTime | fmtDate('LLLL d, yyyy') }}. Save on travel data with tested codes."
+  canonical: "{{ page.url | url | absoluteUrl(site.url) }}"
+  providerKey: "{{ providerEntry[0] }}"
+  provider: "{{ providerEntry[1] }}"
+  ogImage: "{{ providerEntry[1].ogImage or '/assets/og-image.jpg' }}"
+  modifiedISO: "{{ (providerEntry[1].codesLastUpdated or buildTime) | fmtISO }}"
+  buildPretty: "{{ buildTime | fmtDate('LLLL d, yyyy') }}"
+  renderFaq: true
 ---
 
 {% set providerKey = providerEntry[0] %}
@@ -47,37 +54,42 @@ eleventyComputed:
 
             
            {% for code in provider.codes %}
-<div class="coupon-card {% if code.isPrimary %}primary-code{% endif %}">
+  {% set verifiedISO = (code.lastTested or provider.codesLastUpdated or buildTime) | fmtISO %}
+  {% set verifiedPretty = (code.lastTested or provider.codesLastUpdated or buildTime) | fmtDate("LLLL d, yyyy") %}
+
+  <div class="coupon-card {% if code.isPrimary %}primary-code{% endif %}">
     <div class="coupon-header">
-        <h3>{{ code.discount }}</h3>
-        {% if code.verified %}
-        <span class="verified-badge">
-            <i class="fas fa-circle-check" style="color:#10b981;"></i>
-            <span class="last-reported {% if code.isPrimary %}primary-last-reported{% endif %}" data-random="minutes-ago"></span>
-        </span>
-        {% endif %}
+      <h3>{{ code.discount }}</h3>
+      {% if code.verified %}
+      <span class="verified-badge">
+        <i class="fas fa-circle-check" style="color:#10b981;"></i>
+        <time class="last-reported {% if code.isPrimary %}primary-last-reported{% endif %}"
+              datetime="{{ verifiedISO }}">Verified {{ verifiedPretty }}</time>
+      </span>
+      {% endif %}
     </div>
-    
+
     <div class="coupon-code">
-        <button class="copy-code-btn" data-code="{{ code.code }}">
-            <i class="fas fa-copy"></i>
-            <span class="code-text">{{ code.code }}</span>
-            <span class="copy-label">Copy code</span>
-        </button>
+      <button class="copy-code-btn" data-code="{{ code.code }}">
+        <i class="fas fa-copy"></i>
+        <span class="code-text">{{ code.code }}</span>
+        <span class="copy-label">Copy code</span>
+      </button>
     </div>
-    
+
     <p class="coupon-description">{{ code.description }}</p>
-    
+
     <div class="feedback-buttons">
-        <button class="feedback-btn thumbs-up" data-feedback="up" title="This code worked!">
-            <i class="fas fa-thumbs-up"></i>
-        </button>
-        <button class="feedback-btn thumbs-down" data-feedback="down" title="This code didn't work">
-            <i class="fas fa-thumbs-down"></i>
-        </button>
+      <button class="feedback-btn thumbs-up" data-feedback="up" title="This code worked!">
+        <i class="fas fa-thumbs-up"></i>
+      </button>
+      <button class="feedback-btn thumbs-down" data-feedback="down" title="This code didn't work">
+        <i class="fas fa-thumbs-down"></i>
+      </button>
     </div>
-</div>
+  </div>
 {% endfor %}
+
 
         </section>
 
