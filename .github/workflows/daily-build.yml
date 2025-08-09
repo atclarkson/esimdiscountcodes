@@ -1,7 +1,7 @@
 name: Daily Cloudflare Pages Build
 on:
   schedule:
-    - cron: "15 10 * * *" # 10:15 UTC = 6:15 AM ET during DST
+    - cron: "15 9 * * *" # Runs every day at 5:15 AM ET
   workflow_dispatch:
 
 jobs:
