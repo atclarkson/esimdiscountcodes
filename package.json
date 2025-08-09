@@ -7,9 +7,7 @@
     "start": "eleventy --serve",
     "dev": "eleventy --serve",
     "build": "eleventy",
-    "build:prod": "NODE_ENV=production eleventy",
-    "postbuild": "node scripts/ping-sitemaps.js",
-    "postbuild:prod": "node scripts/ping-sitemaps.js"
+    "build:prod": "NODE_ENV=production eleventy"
   },
   "keywords": [],
   "author": "",

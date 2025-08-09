@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://esimdiscountcodes.com/sitemap.xml
+Sitemap: https://esimdiscountcodes.com/sitemap-pages.xml
+Sitemap: https://esimdiscountcodes.com/sitemap-providers.xml
+Sitemap: https://esimdiscountcodes.com/sitemap-images.xml
