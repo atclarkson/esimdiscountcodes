@@ -1,0 +1,15 @@
+name: Daily Cloudflare Pages Build
+on:
+  schedule:
+    - cron: "15 10 * * *" # 10:15 UTC = 6:15 AM ET during DST
+  workflow_dispatch:
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Cloudflare Pages build
+        run: |
+          curl -sS -X POST "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CF_ACCOUNT_ID }}/pages/projects/${{ secrets.CF_PROJECT_NAME }}/deployments" \
+            -H "Authorization: Bearer ${{ secrets.CF_API_TOKEN }}" \
+            -H "Content-Type: application/json"
