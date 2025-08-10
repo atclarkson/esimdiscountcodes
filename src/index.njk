@@ -114,7 +114,7 @@ description: "Find verified discount and promo codes for top eSIM providers. Sav
         <h2>Top eSIM Providers with Discount Codes</h2>
         <div class="providers-grid">
             {% for key, provider in codes %}
-            <a href="/{{ key }}" class="provider-card-link">
+            <a href="/{{ key }}/" class="provider-card-link">
                 <div class="provider-card">
                     <div class="provider-logo">
                         {% if provider.logo %}
@@ -169,7 +169,7 @@ description: "Find verified discount and promo codes for top eSIM providers. Sav
           {% for key, provider in codes %}
           <tr>
             <td>
-                <a href="/{{ key }}" class="provider-link-btn" style="display:inline-block;padding:6px 14px;background:#007bff;color:#fff;border-radius:4px;text-decoration:none;font-weight:500;transition:background 0.2s;width:104px;text-align:center;"
+                <a href="/{{ key }}/" class="provider-link-btn" style="display:inline-block;padding:6px 14px;background:#007bff;color:#fff;border-radius:4px;text-decoration:none;font-weight:500;transition:background 0.2s;width:104px;text-align:center;"
                    onmouseover="this.style.background='#0056b3';"
                    onmouseout="this.style.background='#007bff';">
                 {{ provider.name }}
