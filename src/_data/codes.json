@@ -1,7 +1,7 @@
 {
   "holafly": {
     "name": "Holafly",
-    "lastModified": "2025-08-09",
+    "lastModified": "2025-08-14",
     "description": "International eSIM plans for travelers",
     "url": "https://holafly.com",
     "affiliateUrl": "https://holafly.sjv.io/7aQQ9d",
@@ -21,7 +21,7 @@
         "discount": "5% OFF ALL eSIM PLANS and TOP-UPS",
         "description": "Best Holafly discount code",
         "verified": true,
-        "lastTested": "2025-08-09",
+        "lastTested": "2025-08-14",
         "expiryDate": null,
         "isPrimary": true,
         "type": "affiliate"
@@ -31,7 +31,7 @@
         "discount": "SPECIAL DISCOUNT ON ANY ESIM PLAN",
         "description": "Get a special discount on any eSIM plan",
         "verified": true,
-        "lastTested": "2025-08-09",
+        "lastTested": "2025-08-13",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public"
@@ -102,7 +102,7 @@
   },
   "airalo": {
     "name": "Airalo",
-    "lastModified": "2025-08-09",
+    "lastModified": "2025-08-14",
     "description": "World's first eSIM store for travelers",
     "url": "https://airalo.com",
     "affiliateUrl": null,
@@ -122,7 +122,7 @@
         "discount": "15% OFF FIRST ESIM PURCHASE",
         "description": "15% discount for new Airalo users",
         "verified": true,
-        "lastTested": "2025-08-09",
+        "lastTested": "2025-08-14",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public"
@@ -212,7 +212,7 @@
   },
   "saily": {
     "name": "Saily",
-    "lastModified": "2025-08-09",
+    "lastModified": "2025-08-14",
     "description": "eSIM plans by NordVPN",
     "url": "https://saily.com",
     "affiliateUrl": null,
