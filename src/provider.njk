@@ -92,7 +92,7 @@ eleventyComputed:
 
 
         </section>
-{# About the verifier, shown once below all coupons #}
+{# About the verifier #}
 <section id="about-verifier" class="verifier-about">
   <div class="verifier-media">
     <img
@@ -108,65 +108,63 @@ eleventyComputed:
   <div class="verifier-copy">
     <h2 class="verifier-heading">About David Wright</h2>
 
-    <p>I’ve dragged a laptop around the globe for 6 years because staying in one place is overrated. I’m 34, from a London suburb you’ve never heard of, and I’ve probably used more eSIM cards than most people have had hot dinners.</p>
+    <p>I've been dragging a laptop around the world for 6 years straight. Originally from a London suburb you've definitely never heard of. I'm 34, technically homeless by choice, and have used more eSIM cards than most people have used napkins.</p>
 
-    <h3>The numbers</h3>
+    <h3>The stats</h3>
     <ul class="verifier-stats">
-      <li>6 years of non-stop travel</li>
-      <li>47 countries and counting</li>
-      <li>Every major eSIM provider tested, plus most of the dodgy ones</li>
-      <li>Zero interest in small talk about the weather</li>
+      <li>6 years of continuous travel</li>
+      <li>52 countries and counting</li>
+      <li>Every major eSIM provider tested (plus the sketchy ones)</li>
+      <li>Zero tolerance for broken discount codes</li>
     </ul>
 
-    <h3>Why this site exists</h3>
-    <p>I got tired of discount codes that don’t work, affiliate sites that lie, and customer service that pretends to care. So I made this instead. Every code gets tested by actual human hands. Mine. No AI. No web scraping.</p>
+    <h3>Why this exists</h3>
+    <p>Got fed up with codes that don't work and affiliate sites full of lies. Every single code on this site gets manually tested before it goes live. No bots, no scraping, no hoping for the best.</p>
 
-    <h3>How I find codes</h3>
+    <h3>My process</h3>
     <ul>
-      <li>Manual hunting in newsletters, brand apps, and checkout flows</li>
-      <li>Tested at checkout before publishing</li>
-      <li>No bots, no scraping, no guessing</li>
+      <li>Hunt codes in newsletters, apps, and checkout flows</li>
+      <li>Test each one at actual checkout</li>
+      <li>Remove expired codes immediately</li>
+      <li>Update working percentages regularly</li>
     </ul>
 
-    <h3>Philosophy</h3>
-    <p>Use the codes or don’t. They work or they don’t. If one fails, try another. I’m not running a helpdesk here. I’ve got planes to catch and Wi-Fi passwords to crack.</p>
+    <h3>My approach</h3>
+    <p>The codes work or they don't. Use them or don't. I'm not your customer service department. Check the privacy policy if you want to understand my communication style.</p>
 
-    <h3>Random facts</h3>
+    <h3>Probably irrelevant facts</h3>
     <ul>
-      <li>I speak fluent airport delay announcement</li>
-      <li>I have strong opinions about airline Wi-Fi pricing</li>
-      <li>I collect data like other people collect fridge magnets</li>
-      <li>I’d rather debug code than explain why your phone won’t connect</li>
+      <li>Can sleep through any airport announcement except gate changes</li>
+      <li>Unreasonably angry about airline WiFi pricing</li>
+      <li>Collects working discount codes like a digital hoarder</li>
+      <li>Prefers debugging over small talk</li>
     </ul>
 
-    <h3>Contact policy</h3>
-    <p>I don’t want to talk. Read the privacy policy. This is a public service. The codes are free. The advice is take it or leave it. Customer service is intentionally non-existent.</p>
+    <h3>Don't contact me</h3>
+    <p>I don't do support requests. The site works, the codes work, or they don't. Everything you need to know is already here.</p>
 
-    <p><em>Currently somewhere with decent internet and questionable coffee, testing codes so you don’t have to.</em></p>
+    <p><em>Currently in some airport lounge with overpriced coffee, making sure your next eSIM purchase costs less.</em></p>
   </div>
 </section>
 
 <style>
   .verifier-about{display:grid;grid-template-columns:88px 1fr;gap:1rem;border:1px dashed #e5e7eb;background:#fafafa;padding:1rem;border-radius:10px;margin:1.25rem 0}
   .verifier-avatar{width:88px;height:88px;border-radius:9999px;object-fit:cover}
-  .verifier-heading{margin:.1rem 0 .25rem 0;font-size:1.125rem}
-  .verifier-stats{margin:.25rem 0 .75rem 0;padding-left:1rem}
-  .verifier-stats li{margin:.1rem 0}
+  .verifier-avatar-fallback{width:88px;height:88px;border-radius:9999px;background:#e5e7eb;display:flex;align-items:center;justify-content:center;font-weight:600;color:#6b7280}
+  .verifier-heading{margin:.1rem 0 .25rem 0;font-size:1.125rem;font-weight:600}
+  .verifier-copy h3{margin:.75rem 0 .25rem 0;font-size:1rem;font-weight:600}
+  .verifier-copy p{margin:.25rem 0 .75rem 0;line-height:1.5}
+  .verifier-copy ul{margin:.25rem 0 .75rem 0;padding-left:1rem}
+  .verifier-copy li{margin:.15rem 0;line-height:1.4}
+  .verifier-stats{list-style-type:none;padding-left:0}
+  .verifier-stats li:before{content:"→ ";color:#6b7280;margin-right:0.25rem}
   @media (max-width:640px){
-    .verifier-about{grid-template-columns:64px 1fr}
-    .verifier-avatar{width:64px;height:64px}
+    .verifier-about{grid-template-columns:64px 1fr;gap:0.75rem}
+    .verifier-avatar,.verifier-avatar-fallback{width:64px;height:64px}
   }
 </style>
 
 
-<section class="verify-method">
-  <h3>How we find codes</h3>
-  <ul>
-    <li>We check official newsletters, apps, and checkout flows</li>
-    <li>We test every code at checkout before publishing</li>
-    <li>No AI, no bots, no scraping</li>
-  </ul>
-</section>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
