@@ -92,6 +92,71 @@ eleventyComputed:
 
 
         </section>
+{# About the verifier, shown once per provider page #}
+<section id="about-verifier" class="verifier-about">
+  <div class="verifier-media">
+    <img
+      src="/assets/profilepic.png"
+      alt="David Wright, Coupon Researcher"
+      class="verifier-avatar"
+      loading="lazy"
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+    >
+    <div class="verifier-avatar-fallback" style="display:none;" aria-hidden="true">DW</div>
+  </div>
+
+  <div class="verifier-copy">
+    <h2 class="verifier-heading">About David Wright</h2>
+    <p>David has dragged a laptop around the globe for 6 years because staying put sounds boring. He is 34, from a London suburb you have not heard of, and has probably used more eSIMs than most people have had hot dinners.</p>
+
+    <ul class="verifier-stats">
+      <li>6 years of non-stop travel</li>
+      <li>47 countries and counting</li>
+      <li>Every major eSIM provider tested</li>
+      <li>No AI. No bots. No scraping.</li>
+    </ul>
+
+    <h3>Why this site exists</h3>
+    <p>He got tired of discount codes that fail and affiliate sites that bend the truth. Every code here is tested by hand before it goes live.</p>
+
+    <h3>Contact policy</h3>
+    <p>No DMs. No support inbox. Read the privacy policy if you care. Use the codes or do not. He is busy testing the next one.</p>
+  </div>
+</section>
+
+<style>
+  .verifier-about{display:grid;grid-template-columns:80px 1fr;gap:1rem;border:1px dashed #e5e7eb;background:#fafafa;padding:1rem;border-radius:10px;margin:1.25rem 0}
+  .verifier-avatar{width:80px;height:80px;border-radius:9999px;object-fit:cover}
+  .verifier-heading{margin:.1rem 0 .25rem 0;font-size:1.125rem}
+  .verifier-stats{margin:.5rem 0 .75rem 0;padding-left:1rem}
+  .verifier-stats li{margin:.1rem 0}
+  @media (max-width:640px){.verifier-about{grid-template-columns:64px 1fr}.verifier-avatar{width:64px;height:64px}}
+</style>
+
+<section class="verify-method">
+  <h3>How we find codes</h3>
+  <ul>
+    <li>We check official newsletters, apps, and checkout flows</li>
+    <li>We test every code at checkout before publishing</li>
+    <li>No AI, no bots, no scraping</li>
+  </ul>
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "David Wright",
+  "image": "{{ '/assets/profilepic.png' | url | absoluteUrl(site.url) }}",
+  "jobTitle": "Coupon Researcher",
+  "description": "Finds and tests discount codes by hand. No AI. No scraping.",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}"
+  }
+}
+</script>
+
 
         <!-- Content Section (check for markdown files) -->
         <section class="content-section">
