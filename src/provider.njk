@@ -79,6 +79,36 @@ eleventyComputed:
 
     <p class="coupon-description">{{ code.description }}</p>
 
+    {# Build provider folder name from provider.name -> slug + lower to match /assets/holafly/... #}
+{% set providerFolder = (provider.name | slug | lower) %}
+{% set proofSrc = "/assets/" + providerFolder + "/" + code.code + ".png" %}
+
+<div class="proof-wrap" aria-live="polite">
+  <a class="proof-link" href="{{ proofSrc }}" target="_blank" rel="noopener" title="Open full screenshot">
+    <figure class="proof-figure">
+      <img
+        class="proof-thumb"
+        src="{{ proofSrc }}"
+        alt="{{ provider.name }} code {{ code.code }} checkout screenshot"
+        width="972" height="1580"
+        loading="lazy"
+        onerror="
+          this.closest('.proof-wrap').querySelector('.proof-fallback').style.display='flex';
+          this.closest('.proof-wrap').querySelector('.proof-figure').style.display='none';
+        "
+      >
+      <figcaption class="proof-badge">The Proof</figcaption>
+    </figure>
+  </a>
+
+  {# Fallback shown when the image is missing #}
+  <div class="proof-fallback" style="display:none;">
+    <div class="proof-fallback-box" aria-hidden="true">No proof yet</div>
+    <span class="proof-fallback-text">We have not uploaded a screenshot for {{ code.code }} yet.</span>
+  </div>
+</div>
+
+
     <div class="feedback-buttons">
       <button class="feedback-btn thumbs-up" data-feedback="up" title="This code worked!">
         <i class="fas fa-thumbs-up"></i>
