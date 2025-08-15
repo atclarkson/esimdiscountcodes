@@ -108,7 +108,7 @@ eleventyComputed:
   <div class="verifier-copy">
     <h2 class="verifier-heading">About David Wright</h2>
 
-    <p>I've been dragging a laptop around the world for 6 years straight. Originally from a London suburb you've definitely never heard of. I'm 34, technically homeless by choice, and have used more eSIM cards than most people have used napkins.</p>
+    <p>I've been dragging a laptop around the world for 6 years straight. Originally from a Toronto suburb you've definitely never heard of. I'm 34, technically homeless by choice, and have used more eSIM cards than most people have used napkins.</p>
 
     <h3>The stats</h3>
     <ul class="verifier-stats">
@@ -148,16 +148,24 @@ eleventyComputed:
 </section>
 
 <style>
-  .verifier-about{display:grid;grid-template-columns:88px 1fr;gap:1rem;border:1px dashed #e5e7eb;background:#fafafa;padding:1rem;border-radius:10px;margin:1.25rem 0}
-  .verifier-avatar{width:88px;height:88px;border-radius:9999px;object-fit:cover}
-  .verifier-avatar-fallback{width:88px;height:88px;border-radius:9999px;background:#e5e7eb;display:flex;align-items:center;justify-content:center;font-weight:600;color:#6b7280}
-  .verifier-heading{margin:.1rem 0 .25rem 0;font-size:1.125rem;font-weight:600}
-  .verifier-copy h3{margin:.75rem 0 .25rem 0;font-size:1rem;font-weight:600}
-  .verifier-copy p{margin:.25rem 0 .75rem 0;line-height:1.5}
-  .verifier-copy ul{margin:.25rem 0 .75rem 0;padding-left:1rem}
-  .verifier-copy li{margin:.15rem 0;line-height:1.4}
+  .verifier-about{display:grid;grid-template-columns:88px 1fr;gap:1rem;border:1px dashed #e5e7eb;background:#fafafa;padding:1.5rem;border-radius:12px;margin:1.5rem 0}
+  .verifier-avatar{width:88px;height:88px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+  .verifier-avatar-fallback{width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);display:flex;align-items:center;justify-content:center;font-weight:600;color:white;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+  .verifier-heading{margin:0 0 .5rem 0;font-size:1.25rem;font-weight:700;color:#1f2937}
+  .verifier-copy h3{margin:1rem 0 .5rem 0;font-size:1rem;font-weight:600;color:#374151;display:flex;align-items:center;gap:0.5rem}
+  .verifier-copy h3:before{font-family:"Font Awesome 6 Free";font-weight:900;font-size:0.875rem;color:#6b7280}
+  .verifier-copy h3:nth-of-type(1):before{content:"\f201"}
+  .verifier-copy h3:nth-of-type(2):before{content:"\f059"}
+  .verifier-copy h3:nth-of-type(3):before{content:"\f013"}
+  .verifier-copy h3:nth-of-type(4):before{content:"\f4ad"}
+  .verifier-copy h3:nth-of-type(5):before{content:"\f06e"}
+  .verifier-copy h3:nth-of-type(6):before{content:"\f2ed"}
+  .verifier-copy p{margin:.25rem 0 .75rem 0;line-height:1.6;color:#4b5563}
+  .verifier-copy ul{margin:.25rem 0 .75rem 0;padding-left:0;list-style:none}
+  .verifier-copy li{margin:.15rem 0;line-height:1.5;color:#4b5563;display:flex;align-items:flex-start;gap:0.5rem}
+  .verifier-copy li:before{content:"\f105";font-family:"Font Awesome 6 Free";font-weight:900;color:#6b7280;font-size:0.875rem;margin-top:0.125rem;flex-shrink:0}
   .verifier-stats{list-style-type:none;padding-left:0}
-  .verifier-stats li:before{content:"→ ";color:#6b7280;margin-right:0.25rem}
+  .verifier-stats li:before{content:"\f105";font-family:"Font Awesome 6 Free";font-weight:900;color:#6b7280;margin-right:0.5rem}
   @media (max-width:640px){
     .verifier-about{grid-template-columns:64px 1fr;gap:0.75rem}
     .verifier-avatar,.verifier-avatar-fallback{width:64px;height:64px}
