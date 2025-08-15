@@ -1714,3 +1714,127 @@ main {
     grid-template-columns: 1fr;
   }
 }
+
+/* Proof Thumbnail Styles */
+.proof-section {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.proof-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #10b981;
+  font-size: 0.875rem;
+}
+
+.proof-thumbnail {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.proof-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.proof-thumbnail img {
+  width: 120px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e2e8f0;
+}
+
+.proof-fallback {
+  width: 120px;
+  height: 80px;
+  background: linear-gradient(135deg, #e2e8f0 0%, #f1f5f9 100%);
+  border: 2px dashed #cbd5e1;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-size: 0.75rem;
+  text-align: center;
+  cursor: not-allowed;
+}
+
+/* Modal Styles */
+.proof-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+}
+
+.proof-modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.proof-modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.proof-modal img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #6b7280;
+  background: none;
+  border: none;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.modal-close:hover {
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+.modal-title {
+  margin: 0 0 1rem 0;
+  color: #1f2937;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding-right: 40px;
+}

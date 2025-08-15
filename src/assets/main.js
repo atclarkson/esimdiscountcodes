@@ -177,3 +177,46 @@ function initDropdown() {
     }
   });
 }
+
+// Handle proof thumbnail clicks
+document.querySelectorAll(".proof-thumbnail").forEach((thumbnail) => {
+  thumbnail.addEventListener("click", function () {
+    const img = this.querySelector("img");
+
+    // Only open modal if image is visible (not in fallback state)
+    if (img && img.style.display !== "none") {
+      const provider = this.dataset.provider;
+      const code = this.dataset.code;
+
+      const modal = document.getElementById("proofModal");
+      const modalImage = document.getElementById("modalImage");
+      const modalTitle = document.getElementById("modalTitle");
+
+      modalImage.src = img.src;
+      modalImage.alt = img.alt;
+      modalTitle.textContent = `${code} - Working Code Screenshot`;
+
+      modal.classList.add("active");
+    }
+  });
+});
+
+// Close modal function
+function closeProofModal() {
+  const modal = document.getElementById("proofModal");
+  modal.classList.remove("active");
+}
+
+// Close modal when clicking outside
+document.getElementById("proofModal").addEventListener("click", function (e) {
+  if (e.target === this) {
+    closeProofModal();
+  }
+});
+
+// Close modal with ESC key
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    closeProofModal();
+  }
+});

@@ -79,6 +79,22 @@ eleventyComputed:
 
     <p class="coupon-description">{{ code.description }}</p>
 
+    <div class="proof-section">
+  <div class="proof-label">
+    <i class="fas fa-camera"></i>
+    The Proof
+  </div>
+  <div class="proof-thumbnail" data-provider="{{ providerKey }}" data-code="{{ code.code }}">
+    <img src="/assets/{{ providerKey }}/{{ code.code }}.png" 
+         alt="Proof that {{ code.code }} code works for {{ provider.name }}"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+    <div class="proof-fallback" style="display: none;">
+      <i class="fas fa-image"></i>
+      No proof<br>available
+    </div>
+  </div>
+</div>
+
     <div class="feedback-buttons">
       <button class="feedback-btn thumbs-up" data-feedback="up" title="This code worked!">
         <i class="fas fa-thumbs-up"></i>
@@ -219,4 +235,13 @@ eleventyComputed:
             </div>
         </section>
     {% endif %}
+</div>
+
+<!-- Modal for enlarged proof image -->
+<div class="proof-modal" id="proofModal">
+  <div class="proof-modal-content">
+    <button class="modal-close" onclick="closeProofModal()">&times;</button>
+    <h3 class="modal-title" id="modalTitle">Code Verification Proof</h3>
+    <img id="modalImage" src="" alt="">
+  </div>
 </div>
