@@ -54,55 +54,76 @@ eleventyComputed:
 
             
            {% for code in provider.codes %}
+  {% set isInvalid = code.isInvalid or false %}
   {% set verifiedISO = (code.lastTested or provider.codesLastUpdated or buildTime) | fmtISO %}
   {% set verifiedPretty = (code.lastTested or provider.codesLastUpdated or buildTime) | fmtDate("LLLL d, yyyy") %}
 
-  <div class="coupon-card {% if code.isPrimary %}primary-code{% endif %}">
+  <div class="coupon-card {% if code.isPrimary and not isInvalid %}primary-code{% endif %} {% if isInvalid %}invalid-code{% endif %}">
     <div class="coupon-header">
-      <h3>{{ code.discount }}</h3>
-      {% if code.verified %}
+      <h3>
+        {% if isInvalid %}<s>{{ code.discount }}</s>{% else %}{{ code.discount }}{% endif %}
+      </h3>
+      {% if code.verified and not isInvalid %}
       <span class="verified-badge">
         <i class="fas fa-circle-check" style="color:#10b981;"></i>
-        <time class="last-reported {% if code.isPrimary %}primary-last-reported{% endif %}"
-              datetime="{{ verifiedISO }}">Verified {{ verifiedPretty }}</time>
+        <time datetime="{{ verifiedISO }}">Verified {{ verifiedPretty }}</time>
+      </span>
+      {% elif isInvalid %}
+      <span class="invalid-badge">
+        <i class="fas fa-circle-xmark" style="color:#dc2626;"></i>
+        <span>No longer works</span>
       </span>
       {% endif %}
     </div>
 
     <div class="coupon-code">
-      <button class="copy-code-btn" data-code="{{ code.code }}">
-        <i class="fas fa-copy"></i>
-        <span class="code-text">{{ code.code }}</span>
-        <span class="copy-label">Copy code</span>
+      <button class="copy-code-btn {% if isInvalid %}invalid-btn{% endif %}" 
+              data-code="{{ code.code }}" 
+              {% if isInvalid %}disabled{% endif %}>
+        <i class="fas fa-{% if isInvalid %}times{% else %}copy{% endif %}"></i>
+        <span class="code-text {% if isInvalid %}strikethrough{% endif %}">{{ code.code }}</span>
+        <span class="copy-label">{% if isInvalid %}Invalid{% else %}Copy code{% endif %}</span>
       </button>
     </div>
 
-    <p class="coupon-description">{{ code.description }}</p>
+    <p class="coupon-description {% if isInvalid %}invalid-description{% endif %}">
+      {% if isInvalid %}
+        <strong>This code no longer works.</strong> {{ code.description }}
+      {% else %}
+        {{ code.description }}
+      {% endif %}
+    </p>
 
+    <!-- Only show proof section for valid codes -->
+    {% if not isInvalid %}
     <div class="proof-section">
-  <div class="proof-label">
-    <i class="fas fa-camera"></i>
-    The Proof
-  </div>
-  <div class="proof-thumbnail" data-provider="{{ providerKey }}" data-code="{{ code.code }}">
-    <img src="/assets/{{ providerKey }}/{{ code.code }}.png" 
-         alt="Proof that {{ code.code }} code works for {{ provider.name }}"
-         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-    <div class="proof-fallback" style="display: none;">
-      <i class="fas fa-image"></i>
-      No proof<br>available
+      <div class="proof-label">
+        <i class="fas fa-camera"></i>
+        The Proof
+      </div>
+      <div class="proof-thumbnail" data-provider="{{ providerKey }}" data-code="{{ code.code }}">
+        <img src="/assets/{{ providerKey }}/{{ code.code }}.png" 
+             alt="Proof that {{ code.code }} code works for {{ provider.name }}"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="proof-fallback" style="display: none;">
+          <i class="fas fa-image"></i>
+          No proof<br>available
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+    {% endif %}
 
+    <!-- Only show feedback for valid codes -->
+    {% if not isInvalid %}
     <div class="feedback-buttons">
-      <button class="feedback-btn thumbs-up" data-feedback="up" title="This code worked!">
+      <button class="feedback-btn thumbs-up" data-feedback="up">
         <i class="fas fa-thumbs-up"></i>
       </button>
-      <button class="feedback-btn thumbs-down" data-feedback="down" title="This code didn't work">
+      <button class="feedback-btn thumbs-down" data-feedback="down">
         <i class="fas fa-thumbs-down"></i>
       </button>
     </div>
+    {% endif %}
   </div>
 {% endfor %}
 

@@ -102,7 +102,7 @@
   },
   "airalo": {
     "name": "Airalo",
-    "lastModified": "2025-08-14",
+    "lastModified": "2025-08-15",
     "description": "World's first eSIM store for travelers",
     "url": "https://airalo.com",
     "affiliateUrl": null,
@@ -122,7 +122,7 @@
         "discount": "15% OFF FIRST ESIM PURCHASE",
         "description": "15% discount for new Airalo users",
         "verified": true,
-        "lastTested": "2025-08-14",
+        "lastTested": "2025-08-15",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public"
@@ -132,7 +132,7 @@
         "discount": "10% OFF ESIMS VALUED $10+",
         "description": "10% discount for existing customers on $10+ purchases",
         "verified": true,
-        "lastTested": "2025-08-09",
+        "lastTested": "2025-08-15",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public"
@@ -142,7 +142,7 @@
         "discount": "15% OFF OR \u20ac3 OFF ESIM PLANS",
         "description": "15% or \u20ac3 off eSIM plans",
         "verified": true,
-        "lastTested": "2025-07-20",
+        "lastTested": "2025-08-15",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public"
@@ -152,7 +152,7 @@
         "discount": "$3 OFF YOUR FIRST PURCHASE",
         "description": "Get $3 off your first Airalo eSIM purchase",
         "verified": true,
-        "lastTested": "2025-07-19",
+        "lastTested": "2025-08-15",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public"
@@ -165,7 +165,8 @@
         "lastTested": "2025-07-16",
         "expiryDate": null,
         "isPrimary": false,
-        "type": "public"
+        "type": "public",
+        "isInvalid": true
       }
     ],
     "totalScore": "4",

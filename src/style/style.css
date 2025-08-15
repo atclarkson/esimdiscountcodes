@@ -1892,3 +1892,36 @@ main {
   text-align: center;
   cursor: not-allowed;
 }
+
+/* Invalid code styles */
+.coupon-card.invalid-code {
+  opacity: 0.6;
+  background: #fafafa;
+  border-color: #d1d5db;
+}
+
+.invalid-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #dc2626;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.copy-code-btn.invalid-btn {
+  background: #6b7280;
+  cursor: not-allowed;
+}
+
+.copy-code-btn.invalid-btn:hover {
+  background: #6b7280;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.invalid-description {
+  color: #6b7280;
+}
