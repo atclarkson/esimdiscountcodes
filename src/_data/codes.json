@@ -285,11 +285,11 @@
   },
   "ubigi": {
     "name": "Ubigi",
-    "lastModified": "2025-08-09",
+    "lastModified": "2025-08-15",
     "description": "Flexible data plans worldwide",
     "url": "https://ubigi.com",
     "affiliateUrl": null,
-    "primaryCode": "E3MQXBBY",
+    "primaryCode": "ENCHANTEE",
     "rating": 2.5,
     "priceCategory": "Expensive",
     "brandColors": {
@@ -305,17 +305,18 @@
         "discount": "20% OFF ALL PLANS",
         "description": "Best Ubigi discount code - 20% off",
         "verified": true,
-        "lastTested": "2025-08-09",
+        "lastTested": "2025-08-15",
         "expiryDate": null,
         "isPrimary": true,
-        "type": "public"
+        "type": "public",
+        "isInvalid": true
       },
       {
         "code": "ENCHANTEE",
         "discount": "10% OFF STOREWIDE",
         "description": "10% off storewide at Ubigi eSIM",
         "verified": true,
-        "lastTested": "2025-07-20",
+        "lastTested": "2025-08-15",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public"
@@ -325,7 +326,7 @@
         "discount": "10% OFF STOREWIDE",
         "description": "10% off storewide at Ubigi eSIM",
         "verified": true,
-        "lastTested": "2025-07-20",
+        "lastTested": "2025-08-15",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public"
@@ -335,7 +336,7 @@
         "discount": "10% OFF FIRST PURCHASE ONLY",
         "description": "10% off first purchase only",
         "verified": true,
-        "lastTested": "2025-07-20",
+        "lastTested": "2025-08-15",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public"
