@@ -213,7 +213,7 @@
   },
   "saily": {
     "name": "Saily",
-    "lastModified": "2025-08-14",
+    "lastModified": "2025-08-15",
     "description": "eSIM plans by NordVPN",
     "url": "https://saily.com",
     "affiliateUrl": null,
@@ -233,7 +233,7 @@
         "discount": "15% OFF ALL PLANS",
         "description": "Best Saily discount code - 15% off",
         "verified": true,
-        "lastTested": "2025-07-20",
+        "lastTested": "2025-08-15",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public"

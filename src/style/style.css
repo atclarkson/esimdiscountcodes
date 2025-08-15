@@ -1892,12 +1892,11 @@ main {
   text-align: center;
   cursor: not-allowed;
 }
-
 /* Invalid code styles */
 .coupon-card.invalid-code {
-  opacity: 0.6;
-  background: #fafafa;
-  border-color: #d1d5db;
+  opacity: 0.8;
+  background: linear-gradient(135deg, #fef2f2 0%, #ffffff 100%);
+  border-color: #dc2626;
 }
 
 .invalid-badge {
@@ -1909,13 +1908,20 @@ main {
   font-size: 0.875rem;
 }
 
+/* Invalid button styles */
 .copy-code-btn.invalid-btn {
-  background: #6b7280;
+  background: #dc2626;
   cursor: not-allowed;
+  opacity: 0.8;
 }
 
 .copy-code-btn.invalid-btn:hover {
-  background: #6b7280;
+  background: #dc2626;
+  opacity: 0.8;
+}
+
+.copy-code-btn:disabled {
+  pointer-events: none;
 }
 
 .strikethrough {
@@ -1924,4 +1930,24 @@ main {
 
 .invalid-description {
   color: #6b7280;
+}
+
+/* Invalid proof styles */
+.proof-section.invalid-proof {
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.proof-label.invalid-label {
+  color: #dc2626;
+}
+
+.proof-thumbnail.invalid-thumbnail img {
+  border-color: #fca5a5;
+}
+
+.proof-fallback.invalid-fallback {
+  background: linear-gradient(135deg, #fca5a5 0%, #fecaca 100%);
+  border-color: #f87171;
+  color: #7f1d1d;
 }

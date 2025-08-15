@@ -94,24 +94,25 @@ eleventyComputed:
       {% endif %}
     </p>
 
-    <!-- Only show proof section for valid codes -->
-    {% if not isInvalid %}
-    <div class="proof-section">
-      <div class="proof-label">
-        <i class="fas fa-camera"></i>
-        The Proof
+    <!-- Show proof section for all codes -->
+    <div class="proof-section {% if isInvalid %}invalid-proof{% endif %}">
+      <div class="proof-label {% if isInvalid %}invalid-label{% endif %}">
+        <i class="fas fa-{% if isInvalid %}times-circle{% else %}camera{% endif %}"></i>
+        {% if isInvalid %}Proof It Doesn't Work{% else %}The Proof{% endif %}
       </div>
-      <div class="proof-thumbnail" data-provider="{{ providerKey }}" data-code="{{ code.code }}">
+      <div class="proof-thumbnail {% if isInvalid %}invalid-thumbnail{% endif %}" 
+           data-provider="{{ providerKey }}" 
+           data-code="{{ code.code }}"
+           data-invalid="{{ isInvalid }}">
         <img src="/assets/{{ providerKey }}/{{ code.code }}.png" 
-             alt="Proof that {{ code.code }} code works for {{ provider.name }}"
+             alt="Proof that {{ code.code }} code {% if isInvalid %}doesn't work{% else %}works{% endif %} for {{ provider.name }}"
              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="proof-fallback" style="display: none;">
-          <i class="fas fa-image"></i>
+        <div class="proof-fallback {% if isInvalid %}invalid-fallback{% endif %}" style="display: none;">
+          <i class="fas fa-{% if isInvalid %}exclamation-triangle{% else %}image{% endif %}"></i>
           No proof<br>available
         </div>
       </div>
     </div>
-    {% endif %}
 
     <!-- Only show feedback for valid codes -->
     {% if not isInvalid %}
@@ -126,7 +127,6 @@ eleventyComputed:
     {% endif %}
   </div>
 {% endfor %}
-
 
         </section>
 {# About the verifier #}

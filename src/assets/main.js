@@ -187,6 +187,7 @@ document.querySelectorAll(".proof-thumbnail").forEach((thumbnail) => {
     if (img && img.style.display !== "none") {
       const provider = this.dataset.provider;
       const code = this.dataset.code;
+      const isInvalid = this.dataset.invalid === "true";
 
       const modal = document.getElementById("proofModal");
       const modalImage = document.getElementById("modalImage");
@@ -194,7 +195,12 @@ document.querySelectorAll(".proof-thumbnail").forEach((thumbnail) => {
 
       modalImage.src = img.src;
       modalImage.alt = img.alt;
-      modalTitle.textContent = `${code} - Working Code Screenshot`;
+
+      if (isInvalid) {
+        modalTitle.textContent = `${code} - Proof Code Doesn't Work`;
+      } else {
+        modalTitle.textContent = `${code} - Working Code Screenshot`;
+      }
 
       modal.classList.add("active");
     }
