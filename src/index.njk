@@ -14,49 +14,20 @@ description: "Find verified discount and promo codes for top eSIM providers. Sav
         {% set maxDiscount = 0 %}
         {% set bestCode = null %}
         {% set bestProvider = null %}
-        
+
         {% for key, provider in codes %}
             {% if provider.codes and provider.codes.length > 0 %}
                 {% set totalProviders = totalProviders + 1 %}
                 {% set totalCodes = totalCodes + provider.codes.length %}
                 
                 {% for code in provider.codes %}
-                    {% set discountNum = code.discount | replace('%', '') | replace('OFF', '') | replace('SPECIAL', '10') | replace('EXTRA', '10') | int %}
-                    {% if discountNum > maxDiscount %}
-                        {% set maxDiscount = discountNum %}
-                        {% set bestCode = code.code %}
-                        {% set bestProvider = provider.name %}
-                    {% endif %}
-                {% endfor %}
-            {% endif %}
-        {% endfor %}
-        
-        {% for key, provider in codes %}
-            {% if provider.codes and provider.codes.length > 0 %}
-                {% set totalProviders = totalProviders + 1 %}
-                {% set totalCodes = totalCodes + provider.codes.length %}
-                
-                {% for code in provider.codes %}
-                    {% set discountNum = code.discount | replace('%', '') | replace('OFF', '') | replace('SPECIAL', '10') | replace('EXTRA', '10') | int %}
-                    {% if discountNum > maxDiscount %}
-                        {% set maxDiscount = discountNum %}
-                        {% set bestCode = code.code %}
-                        {% set bestProvider = provider.name %}
-                    {% endif %}
-                {% endfor %}
-            {% endif %}
-        {% endfor %}
-        
-        {% for key, provider in codes %}
-            {% if provider.codes and provider.codes.length > 0 %}
-                {% set totalProviders = totalProviders + 1 %}
-                {% set totalCodes = totalCodes + provider.codes.length %}
-                
-                {% for code in provider.codes %}
-                    {% set discountNum = code.discount | replace('%', '') | replace('OFF', '') | replace('SPECIAL', '10') | replace('EXTRA', '10') | int %}
-                    {% if discountNum > maxDiscount %}
-                        {% set maxDiscount = discountNum %}
-                        {% set bestCode = provider.codes.code %}
+                    {% if not code.isInvalid %}
+                        {% set discountNum = code.discount | replace('%', '') | replace('OFF', '') | replace('SPECIAL', '10') | replace('EXTRA', '10') | int %}
+                        {% if discountNum > maxDiscount %}
+                            {% set maxDiscount = discountNum %}
+                            {% set bestCode = code.code %}
+                            {% set bestProvider = provider.name %}
+                        {% endif %}
                     {% endif %}
                 {% endfor %}
             {% endif %}
