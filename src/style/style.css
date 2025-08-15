@@ -1870,7 +1870,7 @@ main {
 
 .proof-thumbnail img {
   width: 120px;
-  height: 195px; /* Fixed height to maintain aspect ratio for thumbnails */
+  height: 120px; /* Fixed height to maintain aspect ratio for thumbnails */
   object-fit: cover; /* This crops the image to fit the thumbnail dimensions */
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -1879,7 +1879,7 @@ main {
 
 .proof-fallback {
   width: 120px;
-  height: 195px; /* Same height as thumbnail */
+  height: 120px; /* Same height as thumbnail */
   background: linear-gradient(135deg, #e2e8f0 0%, #f1f5f9 100%);
   border: 2px dashed #cbd5e1;
   border-radius: 6px;
