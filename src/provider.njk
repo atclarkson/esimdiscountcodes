@@ -58,7 +58,7 @@ eleventyComputed:
   {% set verifiedPretty = (code.lastTested or provider.codesLastUpdated or buildTime) | fmtDate("LLLL d, yyyy") %}
 
   <div class="coupon-card {% if code.isPrimary %}primary-code{% endif %}">
-    {# <div class="coupon-header">
+    <div class="coupon-header">
       <h3>{{ code.discount }}</h3>
       {% if code.verified %}
       <span class="verified-badge">
@@ -67,38 +67,7 @@ eleventyComputed:
               datetime="{{ verifiedISO }}">Verified {{ verifiedPretty }}</time>
       </span>
       {% endif %}
-    </div> #}
-    <div class="coupon-header">
-  <h3>{{ code.discount }}</h3>
-
-  <div class="coupon-meta">
-    {% if code.verified %}
-      <span class="verified-badge">
-        <i class="fas fa-circle-check" style="color:#10b981;"></i>
-        <time class="last-reported {% if code.isPrimary %}primary-last-reported{% endif %}"
-              datetime="{{ verifiedISO }}">Verified {{ verifiedPretty }}</time>
-      </span>
-    {% endif %}
-
-    {# proof thumb under the badge #}
-    {% set providerFolder = (provider.name | slug | lower) %}
-    {# if you key folders by providerEntry[0], use: {% set providerFolder = providerEntry[0] %} #}
-    {% set proofSrc = "/assets/" + providerFolder + "/" + code.code + ".png" %}
-
-    <div class="proof-holder">
-      <a class="proof-mini" href="{{ proofSrc }}" data-proof-src="{{ proofSrc }}" title="Open proof">
-        <img class="proof-thumb"
-             src="{{ proofSrc }}"
-             alt="{{ provider.name }} code {{ code.code }} checkout screenshot"
-             loading="lazy"
-             onerror="this.closest('.proof-holder').classList.add('is-missing')">
-        <span class="label">The Proof</span>
-      </a>
-      <div class="proof-fallback label" aria-hidden="true">No proof yet</div>
     </div>
-  </div>
-</div>
-
 
     <div class="coupon-code">
       <button class="copy-code-btn" data-code="{{ code.code }}">
@@ -109,36 +78,6 @@ eleventyComputed:
     </div>
 
     <p class="coupon-description">{{ code.description }}</p>
-
-    {# Build provider folder name from provider.name -> slug + lower to match /assets/holafly/... #}
-{% set providerFolder = (provider.name | slug | lower) %}
-{% set proofSrc = "/assets/" + providerFolder + "/" + code.code + ".png" %}
-
-<div class="proof-wrap" aria-live="polite">
-  <a class="proof-link" href="{{ proofSrc }}" target="_blank" rel="noopener" title="Open full screenshot">
-    <figure class="proof-figure">
-      <img
-        class="proof-thumb"
-        src="{{ proofSrc }}"
-        alt="{{ provider.name }} code {{ code.code }} checkout screenshot"
-        width="972" height="1580"
-        loading="lazy"
-        onerror="
-          this.closest('.proof-wrap').querySelector('.proof-fallback').style.display='flex';
-          this.closest('.proof-wrap').querySelector('.proof-figure').style.display='none';
-        "
-      >
-      <figcaption class="proof-badge">The Proof</figcaption>
-    </figure>
-  </a>
-
-  {# Fallback shown when the image is missing #}
-  <div class="proof-fallback" style="display:none;">
-    <div class="proof-fallback-box" aria-hidden="true">No proof yet - </div>
-    <span class="proof-fallback-text">We have not uploaded a screenshot for {{ code.code }} yet.</span>
-  </div>
-</div>
-
 
     <div class="feedback-buttons">
       <button class="feedback-btn thumbs-up" data-feedback="up" title="This code worked!">

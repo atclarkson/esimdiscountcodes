@@ -177,32 +177,3 @@ function initDropdown() {
     }
   });
 }
-
-document.addEventListener("click", function (e) {
-  const trigger = e.target.closest("[data-proof-src]");
-  if (!trigger) return;
-  e.preventDefault();
-  const src = trigger.getAttribute("data-proof-src");
-
-  let modal = document.getElementById("proof-modal");
-  if (!modal) {
-    modal = document.createElement("div");
-    modal.id = "proof-modal";
-    modal.innerHTML = `
-      <div class="proof-overlay"></div>
-      <img class="proof-full" alt="Proof screenshot">
-      <button class="proof-close" aria-label="Close">&times;</button>`;
-    document.body.appendChild(modal);
-    modal.addEventListener("click", (ev) => {
-      if (
-        ev.target === modal ||
-        ev.target.classList.contains("proof-overlay") ||
-        ev.target.classList.contains("proof-close")
-      ) {
-        modal.classList.remove("open");
-      }
-    });
-  }
-  modal.querySelector(".proof-full").src = src;
-  modal.classList.add("open");
-});
