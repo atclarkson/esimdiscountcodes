@@ -1,7 +1,7 @@
 {
   "holafly": {
     "name": "Holafly",
-    "lastModified": "2025-08-15",
+    "lastModified": "2025-08-17",
     "description": "International eSIM plans for travelers",
     "url": "https://holafly.com",
     "affiliateUrl": "https://holafly.sjv.io/7aQQ9d",
@@ -21,7 +21,7 @@
         "discount": "5% OFF ALL eSIM PLANS and TOP-UPS",
         "description": "Best Holafly discount code",
         "verified": true,
-        "lastTested": "2025-08-15",
+        "lastTested": "2025-08-17",
         "expiryDate": null,
         "isPrimary": true,
         "type": "affiliate"
@@ -102,10 +102,10 @@
   },
   "airalo": {
     "name": "Airalo",
-    "lastModified": "2025-08-15",
+    "lastModified": "2025-08-17",
     "description": "World's first eSIM store for travelers",
     "url": "https://airalo.com",
-    "affiliateUrl": null,
+    "affiliateUrl": "https://airalo.pxf.io/raoREy",
     "primaryCode": "NEWTOAIRALO15",
     "rating": 4.0,
     "priceCategory": "Average",
@@ -122,7 +122,7 @@
         "discount": "15% OFF FIRST ESIM PURCHASE",
         "description": "15% discount for new Airalo users",
         "verified": true,
-        "lastTested": "2025-08-15",
+        "lastTested": "2025-08-17",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public"
@@ -132,7 +132,7 @@
         "discount": "10% OFF ESIMS VALUED $10+",
         "description": "10% discount for existing customers on $10+ purchases",
         "verified": true,
-        "lastTested": "2025-08-15",
+        "lastTested": "2025-08-17",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public"
@@ -213,7 +213,7 @@
   },
   "saily": {
     "name": "Saily",
-    "lastModified": "2025-08-15",
+    "lastModified": "2025-08-17",
     "description": "eSIM plans by NordVPN",
     "url": "https://saily.com",
     "affiliateUrl": null,
@@ -285,7 +285,7 @@
   },
   "ubigi": {
     "name": "Ubigi",
-    "lastModified": "2025-08-15",
+    "lastModified": "2025-08-17",
     "description": "Flexible data plans worldwide",
     "url": "https://ubigi.com",
     "affiliateUrl": null,
@@ -387,10 +387,10 @@
   },
   "simlocal": {
     "name": "SimLocal",
-    "lastModified": "2025-08-09",
+    "lastModified": "2025-08-17",
     "description": "Local eSIM plans worldwide",
     "url": "https://simlocal.com",
-    "affiliateUrl": "https://simlocal.com?ref=YOURCODE",
+    "affiliateUrl": "https://www.simlocal.com/?utm_source=awin&utm_medium=affiliate&utm_content=1117223&utm_campaign=affiliate_&sv1=affiliate&sv_campaign_id=1117223&awc=68844_1748590721_a58d8f032ccdd7a14d574d98ac542803",
     "primaryCode": "ADAMANDLINDS",
     "rating": 3.0,
     "priceCategory": "Cheap",
@@ -794,7 +794,7 @@
     "lastModified": "2025-07-21",
     "description": "Global eSIM connectivity",
     "url": "https://airhub.com",
-    "affiliateUrl": null,
+    "affiliateUrl": "https://gighubsystemsinc.sjv.io/9La2Vj",
     "primaryCode": "SUMMER2025",
     "rating": 3.7,
     "priceCategory": "Cheap",
