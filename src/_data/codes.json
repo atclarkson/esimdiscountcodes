@@ -1,7 +1,7 @@
 {
   "holafly": {
     "name": "Holafly",
-    "lastModified": "2025-08-17",
+    "lastModified": "2025-08-21",
     "description": "International eSIM plans for travelers",
     "url": "https://holafly.com",
     "affiliateUrl": "https://holafly.sjv.io/7aQQ9d",
@@ -21,7 +21,7 @@
         "discount": "5% OFF ALL eSIM PLANS and TOP-UPS",
         "description": "Best Holafly discount code",
         "verified": true,
-        "lastTested": "2025-08-17",
+        "lastTested": "2025-08-21",
         "expiryDate": null,
         "isPrimary": true,
         "type": "affiliate"
@@ -102,7 +102,7 @@
   },
   "airalo": {
     "name": "Airalo",
-    "lastModified": "2025-08-17",
+    "lastModified": "2025-08-21",
     "description": "World's first eSIM store for travelers",
     "url": "https://airalo.com",
     "affiliateUrl": "https://airalo.pxf.io/raoREy",
@@ -122,7 +122,7 @@
         "discount": "15% OFF FIRST ESIM PURCHASE",
         "description": "15% discount for new Airalo users",
         "verified": true,
-        "lastTested": "2025-08-17",
+        "lastTested": "2025-08-21",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public"
@@ -213,7 +213,7 @@
   },
   "saily": {
     "name": "Saily",
-    "lastModified": "2025-08-17",
+    "lastModified": "2025-08-21",
     "description": "eSIM plans by NordVPN",
     "url": "https://saily.com",
     "affiliateUrl": null,
@@ -285,7 +285,7 @@
   },
   "ubigi": {
     "name": "Ubigi",
-    "lastModified": "2025-08-17",
+    "lastModified": "2025-08-21",
     "description": "Flexible data plans worldwide",
     "url": "https://ubigi.com",
     "affiliateUrl": null,
@@ -387,11 +387,11 @@
   },
   "simlocal": {
     "name": "SimLocal",
-    "lastModified": "2025-08-17",
+    "lastModified": "2025-08-21",
     "description": "Local eSIM plans worldwide",
     "url": "https://simlocal.com",
     "affiliateUrl": "https://www.simlocal.com/?utm_source=awin&utm_medium=affiliate&utm_content=1117223&utm_campaign=affiliate_&sv1=affiliate&sv_campaign_id=1117223&awc=68844_1748590721_a58d8f032ccdd7a14d574d98ac542803",
-    "primaryCode": "ADAMANDLINDS",
+    "primaryCode": "LUKEPALMS",
     "rating": 3.0,
     "priceCategory": "Cheap",
     "brandColors": {
@@ -418,7 +418,7 @@
         "discount": "SPECIAL 10% OFF ESIM",
         "description": "Special 10% off eSIM plans",
         "verified": true,
-        "lastTested": "2025-07-20",
+        "lastTested": "2025-08-21",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public",
@@ -429,7 +429,7 @@
         "discount": "10% OFF FIRST ESIM",
         "description": "10% off your first eSIM purchase",
         "verified": true,
-        "lastTested": "2025-07-20",
+        "lastTested": "2025-08-21",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public",
@@ -591,7 +591,7 @@
   },
   "redteago": {
     "name": "RedteaGO",
-    "lastModified": "2025-08-09",
+    "lastModified": "2025-08-21",
     "description": "Global eSIM connectivity solutions",
     "url": "https://redteago.com",
     "affiliateUrl": "https://esim.redteago.com?c=2ml13vun",
@@ -610,7 +610,7 @@
         "discount": "5% OFF ALL PLANS",
         "description": "RedteaGO discount code - 5% off",
         "verified": true,
-        "lastTested": "2025-08-09",
+        "lastTested": "2025-08-21",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public",
