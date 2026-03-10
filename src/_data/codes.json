@@ -1,7 +1,7 @@
 {
   "holafly": {
     "name": "Holafly",
-    "lastModified": "2025-08-29",
+    "lastModified": "2026-03-10",
     "description": "International eSIM plans for travelers",
     "url": "https://holafly.com",
     "affiliateUrl": null,
@@ -21,7 +21,7 @@
         "discount": "5% OFF ALL eSIM PLANS and TOP-UPS",
         "description": "Best Holafly discount code",
         "verified": true,
-        "lastTested": "2025-08-29",
+        "lastTested": "2026-03-10",
         "expiryDate": null,
         "isPrimary": true,
         "type": "affiliate"
@@ -31,7 +31,7 @@
         "discount": "SPECIAL DISCOUNT ON ANY ESIM PLAN",
         "description": "Get a special discount on any eSIM plan",
         "verified": true,
-        "lastTested": "2025-08-15",
+        "lastTested": "2026-03-10",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public"
@@ -407,7 +407,7 @@
         "discount": "10% OFF ALL PLANS",
         "description": "Best SimLocal discount code",
         "verified": true,
-        "lastTested": "2025-07-21",
+        "lastTested": "2026-03-10",
         "expiryDate": null,
         "isPrimary": true,
         "type": "affiliate",
