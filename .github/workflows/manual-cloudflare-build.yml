@@ -1,11 +1,12 @@
-name: Cloudflare Pages Rebuild
+name: Manual Cloudflare Pages Build
 
 on:
-  schedule:
-    # GitHub Actions schedules use UTC.
-    # 05:15 UTC is 1:15 AM America/New_York during daylight saving time
-    # and 12:15 AM America/New_York during standard time.
-    - cron: "15 5 * * *"
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "Optional note explaining why this rebuild was triggered"
+        required: false
+        type: string
 
 permissions: {}
 
@@ -13,6 +14,11 @@ jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
+      - name: Note manual trigger reason
+        if: ${{ github.event.inputs.reason != '' }}
+        run: |
+          echo "Manual rebuild reason: ${{ github.event.inputs.reason }}"
+
       - name: Trigger Cloudflare Pages build
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
