@@ -1,15 +1,57 @@
-name: Daily Cloudflare Pages Build
+name: Cloudflare Pages Rebuild
+
 on:
   schedule:
-    - cron: "15 5 * * *" # Runs every day at 12:15 AM ET or 1:15 AM depending on DST
+    # GitHub Actions schedules use UTC.
+    # 05:15 UTC is 1:15 AM America/New_York during daylight saving time
+    # and 12:15 AM America/New_York during standard time.
+    - cron: "15 5 * * *"
   workflow_dispatch:
+    inputs:
+      reason:
+        description: "Optional note explaining why this rebuild was triggered"
+        required: false
+        type: string
+
+permissions: {}
 
 jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Cloudflare Pages build
+      - name: Note manual trigger reason
+        if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.reason != '' }}
         run: |
-          curl -sS -X POST "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CF_ACCOUNT_ID }}/pages/projects/${{ secrets.CF_PROJECT_NAME }}/deployments" \
-            -H "Authorization: Bearer ${{ secrets.CF_API_TOKEN }}" \
-            -H "Content-Type: application/json"
+          echo "Manual rebuild reason: ${{ github.event.inputs.reason }}"
+
+      - name: Trigger Cloudflare Pages build
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_PROJECT_NAME: ${{ secrets.CF_PROJECT_NAME }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: |
+          set -eu
+
+          response_file="$(mktemp)"
+          trap 'rm -f "$response_file"' EXIT
+
+          status_code="$(
+            curl --silent --show-error \
+              --output "$response_file" \
+              --write-out "%{http_code}" \
+              --request POST \
+              "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/pages/projects/${CF_PROJECT_NAME}/deployments" \
+              --header "Authorization: Bearer ${CF_API_TOKEN}" \
+              --header "Content-Type: application/json"
+          )"
+
+          case "$status_code" in
+            2??)
+              ;;
+            *)
+              echo "Cloudflare Pages rebuild request failed with HTTP ${status_code}." >&2
+              echo "Cloudflare API response:" >&2
+              cat "$response_file" >&2
+              exit 1
+              ;;
+          esac
