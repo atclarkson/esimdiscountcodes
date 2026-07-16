@@ -21,7 +21,8 @@ jobs:
     steps:
       - name: Note manual trigger reason
         if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.reason != '' }}
-        run: echo "Manual rebuild reason: ${{ github.event.inputs.reason }}"
+        run: |
+          echo "Manual rebuild reason: ${{ github.event.inputs.reason }}"
 
       - name: Trigger Cloudflare Pages build
         env:
