@@ -288,7 +288,7 @@
     "lastModified": "2025-08-21",
     "description": "Flexible data plans worldwide",
     "url": "https://ubigi.com",
-    "affiliateUrl": null,
+    "affiliateUrl": "https://go.ubigi.com/MKydW2",
     "primaryCode": "ENCHANTEE",
     "rating": 2.5,
     "priceCategory": "Expensive",
@@ -301,15 +301,14 @@
     "isPopular": true,
     "codes": [
       {
-        "code": "E3MQXBBY",
-        "discount": "20% OFF ALL PLANS",
-        "description": "Best Ubigi discount code - 20% off",
+        "code": "ADAMANDLINDS",
+        "discount": "10% OFF ALL PLANS",
+        "description": "Best Ubigi discount code - 10% off",
         "verified": true,
-        "lastTested": "2025-08-15",
+        "lastTested": "2026-07-16",
         "expiryDate": null,
         "isPrimary": true,
-        "type": "public",
-        "isInvalid": true
+        "type": "public"
       },
       {
         "code": "ENCHANTEE",
