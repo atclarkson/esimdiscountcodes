@@ -72,12 +72,12 @@ eleventyComputed:
       {% endif %}
       {% if code.verified and not isInvalid %}
       <span class="verified-badge">
-        <i class="fas fa-circle-check" style="color:#10b981;"></i>
+        <i class="fas fa-circle-check" style="color:#4D8374;"></i>
         <time datetime="{{ verifiedISO }}">Confirmed active {{ verifiedPretty }}</time>
       </span>
       {% elif isInvalid %}
       <span class="invalid-badge">
-        <i class="fas fa-circle-xmark" style="color:#dc2626;"></i>
+        <i class="fas fa-circle-xmark" style="color:#79252F;"></i>
         <span>No longer works</span>
       </span>
       {% endif %}

@@ -140,9 +140,9 @@ description: "Find verified discount and promo codes for top eSIM providers. Sav
           {% for key, provider in codes %}
           <tr>
             <td>
-                <a href="/{{ key }}/" class="provider-link-btn" style="display:inline-block;padding:6px 14px;background:#059669;color:#fff;border-radius:9999px;text-decoration:none;font-weight:500;transition:background 0.2s;width:104px;text-align:center;"
-                   onmouseover="this.style.background='#047857';"
-                   onmouseout="this.style.background='#059669';">
+                <a href="/{{ key }}/" class="provider-link-btn" style="display:inline-block;padding:6px 14px;background:#015E8A;color:#fff;border-radius:9999px;text-decoration:none;font-weight:500;transition:background 0.2s;width:104px;text-align:center;"
+                   onmouseover="this.style.background='#015075';"
+                   onmouseout="this.style.background='#015E8A';">
                 {{ provider.name }}
                 </a>
             </td>
@@ -158,7 +158,7 @@ description: "Find verified discount and promo codes for top eSIM providers. Sav
             </td>
             <td>
                 {% if provider.codes[0].code and provider.codes[0].discount %}
-                <span><strong>{{ provider.codes[0].discount }}</strong> <span style="color:#28a745;">({{ provider.codes[0].code }})</span></span>
+                <span><strong>{{ provider.codes[0].discount }}</strong> <span style="color:#4D8374;">({{ provider.codes[0].code }})</span></span>
                 {% else %}
                 <span>—</span>
                 {% endif %}

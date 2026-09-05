@@ -10,7 +10,7 @@ body {
     Roboto, Oxygen, Ubuntu, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #eef2fa;
+  background-color: #EBE7D1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navigation */
 .navbar {
-  background: #eef2fa;
+  background: #EBE7D1;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   padding: 1rem 0;
   position: sticky;
@@ -43,13 +43,13 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  color: #059669;
+  color: #015E8A;
   font-weight: 600;
   font-size: 1.1rem;
 }
 
 .logo-icon {
-  color: #059669;
+  color: #015E8A;
 }
 
 .nav-menu {
@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a:hover {
-  color: #059669;
+  color: #015E8A;
 }
 
 /* Main Content */
@@ -81,11 +81,11 @@ main {
 .hero {
   text-align: center;
   padding: 3.5rem 2rem;
-  background: linear-gradient(135deg, #065f46 0%, #059669 55%, #34d399 100%);
+  background: linear-gradient(135deg, #012F45 0%, #015E8A 55%, #4D8374 100%);
   color: white;
   border-radius: 1.25rem;
   margin-bottom: 3rem;
-  box-shadow: 0 12px 32px rgba(5, 150, 105, 0.25);
+  box-shadow: 0 12px 32px rgba(1, 94, 138, 0.25);
 }
 
 .hero h1 {
@@ -209,7 +209,7 @@ main {
 }
 
 .provider-card-link:hover .provider-card h3 {
-  color: #059669;
+  color: #015E8A;
 }
 
 .providers-grid {
@@ -219,8 +219,8 @@ main {
 }
 
 .discount {
-  background: #ecfdf5;
-  color: #059669;
+  background: #EAF0EE;
+  color: #365C51;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   font-weight: 600;
@@ -270,7 +270,7 @@ main {
 }
 
 .footer-section a:hover {
-  color: #34d399;
+  color: #4D8374;
 }
 
 .footer-bottom {
@@ -333,14 +333,14 @@ main {
 }
 
 .coupon-card.primary-code {
-  border: 2px solid #059669;
-  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  border: 2px solid #015E8A;
+  background: linear-gradient(135deg, #E1ECF1 0%, #CCDFE8 100%);
 }
 
 .coupon-card.primary-code::before {
   content: "BEST DEAL";
   display: inline-block;
-  background: #059669;
+  background: #015E8A;
   color: white;
   padding: 0.25rem 0.75rem;
   border-radius: 1.25rem;
@@ -367,8 +367,8 @@ main {
 }
 
 .verified-badge {
-  background: #ecfdf5;
-  color: #059669;
+  background: #EAF0EE;
+  color: #365C51;
   padding: 0.5rem 1rem;
   border-radius: 6px;
   font-size: 0.875rem;
@@ -380,7 +380,7 @@ main {
 }
 
 .verified-badge i {
-  color: #10b981;
+  color: #4D8374;
 }
 
 /* Copy Code Button */
@@ -390,8 +390,8 @@ main {
 
 .copy-code-btn {
   background: white;
-  color: #059669;
-  border: 2px solid #059669;
+  color: #015E8A;
+  border: 2px solid #015E8A;
   padding: 1rem 2rem;
   border-radius: 9999px;
   font-size: 1.1rem;
@@ -406,9 +406,9 @@ main {
 }
 
 .copy-code-btn:hover {
-  background: #ecfdf5;
+  background: #E1ECF1;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.15);
+  box-shadow: 0 4px 12px rgba(1, 94, 138, 0.15);
 }
 
 .copy-code-btn:active {
@@ -416,7 +416,9 @@ main {
 }
 
 .copy-code-btn.copied {
-  background: #10b981;
+  background: #4D8374;
+  border-color: #4D8374;
+  color: white;
 }
 
 .coupon-description {
@@ -433,7 +435,7 @@ main {
 }
 
 .get-deal-btn {
-  background: #059669;
+  background: #015E8A;
   color: white;
   border: none;
   padding: 1rem 1.5rem;
@@ -451,14 +453,14 @@ main {
 }
 
 .get-deal-btn:hover {
-  background: #047857;
+  background: #015075;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+  box-shadow: 0 4px 12px rgba(1, 94, 138, 0.3);
 }
 
 .our-code-badge {
-  background: #fef3c7;
-  color: #92400e;
+  background: #F8F2E8;
+  color: #63553F;
   padding: 0.5rem 1rem;
   border-radius: 6px;
   font-size: 0.875rem;
@@ -470,7 +472,7 @@ main {
 }
 
 .our-code-badge i {
-  color: #d97706;
+  color: #8E7C5B;
 }
 
 /* Affiliate disclosure on provider pages */
@@ -495,7 +497,7 @@ main {
 }
 
 .code-disclosure a {
-  color: #059669;
+  color: #015E8A;
 }
 
 /* Coming Soon Pages */
@@ -553,7 +555,7 @@ main {
 }
 
 .coming-soon-content a {
-  color: #059669;
+  color: #015E8A;
   text-decoration: none;
   font-weight: 500;
 }
@@ -622,7 +624,7 @@ main {
 }
 
 .breadcrumbs a {
-  color: #059669;
+  color: #015E8A;
   text-decoration: none;
 }
 
@@ -680,7 +682,7 @@ main {
 .provider-logo .logo-fallback {
   width: 120px;
   height: 60px;
-  background: linear-gradient(135deg, #065f46 0%, #34d399 100%);
+  background: linear-gradient(135deg, #012F45 0%, #4D8374 100%);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -751,8 +753,8 @@ main {
 }
 
 .article-content blockquote {
-  border-left: 4px solid #34d399;
-  background: #ecfdf5;
+  border-left: 4px solid #4D8374;
+  background: #EAF0EE;
   padding: 1rem 1.5rem;
   margin: 1.5rem 0;
   border-radius: 0 8px 8px 0;
@@ -907,7 +909,7 @@ main {
 }
 
 .provider-link:hover {
-  border-color: #34d399;
+  border-color: #4D8374;
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
 }
@@ -919,9 +921,9 @@ main {
 }
 
 .provider-offer {
-  color: #059669;
+  color: #365C51;
   font-size: 0.9rem;
-  background: #ecfdf5;
+  background: #EAF0EE;
   padding: 0.25rem 0.75rem;
   border-radius: 1.25rem;
 }
@@ -1006,8 +1008,8 @@ main {
 }
 
 .content-section blockquote {
-  border-left: 4px solid #34d399;
-  background: #ecfdf5;
+  border-left: 4px solid #4D8374;
+  background: #EAF0EE;
   padding: 1rem 1.5rem;
   margin: 1.5rem 0;
   border-radius: 0 8px 8px 0;
@@ -1131,7 +1133,7 @@ main {
 .provider-logo .logo-fallback {
   width: 120px;
   height: 60px;
-  background: linear-gradient(135deg, #065f46 0%, #34d399 100%);
+  background: linear-gradient(135deg, #012F45 0%, #4D8374 100%);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -1279,34 +1281,34 @@ main {
 }
 
 .feedback-btn.thumbs-up:hover:not(.selected) {
-  background: #059669;
+  background: #015E8A;
   color: white;
 }
 
 .feedback-btn.thumbs-down:hover:not(.selected) {
-  background: #dc2626;
+  background: #79252F;
   color: white;
 }
 
 /* Selected states (persistent after click) */
 .feedback-btn.selected.thumbs-up {
-  background: #059669;
+  background: #015E8A;
   color: white;
 }
 
 .feedback-btn.selected.thumbs-down {
-  background: #dc2626;
+  background: #79252F;
   color: white;
 }
 
 .feedback-btn.active-up {
-  background: #059669;
+  background: #015E8A;
   color: white;
   animation: celebrate 0.6s ease-out;
 }
 
 .feedback-btn.active-down {
-  background: #dc2626;
+  background: #79252F;
   color: white;
   animation: disappointment 0.6s ease-out;
 }
@@ -1496,7 +1498,7 @@ main {
 }
 .cta-button {
   display: inline-block;
-  background: #059669;
+  background: #015E8A;
   color: #fff;
   padding: 0.75rem 2rem;
   border-radius: 9999px;
@@ -1505,7 +1507,7 @@ main {
   transition: background 0.2s;
 }
 .cta-button:hover {
-  background: #047857;
+  background: #015075;
 }
 
 /* Best Code Section */
@@ -1573,7 +1575,7 @@ main {
   font-weight: 500;
 }
 .comparison-table .fa-check {
-  color: #28a745;
+  color: #4D8374;
 }
 .comparison-table .fa-times {
   color: #dc3545;
@@ -1668,12 +1670,12 @@ main {
 }
 
 .error-suggestions li i {
-  color: #059669;
+  color: #015E8A;
   width: 16px;
 }
 
 .error-suggestions a {
-  color: #059669;
+  color: #015E8A;
   text-decoration: none;
   font-weight: 500;
 }
@@ -1714,9 +1716,9 @@ main {
 }
 
 .provider-link-404:hover {
-  border-color: #059669;
+  border-color: #015E8A;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.15);
+  box-shadow: 0 4px 12px rgba(1, 94, 138, 0.15);
 }
 
 .provider-name {
@@ -1726,9 +1728,9 @@ main {
 }
 
 .provider-offer {
-  color: #059669;
+  color: #365C51;
   font-size: 0.875rem;
-  background: #ecfdf5;
+  background: #EAF0EE;
   padding: 0.25rem 0.75rem;
   border-radius: 1.25rem;
   font-weight: 500;
@@ -1743,21 +1745,21 @@ main {
   align-items: center;
   gap: 0.5rem;
   padding: 1rem 2rem;
-  background: #059669;
+  background: #015E8A;
   color: white;
   text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
   font-size: 1.1rem;
   transition: all 0.2s ease;
-  border: 2px solid #34d399;
+  border: 2px solid #4D8374;
 }
 
 .btn:hover {
-  background: #047857;
-  border-color: #059669;
+  background: #015075;
+  border-color: #015E8A;
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(5, 150, 105, 0.3);
+  box-shadow: 0 4px 16px rgba(1, 94, 138, 0.3);
 }
 
 @keyframes bounce {
@@ -1809,7 +1811,7 @@ main {
   gap: 0.5rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: #10b981;
+  color: #4D8374;
   font-size: 0.875rem;
 }
 
@@ -1932,7 +1934,7 @@ main {
   gap: 0.5rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: #10b981;
+  color: #4D8374;
   font-size: 0.875rem;
 }
 
@@ -1975,27 +1977,29 @@ main {
 .coupon-card.invalid-code {
   opacity: 0.8;
   background: linear-gradient(135deg, #fef2f2 0%, #ffffff 100%);
-  border-color: #dc2626;
+  border-color: #79252F;
 }
 
 .invalid-badge {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #dc2626;
+  color: #79252F;
   font-weight: 500;
   font-size: 0.875rem;
 }
 
 /* Invalid button styles */
 .copy-code-btn.invalid-btn {
-  background: #dc2626;
+  background: #79252F;
+  border-color: #79252F;
+  color: white;
   cursor: not-allowed;
   opacity: 0.8;
 }
 
 .copy-code-btn.invalid-btn:hover {
-  background: #dc2626;
+  background: #79252F;
   opacity: 0.8;
 }
 
@@ -2018,7 +2022,7 @@ main {
 }
 
 .proof-label.invalid-label {
-  color: #dc2626;
+  color: #79252F;
 }
 
 .proof-thumbnail.invalid-thumbnail img {
