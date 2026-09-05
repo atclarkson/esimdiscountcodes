@@ -2,32 +2,28 @@
 <div class="content-section">
     {% set primary = provider.codes | findCode(provider.primaryCode) %}
     <!-- Main heading -->
-    <h2><i class="fas fa-tags" style="color: #0055A4;"></i> Best Ubigi Promo Codes for {{ buildMonthYear }}</h2>
+    <h2>Best Ubigi Promo Codes for {{ buildMonthYear }}</h2>
 
     <!-- Introduction -->
     <p>Ubigi delivers reliable eSIM data in over <strong>190+ countries</strong>, with no physical SIM or hidden fees. Perfect for travelers who want transparent pricing and coverage that just works.</p>
 
     <!-- Key Features Highlight -->
     <div class="feature-highlights" style="background: linear-gradient(135deg, #e6f2fa 0%, #cfe4f3 100%); border: 2px solid #0055A4; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
-        <h2 style="color: #23344F; margin-bottom: 1.5rem;"><i class="fas fa-star" style="color: #0055A4;"></i> What Makes Ubigi Stand Out?</h2>
+        <h2 style="color: #23344F; margin-bottom: 1.5rem;">What Makes Ubigi Stand Out?</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
             <div style="text-align: center; padding: 1rem;">
-                <i class="fas fa-globe-americas" style="font-size: 2rem; color: #0055A4; margin-bottom: 0.5rem;"></i>
                 <h3 style="color: #23344F;">Global Coverage</h3>
                 <p>Works in 190+ countries with strong local carrier partnerships</p>
             </div>
             <div style="text-align: center; padding: 1rem;">
-                <i class="fas fa-wallet" style="font-size: 2rem; color: #0055A4; margin-bottom: 0.5rem;"></i>
                 <h3 style="color: #23344F;">Transparent Pricing</h3>
                 <p>Costs shown upfront—no nasty surprises</p>
             </div>
             <div style="text-align: center; padding: 1rem;">
-                <i class="fas fa-rocket" style="font-size: 2rem; color: #0055A4; margin-bottom: 0.5rem;"></i>
                 <h3 style="color: #23344F;">Fast Setup</h3>
                 <p>Get QR and activate in minutes—ideal for last-minute trips</p>
             </div>
             <div style="text-align: center; padding: 1rem;">
-                <i class="fas fa-phone-volume" style="font-size: 2rem; color: #0055A4; margin-bottom: 0.5rem;"></i>
                 <h3 style="color: #23344F;">Calls & SMS Support</h3>
                 <p>Some plans include voice/SMS — good for light travelers</p>
             </div>
@@ -35,7 +31,7 @@
     </div>
 
     <!-- How Ubigi Works -->
-    <h2><i class="fas fa-cogs"></i> How Ubigi eSIM Works</h2>
+    <h2>How Ubigi eSIM Works</h2>
     <p>Browse by country or global region, pay online, get a QR code instantly, and activate when you're ready. Manage everything via the Ubigi app—data usage, plan top-up, validity—right at your fingertips.</p>
     <ul>
         <li><strong>Select plan</strong> by destination or region</li>
@@ -45,7 +41,7 @@
     </ul>
 
     <!-- Comparison with Competitors -->
-    <h2><i class="fas fa-balance-scale"></i> Ubigi vs. Other eSIM Providers</h2>
+    <h2>Ubigi vs. Other eSIM Providers</h2>
     <table style="margin: 2rem 0;">
         <thead>
             <tr>
@@ -96,7 +92,7 @@
     </table>
 
     <!-- Promo Codes -->
-    <h2><i class="fas fa-percent"></i> Ubigi Promo Codes {{ buildMonthYear }}</h2>
+    <h2>Ubigi Promo Codes {{ buildMonthYear }}</h2>
     <ul>
         <li><strong>{{ provider.primaryCode }}:</strong> {{ primary.discount }} (our own code, shown first) &mdash; works worldwide</li>
         {% for code in provider.codes %}
@@ -121,22 +117,22 @@
     </div>
 
     <!-- FAQ Section -->
-    <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+    <h2>Frequently Asked Questions</h2>
     <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 2rem 0;">
         <div style="border-bottom: 1px solid #cfe4f3; padding: 1.5rem;">
-            <h3 style="color: #0055A4; margin-bottom: 0.5rem;"><i class="fas fa-percentage"></i> Best Ubigi code?</h3>
+            <h3 style="color: #0055A4; margin-bottom: 0.5rem;">Best Ubigi code?</h3>
             <p style="margin-bottom: 0;">Use <strong>{{ provider.primaryCode }}</strong> for {{ primary.discount | lower }} &mdash; confirmed active {{ (primary.lastTested or buildTime) | fmtDate("MMMM yyyy") }}. It's our own code, shown first; other working codes are listed above.</p>
         </div>
         <div style="border-bottom: 1px solid #cfe4f3; padding: 1.5rem;">
-            <h3 style="color: #0055A4; margin-bottom: 0.5rem;"><i class="fas fa-globe-americas"></i> Plans include voice & SMS?</h3>
+            <h3 style="color: #0055A4; margin-bottom: 0.5rem;">Plans include voice & SMS?</h3>
             <p style="margin-bottom: 0;">Yes, some plans add voice/SMS. Others are data-only—check before buying.</p>
         </div>
         <div style="border-bottom: 1px solid #cfe4f3; padding: 1.5rem;">
-            <h3 style="color: #0055A4; margin-bottom: 0.5rem;"><i class="fas fa-clock"></i> How fast is activation?</h3>
+            <h3 style="color: #0055A4; margin-bottom: 0.5rem;">How fast is activation?</h3>
             <p style="margin-bottom: 0;">QR arrives instantly; activate when you land—usually connected in minutes.</p>
         </div>
         <div style="padding: 1.5rem;">
-            <h3 style="color: #0055A4; margin-bottom: 0.5rem;"><i class="fas fa-undo"></i> Refunds available?</h3>
+            <h3 style="color: #0055A4; margin-bottom: 0.5rem;">Refunds available?</h3>
             <p style="margin-bottom: 0;">Not after activation. If you don't activate, sometimes support will help, but best to double-check first.</p>
         </div>
     </div>
@@ -185,7 +181,7 @@
 
     <!-- Call to Action -->
     <div style="background: linear-gradient(135deg, #e6f2fa 0%, #cfe4f3 100%); color: #23344F; padding: 2rem; border-radius: 12px; text-align: center; margin: 3rem 0; border: 2px solid #0055A4;">
-        <h2 style="color: #23344F; margin-bottom: 1rem;"><i class="fas fa-globe"></i> Save on Your Ubigi eSIM</h2>
+        <h2 style="color: #23344F; margin-bottom: 1rem;">Save on Your Ubigi eSIM</h2>
         <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #23344F;">Use <strong>{{ provider.primaryCode }}</strong> at checkout for {{ primary.discount | lower }}.</p>
         <p style="margin-bottom: 0; color: #23344F;">Global coverage, no surprises—travel smart with Ubigi.</p>
     </div>

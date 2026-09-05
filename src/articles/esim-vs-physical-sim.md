@@ -105,23 +105,23 @@ Physical SIM cards have been around forever. eSIMs are the new digital version. 
 
 ### eSIM Convenience
 
-- ✅ Buy from anywhere
-- ✅ Instant activation
-- ✅ No physical handling
-- ✅ Multiple plan storage
-- ✅ Easy switching
-- ❌ Requires compatible device
-- ❌ Needs internet for setup
+- Pro: Buy from anywhere
+- Pro: Instant activation
+- Pro: No physical handling
+- Pro: Multiple plan storage
+- Pro: Easy switching
+- Con: Requires compatible device
+- Con: Needs internet for setup
 
 ### Physical SIM Convenience
 
-- ✅ Works in any phone
-- ✅ No software dependencies
-- ✅ Local support available
-- ❌ Easy to lose
-- ❌ Requires SIM tools
-- ❌ One SIM at a time
-- ❌ Airport prices suck
+- Pro: Works in any phone
+- Pro: No software dependencies
+- Pro: Local support available
+- Con: Easy to lose
+- Con: Requires SIM tools
+- Con: One SIM at a time
+- Con: Airport prices suck
 
 **Winner**: eSIM (if your phone supports it)
 

@@ -1,7 +1,7 @@
 <!-- eSIM Card Content Template -->
 <div class="content-section">
   {% set primary = provider.codes | findCode(provider.primaryCode) %}
-  <h2><i class="fas fa-tags"></i> Best eSIM Card Promo Codes for {{ buildMonthYear }}</h2>
+  <h2>Best eSIM Card Promo Codes for {{ buildMonthYear }}</h2>
 
   <p>eSIM Card offers prepaid eSIM data plans covering 170+ countries, with local, regional, and global packages installed by QR code.</p>
 
@@ -13,14 +13,14 @@
     <p style="margin:.5rem 0 0 0;color:#6b7280;font-size:.95rem;">This is a public code advertised on eSIM Card's own site, not an exclusive code of ours.</p>
   </div>
 
-  <h2><i class="fas fa-rocket"></i> How to Use It</h2>
+  <h2>How to Use It</h2>
   <ol style="font-size:1.05rem;line-height:1.7;">
     <li>Copy <strong>{{ provider.primaryCode }}</strong></li>
     <li>Pick a country, regional, or global plan on eSIM Card</li>
     <li>Enter the code at checkout to apply {{ primary.discount | lower }}</li>
   </ol>
 
-  <h2><i class="fas fa-question-circle"></i> FAQ</h2>
+  <h2>FAQ</h2>
   <div style="background:#ffffff;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,0.06);margin:1rem 0;">
     <div style="padding:1rem 1.25rem;">
       <h3 style="margin:.25rem 0;">What's the best eSIM Card code right now?</h3>

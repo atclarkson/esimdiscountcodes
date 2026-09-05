@@ -7,7 +7,7 @@ pagination:
 permalink: "/{{ providerEntry[0] }}/"
 eleventyComputed:
   title: "{{ providerEntry[1].primaryCode }} - {{ providerEntry[1].codes[0].discount }} Off {{ providerEntry[1].name }} eSIM (Verified {{ buildTime | fmtDate('LLLL yyyy') }})"
-  description: "✅ {{ providerEntry[1].primaryCode }}: {{ providerEntry[1].codes[0].discount }} off {{ providerEntry[1].name }} eSIM plans. Verified {{ buildTime | fmtDate('LLLL d, yyyy') }}. Save on travel data with tested codes."
+  description: "{{ providerEntry[1].primaryCode }}: {{ providerEntry[1].codes[0].discount }} off {{ providerEntry[1].name }} eSIM plans. Verified {{ buildTime | fmtDate('LLLL d, yyyy') }}. Save on travel data with tested codes."
   canonical: "{{ page.url | url | absoluteUrl(site.url) }}"
   providerKey: "{{ providerEntry[0] }}"
   provider: "{{ providerEntry[1] }}"
@@ -158,11 +158,11 @@ eleventyComputed:
         <!-- Coming Soon -->
         <section class="coming-soon-section">
             <div class="coming-soon-content">
-                <h2><i class="fas fa-clock"></i> Coming Soon</h2>
+                <h2>Coming Soon</h2>
                 <p>We're working hard to bring you the best {{ provider.name }} discount codes and promo codes. Check back soon for verified codes that will save you money on your eSIM plans.</p>
                 
                 <div class="explore-section">
-                    <h3><i class="fas fa-compass"></i> Explore Other Providers</h3>
+                    <h3>Explore Other Providers</h3>
                     <p>While you wait, check out our verified discount codes for other eSIM providers:</p>
                     <div class="provider-links">
                         {% for key, otherProvider in codes %}

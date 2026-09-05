@@ -2,32 +2,28 @@
 <div class="content-section">
     <!-- Main heading -->
     {% set primary = provider.codes | findCode(provider.primaryCode) %}
-    <h2><i class="fas fa-tags" style="color: #009C8F;"></i> Best SimLocal Promo Codes for {{ buildMonthYear }}</h2>
+    <h2>Best SimLocal Promo Codes for {{ buildMonthYear }}</h2>
     
     <!-- Introduction -->
     <p>SimLocal hooks you up with local eSIM plans for travel in <strong>150+ countries</strong>. Their platform is simple, the plans are cheap, and you’ll avoid those tourist-trap roaming charges. If you just need fast data and don’t care about fluff, SimLocal gets it done.</p>
 
     <!-- Key Features Highlight -->
     <div class="feature-highlights" style="background: linear-gradient(135deg, #e0f2f1 0%, #009c8f0d 100%); border: 2px solid #009C8F; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
-        <h2 style="color: #3A474E; margin-bottom: 1.5rem;"><i class="fas fa-star" style="color: #009C8F;"></i> What Makes SimLocal Stand Out?</h2>
+        <h2 style="color: #3A474E; margin-bottom: 1.5rem;">What Makes SimLocal Stand Out?</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
             <div style="text-align: center; padding: 1rem;">
-                <i class="fas fa-mobile-alt" style="font-size: 2rem; color: #009C8F; margin-bottom: 0.5rem;"></i>
                 <h3 style="color: #3A474E;">Local-Focused eSIMs</h3>
                 <p>Cheap, local data for 150+ countries — not global, not fancy, just practical</p>
             </div>
             <div style="text-align: center; padding: 1rem;">
-                <i class="fas fa-bolt" style="font-size: 2rem; color: #009C8F; margin-bottom: 0.5rem;"></i>
                 <h3 style="color: #3A474E;">Quick Setup</h3>
                 <p>eSIMs delivered instantly, works with all recent phones</p>
             </div>
             <div style="text-align: center; padding: 1rem;">
-                <i class="fas fa-piggy-bank" style="font-size: 2rem; color: #009C8F; margin-bottom: 0.5rem;"></i>
                 <h3 style="color: #3A474E;">Cheap Plans</h3>
                 <p>Plans usually cost less than “big name” eSIM providers</p>
             </div>
             <div style="text-align: center; padding: 1rem;">
-                <i class="fas fa-user-check" style="font-size: 2rem; color: #009C8F; margin-bottom: 0.5rem;"></i>
                 <h3 style="color: #3A474E;">Easy Refunds</h3>
                 <p>Refunds available if you can’t get it working — no drama</p>
             </div>
@@ -35,7 +31,7 @@
     </div>
 
     <!-- How SimLocal Works -->
-    <h2><i class="fas fa-cogs"></i> How SimLocal eSIM Works</h2>
+    <h2>How SimLocal eSIM Works</h2>
     <p>Buy, scan, connect. Browse plans for your destination, pay online, and get a QR code to install your eSIM in minutes. Manage everything from your SimLocal account. No contracts, no stores, just data.</p>
     <ul>
         <li><strong>Choose your country</strong> and see available eSIM plans</li>
@@ -45,7 +41,7 @@
     </ul>
 
     <!-- Comparison with Major Competitors -->
-    <h2><i class="fas fa-balance-scale"></i> SimLocal vs. Top eSIM Competitors</h2>
+    <h2>SimLocal vs. Top eSIM Competitors</h2>
     <p>How does SimLocal compare to Airalo, Holafly, and Saily?</p>
     <table style="margin: 2rem 0;">
         <thead>
@@ -111,7 +107,7 @@
     </table>
 
     <!-- Popular SimLocal Promo Codes -->
-    <h2><i class="fas fa-percent"></i> SimLocal Promo Codes {{ buildMonthYear }}</h2>
+    <h2>SimLocal Promo Codes {{ buildMonthYear }}</h2>
     <ul>
         <li><strong>{{ provider.primaryCode }}:</strong> {{ primary.discount }} (our own code, confirmed active {{ (primary.lastTested or buildTime) | fmtDate("MMMM yyyy") }})</li>
         <li>EMMANUEL: 10% OFF eSIM</li>
@@ -135,26 +131,26 @@
     </div>
 
     <!-- FAQ Section -->
-    <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+    <h2>Frequently Asked Questions</h2>
     <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 2rem 0;">
         <div style="border-bottom: 1px solid #e0f2f1; padding: 1.5rem;">
-            <h3 style="color: #009C8F; margin-bottom: 0.5rem;"><i class="fas fa-percentage"></i> What's the best SimLocal discount code?</h3>
+            <h3 style="color: #009C8F; margin-bottom: 0.5rem;">What's the best SimLocal discount code?</h3>
             <p style="margin-bottom: 0;">Our own code <strong>{{ provider.primaryCode }}</strong> gets you {{ primary.discount | lower }} on all destinations. It's shown first here because it's ours, not necessarily because it's the single best deal.</p>
         </div>
         <div style="border-bottom: 1px solid #e0f2f1; padding: 1.5rem;">
-            <h3 style="color: #009C8F; margin-bottom: 0.5rem;"><i class="fas fa-mobile-alt"></i> Does SimLocal work on my phone?</h3>
+            <h3 style="color: #009C8F; margin-bottom: 0.5rem;">Does SimLocal work on my phone?</h3>
             <p style="margin-bottom: 0;">Any modern phone with eSIM support (iPhone XS or newer, Pixel 4+, Samsung S20+, etc) will work. If you bought your device in China, check if eSIM is enabled.</p>
         </div>
         <div style="border-bottom: 1px solid #e0f2f1; padding: 1.5rem;">
-            <h3 style="color: #009C8F; margin-bottom: 0.5rem;"><i class="fas fa-clock"></i> How fast is activation?</h3>
+            <h3 style="color: #009C8F; margin-bottom: 0.5rem;">How fast is activation?</h3>
             <p style="margin-bottom: 0;">Instant. Scan the QR and you’re online in a minute or two.</p>
         </div>
         <div style="border-bottom: 1px solid #e0f2f1; padding: 1.5rem;">
-            <h3 style="color: #009C8F; margin-bottom: 0.5rem;"><i class="fas fa-undo"></i> Can I get a refund?</h3>
+            <h3 style="color: #009C8F; margin-bottom: 0.5rem;">Can I get a refund?</h3>
             <p style="margin-bottom: 0;">Yep. If your eSIM doesn’t work, they’ll refund you. Don’t activate the plan until you land, just in case.</p>
         </div>
         <div style="padding: 1.5rem;">
-            <h3 style="color: #009C8F; margin-bottom: 0.5rem;"><i class="fas fa-headset"></i> Is support 24/7?</h3>
+            <h3 style="color: #009C8F; margin-bottom: 0.5rem;">Is support 24/7?</h3>
             <p style="margin-bottom: 0;">Nope. Support is available, but not 24/7 and no live chat. If you want hand-holding, try Airalo or Holafly instead.</p>
         </div>
     </div>
@@ -211,7 +207,7 @@
 
     <!-- Call to Action -->
     <div style="background: linear-gradient(135deg, #e0f2f1 0%, #009c8f0d 100%); color: #3A474E; padding: 2rem; border-radius: 12px; text-align: center; margin: 3rem 0; border: 2px solid #009C8F;">
-        <h2 style="color: #3A474E; margin-bottom: 1rem;"><i class="fas fa-globe" style="color: #009C8F;"></i> Save on Your Next Trip</h2>
+        <h2 style="color: #3A474E; margin-bottom: 1rem;">Save on Your Next Trip</h2>
         <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #3A474E;">Use promo code <strong style="color: #009C8F;">ADAMANDLINDS</strong> for 10% off your SimLocal eSIM purchase.</p>
         <p style="margin-bottom: 0; color: #3A474E;">Travel smart, pay less, and don’t get ripped off on data again.</p>
     </div>

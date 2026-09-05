@@ -34,9 +34,9 @@ description: "Find verified discount and promo codes for top eSIM providers. Sav
         {% endfor %}
         
         <div class="hero-stats">
-            <span>✅ {{ totalCodes }}+ verified codes</span>
-            <span>🌍 {{ totalProviders }} top providers</span>
-            <span>💰 Save up to {{ maxDiscount }}%</span>
+            <span><i class="fas fa-circle-check"></i> {{ totalCodes }}+ verified codes</span>
+            <span><i class="fas fa-globe"></i> {{ totalProviders }} top providers</span>
+            <span><i class="fas fa-tag"></i> Save up to {{ maxDiscount }}%</span>
         </div>
     </section>
 
@@ -140,9 +140,9 @@ description: "Find verified discount and promo codes for top eSIM providers. Sav
           {% for key, provider in codes %}
           <tr>
             <td>
-                <a href="/{{ key }}/" class="provider-link-btn" style="display:inline-block;padding:6px 14px;background:#007bff;color:#fff;border-radius:4px;text-decoration:none;font-weight:500;transition:background 0.2s;width:104px;text-align:center;"
-                   onmouseover="this.style.background='#0056b3';"
-                   onmouseout="this.style.background='#007bff';">
+                <a href="/{{ key }}/" class="provider-link-btn" style="display:inline-block;padding:6px 14px;background:#059669;color:#fff;border-radius:9999px;text-decoration:none;font-weight:500;transition:background 0.2s;width:104px;text-align:center;"
+                   onmouseover="this.style.background='#047857';"
+                   onmouseout="this.style.background='#059669';">
                 {{ provider.name }}
                 </a>
             </td>

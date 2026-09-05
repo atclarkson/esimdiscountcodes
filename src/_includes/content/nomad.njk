@@ -2,32 +2,28 @@
 <div class="content-section">
     {% set primary = provider.codes | findCode(provider.primaryCode) %}
     <!-- Main heading -->
-    <h2><i class="fas fa-tags" style="color: #FF4D00;"></i> Best Nomad eSIM Promo Codes for {{ buildMonthYear }}</h2>
+    <h2>Best Nomad eSIM Promo Codes for {{ buildMonthYear }}</h2>
     
     <!-- Introduction -->
     <p>Nomad gives you fast, flexible eSIM data in over <strong>120 countries</strong>, with reliable speeds and clean pricing. It’s simple—pick a plan, scan, and go. No ridiculous markups.</p>
 
     <!-- Key Features Highlight -->
     <div class="feature-highlights" style="background: linear-gradient(135deg, #ffece6 0%, #ffe0d4 100%); border: 2px solid #FF4D00; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
-        <h2 style="color: #4A3A31; margin-bottom: 1.5rem;"><i class="fas fa-star" style="color: #FF4D00;"></i> What Makes Nomad Stand Out?</h2>
+        <h2 style="color: #4A3A31; margin-bottom: 1.5rem;">What Makes Nomad Stand Out?</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
             <div style="text-align: center; padding: 1rem;">
-                <i class="fas fa-globe" style="font-size: 2rem; color: #FF4D00; margin-bottom: 0.5rem;"></i>
                 <h3 style="color: #4A3A31;">Global Coverage</h3>
                 <p>120+ countries with single, easy-to-manage plans</p>
             </div>
             <div style="text-align: center; padding: 1rem;">
-                <i class="fas fa-bolt" style="font-size: 2rem; color: #FF4D00; margin-bottom: 0.5rem;"></i>
                 <h3 style="color: #4A3A31;">Instant Delivery</h3>
                 <p>QR code arrives in seconds—no waiting</p>
             </div>
             <div style="text-align: center; padding: 1rem;">
-                <i class="fas fa-wallet" style="font-size: 2rem; color: #FF4D00; margin-bottom: 0.5rem;"></i>
                 <h3 style="color: #4A3A31;">Transparent Pricing</h3>
                 <p>Always know the price in your local currency upfront</p>
             </div>
             <div style="text-align: center; padding: 1rem;">
-                <i class="fas fa-shield-alt" style="font-size: 2rem; color: #FF4D00; margin-bottom: 0.5rem;"></i>
                 <h3 style="color: #4A3A31;">Secure Payments</h3>
                 <p>Uses trusted rails—no shady stuff</p>
             </div>
@@ -35,7 +31,7 @@
     </div>
 
     <!-- How Nomad Works -->
-    <h2><i class="fas fa-cogs"></i> How Nomad eSIM Works</h2>
+    <h2>How Nomad eSIM Works</h2>
     <p>Pick your country—or go global—choose data size, pay online, and get a QR code immediately. Scan it, activate when you land, and manage all your eSIMs straight from your account/dashboard app—zero hassle.</p>
     <ul>
         <li><strong>Select plan:</strong> country-specific or global</li>
@@ -45,7 +41,7 @@
     </ul>
 
     <!-- Comparison with Competitors -->
-    <h2><i class="fas fa-balance-scale"></i> Nomad vs. Other eSIM Providers</h2>
+    <h2>Nomad vs. Other eSIM Providers</h2>
     <p>Quick look at Nomad versus Airalo, Globalesim, and AloSIM:</p>
     <table style="margin: 2rem 0;">
         <thead>
@@ -104,7 +100,7 @@
     </table>
 
     <!-- Promo Codes -->
-    <h2><i class="fas fa-percent"></i> Nomad Promo Codes {{ buildMonthYear }}</h2>
+    <h2>Nomad Promo Codes {{ buildMonthYear }}</h2>
     <ul>
         {% for code in provider.codes %}
         {% if not code.isInvalid %}
@@ -128,22 +124,22 @@
     </div>
 
     <!-- FAQ Section -->
-    <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+    <h2>Frequently Asked Questions</h2>
     <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 2rem 0;">
         <div style="border-bottom: 1px solid #ffe0d4; padding: 1.5rem;">
-            <h3 style="color: #FF4D00; margin-bottom: 0.5rem;"><i class="fas fa-percentage"></i> Best Nomad code?</h3>
+            <h3 style="color: #FF4D00; margin-bottom: 0.5rem;">Best Nomad code?</h3>
             <p style="margin-bottom: 0;">Use <strong>{{ provider.primaryCode }}</strong> for {{ primary.discount | lower }}. Confirmed active {{ (primary.lastTested or buildTime) | fmtDate("MMMM yyyy") }}.</p>
         </div>
         <div style="border-bottom: 1px solid #ffe0d4; padding: 1.5rem;">
-            <h3 style="color: #FF4D00; margin-bottom: 0.5rem;"><i class="fas fa-clock"></i> How fast is delivery?</h3>
+            <h3 style="color: #FF4D00; margin-bottom: 0.5rem;">How fast is delivery?</h3>
             <p style="margin-bottom: 0;">Instant QR—plan’s in your inbox in seconds.</p>
         </div>
         <div style="border-bottom: 1px solid #ffe0d4; padding: 1.5rem;">
-            <h3 style="color: #FF4D00; margin-bottom: 0.5rem;"><i class="fas fa-shield-alt"></i> What about refunds?</h3>
+            <h3 style="color: #FF4D00; margin-bottom: 0.5rem;">What about refunds?</h3>
             <p style="margin-bottom: 0;">Nope. Once you scan, it’s final. Double‑check before activating.</p>
         </div>
         <div style="padding: 1.5rem;">
-            <h3 style="color: #FF4D00; margin-bottom: 0.5rem;"><i class="fas fa-support"></i> Is support available?</h3>
+            <h3 style="color: #FF4D00; margin-bottom: 0.5rem;">Is support available?</h3>
             <p style="margin-bottom: 0;">Email only—no chat, but they usually reply within 24 hours.</p>
         </div>
     </div>
@@ -192,7 +188,7 @@
 
     <!-- Call to Action -->
     <div style="background: linear-gradient(135deg, #ffece6 0%, #ffe0d4 100%); color: #4A3A31; padding: 2rem; border-radius: 12px; text-align: center; margin: 3rem 0; border: 2px solid #FF4D00;">
-        <h2 style="color: #4A3A31; margin-bottom: 1rem;"><i class="fas fa-globe" style="color: #FF4D00;"></i> Save on Your Nomad eSIM</h2>
+        <h2 style="color: #4A3A31; margin-bottom: 1rem;">Save on Your Nomad eSIM</h2>
         <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #4A3A31;">Use code <strong style="color: #FF4D00;">{{ provider.primaryCode }}</strong> at checkout for {{ primary.discount | lower }} and travel worry‑free.</p>
         <p style="margin-bottom: 0; color: #4A3A31;">Simple, fast, and transparent—just how eSIM should be.</p>
     </div>

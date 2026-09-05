@@ -38,7 +38,7 @@ function initCopyButtons() {
 function showCopySuccess(button, code) {
   button.classList.add("copied");
   const originalText = button.innerHTML;
-  button.innerHTML = code + " <span>✓ Copied!</span>";
+  button.innerHTML = code + ' <span><i class="fas fa-check"></i> Copied!</span>';
 
   setTimeout(() => {
     button.classList.remove("copied");
@@ -89,7 +89,7 @@ function handleFeedback(button) {
     setTimeout(() => button.classList.remove("active-up"), 600);
   } else if (feedback === "down") {
     button.classList.add("active-down");
-    createPoopEffect(centerX, centerY);
+    createDownEffect(centerX, centerY);
     setTimeout(() => button.classList.remove("active-down"), 600);
   }
 }
@@ -119,23 +119,24 @@ function createFireworks(x, y) {
   }
 }
 
-function createPoopEffect(x, y) {
-  const poopEmojis = ["💩", "🤮", "🚫"];
+function createDownEffect(x, y) {
+  for (let i = 0; i < 6; i++) {
+    const particle = document.createElement("div");
+    particle.className = "down-particle";
+    particle.style.left = x + "px";
+    particle.style.top = y + "px";
 
-  for (let i = 0; i < 3; i++) {
-    const poop = document.createElement("div");
-    poop.className = "poop-particle";
-    poop.textContent = poopEmojis[i];
+    const angle = (i * 60 * Math.PI) / 180;
+    const distance = 20 + Math.random() * 15;
+    const dx = Math.cos(angle) * distance;
+    const dy = Math.sin(angle) * distance;
 
-    const offsetX = (i - 1) * 25; // -25, 0, 25
-    const offsetY = Math.random() * 10 - 5;
+    particle.style.setProperty("--dx", dx + "px");
+    particle.style.setProperty("--dy", dy + "px");
 
-    poop.style.left = x + offsetX + "px";
-    poop.style.top = y + offsetY + "px";
+    document.body.appendChild(particle);
 
-    document.body.appendChild(poop);
-
-    setTimeout(() => poop.remove(), 1000);
+    setTimeout(() => particle.remove(), 600);
   }
 }
 
