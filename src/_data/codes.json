@@ -1316,5 +1316,61 @@
         "Asia": "-"
       }
     }
+  },
+  "amigoesim": {
+    "name": "Amigo eSIM",
+    "lastModified": "2026-09-05",
+    "description": "Digital eSIM plans for travelers, 194+ destinations",
+    "url": "https://www.amigosim.com",
+    "affiliateUrl": "https://amigoesim.pxf.io/zz5MzG",
+    "primaryCode": null,
+    "codes": []
+  },
+  "bytesim": {
+    "name": "ByteSIM",
+    "lastModified": "2026-09-05",
+    "description": "eSIM data plans for international travel",
+    "url": "https://bytesim.com",
+    "affiliateUrl": "https://bytesimlimited.pxf.io/0GMqGN",
+    "primaryCode": null,
+    "codes": []
+  },
+  "esimcardus": {
+    "name": "eSIM Card",
+    "lastModified": "2026-09-05",
+    "description": "Prepaid eSIM data plans for 170+ countries",
+    "url": "https://esimcard.com",
+    "affiliateUrl": "https://esimcardus.sjv.io/n4ZM4M",
+    "primaryCode": "ESIM10",
+    "codes": [
+      {
+        "code": "ESIM10",
+        "discount": "10% OFF ESIM",
+        "description": "Public discount code advertised on eSIM Card's site",
+        "verified": true,
+        "lastTested": "2026-09-05",
+        "expiryDate": null,
+        "isPrimary": true,
+        "type": "public"
+      }
+    ]
+  },
+  "esimo": {
+    "name": "eSIMo",
+    "lastModified": "2026-09-05",
+    "description": "eSIM plans and international phone numbers for travelers",
+    "url": "https://esimo.io",
+    "affiliateUrl": "https://esimo.pxf.io/6kQjkm",
+    "primaryCode": null,
+    "codes": []
+  },
+  "simoptions": {
+    "name": "SimOptions",
+    "lastModified": "2026-09-05",
+    "description": "Prepaid eSIM marketplace for global travel since 2014",
+    "url": "https://www.simoptions.com",
+    "affiliateUrl": "https://simoptions.sjv.io/YVBm0B",
+    "primaryCode": null,
+    "codes": []
   }
 }
