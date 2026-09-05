@@ -590,31 +590,6 @@ main {
   margin: 2rem 0;
 }
 
-/* Provider-specific brand styling */
-.provider-page[data-provider="holafly"] .content-section h2 {
-  border-bottom-color: #e6485c;
-  color: #292b2e;
-}
-
-.provider-page[data-provider="holafly"] .content-section h3 {
-  color: #e6485c;
-}
-
-.provider-page[data-provider="holafly"] .content-section blockquote {
-  border-left-color: #e6485c;
-  background: #fef2f2;
-}
-
-.provider-page[data-provider="holafly"] .content-section table th {
-  background: #fef2f2;
-  color: #292b2e;
-}
-
-.provider-page[data-provider="holafly"] .content-section code {
-  background: #fef2f2;
-  color: #e6485c;
-}
-
 /* Breadcrumbs */
 .breadcrumbs {
   margin-bottom: 1rem;
@@ -1083,6 +1058,200 @@ main {
   .content-section th,
   .content-section td {
     padding: 0.75rem 0.5rem;
+  }
+}
+
+/* Reusable content components for de-templatized provider articles */
+.content-callout {
+  background: linear-gradient(135deg, #E1ECF1 0%, #CCDFE8 100%);
+  border: 2px solid #015E8A;
+  border-radius: 18px;
+  padding: 1.5rem 1.75rem;
+  margin: 2rem 0;
+}
+
+.content-callout h2 {
+  margin: 0 0 0.75rem 0 !important;
+  border: none !important;
+  padding: 0 !important;
+  color: #012F45;
+  font-size: 1.4rem !important;
+}
+
+.content-callout p {
+  margin: 0 !important;
+  font-size: 1.05rem !important;
+  color: #1f2937 !important;
+}
+
+.content-callout .callout-meta {
+  display: block;
+  color: #4b5563;
+  font-size: 0.9rem;
+  margin-top: 0.5rem !important;
+}
+
+.content-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin: 1.5rem 0 0.5rem 0;
+  display: block;
+  box-shadow: 0 4px 16px rgba(1, 47, 69, 0.14);
+}
+
+.content-photo-caption {
+  font-size: 0.9rem !important;
+  color: #6b7280 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.content-box {
+  background: white;
+  border: 1px solid #e1e5e9;
+  border-radius: 18px;
+  padding: 1.5rem 1.75rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 2px 8px rgba(16, 24, 40, 0.06);
+}
+
+.content-box h3 {
+  margin-top: 0 !important;
+  color: #012F45;
+}
+
+.content-box--tan {
+  background: #F8F2E8;
+  border-color: #EBDFC7;
+}
+
+.content-box ul,
+.content-box ol {
+  margin: 0.5rem 0 0 1.25rem;
+}
+
+.content-box li {
+  font-size: 1.05rem !important;
+  line-height: 1.8 !important;
+}
+
+.content-box p {
+  margin-bottom: 0.75rem !important;
+}
+
+.content-note {
+  color: #365C51;
+  font-weight: 600;
+  margin: 0.75rem 0 0 0;
+}
+
+.decision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.decision-card {
+  border-radius: 18px;
+  padding: 1.5rem;
+}
+
+.decision-card h3 {
+  margin-top: 0 !important;
+}
+
+.decision-card ul {
+  margin: 0.5rem 0 0 1.25rem;
+}
+
+.decision-card li {
+  font-size: 1.05rem !important;
+  line-height: 1.7 !important;
+}
+
+.decision-card--good {
+  background: linear-gradient(135deg, #EAF0EE 0%, #F1F6F3 100%);
+  border: 2px solid #4D8374;
+}
+
+.decision-card--good h3 {
+  color: #365C51;
+}
+
+.decision-card--alt {
+  background: white;
+  border: 1px solid #e1e5e9;
+}
+
+.decision-card--alt h3 {
+  color: #1f2937;
+}
+
+.content-cta {
+  background: linear-gradient(135deg, #012F45 0%, #015E8A 55%, #4D8374 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 18px;
+  text-align: center;
+  margin: 2rem 0;
+  box-shadow: 0 12px 32px rgba(1, 94, 138, 0.25);
+}
+
+.content-cta h2 {
+  margin: 0 0 0.75rem 0 !important;
+  border: none !important;
+  padding: 0 !important;
+  color: white !important;
+}
+
+.content-cta p {
+  color: rgba(255, 255, 255, 0.92) !important;
+  margin: 0.25rem 0 0 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.content-cta code {
+  background: white;
+  color: #015E8A;
+  padding: 0.4rem 0.9rem;
+  border-radius: 9999px;
+  font-family: "Monaco", "Menlo", monospace;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.content-faq {
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 2px 8px rgba(16, 24, 40, 0.06);
+  margin: 1.5rem 0;
+  overflow: hidden;
+}
+
+.content-faq-item {
+  border-bottom: 1px solid #e1e5e9;
+  padding: 1.25rem 1.75rem;
+}
+
+.content-faq-item:last-child {
+  border-bottom: none;
+}
+
+.content-faq-item h3 {
+  margin: 0 0 0.5rem 0 !important;
+  color: #015E8A;
+  font-size: 1.05rem !important;
+}
+
+.content-faq-item p {
+  margin: 0 !important;
+  color: #4b5563;
+}
+
+@media (max-width: 640px) {
+  .content-cta {
+    padding: 1.5rem;
   }
 }
 

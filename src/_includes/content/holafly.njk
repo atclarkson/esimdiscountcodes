@@ -1,65 +1,65 @@
-<!-- Holafly Content - neutral, unique, inline styles -->
+<!-- Holafly Content -->
 <div class="content-section">
 
   <!-- Quick Answer -->
   {% set primary = provider.codes | findCode(provider.primaryCode) %}
-  <div class="quick-answer" style="background:#fef2f2;border:2px solid #e6485c;border-radius:8px;padding:1.5rem;margin:2rem 0;">
-    <h2 style="color:#e6485c;margin:0 0 .75rem 0;">Best Holafly Promo Code • {{ buildMonthYear }}</h2>
-    <p style="font-size:1.1rem;margin:0;">
+  <div class="content-callout">
+    <h2>Best Holafly Promo Code &bull; {{ buildMonthYear }}</h2>
+    <p>
       Use <strong>{{ provider.primaryCode }}</strong> for <strong>5% off a single eSIM</strong>, or <strong>10% off a monthly eSIM plan</strong>, on Holafly. Works for repeat purchases too. It's our own code, so we show it first here &mdash; the other working codes are listed above if you'd rather compare.
-      <span style="display:block;color:#6b7280;margin-top:.25rem;">Confirmed active <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("MMM d, yyyy") }}</time>.</span>
+      <span class="callout-meta">Confirmed active <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("MMM d, yyyy") }}</time>.</span>
     </p>
   </div>
 
   <!-- Headline -->
   <h2>What Actually Makes Holafly Different</h2>
-  <p style="margin:0 0 1rem 0;">
+  <p>
     Holafly sells unlimited data instead of a fixed GB bucket. That's the whole pitch: no counting gigabytes, no panic when a video call runs long. It's why Holafly usually costs more per day than a GB-capped competitor for a short trip, but can work out cheaper if you're a heavy data user or bad at rationing a data cap. If you'd rather pay by the gigabyte and use less, a provider like <a href="/airalo/">Airalo</a> is probably the better fit.
   </p>
-  <p style="margin:0 0 1rem 0;">
+  <p>
     One thing worth knowing about the code itself: <strong>ADAMANDLINDS</strong> is one of the only codes that covers both Holafly product lines &mdash; 5% off a one-off destination eSIM and 10% off a monthly Plans subscription. Most codes floating around only do one of the two (a code good on a destination eSIM usually won't apply to a Plans subscription, and vice versa), so it's worth checking which product a code you find elsewhere actually covers before you assume it'll work at checkout.
   </p>
 
-  <img src="https://media.adamandlinds.com/photos/large/37aef3cf-c064-4e44-ad18-a347fb2ad836.jpg"
+  <img class="content-photo"
+       src="https://media.adamandlinds.com/photos/large/37aef3cf-c064-4e44-ad18-a347fb2ad836.jpg"
        alt="A traveler working on a laptop and phone surrounded by luggage at a train station in Vilnius, Lithuania, during a multi-country trip"
-       width="1280" height="960"
-       style="width:100%;height:auto;border-radius:12px;margin:1rem 0;display:block;">
-  <p style="margin:0 0 1rem 0;font-size:.85rem;color:#6b7280;">A transit day between countries &mdash; the kind of trip where a regional eSIM plan actually earns its keep. From our own travels, not a stock photo.</p>
+       width="1280" height="960">
+  <p class="content-photo-caption">A transit day between countries &mdash; the kind of trip where a regional eSIM plan actually earns its keep. From our own travels, not a stock photo.</p>
 
   <!-- Codes -->
-  <div style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;padding:1.25rem;margin:1rem 0;">
-    <h3 style="margin:.25rem 0;color:#374151;">Active codes</h3>
-    <ul style="margin:.25rem 0 0 1.25rem;">
+  <div class="content-box content-box--tan">
+    <h3>Active codes</h3>
+    <ul>
       <li><strong>ADAMANDLINDS</strong> — 5% off a single eSIM, or 10% off a monthly plan</li>
     </ul>
-    <p style="margin:.5rem 0 0 0;color:#6b7280;font-size:.95rem;">If a code does not apply, refresh the cart or try a private window, then retry.</p>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">If a code does not apply, refresh the cart or try a private window, then retry.</p>
   </div>
 
   <!-- How to -->
   <h2>Apply a Holafly Code in 3 Steps</h2>
-  <div style="background:#f8fafc;border-radius:8px;padding:1.25rem;margin:1rem 0;">
-    <ol style="font-size:1.05rem;line-height:1.7;margin:0;">
+  <div class="content-box">
+    <ol>
       <li>Copy <strong>ADAMANDLINDS</strong></li>
       <li>Pick a country or regional unlimited plan on Holafly</li>
       <li>Paste the code in the promo field at checkout and confirm the price drop (5% on a single eSIM, 10% on a monthly plan)</li>
     </ol>
-    <p style="color:#4D8374;font-weight:600;margin:.75rem 0 0 0;">Discount shows before payment is completed.</p>
+    <p class="content-note">Discount shows before payment is completed.</p>
   </div>
 
   <!-- Decision help -->
-  <h2>Is Holafly the right pick for your trip</h2>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1rem 0;">
-    <div style="background:linear-gradient(135deg,#fef2f2 0%,#fff5f5 100%);border:2px solid #e6485c;border-radius:12px;padding:1rem;">
-      <h3 style="color:#e6485c;margin:.25rem 0;">Good fit</h3>
-      <ul style="margin:.25rem 0 0 1.25rem;">
+  <h2>Is Holafly the Right Pick for Your Trip</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Good fit</h3>
+      <ul>
         <li>You genuinely don't know how much data you'll use</li>
         <li>Heavy streaming, video calls, or hotspot use</li>
         <li>Multi-country travel in one region on one plan</li>
       </ul>
     </div>
-    <div style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:12px;padding:1rem;">
-      <h3 style="margin:.25rem 0;color:#374151;">Consider alternatives</h3>
-      <ul style="margin:.25rem 0 0 1.25rem;">
+    <div class="decision-card decision-card--alt">
+      <h3>Consider alternatives</h3>
+      <ul>
         <li>Light user who just needs maps and messaging</li>
         <li>Remote areas where a local carrier has better band support</li>
         <li>You want to pay per GB and shop around on price</li>
@@ -69,17 +69,17 @@
 
   <!-- Savings examples -->
   <h2>What the Discount Looks Like</h2>
-  <div style="background:#f8fafc;border-radius:8px;padding:1.25rem;margin:1rem 0;">
-    <p style="margin:0 0 .5rem 0;font-weight:600;color:#374151;">Single eSIM (5% off):</p>
-    <ul style="margin:0 0 1rem 1.25rem;">
-      <li>Europe 7 day at $34.99 -> save $1.75</li>
-      <li>Asia 14 day at $79.99 -> save $4.00</li>
+  <div class="content-box">
+    <p style="font-weight:600;color:#012F45;">Single eSIM (5% off):</p>
+    <ul>
+      <li>Europe 7 day at $34.99 &rarr; save $1.75</li>
+      <li>Asia 14 day at $79.99 &rarr; save $4.00</li>
     </ul>
-    <p style="margin:0 0 .5rem 0;font-weight:600;color:#374151;">Monthly eSIM plan (10% off):</p>
-    <ul style="margin:0 0 0 1.25rem;">
-      <li>USA 30 day at $99.99 -> save $10.00</li>
+    <p style="font-weight:600;color:#012F45;margin-top:1rem;">Monthly eSIM plan (10% off):</p>
+    <ul>
+      <li>USA 30 day at $99.99 &rarr; save $10.00</li>
     </ul>
-    <p style="color:#4D8374;font-weight:600;margin:.75rem 0 0 0;">Going monthly gets you double the discount rate.</p>
+    <p class="content-note">Going monthly gets you double the discount rate.</p>
   </div>
 
   <!-- Real operational note instead of generic setup tips -->
@@ -87,48 +87,48 @@
   <p>
     <strong>Their China eSIM has a VPN built in.</strong> You don't install a separate VPN app or buy a subscription before you fly &mdash; Google Maps, WhatsApp, and Gmail just work on the Holafly connection. That's a genuine point of difference if China is on the itinerary, since sorting out a VPN in advance is one of the more annoying parts of that trip for most travelers.
   </p>
-  <p style="margin-top:.75rem;">
+  <p>
     <strong>Cancel a Plans subscription and you're not fully cut off.</strong> Holafly's "Always On" tier drops you to 1GB a month across 160+ destinations instead of zero &mdash; enough to land somewhere, get a taxi, and get online, without paying for a full plan you're not using between trips.
   </p>
-  <p style="margin-top:.75rem;">
+  <p>
     Unlimited also doesn't mean unmanaged: fair-use limits can slow speeds after very heavy same-day use on some plans, and hotspot support varies by plan rather than being guaranteed across the board &mdash; check the specific plan page if tethering a laptop is the point of the trip.
   </p>
-  <p style="margin-top:.75rem;">
+  <p>
     One practical habit: add a buffer day or two to a destination eSIM's length rather than cutting it exactly to your trip. Flights get delayed and the plan expires on schedule regardless of whether you actually landed on time.
   </p>
-  <p style="margin-top:.75rem;">
+  <p>
     For device setup and eSIM basics that apply beyond Holafly specifically, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide. We've also written a more in-depth <a href="https://www.adamandlinds.com/blog/holafly-discount-code-esims-and-plans/" target="_blank" rel="noopener">field-tested Holafly write-up</a> on our travel site covering where we've actually used it, for anyone who wants the longer version.
   </p>
 
   <!-- CTA -->
-  <div style="background:linear-gradient(135deg,#fef2f2 0%,#fecaca 100%);color:#292b2e;padding:2rem;border-radius:12px;text-align:center;margin:2rem 0;border:2px solid #e6485c;">
-    <h2 style="margin:0 0 .75rem 0;">Use the code at checkout</h2>
-    <p style="font-size:1.2rem;margin:.25rem 0 1rem 0;">Copy <strong style="background:#fff;color:#e6485c;padding:.4rem .75rem;border-radius:6px;font-family:monospace;">ADAMANDLINDS</strong> then paste in the promo field</p>
-    <p style="margin:0;color:#4b5563;">5% off a single eSIM, or 10% off a monthly plan. Simple and reliable.</p>
+  <div class="content-cta">
+    <h2>Use the Code at Checkout</h2>
+    <p>Copy <code>ADAMANDLINDS</code> then paste in the promo field</p>
+    <p>5% off a single eSIM, or 10% off a monthly plan. Simple and reliable.</p>
   </div>
 
   <!-- FAQ -->
   <h2>Holafly Promo Code FAQ</h2>
-  <div style="background:#ffffff;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,0.06);margin:1rem 0;">
-    <div style="border-bottom:1px solid #e5e7eb;padding:1rem 1.25rem;">
-      <h3 style="color:#e6485c;margin:.25rem 0;">What is the best code right now</h3>
-      <p style="margin:0;"><strong>ADAMANDLINDS</strong> &mdash; 5% off a single eSIM, or 10% off a monthly plan. Works for new and repeat orders.</p>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>What is the best code right now</h3>
+      <p><strong>ADAMANDLINDS</strong> &mdash; 5% off a single eSIM, or 10% off a monthly plan. Works for new and repeat orders.</p>
     </div>
-    <div style="border-bottom:1px solid #e5e7eb;padding:1rem 1.25rem;">
-      <h3 style="color:#e6485c;margin:.25rem 0;">Does the code expire</h3>
-      <p style="margin:0;">Codes can change. Check back here before purchase for the latest status.</p>
+    <div class="content-faq-item">
+      <h3>Does the code expire</h3>
+      <p>Codes can change. Check back here before purchase for the latest status.</p>
     </div>
-    <div style="border-bottom:1px solid #e5e7eb;padding:1rem 1.25rem;">
-      <h3 style="color:#e6485c;margin:.25rem 0;">Can I use hotspot</h3>
-      <p style="margin:0;">Tethering support depends on the specific plan &mdash; it's not guaranteed across all of them. Check the plan page before buying if you need it.</p>
+    <div class="content-faq-item">
+      <h3>Can I use hotspot</h3>
+      <p>Tethering support depends on the specific plan &mdash; it's not guaranteed across all of them. Check the plan page before buying if you need it.</p>
     </div>
-    <div style="border-bottom:1px solid #e5e7eb;padding:1rem 1.25rem;">
-      <h3 style="color:#e6485c;margin:.25rem 0;">Is unlimited really unlimited</h3>
-      <p style="margin:0;">For normal phone use, yes. Some plans apply a fair-use speed reduction after very heavy same-day usage. It's a real allowance, just not an unthrottleable one.</p>
+    <div class="content-faq-item">
+      <h3>Is unlimited really unlimited</h3>
+      <p>For normal phone use, yes. Some plans apply a fair-use speed reduction after very heavy same-day usage. It's a real allowance, just not an unthrottleable one.</p>
     </div>
-    <div style="padding:1rem 1.25rem;">
-      <h3 style="color:#e6485c;margin:.25rem 0;">Do I need a separate VPN for China</h3>
-      <p style="margin:0;">No. Holafly's China eSIM has a VPN built in, so Google Maps, WhatsApp, and Gmail work without installing anything extra &mdash; one less thing to sort out before that particular trip.</p>
+    <div class="content-faq-item">
+      <h3>Do I need a separate VPN for China</h3>
+      <p>No. Holafly's China eSIM has a VPN built in, so Google Maps, WhatsApp, and Gmail work without installing anything extra &mdash; one less thing to sort out before that particular trip.</p>
     </div>
   </div>
 
