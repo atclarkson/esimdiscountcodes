@@ -210,15 +210,18 @@ document.querySelectorAll(".proof-thumbnail").forEach((thumbnail) => {
 // Close modal function
 function closeProofModal() {
   const modal = document.getElementById("proofModal");
-  modal.classList.remove("active");
+  if (modal) modal.classList.remove("active");
 }
 
-// Close modal when clicking outside
-document.getElementById("proofModal").addEventListener("click", function (e) {
-  if (e.target === this) {
-    closeProofModal();
-  }
-});
+// Close modal when clicking outside (only on pages that have the modal)
+const proofModalEl = document.getElementById("proofModal");
+if (proofModalEl) {
+  proofModalEl.addEventListener("click", function (e) {
+    if (e.target === this) {
+      closeProofModal();
+    }
+  });
+}
 
 // Close modal with ESC key
 document.addEventListener("keydown", function (e) {

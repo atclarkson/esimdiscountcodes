@@ -6,11 +6,17 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #fafafa;
+  background-color: #f6f7f9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.01em;
 }
 
 /* Navigation */
@@ -74,11 +80,12 @@ main {
 /* Home Page Styles */
 .hero {
   text-align: center;
-  padding: 3rem 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 3.5rem 2rem;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 55%, #3b82f6 100%);
   color: white;
-  border-radius: 1rem;
+  border-radius: 1.25rem;
   margin-bottom: 3rem;
+  box-shadow: 0 12px 32px rgba(37, 99, 235, 0.25);
 }
 
 .hero h1 {
@@ -101,8 +108,10 @@ main {
 }
 
 .hero-stats span {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.5rem 1.1rem;
   border-radius: 2rem;
   font-weight: 500;
 }
@@ -113,7 +122,7 @@ main {
   padding: 2rem;
   background: white;
   border-radius: 1rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 2px 8px rgba(16, 24, 40, 0.08);
 }
 
 .what-is-esim h2 {
@@ -180,7 +189,7 @@ main {
   background: white;
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 2px 8px rgba(16, 24, 40, 0.08);
   transition: all 0.2s ease;
   cursor: pointer;
   height: 100%;
@@ -277,7 +286,7 @@ main {
 
 /* Provider Page Styles */
 .provider-page {
-  max-width: 800px;
+  max-width: 920px;
   margin: 0 auto;
 }
 
@@ -314,7 +323,7 @@ main {
   border-radius: 12px;
   padding: 2rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 2px 8px rgba(16, 24, 40, 0.08);
   transition: all 0.2s ease;
 }
 
@@ -671,7 +680,7 @@ main {
 .provider-logo .logo-fallback {
   width: 120px;
   height: 60px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -683,16 +692,17 @@ main {
 
 /* Article Page Styling */
 .article-page {
-  max-width: 800px;
+  max-width: 920px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
 
 .article-content {
   background: white;
-  border-radius: 12px;
-  padding: 3rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 3rem 3.5rem;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 2px 8px rgba(16, 24, 40, 0.08);
+  border: 1px solid #eef0f3;
 }
 
 .article-content h1 {
@@ -784,7 +794,7 @@ main {
   background: white;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 2px 8px rgba(16, 24, 40, 0.08);
 }
 
 .article-content th {
@@ -919,7 +929,7 @@ main {
 /* Content Section Styling */
 .content-section {
   margin-top: 3rem;
-  max-width: 800px;
+  max-width: 920px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -973,7 +983,7 @@ main {
   background: white;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 2px 8px rgba(16, 24, 40, 0.08);
 }
 
 .content-section th {
@@ -1121,7 +1131,7 @@ main {
 .provider-logo .logo-fallback {
   width: 120px;
   height: 60px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -1412,6 +1422,8 @@ main {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   padding: 0.5rem 0;
+  margin: 0;
+  list-style: none;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
