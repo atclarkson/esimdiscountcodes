@@ -155,12 +155,27 @@ eleventyComputed:
         </section>
         
     {% else %}
-        <!-- Coming Soon -->
+        <!-- No code yet, but still send the click somewhere -->
+        {% set outUrl = provider.affiliateUrl or provider.url %}
+        {% set isAffiliateOut = provider.affiliateUrl and outUrl == provider.affiliateUrl %}
         <section class="coming-soon-section">
             <div class="coming-soon-content">
-                <h2>Coming Soon</h2>
-                <p>We're working hard to bring you the best {{ provider.name }} discount codes and promo codes. Check back soon for verified codes that will save you money on your eSIM plans.</p>
-                
+                <h2>No Discount Code Yet</h2>
+                <p>We haven't found a working {{ provider.name }} discount code to verify yet. Check back soon - in the meantime you can still shop their plans directly.</p>
+
+                {% if outUrl %}
+                <a class="get-deal-btn coming-soon-shop-btn"
+                   href="{{ outUrl }}"
+                   target="_blank"
+                   rel="{% if isAffiliateOut %}sponsored noopener{% else %}noopener{% endif %}">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                    <span>Shop {{ provider.name }}</span>
+                </a>
+                {% if isAffiliateOut %}
+                <p class="coming-soon-disclosure">This is our affiliate link - we may earn a commission if you buy through it, at no extra cost to you.</p>
+                {% endif %}
+                {% endif %}
+
                 <div class="explore-section">
                     <h3>Explore Other Providers</h3>
                     <p>While you wait, check out our verified discount codes for other eSIM providers:</p>

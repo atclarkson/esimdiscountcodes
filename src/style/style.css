@@ -528,8 +528,20 @@ main {
 
 .coming-soon-content h2 {
   font-size: 2rem;
-  color: #f59e0b;
+  color: #998562;
   margin-bottom: 1rem;
+}
+
+.coming-soon-shop-btn {
+  display: inline-flex;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.coming-soon-disclosure {
+  font-size: 0.85rem;
+  color: #6b7280;
+  max-width: 480px;
+  margin: 0.5rem auto 1.5rem auto !important;
 }
 
 .coming-soon-content h3 {
