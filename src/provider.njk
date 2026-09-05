@@ -161,7 +161,7 @@ eleventyComputed:
         <section class="coming-soon-section">
             <div class="coming-soon-content">
                 <h2>No Discount Code Yet</h2>
-                <p>We haven't found a working {{ provider.name }} discount code to verify yet. Check back soon - in the meantime you can still shop their plans directly.</p>
+                <p>We haven't found a working {{ provider.name }} discount code to verify yet. They sometimes run their own deals though, so click through and see if there's a discount waiting at checkout.</p>
 
                 {% if outUrl %}
                 <a class="get-deal-btn coming-soon-shop-btn"
@@ -169,7 +169,7 @@ eleventyComputed:
                    target="_blank"
                    rel="{% if isAffiliateOut %}sponsored noopener{% else %}noopener{% endif %}">
                     <i class="fas fa-arrow-up-right-from-square"></i>
-                    <span>Shop {{ provider.name }}</span>
+                    <span>Check {{ provider.name }} for Discounts</span>
                 </a>
                 {% if isAffiliateOut %}
                 <p class="coming-soon-disclosure">This is our affiliate link - we may earn a commission if you buy through it, at no extra cost to you.</p>

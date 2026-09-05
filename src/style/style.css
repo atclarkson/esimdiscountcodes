@@ -576,6 +576,12 @@ main {
   text-decoration: underline;
 }
 
+.coming-soon-content .get-deal-btn,
+.coming-soon-content .get-deal-btn:hover {
+  color: white;
+  text-decoration: none;
+}
+
 .notify-section,
 .explore-section {
   background: #f8fafc;
