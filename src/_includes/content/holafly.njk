@@ -2,11 +2,12 @@
 <div class="content-section">
 
   <!-- Quick Answer -->
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
   <div class="quick-answer" style="background:#fef2f2;border:2px solid #e6485c;border-radius:8px;padding:1.5rem;margin:2rem 0;">
-    <h2 style="color:#e6485c;margin:0 0 .75rem 0;">Best Holafly Promo Code • August 2025</h2>
+    <h2 style="color:#e6485c;margin:0 0 .75rem 0;">Best Holafly Promo Code • {{ buildMonthYear }}</h2>
     <p style="font-size:1.1rem;margin:0;">
-      Use <strong>ADAMANDLINDS</strong> for <strong>5% off</strong> Holafly eSIM orders. Works for repeat purchases on most plans.
-      <span style="display:block;color:#6b7280;margin-top:.25rem;">Verified on <time datetime="2025-08-10">Aug 10, 2025</time>.</span>
+      Use <strong>{{ provider.primaryCode }}</strong> for <strong>{{ primary.discount | lower }}</strong> on Holafly eSIM orders. Works for repeat purchases on most plans. It's our own code, so we show it first here &mdash; the other working codes are listed above if you'd rather compare.
+      <span style="display:block;color:#6b7280;margin-top:.25rem;">Confirmed active <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("MMM d, yyyy") }}</time>.</span>
     </p>
   </div>
 

@@ -1,7 +1,8 @@
 <!-- Airhub Content Template -->
 <div class="content-section">
+    {% set primary = provider.codes | findCode(provider.primaryCode) %}
     <!-- Main heading -->
-    <h2><i class="fas fa-tags" style="color: #d80027;"></i> Best Airhub Promo Codes for August 2025</h2>
+    <h2><i class="fas fa-tags" style="color: #d80027;"></i> Best Airhub Promo Codes for {{ buildMonthYear }}</h2>
     
     <!-- Introduction -->
     <p>Airhub delivers affordable global eSIM connectivity with a focus on value and flexibility for budget-conscious travelers. Covering <strong>190+ countries</strong> with competitive pricing and multi-gigabyte data packages, Airhub makes international connectivity accessible without breaking the bank. Whether you're a backpacker exploring Southeast Asia, a student studying abroad, or a family planning an international vacation, Airhub's cost-effective plans ensure you stay connected without overspending.</p>
@@ -102,7 +103,7 @@
             </tr>
             <tr>
                 <td><strong>Best Discount Code</strong></td>
-                <td style="background: #fefcfc;"><strong>SUMMER2025</strong> (5% off)</td>
+                <td style="background: #fefcfc;"><strong>{{ provider.primaryCode }}</strong> ({{ primary.discount | lower }})</td>
                 <td>ADAMANDLINDS (5% off)</td>
                 <td>NEWTOAIRALO15 (15% off)</td>
                 <td>HELLOSAILY (15% off)</td>
@@ -294,10 +295,12 @@
     <h3>Discount Code Strategy</h3>
     <p>Airhub offers multiple discount codes for different regions and purposes:</p>
     <ul>
-        <li><strong>SUMMER2025:</strong> Universal 5% off all plans</li>
-        <li><strong>NAMERICA4COPY:</strong> 4% off specifically for North America</li>
-        <li><strong>JPESIM5COPY:</strong> 5% off for Japan travel</li>
-        <li><strong>MARCHFOREGYPTCOPY:</strong> 5% off all countries</li>
+        <li><strong>{{ provider.primaryCode }}:</strong> {{ primary.discount }} (our own code, shown first)</li>
+        {% for code in provider.codes %}
+        {% if code.code != provider.primaryCode and not code.isInvalid %}
+        <li><strong>{{ code.code }}:</strong> {{ code.discount }}</li>
+        {% endif %}
+        {% endfor %}
     </ul>
 
     <h3>Regional vs Country Plans</h3>
@@ -309,7 +312,7 @@
     <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 2rem 0;">
         <div style="border-bottom: 1px solid #e5e7eb; padding: 1.5rem;">
             <h3 style="color: #d80027; margin-bottom: 0.5rem;"><i class="fas fa-percentage"></i> What's the best Airhub discount code?</h3>
-            <p style="margin-bottom: 0;">The best current Airhub discount code is <strong>SUMMER2025</strong>, offering 5% off all plans. For specific regions, use <strong>NAMERICA4COPY</strong> for North America (4% off) or <strong>JPESIM5COPY</strong> for Japan (5% off).</p>
+            <p style="margin-bottom: 0;">Our own code <strong>{{ provider.primaryCode }}</strong> gets you {{ primary.discount | lower }} and is shown first on this page. For specific regions, use <strong>NAMERICA4COPY</strong> for North America (4% off) or <strong>JPESIM5COPY</strong> for Japan (5% off).</p>
         </div>
 
         <div style="border-bottom: 1px solid #e5e7eb; padding: 1.5rem;">
@@ -368,7 +371,7 @@
       "name":"What's the best Airhub discount code?",
       "acceptedAnswer":{
         "@type":"Answer",
-        "text":"The best current Airhub discount code is SUMMER2025, offering 5% off all plans. For specific regions, use NAMERICA4COPY for North America (4% off) or JPESIM5COPY for Japan (5% off)."
+        "text":"Our own code {{ provider.primaryCode }} gets {{ primary.discount | lower }} and is shown first on this page. For specific regions, use NAMERICA4COPY for North America (4% off) or JPESIM5COPY for Japan (5% off)."
       }
     },
     {
@@ -451,7 +454,7 @@
     <!-- Call to Action -->
     <div style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); color: #004346; padding: 2rem; border-radius: 12px; text-align: center; margin: 3rem 0; border: 2px solid #d80027;">
         <h2 style="color: #004346; margin-bottom: 1rem;"><i class="fas fa-rocket" style="color: #d80027;"></i> Get More Data for Less</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #004346;">Use promo code <strong style="color: #d80027;">SUMMER2025</strong> for 5% off all Airhub eSIM plans.</p>
+        <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #004346;">Use promo code <strong style="color: #d80027;">{{ provider.primaryCode }}</strong> for {{ primary.discount | lower }}.</p>
         <p style="margin-bottom: 0; color: #4b5563;">Perfect for budget travelers who need generous data allowances without premium pricing.</p>
     </div>
 

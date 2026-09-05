@@ -83,6 +83,13 @@ module.exports = function (eleventyConfig) {
     return [...codes].sort((a, b) => rank(a) - rank(b));
   });
 
+  // Look up a specific code object by code string, so article copy can
+  // reference the live primary code/discount instead of a hardcoded value.
+  eleventyConfig.addFilter("findCode", function (codes, code) {
+    if (!Array.isArray(codes)) return null;
+    return codes.find((c) => c.code === code) || codes[0] || null;
+  });
+
   // Keep this at the end. Nothing after this.
   return {
     dir: { input: "src", output: "_site" },

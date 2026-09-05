@@ -1,11 +1,12 @@
 <!-- Orange Travel Content Template -->
 <div class="content-section">
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
   <!-- Main heading -->
-  <h2><i class="fas fa-tags" style="color: #FF8000;"></i> Best Orange Travel eSIM Deals for August 2025</h2>
-  
+  <h2><i class="fas fa-tags" style="color: #FF8000;"></i> Best Orange Travel eSIM Deals for {{ buildMonthYear }}</h2>
+
   <!-- Introduction -->
-  <p>Orange Travel (from the Orange telecom group) offers global eSIMs with transparent pricing—in over <strong>200 destinations</strong>. Right now, they’ve got a <strong>50% summer discount</strong> on select destinations through August 31, 2025.</p>
-  
+  <p>Orange Travel (from the Orange telecom group) offers global eSIMs with transparent pricing—in over <strong>200 destinations</strong>. Use code <strong>{{ provider.primaryCode }}</strong> for {{ primary.discount | lower }}.</p>
+
   <!-- Key Features Highlight -->
   <div class="feature-highlights" style="background: linear-gradient(135deg, #fff4e5 0%, #ffe4c4 100%); border: 2px solid #FF8000; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
     <h2 style="color: #5A3A00; margin-bottom: 1.5rem;"><i class="fas fa-star" style="color: #FF8000;"></i> Why Choose Orange Travel?</h2>
@@ -17,8 +18,8 @@
       </div>
       <div style="text-align: center; padding: 1rem;">
         <i class="fas fa-percentage" style="font-size: 2rem; color: #FF8000; margin-bottom: 0.5rem;"></i>
-        <h3 style="color: #5A3A00;">50% Summer Promo</h3>
-        <p>Valid for ~30 top destinations through August 31, 2025.</p>
+        <h3 style="color: #5A3A00;">{{ primary.discount }}</h3>
+        <p>Use code {{ provider.primaryCode }} at checkout.</p>
       </div>
       <div style="text-align: center; padding: 1rem;">
         <i class="fas fa-phone-alt" style="font-size: 2rem; color: #FF8000; margin-bottom: 0.5rem;"></i>
@@ -68,10 +69,10 @@
         <td>Some plans data-only or data+calls</td>
       </tr>
       <tr>
-        <td><strong>Summer Discount</strong></td>
-        <td><i class="fas fa-check" style="color: #059669;"></i> 50%</td>
-        <td>None</td>
-        <td>None</td>
+        <td><strong>Discount Code</strong></td>
+        <td><i class="fas fa-check" style="color: #059669;"></i> {{ primary.discount }}</td>
+        <td>NEWTOAIRALO15 (15%)</td>
+        <td>ADAMANDLINDS (10%)</td>
       </tr>
       <tr>
         <td><strong>Auto Top-up</strong></td>
@@ -98,8 +99,7 @@
   
   <!-- Promo Note -->
   <div style="background: #fff4e5; padding: 1rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #FF8000;">
-    <strong>Summer Deal:</strong> Extra 50% off on ~30 destinations (USA, Canada, Brazil, Morocco, Thailand, Japan…)
-    <br><em>Promo valid June 20–Aug 31, 2025</em>
+    <strong>Current code:</strong> {{ provider.primaryCode }} for {{ primary.discount | lower }}, sitewide.
   </div>
   
   <!-- FAQ Section -->
@@ -156,7 +156,7 @@
   <!-- Call to Action -->
   <div style="background: linear-gradient(135deg, #fff4e5 0%, #ffe4c4 100%); padding:2rem; border:2px solid #FF8000; border-radius:12px; text-align:center; margin:3rem 0;">
     <h2 style="color:#5A3A00;"><i class="fas fa-globe"></i> Grab Your Orange eSIM Deal</h2>
-    <p style="font-size:1.2rem; margin-bottom:1rem;">50% off summer plans available on 30+ destinations through Aug 31!</p>
-    <p>No codes needed—discount applies at checkout.</p>
+    <p style="font-size:1.2rem; margin-bottom:1rem;">Use code <strong>{{ provider.primaryCode }}</strong> for {{ primary.discount | lower }}.</p>
+    <p>Enter it in the promo field at checkout.</p>
   </div>
 </div>

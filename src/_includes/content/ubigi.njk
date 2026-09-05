@@ -1,8 +1,9 @@
 <!-- Ubigi Content Template -->
 <div class="content-section">
+    {% set primary = provider.codes | findCode(provider.primaryCode) %}
     <!-- Main heading -->
-    <h2><i class="fas fa-tags" style="color: #0055A4;"></i> Best Ubigi Promo Codes for August 2025</h2>
-    
+    <h2><i class="fas fa-tags" style="color: #0055A4;"></i> Best Ubigi Promo Codes for {{ buildMonthYear }}</h2>
+
     <!-- Introduction -->
     <p>Ubigi delivers reliable eSIM data in over <strong>190+ countries</strong>, with no physical SIM or hidden fees. Perfect for travelers who want transparent pricing and coverage that just works.</p>
 
@@ -86,20 +87,25 @@
             </tr>
             <tr>
                 <td><strong>Best Promo Code</strong></td>
-                <td style="background: #fefcfd;"><strong>ENCHANTEE</strong> (15% off)</td>
+                <td style="background: #fefcfd;"><strong>{{ provider.primaryCode }}</strong> ({{ primary.discount | lower }})</td>
                 <td>NEWTOAIRALO15 (15%)</td>
-                <td>GLOBALESAVE (12%)</td>
-                <td>NOMAD15 (15%)</td>
+                <td>ESIMSIO10 (10%)</td>
+                <td>WOLF (10%)</td>
             </tr>
         </tbody>
     </table>
 
     <!-- Promo Codes -->
-    <h2><i class="fas fa-percent"></i> Ubigi Promo Codes August 2025</h2>
+    <h2><i class="fas fa-percent"></i> Ubigi Promo Codes {{ buildMonthYear }}</h2>
     <ul>
-        <li><strong>ENCHANTEE:</strong> 15% OFF ALL PLANS (works worldwide)</li>
+        <li><strong>{{ provider.primaryCode }}:</strong> {{ primary.discount }} (our own code, shown first) &mdash; works worldwide</li>
+        {% for code in provider.codes %}
+        {% if code.code != provider.primaryCode and not code.isInvalid %}
+        <li><strong>{{ code.code }}:</strong> {{ code.discount }}</li>
+        {% endif %}
+        {% endfor %}
     </ul>
-    <p style="font-size: 1rem; color: #23344F;">Visit <a href="https://ubigi.com" style="color:#0055A4;"><strong>Ubigi</strong></a> and enter <strong>ENCHANTEE</strong> at checkout to score the discount.</p>
+    <p style="font-size: 1rem; color: #23344F;">Visit <a href="https://ubigi.com" style="color:#0055A4;"><strong>Ubigi</strong></a> and enter <strong>{{ provider.primaryCode }}</strong> at checkout to score the discount. It's our own code &mdash; the others above work too if you'd rather use one of those.</p>
 
     <!-- Quick Facts -->
     <div style="background: #e6f2fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #0055A4; margin-bottom: 2rem;">
@@ -119,7 +125,7 @@
     <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 2rem 0;">
         <div style="border-bottom: 1px solid #cfe4f3; padding: 1.5rem;">
             <h3 style="color: #0055A4; margin-bottom: 0.5rem;"><i class="fas fa-percentage"></i> Best Ubigi code?</h3>
-            <p style="margin-bottom: 0;">Use <strong>ENCHANTEE</strong> for 15% off your entire order — verified August 2025.</p>
+            <p style="margin-bottom: 0;">Use <strong>{{ provider.primaryCode }}</strong> for {{ primary.discount | lower }} &mdash; confirmed active {{ (primary.lastTested or buildTime) | fmtDate("MMMM yyyy") }}. It's our own code, shown first; other working codes are listed above.</p>
         </div>
         <div style="border-bottom: 1px solid #cfe4f3; padding: 1.5rem;">
             <h3 style="color: #0055A4; margin-bottom: 0.5rem;"><i class="fas fa-globe-americas"></i> Plans include voice & SMS?</h3>
@@ -145,7 +151,7 @@
       "name": "Best Ubigi code?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Use ENCHANTEE for 15% off your entire order — verified August 2025."
+        "text": "Use {{ provider.primaryCode }} for {{ primary.discount | lower }} on your entire order. It's our own code, confirmed active as of {{ (primary.lastTested or buildTime) | fmtDate('MMMM yyyy') }}."
       }
     },
     {
@@ -179,8 +185,8 @@
 
     <!-- Call to Action -->
     <div style="background: linear-gradient(135deg, #e6f2fa 0%, #cfe4f3 100%); color: #23344F; padding: 2rem; border-radius: 12px; text-align: center; margin: 3rem 0; border: 2px solid #0055A4;">
-        <h2 style="color: #23344F; margin-bottom: 1rem;"><i class="fas fa-globe"></i> Grab 15% Off Your Ubigi eSIM</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #23344F;">Use <strong>ENCHANTEE</strong> at checkout for 15% off all Ubigi plans.</p>
+        <h2 style="color: #23344F; margin-bottom: 1rem;"><i class="fas fa-globe"></i> Save on Your Ubigi eSIM</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #23344F;">Use <strong>{{ provider.primaryCode }}</strong> at checkout for {{ primary.discount | lower }}.</p>
         <p style="margin-bottom: 0; color: #23344F;">Global coverage, no surprises—travel smart with Ubigi.</p>
     </div>
 </div>

@@ -1,7 +1,8 @@
 <!-- YesIM Content Template -->
 <div class="content-section">
+    {% set primary = provider.codes | findCode(provider.primaryCode) %}
     <!-- Main heading -->
-    <h2><i class="fas fa-tags" style="color: #FF007A;"></i> Best YesIM Promo Codes for August 2025</h2>
+    <h2><i class="fas fa-tags" style="color: #FF007A;"></i> Best YesIM Promo Codes for {{ buildMonthYear }}</h2>
     
     <!-- Introduction -->
     <p>YesIM offers solid eSIM plans in over <strong>140+ countries</strong>. No physical SIM, straight-up transparent pricing, and fast delivery. Ideal for travelers who want simple, reliable data without the drama.</p>
@@ -87,20 +88,20 @@
             </tr>
             <tr>
                 <td><strong>Promo Code</strong></td>
-                <td style="background: #fefcfd;"><strong>YESIM10</strong> (10% off)</td>
-                <td><code>UPESAVE</code> (12%)</td>
-                <td><code>NOMAD15</code> (15%)</td>
-                <td><code>UBISAVE</code> (15%)</td>
+                <td style="background: #fefcfd;"><strong>{{ provider.primaryCode }}</strong> ({{ primary.discount | lower }})</td>
+                <td><code>REDDIT10</code> (10%)</td>
+                <td><code>WOLF</code> (10%)</td>
+                <td><code>ADAMANDLINDS</code> (10%)</td>
             </tr>
         </tbody>
     </table>
 
     <!-- Promo Codes -->
-    <h2><i class="fas fa-percent"></i> YesIM Promo Codes August 2025</h2>
+    <h2><i class="fas fa-percent"></i> YesIM Promo Codes {{ buildMonthYear }}</h2>
     <ul>
-        <li><strong>YESIM10:</strong> 10% OFF ALL PLANS (works globally)</li>
+        <li><strong>{{ provider.primaryCode }}:</strong> {{ primary.discount }} (confirmed active {{ (primary.lastTested or buildTime) | fmtDate("MMMM yyyy") }})</li>
     </ul>
-    <p style="font-size: 1rem; color: #663347;">Head to <a href="https://yesim.com" style="color:#FF007A;"><strong>YesIM</strong></a> and enter <strong>YESIM10</strong> at checkout to grab your discount.</p>
+    <p style="font-size: 1rem; color: #663347;">Head to <a href="https://yesim.com" style="color:#FF007A;"><strong>YesIM</strong></a> and enter <strong>{{ provider.primaryCode }}</strong> at checkout to grab your discount.</p>
 
     <!-- Quick Facts -->
     <div style="background: #ffe6f2; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #FF007A; margin-bottom: 2rem;">
@@ -120,7 +121,7 @@
     <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 2rem 0;">
         <div style="border-bottom: 1px solid #ffd0e6; padding: 1.5rem;">
             <h3 style="color: #FF007A; margin-bottom: 0.5rem;"><i class="fas fa-percentage"></i> Best YesIM code?</h3>
-            <p style="margin-bottom: 0;">Use <strong>YESIM10</strong> for 10% off—valid August 2025 everywhere.</p>
+            <p style="margin-bottom: 0;">Use <strong>{{ provider.primaryCode }}</strong> for {{ primary.discount | lower }}, everywhere.</p>
         </div>
         <div style="border-bottom: 1px solid #ffd0e6; padding: 1.5rem;">
             <h3 style="color: #FF007A; margin-bottom: 0.5rem;"><i class="fas fa-clock"></i> Plan length?</h3>
@@ -143,7 +144,7 @@
       "name":"Best YesIM code?",
       "acceptedAnswer":{
         "@type":"Answer",
-        "text":"Use YESIM10 for 10% off, valid August 2025 everywhere."
+        "text":"Use {{ provider.primaryCode }} for {{ primary.discount | lower }}, everywhere."
       }
     },
     {
@@ -168,8 +169,8 @@
 
     <!-- Call to Action -->
     <div style="background: linear-gradient(135deg, #ffe6f2 0%, #ffd0e6 100%); color: #663347; padding: 2rem; border-radius: 12px; text-align: center; margin: 3rem 0; border: 2px solid #FF007A;">
-        <h2 style="color: #663347; margin-bottom: 1rem;"><i class="fas fa-globe"></i> Grab 10% Off Your YesIM eSIM</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #663347;">Use code <strong style="color: #FF007A;">YESIM10</strong> at checkout—travel smart and stay connected.</p>
+        <h2 style="color: #663347; margin-bottom: 1rem;"><i class="fas fa-globe"></i> Save on Your YesIM eSIM</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #663347;">Use code <strong style="color: #FF007A;">{{ provider.primaryCode }}</strong> at checkout for {{ primary.discount | lower }}—travel smart and stay connected.</p>
         <p style="margin-bottom: 0; color: #663347;">No frills, no surprises—just solid data when you need it.</p>
     </div>
 </div>

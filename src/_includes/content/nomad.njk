@@ -1,7 +1,8 @@
 <!-- Nomad Content Template -->
 <div class="content-section">
+    {% set primary = provider.codes | findCode(provider.primaryCode) %}
     <!-- Main heading -->
-    <h2><i class="fas fa-tags" style="color: #FF4D00;"></i> Best Nomad eSIM Promo Codes for August 2025</h2>
+    <h2><i class="fas fa-tags" style="color: #FF4D00;"></i> Best Nomad eSIM Promo Codes for {{ buildMonthYear }}</h2>
     
     <!-- Introduction -->
     <p>Nomad gives you fast, flexible eSIM data in over <strong>120 countries</strong>, with reliable speeds and clean pricing. It’s simple—pick a plan, scan, and go. No ridiculous markups.</p>
@@ -94,20 +95,24 @@
             </tr>
             <tr>
                 <td><strong>Promo Code</strong></td>
-                <td style="background: #fefcfd;"><strong>NOMAD15</strong> (15% off)</td>
+                <td style="background: #fefcfd;"><strong>{{ provider.primaryCode }}</strong> ({{ primary.discount | lower }})</td>
                 <td>NEWTOAIRALO15 (15%)</td>
-                <td>GLOBALESAVE (12%)</td>
+                <td>ESIMSIO10 (10%)</td>
                 <td>ALOSAVE (15%)</td>
             </tr>
         </tbody>
     </table>
 
     <!-- Promo Codes -->
-    <h2><i class="fas fa-percent"></i> Nomad Promo Codes August 2025</h2>
+    <h2><i class="fas fa-percent"></i> Nomad Promo Codes {{ buildMonthYear }}</h2>
     <ul>
-        <li><strong>NOMAD15:</strong> 15% OFF ALL PLANS (works everywhere)</li>
+        {% for code in provider.codes %}
+        {% if not code.isInvalid %}
+        <li><strong>{{ code.code }}:</strong> {{ code.discount }}</li>
+        {% endif %}
+        {% endfor %}
     </ul>
-    <p style="font-size: 1rem; color: #4A3A31;">Go to <a href="https://nomad.com" style="color:#FF4D00;"><strong>Nomad</strong></a> and use <strong>NOMAD15</strong> at checkout to lock in savings.</p>
+    <p style="font-size: 1rem; color: #4A3A31;">Go to <a href="https://nomad.com" style="color:#FF4D00;"><strong>Nomad</strong></a> and use <strong>{{ provider.primaryCode }}</strong> at checkout to lock in savings.</p>
 
     <!-- Quick Facts -->
     <div style="background: #ffece6; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #FF4D00; margin-bottom: 2rem;">
@@ -127,7 +132,7 @@
     <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 2rem 0;">
         <div style="border-bottom: 1px solid #ffe0d4; padding: 1.5rem;">
             <h3 style="color: #FF4D00; margin-bottom: 0.5rem;"><i class="fas fa-percentage"></i> Best Nomad code?</h3>
-            <p style="margin-bottom: 0;">Use <strong>NOMAD15</strong> for 15% off all plans. Confirmed for August 2025.</p>
+            <p style="margin-bottom: 0;">Use <strong>{{ provider.primaryCode }}</strong> for {{ primary.discount | lower }}. Confirmed active {{ (primary.lastTested or buildTime) | fmtDate("MMMM yyyy") }}.</p>
         </div>
         <div style="border-bottom: 1px solid #ffe0d4; padding: 1.5rem;">
             <h3 style="color: #FF4D00; margin-bottom: 0.5rem;"><i class="fas fa-clock"></i> How fast is delivery?</h3>
@@ -153,7 +158,7 @@
       "name": "Best Nomad code?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Use NOMAD15 for 15% off all plans. Confirmed for August 2025."
+        "text": "Use {{ provider.primaryCode }} for {{ primary.discount | lower }}. Confirmed active {{ (primary.lastTested or buildTime) | fmtDate('MMMM yyyy') }}."
       }
     },
     {
@@ -187,8 +192,8 @@
 
     <!-- Call to Action -->
     <div style="background: linear-gradient(135deg, #ffece6 0%, #ffe0d4 100%); color: #4A3A31; padding: 2rem; border-radius: 12px; text-align: center; margin: 3rem 0; border: 2px solid #FF4D00;">
-        <h2 style="color: #4A3A31; margin-bottom: 1rem;"><i class="fas fa-globe" style="color: #FF4D00;"></i> Grab 15% Off Your Nomad eSIM</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #4A3A31;">Use code <strong style="color: #FF4D00;">NOMAD15</strong> at checkout and travel worry‑free.</p>
+        <h2 style="color: #4A3A31; margin-bottom: 1rem;"><i class="fas fa-globe" style="color: #FF4D00;"></i> Save on Your Nomad eSIM</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #4A3A31;">Use code <strong style="color: #FF4D00;">{{ provider.primaryCode }}</strong> at checkout for {{ primary.discount | lower }} and travel worry‑free.</p>
         <p style="margin-bottom: 0; color: #4A3A31;">Simple, fast, and transparent—just how eSIM should be.</p>
     </div>
 </div>
