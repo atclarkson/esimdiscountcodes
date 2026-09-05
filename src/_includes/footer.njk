@@ -1,8 +1,8 @@
 <!-- Footer -->
   <div class="footer-content">
-    <div class="footer-section">
+    <div class="footer-section footer-section--providers">
       <h3>eSIM Providers</h3>
-      <ul>
+      <ul class="footer-providers-list">
         {% for key, provider in codes %}
         <li><a href="/{{ key }}">{{ provider.name }} Codes</a></li>
         {% endfor %}
@@ -55,5 +55,5 @@
   </section>
 
   <div class="footer-bottom">
-    <p>&copy; 2025 eSIMDiscountCodes.com. All rights reserved.</p>
+    <p>&copy; {{ buildTime | fmtDate("yyyy") }} eSIMDiscountCodes.com. All rights reserved.</p>
   </div>
