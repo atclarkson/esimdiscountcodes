@@ -1324,6 +1324,7 @@
     "url": "https://www.amigosim.com",
     "affiliateUrl": "https://amigoesim.pxf.io/zz5MzG",
     "primaryCode": null,
+    "logo": "/assets/amigoesim_logo.svg",
     "codes": []
   },
   "bytesim": {
@@ -1333,6 +1334,7 @@
     "url": "https://bytesim.com",
     "affiliateUrl": "https://bytesimlimited.pxf.io/0GMqGN",
     "primaryCode": null,
+    "logo": "/assets/bytesim_logo.png",
     "codes": []
   },
   "esimcardus": {
@@ -1342,6 +1344,7 @@
     "url": "https://esimcard.com",
     "affiliateUrl": "https://esimcardus.sjv.io/n4ZM4M",
     "primaryCode": "ESIM10",
+    "logo": "/assets/esimcardus_logo.png",
     "codes": [
       {
         "code": "ESIM10",
@@ -1362,6 +1365,7 @@
     "url": "https://esimo.io",
     "affiliateUrl": "https://esimo.pxf.io/6kQjkm",
     "primaryCode": null,
+    "logo": "/assets/esimo_logo.webp",
     "codes": []
   },
   "simoptions": {
@@ -1371,6 +1375,7 @@
     "url": "https://www.simoptions.com",
     "affiliateUrl": "https://simoptions.sjv.io/YVBm0B",
     "primaryCode": null,
+    "logo": "/assets/simoptions_logo.svg",
     "codes": []
   }
 }
