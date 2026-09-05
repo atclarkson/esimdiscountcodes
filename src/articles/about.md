@@ -36,9 +36,9 @@ eSIM discount codes are scattered all over the internet. We got tired of hunting
 
 ## How We Make Money
 
-Some of the codes on this site are affiliate links. When you use them, we might earn a commission. We're upfront about this because we're not trying to hide anything.
+Some of the codes on this site are affiliate codes and links, including our own code (ADAMANDLINDS, where a provider supports it). When you use one, we might earn a commission. We're upfront about this because we're not trying to hide anything.
 
-The affiliate codes usually get you the same or better discounts than public codes, so everyone wins.
+We put our own code higher up and more prominently than other codes for the same provider - that's on purpose. It doesn't mean it's always the biggest discount available. Every code on the page is confirmed active, so scan the list and pick whichever saves you the most.
 
 ## Our Standards
 

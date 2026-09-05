@@ -289,7 +289,7 @@
     "description": "Flexible data plans worldwide",
     "url": "https://ubigi.com",
     "affiliateUrl": "https://go.ubigi.com/MKydW2",
-    "primaryCode": "ENCHANTEE",
+    "primaryCode": "ADAMANDLINDS",
     "rating": 2.5,
     "priceCategory": "Expensive",
     "brandColors": {
@@ -308,7 +308,7 @@
         "lastTested": "2026-07-16",
         "expiryDate": null,
         "isPrimary": true,
-        "type": "public"
+        "type": "affiliate"
       },
       {
         "code": "ENCHANTEE",
@@ -390,7 +390,7 @@
     "description": "Local eSIM plans worldwide",
     "url": "https://simlocal.com",
     "affiliateUrl": "https://www.simlocal.com/?utm_source=awin&utm_medium=affiliate&utm_content=1117223&utm_campaign=affiliate_&sv1=affiliate&sv_campaign_id=1117223&awc=68844_1748590721_a58d8f032ccdd7a14d574d98ac542803",
-    "primaryCode": "LUKEPALMS",
+    "primaryCode": "ADAMANDLINDS",
     "rating": 3.0,
     "priceCategory": "Cheap",
     "brandColors": {
@@ -811,7 +811,7 @@
         "verified": true,
         "lastTested": "2025-07-20",
         "expiryDate": null,
-        "isPrimary": true,
+        "isPrimary": false,
         "type": "public",
         "isInvalid": false
       },
@@ -1254,7 +1254,7 @@
     "logo": "/assets/orange_logo.svg",
     "codes": [
       {
-        "code": "-AW0",
+        "code": "AW0",
         "discount": "5% OFF",
         "description": "5% off anything coupon code",
         "verified": true,

@@ -75,6 +75,14 @@ module.exports = function (eleventyConfig) {
     return Object.entries(codes);
   });
 
+  // Always render our own/primary code first, regardless of JSON array order.
+  // Stable sort: valid primary codes first, then everything else in place.
+  eleventyConfig.addFilter("sortedCodes", function (codes) {
+    if (!Array.isArray(codes)) return codes;
+    const rank = (c) => (c.isPrimary && !c.isInvalid ? 0 : 1);
+    return [...codes].sort((a, b) => rank(a) - rank(b));
+  });
+
   // Keep this at the end. Nothing after this.
   return {
     dir: { input: "src", output: "_site" },

@@ -52,21 +52,19 @@ Travelers often share codes they've found:
 
 ## Code Verification Process
 
-### Testing Every Code
+### Confirming Every Code
 
 Before any code goes live on our site:
 
-- We test each code on the actual provider website
-- We verify the discount amount is accurate
-- We check expiration dates and terms
-- We note any restrictions or limitations
+- We confirm the code is currently advertised as active by the provider
+- We check the discount amount, expiration, and any restrictions match what's listed
+- We don't run codes through an actual purchase to "test" them - we're not buying an eSIM every time we check a code
 
 ### Regular Re-verification
 
-- Codes are retested weekly
-- We remove expired or non-working codes immediately
+- Codes are re-checked on a rolling basis, not just once
+- We remove expired or non-working codes when we find them
 - We update discount amounts if they change
-- We track success rates for each code
 
 ### Documentation Standards
 
@@ -200,7 +198,7 @@ Your experience helps us improve:
 
 ---
 
-*Our goal is simple: help travelers stay connected without overpaying. Every code on our site has been personally tested by our team, and we focus on quality over quantity to give you the best working codes.*
+*Our goal is simple: help travelers stay connected without overpaying. Every code on our site is confirmed active against what the provider currently advertises, and we focus on quality over quantity to give you codes that actually work.*
 
 </article>
 </div>

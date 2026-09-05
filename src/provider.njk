@@ -52,8 +52,10 @@ eleventyComputed:
         <section class="codes-section">
             <h2>Top {{ provider.name }} Discount Codes for {{ buildPretty }}</h2>
 
-            
-           {% for code in provider.codes %}
+
+           {% set outUrl = provider.affiliateUrl or provider.url %}
+           {% set isAffiliateOut = provider.affiliateUrl and outUrl == provider.affiliateUrl %}
+           {% for code in provider.codes | sortedCodes %}
   {% set isInvalid = code.isInvalid or false %}
   {% set verifiedISO = (code.lastTested or provider.codesLastUpdated or buildTime) | fmtISO %}
   {% set verifiedPretty = (code.lastTested or provider.codesLastUpdated or buildTime) | fmtDate("LLLL d, yyyy") %}
@@ -63,10 +65,15 @@ eleventyComputed:
       <h3>
         {% if isInvalid %}<s>{{ code.discount }}</s>{% else %}{{ code.discount }}{% endif %}
       </h3>
+      {% if code.type == "affiliate" and not isInvalid %}
+      <span class="our-code-badge">
+        <i class="fas fa-star"></i> Our Code
+      </span>
+      {% endif %}
       {% if code.verified and not isInvalid %}
       <span class="verified-badge">
         <i class="fas fa-circle-check" style="color:#10b981;"></i>
-        <time datetime="{{ verifiedISO }}">Verified {{ verifiedPretty }}</time>
+        <time datetime="{{ verifiedISO }}">Confirmed active {{ verifiedPretty }}</time>
       </span>
       {% elif isInvalid %}
       <span class="invalid-badge">
@@ -77,13 +84,22 @@ eleventyComputed:
     </div>
 
     <div class="coupon-code">
-      <button class="copy-code-btn {% if isInvalid %}invalid-btn{% endif %}" 
-              data-code="{{ code.code }}" 
+      <button class="copy-code-btn {% if isInvalid %}invalid-btn{% endif %}"
+              data-code="{{ code.code }}"
               {% if isInvalid %}disabled{% endif %}>
         <i class="fas fa-{% if isInvalid %}times{% else %}copy{% endif %}"></i>
         <span class="code-text {% if isInvalid %}strikethrough{% endif %}">{{ code.code }}</span>
         <span class="copy-label">{% if isInvalid %}Invalid{% else %}Copy code{% endif %}</span>
       </button>
+      {% if outUrl %}
+      <a class="get-deal-btn"
+         href="{{ outUrl }}"
+         target="_blank"
+         rel="{% if isAffiliateOut %}sponsored noopener{% else %}noopener{% endif %}">
+        <i class="fas fa-arrow-up-right-from-square"></i>
+        <span>Shop {{ provider.name }}</span>
+      </a>
+      {% endif %}
     </div>
 
     <p class="coupon-description {% if isInvalid %}invalid-description{% endif %}">
@@ -129,103 +145,13 @@ eleventyComputed:
 {% endfor %}
 
         </section>
-{# About the verifier #}
-<section id="about-verifier" class="verifier-about">
-  <div class="verifier-media">
-    <img
-      src="/assets/profilepic.png"
-      alt="David Wright, Coupon Researcher"
-      class="verifier-avatar"
-      loading="lazy"
-      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-    >
-    <div class="verifier-avatar-fallback" style="display:none;" aria-hidden="true">DW</div>
-  </div>
-
-  <div class="verifier-copy">
-    <h2 class="verifier-heading">About David Wright</h2>
-
-    <p>I've been dragging a laptop around the world for 6 years straight. Originally from a Toronto suburb you've definitely never heard of. I'm 34, technically homeless by choice, and have used more eSIM cards than most people have used napkins.</p>
-
-    <h3>The stats</h3>
-    <ul class="verifier-stats">
-      <li>6 years of continuous travel</li>
-      <li>52 countries and counting</li>
-      <li>Every major eSIM provider tested (plus the sketchy ones)</li>
-      <li>Zero tolerance for broken discount codes</li>
-    </ul>
-
-    <h3>Why this exists</h3>
-    <p>Got fed up with codes that don't work and affiliate sites full of lies. Every single code on this site gets manually tested before it goes live. No bots, no scraping, no hoping for the best.</p>
-
-    <h3>My process</h3>
-    <ul>
-      <li>Hunt codes in newsletters, apps, and checkout flows</li>
-      <li>Test each one at actual checkout</li>
-      <li>Remove expired codes immediately</li>
-      <li>Update working percentages regularly</li>
-    </ul>
-
-    <h3>My approach</h3>
-    <p>The codes work or they don't. Use them or don't. I'm not your customer service department. Check the privacy policy if you want to understand my communication style.</p>
-
-    <h3>Probably irrelevant facts</h3>
-    <ul>
-      <li>Can sleep through any airport announcement except gate changes</li>
-      <li>Unreasonably angry about airline WiFi pricing</li>
-      <li>Collects working discount codes like a digital hoarder</li>
-      <li>Prefers debugging over small talk</li>
-    </ul>
-
-    <h3>Don't contact me</h3>
-    <p>I don't do support requests. The site works, the codes work, or they don't. Everything you need to know is already here.</p>
-
-    <p><em>Currently in some airport lounge with mediocre coffee, making sure your next eSIM purchase costs less.</em></p>
-  </div>
+{# Affiliate disclosure #}
+<section class="code-disclosure">
+  <p>
+    <i class="fas fa-circle-info"></i>
+    Heads up: some codes on this page are affiliate codes and links, including our own (<strong>ADAMANDLINDS</strong> where it applies) — if you use one, we may earn a commission. We put our own code higher up on the page because it's ours, not because it's automatically the best deal. Every code here is confirmed still active by us, but check the list before you copy — a public code below ours might save you more. See our <a href="/about/">about page</a> for the full breakdown.
+  </p>
 </section>
-
-<style>
-  .verifier-about{display:grid;grid-template-columns:88px 1fr;gap:1rem;border:1px dashed #e5e7eb;background:#fafafa;padding:1.5rem;border-radius:12px;margin:1.5rem 0}
-  .verifier-avatar{width:88px;height:88px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
-  .verifier-avatar-fallback{width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);display:flex;align-items:center;justify-content:center;font-weight:600;color:white;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
-  .verifier-heading{margin:0 0 .5rem 0;font-size:1.25rem;font-weight:700;color:#1f2937}
-  .verifier-copy h3{margin:1rem 0 .5rem 0;font-size:1rem;font-weight:600;color:#374151;display:flex;align-items:center;gap:0.5rem}
-  .verifier-copy h3:before{font-family:"Font Awesome 6 Free";font-weight:900;font-size:0.875rem;color:#6b7280}
-  .verifier-copy h3:nth-of-type(1):before{content:"\f201"}
-  .verifier-copy h3:nth-of-type(2):before{content:"\f059"}
-  .verifier-copy h3:nth-of-type(3):before{content:"\f013"}
-  .verifier-copy h3:nth-of-type(4):before{content:"\f4ad"}
-  .verifier-copy h3:nth-of-type(5):before{content:"\f06e"}
-  .verifier-copy h3:nth-of-type(6):before{content:"\f2ed"}
-  .verifier-copy p{margin:.25rem 0 .75rem 0;line-height:1.6;color:#4b5563}
-  .verifier-copy ul{margin:.25rem 0 .75rem 0;padding-left:0;list-style:none}
-  .verifier-copy li{margin:.15rem 0;line-height:1.5;color:#4b5563;display:flex;align-items:flex-start;gap:0.5rem}
-  .verifier-copy li:before{content:"\f105";font-family:"Font Awesome 6 Free";font-weight:900;color:#6b7280;font-size:0.875rem;margin-top:0.125rem;flex-shrink:0}
-  .verifier-stats{list-style-type:none;padding-left:0}
-  .verifier-stats li:before{content:"\f105";font-family:"Font Awesome 6 Free";font-weight:900;color:#6b7280;margin-right:0.5rem}
-  @media (max-width:640px){
-    .verifier-about{grid-template-columns:64px 1fr;gap:0.75rem}
-    .verifier-avatar,.verifier-avatar-fallback{width:64px;height:64px}
-  }
-</style>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "David Wright",
-  "image": "{{ '/assets/profilepic.png' | url | absoluteUrl(site.url) }}",
-  "jobTitle": "Coupon Researcher",
-  "description": "Finds and tests discount codes by hand. No AI. No scraping.",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "{{ site.title }}",
-    "url": "{{ site.url }}"
-  }
-}
-</script>
-
 
         <!-- Content Section (check for markdown files) -->
         <section class="content-section">

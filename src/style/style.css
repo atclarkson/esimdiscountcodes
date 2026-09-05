@@ -416,6 +416,79 @@ main {
   margin: 0;
 }
 
+/* Outbound "shop now" button, next to the copy button */
+.coupon-code {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.get-deal-btn {
+  background: #059669;
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  min-width: 180px;
+  justify-content: center;
+}
+
+.get-deal-btn:hover {
+  background: #047857;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+}
+
+.our-code-badge {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+
+.our-code-badge i {
+  color: #d97706;
+}
+
+/* Affiliate disclosure on provider pages */
+.code-disclosure {
+  border: 1px dashed #d1d5db;
+  background: #fafafa;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+}
+
+.code-disclosure p {
+  margin: 0;
+  line-height: 1.6;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.code-disclosure i {
+  color: #6b7280;
+  margin-right: 0.25rem;
+}
+
+.code-disclosure a {
+  color: #2563eb;
+}
+
 /* Coming Soon Pages */
 .coming-soon-section {
   max-width: 600px;
