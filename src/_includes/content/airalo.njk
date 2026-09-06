@@ -1,394 +1,160 @@
-<!-- Airalo Content Template -->
+<!-- Airalo Content -->
 <div class="content-section">
-    <!-- Main heading -->
-    <h2>Best Airalo Promo Codes for {{ buildMonthYear }}</h2>
-    
-    <!-- Introduction -->
-    <p>Airalo is the world's first eSIM store for travelers, revolutionizing how we stay connected while exploring the globe. With coverage in <strong>200+ countries</strong> and partnerships with local carriers worldwide, Airalo offers flexible data plans that eliminate the need for physical SIM cards or expensive roaming charges. From budget backpackers to luxury travelers, Airalo's extensive plan options cater to every type of journey.</p>
 
-    <!-- Key Features Highlight -->
-    <div class="feature-highlights" style="background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%); border: 2px solid #b6496f; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
-        <h2 style="color: #404040; margin-bottom: 1.5rem;">What Makes Airalo Stand Out?</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #404040;">World's First eSIM Store</h3>
-                <p>Pioneer in eSIM technology with proven reliability</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #404040;">200+ Countries</h3>
-                <p>Extensive global coverage with local carrier partnerships</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #404040;">Flexible Plans</h3>
-                <p>From 1GB short-term to unlimited regional packages</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #404040;">Industry Leader</h3>
-                <p>Trusted by millions of travelers worldwide</p>
-            </div>
-        </div>
-    </div>
+  <!-- Quick Answer -->
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Best Airalo Promo Code &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Use <strong>{{ provider.primaryCode }}</strong> for <strong>15% off your first Airalo eSIM</strong>. It's not our own code &mdash; Airalo doesn't run an affiliate program that supports a discount code the way Holafly or Ubigi do &mdash; but it's the best public one we've verified still works. Already bought from Airalo before? <strong>AIRALOESIM10</strong> gets existing customers 10% off purchases over $10.
+      <span class="callout-meta">Confirmed active <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("MMM d, yyyy") }}</time>.</span>
+    </p>
+  </div>
 
-    <!-- How Airalo Works -->
-    <h2>How Airalo eSIM Technology Works</h2>
-    <p>Airalo's eSIM marketplace connects you with local mobile networks in over 200 countries. Simply browse plans by destination, purchase your eSIM, and activate it with a QR code. The process allows you to:</p>
+  <!-- Headline -->
+  <h2>What Actually Makes Airalo Different</h2>
+  <p>
+    Airalo sells data by the gigabyte, not unlimited. That's the opposite bet from <a href="/holafly/">Holafly</a>: instead of paying more upfront so you never think about a data meter, you pay less upfront and have to actually track what you're using. For a light user on a short trip &mdash; maps, messaging, some browsing &mdash; that's a non-issue and it's usually the cheaper choice. For a family running navigation, video calls, and a kid's tablet at the same time, the GB tracking becomes real mental overhead on top of everything else you're juggling on a trip.
+  </p>
+  <p>
+    Airalo does also sell <strong>unlimited regional eSIMs</strong> (Europe, Asia, North America, Latin America, the Caribbean, MENA, Africa, and Australia) so it's not purely a GB-capped operation. The catch, spelled out in Airalo's own fair-use policy: unlimited plans run at full speed for the first 3GB of usage each day, then drop to 1Mbps until midnight, when the allowance resets. That's a real number worth knowing before you assume "unlimited" means unthrottled &mdash; it's still meaningfully better than a hard data cap, just not limitless.
+  </p>
+
+  <img class="content-photo"
+       src="https://media.adamandlinds.com/photos/large/d37ce5f2-e763-4165-a860-783353e14dc8.jpg"
+       alt="A man takes a windswept selfie on a Copenhagen sidewalk while a woman walks behind him past a 7-Eleven storefront"
+       width="1280" height="960">
+  <p class="content-photo-caption">A short city trip to Copenhagen &mdash; exactly the kind of light, single-country visit where a GB-capped plan like Airalo's makes more sense than paying for unlimited. From our own travels, not a stock photo.</p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Active codes</h3>
     <ul>
-        <li><strong>Browse by destination</strong> to find the perfect plan for your trip</li>
-        <li><strong>Choose from multiple carriers</strong> in each country for best coverage</li>
-        <li><strong>Stack multiple eSIMs</strong> for different countries or purposes</li>
-        <li><strong>Manage everything</strong> through Airalo's intuitive mobile app</li>
+      <li><strong>NEWTOAIRALO15</strong> — 15% off your first eSIM purchase</li>
+      <li><strong>AIRALOESIM10</strong> — 10% off purchases of $10 or more (existing customers)</li>
+      <li><strong>JOHANN4201</strong> — 15% off, or &euro;3 off eSIM plans</li>
+      <li><strong>BRIAN0890</strong> — $3 off your first purchase</li>
     </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">If a code does not apply, refresh the cart or try a private window, then retry.</p>
+  </div>
 
-    <!-- Comparison with Major Competitors -->
-    <h2>Airalo vs. Top eSIM Competitors</h2>
-    <p>See how Airalo compares to other leading eSIM providers like <a href="/holafly">Holafly</a> and <a href="/saily">Saily</a> across key features and pricing:</p>
+  <!-- Why so many $3 codes -->
+  <h2>Why There Are So Many "$3 Off" Airalo Codes</h2>
+  <p>
+    Airalo runs a referral program called Airmoney: when someone signs up with your referral code and makes a first purchase, they get $3 off and you get $3 in Airmoney credit toward your own next eSIM. That's why the internet is full of individual people's personal "$3 off" codes rather than one single official promo &mdash; codes like BRIAN0890 above are exactly that, a real person's referral code, not a special deal negotiated with a publisher. It's a genuinely different mechanism from Holafly or Ubigi's affiliate-code setup, which is also why we don't have our own Airalo code the way we do for those providers.
+  </p>
 
-    <table style="margin: 2rem 0;">
-        <thead>
-            <tr>
-                <th>Feature</th>
-                <th style="background: #fdf2f8; color: #b6496f;"><strong>Airalo</strong></th>
-                <th>Holafly</th>
-                <th>Saily</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Price Category</strong></td>
-                <td style="background: #fefcfd;">Average</td>
-                <td>Cheap</td>
-                <td>Cheap</td>
-            </tr>
-            <tr>
-                <td><strong>Countries Covered</strong></td>
-                <td style="background: #fefcfd;"><span style="color: #4D8374;">200+</span></td>
-                <td>190+</td>
-                <td>200+</td>
-            </tr>
-            <tr>
-                <td><strong>24/7 Support</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Live Chat Support</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Regional Packages</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Short-term Plans</strong></td>
-                <td style="background: #fefcfd;"><span style="color: #4D8374;">7+ days</span></td>
-                <td>1+ days</td>
-                <td>7+ days</td>
-            </tr>
-            <tr>
-                <td><strong>Plan Never Expires</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td>30 days</td>
-                <td>30 days</td>
-            </tr>
-            <tr>
-                <td><strong>Best Discount Code</strong></td>
-                <td style="background: #fefcfd;"><strong>NEWTOAIRALO15</strong> (15% off)</td>
-                <td>ADAMANDLINDS (5% off)</td>
-                <td>HELLOSAILY (15% off)</td>
-            </tr>
-        </tbody>
-    </table>
+  <!-- How to -->
+  <h2>Apply an Airalo Code in 3 Steps</h2>
+  <div class="content-box">
+    <ol>
+      <li>Copy <strong>NEWTOAIRALO15</strong> (first purchase) or <strong>AIRALOESIM10</strong> (existing customer, $10+ order)</li>
+      <li>Pick a local, regional, or global eSIM plan in the Airalo app or on airalo.com</li>
+      <li>Paste the code in the promo field at checkout and confirm the price drop before paying</li>
+    </ol>
+    <p class="content-note">Discount shows before payment is completed.</p>
+  </div>
 
-    <!-- Pricing Comparison -->
-    <h2>Airalo Pricing Breakdown</h2>
-    <p>Airalo offers competitive pricing with flexible data allowances across popular destinations:</p>
-
-    <table style="margin: 2rem 0;">
-        <thead>
-            <tr>
-                <th>Destination</th>
-                <th style="background: #fdf2f8; color: #b6496f;"><strong>Airalo Price (1GB)</strong></th>
-                <th>Holafly Price</th>
-                <th>Saily Price (1GB)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>United States</strong></td>
-                <td style="background: #fefcfd;">$4.50</td>
-                <td>$1.99/day</td>
-                <td>$3.99</td>
-            </tr>
-            <tr>
-                <td><strong>Europe Regional</strong></td>
-                <td style="background: #fefcfd;">$5.27</td>
-                <td>$1.99/day</td>
-                <td>$4.99</td>
-            </tr>
-            <tr>
-                <td><strong>Japan</strong></td>
-                <td style="background: #fefcfd;">$4.50</td>
-                <td>$1.99/day</td>
-                <td>$3.99</td>
-            </tr>
-            <tr>
-                <td><strong>Thailand</strong></td>
-                <td style="background: #fefcfd;">$4.50</td>
-                <td>$1.99/day</td>
-                <td>$2.99</td>
-            </tr>
-            <tr>
-                <td><strong>Global Coverage</strong></td>
-                <td style="background: #fefcfd;">$9.49</td>
-                <td>$9.90/day</td>
-                <td>$8.99</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <!-- Popular Destinations -->
-    <h2>Popular Airalo Destinations</h2>
-
-    <h3>Europe Discoverer eSIM</h3>
-    <p>Airalo's Europe plan covers 39+ countries with flexible data options starting from <strong>1GB for $5.27</strong>. Perfect for backpackers who want to control their data usage and budget across multiple European countries.</p>
-
-    <h3>USA & Canada Plans</h3>
-    <p>Comprehensive coverage across North America with competitive rates starting at <strong>$4.50 for 1GB</strong>. Ideal for business travelers or tourists exploring major cities and national parks.</p>
-
-    <h3>Asia Explorer Packages</h3>
-    <p>From Japan's high-tech cities to Southeast Asia's tropical destinations, Airalo offers reliable connectivity starting at <strong>$4.50 for 1GB</strong> with options to scale up based on your needs.</p>
-
-    <!-- Airalo vs Traditional Options -->
-    <h2>Why Choose Airalo Over Traditional Roaming?</h2>
-
-    <table style="margin: 2rem 0;">
-        <thead>
-            <tr>
-                <th>Feature</th>
-                <th style="background: #fdf2f8; color: #b6496f;"><strong>Airalo eSIM</strong></th>
-                <th>International Roaming</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Cost Predictability</strong></td>
-                <td style="background: #fefcfd;"><span style="color: #4D8374;">Fixed pricing, no surprises</span></td>
-                <td><span style="color: #79252F;">Variable charges, bill shock risk</span></td>
-            </tr>
-            <tr>
-                <td><strong>Setup Complexity</strong></td>
-                <td style="background: #fefcfd;">5-minute app-based activation</td>
-                <td>Often requires carrier contact</td>
-            </tr>
-            <tr>
-                <td><strong>Data Flexibility</strong></td>
-                <td style="background: #fefcfd;">Choose exactly what you need</td>
-                <td>Limited plan options</td>
-            </tr>
-            <tr>
-                <td><strong>Multiple Countries</strong></td>
-                <td style="background: #fefcfd;">Regional plans available</td>
-                <td>Separate charges per country</td>
-            </tr>
-            <tr>
-                <td><strong>No Expiry Worries</strong></td>
-                <td style="background: #fefcfd;"><span style="color: #4D8374;">Plans never expire after purchase</span></td>
-                <td>Time-limited activation</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <!-- Device Compatibility -->
-    <h2>Airalo Device Compatibility</h2>
-    <p>Airalo eSIMs work seamlessly with most modern smartphones. Verify your device compatibility:</p>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
-        <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #b6496f;">
-            <h3>iPhone Compatibility</h3>
-            <ul>
-                <li>iPhone 16 series (all variants)</li>
-                <li>iPhone 15 series (all variants)</li>
-                <li>iPhone 14 series (all variants)</li>
-                <li>iPhone 13 series (all variants)</li>
-                <li>iPhone 12 series (all variants)</li>
-                <li>iPhone 11 series (all variants)</li>
-                <li>iPhone XS, XS Max, XR</li>
-                <li>iPhone SE (2nd gen and newer)</li>
-            </ul>
-        </div>
-        <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #b6496f;">
-            <h3>Android Support</h3>
-            <ul>
-                <li>Google Pixel 4 and newer models</li>
-                <li>Samsung Galaxy S20 series and newer</li>
-                <li>Samsung Galaxy Note 20 and newer</li>
-                <li>Samsung Galaxy Z series (foldables)</li>
-                <li>OnePlus 11 and newer flagships</li>
-                <li>Most premium Android devices from 2020+</li>
-            </ul>
-        </div>
+  <!-- Decision help -->
+  <h2>Is Airalo the Right Pick for Your Trip</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Good fit</h3>
+      <ul>
+        <li>Light data use &mdash; maps, messaging, some browsing</li>
+        <li>Short, single-country trips where you can estimate GB needs</li>
+        <li>You're comfortable checking a data meter mid-trip</li>
+      </ul>
     </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Consider alternatives</h3>
+      <ul>
+        <li>Family or group where several people share one plan's worth of usage</li>
+        <li>Heavy streaming or video calls where you'd rather not track a meter</li>
+        <li>You'd pay more to never think about data again &mdash; see <a href="/holafly/">Holafly</a></li>
+      </ul>
+    </div>
+  </div>
 
-    <blockquote style="background: #fdf2f8; border-left-color: #b6496f;">
-        <p><strong>Compatibility Note:</strong> Devices purchased in mainland China may have eSIM functionality disabled. Always check with Airalo's compatibility checker before purchasing.</p>
-    </blockquote>
-
-    <!-- Airalo Tips and Tricks -->
-    <h2>Maximizing Your Airalo Experience</h2>
-
-    <h3>Choosing the Right Plan Size</h3>
-    <p>Airalo's flexible data options let you buy exactly what you need. For typical usage: 1GB covers basic browsing and messaging for 3-5 days, 3GB handles moderate social media and navigation for 7-10 days, while 5GB+ suits heavy users or longer trips.</p>
-
-    <h3>Regional vs Country Plans</h3>
-    <p>For multi-country trips, Airalo's regional plans offer excellent value. The Europe Discoverer covers 39 countries, Asia Regional spans major destinations, and Global plans work across 130+ countries - often cheaper than buying individual country eSIMs.</p>
-
-    <h3>Managing Multiple eSIMs</h3>
-    <p>Airalo's app makes it easy to manage multiple eSIMs for different trips or regions. You can:</p>
+  <!-- Savings examples -->
+  <h2>What the Discount Looks Like</h2>
+  <div class="content-box">
     <ul>
-        <li>Store unused eSIMs for future trips (they never expire)</li>
-        <li>Switch between different regional plans seamlessly</li>
-        <li>Monitor data usage across all active plans</li>
-        <li>Top up or purchase additional plans as needed</li>
+      <li>United States 1GB at $4.50 &rarr; 15% off saves about $0.68</li>
+      <li>Europe regional 1GB at $5.27 &rarr; 15% off saves about $0.79</li>
+      <li>Global 1GB at $9.49 &rarr; 15% off saves about $1.42</li>
     </ul>
+    <p class="content-note">Airalo's per-GB pricing means the discount is small on a single small plan and adds up more on bigger data bundles or repeat purchases.</p>
+  </div>
 
-    <!-- FAQ Section -->
-    <h2>Frequently Asked Questions</h2>
+  <p>
+    For eSIM device compatibility (which phones support eSIM at all), see our <a href="/compatible-devices/">eSIM compatible devices</a> guide &mdash; it applies the same way regardless of which provider you use. We've also written a more in-depth <a href="https://www.adamandlinds.com/blog/best-prepaid-sim-cards-tourists/" target="_blank" rel="noopener">field-tested comparison of Holafly, Airalo, and Airhub</a> on our travel site, covering where each one actually made sense for us.
+  </p>
 
-    <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 2rem 0;">
-        <div style="border-bottom: 1px solid #e5e7eb; padding: 1.5rem;">
-            <h3 style="color: #b6496f; margin-bottom: 0.5rem;">What's the best Airalo discount code?</h3>
-            <p style="margin-bottom: 0;">The best current Airalo discount code is <strong>NEWTOAIRALO15</strong>, which gives new users 15% off their first eSIM purchase. Existing customers can use <strong>AIRALOESIM10</strong> for 10% off purchases over $10.</p>
-        </div>
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Use the Code at Checkout</h2>
+    <p>Copy <code>NEWTOAIRALO15</code> then paste in the promo field</p>
+    <p>15% off your first Airalo eSIM purchase.</p>
+  </div>
 
-        <div style="border-bottom: 1px solid #e5e7eb; padding: 1.5rem;">
-            <h3 style="color: #b6496f; margin-bottom: 0.5rem;">How quickly does Airalo eSIM activate?</h3>
-            <p style="margin-bottom: 0;">Airalo eSIMs typically activate within 2-3 minutes of installation. You'll receive your QR code immediately after purchase, and the plan becomes active when you first connect to a local network in your destination country.</p>
-        </div>
-
-        <div style="border-bottom: 1px solid #e5e7eb; padding: 1.5rem;">
-            <h3 style="color: #b6496f; margin-bottom: 0.5rem;">Does Airalo support voice calls and SMS?</h3>
-            <p style="margin-bottom: 0;">Most Airalo plans are data-only, but their Global plan includes SMS and voice calling features. For other plans, you can use VoIP services like WhatsApp, Telegram, or Skype for calls over the data connection.</p>
-        </div>
-
-        <div style="border-bottom: 1px solid #e5e7eb; padding: 1.5rem;">
-            <h3 style="color: #b6496f; margin-bottom: 0.5rem;">Do Airalo eSIMs expire?</h3>
-            <p style="margin-bottom: 0;">Airalo eSIMs have no expiration date after purchase, making them perfect for future travel planning. However, once activated, each plan has a specific validity period (typically 7-30 days depending on the plan).</p>
-        </div>
-
-        <div style="border-bottom: 1px solid #e5e7eb; padding: 1.5rem;">
-            <h3 style="color: #b6496f; margin-bottom: 0.5rem;">Can I share Airalo data via mobile hotspot?</h3>
-            <p style="margin-bottom: 0;">Yes, Airalo supports data sharing through mobile hotspot on most plans. This lets you share your connection with laptops, tablets, or other devices. Check your specific plan details for any hotspot limitations.</p>
-        </div>
-
-        <div style="border-bottom: 1px solid #e5e7eb; padding: 1.5rem;">
-            <h3 style="color: #b6496f; margin-bottom: 0.5rem;">Can I top up my Airalo eSIM?</h3>
-            <p style="margin-bottom: 0;">Yes, Airalo offers top-up options for most plans through their mobile app. You can add more data to your existing plan or purchase a new eSIM for the same destination if needed.</p>
-        </div>
-
-        <div style="border-bottom: 1px solid #e5e7eb; padding: 1.5rem;">
-            <h3 style="color: #b6496f; margin-bottom: 0.5rem;">Is Airalo safe and reliable?</h3>
-            <p style="margin-bottom: 0;">Airalo partners with established local carriers in each country, ensuring reliable network coverage and data security. As the world's first eSIM marketplace, they have a proven track record serving millions of travelers.</p>
-        </div>
-
-        <div style="border-bottom: 1px solid #e5e7eb; padding: 1.5rem;">
-            <h3 style="color: #b6496f; margin-bottom: 0.5rem;">What's Airalo's refund policy?</h3>
-            <p style="margin-bottom: 0;">Airalo offers easy refunds for unused eSIMs within 30 days of purchase. Once an eSIM is activated and used, it generally cannot be refunded, but their customer support team handles exceptional cases.</p>
-        </div>
-
-        <div style="border-bottom: 1px solid #e5e7eb; padding: 1.5rem;">
-            <h3 style="color: #b6496f; margin-bottom: 0.5rem;">How many eSIMs can I have on my phone?</h3>
-            <p style="margin-bottom: 0;">Most modern phones support multiple eSIM profiles (typically 8-10), but only one or two can be active simultaneously. Airalo's app helps you manage and switch between different eSIMs easily.</p>
-        </div>
-
-        <div style="padding: 1.5rem;">
-            <h3 style="color: #b6496f; margin-bottom: 0.5rem;">How do I contact Airalo customer support?</h3>
-            <p style="margin-bottom: 0;">Airalo offers 24/7 customer support through their mobile app and website contact form. While they don't have live chat, their support team typically responds to inquiries within a few hours.</p>
-        </div>
+  <!-- FAQ -->
+  <h2>Airalo Promo Code FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>What is the best code right now</h3>
+      <p><strong>NEWTOAIRALO15</strong> &mdash; 15% off your first Airalo eSIM. Already a customer? Use <strong>AIRALOESIM10</strong> for 10% off orders over $10.</p>
     </div>
-    <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {
-      "@type":"Question",
-      "name":"What's the best Airalo discount code?",
-      "acceptedAnswer":{"@type":"Answer","text":"The best current Airalo discount code is NEWTOAIRALO15, which gives new users 15% off their first eSIM purchase. Existing customers can use AIRALOESIM10 for 10% off purchases over $10."}
-    },
-    {
-      "@type":"Question",
-      "name":"How quickly does Airalo eSIM activate?",
-      "acceptedAnswer":{"@type":"Answer","text":"Airalo eSIMs typically activate within 2-3 minutes of installation. You'll receive your QR code immediately after purchase, and the plan becomes active when you first connect to a local network in your destination country."}
-    },
-    {
-      "@type":"Question",
-      "name":"Does Airalo support voice calls and SMS?",
-      "acceptedAnswer":{"@type":"Answer","text":"Most Airalo plans are data-only, but their Global plan includes SMS and voice calling features. For other plans, you can use VoIP services like WhatsApp, Telegram, or Skype for calls over the data connection."}
-    },
-    {
-      "@type":"Question",
-      "name":"Do Airalo eSIMs expire?",
-      "acceptedAnswer":{"@type":"Answer","text":"Airalo eSIMs have no expiration date after purchase, making them perfect for future travel planning. However, once activated, each plan has a specific validity period, typically 7–30 days depending on the plan."}
-    },
-    {
-      "@type":"Question",
-      "name":"Can I share Airalo data via mobile hotspot?",
-      "acceptedAnswer":{"@type":"Answer","text":"Yes, Airalo supports data sharing through mobile hotspot on most plans. This lets you share your connection with laptops, tablets, or other devices. Check your specific plan details for any hotspot limitations."}
-    },
-    {
-      "@type":"Question",
-      "name":"Can I top up my Airalo eSIM?",
-      "acceptedAnswer":{"@type":"Answer","text":"Yes, Airalo offers top-up options for most plans through their mobile app. You can add more data to your existing plan or purchase a new eSIM for the same destination if needed."}
-    },
-    {
-      "@type":"Question",
-      "name":"Is Airalo safe and reliable?",
-      "acceptedAnswer":{"@type":"Answer","text":"Airalo partners with established local carriers in each country, ensuring reliable network coverage and data security. As the first eSIM marketplace, they have a proven track record serving millions of travelers."}
-    },
-    {
-      "@type":"Question",
-      "name":"What's Airalo's refund policy?",
-      "acceptedAnswer":{"@type":"Answer","text":"Airalo offers refunds for unused eSIMs within 30 days of purchase. Once an eSIM is activated and used, it generally cannot be refunded, but their support team handles exceptional cases."}
-    },
-    {
-      "@type":"Question",
-      "name":"How many eSIMs can I have on my phone?",
-      "acceptedAnswer":{"@type":"Answer","text":"Most modern phones support multiple eSIM profiles, often 8–10, but only one or two can be active at the same time. Airalo's app helps you manage and switch between different eSIMs."}
-    },
-    {
-      "@type":"Question",
-      "name":"How do I contact Airalo customer support?",
-      "acceptedAnswer":{"@type":"Answer","text":"Airalo offers 24/7 support through their mobile app and website contact form. They do not have live chat. Response times are typically within a few hours."}
-    }
-  ]
-}
-</script>
-
-
-    <!-- Call to Action -->
-    <div style="background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%); color: #404040; padding: 2rem; border-radius: 12px; text-align: center; margin: 3rem 0; border: 2px solid #b6496f;">
-        <h2 style="color: #404040; margin-bottom: 1rem;">Start Your Connected Journey</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #404040;">Use promo code <strong style="color: #b6496f;">NEWTOAIRALO15</strong> for 15% off your first Airalo eSIM purchase.</p>
-        <p style="margin-bottom: 0; color: #4b5563;">Join millions of travelers who trust Airalo for reliable, affordable connectivity in 200+ countries worldwide.</p>
+    <div class="content-faq-item">
+      <h3>Does Airalo have unlimited plans</h3>
+      <p>Yes, on a regional basis (Europe, Asia, North America, Latin America, the Caribbean, MENA, Africa, Australia). Full speed for the first 3GB each day, then throttled to 1Mbps until the daily allowance resets at midnight.</p>
     </div>
+    <div class="content-faq-item">
+      <h3>Can I use hotspot on Airalo</h3>
+      <p>Yes, hotspot tethering is supported on Airalo plans generally, and is unrestricted on the Unlimited regional eSIMs (subject to the same daily fair-use throttle as regular use).</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Why does everyone have a different Airalo code</h3>
+      <p>Airalo's referral program (Airmoney) gives every user their own personal $3-off code to share, rather than running one central affiliate discount. That's why you'll see many different codes instead of a single official one.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Do Airalo eSIMs expire</h3>
+      <p>The eSIM itself doesn't expire before activation, so you can buy ahead of a trip. Once activated, the plan's validity window (typically 7-30 days depending on the plan) starts counting down.</p>
+    </div>
+  </div>
 
-    <!-- Additional Comparisons -->
-    <h2>Why Choose Airalo Over Holafly or Saily?</h2>
-    <p>While <a href="/holafly">Holafly</a> and <a href="/saily">Saily</a> are solid eSIM providers, Airalo offers distinct advantages:</p>
-
-    <ul>
-        <li><strong>Largest eSIM Marketplace:</strong> More carrier options and plan varieties than competitors</li>
-        <li><strong>Never Expires:</strong> Unlike other providers, purchased eSIMs never expire</li>
-        <li><strong>Proven Track Record:</strong> As the world's first eSIM store, Airalo has the most experience</li>
-        <li><strong>Flexible Data Options:</strong> From 1GB to unlimited, choose exactly what you need</li>
-        <li><strong>Regional Plan Leader:</strong> Superior regional coverage compared to single-country focused providers</li>
-        <li><strong>Best New User Discount:</strong> 15% off first purchase beats most competitor offers</li>
-    </ul>
-
-    <p>Compare all top eSIM providers side-by-side on our <a href="/">homepage</a> to find the perfect plan for your travel style and budget.</p>
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What is the best Airalo promo code right now?",
+        "acceptedAnswer":{"@type":"Answer","text":"NEWTOAIRALO15 gives 15% off your first Airalo eSIM purchase. Existing customers can use AIRALOESIM10 for 10% off orders over $10."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Airalo have unlimited plans?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes, on a regional basis covering Europe, Asia, North America, Latin America, the Caribbean, MENA, Africa, and Australia. They run at full speed for the first 3GB of use each day, then throttle to 1Mbps until the daily allowance resets at midnight."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I use hotspot on Airalo?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. Hotspot tethering works on Airalo plans generally and is unrestricted on the Unlimited regional eSIMs, subject to the same daily fair-use throttle as normal use."}
+      },
+      {
+        "@type":"Question",
+        "name":"Why does everyone seem to have a different Airalo discount code?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airalo's Airmoney referral program gives each user their own personal $3-off code to share, rather than a single central affiliate discount, which is why many different codes circulate instead of one official one."}
+      },
+      {
+        "@type":"Question",
+        "name":"Do Airalo eSIMs expire?",
+        "acceptedAnswer":{"@type":"Answer","text":"The eSIM itself doesn't expire before activation, so it can be bought ahead of a trip. Once activated, the plan's validity window, typically 7 to 30 days depending on the plan, starts counting down."}
+      }
+    ]
+  }
+  </script>
 </div>
