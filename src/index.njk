@@ -65,14 +65,14 @@ description: "Find verified discount and promo codes for top eSIM providers. Sav
     <section class="content-callout own-code-section">
         <h2><i class="fas fa-star"></i> Our Discount Code</h2>
         <p>
-            <strong>ADAMANDLINDS</strong> is our own code &mdash; we built this site, so we show it first wherever it applies. It's currently active on:
+            <strong>ADAMANDLINDS</strong> is our own code. We built this site, so we show it first wherever it applies. It's currently active on:
         </p>
         <ul class="own-code-list">
             {% for p in ourProviders %}
-            <li><a href="/{{ p.key }}/">{{ p.name }}</a> &mdash; {{ p.discount }}</li>
+            <li><a href="/{{ p.key }}/">{{ p.name }}</a>: {{ p.discount }}</li>
             {% endfor %}
         </ul>
-        <p class="callout-meta">It isn't automatically the best public discount for every provider &mdash; each provider page lists every code we've verified so you can compare.</p>
+        <p class="callout-meta">It isn't automatically the best public discount for every provider. Each provider page lists every code we've verified so you can compare.</p>
     </section>
     {% endif %}
 
@@ -146,7 +146,7 @@ description: "Find verified discount and promo codes for top eSIM providers. Sav
                 <span class="our-code-badge our-code-badge--table"><i class="fas fa-star"></i> Ours</span>
                 {% endif %}
                 {% else %}
-                <span>&mdash;</span>
+                <span class="table-empty">Coming soon</span>
                 {% endif %}
             </td>
             <td>
@@ -163,7 +163,7 @@ description: "Find verified discount and promo codes for top eSIM providers. Sav
                   <span class="score-label">{{ score }}/5</span>
                 </span>
               {% else %}
-                <span>&mdash;</span>
+                <span class="table-empty">N/A</span>
               {% endif %}
             </td>
             <td>

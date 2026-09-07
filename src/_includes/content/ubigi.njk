@@ -17,22 +17,22 @@
             </div>
             <div style="text-align: center; padding: 1rem;">
                 <h3 style="color: #23344F;">Transparent Pricing</h3>
-                <p>Costs shown upfront—no nasty surprises</p>
+                <p>Costs shown upfront: no nasty surprises</p>
             </div>
             <div style="text-align: center; padding: 1rem;">
                 <h3 style="color: #23344F;">Fast Setup</h3>
-                <p>Get QR and activate in minutes—ideal for last-minute trips</p>
+                <p>Get QR and activate in minutes: ideal for last-minute trips</p>
             </div>
             <div style="text-align: center; padding: 1rem;">
                 <h3 style="color: #23344F;">Calls & SMS Support</h3>
-                <p>Some plans include voice/SMS — good for light travelers</p>
+                <p>Some plans include voice/SMS: good for light travelers</p>
             </div>
         </div>
     </div>
 
     <!-- How Ubigi Works -->
     <h2>How Ubigi eSIM Works</h2>
-    <p>Browse by country or global region, pay online, get a QR code instantly, and activate when you're ready. Manage everything via the Ubigi app—data usage, plan top-up, validity—right at your fingertips.</p>
+    <p>Browse by country or global region, pay online, get a QR code instantly, and activate when you're ready. Manage everything via the Ubigi app (data usage, plan top-up, validity) right at your fingertips.</p>
     <ul>
         <li><strong>Select plan</strong> by destination or region</li>
         <li><strong>Buy online</strong> with no hidden fees</li>
@@ -94,14 +94,14 @@
     <!-- Promo Codes -->
     <h2>Ubigi Promo Codes {{ buildMonthYear }}</h2>
     <ul>
-        <li><strong>{{ provider.primaryCode }}:</strong> {{ primary.discount }} (our own code, shown first) &mdash; works worldwide</li>
+        <li><strong>{{ provider.primaryCode }}:</strong> {{ primary.discount }} (our own code, shown first), works worldwide</li>
         {% for code in provider.codes %}
         {% if code.code != provider.primaryCode and not code.isInvalid %}
         <li><strong>{{ code.code }}:</strong> {{ code.discount }}</li>
         {% endif %}
         {% endfor %}
     </ul>
-    <p style="font-size: 1rem; color: #23344F;">Visit <a href="https://ubigi.com" style="color:#0055A4;"><strong>Ubigi</strong></a> and enter <strong>{{ provider.primaryCode }}</strong> at checkout to score the discount. It's our own code &mdash; the others above work too if you'd rather use one of those.</p>
+    <p style="font-size: 1rem; color: #23344F;">Visit <a href="https://ubigi.com" style="color:#0055A4;"><strong>Ubigi</strong></a> and enter <strong>{{ provider.primaryCode }}</strong> at checkout to score the discount. It's our own code. The others above work too if you'd rather use one of those.</p>
 
     <!-- Quick Facts -->
     <div style="background: #e6f2fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #0055A4; margin-bottom: 2rem;">
@@ -112,7 +112,7 @@
             <li>Data-only plans available too</li>
             <li>Instant QR delivery</li>
             <li>Transparent upfront pricing</li>
-            <li>No refund after activation—check before scanning</li>
+            <li>No refund after activation: check before scanning</li>
         </ul>
     </div>
 
@@ -121,15 +121,15 @@
     <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 2rem 0;">
         <div style="border-bottom: 1px solid #cfe4f3; padding: 1.5rem;">
             <h3 style="color: #0055A4; margin-bottom: 0.5rem;">Best Ubigi code?</h3>
-            <p style="margin-bottom: 0;">Use <strong>{{ provider.primaryCode }}</strong> for {{ primary.discount | lower }} &mdash; confirmed active {{ (primary.lastTested or buildTime) | fmtDate("MMMM yyyy") }}. It's our own code, shown first; other working codes are listed above.</p>
+            <p style="margin-bottom: 0;">Use <strong>{{ provider.primaryCode }}</strong> for {{ primary.discount | lower }} (confirmed active {{ (primary.lastTested or buildTime) | fmtDate("MMMM yyyy") }}). It's our own code, shown first; other working codes are listed above.</p>
         </div>
         <div style="border-bottom: 1px solid #cfe4f3; padding: 1.5rem;">
             <h3 style="color: #0055A4; margin-bottom: 0.5rem;">Plans include voice & SMS?</h3>
-            <p style="margin-bottom: 0;">Yes, some plans add voice/SMS. Others are data-only—check before buying.</p>
+            <p style="margin-bottom: 0;">Yes, some plans add voice/SMS. Others are data-only. Check before buying.</p>
         </div>
         <div style="border-bottom: 1px solid #cfe4f3; padding: 1.5rem;">
             <h3 style="color: #0055A4; margin-bottom: 0.5rem;">How fast is activation?</h3>
-            <p style="margin-bottom: 0;">QR arrives instantly; activate when you land—usually connected in minutes.</p>
+            <p style="margin-bottom: 0;">QR arrives instantly; activate when you land, usually connected in minutes.</p>
         </div>
         <div style="padding: 1.5rem;">
             <h3 style="color: #0055A4; margin-bottom: 0.5rem;">Refunds available?</h3>
@@ -155,7 +155,7 @@
       "name": "Plans include voice & SMS?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, some plans add voice/SMS. Others are data-only—check before buying."
+        "text": "Yes, some plans add voice/SMS. Others are data-only. Check before buying."
       }
     },
     {
@@ -163,7 +163,7 @@
       "name": "How fast is activation?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "QR arrives instantly; activate when you land—usually connected in minutes."
+        "text": "QR arrives instantly; activate when you land, usually connected in minutes."
       }
     },
     {
@@ -183,6 +183,6 @@
     <div style="background: linear-gradient(135deg, #e6f2fa 0%, #cfe4f3 100%); color: #23344F; padding: 2rem; border-radius: 12px; text-align: center; margin: 3rem 0; border: 2px solid #0055A4;">
         <h2 style="color: #23344F; margin-bottom: 1rem;">Save on Your Ubigi eSIM</h2>
         <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #23344F;">Use <strong>{{ provider.primaryCode }}</strong> at checkout for {{ primary.discount | lower }}.</p>
-        <p style="margin-bottom: 0; color: #23344F;">Global coverage, no surprises—travel smart with Ubigi.</p>
+        <p style="margin-bottom: 0; color: #23344F;">Global coverage, no surprises. Travel smart with Ubigi.</p>
     </div>
 </div>

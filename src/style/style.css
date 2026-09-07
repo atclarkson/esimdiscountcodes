@@ -1480,9 +1480,9 @@ main {
 }
 
 /* Neutral pair for comparison ("X vs Y") pages: two options being
-   weighed against each other, neither "better" — so unlike --good/--alt
-   above, neither card gets the green good-fit treatment. Differentiated
-   by hue only (teal vs tan), not by an implied ranking. */
+   weighed against each other, neither "better." Unlike --good/--alt
+   above, neither card gets the green good-fit treatment here.
+   Differentiated by hue only (teal vs tan), not by an implied ranking. */
 .decision-card--primary {
   background: linear-gradient(135deg, #E1ECF1 0%, #EDF4F7 100%);
   border: 2px solid #015E8A;
@@ -2099,6 +2099,10 @@ main {
 }
 .best-discount-cell .discount-code {
   color: #4D8374;
+}
+.table-empty {
+  color: var(--muted);
+  font-style: italic;
 }
 .our-code-badge--table {
   margin-top: 0.35rem;
