@@ -25,13 +25,11 @@
     
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
-
   <header>
     {% include "header.njk" %}
   </header>
 
-  <main id="main-content" tabindex="-1">
+  <main>
       {{ content | safe }}
   </main>
 

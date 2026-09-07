@@ -7,8 +7,8 @@ description: "Find verified discount and promo codes for top eSIM providers. Sav
 <div class="home-page">
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Find the Best eSIM Promo & Discount Codes</h1>
-        <p class="hero-subtitle">Save money on international eSIM plans with verified promo codes</p>
+        <h1>Find an eSIM deal that actually works</h1>
+        <p class="hero-subtitle">Verified promo codes for the world's leading eSIM brands, checked and re-checked so you don't have to.</p>
         {% set totalCodes = 0 %}
         {% set totalProviders = 0 %}
         {% set maxDiscount = 0 %}
@@ -29,10 +29,25 @@ description: "Find verified discount and promo codes for top eSIM providers. Sav
             {% endif %}
         {% endfor %}
 
+        <div class="hero-search">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <label for="providerSearch" class="sr-only">Search providers</label>
+            <input type="text" id="providerSearch" placeholder="Search providers (e.g. Holafly, Airalo)" autocomplete="off">
+        </div>
+
         <div class="hero-stats">
             <span><i class="fas fa-circle-check"></i> {{ totalCodes }}+ verified codes</span>
-            <span><i class="fas fa-globe"></i> {{ totalProviders }} top providers</span>
-            <span><i class="fas fa-tag"></i> Save up to {{ maxDiscount }}%</span>
+            <span><i class="fas fa-globe"></i> {{ totalProviders }} providers</span>
+            <span><i class="fas fa-tag"></i> Updated regularly</span>
+        </div>
+
+        <div class="hero-popular">
+            <span>Popular:</span>
+            <a href="/holafly/">Holafly</a>
+            <a href="/airalo/">Airalo</a>
+            <a href="/saily/">Saily</a>
+            <a href="/nomad/">Nomad</a>
+            <a href="/ubigi/">Ubigi</a>
         </div>
     </section>
 
@@ -66,7 +81,7 @@ description: "Find verified discount and promo codes for top eSIM providers. Sav
         <h2>Top eSIM Providers with Discount Codes</h2>
         <div class="providers-grid">
             {% for key, provider in codes %}
-            <a href="/{{ key }}/" class="provider-card-link">
+            <a href="/{{ key }}/" class="provider-card-link" data-search="{{ (provider.name + ' ' + provider.description) | lower }}">
                 <div class="provider-card">
                     <div class="provider-logo">
                         {% if provider.logo %}
@@ -76,17 +91,19 @@ description: "Find verified discount and promo codes for top eSIM providers. Sav
                             <div class="logo-fallback">{{ provider.name }}</div>
                         {% endif %}
                     </div>
-                    <h3>{{ provider.name }} Discount Codes</h3>
+                    <h3>{{ provider.name }}</h3>
                     {% if provider.primaryCode %}
                     <p class="discount">Save with code <strong>{{ provider.primaryCode }}</strong></p>
                     {% else %}
                     <p class="discount">Coming soon</p>
                     {% endif %}
                     <p>{{ provider.description }}</p>
+                    <span class="provider-card-cta">View {{ provider.name }} deals <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
             {% endfor %}
         </div>
+        <p class="providers-empty">No providers match that search.</p>
     </section>
 
     <div class="comparison-table-container">
@@ -185,31 +202,22 @@ description: "Find verified discount and promo codes for top eSIM providers. Sav
 
         <div class="esim-benefits">
             <div class="benefit">
-              <div style="text-align:center;">
-                <span class="fa-stack fa-2x">
-                  <i class="fa fa-sim-card fa-stack-1x" aria-hidden="true"></i>
-                  <i class="fa fa-ban fa-stack-2x" style="color:Tomato" aria-hidden="true"></i>
-                </span>
+              <div class="benefit-icon">
+                <i class="fas fa-sim-card" aria-hidden="true"></i>
               </div>
               <h3>No Physical SIM</h3>
               <p>Digital activation via QR code</p>
             </div>
             <div class="benefit">
-              <div style="text-align:center;">
-                <span class="fa-stack fa-2x" >
-                  <i class="fa-solid fa-square fa-stack-2x" style="color:LimeGreen" aria-hidden="true"></i>
-                  <i class="fa-solid fa-globe fa-stack-1x fa-inverse" aria-hidden="true"></i>
-                </span>
+              <div class="benefit-icon">
+                <i class="fas fa-globe" aria-hidden="true"></i>
               </div>
               <h3>Global Coverage</h3>
               <p>Works in 170+ countries worldwide</p>
             </div>
             <div class="benefit">
-              <div style="text-align:center;">
-                <span class="fa-stack fa-2x">
-                  <i class="fa-solid fa-square fa-stack-2x" style="color:LimeGreen" aria-hidden="true"></i>
-                  <i class="fa-solid fa-dollar-sign fa-stack-1x fa-inverse" aria-hidden="true"></i>
-                </span>
+              <div class="benefit-icon">
+                <i class="fas fa-dollar-sign" aria-hidden="true"></i>
               </div>
               <h3>Cost Effective</h3>
               <p>Much cheaper than roaming charges</p>

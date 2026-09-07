@@ -6,6 +6,7 @@ permalink: "/privacy/"
 ---
 
 <div class="article-page">
+<div class="article-layout">
 <article class="article-content">
 
 # Privacy Policy
@@ -174,4 +175,11 @@ We don't provide contact information because we don't want to deal with support 
 **TL;DR: We show discount codes, you use them or don't, we don't know or care who you are. Google Search Console gives us anonymous search stats to help improve our content. Your privacy is still 100% intact.**
 
 </article>
+<aside class="article-toc" aria-label="On this page">
+  <div class="article-toc-inner">
+    <p class="article-toc-label">On this page</p>
+    <ul class="article-toc-list"></ul>
+  </div>
+</aside>
+</div>
 </div>

@@ -6,6 +6,7 @@ permalink: "/esim-vs-physical-sim/"
 ---
 
 <div class="article-page">
+<div class="article-layout">
 <article class="article-content">
 
 # eSIM vs Physical SIM: Which is Better for Travel?
@@ -208,4 +209,11 @@ Physical SIM still has a place for budget phones, very remote areas, or people w
 *eSIM vs Physical SIM: It's 2025, just use the digital one already.*
 
 </article>
+<aside class="article-toc" aria-label="On this page">
+  <div class="article-toc-inner">
+    <p class="article-toc-label">On this page</p>
+    <ul class="article-toc-list"></ul>
+  </div>
+</aside>
+</div>
 </div>
