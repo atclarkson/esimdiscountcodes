@@ -19,6 +19,41 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.01em;
 }
 
+/* Accessibility: skip link */
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 1rem;
+  z-index: 1000;
+  background: #012F45;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Accessibility: consistent, visible keyboard focus everywhere.
+   Default color works on the light body/cards; the footer is dark
+   navy, so it gets a lighter outline color that stays visible there. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #015E8A;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.footer :focus-visible {
+  outline-color: #EBE7D1;
+}
+
 /* Navigation */
 .navbar {
   background: #EBE7D1;
@@ -169,7 +204,7 @@ main {
 }
 
 .benefit p {
-  color: #6b7280;
+  color: #4b5563;
 }
 
 /* Providers Section */
@@ -241,7 +276,7 @@ main {
 }
 
 .provider-card p:last-child {
-  color: #6b7280;
+  color: #4b5563;
   margin-bottom: 0;
   margin-top: auto;
 }
@@ -276,13 +311,15 @@ main {
 }
 
 .footer-section li {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.3rem;
   break-inside: avoid;
 }
 
 .footer-section a {
+  display: inline-block;
   color: rgba(235, 231, 209, 0.7);
   text-decoration: none;
+  padding: 0.3rem 0;
   transition: color 0.2s;
 }
 
@@ -309,7 +346,7 @@ main {
   border-top: 1px solid rgba(235, 231, 209, 0.14);
   padding: 1.5rem;
   text-align: center;
-  color: rgba(235, 231, 209, 0.55);
+  color: rgba(235, 231, 209, 0.7);
 }
 
 .footer-bottom p {
@@ -336,7 +373,7 @@ main {
 }
 
 .provider-header p {
-  color: #6b7280;
+  color: #4b5563;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
@@ -454,7 +491,7 @@ main {
 }
 
 .coupon-description {
-  color: #6b7280;
+  color: #4b5563;
   font-size: 1rem;
   margin: 0;
 }
@@ -524,7 +561,7 @@ main {
 }
 
 .code-disclosure i {
-  color: #6b7280;
+  color: #4b5563;
   margin-right: 0.25rem;
 }
 
@@ -553,7 +590,7 @@ main {
 }
 
 .coming-soon-card .subtitle {
-  color: #6b7280;
+  color: #4b5563;
   font-size: 1.1rem;
   margin-bottom: 2rem;
 }
@@ -571,7 +608,7 @@ main {
 
 .coming-soon-disclosure {
   font-size: 0.85rem;
-  color: #6b7280;
+  color: #4b5563;
   max-width: 480px;
   margin: 0.5rem auto 1.5rem auto !important;
 }
@@ -645,7 +682,7 @@ main {
 .breadcrumbs li:not(:last-child)::after {
   content: ">";
   margin-left: 0.5rem;
-  color: #6b7280;
+  color: #4b5563;
 }
 
 .breadcrumbs a {
@@ -658,7 +695,7 @@ main {
 }
 
 .breadcrumbs span {
-  color: #6b7280;
+  color: #4b5563;
 }
 
 /* Provider Page Header */
@@ -676,7 +713,7 @@ main {
 }
 
 .provider-header .subtitle {
-  color: #6b7280;
+  color: #4b5563;
   font-size: 1.1rem;
 }
 
@@ -911,7 +948,7 @@ main {
 }
 
 .explore-section > p {
-  color: #6b7280;
+  color: #4b5563;
   margin-bottom: 1.5rem;
 }
 
@@ -1134,7 +1171,7 @@ main {
 
 .content-photo-caption {
   font-size: 0.9rem !important;
-  color: #6b7280 !important;
+  color: #4b5563 !important;
   margin-bottom: 1.5rem !important;
 }
 
@@ -1218,6 +1255,28 @@ main {
 
 .decision-card--alt h3 {
   color: #1f2937;
+}
+
+/* Neutral pair for comparison ("X vs Y") pages: two options being
+   weighed against each other, neither "better" — so unlike --good/--alt
+   above, neither card gets the green good-fit treatment. Differentiated
+   by hue only (teal vs tan), not by an implied ranking. */
+.decision-card--primary {
+  background: linear-gradient(135deg, #E1ECF1 0%, #EDF4F7 100%);
+  border: 2px solid #015E8A;
+}
+
+.decision-card--primary h3 {
+  color: #012F45;
+}
+
+.decision-card--secondary {
+  background: linear-gradient(135deg, #F8F2E8 0%, #FBF7EF 100%);
+  border: 2px solid #DBBE8C;
+}
+
+.decision-card--secondary h3 {
+  color: #63553F;
 }
 
 .content-cta {
@@ -1510,7 +1569,7 @@ main {
   border: none;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.8);
-  color: #6b7280;
+  color: #4b5563;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -1880,7 +1939,7 @@ main {
 
 .error-404-content p {
   font-size: 1.2rem;
-  color: #6b7280;
+  color: #4b5563;
   margin-bottom: 2rem;
   line-height: 1.6;
 }
@@ -2142,7 +2201,7 @@ main {
   right: 15px;
   font-size: 2rem;
   cursor: pointer;
-  color: #6b7280;
+  color: #4b5563;
   background: none;
   border: none;
   padding: 0;
@@ -2260,7 +2319,7 @@ main {
 }
 
 .invalid-description {
-  color: #6b7280;
+  color: #4b5563;
 }
 
 /* Invalid proof styles */
@@ -2328,7 +2387,8 @@ main {
 
 .vs-divider {
   font-weight: 800;
-  color: #9ca3af;
+  color: #4b5563;
+  background: white;
   font-size: 1.1rem;
   letter-spacing: 0.05em;
   width: 48px;
