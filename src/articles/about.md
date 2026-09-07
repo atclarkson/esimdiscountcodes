@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: "About eSIM Discount Codes"
-description: "We find discount codes for eSIM providers. Use them or don't, we don't care."
+description: "Discount codes for eSIM providers, collected and tested by Adam of AdamAndLinds. Updated regularly."
 permalink: "/about/"
 ---
 
@@ -11,91 +11,42 @@ permalink: "/about/"
 
 # About eSIM Discount Codes
 
-We find discount codes for eSIM providers. Use them or don't - we don't care.
+Hi, I'm Adam — one half of [AdamAndLinds](https://www.adamandlinds.com), where my partner and I write about the trips we take. This site grew out of that: every time we planned a trip, we'd spend twenty minutes hunting down a working eSIM discount code, so I started keeping a list. Eventually the list turned into this site.
 
-## What We Do
+## What This Site Does
 
-We collect working discount codes for eSIM providers and put them on this website. That's it. No fancy mission statement, no corporate nonsense.
+I collect discount codes for eSIM providers, test that they actually work, and keep the list current. That's the whole thing — no grand mission behind it, just a list I wished existed when I started traveling more.
 
-### Our Process
+### How I Keep It Current
 
-- Find codes from public sources
-- Test them to make sure they work
-- Put the working ones on the website
-- Remove expired ones
+- Pull codes from providers directly and from public sources
+- Test each one before it goes on the site
+- Re-check codes on a regular basis and pull anything that's stopped working
+- Favor codes I can actually verify over padding the list with untested ones
 
-### What We Don't Do
+## How I Make Money
 
-- We don't provide customer support
-- We don't answer questions about eSIM technology
-- We don't help you troubleshoot your travel plans
-- We don't care if the codes don't work for you
+Some of the codes and links on this site are affiliate links, including my own code (ADAMANDLINDS, on the providers that support it). If you use one, I may earn a small commission at no extra cost to you.
 
-## Why This Site Exists
+I show my own code higher up and more prominently on each page — that's a deliberate choice, not a claim that it's the best deal out there. It usually isn't the single biggest discount available, so every code on the page is confirmed active and it's worth scanning the whole list before you copy.
 
-eSIM discount codes are scattered all over the internet. We got tired of hunting for them, so we made this site to collect them in one place. If it helps other people save money, cool. If not, whatever.
+## A Few Honest Boundaries
 
-## How We Make Money
+This is a one-person project I run alongside everything else, so a couple of things are worth knowing up front:
 
-Some of the codes on this site are affiliate codes and links, including our own code (ADAMANDLINDS, where a provider supports it). When you use one, we might earn a commission. We're upfront about this because we're not trying to hide anything.
+- I can't offer real-time customer support for your eSIM or your trip — for setup help, the provider's own support will get you an answer faster than I can
+- I don't write full reviews or give trip-specific travel advice here — that's more the territory of the [AdamAndLinds blog](https://www.adamandlinds.com); this site is just the codes
+- If a code stops working, try another one from the list in the meantime — a proper "report a broken code" option is on the way
 
-We put our own code higher up and more prominently than other codes for the same provider - that's on purpose. It doesn't mean it's always the biggest discount available. Every code on the page is confirmed active, so scan the list and pick whichever saves you the most.
-
-## Our Standards
-
-### Code Quality
-
-- We only post codes that actually work
-- We test them regularly
-- We remove dead codes
-- We focus on the best discounts, not the most codes
-
-### No Bullshit
-
-- We don't exaggerate savings
-- We don't make up fake urgency ("Limited time only!")
-- We don't spam you with popups
-- We don't track you around the internet
-
-### Simple Approach
-
-- Codes either work or they don't
-- You either save money or you don't
-- The site either helps you or it doesn't
-- We either make money or we don't
-
-## What We're Not
-
-### We're Not Customer Service
-
-- Don't email us asking how to install an eSIM
-- Don't ask us which provider is best for your trip
-- Don't complain if a code doesn't work
-- We're not here to hold your hand
-
-### We're Not Travel Experts
-
-- We don't review eSIM providers
-- We don't give travel advice
-- We don't compare coverage maps
-- We just find discount codes
-
-### We're Not Your Friend
-
-- We don't want to build a community
-- We don't want your feedback (unless a code is broken - report bad code feature coming soon, for now if a code doesn't work, try another one)
-- We don't want to hear your travel stories
-- We just want to provide working discount codes
+None of that is meant to sound distant — I just want you to know what to expect from this site rather than leave you waiting on a reply that isn't coming.
 
 ## The Bottom Line
 
-We built this site because we needed it ourselves. If it helps you save money on eSIMs, great. If not, there are plenty of other coupon sites on the internet.
-
-Use the codes or don't. We may get paid if you do (or we won't, and that's fine too).
+I built this because I needed it for my own trips, and figured other people hunting for the same codes probably do too. Use whatever's useful here, skip the rest.
 
 ---
 
-*eSIM Discount Codes: because hunting for promo codes is annoying, and we already did the work.*
+*eSIM Discount Codes is kept up by [Adam](https://www.adamandlinds.com) — because re-Googling "Holafly discount code" before every trip got old.*
 
 </article>
 <aside class="article-toc" aria-label="On this page">

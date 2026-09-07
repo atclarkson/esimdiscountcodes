@@ -62,25 +62,6 @@ h1, h2, h3, h4, h5, h6 {
   border: 0;
 }
 
-/* Accessibility: skip link */
-.skip-link {
-  position: absolute;
-  top: -3rem;
-  left: 1rem;
-  z-index: 1000;
-  background: #012F45;
-  color: white;
-  padding: 0.75rem 1.25rem;
-  border-radius: 0 0 8px 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: top 0.15s ease;
-}
-
-.skip-link:focus {
-  top: 0;
-}
-
 /* Accessibility: consistent, visible keyboard focus everywhere.
    Default color works on the light body/cards; the footer is dark
    navy, so it gets a lighter outline color that stays visible there. */
