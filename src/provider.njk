@@ -6,8 +6,8 @@ pagination:
   alias: providerEntry
 permalink: "/{{ providerEntry[0] }}/"
 eleventyComputed:
-  title: "{{ providerEntry[1].primaryCode }} - {{ providerEntry[1].codes[0].discount }} Off {{ providerEntry[1].name }} eSIM (Verified {{ buildTime | fmtDate('LLLL yyyy') }})"
-  description: "{{ providerEntry[1].primaryCode }}: {{ providerEntry[1].codes[0].discount }} off {{ providerEntry[1].name }} eSIM plans. Verified {{ buildTime | fmtDate('LLLL d, yyyy') }}. Save on travel data with tested codes."
+  title: "{% if providerEntry[1].primaryCode %}{{ providerEntry[1].primaryCode }} - {{ providerEntry[1].codes[0].discount }} Off {{ providerEntry[1].name }} eSIM (Verified {{ buildTime | fmtDate('LLLL yyyy') }}){% else %}{{ providerEntry[1].name }} Discount Codes - Checked {{ buildTime | fmtDate('LLLL yyyy') }}{% endif %}"
+  description: "{% if providerEntry[1].primaryCode %}{{ providerEntry[1].primaryCode }}: {{ providerEntry[1].codes[0].discount }} off {{ providerEntry[1].name }} eSIM plans. Verified {{ buildTime | fmtDate('LLLL d, yyyy') }}. Save on travel data with tested codes.{% else %}We haven't found a verified {{ providerEntry[1].name }} discount code yet - checked {{ buildTime | fmtDate('LLLL d, yyyy') }}. {{ providerEntry[1].description }}{% endif %}"
   canonical: "{{ page.url | url | absoluteUrl(site.url) }}"
   providerKey: "{{ providerEntry[0] }}"
   provider: "{{ providerEntry[1] }}"
@@ -51,7 +51,7 @@ eleventyComputed:
     {% if provider.codes and provider.codes.length > 0 %}
         <!-- Has Codes -->
         <section class="codes-section">
-            <h2>Top {{ provider.name }} Discount Codes for {{ buildPretty }}</h2>
+            <h2>Top {{ provider.name }} Discount Codes</h2>
 
 
            {% set outUrl = provider.affiliateUrl or provider.url %}
@@ -98,7 +98,7 @@ eleventyComputed:
          target="_blank"
          rel="{% if isAffiliateOut %}sponsored noopener{% else %}noopener{% endif %}">
         <i class="fas fa-arrow-up-right-from-square"></i>
-        <span>Shop {{ provider.name }}</span>
+        <span>Shop {{ provider.name }}<span class="sr-only"> (opens {{ provider.name }}'s site in a new tab)</span></span>
       </a>
       {% endif %}
     </div>
@@ -115,7 +115,7 @@ eleventyComputed:
     <div class="proof-section {% if isInvalid %}invalid-proof{% endif %}">
       <div class="proof-label {% if isInvalid %}invalid-label{% endif %}">
         <i class="fas fa-{% if isInvalid %}times-circle{% else %}camera{% endif %}"></i>
-        {% if isInvalid %}Proof It Doesn't Work{% else %}The Proof{% endif %}
+        {% if isInvalid %}Proof It Doesn't Work{% else %}Proof It Works{% endif %}
       </div>
       <div class="proof-thumbnail {% if isInvalid %}invalid-thumbnail{% endif %}"
            data-provider="{{ providerKey }}"
@@ -170,7 +170,7 @@ eleventyComputed:
                    target="_blank"
                    rel="{% if isAffiliateOut %}sponsored noopener{% else %}noopener{% endif %}">
                     <i class="fas fa-arrow-up-right-from-square"></i>
-                    <span>Check {{ provider.name }} for Discounts</span>
+                    <span>Check {{ provider.name }} for Discounts<span class="sr-only"> (opens {{ provider.name }}'s site in a new tab)</span></span>
                 </a>
                 {% if isAffiliateOut %}
                 <p class="coming-soon-disclosure">This is our affiliate link - we may earn a commission if you buy through it, at no extra cost to you.</p>
@@ -183,9 +183,10 @@ eleventyComputed:
                     <div class="provider-links">
                         {% for key, otherProvider in codes %}
                             {% if otherProvider.codes and otherProvider.codes.length > 0 and key != providerKey %}
+                            {% set otherTopCode = otherProvider.codes | findCode(otherProvider.primaryCode) %}
                             <a href="/{{ key }}" class="provider-link">
                                 <span class="provider-name">{{ otherProvider.name }}</span>
-                                <span class="provider-offer">Save with verified codes</span>
+                                <span class="provider-offer">{{ otherTopCode.discount }}</span>
                             </a>
                             {% endif %}
                         {% endfor %}
@@ -199,8 +200,8 @@ eleventyComputed:
 <!-- Modal for enlarged proof image -->
 <div class="proof-modal" id="proofModal">
   <div class="proof-modal-content">
-    <button class="modal-close" onclick="closeProofModal()">&times;</button>
-    <h3 class="modal-title" id="modalTitle">Code Verification Proof</h3>
+    <button class="modal-close" aria-label="Close" onclick="closeProofModal()">&times;</button>
+    <h3 class="modal-title" id="modalTitle">Screenshot Proof</h3>
     <img id="modalImage" src="" alt="">
   </div>
 </div>

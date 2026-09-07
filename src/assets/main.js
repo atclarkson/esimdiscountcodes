@@ -200,9 +200,9 @@ document.querySelectorAll(".proof-thumbnail").forEach((thumbnail) => {
       modalImage.alt = img.alt;
 
       if (isInvalid) {
-        modalTitle.textContent = `${code} - Proof Code Doesn't Work`;
+        modalTitle.textContent = `${code} - Confirmed Not Working`;
       } else {
-        modalTitle.textContent = `${code} - Working Code Screenshot`;
+        modalTitle.textContent = `${code} - Confirmed Working`;
       }
 
       modal.classList.add("active");

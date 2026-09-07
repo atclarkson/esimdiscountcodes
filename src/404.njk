@@ -21,27 +21,22 @@ eleventyExcludeFromCollections: true
             <h3>What you can do:</h3>
             <ul>
               <li><i class="fas fa-search"></i> Check the URL for typos</li>
-              <li><i class="fas fa-home"></i> Go back to our <a href="/">homepage</a></li>
               <li><i class="fas fa-tags"></i> Browse our available <a href="/#providers">eSIM providers</a></li>
-              <li><i class="fas fa-envelope"></i> Contact us if you think this is an error</li>
             </ul>
           </div>
 
           <div class="popular-providers">
             <h3>Popular eSIM Providers:</h3>
             <div class="provider-links-404">
-              <a href="/holafly" class="provider-link-404">
-                <span class="provider-name">Holafly</span>
-                <span class="provider-offer">Up to 10% Off</span>
-              </a>
-              <a href="/airalo" class="provider-link-404">
-                <span class="provider-name">Airalo</span>
-                <span class="provider-offer">Best Prices</span>
-              </a>
-              <a href="/nomad" class="provider-link-404">
-                <span class="provider-name">Nomad</span>
-                <span class="provider-offer">$3 Off First Order</span>
-              </a>
+              {% for key, provider in codes %}
+                {% if provider.codes | hasOwnCode %}
+                  {% set topCode = provider.codes | findCode(provider.primaryCode) %}
+                  <a href="/{{ key }}/" class="provider-link-404">
+                    <span class="provider-name">{{ provider.name }}</span>
+                    <span class="provider-offer">{{ topCode.discount }}</span>
+                  </a>
+                {% endif %}
+              {% endfor %}
             </div>
           </div>
 
