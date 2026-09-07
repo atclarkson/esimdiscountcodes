@@ -7,45 +7,28 @@ eleventyExcludeFromCollections: true
 ---
 
 <div class="error-404-section">
-      <div class="error-404-card">
-        <div class="error-404-icon">
-          <i class="fas fa-exclamation-triangle"></i>
-        </div>
-        
-        <h1>404 - Page Not Found</h1>
-        
-        <div class="error-404-content">
-          <p>The page you're looking for seems to have gone on a digital vacation.</p>
-          
-          <div class="error-suggestions">
-            <h3>What you can do:</h3>
-            <ul>
-              <li><i class="fas fa-search"></i> Check the URL for typos</li>
-              <li><i class="fas fa-tags"></i> Browse our available <a href="/#providers">eSIM providers</a></li>
-            </ul>
-          </div>
+  <div class="error-404-icon">
+    <i class="fas fa-signal" aria-hidden="true"></i>
+  </div>
 
-          <div class="popular-providers">
-            <h3>Popular eSIM Providers:</h3>
-            <div class="provider-links-404">
-              {% for key, provider in codes %}
-                {% if provider.codes | hasOwnCode %}
-                  {% set topCode = provider.codes | findCode(provider.primaryCode) %}
-                  <a href="/{{ key }}/" class="provider-link-404">
-                    <span class="provider-name">{{ provider.name }}</span>
-                    <span class="provider-offer">{{ topCode.discount }}</span>
-                  </a>
-                {% endif %}
-              {% endfor %}
-            </div>
-          </div>
+  <h1>404</h1>
+  <p class="error-404-tagline">Looks like this page lost signal.</p>
+  <p class="error-404-sub">Check the URL, or <a href="/#providers">browse eSIM providers</a>.</p>
 
-          <div class="back-button-container">
-            <a href="/" class="btn btn-primary">
-              <i class="fas fa-home"></i>
-              Take Me Home
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+  <a href="/" class="btn btn-primary">
+    <i class="fas fa-home"></i>
+    Go home
+  </a>
+
+  <div class="provider-links-404">
+    {% for key, provider in codes %}
+      {% if provider.codes | hasOwnCode %}
+        {% set topCode = provider.codes | findCode(provider.primaryCode) %}
+        <a href="/{{ key }}/" class="provider-link-404">
+          <span class="provider-name">{{ provider.name }}</span>
+          <span class="provider-offer">{{ topCode.discount }}</span>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

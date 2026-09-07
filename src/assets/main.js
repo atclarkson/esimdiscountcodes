@@ -11,7 +11,94 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Dropdown functionality
   initDropdown();
+
+  // Article "On this page" sidebar
+  initArticleToc();
+
+  // Homepage provider search/filter
+  initProviderFilter();
 });
+
+// Build the sticky "On this page" list from the article's own H2s, and
+// highlight the section currently in view while scrolling.
+function initArticleToc() {
+  const list = document.querySelector(".article-toc-list");
+  const article = document.querySelector(".article-content");
+  if (!list || !article) return;
+
+  const headings = Array.from(article.querySelectorAll("h2"));
+  if (headings.length < 2) {
+    const toc = document.querySelector(".article-toc");
+    if (toc) toc.remove();
+    return;
+  }
+
+  const usedIds = new Set();
+  const links = headings.map((h) => {
+    if (!h.id) {
+      let slug = h.textContent
+        .toLowerCase()
+        .trim()
+        .replace(/[^a-z0-9\s-]/g, "")
+        .replace(/\s+/g, "-");
+      let unique = slug;
+      let n = 2;
+      while (usedIds.has(unique) || document.getElementById(unique)) {
+        unique = `${slug}-${n++}`;
+      }
+      usedIds.add(unique);
+      h.id = unique;
+    }
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = `#${h.id}`;
+    a.textContent = h.textContent;
+    li.appendChild(a);
+    list.appendChild(li);
+    return a;
+  });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const link = links.find((a) => a.getAttribute("href") === `#${entry.target.id}`);
+        if (!link) return;
+        if (entry.isIntersecting) {
+          links.forEach((a) => a.classList.remove("active"));
+          link.classList.add("active");
+        }
+      });
+    },
+    { rootMargin: "-100px 0px -70% 0px" }
+  );
+  headings.forEach((h) => observer.observe(h));
+}
+
+// Homepage provider grid: filter cards as you type. No backend, just a
+// real client-side match against the provider name/description already
+// on the page.
+function initProviderFilter() {
+  const input = document.getElementById("providerSearch");
+  const cards = Array.from(document.querySelectorAll(".provider-card-link"));
+  const emptyState = document.querySelector(".providers-empty");
+  if (!input || !cards.length) return;
+
+  input.addEventListener("input", function () {
+    const query = input.value.trim().toLowerCase();
+    let visibleCount = 0;
+
+    cards.forEach((card) => {
+      const haystack = card.dataset.search || "";
+      const matches = query === "" || haystack.includes(query);
+      card.hidden = !matches;
+      if (matches) visibleCount++;
+    });
+
+    if (emptyState) {
+      emptyState.classList.toggle("active", visibleCount === 0);
+    }
+  });
+}
 
 // Copy button functionality
 function initCopyButtons() {

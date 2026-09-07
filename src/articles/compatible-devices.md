@@ -6,6 +6,7 @@ permalink: "/compatible-devices/"
 ---
 
 <div class="article-page">
+<div class="article-layout">
 <article class="article-content">
 
 # eSIM Compatible Devices - Complete List 2025
@@ -202,4 +203,11 @@ If you have a flagship phone from the last 3-4 years, you probably have eSIM. If
 *Compatible device? Great. Now go find some discount codes and actually use the thing.*
 
 </article>
+<aside class="article-toc" aria-label="On this page">
+  <div class="article-toc-inner">
+    <p class="article-toc-label">On this page</p>
+    <ul class="article-toc-list"></ul>
+  </div>
+</aside>
+</div>
 </div>

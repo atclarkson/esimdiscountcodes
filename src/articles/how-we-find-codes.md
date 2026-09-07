@@ -6,6 +6,7 @@ permalink: "/how-we-find-codes/"
 ---
 
 <div class="article-page">
+<div class="article-layout">
 <article class="article-content">
 
 # How We Find eSIM Discount Codes
@@ -201,4 +202,11 @@ Your experience helps us improve:
 *Our goal is simple: help travelers stay connected without overpaying. Every code on our site is confirmed active against what the provider currently advertises, and we focus on quality over quantity to give you codes that actually work.*
 
 </article>
+<aside class="article-toc" aria-label="On this page">
+  <div class="article-toc-inner">
+    <p class="article-toc-label">On this page</p>
+    <ul class="article-toc-list"></ul>
+  </div>
+</aside>
+</div>
 </div>

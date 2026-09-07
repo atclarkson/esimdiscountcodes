@@ -6,6 +6,7 @@ permalink: "/about/"
 ---
 
 <div class="article-page">
+<div class="article-layout">
 <article class="article-content">
 
 # About eSIM Discount Codes
@@ -97,4 +98,11 @@ Use the codes or don't. We may get paid if you do (or we won't, and that's fine 
 *eSIM Discount Codes: because hunting for promo codes is annoying, and we already did the work.*
 
 </article>
+<aside class="article-toc" aria-label="On this page">
+  <div class="article-toc-inner">
+    <p class="article-toc-label">On this page</p>
+    <ul class="article-toc-list"></ul>
+  </div>
+</aside>
+</div>
 </div>

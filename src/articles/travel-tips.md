@@ -6,6 +6,7 @@ permalink: "/travel-tips/"
 ---
 
 <div class="article-page">
+<div class="article-layout">
 <article class="article-content">
 
 # Travel Tips
@@ -78,4 +79,11 @@ Everything else is just common sense: don't lose your passport, don't drink the 
 *Travel tips: Get connected with our codes, then follow people who actually know what they're doing.*
 
 </article>
+<aside class="article-toc" aria-label="On this page">
+  <div class="article-toc-inner">
+    <p class="article-toc-label">On this page</p>
+    <ul class="article-toc-list"></ul>
+  </div>
+</aside>
+</div>
 </div>

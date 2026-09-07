@@ -6,6 +6,7 @@ permalink: "/what-is-esim/"
 ---
 
 <div class="article-page">
+<div class="article-layout">
 <article class="article-content">
 
 # What is an eSIM?
@@ -149,4 +150,11 @@ eSIM technology eliminates the hassle of physical SIM cards when traveling. Inst
 *eSIM: because dealing with tiny plastic cards when you're jet-lagged is nobody's idea of fun.*
 
 </article>
+<aside class="article-toc" aria-label="On this page">
+  <div class="article-toc-inner">
+    <p class="article-toc-label">On this page</p>
+    <ul class="article-toc-list"></ul>
+  </div>
+</aside>
+</div>
 </div>
