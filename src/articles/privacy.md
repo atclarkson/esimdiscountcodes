@@ -11,7 +11,7 @@ permalink: "/privacy/"
 
 # Privacy Policy
 
-**Last updated: July 20, 2025**
+**Last updated: September 7, 2026**
 
 Our privacy policy is refreshingly simple: **we don't collect your personal information**.
 
@@ -50,10 +50,9 @@ Our privacy policy is refreshingly simple: **we don't collect your personal info
 
 ### No Cookies (Almost)
 
-- We don't use tracking cookies
-- We don't use analytics cookies
-- We don't use advertising cookies
-- The only cookies might be basic functional ones from our hosting provider
+- We don't set tracking cookies, analytics cookies, or advertising cookies ourselves
+- The only cookies from our own site might be basic functional ones from our hosting provider
+- One honest exception: clicking an affiliate link (see below) hands you off to an affiliate network that does set a cookie, so it can credit us if you buy something. That cookie is theirs, not ours, and it only happens after you click through
 
 ### No Email Lists
 
@@ -118,28 +117,37 @@ Our privacy policy is refreshingly simple: **we don't collect your personal info
 - No individual user data is shared with us
 - This helps us improve our content for search
 
+### Affiliate Tracking Networks
+
+- Some of our outbound links (including our own ADAMANDLINDS code where it applies) go through an affiliate network first, either [Impact.com](https://impact.com) or [Awin](https://www.awin.com), before redirecting you to the provider
+- That's how the network knows to credit us with a commission if you buy something
+- The network sets its own tracking identifier on that click; we don't see or receive it, only a later confirmation that a referral happened
+- We don't share any information about you with them, because we don't have any information about you to share
+- Refer to [Impact.com](https://impact.com)'s or [Awin](https://www.awin.com)'s own privacy policies for how they handle that data
+
 ### eSIM Providers
 
-- When you click our links, you go to their websites
-- Their privacy policies apply once you leave our site
+- Whether you reach a provider directly or through one of the affiliate networks above, once you're on their site their privacy policy applies, not ours
 - We don't share any information about you with them
-- Any data collection happens on their sites, not ours
+- Any data collection from that point on happens on their site, not ours
 
 ### CDN Services
 
-- We use Font Awesome and Google Fonts via CDN
-- These services may log basic request data
+- We use Font Awesome (via cdnjs) and Fontshare (for our Satoshi typeface), both loaded via CDN
+- These services may log basic request data, like any web server does
 - We don't control this data collection
 - We don't receive any user data from these services
 
 ## Your Rights
 
-Since we don't collect your data, there's nothing to:
+Since we don't collect or store your data, there's nothing on our end to:
 
 - Request access to
 - Ask us to delete
 - Request corrections for
 - Ask us to transfer
+
+This is specifically about us. We never had your data in the first place, so we have nothing to hand over or correct. If you want to know what an affiliate network (Impact, Awin) or an eSIM provider has on you from a click-through or a purchase, that request goes to them directly, under their own privacy policy, since they're the ones actually holding it.
 
 ## Changes to This Policy
 
@@ -156,7 +164,7 @@ We don't provide contact information because we don't want to deal with support 
 - We don't collect personal data, so GDPR largely doesn't apply
 - You have no data with us to request or delete
 - We don't track EU users any differently than others
-- Google Search Console data is processed by Google under their GDPR compliance
+- Google Search Console data is processed by Google under their GDPR compliance, and affiliate click tracking (Impact, Awin) is processed by those networks under their own GDPR compliance
 
 ### CCPA
 
@@ -172,7 +180,7 @@ We don't provide contact information because we don't want to deal with support 
 
 ---
 
-**TL;DR: We show discount codes, you use them or don't, we don't know or care who you are. Google Search Console gives us anonymous search stats to help improve our content. Your privacy is still 100% intact.**
+**TL;DR: We show discount codes, you use them or don't, we don't know or care who you are. Google Search Console gives us anonymous search stats to help improve our content. Clicking an affiliate link routes through Impact or Awin so we get credited, and that's the one place a tracking cookie enters the picture, set by them, not us. We still have nothing on you to lose, sell, or hand over.**
 
 </article>
 <aside class="article-toc" aria-label="On this page">
