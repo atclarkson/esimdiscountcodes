@@ -1,423 +1,170 @@
-<!-- Saily Content Template -->
+<!-- Saily Content -->
 <div class="content-section">
-    <!-- Main heading -->
-    <h2>Best Saily Promo Codes for {{ buildMonthYear }}</h2>
-    
-    <!-- Introduction -->
-    <p>Saily is the innovative eSIM service by NordVPN, bringing the same commitment to security and reliability that millions trust for their online privacy. With coverage in <strong>200+ countries</strong> and built-in security features, Saily offers more than just connectivity—it provides peace of mind for travelers who value both convenience and digital safety. Whether you're a security-conscious business traveler or a privacy-aware digital nomad, Saily combines seamless global connectivity with enterprise-grade protection.</p>
 
-    <!-- Key Features Highlight -->
-    <div class="feature-highlights" style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); border: 2px solid #bd2426; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
-        <h2 style="color: #404040; margin-bottom: 1.5rem;">What Makes Saily Stand Out?</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #404040;">Security-First Design</h3>
-                <p>Built by NordVPN with enterprise-grade security features</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #404040;">Reusable eSIMs</h3>
-                <p>One eSIM for all destinations - no need to reinstall</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #404040;">Unlimited Data Plans</h3>
-                <p>True unlimited data with no hidden throttling</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #404040;">24/7 Expert Support</h3>
-                <p>Live chat support from security and connectivity experts</p>
-            </div>
-        </div>
-    </div>
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Best Saily Promo Code &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Use <strong>{{ provider.primaryCode }}</strong> for <strong>15% off any Saily plan</strong>. It's not our own code &mdash; Saily doesn't run the kind of affiliate program that lets us put our own code on it the way we do for Holafly or Ubigi &mdash; but it's the best public one we've verified still works, and it applies storewide rather than being restricted to first-time buyers.
+      <span class="callout-meta">Confirmed active <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("MMM d, yyyy") }}</time>.</span>
+    </p>
+  </div>
 
-    <!-- How Saily Works -->
-    <h2>How Saily eSIM Technology Works</h2>
-    <p>Saily leverages NordVPN's global infrastructure to provide secure, reliable eSIM connectivity. Unlike traditional eSIM providers, Saily adds an extra layer of security to your mobile data, ensuring your connection is protected from the moment you connect. The process includes:</p>
+  <!-- Headline -->
+  <h2>What Actually Makes Saily Different</h2>
+  <p>
+    Saily is NordVPN's eSIM spin-off, built by the same company (Nord Security) rather than merely "partnered with" them, and that shows up in the product itself: every Saily plan ships with ad blocking, malware/phishing site blocking, and a virtual-location tool baked in, rather than connectivity being the whole product. If you don't care about any of that and just want the cheapest GB, it's not a reason to pick Saily over <a href="/airalo/">Airalo</a> &mdash; but if you're the type who'd normally pay for a VPN separately when traveling, it's already in the box.
+  </p>
+  <p>
+    Saily also sells one universal eSIM instead of a separate profile per region the way most competitors do. Once it's installed, it keeps working as you cross into a new supported country &mdash; you're not reinstalling or swapping eSIMs at each border.
+  </p>
+
+  <img class="content-photo"
+       src="https://media.adamandlinds.com/photos/large/54adb95c-7ef0-4635-b159-2186e91c68b5.jpg"
+       alt="Four adults wearing headphones sit around a table covered in laptops and iced drinks in a busy Thai mall food court, grinning at the camera"
+       width="1280" height="960">
+  <p class="content-photo-caption">Working from a mall food court in Chiang Mai &mdash; exactly the kind of crowded public Wi-Fi situation where a security-focused eSIM earns its keep. From our own travels, not a stock photo.</p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Active codes</h3>
     <ul>
-        <li><strong>One eSIM for everything</strong> - works across all 200+ supported destinations</li>
-        <li><strong>Automatic security protocols</strong> protecting your data from local threats</li>
-        <li><strong>Smart network selection</strong> connecting you to the best available carrier</li>
-        <li><strong>Seamless roaming</strong> between countries without manual switching</li>
+      <li><strong>HELLOSAILY</strong> — 15% off all Saily plans</li>
     </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">If a code does not apply, refresh the cart or try a private window, then retry.</p>
+  </div>
 
-    <!-- Comparison with Major Competitors -->
-    <h2>Saily vs. Top eSIM Competitors</h2>
-    <p>See how Saily compares to other leading eSIM providers like <a href="/holafly">Holafly</a> and <a href="/airalo">Airalo</a> across key features and security:</p>
+  <!-- Real operational note instead of generic setup tips -->
+  <h2>The "Unlimited" Fine Print Saily Doesn't Put on the Homepage</h2>
+  <p>
+    Saily's own fair-use policy caps "unlimited" plans at full speed for the first <strong>5GB in a rolling 24-hour window in most destinations (3GB in some)</strong>, then throttles to 1Mbps until the local-midnight reset. That's a genuinely usable amount for normal phone use &mdash; maps, messaging, video calls, some streaming &mdash; but it's worth knowing before you assume "unlimited" means no ceiling at all, especially if several people are sharing one plan's hotspot.
+  </p>
+  <p>
+    There's also a subscription tier most competitors don't have an equivalent of: <strong>Saily Ultra</strong>, at $59.99/month, bundles 30GB of high-speed data across 121+ destinations (then unlimited at 1Mbps), a full NordVPN/NordPass/NordLayer/Incogni subscription bundle, 8% cashback in Saily credit, and one airport lounge pass plus one fast-track security pass per month that roll over for up to three months if unused. It's a real product for someone who travels constantly and would otherwise be paying for the VPN suite anyway &mdash; it's a bad deal for an occasional traveler who just needs data for one trip.
+  </p>
+  <p>
+    One limitation worth flagging directly: Saily is among the eSIM providers whose websites and apps were blocked in Turkey by the country's telecom regulator (BTK) starting mid-2025, alongside Airalo, Holafly, and several others. An eSIM bought and installed <em>before</em> you land still works once you're there &mdash; the block affects buying or topping up while physically in Turkey, not eSIMs already active on your phone. Worth planning around if Turkey is on the itinerary.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply beyond Saily specifically, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
 
-    <table style="margin: 2rem 0;">
-        <thead>
-            <tr>
-                <th>Feature</th>
-                <th style="background: #fef2f2; color: #bd2426;"><strong>Saily</strong></th>
-                <th>Holafly</th>
-                <th>Airalo</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Price Category</strong></td>
-                <td style="background: #fefcfc;"><span style="color: #4D8374;">Cheap</span></td>
-                <td>Cheap</td>
-                <td>Average</td>
-            </tr>
-            <tr>
-                <td><strong>Security Features</strong></td>
-                <td style="background: #fefcfc;"><span style="color: #4D8374;">Built-in protection</span></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>One eSIM All Destinations</strong></td>
-                <td style="background: #fefcfc;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Reusable eSIM</strong></td>
-                <td style="background: #fefcfc;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Live Chat Support</strong></td>
-                <td style="background: #fefcfc;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Unlimited Data Plans</strong></td>
-                <td style="background: #fefcfc;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Min Plan Duration</strong></td>
-                <td style="background: #fefcfc;">7 days</td>
-                <td>1 day</td>
-                <td>7 days</td>
-            </tr>
-            <tr>
-                <td><strong>Best Discount Code</strong></td>
-                <td style="background: #fefcfc;"><strong>HELLOSAILY</strong> (15% off)</td>
-                <td>ADAMANDLINDS (5% off)</td>
-                <td>NEWTOAIRALO15 (15% off)</td>
-            </tr>
-        </tbody>
-    </table>
+  <!-- How to -->
+  <h2>Apply a Saily Code in 3 Steps</h2>
+  <div class="content-box">
+    <ol>
+      <li>Copy <strong>HELLOSAILY</strong></li>
+      <li>Pick a country, regional, or global eSIM plan in the Saily app or on saily.com</li>
+      <li>Paste the code in the promo field at checkout and confirm the 15% price drop before paying</li>
+    </ol>
+    <p class="content-note">Discount shows before payment is completed.</p>
+  </div>
 
-    <!-- Pricing Comparison -->
-    <h2>Saily Pricing vs. Competitors</h2>
-    <p>Saily offers competitive pricing with added security value across popular destinations:</p>
-
-    <table style="margin: 2rem 0;">
-        <thead>
-            <tr>
-                <th>Destination</th>
-                <th style="background: #fef2f2; color: #bd2426;"><strong>Saily Price (1GB)</strong></th>
-                <th>Holafly Price</th>
-                <th>Airalo Price (1GB)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>United States</strong></td>
-                <td style="background: #fefcfc;">$3.99</td>
-                <td>$1.99/day</td>
-                <td>$4.50</td>
-            </tr>
-            <tr>
-                <td><strong>Europe Regional</strong></td>
-                <td style="background: #fefcfc;">$4.99</td>
-                <td>$1.99/day</td>
-                <td>$5.27</td>
-            </tr>
-            <tr>
-                <td><strong>Japan</strong></td>
-                <td style="background: #fefcfc;">$3.99</td>
-                <td>$1.99/day</td>
-                <td>$4.50</td>
-            </tr>
-            <tr>
-                <td><strong>Thailand</strong></td>
-                <td style="background: #fefcfc;"><span style="color: #4D8374;">$2.99</span></td>
-                <td>$1.99/day</td>
-                <td>$4.50</td>
-            </tr>
-            <tr>
-                <td><strong>Global Coverage</strong></td>
-                <td style="background: #fefcfc;"><span style="color: #4D8374;">$8.99</span></td>
-                <td>$9.90/day</td>
-                <td>$9.49</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <!-- Security Features Deep Dive -->
-    <h2>Saily's Security Advantage</h2>
-    <p>As an eSIM service by NordVPN, Saily inherits enterprise-grade security features that other providers simply can't match:</p>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
-        <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #bd2426;">
-            <h3>Threat Protection</h3>
-            <ul>
-                <li>Automatic malware blocking</li>
-                <li>Phishing website detection</li>
-                <li>Ad and tracker blocking</li>
-                <li>Suspicious connection monitoring</li>
-            </ul>
-        </div>
-        <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #bd2426;">
-            <h3>Privacy Protection</h3>
-            <ul>
-                <li>DNS leak protection</li>
-                <li>Encrypted connection protocols</li>
-                <li>No activity logging policy</li>
-                <li>Secure network authentication</li>
-            </ul>
-        </div>
+  <!-- Decision help -->
+  <h2>Is Saily the Right Pick for Your Trip</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Good fit</h3>
+      <ul>
+        <li>You'd normally pay for a VPN/ad-blocker separately when traveling anyway</li>
+        <li>Multi-country trip where you don't want a new eSIM at every border</li>
+        <li>Frequent flyer who could actually use the Ultra tier's lounge passes</li>
+      </ul>
     </div>
-
-    <!-- Popular Destinations -->
-    <h2>Popular Saily Destinations</h2>
-
-    <h3>Europe Unlimited Plans</h3>
-    <p>Saily's Europe coverage spans 32+ countries with true unlimited plans starting at <strong>$4.99 for 1GB</strong>. The security features are particularly valuable when using public Wi-Fi in airports, hotels, and cafes across European cities.</p>
-
-    <h3>Secure Business Travel</h3>
-    <p>For corporate travelers, Saily's security-first approach provides peace of mind when accessing company data abroad. Plans starting at <strong>$3.99 for 1GB</strong> in major business destinations like the USA and Japan.</p>
-
-    <h3>Asia-Pacific Security</h3>
-    <p>In regions where internet censorship and monitoring are concerns, Saily's security features provide an extra layer of protection. Coverage across Asia starting at <strong>$2.99 for 1GB</strong> in Thailand and other popular destinations.</p>
-
-    <!-- Unique Features -->
-    <h2>Saily's Unique Features</h2>
-
-    <table style="margin: 2rem 0;">
-        <thead>
-            <tr>
-                <th>Feature</th>
-                <th style="background: #fef2f2; color: #bd2426;"><strong>Saily Advantage</strong></th>
-                <th>Traditional eSIM Providers</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>eSIM Management</strong></td>
-                <td style="background: #fefcfc;">One eSIM for all destinations</td>
-                <td>Separate eSIM per country/region</td>
-            </tr>
-            <tr>
-                <td><strong>Security Integration</strong></td>
-                <td style="background: #fefcfc;"><span style="color: #4D8374;">Built-in threat protection</span></td>
-                <td>Basic connectivity only</td>
-            </tr>
-            <tr>
-                <td><strong>Data Calculator</strong></td>
-                <td style="background: #fefcfc;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td>Limited or no data tracking</td>
-            </tr>
-            <tr>
-                <td><strong>Network Quality</strong></td>
-                <td style="background: #fefcfc;">Premium carrier partnerships</td>
-                <td>Variable carrier quality</td>
-            </tr>
-            <tr>
-                <td><strong>Support Quality</strong></td>
-                <td style="background: #fefcfc;">Security experts + connectivity specialists</td>
-                <td>Basic technical support</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <!-- Device Compatibility -->
-    <h2>Saily Device Compatibility</h2>
-    <p>Saily eSIMs are compatible with the same modern smartphones as other providers, with optimized performance for security features:</p>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
-        <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #bd2426;">
-            <h3>iPhone Support</h3>
-            <ul>
-                <li>iPhone 16 series (all models)</li>
-                <li>iPhone 15 series (all models)</li>
-                <li>iPhone 14 series (all models)</li>
-                <li>iPhone 13 series (all models)</li>
-                <li>iPhone 12 series (all models)</li>
-                <li>iPhone 11 series (all models)</li>
-                <li>iPhone XS, XS Max, XR</li>
-                <li>iPhone SE (2nd generation and newer)</li>
-            </ul>
-        </div>
-        <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #bd2426;">
-            <h3>Android Compatibility</h3>
-            <ul>
-                <li>Google Pixel 4 and newer models</li>
-                <li>Samsung Galaxy S20 and newer</li>
-                <li>Samsung Galaxy Note 20 and newer</li>
-                <li>Samsung Galaxy Z Fold/Flip series</li>
-                <li>OnePlus 11 and newer devices</li>
-                <li>Most flagship Android phones (2020+)</li>
-            </ul>
-        </div>
-    </div>
-
-    <blockquote style="background: #fef2f2; border-left-color: #bd2426;">
-        <p><strong>Security Note:</strong> Saily's security features work best on devices with updated operating systems. Ensure your device runs iOS 14+ or Android 10+ for optimal protection.</p>
-    </blockquote>
-
-    <!-- Getting Maximum Value -->
-    <h2>Maximizing Your Saily Experience</h2>
-
-    <h3>One eSIM Strategy</h3>
-    <p>Unlike other providers requiring multiple eSIM installations, Saily's universal eSIM works everywhere. Install it once and enjoy seamless connectivity across all your destinations without the hassle of managing multiple profiles.</p>
-
-    <h3>Security-First Settings</h3>
-    <p>To get the most from Saily's security features:</p>
-    <ul>
-        <li>Enable threat protection in the Saily app for automatic malware blocking</li>
-        <li>Use Saily's DNS settings for enhanced privacy protection</li>
-        <li>Monitor your connection quality through the built-in network analyzer</li>
-        <li>Take advantage of the data calculator to optimize your usage</li>
-    </ul>
-
-    <h3>Business Travel Optimization</h3>
-    <p>For corporate users, Saily offers enterprise-grade features that traditional eSIM providers can't match, making it ideal for accessing sensitive business data while traveling.</p>
-
-    <section id="faq" class="faq brand-saily" aria-labelledby="faq-heading">
-  <h2 id="faq-heading">Frequently Asked Questions</h2>
-
-  <div class="faq__list">
-    <div class="faq__item">
-      <h3 class="faq__q">What’s the best Saily discount code?</h3>
-      <p class="faq__a">Use <strong>HELLOSAILY</strong> for 15% off all plans. Works for new and existing customers.</p>
-    </div>
-
-    <div class="faq__item">
-      <h3 class="faq__q">What security features does Saily include?</h3>
-      <p class="faq__a">Built-in threat protection, malware blocking, phishing detection, ad blocking, and DNS leak protection. Enabled by default.</p>
-    </div>
-
-    <div class="faq__item">
-      <h3 class="faq__q">How does Saily’s reusable eSIM work?</h3>
-      <p class="faq__a">Install once. It connects in all supported countries, no new eSIM per destination.</p>
-    </div>
-
-    <div class="faq__item">
-      <h3 class="faq__q">Are Saily’s unlimited plans truly unlimited?</h3>
-      <p class="faq__a">Yes. No hidden throttling or fair use caps. Built for heavy usage.</p>
-    </div>
-
-    <div class="faq__item">
-      <h3 class="faq__q">How quickly does Saily activate?</h3>
-      <p class="faq__a">Usually 2–3 minutes after installation. No country-specific setup on arrival.</p>
-    </div>
-
-    <div class="faq__item">
-      <h3 class="faq__q">Does Saily support hotspot?</h3>
-      <p class="faq__a">Yes. Share your connection with laptops and tablets. Security features apply to shared data too.</p>
-    </div>
-
-    <div class="faq__item">
-      <h3 class="faq__q">What support does Saily offer?</h3>
-      <p class="faq__a">24/7 live chat and email with connectivity and security specialists.</p>
-    </div>
-
-    <div class="faq__item">
-      <h3 class="faq__q">How does Saily’s data calculator work?</h3>
-      <p class="faq__a">Tracks usage across destinations and helps you pick the right plan size next time.</p>
-    </div>
-
-    <div class="faq__item">
-      <h3 class="faq__q">What is Saily’s refund policy?</h3>
-      <p class="faq__a">Refunds for unused eSIMs and plans. Policy backed by NordVPN’s customer standards.</p>
-    </div>
-
-    <div class="faq__item">
-      <h3 class="faq__q">In how many countries does Saily work?</h3>
-      <p class="faq__a">Coverage in 200+ countries and territories. The universal eSIM picks the best local network automatically.</p>
+    <div class="decision-card decision-card--alt">
+      <h3>Consider alternatives</h3>
+      <ul>
+        <li>You just want the cheapest possible GB and don't care about security extras</li>
+        <li>Trip includes time physically inside Turkey (buy and install before you land)</li>
+        <li>You want unlimited with no daily throttle number at all &mdash; check the fine print on any provider claiming that</li>
+      </ul>
     </div>
   </div>
-</section>
 
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {
-      "@type":"Question",
-      "name":"What’s the best Saily discount code?",
-      "acceptedAnswer":{"@type":"Answer","text":"Use HELLOSAILY for 15% off all plans. Works for new and existing customers."}
-    },
-    {
-      "@type":"Question",
-      "name":"What security features does Saily include?",
-      "acceptedAnswer":{"@type":"Answer","text":"Built-in threat protection, malware blocking, phishing detection, ad blocking, and DNS leak protection. Enabled by default."}
-    },
-    {
-      "@type":"Question",
-      "name":"How does Saily’s reusable eSIM work?",
-      "acceptedAnswer":{"@type":"Answer","text":"Install once and it connects in all supported countries, no new eSIM per destination."}
-    },
-    {
-      "@type":"Question",
-      "name":"Are Saily’s unlimited plans truly unlimited?",
-      "acceptedAnswer":{"@type":"Answer","text":"Yes. No hidden throttling or fair use caps. Built for heavy usage."}
-    },
-    {
-      "@type":"Question",
-      "name":"How quickly does Saily activate?",
-      "acceptedAnswer":{"@type":"Answer","text":"Typically 2–3 minutes after installation. No country-specific setup required on arrival."}
-    },
-    {
-      "@type":"Question",
-      "name":"Does Saily support hotspot?",
-      "acceptedAnswer":{"@type":"Answer","text":"Yes. You can share your connection with laptops and tablets, and security features apply to shared data."}
-    },
-    {
-      "@type":"Question",
-      "name":"What support does Saily offer?",
-      "acceptedAnswer":{"@type":"Answer","text":"24/7 live chat and email with connectivity and security specialists."}
-    },
-    {
-      "@type":"Question",
-      "name":"How does Saily’s data calculator work?",
-      "acceptedAnswer":{"@type":"Answer","text":"It tracks usage across destinations and helps you choose the right plan size for future trips."}
-    },
-    {
-      "@type":"Question",
-      "name":"What is Saily’s refund policy?",
-      "acceptedAnswer":{"@type":"Answer","text":"Refunds are available for unused eSIMs and plans."}
-    },
-    {
-      "@type":"Question",
-      "name":"In how many countries does Saily work?",
-      "acceptedAnswer":{"@type":"Answer","text":"200+ countries and territories. The universal eSIM automatically selects the best local network."}
-    }
-  ]
-}
-</script>
-
-
-
-    <!-- Call to Action -->
-    <div style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); color: #404040; padding: 2rem; border-radius: 12px; text-align: center; margin: 3rem 0; border: 2px solid #bd2426;">
-        <h2 style="color: #404040; margin-bottom: 1rem;">Travel Securely & Stay Connected</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #404040;">Use promo code <strong style="color: #bd2426;">HELLOSAILY</strong> for 15% off all Saily eSIM plans.</p>
-        <p style="margin-bottom: 0; color: #4b5563;">The only eSIM service with built-in security features from the makers of NordVPN.</p>
-    </div>
-
-    <!-- Additional Comparisons -->
-    <h2>Why Choose Saily Over Holafly or Airalo?</h2>
-    <p>While <a href="/holafly">Holafly</a> and <a href="/airalo">Airalo</a> focus purely on connectivity, Saily provides comprehensive travel security:</p>
-
+  <!-- Savings examples -->
+  <h2>What the Discount Looks Like</h2>
+  <div class="content-box">
     <ul>
-        <li><strong>Built-in Security:</strong> Only eSIM provider with integrated threat protection and privacy features</li>
-        <li><strong>One eSIM for Everything:</strong> Unlike competitors requiring multiple eSIM installations</li>
-        <li><strong>NordVPN Heritage:</strong> Backed by a trusted cybersecurity company with proven expertise</li>
-        <li><strong>True Unlimited Plans:</strong> Genuine unlimited data without throttling or fair use policies</li>
-        <li><strong>Reusable Technology:</strong> Install once, use everywhere - no country-specific setup required</li>
-        <li><strong>Enterprise-Grade Support:</strong> Security experts available 24/7 alongside connectivity specialists</li>
-        <li><strong>Best-in-Class Privacy:</strong> No-logs policy and encrypted connections as standard</li>
+      <li>United States 1GB at $3.99 &rarr; 15% off saves about $0.60</li>
+      <li>Europe regional 1GB at $4.99 &rarr; 15% off saves about $0.75</li>
+      <li>Global 1GB at $8.99 &rarr; 15% off saves about $1.35</li>
     </ul>
+    <p class="content-note">HELLOSAILY applies storewide, so the discount scales the same way whether you're buying one small plan or restocking data on a longer trip.</p>
+  </div>
 
-    <p>For travelers who prioritize both connectivity and security, Saily offers unmatched value. Compare all eSIM providers on our <a href="/">homepage</a> to see why security-conscious users choose Saily.</p>
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Use the Code at Checkout</h2>
+    <p>Copy <code>HELLOSAILY</code> then paste in the promo field</p>
+    <p>15% off all Saily eSIM plans.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Saily Promo Code FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>What is the best code right now</h3>
+      <p><strong>HELLOSAILY</strong> &mdash; 15% off all Saily plans, storewide.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Is Saily's unlimited data really unlimited</h3>
+      <p>For normal use, yes. Saily's own fair-use policy gives full speed up to 5GB in a rolling 24-hour window in most destinations (3GB in some), then throttles to 1Mbps until the local-midnight reset.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>What is Saily Ultra</h3>
+      <p>A $59.99/month subscription tier: 30GB of high-speed data across 121+ destinations (then unlimited at 1Mbps), the full NordVPN/NordPass/NordLayer/Incogni suite, 8% cashback in Saily credit, and a monthly airport lounge pass plus fast-track pass that roll over for up to three months.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does Saily work in Turkey</h3>
+      <p>Saily's website and app were among those blocked by Turkey's telecom regulator starting mid-2025. Buy and install the eSIM before you land &mdash; it keeps working once active, but you can't purchase or top up while physically inside Turkey.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>What is Saily's refund policy</h3>
+      <p>A full refund if the eSIM was never installed or activated, within 30 days of purchase. You may also qualify if you've used less than 1% of your data or had a genuine service-quality issue &mdash; Saily runs an auto-refund center that handles eligible cases without a support ticket.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I use hotspot on Saily</h3>
+      <p>Yes, tethering is supported on Saily data plans; enable mobile hotspot in your phone's settings as you would with a physical SIM.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What is the best Saily promo code right now?",
+        "acceptedAnswer":{"@type":"Answer","text":"HELLOSAILY gives 15% off all Saily plans, storewide."}
+      },
+      {
+        "@type":"Question",
+        "name":"Is Saily's unlimited data really unlimited?",
+        "acceptedAnswer":{"@type":"Answer","text":"For normal use, yes. Saily's fair-use policy allows full speed up to 5GB in a rolling 24-hour window in most destinations (3GB in some), then throttles to 1Mbps until the local-midnight reset."}
+      },
+      {
+        "@type":"Question",
+        "name":"What is Saily Ultra?",
+        "acceptedAnswer":{"@type":"Answer","text":"A $59.99 per month subscription: 30GB of high-speed data across 121+ destinations then unlimited at 1Mbps, the full NordVPN/NordPass/NordLayer/Incogni suite, 8% cashback in Saily credit, and a monthly airport lounge pass plus fast-track pass that roll over for up to three months."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Saily work in Turkey?",
+        "acceptedAnswer":{"@type":"Answer","text":"Saily's website and app were among those blocked by Turkey's telecom regulator starting mid-2025. An eSIM bought and installed before arrival keeps working, but it cannot be purchased or topped up while physically inside Turkey."}
+      },
+      {
+        "@type":"Question",
+        "name":"What is Saily's refund policy?",
+        "acceptedAnswer":{"@type":"Answer","text":"A full refund if the eSIM was never installed or activated, within 30 days of purchase, or if less than 1% of the data plan was used, or there was a genuine service-quality issue. Saily runs an auto-refund center for eligible cases."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I use hotspot on Saily?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. Tethering is supported on Saily data plans by enabling mobile hotspot in the phone's settings."}
+      }
+    ]
+  }
+  </script>
 </div>
