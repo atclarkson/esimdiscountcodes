@@ -11,6 +11,7 @@ eleventyComputed:
   canonical: "{{ page.url | url | absoluteUrl(site.url) }}"
   providerKey: "{{ providerEntry[0] }}"
   provider: "{{ providerEntry[1] }}"
+  providerName: "{{ providerEntry[1].name }}"
   ogImage: "{{ providerEntry[1].ogImage or '/assets/og-image.jpg' }}"
   modifiedISO: "{{ (providerEntry[1].codesLastUpdated or buildTime) | fmtISO }}"
   buildPretty: "{{ buildTime | fmtDate('LLLL d, yyyy') }}"

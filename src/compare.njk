@@ -1,0 +1,56 @@
+---
+layout: base.njk
+pagination:
+  data: comparisons
+  size: 1
+  alias: cmp
+permalink: "/compare/{{ cmp.slug }}/"
+eleventyComputed:
+  title: "{{ cmp.title }}"
+  description: "{{ cmp.description }}"
+  canonical: "{{ page.url | url | absoluteUrl(site.url) }}"
+  ogImage: "/assets/og-image.jpg"
+  modifiedISO: "{{ cmp.lastUpdated | fmtISO }}"
+---
+
+{% set providerA = codes[cmp.providerA] %}
+{% set providerAKey = cmp.providerA %}
+{% set providerB = codes[cmp.providerB] %}
+{% set providerBKey = cmp.providerB %}
+{% set cmpSlug = cmp.slug %}
+{% set buildPretty = buildTime | fmtDate("LLLL d, yyyy") %}
+
+<div class="provider-page compare-page" data-compare="{{ cmpSlug }}">
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><span>{{ providerA.name }} vs {{ providerB.name }}</span></li>
+    </ol>
+  </nav>
+
+  <header class="vs-header">
+    <a class="vs-side" href="/{{ providerAKey }}/">
+      {% if providerA.logo %}<img src="{{ providerA.logo }}" alt="{{ providerA.name }} logo" class="logo">{% endif %}
+      <span class="vs-name">{{ providerA.name }}</span>
+    </a>
+    <div class="vs-divider">VS</div>
+    <a class="vs-side" href="/{{ providerBKey }}/">
+      {% if providerB.logo %}<img src="{{ providerB.logo }}" alt="{{ providerB.name }} logo" class="logo">{% endif %}
+      <span class="vs-name">{{ providerB.name }}</span>
+    </a>
+  </header>
+
+  <h1 class="vs-title">{{ providerA.name }} vs {{ providerB.name }}: Which eSIM Should You Buy?</h1>
+  <p class="subtitle vs-subtitle">Updated {{ buildPretty }}</p>
+
+  <section class="content-section">
+    {% include "content/compare/" + cmpSlug + ".njk" %}
+  </section>
+
+  <section class="code-disclosure">
+    <p>
+      <i class="fas fa-circle-info"></i>
+      Some codes and links on this page are affiliate codes and links, including our own (<strong>ADAMANDLINDS</strong>, where it applies) &mdash; if you use one, we may earn a commission. We show our own code more prominently where we have one, not because it's automatically the best deal. See our <a href="/about/">about page</a> for the full breakdown.
+    </p>
+  </section>
+</div>

@@ -2282,3 +2282,64 @@ main {
   border-color: #f87171;
   color: #7f1d1d;
 }
+
+/* Comparison ("X vs Y") pages */
+.vs-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 0 1rem;
+  flex-wrap: wrap;
+}
+
+.vs-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #1f2937;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  transition: background 0.2s ease;
+}
+
+.vs-side:hover {
+  background: #f8fafc;
+}
+
+.vs-side .logo {
+  height: 40px;
+  max-width: 140px;
+  object-fit: contain;
+}
+
+.vs-side .vs-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.vs-divider {
+  font-weight: 800;
+  color: #9ca3af;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.vs-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #1f2937;
+  margin: 0.5rem 0 0.25rem;
+  padding: 0 1rem;
+}
+
+.vs-subtitle {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.footer-compare-list a {
+  font-weight: 600;
+}

@@ -26,6 +26,17 @@
         {% endfor %}
       </ul>
     </div>
+
+    {% if comparisons and comparisons.length > 0 %}
+    <div class="footer-section footer-compare-list">
+      <h3>Compare Providers</h3>
+      <ul>
+        {% for item in comparisons %}
+        <li><a href="/compare/{{ item.slug }}/">{{ codes[item.providerA].name }} vs {{ codes[item.providerB].name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
   </div>
 
   <!-- Disclaimer Section -->
