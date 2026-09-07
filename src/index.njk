@@ -12,27 +12,23 @@ description: "Find verified discount and promo codes for top eSIM providers. Sav
         {% set totalCodes = 0 %}
         {% set totalProviders = 0 %}
         {% set maxDiscount = 0 %}
-        {% set bestCode = null %}
-        {% set bestProvider = null %}
 
         {% for key, provider in codes %}
             {% if provider.codes and provider.codes.length > 0 %}
                 {% set totalProviders = totalProviders + 1 %}
                 {% set totalCodes = totalCodes + provider.codes.length %}
-                
+
                 {% for code in provider.codes %}
                     {% if not code.isInvalid %}
                         {% set discountNum = code.discount | replace('%', '') | replace('OFF', '') | replace('SPECIAL', '10') | replace('EXTRA', '10') | int %}
                         {% if discountNum > maxDiscount %}
                             {% set maxDiscount = discountNum %}
-                            {% set bestCode = code.code %}
-                            {% set bestProvider = provider.name %}
                         {% endif %}
                     {% endif %}
                 {% endfor %}
             {% endif %}
         {% endfor %}
-        
+
         <div class="hero-stats">
             <span><i class="fas fa-circle-check"></i> {{ totalCodes }}+ verified codes</span>
             <span><i class="fas fa-globe"></i> {{ totalProviders }} top providers</span>
@@ -40,11 +36,153 @@ description: "Find verified discount and promo codes for top eSIM providers. Sav
         </div>
     </section>
 
-    <!-- What is eSIM Section -->
+    <!-- Our Code: always featured first, honestly framed (not a "best discount"
+         superlative claim, which is what the old auto-computed section made -
+         it could and did surface a competitor's code). -->
+    {% set ourProviders = [] %}
+    {% for key, provider in codes %}
+        {% set ourCode = provider.codes | findCode("ADAMANDLINDS") %}
+        {% if ourCode and ourCode.code == "ADAMANDLINDS" and not ourCode.isInvalid %}
+            {% set ourProviders = ourProviders.concat([{key: key, name: provider.name, discount: ourCode.discount}]) %}
+        {% endif %}
+    {% endfor %}
+    {% if ourProviders.length > 0 %}
+    <section class="content-callout own-code-section">
+        <h2><i class="fas fa-star"></i> Our Discount Code</h2>
+        <p>
+            <strong>ADAMANDLINDS</strong> is our own code &mdash; we built this site, so we show it first wherever it applies. It's currently active on:
+        </p>
+        <ul class="own-code-list">
+            {% for p in ourProviders %}
+            <li><a href="/{{ p.key }}/">{{ p.name }}</a> &mdash; {{ p.discount }}</li>
+            {% endfor %}
+        </ul>
+        <p class="callout-meta">It isn't automatically the best public discount for every provider &mdash; each provider page lists every code we've verified so you can compare.</p>
+    </section>
+    {% endif %}
+
+    <!-- Providers Grid -->
+    <section class="providers-section">
+        <h2>Top eSIM Providers with Discount Codes</h2>
+        <div class="providers-grid">
+            {% for key, provider in codes %}
+            <a href="/{{ key }}/" class="provider-card-link">
+                <div class="provider-card">
+                    <div class="provider-logo">
+                        {% if provider.logo %}
+                            <img src="{{ provider.logo }}" alt="{{ provider.name }} logo" class="logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="logo-fallback" style="display: none;">{{ provider.name }}</div>
+                        {% else %}
+                            <div class="logo-fallback">{{ provider.name }}</div>
+                        {% endif %}
+                    </div>
+                    <h3>{{ provider.name }} Discount Codes</h3>
+                    {% if provider.primaryCode %}
+                    <p class="discount">Save with code <strong>{{ provider.primaryCode }}</strong></p>
+                    {% else %}
+                    <p class="discount">Coming soon</p>
+                    {% endif %}
+                    <p>{{ provider.description }}</p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+
+    <div class="comparison-table-container">
+      <h2>Compare eSIM Providers</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th>Best Discount</th>
+            <th>Rating</th>
+            <th>Global Packages <i class="fa fa-globe"></i></th>
+            <th>SMS Plans <i class="fa fa-mobile-alt"></i></th>
+            <th>Unlimited Data Plans <i class="fa fa-bolt"></i></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for key, provider in codes %}
+          {% set topCode = provider.codes | findCode(provider.primaryCode) %}
+          <tr>
+            <td>
+                <a href="/{{ key }}/" class="provider-link-btn">
+                {{ provider.name }}
+                </a>
+            </td>
+            <td>
+              <div class="provider-logo">
+                {% if provider.logo %}
+                  <img src="{{ provider.logo }}" alt="{{ provider.name }} logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                  <span class="logo-fallback" style="display:none;">{{ provider.name }}</span>
+                {% else %}
+                  <span class="logo-fallback">{{ provider.name }}</span>
+                {% endif %}
+              </div>
+            </td>
+            <td class="best-discount-cell">
+                {% if topCode and topCode.code and topCode.discount %}
+                <strong>{{ topCode.discount }}</strong> <span class="discount-code">({{ topCode.code }})</span>
+                {% if topCode.code == "ADAMANDLINDS" %}
+                <span class="our-code-badge our-code-badge--table"><i class="fas fa-star"></i> Ours</span>
+                {% endif %}
+                {% else %}
+                <span>&mdash;</span>
+                {% endif %}
+            </td>
+            <td>
+              {% if provider.totalScore %}
+                <span class="star-rating">
+                  {% set score = provider.totalScore | int %}
+                  {% for i in range(1, 6) %}
+                    {% if i <= score %}
+                      <i class="fa fa-star" style="color: #ffc107;"></i>
+                    {% else %}
+                      <i class="fa fa-star" style="color: #e4e5e9;"></i>
+                    {% endif %}
+                  {% endfor %}
+                  <span class="score-label">{{ score }}/5</span>
+                </span>
+              {% else %}
+                <span>&mdash;</span>
+              {% endif %}
+            </td>
+            <td>
+              {% if provider.globalRegionalPackage %}
+                <i class="fa fa-check"></i>
+              {% else %}
+                <i class="fa fa-times"></i>
+              {% endif %}
+            </td>
+            <td>
+              {% if provider.smsIncluded %}
+                <i class="fa fa-check"></i>
+              {% else %}
+                <i class="fa fa-times"></i>
+              {% endif %}
+            </td>
+            <td>
+              {% if provider.unlimitedData %}
+                <i class="fa fa-check"></i>
+              {% else %}
+                <i class="fa fa-times"></i>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- What is an eSIM: educational/supporting content for readers who
+         land here without already knowing - deliberately below the actual
+         codes, not ahead of them. -->
     <section class="what-is-esim">
         <h2>What is an eSIM?</h2>
         <p>An eSIM (embedded SIM) is a digital SIM card that lets you connect to mobile networks without a physical SIM card. Perfect for international travel, eSIMs eliminate expensive roaming charges and give you instant connectivity in 170+ countries.</p>
-        
+
         <div class="esim-benefits">
             <div class="benefit">
               <div style="text-align:center;">
@@ -79,132 +217,5 @@ description: "Find verified discount and promo codes for top eSIM providers. Sav
             </div>
         </div>
     </section>
-
-    <!-- Providers Grid -->
-    <section class="providers-section">
-        <h2>Top eSIM Providers with Discount Codes</h2>
-        <div class="providers-grid">
-            {% for key, provider in codes %}
-            <a href="/{{ key }}/" class="provider-card-link">
-                <div class="provider-card">
-                    <div class="provider-logo">
-                        {% if provider.logo %}
-                            <img src="{{ provider.logo }}" alt="{{ provider.name }} logo" class="logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="logo-fallback" style="display: none;">{{ provider.name }}</div>
-                        {% else %}
-                            <div class="logo-fallback">{{ provider.name }}</div>
-                        {% endif %}
-                    </div>
-                    <h3>{{ provider.name }} Discount Codes</h3>
-                    {% if provider.primaryCode %}
-                    <p class="discount">Save with code <strong>{{ provider.primaryCode }}</strong></p>
-                    {% else %}
-                    <p class="discount">Coming soon</p>
-                    {% endif %}
-                    <p>{{ provider.description }}</p>
-                </div>
-            </a>
-            {% endfor %}
-        </div>
-    </section>
-
-    
-    <section class="cta-section">
-        <h2>Ready to Save?</h2>
-        <p>Start using eSIMs today and enjoy hassle-free international connectivity.</p>
-        <a href="#compare" class="cta-button">Browse All Discount Codes</a>
-    </section>
-
-    <section class="best-code-section">
-      <h2>Best Discount Code</h2>
-        <div class="best-code-card">
-            <p>Use code <strong>{{ bestCode }}</strong> for <strong>{{ maxDiscount }}% off</strong> at <strong>{{ bestProvider }}</strong> — our top verified discount!</p>
-        </div>
-    </section>
-
-    <div id="compare" class="comparison-table-container">
-      <h2>Compare eSIM Providers</h2>
-      <table class="comparison-table">
-        <thead>
-          <tr>
-            <th></th>
-            <th></th>
-            <th>Best Discount</th>
-            <th>Rating</th>
-            <th>Global Packages <i class="fa fa-globe"></i></th>
-            <th>SMS Plans <i class="fa fa-mobile-alt"></i></th>
-            <th>Unlimited Data Plans <i class="fa fa-bolt"></i></th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for key, provider in codes %}
-          <tr>
-            <td>
-                <a href="/{{ key }}/" class="provider-link-btn" style="display:inline-block;padding:6px 14px;background:#015E8A;color:#fff;border-radius:9999px;text-decoration:none;font-weight:500;transition:background 0.2s;width:104px;text-align:center;"
-                   onmouseover="this.style.background='#015075';"
-                   onmouseout="this.style.background='#015E8A';">
-                {{ provider.name }}
-                </a>
-            </td>
-            <td>
-              <div class="provider-logo">
-                {% if provider.logo %}
-                  <img src="{{ provider.logo }}" alt="{{ provider.name }} logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                  <span class="logo-fallback" style="display:none;">{{ provider.name }}</span>
-                {% else %}
-                  <span class="logo-fallback">{{ provider.name }}</span>
-                {% endif %}
-              </div>
-            </td>
-            <td>
-                {% if provider.codes[0].code and provider.codes[0].discount %}
-                <span><strong>{{ provider.codes[0].discount }}</strong> <span style="color:#4D8374;">({{ provider.codes[0].code }})</span></span>
-                {% else %}
-                <span>—</span>
-                {% endif %}
-            </td>
-            <td>
-              {% if provider.totalScore %}
-                <span class="star-rating">
-                  {% set score = provider.totalScore | int %}
-                  {% for i in range(1, 6) %}
-                    {% if i <= score %}
-                      <i class="fa fa-star" style="color: #ffc107;"></i>
-                    {% else %}
-                      <i class="fa fa-star" style="color: #e4e5e9;"></i>
-                    {% endif %}
-                  {% endfor %}
-                  <span class="score-label">{{ score }}/5</span>
-                </span>
-              {% else %}
-                <span>—</span>
-              {% endif %}
-            </td>
-            <td>
-              {% if provider.globalRegionalPackage %}
-                <i class="fa fa-check"></i>
-              {% else %}
-                <i class="fa fa-times"></i>
-              {% endif %}
-            </td>
-            <td>
-              {% if provider.smsIncluded %}
-                <i class="fa fa-check"></i>
-              {% else %}
-                <i class="fa fa-times"></i>
-              {% endif %}
-            </td>
-            <td>
-              {% if provider.unlimitedData %}
-                <i class="fa fa-check"></i>
-              {% else %}
-                <i class="fa fa-times"></i>
-              {% endif %}
-            </td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
 
 </div>

@@ -24,9 +24,19 @@
     </button>
 
     <ul class="nav-menu">
-      {% set providerArray = [] %} {% for key, provider in codes %} {% set
-      providerArray = providerArray.concat([{key: key, provider: provider}]) %}
-      {% endfor %} {% for item in providerArray.slice(0, 3) %}
+      {# Providers carrying our own code go first, so the always-visible
+         top-level slots favor us instead of whatever happened to be
+         first in the JSON. #}
+      {% set ourProviders = [] %} {% set otherProviders = [] %}
+      {% for key, provider in codes %}
+        {% if provider.codes | hasOwnCode %}
+          {% set ourProviders = ourProviders.concat([{key: key, provider: provider}]) %}
+        {% else %}
+          {% set otherProviders = otherProviders.concat([{key: key, provider: provider}]) %}
+        {% endif %}
+      {% endfor %}
+      {% set providerArray = ourProviders.concat(otherProviders) %}
+      {% for item in providerArray.slice(0, 3) %}
       <li><a href="/{{ item.key }}">{{ item.provider.name }}</a></li>
       {% endfor %} {% if providerArray.length > 3 %}
       <li class="dropdown">

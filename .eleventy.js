@@ -90,6 +90,14 @@ module.exports = function (eleventyConfig) {
     return codes.find((c) => c.code === code) || codes[0] || null;
   });
 
+  // Whether a provider's code list includes our own affiliate code
+  // (valid, not invalidated). Used to prioritize our own providers in
+  // places like nav ordering, instead of raw list position.
+  eleventyConfig.addFilter("hasOwnCode", function (codes) {
+    if (!Array.isArray(codes)) return false;
+    return codes.some((c) => c.code === "ADAMANDLINDS" && !c.isInvalid);
+  });
+
   // Keep this at the end. Nothing after this.
   return {
     dir: { input: "src", output: "_site" },

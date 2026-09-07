@@ -1787,66 +1787,40 @@ main {
   }
 }
 
-/* CTA Section */
-.cta-section {
-  background: #f5f7fa;
-  padding: 2rem 1rem;
-  text-align: center;
-  border-radius: 18px;
+/* Our Code section (homepage) - reuses .content-callout for the card
+   chrome; these rules cover the parts specific to this section. */
+.own-code-section {
   margin: 2rem 0;
-}
-.cta-section h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-.cta-section p {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-}
-.cta-button {
-  display: inline-block;
-  background: #015E8A;
-  color: #fff;
-  padding: 0.75rem 2rem;
-  border-radius: 9999px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-.cta-button:hover {
-  background: #015075;
 }
 
-/* Best Code Section */
-.best-code-section {
-  background: #fffbe6;
-  padding: 2rem 1rem;
-  border-radius: 18px;
-  margin: 2rem 0;
-  text-align: center;
-  border: 1px solid #ffe58f;
+.own-code-section h2 i {
+  color: #DBBE8C;
+  margin-right: 0.4rem;
 }
-.best-code-section h2 {
-  font-size: 1.7rem;
-  margin-bottom: 1rem;
-  color: #ad8b00;
+
+.own-code-list {
+  margin: 0.75rem 0 1rem 1.25rem;
 }
-.best-code-card {
-  background: #fff;
-  border-radius: 8px;
-  padding: 1rem 1.5rem;
-  display: inline-block;
-  box-shadow: 0 2px 8px rgba(173, 139, 0, 0.08);
-  font-size: 1.15rem;
-  color: #ad8b00;
+
+.own-code-list li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #1f2937;
 }
-.best-code-card strong {
-  color: #d48806;
+
+.own-code-list a {
+  color: #012F45;
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .comparison-table-container {
   overflow-x: auto;
   margin: 2rem 0;
+}
+.comparison-table-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 .comparison-table {
   width: 100%;
@@ -1885,8 +1859,40 @@ main {
   color: #4D8374;
 }
 .comparison-table .fa-times {
-  color: #dc3545;
+  color: #79252F;
 }
+
+/* The provider-name link is navigation chrome, not the payoff of this
+   table - keep it a plain link rather than a button so it doesn't
+   outweigh the discount data next to it. */
+.comparison-table .provider-link-btn {
+  color: #015E8A;
+  font-weight: 600;
+  text-decoration: none;
+}
+.comparison-table .provider-link-btn:hover {
+  text-decoration: underline;
+}
+
+/* The discount is the actual payoff of this table, so it gets the
+   strongest text treatment in the row. */
+.best-discount-cell {
+  font-size: 1.05rem;
+  color: #012F45;
+}
+.best-discount-cell strong {
+  font-weight: 700;
+}
+.best-discount-cell .discount-code {
+  color: #4D8374;
+}
+.our-code-badge--table {
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  display: inline-flex;
+}
+
 @media (max-width: 700px) {
   .comparison-table th,
   .comparison-table td {
