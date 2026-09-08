@@ -1179,9 +1179,9 @@
   },
   "yesim": {
     "name": "Yesim",
-    "lastModified": "2025-08-09",
+    "lastModified": "2026-09-08",
     "description": "Global eSIM solutions",
-    "url": "https://yesim.com",
+    "url": "https://yesim.app",
     "affiliateUrl": null,
     "primaryCode": "BONUS3",
     "rating": 2.5,
@@ -1351,7 +1351,7 @@
         "discount": "10% OFF ESIM",
         "description": "Public discount code advertised on eSIM Card's site",
         "verified": true,
-        "lastTested": "2026-09-06",
+        "lastTested": "2026-09-08",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public"

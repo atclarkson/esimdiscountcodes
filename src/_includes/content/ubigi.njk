@@ -1,188 +1,163 @@
-<!-- Ubigi Content Template -->
+<!-- Ubigi Content -->
 <div class="content-section">
-    {% set primary = provider.codes | findCode(provider.primaryCode) %}
-    <!-- Main heading -->
-    <h2>Best Ubigi Promo Codes for {{ buildMonthYear }}</h2>
 
-    <!-- Introduction -->
-    <p>Ubigi delivers reliable eSIM data in over <strong>190+ countries</strong>, with no physical SIM or hidden fees. Perfect for travelers who want transparent pricing and coverage that just works.</p>
+  <!-- Quick Answer -->
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Best Ubigi Promo Code &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Use <strong>{{ provider.primaryCode }}</strong> for <strong>10% off any Ubigi plan</strong>. It's our own code, so we show it first here. Every other working Ubigi code we've found also gives 10% off, so there's no real reason to hunt for a better one the way you might with Airalo.
+      <span class="callout-meta">Confirmed active <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("MMM d, yyyy") }}</time>.</span>
+    </p>
+  </div>
 
-    <!-- Key Features Highlight -->
-    <div class="feature-highlights" style="background: linear-gradient(135deg, #e6f2fa 0%, #cfe4f3 100%); border: 2px solid #0055A4; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
-        <h2 style="color: #23344F; margin-bottom: 1.5rem;">What Makes Ubigi Stand Out?</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #23344F;">Global Coverage</h3>
-                <p>Works in 190+ countries with strong local carrier partnerships</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #23344F;">Transparent Pricing</h3>
-                <p>Costs shown upfront: no nasty surprises</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #23344F;">Fast Setup</h3>
-                <p>Get QR and activate in minutes: ideal for last-minute trips</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #23344F;">Calls & SMS Support</h3>
-                <p>Some plans include voice/SMS: good for light travelers</p>
-            </div>
-        </div>
-    </div>
+  <!-- Headline -->
+  <h2>What Actually Makes Ubigi Different</h2>
+  <p>
+    Ubigi isn't a travel startup that rents capacity from a phone network. It's a brand of Transatel, a French MVNO enabler that's been running cellular connectivity since the early 2000s and is now part of NTT Group, one of the largest telecom companies in the world. That's a genuinely different pedigree from most eSIM apps on this site, and it shows up in an odd place: Ubigi also sells the SIM connectivity built into connected cars from BMW, Toyota, Jeep, Maserati, Fiat, Alfa Romeo, Mini, Jaguar, and Land Rover. The travel eSIM you'd buy for a phone runs on the same underlying network infrastructure as the modem in someone's Jeep.
+  </p>
+  <p>
+    That doesn't automatically make Ubigi the best choice for your phone. On price it's usually the more expensive option on this site: $4 for 1GB in the US is roughly double what <a href="/airhub/">Airhub</a> or <a href="/redteago/">RedteaGO</a> charge for the same gigabyte. What it does buy you is a plan structure the discount-code eSIM apps don't really offer.
+  </p>
 
-    <!-- How Ubigi Works -->
-    <h2>How Ubigi eSIM Works</h2>
-    <p>Browse by country or global region, pay online, get a QR code instantly, and activate when you're ready. Manage everything via the Ubigi app (data usage, plan top-up, validity) right at your fingertips.</p>
+  <img class="content-photo"
+       src="https://media.adamandlinds.com/photos/large/551b9748-29e5-4c56-9644-92ec877c6d68.jpg"
+       alt="A smiling bearded man with glasses takes a selfie inside a cozy apartment, with a snow-dusted Helsinki street and a historic stone building visible through the window behind him"
+       width="960" height="1280">
+  <p class="content-photo-caption">A work day from an apartment in Helsinki. Not proof this specific trip ran on Ubigi, but the kind of repeat-destination stay where a recurring monthly plan (rather than a fresh one-off eSIM every time) actually starts to make sense. From our own travels, not a stock photo.</p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Active codes</h3>
     <ul>
-        <li><strong>Select plan</strong> by destination or region</li>
-        <li><strong>Buy online</strong> with no hidden fees</li>
-        <li><strong>Install via QR</strong> delivered right away</li>
-        <li><strong>Activate when landed</strong> and track usage via the app</li>
+      <li><strong>ADAMANDLINDS</strong>: 10% off all plans (our own code)</li>
     </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">If a code does not apply, refresh the cart or try a private window, then retry.</p>
+  </div>
 
-    <!-- Comparison with Competitors -->
-    <h2>Ubigi vs. Other eSIM Providers</h2>
-    <table style="margin: 2rem 0;">
-        <thead>
-            <tr>
-                <th>Feature</th>
-                <th style="background: #e6f2fa; color: #0055A4;"><strong>Ubigi</strong></th>
-                <th>Airalo</th>
-                <th>Globalesim</th>
-                <th>Nomad</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Country Coverage</strong></td>
-                <td style="background: #fefcfd;"><span style="color: #0055A4;">190+</span></td>
-                <td>200+</td>
-                <td>150+</td>
-                <td>120+</td>
-            </tr>
-            <tr>
-                <td><strong>Price Transparency</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Voice & SMS</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td>Data only</td>
-                <td>Data only</td>
-                <td>Data only</td>
-            </tr>
-            <tr>
-                <td><strong>Instant Delivery</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Best Promo Code</strong></td>
-                <td style="background: #fefcfd;"><strong>{{ provider.primaryCode }}</strong> ({{ primary.discount | lower }})</td>
-                <td>NEWTOAIRALO15 (15%)</td>
-                <td>ESIMSIO10 (10%)</td>
-                <td>WOLF (10%)</td>
-            </tr>
-        </tbody>
-    </table>
+  <!-- Real operational note instead of generic feature grid / comparison table -->
+  <h2>One-Off vs Recurring: The Detail That Actually Matters Here</h2>
+  <p>
+    Most eSIM providers only sell one thing: a fixed data bucket that expires after a set number of days. Ubigi sells that too (its "one-off" plans), but it also sells <strong>recurring</strong> plans, and the fine print on those is worth reading before you buy, not after.
+  </p>
+  <p>
+    A recurring <strong>monthly</strong> plan renews itself and charges your card automatically every month, and Ubigi's own help center is explicit that it can't be cancelled until you've been on it for <strong>three months minimum</strong>. A recurring <strong>annual</strong> plan is worse in one specific way: you pay the full 12 months upfront, and it <strong>cannot be cancelled or refunded during that year</strong> at all, in exchange for a fresh data allowance landing every month. Either way, whatever you don't use in a given month is gone. Ubigi doesn't roll unused data over to the next period on any plan type, one-off or recurring.
+  </p>
+  <p>
+    None of that makes recurring plans a bad option. If you genuinely visit the same country on a regular schedule, a monthly plan can work out cheaper than buying a fresh one-off eSIM before every trip. It's just not something you want to click into by accident thinking it's a normal one-time purchase.
+  </p>
 
-    <!-- Promo Codes -->
-    <h2>Ubigi Promo Codes {{ buildMonthYear }}</h2>
+  <!-- How to -->
+  <h2>Apply a Ubigi Code in 3 Steps</h2>
+  <div class="content-box">
+    <ol>
+      <li>Copy <strong>ADAMANDLINDS</strong></li>
+      <li>Pick a one-off or recurring data plan for your destination on Ubigi</li>
+      <li>Paste the code in the promo field at checkout and confirm the 10% price drop before paying</li>
+    </ol>
+    <p class="content-note">Discount shows before payment is completed.</p>
+  </div>
+
+  <!-- Decision help -->
+  <h2>Is Ubigi the Right Pick for Your Trip</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Good fit</h3>
+      <ul>
+        <li>You visit the same country often enough that a recurring monthly plan beats buying a new eSIM each time</li>
+        <li>You already drive a connected car from one of Ubigi's automaker partners and like the idea of one provider</li>
+        <li>You'd rather buy from an established MVNO than a smaller reseller, even at a higher price</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Consider alternatives</h3>
+      <ul>
+        <li>You just want the cheapest per-GB price: Ubigi runs roughly double what <a href="/airhub/">Airhub</a> or <a href="/redteago/">RedteaGO</a> charge</li>
+        <li>You want a plan you can cancel or refund any time: skip the recurring options and stick to one-off, or avoid the 3-month monthly lock-in and non-refundable annual term entirely</li>
+        <li>You want unlimited data instead of a fixed bucket: see <a href="/holafly/">Holafly</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Savings examples -->
+  <h2>What the Discount Looks Like</h2>
+  <div class="content-box">
     <ul>
-        <li><strong>{{ provider.primaryCode }}:</strong> {{ primary.discount }} (our own code, shown first), works worldwide</li>
-        {% for code in provider.codes %}
-        {% if code.code != provider.primaryCode and not code.isInvalid %}
-        <li><strong>{{ code.code }}:</strong> {{ code.discount }}</li>
-        {% endif %}
-        {% endfor %}
+      <li>United States 1GB at $4 &rarr; 10% off saves $0.40</li>
+      <li>France 3GB at $4 &rarr; 10% off saves $0.40</li>
+      <li>Global 1GB at $25 &rarr; 10% off saves $2.50</li>
     </ul>
-    <p style="font-size: 1rem; color: #23344F;">Visit <a href="https://ubigi.com" style="color:#0055A4;"><strong>Ubigi</strong></a> and enter <strong>{{ provider.primaryCode }}</strong> at checkout to score the discount. It's our own code. The others above work too if you'd rather use one of those.</p>
+    <p class="content-note">Ubigi's per-GB price sits above most other providers on this site, so the 10% matters more on a bigger regional or global plan than on a small single-country top-up.</p>
+  </div>
 
-    <!-- Quick Facts -->
-    <div style="background: #e6f2fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #0055A4; margin-bottom: 2rem;">
-        <strong>Ubigi Quick Facts:</strong>
-        <ul style="margin: 0.5rem 0 0 1rem;">
-            <li>190+ countries covered</li>
-            <li>Voice & SMS on select plans</li>
-            <li>Data-only plans available too</li>
-            <li>Instant QR delivery</li>
-            <li>Transparent upfront pricing</li>
-            <li>No refund after activation: check before scanning</li>
-        </ul>
+  <p>
+    For eSIM device compatibility, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Use the Code at Checkout</h2>
+    <p>Copy <code>ADAMANDLINDS</code> then paste in the promo field</p>
+    <p>10% off any Ubigi plan, one-off or recurring.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Ubigi Promo Code FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>What is the best code right now</h3>
+      <p><strong>ADAMANDLINDS</strong>: 10% off any Ubigi plan. It's our own code, shown first; other working codes give the same 10%.</p>
     </div>
-
-    <!-- FAQ Section -->
-    <h2>Frequently Asked Questions</h2>
-    <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 2rem 0;">
-        <div style="border-bottom: 1px solid #cfe4f3; padding: 1.5rem;">
-            <h3 style="color: #0055A4; margin-bottom: 0.5rem;">Best Ubigi code?</h3>
-            <p style="margin-bottom: 0;">Use <strong>{{ provider.primaryCode }}</strong> for {{ primary.discount | lower }} (confirmed active {{ (primary.lastTested or buildTime) | fmtDate("MMMM yyyy") }}). It's our own code, shown first; other working codes are listed above.</p>
-        </div>
-        <div style="border-bottom: 1px solid #cfe4f3; padding: 1.5rem;">
-            <h3 style="color: #0055A4; margin-bottom: 0.5rem;">Plans include voice & SMS?</h3>
-            <p style="margin-bottom: 0;">Yes, some plans add voice/SMS. Others are data-only. Check before buying.</p>
-        </div>
-        <div style="border-bottom: 1px solid #cfe4f3; padding: 1.5rem;">
-            <h3 style="color: #0055A4; margin-bottom: 0.5rem;">How fast is activation?</h3>
-            <p style="margin-bottom: 0;">QR arrives instantly; activate when you land, usually connected in minutes.</p>
-        </div>
-        <div style="padding: 1.5rem;">
-            <h3 style="color: #0055A4; margin-bottom: 0.5rem;">Refunds available?</h3>
-            <p style="margin-bottom: 0;">Not after activation. If you don't activate, sometimes support will help, but best to double-check first.</p>
-        </div>
+    <div class="content-faq-item">
+      <h3>What's the difference between a one-off and a recurring Ubigi plan</h3>
+      <p>A one-off plan is a fixed data allowance valid for a set number of days, bought once. A recurring plan renews automatically: monthly (charged and refreshed every month, cancellable only after a 3-month minimum) or annual (paid in full upfront for 12 months of monthly refreshes, non-cancellable and non-refundable during that year).</p>
     </div>
-
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Best Ubigi code?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Use {{ provider.primaryCode }} for {{ primary.discount | lower }} on your entire order. It's our own code, confirmed active as of {{ (primary.lastTested or buildTime) | fmtDate('MMMM yyyy') }}."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Plans include voice & SMS?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, some plans add voice/SMS. Others are data-only. Check before buying."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How fast is activation?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "QR arrives instantly; activate when you land, usually connected in minutes."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Refunds available?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Not after activation. If you don't activate, sometimes support will help, but best to double-check first."
-      }
-    }
-  ]
-}
-</script>
-
-
-    <!-- Call to Action -->
-    <div style="background: linear-gradient(135deg, #e6f2fa 0%, #cfe4f3 100%); color: #23344F; padding: 2rem; border-radius: 12px; text-align: center; margin: 3rem 0; border: 2px solid #0055A4;">
-        <h2 style="color: #23344F; margin-bottom: 1rem;">Save on Your Ubigi eSIM</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #23344F;">Use <strong>{{ provider.primaryCode }}</strong> at checkout for {{ primary.discount | lower }}.</p>
-        <p style="margin-bottom: 0; color: #23344F;">Global coverage, no surprises. Travel smart with Ubigi.</p>
+    <div class="content-faq-item">
+      <h3>Can I cancel a recurring Ubigi plan</h3>
+      <p>A monthly plan, yes, but not until you've held it for at least 3 months. An annual plan cannot be cancelled or refunded during its 12-month term.</p>
     </div>
+    <div class="content-faq-item">
+      <h3>Does unused Ubigi data roll over</h3>
+      <p>No. Whatever you don't use in a billing period is gone, whether you're on a one-off, monthly, or annual plan.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Who actually runs Ubigi</h3>
+      <p>Transatel, a French MVNO enabler in operation since the early 2000s and now part of NTT Group. Transatel also supplies the connectivity behind connected-car systems for BMW, Toyota, Jeep, Maserati, Fiat, Alfa Romeo, Mini, Jaguar, and Land Rover.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What is the best Ubigi promo code right now?",
+        "acceptedAnswer":{"@type":"Answer","text":"ADAMANDLINDS gives 10% off any Ubigi plan. It's our own code, shown first; other working codes give the same 10%."}
+      },
+      {
+        "@type":"Question",
+        "name":"What's the difference between a one-off and a recurring Ubigi plan?",
+        "acceptedAnswer":{"@type":"Answer","text":"A one-off plan is a fixed data allowance valid for a set number of days, bought once. A recurring plan renews automatically: monthly (cancellable only after a 3-month minimum) or annual (paid upfront for 12 months, non-cancellable and non-refundable during that year)."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I cancel a recurring Ubigi plan?",
+        "acceptedAnswer":{"@type":"Answer","text":"A monthly plan can be cancelled after a 3-month minimum commitment. An annual plan cannot be cancelled or refunded during its 12-month term."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does unused Ubigi data roll over?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. Unused data is lost at the end of each billing period regardless of plan type."}
+      },
+      {
+        "@type":"Question",
+        "name":"Who runs Ubigi?",
+        "acceptedAnswer":{"@type":"Answer","text":"Transatel, a French MVNO enabler operating since the early 2000s and now part of NTT Group, which also supplies connected-car connectivity for automakers including BMW, Toyota, Jeep, Maserati, Fiat, Alfa Romeo, Mini, Jaguar, and Land Rover."}
+      }
+    ]
+  }
+  </script>
 </div>
