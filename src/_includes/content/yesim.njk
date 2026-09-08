@@ -96,8 +96,13 @@
     <h2>YesIM Promo Codes {{ buildMonthYear }}</h2>
     <ul>
         <li><strong>{{ provider.primaryCode }}:</strong> {{ primary.discount }} (confirmed active {{ (primary.lastTested or buildTime) | fmtDate("MMMM yyyy") }})</li>
+        {% for code in provider.codes %}
+        {% if code.code != provider.primaryCode and not code.isInvalid %}
+        <li><strong>{{ code.code }}:</strong> {{ code.discount }}</li>
+        {% endif %}
+        {% endfor %}
     </ul>
-    <p style="font-size: 1rem; color: #663347;">Head to <a href="https://yesim.com" style="color:#FF007A;"><strong>YesIM</strong></a> and enter <strong>{{ provider.primaryCode }}</strong> at checkout to grab your discount.</p>
+    <p style="font-size: 1rem; color: #663347;">Head to <a href="{{ provider.url }}" style="color:#FF007A;"><strong>YesIM</strong></a> and enter <strong>{{ provider.primaryCode }}</strong> at checkout to grab your discount.</p>
 
     <!-- Quick Facts -->
     <div style="background: #ffe6f2; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #FF007A; margin-bottom: 2rem;">

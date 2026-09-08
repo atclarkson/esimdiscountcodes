@@ -1183,7 +1183,7 @@
     "description": "Global eSIM solutions",
     "url": "https://yesim.app",
     "affiliateUrl": null,
-    "primaryCode": "BONUS3",
+    "primaryCode": "TEE20",
     "rating": 2.5,
     "priceCategory": "Expensive",
     "brandColors": {
@@ -1194,15 +1194,48 @@
     "logo": "/assets/yesim_logo.png",
     "codes": [
       {
-        "code": "BONUS3",
-        "discount": "3 EUR BONUS",
-        "description": "Get 3 EUR bonus on your account",
+        "code": "TEE20",
+        "discount": "20% OFF YOUR FIRST ESIM PURCHASE",
+        "description": "20% off your first eSIM purchase",
         "verified": true,
-        "lastTested": "2025-07-20",
+        "lastTested": "2026-09-08",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public",
         "isInvalid": false
+      },
+      {
+        "code": "WELCOMETOYESIM",
+        "discount": "15% OFF YOUR FIRST ESIM PURCHASE",
+        "description": "15% off your first eSIM purchase through the Yesim loyalty program",
+        "verified": true,
+        "lastTested": "2026-09-08",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public",
+        "isInvalid": false
+      },
+      {
+        "code": "TRAVELFREE",
+        "discount": "€3 OFF YOUR ORDER",
+        "description": "€3 discount on your order",
+        "verified": true,
+        "lastTested": "2026-09-08",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public",
+        "isInvalid": false
+      },
+      {
+        "code": "BONUS3",
+        "discount": "3 EUR BONUS",
+        "description": "Get 3 EUR bonus on your account",
+        "verified": true,
+        "lastTested": "2026-09-08",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public",
+        "isInvalid": true
       }
     ],
     "totalScore": "2.5",
