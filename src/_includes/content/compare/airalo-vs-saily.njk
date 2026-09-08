@@ -1,0 +1,131 @@
+<!-- Airalo vs Saily Comparison Content -->
+<div class="content-section">
+
+  {% set airaloPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set sailyPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      These two are closer competitors than most pairs on this site: both sell data by the gigabyte rather than unlimited-first. <strong>Saily</strong> is usually a bit cheaper per GB and bundles ad/malware blocking into every plan, since it's built by the same company as NordVPN. <strong>Airalo</strong> has the bigger, more established country-by-country eSIM catalog and its own quirky referral-code ecosystem. If you'd rather never think about a data meter at all, neither is the right pick: see <a href="/holafly/">Holafly</a> instead.
+    </p>
+  </div>
+
+  <h2>The Core Difference: A VPN Company vs. an eSIM Specialist</h2>
+  <p>
+    Airalo was built specifically to sell travel eSIMs and has been at it longer, with a deep catalog of individual country and regional profiles. Saily is Nord Security's eSIM product, the same company behind NordVPN, and every Saily plan ships with ad blocking, malware/phishing site blocking, and a virtual-location tool built in rather than sold separately. If you'd normally pay for a VPN app when traveling anyway, that's already in the box with Saily. If you just want the cheapest possible GB and don't care about the extras, it's not a reason to pick one over the other.
+  </p>
+  <p>
+    Saily also sells one universal eSIM that keeps working as you cross into a new supported country, rather than requiring a fresh profile per region. Airalo's model leans more on picking the right local, regional, or global eSIM upfront for your specific trip.
+  </p>
+
+  <h2>Price Snapshot (1GB, before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Airalo</th>
+          <th>Saily</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States</td><td>$4.50</td><td>$3.99</td></tr>
+        <tr><td>Europe regional</td><td>$5.27</td><td>$4.99</td></tr>
+        <tr><td>Global</td><td>$9.49</td><td>$8.99</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Saily comes in slightly cheaper per GB across the board in our sample, before either discount code is applied.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airalo:</strong> {{ providerA.primaryCode }}, {{ airaloPrimary.discount | lower }}. <a href="/airalo/">Full code list &rarr;</a></li>
+      <li><strong>Saily:</strong> {{ providerB.primaryCode }}, {{ sailyPrimary.discount | lower }}. <a href="/saily/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Airalo's code is the best public one we've verified, since Airalo runs a referral program (Airmoney) rather than a central affiliate discount, which is why so many different codes circulate for it. Saily's HELLOSAILY applies storewide and isn't tied to a first purchase.</p>
+  </div>
+
+  <h2>Is Airalo or Saily the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Airalo if&hellip;</h3>
+      <ul>
+        <li>You want the widest selection of individual country eSIMs</li>
+        <li>You're comfortable tracking a data meter for the lowest possible base price</li>
+        <li>You don't care about a bundled VPN or ad blocker</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with Saily if&hellip;</h3>
+      <ul>
+        <li>You'd normally pay for a VPN or ad blocker separately when traveling anyway</li>
+        <li>Multi-country trip where you don't want a new eSIM at every border</li>
+        <li>You want the slightly lower per-GB price</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Both were blocked from selling in Turkey.</strong> Turkey's telecom regulator (BTK) blocked Airalo's and Saily's websites and apps for purchases starting mid-2025, alongside several other eSIM providers. An eSIM from either one bought and installed before you land still works fine once you're there; the block only stops you from buying or topping up while physically inside the country.
+  </p>
+  <p>
+    <strong>Saily has a subscription tier Airalo doesn't really have an equivalent for.</strong> Saily Ultra ($59.99/month) bundles 30GB of high-speed data across 121+ destinations, the full NordVPN/NordPass/NordLayer/Incogni suite, 8% cashback in Saily credit, and a monthly airport lounge pass plus fast-track security pass. It's a real deal for someone who travels constantly and would otherwise pay for the VPN suite separately; a bad one for an occasional traveler who just needs data for a single trip.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Airalo vs Saily FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Airalo or Saily</h3>
+      <p>Saily, slightly, across most destinations we checked: about 10-12% less per GB than Airalo before either discount code is applied.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does Saily's bundled VPN actually matter</h3>
+      <p>Only if you'd otherwise pay for one. Saily's ad blocking, malware/phishing blocking, and virtual-location tool are built into every plan at no extra cost. Airalo has no equivalent; you'd need a separate app for the same protection.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I use either one in Turkey</h3>
+      <p>Yes, if you buy and install it before you land. Both Airalo's and Saily's sites and apps were blocked from new purchases and top-ups inside Turkey by the country's telecom regulator starting mid-2025, but an already-installed eSIM keeps working.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Why does Airalo have so many different discount codes</h3>
+      <p>Airalo runs a referral program (Airmoney) that gives every user their own personal $3-off code to share, instead of one central affiliate discount. Saily doesn't run that kind of program, which is why it has a single storewide code instead.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Airalo or Saily?",
+        "acceptedAnswer":{"@type":"Answer","text":"Saily is slightly cheaper across most destinations checked, roughly 10 to 12 percent less per GB than Airalo before either discount code is applied."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Saily's bundled VPN actually matter?",
+        "acceptedAnswer":{"@type":"Answer","text":"Only if you would otherwise pay for one separately. Saily's ad blocking, malware and phishing blocking, and virtual-location tool are built into every plan at no extra cost, while Airalo has no equivalent built in."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I use Airalo or Saily in Turkey?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes, if bought and installed before arrival. Both providers' sites and apps were blocked from new purchases and top-ups inside Turkey by the country's telecom regulator starting mid-2025, but an already-installed eSIM keeps working."}
+      },
+      {
+        "@type":"Question",
+        "name":"Why does Airalo have so many different discount codes?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airalo runs a referral program called Airmoney that gives every user a personal $3-off code to share, instead of a single central affiliate discount, which is why many different codes circulate for it."}
+      }
+    ]
+  }
+  </script>
+</div>
