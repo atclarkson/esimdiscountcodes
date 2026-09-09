@@ -1,0 +1,3 @@
+# Screenshots Needed
+
+- [ ] 2026-09-09 bytesim TPDBYTE: proof-of-coupon-test screenshot needed at `src/assets/bytesim/TPDBYTE.png` (the coupon-application screenshot Adam pasted in chat on 2026-09-09 shows this, but it was never saved as a file in the repo, so the site's auto-loaded proof thumbnail for this code is currently missing/broken). A receipt screenshot for the Spain Mega Plan purchase was also pasted but not saved anywhere; if it should appear inline in the article too, save it and let me know the filename so I can wire it in. A third photo (mobile speed test) was mentioned as uploaded but never actually arrived in chat or on disk.
