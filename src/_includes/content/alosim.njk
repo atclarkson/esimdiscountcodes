@@ -1,202 +1,150 @@
-<!-- AloSIM Content Template -->
+<!-- AloSIM Content -->
 <div class="content-section">
-    <!-- Main heading -->
-    <h2>Best AloSIM Promo Codes for {{ buildMonthYear }}</h2>
-    
-    <!-- Introduction -->
-    <p>AloSIM keeps international eSIMs simple and reliable, with plans in <strong>200+ countries</strong> and easy setup. Pricing is fair, and their platform is no-nonsense. If you want flexible short-term data without overpaying, AloSIM is solid.</p>
 
-    <!-- Key Features Highlight -->
-    <div class="feature-highlights" style="background: linear-gradient(135deg, #f3f6fd 0%, #e6eafe 100%); border: 2px solid #1530BB; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
-        <h2 style="color: #132B43; margin-bottom: 1.5rem;">What Makes AloSIM Stand Out?</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #132B43;">Global Coverage</h3>
-                <p>200+ countries: pretty much anywhere you need data</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #132B43;">Flexible Short-Term Plans</h3>
-                <p>Pick plans by country or region, from 1GB and up</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #132B43;">No Expiry</h3>
-                <p>Unused eSIMs don’t expire: buy now, use whenever</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #132B43;">Live Chat Support</h3>
-                <p>Support team is quick if you get stuck</p>
-            </div>
-        </div>
-    </div>
+  <!-- Quick Answer -->
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Best AloSIM Promo Code &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Use <strong>{{ provider.primaryCode }}</strong> for <strong>15% off any AloSIM plan</strong>. It's a public code rather than one of ours (AloSIM doesn't run the kind of affiliate program that supports our own code the way some other providers on this site do), but it's the best one we've verified.
+      <span class="callout-meta">Confirmed active <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("MMM d, yyyy") }}</time>.</span>
+    </p>
+  </div>
 
-    <!-- How AloSIM Works -->
-    <h2>How AloSIM eSIM Works</h2>
-    <p>Find your destination, pick a plan, pay online, and get your QR code. You can install and activate right away, or buy ahead and wait until your trip. Everything is managed through your AloSIM account.</p>
+  <!-- Headline -->
+  <h2>What Actually Makes AloSIM Different</h2>
+  <p>
+    Most eSIM apps sell you data and nothing else. AloSIM bundles in a free international phone number through a partnership with Hushed, the second-line-number app. It's not a full replacement for your regular number (you set it up separately inside the AloSIM app after buying a plan), but it's a genuine point of difference: if you need a number to receive a verification text or give out to a hotel abroad without handing over your real one, most competitors on this site don't offer anything like it.
+  </p>
+  <p>
+    AloSIM also sells both fixed-data and unlimited plans, rather than picking one model the way <a href="/airalo/">Airalo</a> (pay-per-GB only) or <a href="/holafly/">Holafly</a> (unlimited only) do. That gives you the choice on their own site instead of having to compare across providers to get it.
+  </p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Active codes</h3>
     <ul>
-        <li><strong>Select your country or region</strong> and see all plan options</li>
-        <li><strong>Pay online</strong> and get instant QR code delivery</li>
-        <li><strong>Install eSIM</strong> anytime (doesn’t expire until activated)</li>
-        <li><strong>Top up</strong> or buy new plans as needed</li>
+      <li><strong>ALOSAVE</strong>: 15% off all plans</li>
     </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">If a code does not apply, refresh the cart or try a private window, then retry.</p>
+  </div>
 
-    <!-- Comparison with Major Competitors -->
-    <h2>AloSIM vs. Top eSIM Competitors</h2>
-    <p>How does AloSIM compare to Airalo, Holafly, and Saily?</p>
-    <table style="margin: 2rem 0;">
-        <thead>
-            <tr>
-                <th>Feature</th>
-                <th style="background: #f3f6fd; color: #1530BB;"><strong>AloSIM</strong></th>
-                <th>Airalo</th>
-                <th>Holafly</th>
-                <th>Saily</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Price Category</strong></td>
-                <td style="background: #fefcfd;">Average</td>
-                <td>Average</td>
-                <td>Cheap</td>
-                <td>Cheap</td>
-            </tr>
-            <tr>
-                <td><strong>Countries Covered</strong></td>
-                <td style="background: #fefcfd;"><span style="color: #1530BB;">200+</span></td>
-                <td>200+</td>
-                <td>190+</td>
-                <td>200+</td>
-            </tr>
-            <tr>
-                <td><strong>Live Chat Support</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Short-term Plans</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-check" style="color: #1530BB;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>No Expiry (before activation)</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-check" style="color: #1530BB;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td>30 days</td>
-                <td>30 days</td>
-            </tr>
-            <tr>
-                <td><strong>Best Discount Code</strong></td>
-                <td style="background: #fefcfd;"><strong>ALOSAVE</strong> (15% off)</td>
-                <td>NEWTOAIRALO15 (15% off)</td>
-                <td>ADAMANDLINDS (5% off)</td>
-                <td>HELLOSAILY (15% off)</td>
-            </tr>
-        </tbody>
-    </table>
+  <!-- Real operational note instead of generic setup tips -->
+  <h2>The Refund Policy Is Generous, With One Catch</h2>
+  <p>
+    AloSIM advertises a no-questions refund if your eSIM won't connect or your device turns out to be incompatible, which is a stronger stance than most eSIM apps take publicly. The catch is timing: that guarantee is for eSIMs that fail to activate, not ones you activated and then didn't end up using much. Buy ahead of a trip if you like (an unused AloSIM plan doesn't expire), but don't activate it until you've actually landed and confirmed you need it, or you lose the refund window along with the data.
+  </p>
 
-    <!-- Popular AloSIM Promo Codes -->
-    <h2>AloSIM Promo Codes {{ buildMonthYear }}</h2>
+  <!-- How to -->
+  <h2>Apply an AloSIM Code in 3 Steps</h2>
+  <div class="content-box">
+    <ol>
+      <li>Copy <strong>ALOSAVE</strong></li>
+      <li>Pick a country, regional, or unlimited plan for your destination on AloSIM</li>
+      <li>Paste the code in the promo field at checkout and confirm the 15% price drop before paying</li>
+    </ol>
+    <p class="content-note">Discount shows before payment is completed.</p>
+  </div>
+
+  <!-- Decision help -->
+  <h2>Is AloSIM the Right Pick for Your Trip</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Good fit</h3>
+      <ul>
+        <li>You want the option to buy either a fixed-GB or unlimited plan from the same provider</li>
+        <li>You want a temporary international number for verification codes or booking calls, without giving out your real one</li>
+        <li>You'd rather buy ahead and activate only once you land, keeping the refund option open</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Consider alternatives</h3>
+      <ul>
+        <li>You just want the cheapest per-GB price: check <a href="/redteago/">RedteaGO</a> or <a href="/airhub/">Airhub</a> first</li>
+        <li>You want a provider with a large public affiliate-code program to compare against: see <a href="/airalo/">Airalo</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Savings examples -->
+  <h2>What the Discount Looks Like</h2>
+  <div class="content-box">
     <ul>
-        <li><strong>ALOSAVE:</strong> 15% OFF ALL PLANS (confirmed active {{ (provider.codes | findCode("ALOSAVE")).lastTested | fmtDate("MMMM yyyy") }})</li>
+      <li>United States 1GB at $4.50 &rarr; 15% off saves $0.68</li>
+      <li>Europe regional 1GB at $5 &rarr; 15% off saves $0.75</li>
+      <li>Japan 1GB at $4.50 &rarr; 15% off saves $0.68</li>
     </ul>
-    <p style="font-size: 1rem; color: #132B43; margin-bottom: 2rem;">Go to <a href="https://alosim.com" style="color:#1530BB;"><strong>AloSIM</strong></a> and use the code at checkout.</p>
+    <p class="content-note">AloSIM prices individual countries and regions close to what Airalo charges, so the 15% code is what actually separates the two on price.</p>
+  </div>
 
-    <!-- Key Details and Quick Facts -->
-    <div style="background: #f3f6fd; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #1530BB; margin-bottom: 2rem;">
-        <strong>AloSIM Quick Facts:</strong>
-        <ul style="margin: 0.5rem 0 0 1rem;">
-            <li>200+ countries/regions</li>
-            <li>Top up plans or buy new anytime</li>
-            <li>Data only, no calls or SMS</li>
-            <li>Flexible short-term and regional plans</li>
-            <li>Unused eSIMs never expire until activation</li>
-            <li>Support via live chat and email</li>
-        </ul>
+  <p>
+    For eSIM device compatibility, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide. Weighing AloSIM against a pay-per-GB alternative? See our <a href="/compare/airalo-vs-saily/">Airalo vs Saily comparison</a> for how that pricing model plays out between two other providers.
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Use the Code at Checkout</h2>
+    <p>Copy <code>ALOSAVE</code> then paste in the promo field</p>
+    <p>15% off any AloSIM plan, fixed-GB or unlimited.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>AloSIM Promo Code FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>What is the best code right now</h3>
+      <p><strong>ALOSAVE</strong>: 15% off all AloSIM plans, fixed-GB or unlimited.</p>
     </div>
-
-    <!-- FAQ Section -->
-    <h2>Frequently Asked Questions</h2>
-    <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 2rem 0;">
-        <div style="border-bottom: 1px solid #e6eafe; padding: 1.5rem;">
-            <h3 style="color: #1530BB; margin-bottom: 0.5rem;">What's the best AloSIM discount code?</h3>
-            <p style="margin-bottom: 0;">Use <strong>ALOSAVE</strong> for 15% off all plans, valid everywhere they sell eSIMs.</p>
-        </div>
-        <div style="border-bottom: 1px solid #e6eafe; padding: 1.5rem;">
-            <h3 style="color: #1530BB; margin-bottom: 0.5rem;">Is my phone compatible?</h3>
-            <p style="margin-bottom: 0;">If your phone supports eSIM (iPhone XS/XR or newer, Google Pixel 4+, recent Samsungs), you’re set.</p>
-        </div>
-        <div style="border-bottom: 1px solid #e6eafe; padding: 1.5rem;">
-            <h3 style="color: #1530BB; margin-bottom: 0.5rem;">Do plans expire?</h3>
-            <p style="margin-bottom: 0;">Unused eSIMs don’t expire. Once activated, most plans are good for 7–30 days, depending on what you buy.</p>
-        </div>
-        <div style="border-bottom: 1px solid #e6eafe; padding: 1.5rem;">
-            <h3 style="color: #1530BB; margin-bottom: 0.5rem;">How’s the support?</h3>
-            <p style="margin-bottom: 0;">Actually good: live chat and email, plus helpful guides on the site.</p>
-        </div>
-        <div style="padding: 1.5rem;">
-            <h3 style="color: #1530BB; margin-bottom: 0.5rem;">Can I get a refund?</h3>
-            <p style="margin-bottom: 0;">You might, but AloSIM can be strict. Don’t activate your plan until you know you’ll use it.</p>
-        </div>
+    <div class="content-faq-item">
+      <h3>Does AloSIM include a phone number</h3>
+      <p>It can. AloSIM partners with Hushed to offer a free international phone number, set up separately inside the AloSIM app after you buy a plan. It's a second line for calls or texts, not a swap for your existing number.</p>
     </div>
-
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What's the best AloSIM discount code?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Use ALOSAVE for 15% off all plans, valid everywhere they sell eSIMs."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is my phone compatible?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "If your phone supports eSIM (iPhone XS/XR or newer, Google Pixel 4+, recent Samsungs), you’re set."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do plans expire?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Unused eSIMs don’t expire. Once activated, most plans are good for 7–30 days, depending on what you buy."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How’s the support?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Live chat and email support, plus helpful guides on the AloSIM website."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I get a refund?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Refunds are possible, but AloSIM can be strict. Don’t activate your plan until you know you’ll use it."
-      }
-    }
-  ]
-}
-</script>
-
-
-    <!-- Call to Action -->
-    <div style="background: linear-gradient(135deg, #f3f6fd 0%, #e6eafe 100%); color: #132B43; padding: 2rem; border-radius: 12px; text-align: center; margin: 3rem 0; border: 2px solid #1530BB;">
-        <h2 style="color: #132B43; margin-bottom: 1rem;">Get 15% Off Your Next AloSIM eSIM</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #132B43;">Use promo code <strong style="color: #1530BB;">ALOSAVE</strong> for 15% off. Don’t overpay for data abroad.</p>
-        <p style="margin-bottom: 0; color: #132B43;">Travel easy, travel connected, and don’t sweat about SIM cards again.</p>
+    <div class="content-faq-item">
+      <h3>Can I get a refund if the eSIM doesn't work</h3>
+      <p>Yes, AloSIM advertises a refund for eSIMs that fail to connect or turn out incompatible with your device. That guarantee applies before you've made real use of the data, so don't activate a plan until you're ready to actually use it.</p>
     </div>
+    <div class="content-faq-item">
+      <h3>Does an unused AloSIM plan expire</h3>
+      <p>No. You can buy ahead of a trip and the eSIM sits unused until you install and activate it, so buying early doesn't cost you data.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Fixed data or unlimited, which should I pick</h3>
+      <p>If you can estimate your usage, a fixed-GB plan is usually cheaper. If you'd rather not track a data meter, AloSIM's unlimited plans cover that without switching to a different provider.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What is the best AloSIM promo code right now?",
+        "acceptedAnswer":{"@type":"Answer","text":"ALOSAVE gives 15% off all AloSIM plans, fixed-GB or unlimited."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does AloSIM include a phone number?",
+        "acceptedAnswer":{"@type":"Answer","text":"AloSIM partners with Hushed to offer a free international phone number, set up separately inside the AloSIM app after purchase. It's a second line, not a replacement for your existing number."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I get a refund if an AloSIM eSIM doesn't work?",
+        "acceptedAnswer":{"@type":"Answer","text":"AloSIM advertises a refund for eSIMs that fail to connect or are incompatible with the device, applicable before the plan has seen real use."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does an unused AloSIM plan expire?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. An AloSIM eSIM can be bought ahead of a trip and sits unused with no expiration until it's installed and activated."}
+      },
+      {
+        "@type":"Question",
+        "name":"Should I pick a fixed-GB or unlimited AloSIM plan?",
+        "acceptedAnswer":{"@type":"Answer","text":"A fixed-GB plan is usually cheaper if usage can be estimated in advance. An unlimited plan avoids tracking a data meter without needing to switch providers."}
+      }
+    ]
+  }
+  </script>
 </div>
