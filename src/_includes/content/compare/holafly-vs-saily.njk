@@ -1,0 +1,131 @@
+<!-- Holafly vs Saily Comparison Content -->
+<div class="content-section">
+
+  {% set holaflyPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set sailyPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>Holafly</strong> for a flat unlimited price with no gigabyte counting at all. Pick <strong>Saily</strong> if you want to pay per GB but get a real security bundle (ad blocking, malware blocking, a virtual-location tool) thrown in, since it's built by NordVPN's parent company. Both were blocked from new purchases in Turkey by the country's telecom regulator starting mid-2025, so that's a wash either way if Turkey's on the itinerary.
+    </p>
+  </div>
+
+  <h2>The Core Difference: Unlimited Flat Rate vs. Metered Plus Security Bundle</h2>
+  <p>
+    Holafly's entire pitch is not having to think about data: one flat price per day, per country or region, and it just keeps working. Saily prices by the gigabyte instead, which is usually cheaper for a light user, but every Saily plan bundles in ad blocking, malware and phishing site blocking, and a virtual-location tool as standard, not an add-on. If you'd normally pay for a VPN separately when traveling, that's already priced into a Saily plan.
+  </p>
+  <p>
+    Saily also sells one universal eSIM that keeps working as you cross into a new supported country, rather than a separate profile per destination. Holafly plans are scoped to the specific country or region you buy, so a multi-country trip covering destinations outside that region needs a new plan.
+  </p>
+
+  <h2>Price Snapshot (before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Holafly</th>
+          <th>Saily</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States</td><td>$1.99/day (unlimited)</td><td>$3.99 (1GB)</td></tr>
+        <tr><td>Europe regional</td><td>$1.99/day (unlimited)</td><td>$4.99 (1GB)</td></tr>
+        <tr><td>Global</td><td>$9.90/day (unlimited)</td><td>$8.99 (1GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Holafly's number is per day of unlimited use; Saily's is per gigabyte. A short, light-data trip is usually cheaper on Saily; a longer or data-heavy trip usually favors Holafly's flat rate.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Holafly:</strong> {{ providerA.primaryCode }}, {{ holaflyPrimary.discount | lower }}. <a href="/holafly/">Full code list &rarr;</a></li>
+      <li><strong>Saily:</strong> {{ providerB.primaryCode }}, {{ sailyPrimary.discount | lower }}. <a href="/saily/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Holafly's code is ours; Saily doesn't run the kind of affiliate program that supports a code like that, so its code is the best public one we've verified, applying storewide rather than being limited to first-time buyers.</p>
+  </div>
+
+  <h2>Is Holafly or Saily the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Holafly if&hellip;</h3>
+      <ul>
+        <li>You genuinely don't know how much data you'll use</li>
+        <li>Heavy streaming, video calls, or hotspot use</li>
+        <li>China is on the itinerary and you want the built-in VPN</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with Saily if&hellip;</h3>
+      <ul>
+        <li>You'd normally pay for a VPN or ad-blocker separately when traveling anyway</li>
+        <li>Multi-country trip where you don't want a new eSIM at every border</li>
+        <li>Light data user who'd rather pay per GB than a flat unlimited rate</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Holafly's China eSIM has a VPN built in; Saily's security tools don't cover China the same way.</strong> Holafly's China plan lets Google Maps, WhatsApp, and Gmail work without installing anything extra. Saily's bundled tools are ad and malware blocking plus a virtual-location switch, not a China-specific bypass, so a Saily user still needs a separate solution for China.
+  </p>
+  <p>
+    <strong>Both were hit by the same Turkey purchase block.</strong> Saily and Holafly are both among the eSIM apps whose sites and apps were blocked by Turkey's telecom regulator (BTK) starting mid-2025. On either provider, an eSIM bought and installed before you land keeps working; you just can't buy or top up while physically inside the country.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Holafly vs Saily FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Holafly or Saily</h3>
+      <p>Depends on usage. Saily is usually cheaper for light data use on a short trip. Holafly is usually cheaper, or at least less stressful, for heavy data use since the flat price doesn't change no matter how much is used.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either come with a VPN</h3>
+      <p>Saily bundles ad blocking, malware/phishing blocking, and a virtual-location tool into every plan as standard. Holafly's China-specific eSIM includes a built-in VPN just for that destination; its other plans don't include one.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I use one eSIM across multiple countries</h3>
+      <p>Saily's is designed for that: one universal eSIM keeps working as you cross into a new supported country. Holafly plans are scoped to the specific country or region purchased.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Do Holafly and Saily work in Turkey</h3>
+      <p>Both had their websites and apps blocked by Turkey's telecom regulator starting mid-2025. An eSIM bought and installed before arrival keeps working on either provider; neither can be purchased or topped up while physically inside Turkey.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Holafly or Saily?",
+        "acceptedAnswer":{"@type":"Answer","text":"It depends on usage. Saily is usually cheaper for light data use on a short trip. Holafly is usually cheaper, or at least less stressful, for heavy data use since its flat price doesn't change no matter how much is used."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Holafly or Saily come with a VPN?",
+        "acceptedAnswer":{"@type":"Answer","text":"Saily bundles ad blocking, malware and phishing blocking, and a virtual-location tool into every plan. Holafly's China-specific eSIM includes a built-in VPN just for that destination; its other plans don't include one."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can one eSIM be used across multiple countries on Holafly or Saily?",
+        "acceptedAnswer":{"@type":"Answer","text":"Saily is designed for that: one universal eSIM keeps working across supported countries. Holafly plans are scoped to the specific country or region purchased."}
+      },
+      {
+        "@type":"Question",
+        "name":"Do Holafly and Saily work in Turkey?",
+        "acceptedAnswer":{"@type":"Answer","text":"Both had their websites and apps blocked by Turkey's telecom regulator starting mid-2025. An eSIM bought and installed before arrival keeps working on either provider; neither can be purchased or topped up while physically inside Turkey."}
+      }
+    ]
+  }
+  </script>
+</div>

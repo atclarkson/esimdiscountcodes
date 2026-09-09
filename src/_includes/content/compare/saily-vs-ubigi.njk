@@ -1,0 +1,131 @@
+<!-- Saily vs Ubigi Comparison Content -->
+<div class="content-section">
+
+  {% set sailyPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set ubigiPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>Saily</strong> for a one-off eSIM with a security bundle (VPN-style ad and malware blocking) already included, backed by NordVPN's parent company. Pick <strong>Ubigi</strong> if you want a recurring monthly or annual plan for a destination you visit often, backed by an established telecom rather than a travel-focused reseller.
+    </p>
+  </div>
+
+  <h2>The Core Difference: One-Off Security Bundle vs. Recurring Subscription</h2>
+  <p>
+    Both providers price by the gigabyte, and the base rates land close together, but the products underneath are built for different situations. Saily is Nord Security's eSIM spin-off (the company behind NordVPN), and every plan bundles in ad blocking, malware and phishing site blocking, and a virtual-location tool as standard. It also sells one universal eSIM that keeps working as you cross into a new supported country, so a multi-country trip doesn't mean reinstalling at each border.
+  </p>
+  <p>
+    Ubigi is a brand of Transatel, an MVNO enabler running cellular connectivity since the early 2000s and now part of NTT Group. Instead of a security bundle, its differentiator is plan structure: alongside one-off fixed-GB plans, it sells recurring monthly (cancellable only after a 3-month minimum) and annual (paid upfront, non-cancellable and non-refundable for the year) subscriptions. Neither Saily nor Ubigi rolls over unused data to the next period.
+  </p>
+
+  <h2>Price Snapshot (before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Saily</th>
+          <th>Ubigi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States</td><td>$3.99 (1GB)</td><td>$4 (1GB)</td></tr>
+        <tr><td>France</td><td>$3.99 (1GB)</td><td>$4 (3GB)</td></tr>
+        <tr><td>Global</td><td>$8.99 (1GB)</td><td>$25 (1GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Country-level pricing is close between the two; the gap widens on regional and global plans, where Ubigi runs well above Saily. Ubigi's recurring option is the thing Saily has no equivalent of at all.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Saily:</strong> {{ providerA.primaryCode }}, {{ sailyPrimary.discount | lower }}. <a href="/saily/">Full code list &rarr;</a></li>
+      <li><strong>Ubigi:</strong> {{ providerB.primaryCode }}, {{ ubigiPrimary.discount | lower }}. <a href="/ubigi/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ubigi's code is ours; Saily doesn't run the kind of affiliate program that supports a code like that, so its code is the best public one we've verified. Both apply storewide, not just to a first order.</p>
+  </div>
+
+  <h2>Is Saily or Ubigi the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Saily if&hellip;</h3>
+      <ul>
+        <li>You'd normally pay for a VPN or ad-blocker separately when traveling anyway</li>
+        <li>Multi-country trip where you don't want a new eSIM at every border</li>
+        <li>You just want a one-off plan, no recurring commitment</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with Ubigi if&hellip;</h3>
+      <ul>
+        <li>You visit the same country often enough that a recurring monthly plan beats a fresh eSIM every trip</li>
+        <li>You already drive a connected car from one of Ubigi's automaker partners</li>
+        <li>You'd rather buy from an established MVNO than a travel-focused reseller</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Saily was blocked from new purchases in Turkey.</strong> Saily's website and app were among those blocked by Turkey's telecom regulator (BTK) starting mid-2025, alongside Holafly, Airalo, and several others. An eSIM bought and installed before landing keeps working; it just can't be purchased or topped up while physically inside the country. We haven't found the same reporting for Ubigi, so don't assume it's affected the same way without checking closer to your trip.
+  </p>
+  <p>
+    <strong>A Ubigi recurring plan is a real commitment.</strong> The monthly tier locks in for three months minimum before cancellation is possible, and the annual tier can't be cancelled or refunded at all during its 12-month term. Saily carries none of that risk since every plan is a one-time purchase.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Saily vs Ubigi FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Saily or Ubigi</h3>
+      <p>Country-level pricing is close, but Ubigi runs noticeably higher on regional and global plans. Ubigi's recurring subscription can work out cheaper than repeat one-off purchases for a destination visited often.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either include a VPN or security bundle</h3>
+      <p>Saily does: ad blocking, malware and phishing blocking, and a virtual-location tool come standard on every plan. Ubigi has no equivalent security bundle mentioned on its site.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either offer a subscription plan</h3>
+      <p>Ubigi does, with monthly and annual recurring tiers. Saily only sells one-time plans, though its Ultra tier is a separate $59.99/month subscription bundling a full NordVPN/NordPass/NordLayer/Incogni suite rather than a recurring eSIM data plan itself.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does Ubigi work in Turkey like Saily does</h3>
+      <p>We've confirmed Saily was blocked from new purchases in Turkey starting mid-2025. We haven't found the same confirmation for Ubigi either way, so check closer to your trip rather than assuming.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Saily or Ubigi?",
+        "acceptedAnswer":{"@type":"Answer","text":"Country-level pricing is close, but Ubigi runs noticeably higher on regional and global plans. Ubigi's recurring subscription can work out cheaper than repeat one-off purchases for a destination visited often."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Saily or Ubigi include a VPN or security bundle?",
+        "acceptedAnswer":{"@type":"Answer","text":"Saily does: ad blocking, malware and phishing blocking, and a virtual-location tool come standard on every plan. Ubigi has no equivalent security bundle mentioned on its site."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Saily or Ubigi offer a recurring subscription plan?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ubigi does, with monthly and annual recurring tiers. Saily only sells one-time eSIM plans; its separate Ultra tier is a $59.99 per month subscription bundling a NordVPN/NordPass/NordLayer/Incogni suite rather than a recurring data plan."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Ubigi have the same Turkey purchase block as Saily?",
+        "acceptedAnswer":{"@type":"Answer","text":"Saily was confirmed blocked from new purchases in Turkey starting mid-2025. The same has not been confirmed for Ubigi, so check closer to the trip rather than assuming it applies."}
+      }
+    ]
+  }
+  </script>
+</div>

@@ -22,5 +22,37 @@
     "title": "AloSIM vs Airalo: Which Pay-Per-GB eSIM Wins? (2026 Comparison)",
     "description": "AloSIM vs Airalo compared: near-identical per-GB pricing, AloSIM's bundled Hushed phone number, discount codes for new vs. repeat buyers, and which one fits your trip.",
     "lastUpdated": "2026-09-09"
+  },
+  {
+    "slug": "holafly-vs-ubigi",
+    "providerA": "holafly",
+    "providerB": "ubigi",
+    "title": "Holafly vs Ubigi: Unlimited Flat Rate or Recurring MVNO Plan? (2026 Comparison)",
+    "description": "Holafly vs Ubigi compared: flat unlimited pricing vs. per-GB recurring subscriptions, the connected-car MVNO behind Ubigi, discount codes, and which one fits your trip.",
+    "lastUpdated": "2026-09-09"
+  },
+  {
+    "slug": "holafly-vs-saily",
+    "providerA": "holafly",
+    "providerB": "saily",
+    "title": "Holafly vs Saily: Unlimited or Per-GB Plus VPN? (2026 Comparison)",
+    "description": "Holafly vs Saily compared: flat unlimited pricing vs. per-GB with a bundled security suite, the shared Turkey purchase block, discount codes, and which one fits your trip.",
+    "lastUpdated": "2026-09-09"
+  },
+  {
+    "slug": "holafly-vs-alosim",
+    "providerA": "holafly",
+    "providerB": "alosim",
+    "title": "Holafly vs AloSIM: Unlimited or a Free Phone Number? (2026 Comparison)",
+    "description": "Holafly vs AloSIM compared: unlimited-only vs. fixed-GB and unlimited both available, AloSIM's bundled Hushed phone number, discount codes, and which one fits your trip.",
+    "lastUpdated": "2026-09-09"
+  },
+  {
+    "slug": "saily-vs-ubigi",
+    "providerA": "saily",
+    "providerB": "ubigi",
+    "title": "Saily vs Ubigi: Security Bundle or Recurring MVNO Plan? (2026 Comparison)",
+    "description": "Saily vs Ubigi compared: a bundled VPN-style security suite vs. recurring monthly and annual subscriptions, the connected-car MVNO behind Ubigi, discount codes, and which one fits your trip.",
+    "lastUpdated": "2026-09-09"
   }
 ]

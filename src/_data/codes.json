@@ -340,6 +340,17 @@
         "expiryDate": null,
         "isPrimary": false,
         "type": "public"
+      },
+      {
+        "code": "E3MQXBBY",
+        "discount": "CODE EXPIRED",
+        "description": "No longer accepted at Ubigi checkout, confirmed expired by direct testing.",
+        "verified": true,
+        "lastTested": "2026-09-08",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public",
+        "isInvalid": true
       }
     ],
     "totalScore": "2.5",
