@@ -2552,6 +2552,14 @@ main {
   margin-bottom: 1.5rem;
 }
 
+.compare-shop-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.5rem 0 2rem;
+}
+
 .footer-compare-list a {
   font-weight: 600;
 }

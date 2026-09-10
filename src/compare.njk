@@ -47,6 +47,25 @@ eleventyComputed:
     {% include "content/compare/" + cmpSlug + ".njk" %}
   </section>
 
+  <section class="compare-shop-links">
+    {% set outUrlA = providerA.affiliateUrl or providerA.url %}
+    {% set isAffiliateOutA = providerA.affiliateUrl and outUrlA == providerA.affiliateUrl %}
+    {% set outUrlB = providerB.affiliateUrl or providerB.url %}
+    {% set isAffiliateOutB = providerB.affiliateUrl and outUrlB == providerB.affiliateUrl %}
+    {% if outUrlA %}
+    <a class="get-deal-btn" href="{{ outUrlA }}" target="_blank" rel="{% if isAffiliateOutA %}sponsored noopener{% else %}noopener{% endif %}">
+      <i class="fas fa-arrow-up-right-from-square"></i>
+      <span>Shop {{ providerA.name }}<span class="sr-only"> (opens {{ providerA.name }}'s site in a new tab)</span></span>
+    </a>
+    {% endif %}
+    {% if outUrlB %}
+    <a class="get-deal-btn" href="{{ outUrlB }}" target="_blank" rel="{% if isAffiliateOutB %}sponsored noopener{% else %}noopener{% endif %}">
+      <i class="fas fa-arrow-up-right-from-square"></i>
+      <span>Shop {{ providerB.name }}<span class="sr-only"> (opens {{ providerB.name }}'s site in a new tab)</span></span>
+    </a>
+    {% endif %}
+  </section>
+
   <section class="code-disclosure">
     <p>
       <i class="fas fa-circle-info"></i>
