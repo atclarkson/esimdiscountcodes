@@ -1,0 +1,137 @@
+<!-- AloSIM vs SimLocal Comparison Content -->
+<div class="content-section">
+
+  {% set alosimPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set simlocalPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Both sell fixed-GB eSIM data at similar prices for small plans, so the real difference isn't the gigabyte rate: it's what each provider bundles around it. AloSIM throws in a free international phone number through Hushed. SimLocal skips the extras and instead offers a genuinely no-questions refund policy, 24/7 WhatsApp support, and even a few physical airport stores.
+    </p>
+  </div>
+
+  <h2>The Core Similarity: Both Are Pay-Per-GB, Priced Close Together</h2>
+  <p>
+    Neither AloSIM nor SimLocal sells unlimited-only like <a href="/holafly/">Holafly</a>. On a small single-country plan the entry prices land close together: AloSIM's US plans start around $4.50 for 1GB, and SimLocal's own site lists global options in roughly the same $4-5 per-GB range. Where they diverge is plan structure: AloSIM prices in single-GB increments, while SimLocal also sells larger bundled plans (its own site shows a UK plan at $13.50 for 20GB, and a US plan at $7.25 for 3GB) that work out cheaper per gigabyte the more data you buy at once.
+  </p>
+
+  <h2>Price Snapshot (before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>AloSIM</th>
+          <th>SimLocal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States, small plan</td><td>$4.50 (1GB)</td><td>$7.25 (3GB), roughly $2.42/GB</td></tr>
+        <tr><td>Larger regional/country bundle</td><td>Priced per GB, no bundled discount tier</td><td>$13.50 (20GB) in the UK, roughly $0.68/GB</td></tr>
+        <tr><td>Refund policy</td><td>Only if the eSIM fails to activate or is incompatible</td><td>"No Quibble Refunds": any reason, no justification needed</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">AloSIM and SimLocal don't sell identical plan sizes, so this isn't a like-for-like unit price. The pattern that holds either way: SimLocal's bundled plans get cheaper per GB the bigger you buy, while AloSIM's per-GB rate stays flat regardless of plan size.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>AloSIM:</strong> {{ providerA.primaryCode }}, {{ alosimPrimary.discount | lower }}. <a href="/alosim/">Full code details &rarr;</a></li>
+      <li><strong>SimLocal:</strong> {{ providerB.primaryCode }}, {{ simlocalPrimary.discount | lower }} (our own code). <a href="/simlocal/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">SimLocal's primary code shown here is ours, so we show it first on that provider's own page; it's not automatically the bigger discount of the two. AloSIM's is a public code, not ours.</p>
+  </div>
+
+  <h2>Is AloSIM or SimLocal the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with AloSIM if&hellip;</h3>
+      <ul>
+        <li>You want a free international number bundled in without adding a separate app</li>
+        <li>You want the choice of a fixed-GB or unlimited plan from the same checkout</li>
+        <li>You're buying a small, single-country plan where AloSIM's flat per-GB rate is already competitive</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with SimLocal if&hellip;</h3>
+      <ul>
+        <li>You want a refund option that doesn't hinge on the eSIM technically failing to connect</li>
+        <li>You'd rather message support on WhatsApp than dig through an app's help section</li>
+        <li>You're buying a bigger data bundle, or you're studying abroad and want a plan built for a longer stay</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>AloSIM's refund guarantee has a timing catch.</strong> It only covers eSIMs that fail to connect or turn out incompatible with your device, not ones you activated and simply didn't use much. SimLocal's "No Quibble Refunds" policy is broader: it doesn't require proving the eSIM was faulty.
+  </p>
+  <p>
+    <strong>Neither provider's support looks like what the badges imply.</strong> AloSIM lists live chat support; SimLocal's 24/7 channel is WhatsApp rather than a website chat widget. If you specifically want to message from your phone mid-trip, SimLocal's approach fits that better even though it's not labeled "live chat" on a browser.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>AloSIM vs SimLocal FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, AloSIM or SimLocal</h3>
+      <p>For a small single-country plan, pricing is close. For a bigger data bundle, SimLocal's larger plans work out cheaper per gigabyte since AloSIM prices in flat single-GB increments with no bundled discount tier.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which has the better refund policy</h3>
+      <p>SimLocal's is broader: its "No Quibble Refunds" policy doesn't require proving the eSIM was faulty. AloSIM only refunds eSIMs that fail to connect or are incompatible with your device.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either include a phone number</h3>
+      <p>AloSIM does, through a partnership with Hushed: a free international number you set up inside the AloSIM app after buying a plan. SimLocal has no equivalent feature.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I buy either eSIM in person, not just online</h3>
+      <p>SimLocal runs a small number of physical stores at select airports, on top of its app and website. AloSIM is app-and-browser only.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either have plans for a longer stay, like studying abroad</h3>
+      <p>SimLocal sells student-specific eSIM plans priced for longer stays. AloSIM's lineup is fixed-GB or unlimited plans without a dedicated long-stay tier.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, AloSIM or SimLocal?",
+        "acceptedAnswer":{"@type":"Answer","text":"For a small single-country plan, pricing is close. For a bigger data bundle, SimLocal's larger plans work out cheaper per gigabyte since AloSIM prices in flat single-GB increments with no bundled discount tier."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which has the better refund policy, AloSIM or SimLocal?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal's No Quibble Refunds policy is broader and doesn't require proving the eSIM was faulty. AloSIM only refunds eSIMs that fail to connect or are incompatible with the device."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does AloSIM or SimLocal include a phone number?",
+        "acceptedAnswer":{"@type":"Answer","text":"AloSIM does, through a partnership with Hushed: a free international number set up inside the AloSIM app after purchase. SimLocal has no equivalent feature."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I buy an AloSIM or SimLocal eSIM in person?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal runs a small number of physical stores at select airports, on top of its app and website. AloSIM is app-and-browser only."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does AloSIM or SimLocal offer plans for longer stays like studying abroad?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal sells student-specific eSIM plans priced for longer stays. AloSIM offers fixed-GB or unlimited plans without a dedicated long-stay tier."}
+      }
+    ]
+  }
+  </script>
+</div>

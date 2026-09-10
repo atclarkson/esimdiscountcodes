@@ -54,5 +54,13 @@
     "title": "Saily vs Ubigi: Security Bundle or Recurring MVNO Plan? (2026 Comparison)",
     "description": "Saily vs Ubigi compared: a bundled VPN-style security suite vs. recurring monthly and annual subscriptions, the connected-car MVNO behind Ubigi, discount codes, and which one fits your trip.",
     "lastUpdated": "2026-09-09"
+  },
+  {
+    "slug": "alosim-vs-simlocal",
+    "providerA": "alosim",
+    "providerB": "simlocal",
+    "title": "AloSIM vs SimLocal: Bundled Number or No-Quibble Refund? (2026 Comparison)",
+    "description": "AloSIM vs SimLocal compared: similar per-GB pricing, AloSIM's bundled Hushed phone number vs SimLocal's no-quibble refunds and WhatsApp support, discount codes, and which one fits your trip.",
+    "lastUpdated": "2026-09-10"
   }
 ]

@@ -1,214 +1,165 @@
-<!-- SimLocal Content Template -->
+<!-- SimLocal Content -->
 <div class="content-section">
-    <!-- Main heading -->
-    {% set primary = provider.codes | findCode(provider.primaryCode) %}
-    <h2>Best SimLocal Promo Codes for {{ buildMonthYear }}</h2>
-    
-    <!-- Introduction -->
-    <p>SimLocal hooks you up with local eSIM plans for travel in <strong>150+ countries</strong>. Their platform is simple, the plans are cheap, and you’ll avoid those tourist-trap roaming charges. If you just need fast data and don’t care about fluff, SimLocal gets it done.</p>
 
-    <!-- Key Features Highlight -->
-    <div class="feature-highlights" style="background: linear-gradient(135deg, #e0f2f1 0%, #009c8f0d 100%); border: 2px solid #009C8F; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
-        <h2 style="color: #3A474E; margin-bottom: 1.5rem;">What Makes SimLocal Stand Out?</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #3A474E;">Local-Focused eSIMs</h3>
-                <p>Cheap, local data for 150+ countries: not global, not fancy, just practical</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #3A474E;">Quick Setup</h3>
-                <p>eSIMs delivered instantly, works with all recent phones</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #3A474E;">Cheap Plans</h3>
-                <p>Plans usually cost less than “big name” eSIM providers</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #3A474E;">Easy Refunds</h3>
-                <p>Refunds available if you can’t get it working: no drama</p>
-            </div>
-        </div>
-    </div>
+  <!-- Quick Answer -->
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Best SimLocal Promo Code &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Use <strong>{{ provider.primaryCode }}</strong> for <strong>10% off</strong> any SimLocal eSIM plan. It's our own code, so we show it first here. Four other public codes below all give the same 10% (or a smaller 5%), so there's no real reason to hunt further.
+      <span class="callout-meta">Confirmed active <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("MMM d, yyyy") }}</time>.</span>
+    </p>
+  </div>
 
-    <!-- How SimLocal Works -->
-    <h2>How SimLocal eSIM Works</h2>
-    <p>Buy, scan, connect. Browse plans for your destination, pay online, and get a QR code to install your eSIM in minutes. Manage everything from your SimLocal account. No contracts, no stores, just data.</p>
+  <!-- Headline -->
+  <h2>What Actually Makes SimLocal Different</h2>
+  <p>
+    SimLocal runs a "No Quibble Refunds" policy: cancel and get your money back if you change your mind, no explanation required. That's a genuinely more relaxed return policy than most eSIM sellers on this site offer, where a refund usually depends on the eSIM never having been activated.
+  </p>
+  <p>
+    Support is also worth flagging because it's not what the badge on this page implies. SimLocal doesn't run a website live-chat widget: its 24/7 support channel is <strong>WhatsApp</strong>, plus email and a help centre. If you're the type who wants to message support from your phone mid-trip rather than dig up a laptop, that's actually a better fit than a chat bubble buried on a desktop site.
+  </p>
+
+  <img class="content-photo"
+       src="https://media.adamandlinds.com/photos/large/f29a530b-5816-493f-a657-884ae7fdd3b6.jpg"
+       alt="Adam taking a selfie indoors in an Airbnb in Southampton, England, before heading on to London"
+       width="3022" height="3022">
+  <p class="content-photo-caption">Southampton, England, on a family trip through the UK. Not proof this specific trip ran on SimLocal, but the UK is one of the destinations SimLocal calls out by name.</p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Active codes</h3>
     <ul>
-        <li><strong>Choose your country</strong> and see available eSIM plans</li>
-        <li><strong>Pay online</strong> and get instant delivery</li>
-        <li><strong>Scan QR code</strong> to activate</li>
-        <li><strong>Use data</strong> until your plan runs out (valid for up to 12 months)</li>
+      <li><strong>ADAMANDLINDS</strong>: 10% off all plans (our own code)</li>
+      <li><strong>EMMANUEL</strong>: 10% off eSIM</li>
+      <li><strong>LUKEPALMS</strong>: 10% off first eSIM</li>
+      <li><strong>SAVANNAH</strong>: extra 10% off your plan</li>
+      <li><strong>TWOROAMING</strong>: 5% off your order</li>
     </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">If a code does not apply, refresh the cart or try a private window, then retry.</p>
+  </div>
 
-    <!-- Comparison with Major Competitors -->
-    <h2>SimLocal vs. Top eSIM Competitors</h2>
-    <p>How does SimLocal compare to Airalo, Holafly, and Saily?</p>
-    <table style="margin: 2rem 0;">
-        <thead>
-            <tr>
-                <th>Feature</th>
-                <th style="background: #e0f2f1; color: #009C8F;"><strong>SimLocal</strong></th>
-                <th>Airalo</th>
-                <th>Holafly</th>
-                <th>Saily</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Price Category</strong></td>
-                <td style="background: #fefcfd;">Cheap</td>
-                <td>Average</td>
-                <td>Cheap</td>
-                <td>Cheap</td>
-            </tr>
-            <tr>
-                <td><strong>Countries Covered</strong></td>
-                <td style="background: #fefcfd;"><span style="color: #009C8F;">150+</span></td>
-                <td>200+</td>
-                <td>190+</td>
-                <td>200+</td>
-            </tr>
-            <tr>
-                <td><strong>24/7 Support</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Live Chat Support</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Short-term Plans</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-check" style="color: #009C8F;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Easy Refund</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-check" style="color: #009C8F;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Best Discount Code</strong></td>
-                <td style="background: #fefcfd;"><strong>ADAMANDLINDS</strong> (10% off)</td>
-                <td>NEWTOAIRALO15 (15% off)</td>
-                <td>ADAMANDLINDS (5% off)</td>
-                <td>HELLOSAILY (15% off)</td>
-            </tr>
-        </tbody>
-    </table>
+  <!-- Real operational note instead of generic feature grid / comparison table -->
+  <h2>Two Details Most SimLocal Write-Ups Skip</h2>
+  <p>
+    SimLocal sells <strong>student-specific eSIM plans</strong> alongside its regular country and regional options, priced for longer stays rather than a short trip. If you're heading somewhere for a semester rather than a week, it's worth checking those instead of a standard tourist plan built around a shorter validity window.
+  </p>
+  <p>
+    It also runs a small footprint of physical stores at a handful of airports, on top of the app and website. Most competitors on this site are app-and-browser only, so a staffed counter is a genuine point of difference if you'd rather have someone walk you through setup in person than follow a help article at 30,000 feet.
+  </p>
+  <p>
+    The app itself can hold up to 10 stored eSIM profiles on one device, which matters if you keep old destination eSIMs around instead of deleting them after every trip.
+  </p>
 
-    <!-- Popular SimLocal Promo Codes -->
-    <h2>SimLocal Promo Codes {{ buildMonthYear }}</h2>
-    <ul>
-        <li><strong>{{ provider.primaryCode }}:</strong> {{ primary.discount }} (our own code, confirmed active {{ (primary.lastTested or buildTime) | fmtDate("MMMM yyyy") }})</li>
-        <li>EMMANUEL: 10% OFF eSIM</li>
-        <li>LUKEPALMS: 10% OFF first eSIM</li>
-        <li>SAVANNAH: Extra 10% OFF your plan</li>
-        <li>TWOROAMING: 5% OFF your order</li>
-    </ul>
-    <p style="font-size: 1rem; color: #3A474E; margin-bottom: 2rem;">Click through to <a href="https://simlocal.com?ref=YOURCODE" style="color:#009C8F;"><strong>SimLocal</strong></a> and use your chosen code at checkout.</p>
+  <!-- How to -->
+  <h2>Apply a SimLocal Code in 3 Steps</h2>
+  <div class="content-box">
+    <ol>
+      <li>Copy <strong>ADAMANDLINDS</strong></li>
+      <li>Pick a country, regional, or student plan for your destination on SimLocal</li>
+      <li>Paste the code in the promo field at checkout and confirm the 10% price drop before paying</li>
+    </ol>
+    <p class="content-note">Discount shows before payment is completed.</p>
+  </div>
 
-    <!-- Key Details and Quick Facts -->
-    <div style="background: #e0f2f1; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #009C8F; margin-bottom: 2rem;">
-        <strong>SimLocal Quick Facts:</strong>
-        <ul style="margin: 0.5rem 0 0 1rem;">
-            <li>Works in 150+ countries</li>
-            <li>No calls or SMS (data only)</li>
-            <li>Short-term plans, usually <b>1GB to 5GB</b></li>
-            <li>Valid up to 12 months after purchase</li>
-            <li>Not reusable or top-up, just buy a new plan as needed</li>
-            <li>Refunds if it doesn't work</li>
-        </ul>
+  <!-- Decision help -->
+  <h2>Is SimLocal the Right Pick for Your Trip</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Good fit</h3>
+      <ul>
+        <li>You want a no-questions refund if the eSIM doesn't work out</li>
+        <li>You'd rather message support on WhatsApp than dig through a help widget</li>
+        <li>You're studying abroad and want a plan built for a longer stay</li>
+      </ul>
     </div>
-
-    <!-- FAQ Section -->
-    <h2>Frequently Asked Questions</h2>
-    <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 2rem 0;">
-        <div style="border-bottom: 1px solid #e0f2f1; padding: 1.5rem;">
-            <h3 style="color: #009C8F; margin-bottom: 0.5rem;">What's the best SimLocal discount code?</h3>
-            <p style="margin-bottom: 0;">Our own code <strong>{{ provider.primaryCode }}</strong> gets you {{ primary.discount | lower }} on all destinations. It's shown first here because it's ours, not necessarily because it's the single best deal.</p>
-        </div>
-        <div style="border-bottom: 1px solid #e0f2f1; padding: 1.5rem;">
-            <h3 style="color: #009C8F; margin-bottom: 0.5rem;">Does SimLocal work on my phone?</h3>
-            <p style="margin-bottom: 0;">Any modern phone with eSIM support (iPhone XS or newer, Pixel 4+, Samsung S20+, etc) will work. If you bought your device in China, check if eSIM is enabled.</p>
-        </div>
-        <div style="border-bottom: 1px solid #e0f2f1; padding: 1.5rem;">
-            <h3 style="color: #009C8F; margin-bottom: 0.5rem;">How fast is activation?</h3>
-            <p style="margin-bottom: 0;">Instant. Scan the QR and you’re online in a minute or two.</p>
-        </div>
-        <div style="border-bottom: 1px solid #e0f2f1; padding: 1.5rem;">
-            <h3 style="color: #009C8F; margin-bottom: 0.5rem;">Can I get a refund?</h3>
-            <p style="margin-bottom: 0;">Yep. If your eSIM doesn’t work, they’ll refund you. Don’t activate the plan until you land, just in case.</p>
-        </div>
-        <div style="padding: 1.5rem;">
-            <h3 style="color: #009C8F; margin-bottom: 0.5rem;">Is support 24/7?</h3>
-            <p style="margin-bottom: 0;">Nope. Support is available, but not 24/7 and no live chat. If you want hand-holding, try Airalo or Holafly instead.</p>
-        </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Consider alternatives</h3>
+      <ul>
+        <li>You want 24/7 live chat on the website itself: try <a href="/holafly/">Holafly</a> or <a href="/saily/">Saily</a></li>
+        <li>You want unlimited data instead of a fixed GB bucket: see <a href="/holafly/">Holafly</a></li>
+        <li>You're not near one of SimLocal's airport store locations and don't need in-person setup help anyway</li>
+      </ul>
     </div>
+  </div>
 
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What's the best SimLocal discount code?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our own code {{ provider.primaryCode }} gets {{ primary.discount | lower }} on all destinations. It's shown first because it's ours, not necessarily the single best deal."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does SimLocal work on my phone?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Any modern phone with eSIM support (iPhone XS or newer, Pixel 4+, Samsung S20+, etc) will work. If you bought your device in China, check if eSIM is enabled."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How fast is activation?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Instant. Scan the QR and you’re online in a minute or two."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I get a refund?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yep. If your eSIM doesn’t work, they’ll refund you. Don’t activate the plan until you land, just in case."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is support 24/7?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Nope. Support is available, but not 24/7 and no live chat. If you want hand-holding, try Airalo or Holafly instead."
-      }
-    }
-  ]
-}
-</script>
+  <p>
+    For device setup and eSIM basics that apply beyond SimLocal specifically, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
 
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Use the Code at Checkout</h2>
+    <p>Copy <code>ADAMANDLINDS</code> then paste in the promo field</p>
+    <p>10% off any SimLocal eSIM plan.</p>
+  </div>
 
-    <!-- Call to Action -->
-    <div style="background: linear-gradient(135deg, #e0f2f1 0%, #009c8f0d 100%); color: #3A474E; padding: 2rem; border-radius: 12px; text-align: center; margin: 3rem 0; border: 2px solid #009C8F;">
-        <h2 style="color: #3A474E; margin-bottom: 1rem;">Save on Your Next Trip</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #3A474E;">Use promo code <strong style="color: #009C8F;">ADAMANDLINDS</strong> for 10% off your SimLocal eSIM purchase.</p>
-        <p style="margin-bottom: 0; color: #3A474E;">Travel smart, pay less, and don’t get ripped off on data again.</p>
+  <!-- FAQ -->
+  <h2>SimLocal Promo Code FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>What is the best code right now</h3>
+      <p><strong>ADAMANDLINDS</strong>: 10% off all plans. It's our own code, shown first; most other working codes give the same 10%, with one at a smaller 5%.</p>
     </div>
+    <div class="content-faq-item">
+      <h3>Can I actually get a refund</h3>
+      <p>Yes. SimLocal advertises a "No Quibble Refunds" policy: get your money back if you change your mind, without needing to justify why.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Is there live chat support</h3>
+      <p>Not a website chat widget. SimLocal's 24/7 support channel is WhatsApp, alongside email and a help centre.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does SimLocal have plans for students studying abroad</h3>
+      <p>Yes, alongside its regular country and regional eSIMs, SimLocal sells student-specific plans priced for a longer stay than a typical short trip.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I buy a SimLocal eSIM in person</h3>
+      <p>At a handful of airport locations, yes. It's one of the only providers on this site with any physical retail presence at all; everyone else is app-and-browser only.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>How many eSIMs can I keep in the app</h3>
+      <p>Up to 10 stored eSIM profiles on one device, so old destination eSIMs don't need to be deleted after every trip.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What is the best SimLocal promo code right now?",
+        "acceptedAnswer":{"@type":"Answer","text":"ADAMANDLINDS gives 10% off all SimLocal plans. It's our own code, shown first; most other working codes give the same 10%, with one at a smaller 5%."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I actually get a refund from SimLocal?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. SimLocal advertises a No Quibble Refunds policy: get your money back if you change your mind, without needing to justify why."}
+      },
+      {
+        "@type":"Question",
+        "name":"Is there live chat support on SimLocal?",
+        "acceptedAnswer":{"@type":"Answer","text":"Not a website chat widget. SimLocal's 24/7 support channel is WhatsApp, alongside email and a help centre."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does SimLocal have student eSIM plans?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes, alongside its regular country and regional eSIMs, SimLocal sells student-specific plans priced for a longer stay than a typical short trip."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I buy a SimLocal eSIM in person?",
+        "acceptedAnswer":{"@type":"Answer","text":"At a handful of airport locations, yes, on top of the app and website."}
+      },
+      {
+        "@type":"Question",
+        "name":"How many eSIMs can the SimLocal app store?",
+        "acceptedAnswer":{"@type":"Answer","text":"Up to 10 stored eSIM profiles on one device."}
+      }
+    ]
+  }
+  </script>
 </div>
