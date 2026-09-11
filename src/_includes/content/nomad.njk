@@ -1,195 +1,158 @@
-<!-- Nomad Content Template -->
+<!-- Nomad Content -->
 <div class="content-section">
-    {% set primary = provider.codes | findCode(provider.primaryCode) %}
-    <!-- Main heading -->
-    <h2>Best Nomad eSIM Promo Codes for {{ buildMonthYear }}</h2>
-    
-    <!-- Introduction -->
-    <p>Nomad gives you fast, flexible eSIM data in over <strong>120 countries</strong>, with reliable speeds and clean pricing. It’s simple: pick a plan, scan, and go. No ridiculous markups.</p>
 
-    <!-- Key Features Highlight -->
-    <div class="feature-highlights" style="background: linear-gradient(135deg, #ffece6 0%, #ffe0d4 100%); border: 2px solid #FF4D00; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
-        <h2 style="color: #4A3A31; margin-bottom: 1.5rem;">What Makes Nomad Stand Out?</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #4A3A31;">Global Coverage</h3>
-                <p>120+ countries with single, easy-to-manage plans</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #4A3A31;">Instant Delivery</h3>
-                <p>QR code arrives in seconds: no waiting</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #4A3A31;">Transparent Pricing</h3>
-                <p>Always know the price in your local currency upfront</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #4A3A31;">Secure Payments</h3>
-                <p>Uses trusted rails: no shady stuff</p>
-            </div>
-        </div>
-    </div>
+  <!-- Quick Answer -->
+  {% set best1 = provider.codes | findCode("NOMTRAVEL20") %}
+  {% set best2 = provider.codes | findCode("NOMCYBER20") %}
+  <div class="content-callout">
+    <h2>Best Nomad Promo Code &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Use <strong>NOMTRAVEL20</strong> or <strong>NOMCYBER20</strong> for <strong>20% off</strong>, the best discount rate of Nomad's four working public codes. Both are found codes rather than ours (Nomad's affiliate program doesn't give us one of our own the way some other providers on this site do), and both currently apply the same discount, so either works.
+      <span class="callout-meta">Confirmed active <time datetime="{{ (best1.lastTested or buildTime) | fmtISO }}">{{ (best1.lastTested or buildTime) | fmtDate("MMM d, yyyy") }}</time>.</span>
+    </p>
+  </div>
 
-    <!-- How Nomad Works -->
-    <h2>How Nomad eSIM Works</h2>
-    <p>Pick your country (or go global), choose data size, pay online, and get a QR code immediately. Scan it, activate when you land, and manage all your eSIMs straight from your account/dashboard app: zero hassle.</p>
+  <!-- Headline -->
+  <h2>What Actually Makes Nomad Different</h2>
+  <p>
+    Nomad's regular plans work like most other eSIM apps on this site: pick a country, region, or global bundle, pay, scan, go. The real difference is a second product line called <strong>Global-EX</strong>: bigger bundles (10GB to 50GB) that stay valid for up to a year instead of the usual 7 to 30 days, with a per-GB rate that drops as data volume goes up, to roughly $2.58/GB on the largest bundles versus around $5.15/GB on the standard Global plan. That's built for someone who's actually living out of a bag for months at a time, not a two-week vacation, and it's not something <a href="/holafly/">Holafly</a> or <a href="/alosim/">AloSIM</a> offer on this site.
+  </p>
+  <p>
+    Nomad also covers <strong>200+ destinations</strong>, not the 120+ this page previously listed: that number had gone stale and has been corrected here.
+  </p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Active codes</h3>
     <ul>
-        <li><strong>Select plan:</strong> country-specific or global</li>
-        <li><strong>Pay online:</strong> in your currency, no surprises</li>
-        <li><strong>Install eSIM:</strong> QR arrives instantly</li>
-        <li><strong>Activate on arrival:</strong> your data’s ready</li>
+      {% for code in provider.codes %}
+      {% if not code.isInvalid %}
+      <li><strong>{{ code.code }}</strong>: {{ code.discount }}</li>
+      {% endif %}
+      {% endfor %}
     </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">If a code does not apply, refresh the cart or try a private window, then retry.</p>
+  </div>
 
-    <!-- Comparison with Competitors -->
-    <h2>Nomad vs. Other eSIM Providers</h2>
-    <p>Quick look at Nomad versus Airalo, Globalesim, and AloSIM:</p>
-    <table style="margin: 2rem 0;">
-        <thead>
-            <tr>
-                <th>Feature</th>
-                <th style="background: #ffece6; color: #FF4D00;"><strong>Nomad</strong></th>
-                <th>Airalo</th>
-                <th>Globalesim</th>
-                <th>AloSIM</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Countries Covered</strong></td>
-                <td style="background: #fefcfd;"><span style="color: #FF4D00;">120+</span></td>
-                <td>200+</td>
-                <td>150+</td>
-                <td>200+</td>
-            </tr>
-            <tr>
-                <td><strong>Global Plans</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Instant QR Delivery</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Pricing Upfront</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Refundable?</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Promo Code</strong></td>
-                <td style="background: #fefcfd;"><strong>{{ provider.primaryCode }}</strong> ({{ primary.discount | lower }})</td>
-                <td>NEWTOAIRALO15 (15%)</td>
-                <td>ESIMSIO10 (10%)</td>
-                <td>ALOSAVE (15%)</td>
-            </tr>
-        </tbody>
-    </table>
+  <!-- Real operational notes instead of generic setup tips -->
+  <h2>Support Is Actually 24/7 Live Chat, Not Email-Only</h2>
+  <p>
+    Nomad's own site advertises 24/7 customer support over both live chat and email. That corrects an earlier version of this page that said support was email-only with a roughly 24-hour reply time. Two other things worth knowing before you buy: Nomad's eSIMs support hotspot/tethering (not guaranteed across every provider on this site), and a plan can share its data across multiple devices rather than being locked to one phone.
+  </p>
+  <p>
+    New customers also get a free 1GB trial eSIM before committing to a paid plan, and there's a referral program that knocks $5 off for both you and whoever you refer, up to 5 friends. Neither requires a promo code, just an account.
+  </p>
 
-    <!-- Promo Codes -->
-    <h2>Nomad Promo Codes {{ buildMonthYear }}</h2>
+  <!-- How to -->
+  <h2>Apply a Nomad Code in 3 Steps</h2>
+  <div class="content-box">
+    <ol>
+      <li>Copy <strong>NOMTRAVEL20</strong> or <strong>NOMCYBER20</strong></li>
+      <li>Pick a country, regional, global, or Global-EX plan on Nomad</li>
+      <li>Paste the code in the promo field at checkout and confirm the 20% price drop before paying</li>
+    </ol>
+    <p class="content-note">Discount shows before payment is completed.</p>
+  </div>
+
+  <!-- Decision help -->
+  <h2>Is Nomad the Right Pick for Your Trip</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Good fit</h3>
+      <ul>
+        <li>You're traveling or living abroad for months, not weeks, and want one eSIM that doesn't expire on a 30-day clock</li>
+        <li>You want to hotspot a laptop off your phone's data without checking if the plan allows it first</li>
+        <li>You'd rather reach a human over live chat than wait on an email reply</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Consider alternatives</h3>
+      <ul>
+        <li>You want data you never have to think about on a short single-country trip: see <a href="/holafly/">Holafly</a>'s unlimited plans</li>
+        <li>You just want the cheapest possible one-off trip price: check <a href="/redteago/">RedteaGO</a> or <a href="/airhub/">Airhub</a> first</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Savings examples -->
+  <h2>What the Discount Looks Like</h2>
+  <div class="content-box">
     <ul>
-        {% for code in provider.codes %}
-        {% if not code.isInvalid %}
-        <li><strong>{{ code.code }}:</strong> {{ code.discount }}</li>
-        {% endif %}
-        {% endfor %}
+      <li>United States 1GB at $4.50 &rarr; 20% off saves $0.90</li>
+      <li>Europe regional 1GB at $5 &rarr; 20% off saves $1.00</li>
+      <li>Global 1GB at $12 &rarr; 20% off saves $2.40</li>
     </ul>
-    <p style="font-size: 1rem; color: #4A3A31;">Go to <a href="https://nomad.com" style="color:#FF4D00;"><strong>Nomad</strong></a> and use <strong>{{ provider.primaryCode }}</strong> at checkout to lock in savings.</p>
+    <p class="content-note">Those are single-GB, short-validity prices. A Global-EX bundle prices by the GB differently (as low as roughly $2.58/GB before the code), so run the math on the specific bundle size and length you need rather than assuming the per-GB rate above applies.</p>
+  </div>
 
-    <!-- Quick Facts -->
-    <div style="background: #ffece6; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #FF4D00; margin-bottom: 2rem;">
-        <strong>Nomad Quick Facts:</strong>
-        <ul style="margin: 0.5rem 0 0 1rem;">
-            <li>120+ country coverage</li>
-            <li>Buy country or global plans</li>
-            <li>Pay in your currency</li>
-            <li>Data‑only eSIMs</li>
-            <li>No expiry until activation</li>
-            <li>No refund: check before you scan</li>
-        </ul>
+  <p>
+    For eSIM device compatibility, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide. Comparing Nomad's per-GB pricing against a flat unlimited plan? See our <a href="/compare/holafly-vs-airalo/">Holafly vs Airalo comparison</a> for how that tradeoff plays out between two other providers on this site.
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Use the Code at Checkout</h2>
+    <p>Copy <code>NOMTRAVEL20</code> or <code>NOMCYBER20</code> then paste in the promo field</p>
+    <p>20% off any Nomad plan, including Global-EX.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Nomad Promo Code FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>What is the best code right now</h3>
+      <p><strong>NOMTRAVEL20</strong> or <strong>NOMCYBER20</strong>: both 20% off, the best of Nomad's four working codes.</p>
     </div>
-
-    <!-- FAQ Section -->
-    <h2>Frequently Asked Questions</h2>
-    <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 2rem 0;">
-        <div style="border-bottom: 1px solid #ffe0d4; padding: 1.5rem;">
-            <h3 style="color: #FF4D00; margin-bottom: 0.5rem;">Best Nomad code?</h3>
-            <p style="margin-bottom: 0;">Use <strong>{{ provider.primaryCode }}</strong> for {{ primary.discount | lower }}. Confirmed active {{ (primary.lastTested or buildTime) | fmtDate("MMMM yyyy") }}.</p>
-        </div>
-        <div style="border-bottom: 1px solid #ffe0d4; padding: 1.5rem;">
-            <h3 style="color: #FF4D00; margin-bottom: 0.5rem;">How fast is delivery?</h3>
-            <p style="margin-bottom: 0;">Instant QR: plan’s in your inbox in seconds.</p>
-        </div>
-        <div style="border-bottom: 1px solid #ffe0d4; padding: 1.5rem;">
-            <h3 style="color: #FF4D00; margin-bottom: 0.5rem;">What about refunds?</h3>
-            <p style="margin-bottom: 0;">Nope. Once you scan, it’s final. Double‑check before activating.</p>
-        </div>
-        <div style="padding: 1.5rem;">
-            <h3 style="color: #FF4D00; margin-bottom: 0.5rem;">Is support available?</h3>
-            <p style="margin-bottom: 0;">Email only: no chat, but they usually reply within 24 hours.</p>
-        </div>
+    <div class="content-faq-item">
+      <h3>What is Global-EX</h3>
+      <p>Nomad's long-validity plan line: 10GB to 50GB bundles valid for up to a year, priced lower per GB than the standard Global plan the longer and larger the bundle gets.</p>
     </div>
-
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Best Nomad code?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Use {{ provider.primaryCode }} for {{ primary.discount | lower }}. Confirmed active {{ (primary.lastTested or buildTime) | fmtDate('MMMM yyyy') }}."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How fast is delivery?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Instant QR: plan’s in your inbox in seconds."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What about refunds?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Nope. Once you scan, it’s final. Double-check before activating."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is support available?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Email only: no chat, but they usually reply within 24 hours."
-      }
-    }
-  ]
-}
-</script>
-
-
-    <!-- Call to Action -->
-    <div style="background: linear-gradient(135deg, #ffece6 0%, #ffe0d4 100%); color: #4A3A31; padding: 2rem; border-radius: 12px; text-align: center; margin: 3rem 0; border: 2px solid #FF4D00;">
-        <h2 style="color: #4A3A31; margin-bottom: 1rem;">Save on Your Nomad eSIM</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #4A3A31;">Use code <strong style="color: #FF4D00;">{{ provider.primaryCode }}</strong> at checkout for {{ primary.discount | lower }} and travel worry‑free.</p>
-        <p style="margin-bottom: 0; color: #4A3A31;">Simple, fast, and transparent: just how eSIM should be.</p>
+    <div class="content-faq-item">
+      <h3>Does Nomad support hotspot or tethering</h3>
+      <p>Yes, Nomad's eSIMs support hotspot/tethering, and a plan's data can be shared across multiple devices rather than being tied to one phone.</p>
     </div>
+    <div class="content-faq-item">
+      <h3>Is support actually 24/7</h3>
+      <p>Yes, live chat and email, both available around the clock according to Nomad's own site.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Is there a free trial</h3>
+      <p>New customers can claim a free 1GB trial eSIM before paying for a full plan, no promo code needed.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What is the best Nomad promo code right now?",
+        "acceptedAnswer":{"@type":"Answer","text":"NOMTRAVEL20 or NOMCYBER20, both 20% off, the best of Nomad's four working codes."}
+      },
+      {
+        "@type":"Question",
+        "name":"What is Nomad Global-EX?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad's long-validity plan line: 10GB to 50GB bundles valid for up to a year, priced lower per GB than the standard Global plan the longer and larger the bundle gets."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Nomad support hotspot or tethering?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. Nomad's eSIMs support hotspot/tethering, and a plan's data can be shared across multiple devices rather than being tied to one phone."}
+      },
+      {
+        "@type":"Question",
+        "name":"Is Nomad's customer support actually 24/7?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes, live chat and email, both available around the clock according to Nomad's own site."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Nomad offer a free trial?",
+        "acceptedAnswer":{"@type":"Answer","text":"New customers can claim a free 1GB trial eSIM before paying for a full plan, no promo code needed."}
+      }
+    ]
+  }
+  </script>
 </div>

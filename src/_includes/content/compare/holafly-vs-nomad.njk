@@ -1,0 +1,132 @@
+<!-- Holafly vs Nomad Comparison Content -->
+<div class="content-section">
+
+  {% set holaflyPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set nomadBest = providerB.codes | findCode("NOMTRAVEL20") %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>Holafly</strong> for a single trip where you'd rather pay a flat unlimited price than track data at all. Pick <strong>Nomad</strong> if you're traveling long-term (weeks to a full year) and want a plan priced by the gigabyte that gets cheaper the more you buy, rather than a flat rate meant for a short stay. They're built for genuinely different trip lengths, not competing head to head on the same use case.
+    </p>
+  </div>
+
+  <h2>The Core Difference: Flat Unlimited vs. Long-Validity Per-GB</h2>
+  <p>
+    Holafly sells one thing: unlimited data at a flat price per day, valid for a set trip length (typically a few days up to a month). There's no gigabyte counting, but the plan still expires on schedule once its day count runs out. Nomad's standard plans work similarly to most other eSIMs on this site (buy a GB bucket, use it, it doesn't expire until activated), but its <strong>Global-EX</strong> line is the real point of difference: 10GB to 50GB bundles valid for up to a year, with the per-GB rate dropping as the bundle gets bigger, down to roughly $2.58/GB on the largest ones versus about $5.15/GB on Nomad's standard Global plan.
+  </p>
+  <p>
+    That makes Nomad the more sensible pick for anyone actually living abroad for months at a time rather than taking a single trip. Holafly doesn't sell anything built for that timeframe: its plans are priced and marketed around a specific trip length, not an open-ended stay.
+  </p>
+
+  <h2>Price Snapshot (1GB-equivalent, before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Holafly</th>
+          <th>Nomad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States</td><td>$1.99/day (unlimited)</td><td>$4.50 (1GB)</td></tr>
+        <tr><td>Europe regional</td><td>$1.99/day (unlimited)</td><td>$5.00 (1GB)</td></tr>
+        <tr><td>Japan</td><td>$1.99/day (unlimited)</td><td>$6.00 (1GB)</td></tr>
+        <tr><td>Global</td><td>$9.90/day (unlimited)</td><td>$12.00 (1GB), or as low as ~$2.58/GB on a large Global-EX bundle</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">These aren't directly comparable numbers: Holafly's price is per day of unlimited use, Nomad's standard price is per gigabyte. A short trip with light data use will usually cost less on Nomad's standard plans; a heavy-data short trip usually costs less on Holafly; a long stay of months at a time is where Nomad's Global-EX bundles pull ahead of either.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Holafly:</strong> {{ providerA.primaryCode }}, {{ holaflyPrimary.discount | lower }}. <a href="/holafly/">Full code list &rarr;</a></li>
+      <li><strong>Nomad:</strong> NOMTRAVEL20 or NOMCYBER20, {{ nomadBest.discount | lower }}. <a href="/nomad/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Holafly's code is ours. Nomad doesn't run the kind of affiliate program that supports a code like that, so its codes here are the best public ones we've verified, and there are two tied at the same rate.</p>
+  </div>
+
+  <h2>Is Holafly or Nomad the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Holafly if&hellip;</h3>
+      <ul>
+        <li>You're on a single trip of a few days to a month</li>
+        <li>You genuinely don't know how much data you'll use and don't want to think about it</li>
+        <li>China is on the itinerary and you want the built-in VPN</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with Nomad if&hellip;</h3>
+      <ul>
+        <li>You're traveling or living abroad for months, not weeks</li>
+        <li>You want to hotspot a laptop off your phone without checking plan restrictions first</li>
+        <li>You'd rather reach live chat than wait on an email reply</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Nomad's Global-EX validity (up to a year) has no equivalent on Holafly.</strong> Holafly's plans are sold and priced around a specific trip length; there's no long-stay bundle that gets cheaper per GB the way Global-EX does. Anyone doing a multi-month stint abroad and comparing these two head to head will generally find Nomad's model fits that timeframe better, even setting price aside.
+  </p>
+  <p>
+    <strong>Holafly's China eSIM has a VPN built in; Nomad has no equivalent.</strong> Google Maps, WhatsApp, and Gmail just work on Holafly's China plan without installing anything extra first. Nomad doesn't advertise anything similar, so a trip to China on Nomad would need a separate VPN arranged in advance.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Holafly vs Nomad FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Holafly or Nomad</h3>
+      <p>Depends on the trip. For a short trip with light data use, Nomad's standard per-GB plans are usually cheaper. For a short trip with heavy data use, Holafly's flat unlimited price is usually cheaper. For a stay of months, Nomad's Global-EX bundles bring the per-GB cost down further than either option above, in a way Holafly has no plan to match.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which one is better for long-term travel or living abroad</h3>
+      <p>Nomad. Its Global-EX bundles stay valid for up to a year and get cheaper per GB the larger the bundle, built specifically for an extended stay. Holafly's plans are priced and marketed around a fixed, shorter trip length.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which one is better for China</h3>
+      <p>Holafly, if avoiding a separate VPN matters: its China eSIM has one built in. Nomad has no equivalent, so a trip to China on Nomad would need its own VPN arranged beforehand.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either guarantee hotspot or tethering</h3>
+      <p>Nomad does: its eSIMs support hotspot/tethering and can share data across multiple devices. Holafly's tethering support varies by plan and isn't guaranteed across all of them, so check the specific plan page if that's the point of the trip.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Holafly or Nomad?",
+        "acceptedAnswer":{"@type":"Answer","text":"It depends on the trip. A short, light-data trip is usually cheaper on Nomad's standard per-GB plans. A short, heavy-data trip is usually cheaper on Holafly's flat unlimited price. A stay of months is where Nomad's Global-EX bundles bring the per-GB cost down further than either option, something Holafly has no plan to match."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which is better for long-term travel or living abroad, Holafly or Nomad?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad. Its Global-EX bundles stay valid for up to a year and get cheaper per GB the larger the bundle, built specifically for an extended stay. Holafly's plans are priced and marketed around a fixed, shorter trip length."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which is better for a trip to China, Holafly or Nomad?",
+        "acceptedAnswer":{"@type":"Answer","text":"Holafly, for travelers who want to avoid a separate VPN, since its China eSIM has one built in. Nomad has no equivalent, so a China trip on Nomad would need its own VPN arranged beforehand."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does either Holafly or Nomad guarantee hotspot or tethering?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad does: its eSIMs support hotspot/tethering and can share data across multiple devices. Holafly's tethering support varies by plan and isn't guaranteed across all of them."}
+      }
+    ]
+  }
+  </script>
+</div>

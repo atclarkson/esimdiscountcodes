@@ -62,5 +62,13 @@
     "title": "AloSIM vs SimLocal: Bundled Number or No-Quibble Refund? (2026 Comparison)",
     "description": "AloSIM vs SimLocal compared: similar per-GB pricing, AloSIM's bundled Hushed phone number vs SimLocal's no-quibble refunds and WhatsApp support, discount codes, and which one fits your trip.",
     "lastUpdated": "2026-09-10"
+  },
+  {
+    "slug": "holafly-vs-nomad",
+    "providerA": "holafly",
+    "providerB": "nomad",
+    "title": "Holafly vs Nomad: Unlimited Trip or Long-Term Per-GB? (2026 Comparison)",
+    "description": "Holafly vs Nomad compared: flat unlimited pricing for a single trip vs. Nomad's per-GB plans and year-long Global-EX bundles for long-term travel, discount codes, and which one fits your trip.",
+    "lastUpdated": "2026-09-11"
   }
 ]
