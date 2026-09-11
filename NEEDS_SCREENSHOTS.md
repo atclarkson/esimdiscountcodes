@@ -1,3 +1,3 @@
 # Screenshots Needed
 
-- [ ] 2026-09-10 simlocal ADAMANDLINDS: owner bought a real UK plan and confirmed the code applies for 10% off, and that the plan includes a full UK phone number. The Heathrow storefront photo is now in the article, but there's still no checkout proof image at `src/assets/simlocal/ADAMANDLINDS.png` (used automatically by provider.njk's proof section once it exists). Save the checkout screenshot showing the 10% discount applied, and ideally one showing the UK number assigned.
+- [x] 2026-09-10 simlocal ADAMANDLINDS: checkout proof image added 2026-09-11 (`src/assets/simlocal/ADAMANDLINDS.png`), showing the 10% discount applied. Proof images for all four other SimLocal codes (EMMANUEL, LUKEPALMS, SAVANNAH, TWOROAMING) were added at the same time; owner used these to confirm those four are actually 5% off, not 10% as previously listed. No UK-number proof image yet; still fine to add later if the owner wants it.
