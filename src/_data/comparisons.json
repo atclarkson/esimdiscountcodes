@@ -70,5 +70,13 @@
     "title": "Holafly vs Nomad: Unlimited Trip or Long-Term Per-GB? (2026 Comparison)",
     "description": "Holafly vs Nomad compared: flat unlimited pricing for a single trip vs. Nomad's per-GB plans and year-long Global-EX bundles for long-term travel, discount codes, and which one fits your trip.",
     "lastUpdated": "2026-09-11"
+  },
+  {
+    "slug": "nomad-vs-ubigi",
+    "providerA": "nomad",
+    "providerB": "ubigi",
+    "title": "Nomad vs Ubigi: Long-Validity Bundle or Recurring Subscription? (2026 Comparison)",
+    "description": "Nomad vs Ubigi compared: Nomad's up-to-a-year Global-EX bundles vs Ubigi's auto-renewing monthly and annual subscriptions, the MVNO behind Ubigi, discount codes, and which one fits long-term travel.",
+    "lastUpdated": "2026-09-12"
   }
 ]

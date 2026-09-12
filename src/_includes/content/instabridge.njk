@@ -1,183 +1,155 @@
-<!-- InstaBridge Content Template -->
+<!-- Instabridge Content -->
 <div class="content-section">
-    <!-- Main heading -->
-    <h2>Best InstaBridge Promo Codes for {{ buildMonthYear }}</h2>
-    
-    <!-- Introduction -->
-    <p>InstaBridge makes internet access on the go way easier: free and premium Wi‑Fi access in <strong>100+ countries</strong>, plus affordable eSIM plans. Handy for travelers who hate roaming bills but want fast, reliable connection.</p>
 
-    <!-- Key Features Highlight -->
-    <div class="feature-highlights" style="background: linear-gradient(135deg, #e6f7fd 0%, #d0eef9 100%); border: 2px solid #00ADEF; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
-        <h2 style="color: #003C4F; margin-bottom: 1.5rem;">What Makes InstaBridge Cool?</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #003C4F;">Free Wi‑Fi Access</h3>
-                <p>Connect to verified hotspots in 100+ countries: no data charges</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #003C4F;">Affordable eSIM Plans</h3>
-                <p>Data‑only eSIMs if you need more than just Wi‑Fi</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #003C4F;">Community‑Submitted Hotspots</h3>
-                <p>User‑verified connections for reliable coverage</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #003C4F;">Secure & Private</h3>
-                <p>Encrypted connections and no tracking: your browsing, your business</p>
-            </div>
-        </div>
-    </div>
+  <!-- Quick Answer -->
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Best Instabridge Promo Code &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Use <strong>{{ provider.primaryCode }}</strong> for <strong>10% off any Instabridge eSIM plan</strong>. It's a public code rather than one of ours (Instabridge doesn't run the kind of affiliate program that supports our own code the way some other providers on this site do), but it's the one we've verified applies with no restrictions.
+      <span class="callout-meta">Confirmed active <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("MMM d, yyyy") }}</time>.</span>
+    </p>
+  </div>
 
-    <!-- How InstaBridge Works -->
-    <h2>How InstaBridge Works</h2>
-    <p>Open the app, connect to free Wi‑Fi hotspots nearby, or pick a pay‑as‑you‑go eSIM plan. Whether you're walking through a city or chilling at a café, InstaBridge gives you options.</p>
+  <!-- Headline -->
+  <h2>What Actually Makes Instabridge Different</h2>
+  <p>
+    Instabridge didn't start as an eSIM company. It's a WiFi-sharing app first: its own site advertises access to over <strong>20 million free WiFi hotspots worldwide</strong>, a community-built database of hotspot passwords that predates its eSIM product. The eSIM plans are a bolt-on to that, sold as a fallback for when free WiFi isn't around or isn't fast enough. That's a genuinely different starting point from a provider like <a href="/airalo/">Airalo</a> or <a href="/redteago/">RedteaGO</a>, which only ever sold data.
+  </p>
+  <p>
+    In practice that means the free WiFi and the paid eSIM aren't really separate products, they're two ways of solving the same problem inside one app. Whether that's worth anything to you depends entirely on whether free hotspot coverage is decent where you're headed: a community-submitted database is only as good as the community submitting to it, so it's stronger in dense, well-travelled cities than in rural areas or newer destinations.
+  </p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Active codes</h3>
     <ul>
-        <li><strong>Find hotspots</strong> shared by a global community</li>
-        <li><strong>Connect instantly</strong> with no password typing</li>
-        <li><strong>Buy eSIM data</strong> mid‑trip if Wi‑Fi’s not enough</li>
-        <li><strong>Manage usage</strong> all from one app</li>
+      <li><strong>DPF10</strong>: 10% off all plans, no restrictions we've found</li>
+      <li><strong>SP20</strong>: 20% off all plans, a bigger discount but we've seen it fail more inconsistently at checkout than DPF10</li>
+      <li><strong>TRAVELESIMEXPERT</strong>: 20% off, but Instabridge's own description flags it as a new-user coupon, so it may not apply if you've bought from them before</li>
     </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Try DPF10 first since it's the one we've confirmed works cleanly. If it doesn't apply for some reason, SP20 or TRAVELESIMEXPERT are worth a shot for the bigger discount, refresh the cart or try a private window if a code doesn't take.</p>
+  </div>
 
-    <!-- Comparison with Competitors -->
-    <h2>InstaBridge vs. Other Travel Connectivity Apps</h2>
-    <p>Check how InstaBridge stacks up against Airalo, Globalesim, and AloSIM in terms of Wi‑Fi and eSIM options:</p>
-    <table style="margin: 2rem 0;">
-        <thead>
-            <tr>
-                <th>Feature</th>
-                <th style="background: #e6f7fd; color: #00ADEF;"><strong>InstaBridge</strong></th>
-                <th>Airalo</th>
-                <th>Globalesim</th>
-                <th>AloSIM</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Free Wi‑Fi</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>eSIM Available</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Countries Covered</strong></td>
-                <td style="background: #fefcfd;"><span style="color: #00ADEF;">100+</span></td>
-                <td>200+</td>
-                <td>150+</td>
-                <td>200+</td>
-            </tr>
-            <tr>
-                <td><strong>Pricing</strong></td>
-                <td style="background: #fefcfd;">Freemium + cheap eSIM</td>
-                <td>Paid eSIM</td>
-                <td>Paid eSIM</td>
-                <td>Paid eSIM</td>
-            </tr>
-            <tr>
-                <td><strong>Support</strong></td>
-                <td style="background: #fefcfd;">Email only</td>
-                <td>App + email</td>
-                <td>Email only</td>
-                <td>Live chat + email</td>
-            </tr>
-        </tbody>
-    </table>
+  <!-- Real operational note instead of generic feature grid / comparison table -->
+  <h2>Free WiFi First, eSIM as Backup, Not the Other Way Around</h2>
+  <p>
+    If you're comparing Instabridge to a pure eSIM app on price alone, you're missing the actual pitch. The app itself is free to install and use for hotspot access, no purchase required, and the eSIM only gets bought when you decide the free WiFi isn't cutting it. That makes the eSIM pricing here closer to a top-up than a primary purchase decision: check the free hotspot map for your destination first, then buy a data plan only for the gaps.
+  </p>
+  <p>
+    That also means Instabridge's eSIM plans are data-only, no calls or texts, and a plan doesn't roll over or top up automatically once it runs out. Buy based on what you actually expect to use past whatever free WiFi you can find, not on a flat "just get the biggest plan" instinct.
+  </p>
 
-    <!-- Promo Codes -->
-    <h2>InstaBridge Promo Codes {{ buildMonthYear }}</h2>
+  <!-- How to -->
+  <h2>Apply an Instabridge Code in 3 Steps</h2>
+  <div class="content-box">
+    <ol>
+      <li>Copy <strong>DPF10</strong></li>
+      <li>Pick a country, regional, or global eSIM data plan for your destination on Instabridge</li>
+      <li>Paste the code in the promo field at checkout and confirm the 10% price drop before paying</li>
+    </ol>
+    <p class="content-note">Discount shows before payment is completed.</p>
+  </div>
+
+  <!-- Decision help -->
+  <h2>Is Instabridge the Right Pick for Your Trip</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Good fit</h3>
+      <ul>
+        <li>You're headed somewhere with decent hotspot density (major cities, tourist-heavy regions) and mostly want a free-WiFi-first backup plan</li>
+        <li>You want one app for both hotspot hunting and a data top-up, instead of juggling two</li>
+        <li>Your data needs are light enough that an eSIM is a backup, not your main connection</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Consider alternatives</h3>
+      <ul>
+        <li>You want the lowest possible per-GB price for a data-heavy trip: <a href="/airhub/">Airhub</a> runs cheaper per gigabyte on most destinations</li>
+        <li>You're headed somewhere rural or off the beaten path where a hotspot-sharing database is unlikely to have much coverage: a straight per-GB eSIM like <a href="/redteago/">RedteaGO</a> doesn't depend on other travelers having been there first</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Pricing examples -->
+  <h2>What Instabridge Plans Actually Cost</h2>
+  <div class="content-box">
     <ul>
-        <li><strong>BRIDGE10:</strong> 10% OFF eSIM data packs</li>
+      <li>United States 1GB at $2 &rarr; 10% off saves $0.20</li>
+      <li>Europe regional 1GB at $2.80 &rarr; 10% off saves $0.28</li>
+      <li>Global 1GB at $8 &rarr; 10% off saves $0.80</li>
     </ul>
-    <p style="font-size: 1rem; color: #003C4F;">Tap over to <a href="https://instabridge.com" style="color:#00ADEF;"><strong>InstaBridge</strong></a> and use <strong>BRIDGE10</strong> at checkout for extra value.</p>
+    <p class="content-note">Instabridge's US and regional per-GB pricing lands close to RedteaGO's, but Airhub still comes in cheaper per gigabyte if price is your only factor and you don't care about the WiFi angle.</p>
+  </div>
 
-    <!-- Quick Facts -->
-    <div style="background: #e6f7fd; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #00ADEF; margin-bottom: 2rem;">
-        <strong>InstaBridge Quick Facts:</strong>
-        <ul style="margin: 0.5rem 0 0 1rem;">
-            <li>Free Wi‑Fi in cafes, airports worldwide</li>
-            <li>Secure, encrypted connections</li>
-            <li>Pay‑as‑you‑go eSIM options</li>
-            <li>Manage Wi‑Fi + eSIM usage in one place</li>
-            <li>Data only: no voice/SMS</li>
-            <li>Email support, no chat</li>
-        </ul>
+  <p>
+    For eSIM device compatibility, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Use the Code at Checkout</h2>
+    <p>Copy <code>DPF10</code> then paste in the promo field</p>
+    <p>10% off any Instabridge eSIM plan, on top of 20 million free WiFi hotspots the app gives you for nothing.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Instabridge Promo Code FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>What is the best code right now</h3>
+      <p><strong>DPF10</strong>: 10% off all Instabridge eSIM plans, confirmed working with no restrictions. SP20 and TRAVELESIMEXPERT both offer 20% off if you want to try for a bigger discount, but we've seen them apply less consistently.</p>
     </div>
-
-    <!-- FAQ Section -->
-    <h2>Frequently Asked Questions</h2>
-    <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 2rem 0;">
-        <div style="border-bottom: 1px solid #d0eef9; padding: 1.5rem;">
-            <h3 style="color: #00ADEF; margin-bottom: 0.5rem;">Is the Wi‑Fi really free?</h3>
-            <p style="margin-bottom: 0;">Yes. Community‑shared hotspots come with no charge, just connect and go.</p>
-        </div>
-        <div style="border-bottom: 1px solid #d0eef9; padding: 1.5rem;">
-            <h3 style="color: #00ADEF; margin-bottom: 0.5rem;">Can I fallback to eSIM?</h3>
-            <p style="margin-bottom: 0;">Yep, buy eSIM data in-app if Wi‑Fi is spotty or slow.</p>
-        </div>
-        <div style="border-bottom: 1px solid #d0eef9; padding: 1.5rem;">
-            <h3 style="color: #00ADEF; margin-bottom: 0.5rem;">Is it safe?</h3>
-            <p style="margin-bottom: 0;">All connections are encrypted: your data’s protected.</p>
-        </div>
-        <div style="padding: 1.5rem;">
-            <h3 style="color: #00ADEF; margin-bottom: 0.5rem;">Refund policy?</h3>
-            <p style="margin-bottom: 0;">eSIM packs may be refundable before activation; double‑check on purchase.</p>
-        </div>
+    <div class="content-faq-item">
+      <h3>Is the free WiFi actually free</h3>
+      <p>Yes. Instabridge's core product is a database of over 20 million community-submitted WiFi hotspot passwords, free to use in the app with no purchase required. The eSIM is a separate paid product for when free WiFi isn't available or fast enough.</p>
     </div>
-
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is the Wi-Fi really free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Community-shared hotspots come with no charge, just connect and go."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I fallback to eSIM?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yep, buy eSIM data in-app if Wi-Fi is spotty or slow."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is it safe?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "All connections are encrypted: your data’s protected."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Refund policy?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "eSIM packs may be refundable before activation; double-check on purchase."
-      }
-    }
-  ]
-}
-</script>
-
-
-    <!-- Call to Action -->
-    <div style="background: linear-gradient(135deg, #e6f7fd 0%, #d0eef9 100%); color: #003C4F; padding: 2rem; border-radius: 12px; text-align: center; margin: 3rem 0; border: 2px solid #00ADEF;">
-        <h2 style="color: #003C4F; margin-bottom: 1rem;">Stay Connected Anywhere</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #003C4F;">Use code <strong style="color: #00ADEF;">BRIDGE10</strong> for 10% off InstaBridge eSIMs.</p>
-        <p style="margin-bottom: 0; color: #003C4F;">Free Wi‑Fi + eSIM backup means no data worries on your next trip.</p>
+    <div class="content-faq-item">
+      <h3>Does Instabridge include calls or texts</h3>
+      <p>No. Instabridge eSIM plans are data-only.</p>
     </div>
+    <div class="content-faq-item">
+      <h3>Can I get a refund on an Instabridge eSIM</h3>
+      <p>We haven't confirmed a clear refund policy for eSIM purchases, so don't count on one. Check Instabridge's own terms before you buy if that matters to your trip.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>How many countries does Instabridge cover</h3>
+      <p>Instabridge advertises eSIM coverage in 190+ countries, plus its separate free WiFi hotspot database which is strongest in well-travelled cities.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What is the best Instabridge promo code right now?",
+        "acceptedAnswer":{"@type":"Answer","text":"DPF10 gives 10% off all Instabridge eSIM plans and is confirmed working with no restrictions. SP20 and TRAVELESIMEXPERT both offer 20% off but have applied less consistently in testing."}
+      },
+      {
+        "@type":"Question",
+        "name":"Is Instabridge's free WiFi actually free?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. Instabridge's core product is a database of over 20 million community-submitted WiFi hotspot passwords, free to use with no purchase required. Its eSIM plans are a separate paid product."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Instabridge include calls or texts?",
+        "acceptedAnswer":{"@type":"Answer","text":"No, Instabridge eSIM plans are data-only."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I get a refund on an Instabridge eSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Instabridge does not have a clearly confirmed refund policy for eSIM purchases; check its own terms before buying."}
+      },
+      {
+        "@type":"Question",
+        "name":"How many countries does Instabridge cover?",
+        "acceptedAnswer":{"@type":"Answer","text":"Instabridge advertises eSIM coverage in 190+ countries, alongside a separate free WiFi hotspot database strongest in well-travelled cities."}
+      }
+    ]
+  }
+  </script>
 </div>

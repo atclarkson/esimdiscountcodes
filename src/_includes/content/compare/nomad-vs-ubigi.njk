@@ -1,0 +1,131 @@
+<!-- Nomad vs Ubigi Comparison Content -->
+<div class="content-section">
+
+  {% set nomadBest = providerA.codes | findCode("NOMTRAVEL20") %}
+  {% set ubigiPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Both Nomad and Ubigi are built for travelers who need more than a single short trip's worth of data, but they get there in opposite ways. <strong>Nomad</strong> sells a big prepaid bundle once (its Global-EX line, up to a year of validity) and you're done until it runs out. <strong>Ubigi</strong> sells a recurring subscription that renews and charges your card automatically until you cancel it, and its own cancellation terms are stricter than most one-off eSIMs. If you don't want a plan that bills itself again without you doing anything, that difference matters more than either provider's price.
+    </p>
+  </div>
+
+  <h2>The Core Difference: One Big Bundle vs. an Auto-Renewing Subscription</h2>
+  <p>
+    Nomad's <strong>Global-EX</strong> bundles run from 10GB to 50GB, stay valid for up to a year, and get cheaper per gigabyte the bigger the bundle: roughly $2.58/GB on the largest ones versus about $5.15/GB on Nomad's standard Global plan. You pay once, use it down over as long as a year, and nothing renews or charges you again unless you buy another bundle yourself.
+  </p>
+  <p>
+    Ubigi instead sells recurring plans that renew on their own: a <strong>monthly</strong> plan that auto-charges every month and, per Ubigi's own help center, can't be cancelled until you've held it for at least <strong>three months</strong>, or an <strong>annual</strong> plan that's paid in full upfront and <strong>cannot be cancelled or refunded</strong> during that 12-month term at all. Ubigi does also sell one-off plans with no recurring billing, similar to Nomad's standard plans, but its long-term option specifically is the subscription, not a big prepaid bundle like Global-EX.
+  </p>
+
+  <h2>Price Snapshot (1GB-equivalent, before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Nomad</th>
+          <th>Ubigi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States</td><td>$4.50 (1GB)</td><td>$4.00 (1GB)</td></tr>
+        <tr><td>Europe regional</td><td>$5.00 (1GB)</td><td>&mdash;</td></tr>
+        <tr><td>Global</td><td>$12.00 (1GB), or as low as ~$2.58/GB on a large Global-EX bundle</td><td>$25.00 (1GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Ubigi's per-GB price runs above Nomad's standard plans on most destinations. Nomad's advantage grows further on long-term use once Global-EX bundle pricing kicks in, something Ubigi's recurring plans don't have a direct equivalent to: Ubigi's monthly and annual plans reprice by billing period, not by total volume purchased.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Nomad:</strong> NOMTRAVEL20 or NOMCYBER20, {{ nomadBest.discount | lower }}. <a href="/nomad/">Full code list &rarr;</a></li>
+      <li><strong>Ubigi:</strong> {{ providerB.primaryCode }}, {{ ubigiPrimary.discount | lower }}. <a href="/ubigi/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ubigi's code is ours. Nomad doesn't run the kind of affiliate program that supports a code like that, so its codes here are the best public ones we've verified, and there are two tied at the same rate.</p>
+  </div>
+
+  <h2>Is Nomad or Ubigi the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Nomad if&hellip;</h3>
+      <ul>
+        <li>You're traveling or living abroad for months and want to pay once for a bundle that lasts up to a year</li>
+        <li>You don't want anything auto-renewing or charging your card again without you buying it</li>
+        <li>You want guaranteed hotspot/tethering and 24/7 live chat support</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with Ubigi if&hellip;</h3>
+      <ul>
+        <li>You return to the same country regularly enough that a recurring monthly plan genuinely beats buying fresh eSIMs each time</li>
+        <li>You'd rather buy from an established MVNO (Ubigi is run by Transatel, part of NTT Group) than a smaller reseller</li>
+        <li>You're fine committing to at least 3 months on a monthly plan, or a full non-cancellable year on the annual plan, in exchange for that recurring setup</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Ubigi's recurring plans lock you in; Nomad's Global-EX doesn't.</strong> Ubigi's monthly plan can't be cancelled for the first 3 months, and its annual plan can't be cancelled or refunded at all during its 12-month term. Nomad's Global-EX is a straight prepaid purchase: once you've paid for the bundle, there's nothing left to cancel and nothing that bills you again unless you choose to buy more.
+  </p>
+  <p>
+    <strong>Neither provider rolls over unused data, on any plan.</strong> Whatever's left on a Nomad bundle when it expires, or left in a Ubigi billing period when it renews, is gone either way. The difference is how long you have to use it: up to a year on a large Nomad Global-EX bundle, versus one billing cycle at a time on a Ubigi recurring plan.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Nomad vs Ubigi FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Nomad or Ubigi</h3>
+      <p>Nomad, on most destinations we've checked. Ubigi's per-GB price runs above Nomad's standard plans, and Nomad's Global-EX bundles push the per-GB cost down further on long stays in a way Ubigi's recurring plans don't match.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which one can I cancel more easily</h3>
+      <p>Nomad, because there's nothing to cancel: Global-EX is a one-time prepaid purchase. Ubigi's monthly plan requires a 3-month minimum commitment before you can cancel, and its annual plan can't be cancelled or refunded during its 12-month term at all.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which is better for someone who returns to the same country often</h3>
+      <p>Ubigi's recurring monthly plan is built for exactly that, refreshing automatically instead of making you buy a fresh eSIM on every trip. Nomad doesn't offer a recurring option; its long-term answer is a large prepaid Global-EX bundle instead.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either company have a notable pedigree</h3>
+      <p>Ubigi is a brand of Transatel, a French MVNO enabler operating since the early 2000s and now part of NTT Group, which also supplies the connectivity behind connected-car systems for automakers including BMW, Toyota, and Jeep. Nomad doesn't advertise a similar telecom parent company.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Nomad or Ubigi?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad, on most destinations checked. Ubigi's per-GB price runs above Nomad's standard plans, and Nomad's Global-EX bundles push the per-GB cost down further on long stays in a way Ubigi's recurring plans don't match."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which is easier to cancel, Nomad or Ubigi?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad, since Global-EX is a one-time prepaid purchase with nothing to cancel. Ubigi's monthly plan requires a 3-month minimum commitment before cancellation, and its annual plan cannot be cancelled or refunded during its 12-month term."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which is better for someone who returns to the same country often?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ubigi's recurring monthly plan is built for that, refreshing automatically instead of requiring a new eSIM purchase each trip. Nomad has no recurring option; its long-term answer is a large prepaid Global-EX bundle instead."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Nomad or Ubigi have a notable parent company?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ubigi is a brand of Transatel, a French MVNO enabler operating since the early 2000s and now part of NTT Group, which also supplies connected-car connectivity for automakers including BMW, Toyota, and Jeep. Nomad does not advertise a comparable telecom parent company."}
+      }
+    ]
+  }
+  </script>
+</div>
