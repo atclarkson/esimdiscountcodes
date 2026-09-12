@@ -1032,7 +1032,7 @@
     "description": "Global eSIM and WiFi solutions",
     "url": "https://instabridge.com",
     "affiliateUrl": null,
-    "primaryCode": "DPF10",
+    "primaryCode": "SP20",
     "rating": 3.0,
     "priceCategory": "Cheap",
     "brandColors": {
@@ -1049,9 +1049,9 @@
         "verified": true,
         "lastTested": "2026-09-12",
         "expiryDate": null,
-        "isPrimary": true,
+        "isPrimary": false,
         "type": "public",
-        "isInvalid": false
+        "isInvalid": true
       },
       {
         "code": "SP20",
@@ -1060,7 +1060,7 @@
         "verified": true,
         "lastTested": "2026-09-12",
         "expiryDate": null,
-        "isPrimary": false,
+        "isPrimary": true,
         "type": "public",
         "isInvalid": false
       },
