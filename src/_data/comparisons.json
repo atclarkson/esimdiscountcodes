@@ -78,5 +78,13 @@
     "title": "Nomad vs Ubigi: Long-Validity Bundle or Recurring Subscription? (2026 Comparison)",
     "description": "Nomad vs Ubigi compared: Nomad's up-to-a-year Global-EX bundles vs Ubigi's auto-renewing monthly and annual subscriptions, the MVNO behind Ubigi, discount codes, and which one fits long-term travel.",
     "lastUpdated": "2026-09-12"
+  },
+  {
+    "slug": "bytesim-vs-alosim",
+    "providerA": "bytesim",
+    "providerB": "alosim",
+    "title": "ByteSIM vs AloSIM: Real Local Number or Free Virtual Number? (2026 Comparison)",
+    "description": "ByteSIM vs AloSIM compared: ByteSIM's ID-verified real local phone numbers vs AloSIM's free Hushed virtual number, discount codes, and which one fits your trip.",
+    "lastUpdated": "2026-09-13"
   }
 ]

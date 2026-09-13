@@ -1,183 +1,145 @@
-<!-- UpeSIM Content Template -->
+<!-- UPeSIM Content -->
 <div class="content-section">
-    {% set primary = provider.codes | findCode(provider.primaryCode) %}
-    <!-- Main heading -->
-    <h2>Best UpeSIM Promo Codes for {{ buildMonthYear }}</h2>
-    
-    <!-- Introduction -->
-    <p>UpeSIM delivers straightforward eSIM data in over <strong>130+ countries</strong>: no frills, no sneaky fees. Choose your plan, scan the QR, and you’re online. Simple, reliable, and priced right.</p>
 
-    <!-- Key Features Highlight -->
-    <div class="feature-highlights" style="background: linear-gradient(135deg, #eaf4fe 0%, #d9eafc 100%); border: 2px solid #4A90E2; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
-        <h2 style="color: #2C3A4B; margin-bottom: 1.5rem;">What Makes UpeSIM Worth It?</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #2C3A4B;">130+ Countries</h3>
-                <p>Decent global reach without confusing tiers</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #2C3A4B;">Instant QR Delivery</h3>
-                <p>No waiting around: your eSIM arrives in seconds</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #2C3A4B;">Secure Checkout</h3>
-                <p>Encrypted transactions: no payment surprises</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #2C3A4B;">Flexible Validity</h3>
-                <p>Plans last 7–30 days depending on region</p>
-            </div>
-        </div>
-    </div>
+  <!-- Quick Answer -->
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Best UPeSIM Promo Code &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Use <strong>{{ provider.primaryCode }}</strong> for <strong>10% off any UPeSIM plan</strong>. It's a public code rather than one of ours, but it's the best one we've verified. Two other 10% codes also work if this one ever stops applying.
+      <span class="callout-meta">Confirmed active <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("MMM d, yyyy") }}</time>.</span>
+    </p>
+  </div>
 
-    <!-- How UpeSIM Works -->
-    <h2>How UpeSIM eSIM Works</h2>
-    <p>Search by destination, choose data size, buy and get a QR code, then activate once you land. Manage everything through the UpeSIM website or app, including checking data balance and plan validity.</p>
+  <!-- Headline -->
+  <h2>What Actually Makes UPeSIM Different</h2>
+  <p>
+    UPeSIM is a French MVNO based in Paris, running since 2018, rather than a reseller sitting on top of someone else's eSIM platform the way a lot of newer travel-eSIM apps are. It covers 200+ countries and territories through local carrier partnerships (its own site no longer lists the smaller country count some older reviews of it quote, so if you've seen "130+" elsewhere, that figure is out of date).
+  </p>
+  <p>
+    The plans are strictly prepaid with no subscription commitment: buy a fixed block of days, use it, and it expires without auto-renewing or charging you again. That cuts both ways. There's no surprise recurring charge the way a provider like <a href="/ubigi/">Ubigi</a> can carry if you forget to cancel, but it also means UPeSIM won't quietly extend your plan if you're still traveling when it runs out; you have to notice and top up yourself.
+  </p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Active codes</h3>
     <ul>
-        <li><strong>Select destination</strong> and view available plans</li>
-        <li><strong>Buy online</strong> and receive QR immediately</li>
-        <li><strong>Install when ready</strong>, activate after landing</li>
-        <li><strong>Check balance</strong> easily via your dashboard</li>
+      <li><strong>REDDIT10</strong>: 10% off all plans</li>
+      <li><strong>ESIMDB10</strong>: 10% off (new customers)</li>
+      <li><strong>T-DEALZ-10</strong>: 10% off</li>
     </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">All three currently apply the same 10% rate. If one stops working at checkout, try the next.</p>
+  </div>
 
-    <!-- Comparison with Competitors -->
-    <h2>UpeSIM vs. Other eSIM Providers</h2>
-    <p>How UpeSIM compares against Airalo, Nomad, and Ubigi:</p>
-    <table style="margin: 2rem 0;">
-        <thead>
-            <tr>
-                <th>Feature</th>
-                <th style="background: #eaf4fe; color: #4A90E2;"><strong>UpeSIM</strong></th>
-                <th>Airalo</th>
-                <th>Nomad</th>
-                <th>Ubigi</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Country Coverage</strong></td>
-                <td style="background: #fefcfd;"><span style="color: #4A90E2;">130+</span></td>
-                <td>200+</td>
-                <td>120+</td>
-                <td>190+</td>
-            </tr>
-            <tr>
-                <td><strong>Instant QR?</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Secure Payment</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Flexible Validity</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Refundable?</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Promo Code</strong></td>
-                <td style="background: #fefcfd;"><strong>{{ provider.primaryCode }}</strong> ({{ primary.discount | lower }})</td>
-                <td>NEWTOAIRALO15 (15%)</td>
-                <td>WOLF (10%)</td>
-                <td>ADAMANDLINDS (10%)</td>
-            </tr>
-        </tbody>
-    </table>
+  <!-- Real operational note instead of generic setup tips -->
+  <h2>Your Plan Doesn't Start Counting Down Until You Land</h2>
+  <p>
+    UPeSIM's plans only begin once your phone actually connects to the destination network, not when you install the eSIM or scan the QR code. That means you can set the eSIM up before you fly, at home, with no rush at the airport, and it sits inactive until you land and it registers on a local tower. The catch is the flip side of that same convenience: UPeSIM's own FAQ notes an eSIM profile that's installed but never activated goes stale after 60 days and shows as expired in the app, so don't install one for a trip that's still months away and expect it to still be usable.
+  </p>
+  <p>
+    It's data-only. Calls and texts route through your home carrier at whatever roaming rate that carrier charges, not through UPeSIM, so WhatsApp or Telegram over the data connection is the practical way to stay reachable without a second bill.
+  </p>
 
-    <!-- Promo Codes -->
-    <h2>UpeSIM Promo Codes {{ buildMonthYear }}</h2>
-    <ul>
-        {% for code in provider.codes %}
-        {% if not code.isInvalid %}
-        <li><strong>{{ code.code }}:</strong> {{ code.discount }}</li>
-        {% endif %}
-        {% endfor %}
-    </ul>
-    <p style="font-size: 1rem; color: #2C3A4B;">Head over to <a href="https://upesim.com" style="color:#4A90E2;"><strong>UpeSIM</strong></a> and apply <strong>{{ provider.primaryCode }}</strong> at checkout to snag the deal.</p>
+  <!-- How to -->
+  <h2>Apply a UPeSIM Code in 3 Steps</h2>
+  <div class="content-box">
+    <ol>
+      <li>Copy <strong>{{ provider.primaryCode }}</strong></li>
+      <li>Pick a country, regional, or world plan for your destination on UPeSIM</li>
+      <li>Paste the code in the promo field at checkout and confirm the 10% price drop before paying</li>
+    </ol>
+    <p class="content-note">Discount shows before payment is completed.</p>
+  </div>
 
-    <!-- Quick Facts -->
-    <div style="background: #eaf4fe; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #4A90E2; margin-bottom: 2rem;">
-        <strong>UpeSIM Quick Facts:</strong>
-        <ul style="margin: 0.5rem 0 0 1rem;">
-            <li>130+ countries covered</li>
-            <li>Instant QR delivery</li>
-            <li>Secure, encrypted payments</li>
-            <li>7–30 day validity</li>
-            <li>Data-only eSIMs</li>
-            <li>No refunds post-activation</li>
-        </ul>
+  <!-- Decision help -->
+  <h2>Is UPeSIM the Right Pick for Your Trip</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Good fit</h3>
+      <ul>
+        <li>You want to install the eSIM well ahead of a trip without it burning data early</li>
+        <li>You'd rather a plan just expire than risk an unexpected auto-renewal charge</li>
+        <li>24/7 support with a fast reply matters more to you than live chat specifically</li>
+      </ul>
     </div>
-
-    <!-- FAQ Section -->
-    <h2>Frequently Asked Questions</h2>
-    <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 2rem 0;">
-        <div style="border-bottom: 1px solid #d9eafc; padding: 1.5rem;">
-            <h3 style="color: #4A90E2; margin-bottom: 0.5rem;">Best code for UpeSIM?</h3>
-            <p style="margin-bottom: 0;">Use <strong>{{ provider.primaryCode }}</strong> for {{ primary.discount | lower }}, worldwide.</p>
-        </div>
-        <div style="border-bottom: 1px solid #d9eafc; padding: 1.5rem;">
-            <h3 style="color: #4A90E2; margin-bottom: 0.5rem;">Plan validity?</h3>
-            <p style="margin-bottom: 0;">Typically 7–30 days depending on destination. Check before buying.</p>
-        </div>
-        <div style="padding: 1.5rem;">
-            <h3 style="color: #4A90E2; margin-bottom: 0.5rem;">Can I get a refund?</h3>
-            <p style="margin-bottom: 0;">Nope. Once activated, no take backs. Make sure it works first.</p>
-        </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Consider alternatives</h3>
+      <ul>
+        <li>You want a guaranteed refund if the eSIM doesn't work: see <a href="/alosim/">AloSIM</a>, which advertises one</li>
+        <li>You're traveling more than 60 days out and don't want to remember to install closer to departure</li>
+        <li>You just want the lowest per-GB price: check <a href="/redteago/">RedteaGO</a> or <a href="/airhub/">Airhub</a> first</li>
+      </ul>
     </div>
+  </div>
 
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Best code for UpeSIM?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Use {{ provider.primaryCode }} for {{ primary.discount | lower }}, worldwide."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Plan validity?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Typically 7–30 days depending on destination. Check before buying."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I get a refund?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Nope. Once activated, no take backs. Make sure it works first."
-      }
-    }
-  ]
-}
-</script>
+  <p>
+    For eSIM device compatibility, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
 
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Use the Code at Checkout</h2>
+    <p>Copy <code>{{ provider.primaryCode }}</code> then paste in the promo field</p>
+    <p>10% off any UPeSIM plan, 200+ destinations.</p>
+  </div>
 
-    <!-- Call to Action -->
-    <div style="background: linear-gradient(135deg, #eaf4fe 0%, #d9eafc 100%); color: #2C3A4B; padding: 2rem; border-radius: 12px; text-align: center; margin: 3rem 0; border: 2px solid #4A90E2;">
-        <h2 style="color: #2C3A4B; margin-bottom: 1rem;">Save on Your UpeSIM eSIM</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #2C3A4B;">Use code <strong style="color: #4A90E2;">{{ provider.primaryCode }}</strong> at checkout for {{ primary.discount | lower }} and travel stress-free.</p>
-        <p style="margin-bottom: 0; color: #2C3A4B;">Straightforward, secure, and no hidden fees: exactly how travel tech should be.</p>
+  <!-- FAQ -->
+  <h2>UPeSIM Promo Code FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>What is the best code right now</h3>
+      <p><strong>REDDIT10</strong>: 10% off all UPeSIM plans. ESIMDB10 and T-DEALZ-10 also give 10% if that one stops working.</p>
     </div>
+    <div class="content-faq-item">
+      <h3>Does the plan start when I install the eSIM</h3>
+      <p>No. It starts when your phone actually connects to the destination network, so installing before you fly doesn't cost you any validity days.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can an installed eSIM expire before I use it</h3>
+      <p>Yes. UPeSIM's own FAQ says a profile that's installed but never activated goes stale after 60 days and shows as expired. Install closer to your trip if it's more than two months out.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does UPeSIM include calls or texts</h3>
+      <p>No, it's data-only. Calls and SMS route through your home carrier's roaming rates instead. WhatsApp or Telegram over the data connection works as a substitute.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I get a refund</h3>
+      <p>UPeSIM doesn't publicly advertise a refund guarantee the way some competitors do, so treat a purchase as final once you've bought it.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What is the best UPeSIM promo code right now?",
+        "acceptedAnswer":{"@type":"Answer","text":"REDDIT10 gives 10% off all UPeSIM plans. ESIMDB10 and T-DEALZ-10 also give 10% off as backups."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does a UPeSIM plan start when the eSIM is installed?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. The plan starts once the phone connects to the destination network, so installing the eSIM ahead of a trip doesn't use up validity days."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can an installed UPeSIM eSIM expire before it's ever activated?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. Per UPeSIM's own FAQ, an installed but never-activated profile goes stale after 60 days and shows as expired in the app."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does UPeSIM include calls or texts?",
+        "acceptedAnswer":{"@type":"Answer","text":"No, UPeSIM is data-only. Calls and SMS are charged as roaming by the traveler's home carrier instead."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does UPeSIM offer refunds?",
+        "acceptedAnswer":{"@type":"Answer","text":"UPeSIM does not publicly advertise a refund guarantee, so a purchase should be treated as final."}
+      }
+    ]
+  }
+  </script>
 </div>

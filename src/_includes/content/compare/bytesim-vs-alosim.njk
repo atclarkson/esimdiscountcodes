@@ -1,0 +1,131 @@
+<!-- ByteSIM vs AloSIM Comparison Content -->
+<div class="content-section">
+
+  {% set bytesimPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set alosimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Both bundle a phone number with your data, but they solve it differently. <strong>ByteSIM</strong> gives you a real local number in a handful of countries, at the cost of ID verification. <strong>AloSIM</strong> gives you a free virtual second line through Hushed, in any country, with no ID check at all. Which one you want depends on whether you need a number a local business or bank will actually dial, or just a number you can hand out without giving up your real one.
+    </p>
+  </div>
+
+  <h2>The Core Difference: A Real Local Number vs. a Virtual One</h2>
+  <p>
+    ByteSIM sells plans with a genuine local phone number in select countries (the US, Canada, UK, France, Spain, Australia, Vietnam, South Korea, and Thailand), bundled with local calls, texts, hotspot sharing, and a local IP. Getting that number means uploading a passport photo and a selfie for identity verification, standard practice for actually being issued a number under local telecom rules, but a real extra step compared to buying data alone.
+  </p>
+  <p>
+    AloSIM's phone number comes from a partnership with Hushed instead: a free international virtual number set up inside the AloSIM app after you buy any plan, no ID verification required. It's genuinely useful for receiving a verification text or giving a hotel a number that isn't your real one, but it's a second line for texts and app-based calls, not a real local number that connects to the regular phone network the way ByteSIM's does.
+  </p>
+
+  <h2>Price Snapshot</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Plan type</th>
+          <th>ByteSIM</th>
+          <th>AloSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Data-only, 1GB-equivalent</td><td>Varies by destination</td><td>$4.50 (1GB)</td></tr>
+        <tr><td>Number-included plan example</td><td>Spain: $13.90 (100GB + local calls + EU roaming, 27 days)</td><td>Free Hushed number with any plan</td></tr>
+        <tr><td>ID verification required</td><td>Only for number plans</td><td>No</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">These aren't apples-to-apples: ByteSIM's number plans bundle in local calling minutes and a much larger data allowance for a specific country, while AloSIM's Hushed number rides free on top of a plain data plan. Compare the actual plan you'd buy on each site rather than a single per-GB number.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>ByteSIM:</strong> {{ providerA.primaryCode }}, advertised as 10% off but tested at roughly 5% in practice. <a href="/bytesim/">Full code list &rarr;</a></li>
+      <li><strong>AloSIM:</strong> {{ providerB.primaryCode }}, {{ alosimPrimary.discount | lower }}. <a href="/alosim/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">AloSIM's code is the clearer discount of the two. ByteSIM's real savings landed close to what its own automatic site-wide sale already applies with no code needed, so check the price at checkout before assuming the advertised percentage.</p>
+  </div>
+
+  <h2>Is ByteSIM or AloSIM the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with ByteSIM if&hellip;</h3>
+      <ul>
+        <li>You need a number a local bank, delivery service, or landlord can actually call or text</li>
+        <li>Your destination is one of ByteSIM's supported local-number countries</li>
+        <li>You don't mind uploading ID to get a real number</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with AloSIM if&hellip;</h3>
+      <ul>
+        <li>You just need a number for verification texts or to avoid handing out your real one</li>
+        <li>You'd rather not do ID verification at all</li>
+        <li>You want the option of a fixed-GB or unlimited plan, not just number-bundled ones</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>ByteSIM's number plans bill on your terms.</strong> Per ByteSIM's own support, a plan doesn't start counting against your data or minutes until you actually tap activate, even after ID verification is done, so there's no rush once you've installed it. AloSIM works the same way on the refund side instead: it advertises a no-questions refund if an eSIM won't connect or the device turns out incompatible, as long as you haven't put real use on it yet.
+  </p>
+  <p>
+    <strong>Support style differs too.</strong> ByteSIM handles support over WhatsApp with a real person, including proactively checking back in on activation issues rather than waiting for another message. AloSIM's refund policy covers the same kind of activation problem from a different angle: instead of a support conversation, you get your money back.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>ByteSIM vs AloSIM FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which gives you a more useful phone number, ByteSIM or AloSIM</h3>
+      <p>Depends on the use case. ByteSIM's number is real and connects like a normal local number, but only in its supported countries and only after ID verification. AloSIM's Hushed number is free and needs no ID, but it's a virtual second line rather than a full local number.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Do I have to verify my identity with either provider</h3>
+      <p>Only with ByteSIM, and only if you buy a plan that includes a local phone number. AloSIM requires no ID verification for its Hushed number or for standard data plans.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which is cheaper</h3>
+      <p>They're not really comparable at the number level: ByteSIM bundles local calls and a large data allowance into its number plans, while AloSIM's number rides free on a plain data plan. Compare the specific plan you'd actually buy on each site.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>What if the eSIM doesn't work</h3>
+      <p>AloSIM advertises a straightforward refund for eSIMs that fail to connect or are incompatible with the device. ByteSIM leans on responsive WhatsApp support instead, and its plans don't start billing until you tap activate, so there's less pressure if activation is delayed.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which gives you a more useful phone number, ByteSIM or AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"ByteSIM's number is real and connects like a normal local number, but only in its supported countries and only after ID verification. AloSIM's Hushed number is free and needs no ID, but is a virtual second line rather than a full local number."}
+      },
+      {
+        "@type":"Question",
+        "name":"Do you have to verify your identity with ByteSIM or AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Only with ByteSIM, and only for plans that include a local phone number. AloSIM requires no ID verification for its Hushed number or standard data plans."}
+      },
+      {
+        "@type":"Question",
+        "name":"Is ByteSIM or AloSIM cheaper?",
+        "acceptedAnswer":{"@type":"Answer","text":"They aren't directly comparable at the number level, since ByteSIM bundles local calls and a large data allowance into its number plans while AloSIM's number rides free on a plain data plan. The specific plan being purchased on each site should be compared directly."}
+      },
+      {
+        "@type":"Question",
+        "name":"What happens if a ByteSIM or AloSIM eSIM doesn't work?",
+        "acceptedAnswer":{"@type":"Answer","text":"AloSIM advertises a refund for eSIMs that fail to connect or are incompatible with the device. ByteSIM instead offers responsive WhatsApp support, and its plans don't start billing until activation is tapped."}
+      }
+    ]
+  }
+  </script>
+</div>

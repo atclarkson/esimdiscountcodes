@@ -1385,7 +1385,7 @@
         "discount": "~5% OFF (ADVERTISED AS 10%)",
         "description": "Advertised elsewhere as 10% off travel eSIM plans. Tested at checkout on a $2.90 order and it only knocked off $0.15, about 5%, roughly matching what ByteSIM's own site-wide Summer Sale already applies automatically without any code.",
         "verified": true,
-        "lastTested": "2026-09-12",
+        "lastTested": "2026-09-13",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public"
@@ -1406,7 +1406,7 @@
         "discount": "10% OFF ESIM",
         "description": "Public discount code advertised on eSIM Card's site",
         "verified": true,
-        "lastTested": "2026-09-12",
+        "lastTested": "2026-09-13",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public"
