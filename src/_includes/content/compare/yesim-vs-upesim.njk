@@ -1,0 +1,132 @@
+<!-- Yesim vs UPeSIM Comparison Content -->
+<div class="content-section">
+
+  {% set yesimPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set upesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>Yesim</strong> if you travel often and want unused data to roll over to your next trip, plus a real refund option if plans change. Pick <strong>UPeSIM</strong> if you just want a straightforward, cheaper prepaid plan for one trip and don't care about a safety net. They're both data-only prepaid eSIMs, but Yesim charges more for flexibility that UPeSIM doesn't offer.
+    </p>
+  </div>
+
+  <h2>The Core Difference: Rolling Balance vs. Fixed Block</h2>
+  <p>
+    Yesim's "Pay & Fly" plans work like a topped-up balance: you pay in dollars rather than a fixed GB amount, priced from $1.10/GB, and whatever's left over rolls into your next purchase instead of expiring. UPeSIM sells a plain fixed block of days or gigabytes that expires once it runs out, with no rollover and no auto-renewal, so there's never a lingering balance to manage either way.
+  </p>
+  <p>
+    That difference matters most if you travel more than once a year. A Yesim balance you don't fully use on one trip is still there for the next one. A UPeSIM plan you don't finish is gone the moment it expires, full stop.
+  </p>
+
+  <h2>Price Snapshot (before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Yesim</th>
+          <th>UPeSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States</td><td>$8.40 (1 day)</td><td>$5.55 (1GB)</td></tr>
+        <tr><td>Thailand</td><td>$8.40 (1 day)</td><td>$3.50 (1GB)</td></tr>
+        <tr><td>Japan</td><td>$19.80 (7 days)</td><td>$5.80 (1GB)</td></tr>
+        <tr><td>UAE</td><td>$7.70 (1 day)</td><td>$7 (1GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Yesim prices by the day, UPeSIM by the gigabyte, so these aren't a direct apples-to-apples rate. On this site, Yesim sits in the "Expensive" price bracket and UPeSIM in "Average."</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Yesim:</strong> {{ providerA.primaryCode }}, {{ yesimPrimary.discount | lower }}, first purchase only. <a href="/yesim/">Full code list &rarr;</a></li>
+      <li><strong>UPeSIM:</strong> {{ providerB.primaryCode }}, {{ upesimPrimary.discount | lower }}. <a href="/upesim/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Neither is our own code. Both providers run on public codes rather than the kind of affiliate program that would let us have a code here.</p>
+  </div>
+
+  <h2>Is Yesim or UPeSIM the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Yesim if&hellip;</h3>
+      <ul>
+        <li>You travel more than once a year and want leftover data to carry forward</li>
+        <li>You'd rather pay more for a real refund option on an unused plan</li>
+        <li>You don't mind paying by the day instead of by the gigabyte</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with UPeSIM if&hellip;</h3>
+      <ul>
+        <li>It's a one-off trip and you don't need the plan to outlast it</li>
+        <li>You want the cheaper per-GB rate and can live without a refund</li>
+        <li>You'd rather set the eSIM up ahead of time and forget about it until you land</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Yesim's refund policy is unusually generous.</strong> It advertises a 30-day money-back guarantee on unused plans, not just ones that failed to activate. UPeSIM, like most prepaid eSIMs, treats a purchased plan as final once bought.
+  </p>
+  <p>
+    <strong>UPeSIM's plan doesn't start counting down until you land.</strong> It only begins once your phone actually connects to the destination network, so you can install it well ahead of a trip. The catch: an installed-but-never-activated UPeSIM profile goes stale after 60 days, so don't set it up for a trip that's still months out. Yesim's balance model sidesteps that problem entirely since unused funds simply roll over rather than expiring on a fixed clock.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Yesim vs UPeSIM FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Yesim or UPeSIM</h3>
+      <p>UPeSIM, in most cases. Yesim sits in our "Expensive" bracket and UPeSIM in "Average," and UPeSIM's per-GB rate usually beats Yesim's per-day rate for a single trip.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which is better for someone who travels several times a year</h3>
+      <p>Yesim, mainly because of the rolling balance. Money left on a Yesim Pay &amp; Fly plan carries into your next purchase, where a UPeSIM plan expires and any leftover data is gone.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I get a refund if I don't end up using the plan</h3>
+      <p>Only with Yesim, which advertises a 30-day money-back guarantee on unused plans. UPeSIM treats a purchase as final once it's bought.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Do either of these include a phone number or calls</h3>
+      <p>No. Both are data-only. Voice calls route over apps like WhatsApp on the data connection for both providers.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Yesim or UPeSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"UPeSIM is cheaper in most cases. Yesim sits in the Expensive price bracket and UPeSIM in the Average bracket, and UPeSIM's per-GB rate usually beats Yesim's per-day rate for a single trip."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which is better for someone who travels several times a year, Yesim or UPeSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim, mainly because of its rolling balance. Money left on a Yesim Pay & Fly plan carries into the next purchase, while a UPeSIM plan expires with any leftover data gone."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I get a refund if I don't use a Yesim or UPeSIM plan?",
+        "acceptedAnswer":{"@type":"Answer","text":"Only with Yesim, which advertises a 30-day money-back guarantee on unused plans. UPeSIM treats a purchase as final once bought."}
+      },
+      {
+        "@type":"Question",
+        "name":"Do Yesim or UPeSIM include a phone number or calls?",
+        "acceptedAnswer":{"@type":"Answer","text":"No, both are data-only eSIMs. Voice calls route over apps like WhatsApp using the data connection on either provider."}
+      }
+    ]
+  }
+  </script>
+</div>

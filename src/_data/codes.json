@@ -1137,13 +1137,13 @@
       {
         "code": "ESIMSIO10",
         "discount": "10% OFF ALL PLANS",
-        "description": "GlobaleSIM discount - 10% off",
+        "description": "GlobaleSIM's own domain now resolves to a GoDaddy parking page, so the site and this code can no longer be reached to confirm it works.",
         "verified": true,
-        "lastTested": "2025-07-20",
+        "lastTested": "2026-09-14",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public",
-        "isInvalid": false
+        "isInvalid": true
       }
     ],
     "totalScore": "2.7",

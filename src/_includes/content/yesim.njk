@@ -1,177 +1,156 @@
-<!-- YesIM Content Template -->
+<!-- Yesim Content -->
 <div class="content-section">
-    {% set primary = provider.codes | findCode(provider.primaryCode) %}
-    <!-- Main heading -->
-    <h2>Best YesIM Promo Codes for {{ buildMonthYear }}</h2>
-    
-    <!-- Introduction -->
-    <p>YesIM offers solid eSIM plans in over <strong>140+ countries</strong>. No physical SIM, straight-up transparent pricing, and fast delivery. Ideal for travelers who want simple, reliable data without the drama.</p>
 
-    <!-- Key Features Highlight -->
-    <div class="feature-highlights" style="background: linear-gradient(135deg, #ffe6f2 0%, #ffd0e6 100%); border: 2px solid #FF007A; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
-        <h2 style="color: #663347; margin-bottom: 1.5rem;">What Makes YesIM Stand Out?</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #663347;">Wide Coverage</h3>
-                <p>140+ countries with consistent high-speed data</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #663347;">Instant QR Code</h3>
-                <p>Get your eSIM QR in seconds: activate on the spot</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #663347;">Upfront Cost</h3>
-                <p>Transparent pricing: no nasty surprises</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #663347;">Flexible Plans</h3>
-                <p>Options from 5 days to 30 days based on region</p>
-            </div>
-        </div>
-    </div>
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Best Yesim Promo Code &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Use <strong>{{ provider.primaryCode }}</strong> for <strong>{{ primary.discount | lower }}</strong>. It's a public code, not one of ours (Yesim doesn't run an affiliate program of the kind that would let us have our own code here), but it's the best one we've verified.
+      <span class="callout-meta">Confirmed active <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("MMM d, yyyy") }}</time>.</span>
+    </p>
+  </div>
 
-    <!-- How YesIM Works -->
-    <h2>How YesIM eSIM Works</h2>
-    <p>Choose your destination, pick a data size, pay online, get a QR delivered instantly, and activate when you land. Manage everything easily via the YesIM app or dashboard: you’ll be covered for your whole trip.</p>
+  <!-- Headline -->
+  <h2>What Actually Makes Yesim Different</h2>
+  <p>
+    Most eSIM apps on this site sell you a fixed block of data and that's the end of the relationship until you buy again. Yesim's "Pay & Fly" plans work more like a prepaid balance: you buy data in dollars rather than gigabytes, it's priced from $1.10/GB, and whatever you don't use rolls over instead of expiring the moment your trip ends. If you're a frequent flyer who tops up the same balance trip after trip rather than buying a fresh block every time, that's a genuinely different model from the fixed-GB or fixed-day plans <a href="/airhub/">Airhub</a> and most other providers here sell.
+  </p>
+  <p>
+    Yesim also advertises automatic network switching (they call it "SwitchLess Networks") across a claimed 800+ partner networks, so the eSIM hops to whichever local carrier gives the best signal instead of locking you to one partner network the way a lot of single-carrier eSIMs do. We haven't independently measured the switching in the field, so treat it as Yesim's own claim rather than something we've verified.
+  </p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Active codes</h3>
     <ul>
-        <li><strong>Select country or regional plan</strong> from the list</li>
-        <li><strong>Pay securely</strong>: price shown in your currency</li>
-        <li><strong>Receive instant QR</strong> after purchase</li>
-        <li><strong>Install & activate</strong> after landing</li>
-        <li><strong>Track usage & validity</strong> all through your account</li>
+      {% for code in provider.codes %}
+      {% if not code.isInvalid %}
+      <li><strong>{{ code.code }}</strong>: {{ code.discount | lower }}</li>
+      {% endif %}
+      {% endfor %}
     </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">If a code doesn't apply at checkout, refresh the cart or try a private window, then retry.</p>
+  </div>
 
-    <!-- Comparison with Competitors -->
-    <h2>YesIM vs. Other eSIM Providers</h2>
-    <table style="margin: 2rem 0;">
-        <thead>
-            <tr>
-                <th>Feature</th>
-                <th style="background: #ffe6f2; color: #FF007A;"><strong>YesIM</strong></th>
-                <th>UpeSIM</th>
-                <th>Nomad</th>
-                <th>Ubigi</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Coverage</strong></td>
-                <td style="background: #fefcfd;"><span style="color: #FF007A;">140+</span></td>
-                <td>130+</td>
-                <td>120+</td>
-                <td>190+</td>
-            </tr>
-            <tr>
-                <td><strong>Instant QR?</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Transparent Price</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Refundable?</strong></td>
-                <td style="background: #fefcfd;"><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Promo Code</strong></td>
-                <td style="background: #fefcfd;"><strong>{{ provider.primaryCode }}</strong> ({{ primary.discount | lower }})</td>
-                <td><code>REDDIT10</code> (10%)</td>
-                <td><code>WOLF</code> (10%)</td>
-                <td><code>ADAMANDLINDS</code> (10%)</td>
-            </tr>
-        </tbody>
-    </table>
+  <!-- Real operational note -->
+  <h2>The Refund Policy Is Better Than Most eSIM Apps</h2>
+  <p>
+    Yesim advertises a 30-day money-back guarantee on unused plans, refundable through their own policy rather than just for eSIMs that fail to activate. Most providers on this site, including Yesim's own cheaper competitors, only refund a plan that never connected in the first place and treat any activated plan as final. That's worth knowing if you tend to buy ahead of a trip and aren't sure you'll actually use the plan.
+  </p>
+  <p>
+    The tradeoff is price. Yesim sits in our "Expensive" bracket: day-based plans run from roughly $1.56 to $31 depending on destination, noticeably above what <a href="/holafly/">Holafly</a> or <a href="/airhub/">Airhub</a> charge for comparable coverage. You're paying for the refund flexibility and the Pay & Fly balance model, not for the cheapest rate per GB.
+  </p>
 
-    <!-- Promo Codes -->
-    <h2>YesIM Promo Codes {{ buildMonthYear }}</h2>
+  <!-- How to -->
+  <h2>Apply a Yesim Code in 3 Steps</h2>
+  <div class="content-box">
+    <ol>
+      <li>Copy <strong>{{ provider.primaryCode }}</strong></li>
+      <li>Pick a country, regional, or Pay & Fly balance plan for your destination on Yesim</li>
+      <li>Paste the code in the promo field at checkout and confirm the price drop before paying</li>
+    </ol>
+    <p class="content-note">Discount shows before payment is completed.</p>
+  </div>
+
+  <!-- Decision help -->
+  <h2>Is Yesim the Right Pick for Your Trip</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Good fit</h3>
+      <ul>
+        <li>You travel often and want a data balance that rolls over instead of a plan that expires between trips</li>
+        <li>You want the option of a real refund if you buy ahead and end up not needing the plan</li>
+        <li>You'd rather pay in dollars for data used than track a fixed GB allowance</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Consider alternatives</h3>
+      <ul>
+        <li>You just want the cheapest rate for a single trip: check <a href="/airhub/">Airhub</a> or <a href="/holafly/">Holafly</a> first</li>
+        <li>You want unlimited data with no usage tracking at all: see <a href="/holafly/">Holafly</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Savings examples -->
+  <h2>What the Discount Looks Like</h2>
+  <div class="content-box">
     <ul>
-        <li><strong>{{ provider.primaryCode }}:</strong> {{ primary.discount }} (confirmed active {{ (primary.lastTested or buildTime) | fmtDate("MMMM yyyy") }})</li>
-        {% for code in provider.codes %}
-        {% if code.code != provider.primaryCode and not code.isInvalid %}
-        <li><strong>{{ code.code }}:</strong> {{ code.discount }}</li>
-        {% endif %}
-        {% endfor %}
+      <li>United States 1 day at $8.40 &rarr; 20% off saves $1.68</li>
+      <li>Japan 7 days at $19.80 &rarr; 20% off saves $3.96</li>
+      <li>UAE 1 day at $7.70 &rarr; 20% off saves $1.54</li>
     </ul>
-    <p style="font-size: 1rem; color: #663347;">Head to <a href="{{ provider.url }}" style="color:#FF007A;"><strong>YesIM</strong></a> and enter <strong>{{ provider.primaryCode }}</strong> at checkout to grab your discount.</p>
+    <p class="content-note">{{ provider.primaryCode }} only applies to your first Yesim purchase. After that, <strong>WELCOMETOYESIM</strong> (15% off) and <strong>TRAVELFREE</strong> (a flat &euro;3 off) are the codes worth trying on repeat orders.</p>
+  </div>
 
-    <!-- Quick Facts -->
-    <div style="background: #ffe6f2; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #FF007A; margin-bottom: 2rem;">
-        <strong>YesIM Quick Facts:</strong>
-        <ul style="margin: 0.5rem 0 0 1rem;">
-            <li>Coverage in 140+ countries</li>
-            <li>Instant QR delivery & activation</li>
-            <li>Transparent, no-surprise pricing</li>
-            <li>Flexible 5–30 day plans</li>
-            <li>Data-only, no voice/SMS</li>
-            <li>No refunds after activation</li>
-        </ul>
+  <p>
+    For eSIM device compatibility, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Use the Code at Checkout</h2>
+    <p>Copy <code>{{ provider.primaryCode }}</code> then paste in the promo field</p>
+    <p>{{ primary.discount | lower }} on your first Yesim eSIM.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Yesim Promo Code FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>What is the best code right now</h3>
+      <p><strong>{{ provider.primaryCode }}</strong>: {{ primary.discount | lower }}, for first-time buyers. Returning customers should try <strong>WELCOMETOYESIM</strong> or <strong>TRAVELFREE</strong> instead.</p>
     </div>
-
-    <!-- FAQ Section -->
-    <h2>Frequently Asked Questions</h2>
-    <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 2rem 0;">
-        <div style="border-bottom: 1px solid #ffd0e6; padding: 1.5rem;">
-            <h3 style="color: #FF007A; margin-bottom: 0.5rem;">Best YesIM code?</h3>
-            <p style="margin-bottom: 0;">Use <strong>{{ provider.primaryCode }}</strong> for {{ primary.discount | lower }}, everywhere.</p>
-        </div>
-        <div style="border-bottom: 1px solid #ffd0e6; padding: 1.5rem;">
-            <h3 style="color: #FF007A; margin-bottom: 0.5rem;">Plan length?</h3>
-            <p style="margin-bottom: 0;">Options between 5 to 30 days depending on the country.</p>
-        </div>
-        <div style="padding: 1.5rem;">
-            <h3 style="color: #FF007A; margin-bottom: 0.5rem;">Refunds?</h3>
-            <p style="margin-bottom: 0;">Once you activate, it’s final. Double-check before scanning the QR.</p>
-        </div>
+    <div class="content-faq-item">
+      <h3>What is a Pay &amp; Fly plan</h3>
+      <p>It's Yesim's balance-based option: you top up a dollar amount rather than buying a fixed block of GB, priced from $1.10/GB, and unused balance carries over to your next trip instead of expiring.</p>
     </div>
-
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {
-      "@type":"Question",
-      "name":"Best YesIM code?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Use {{ provider.primaryCode }} for {{ primary.discount | lower }}, everywhere."
-      }
-    },
-    {
-      "@type":"Question",
-      "name":"Plan length?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Options between 5 to 30 days depending on the country."
-      }
-    },
-    {
-      "@type":"Question",
-      "name":"Refunds?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Once you activate, it is final. Double check before scanning the QR."
-      }
-    }
-  ]
-}
-</script>
-
-    <!-- Call to Action -->
-    <div style="background: linear-gradient(135deg, #ffe6f2 0%, #ffd0e6 100%); color: #663347; padding: 2rem; border-radius: 12px; text-align: center; margin: 3rem 0; border: 2px solid #FF007A;">
-        <h2 style="color: #663347; margin-bottom: 1rem;">Save on Your YesIM eSIM</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #663347;">Use code <strong style="color: #FF007A;">{{ provider.primaryCode }}</strong> at checkout for {{ primary.discount | lower }}: travel smart and stay connected.</p>
-        <p style="margin-bottom: 0; color: #663347;">No frills, no surprises: just solid data when you need it.</p>
+    <div class="content-faq-item">
+      <h3>Can I get a refund if I don't use the plan</h3>
+      <p>Yesim advertises a 30-day money-back guarantee on unused plans, which is a step further than most eSIM providers on this site that only refund a plan that never connected at all. Refunds still run through Yesim's own policy, not through us.</p>
     </div>
+    <div class="content-faq-item">
+      <h3>Is Yesim the cheapest option</h3>
+      <p>No. Yesim sits in our "Expensive" price bracket. If price per GB is your main concern, check Airhub or Holafly before buying.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does Yesim include a phone number</h3>
+      <p>No. It's data-only, like most eSIMs on this site. Voice calls run over apps like WhatsApp or Viber using the data connection.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What is the best Yesim promo code right now?",
+        "acceptedAnswer":{"@type":"Answer","text":"{{ provider.primaryCode }} gives {{ primary.discount | lower }} for first-time buyers. Returning customers should try WELCOMETOYESIM or TRAVELFREE instead."}
+      },
+      {
+        "@type":"Question",
+        "name":"What is a Yesim Pay & Fly plan?",
+        "acceptedAnswer":{"@type":"Answer","text":"A balance-based option priced from $1.10/GB where you top up a dollar amount instead of buying a fixed block of data, and unused balance carries over to a future trip instead of expiring."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I get a refund if I don't use a Yesim plan?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim advertises a 30-day money-back guarantee on unused plans, which goes further than most competitors that only refund a plan that never connected."}
+      },
+      {
+        "@type":"Question",
+        "name":"Is Yesim the cheapest eSIM option?",
+        "acceptedAnswer":{"@type":"Answer","text":"No, Yesim sits in the Expensive price bracket on this site. Airhub and Holafly are cheaper options for travelers focused on price per GB."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Yesim include a phone number?",
+        "acceptedAnswer":{"@type":"Answer","text":"No, Yesim is data-only. Voice calls run over apps like WhatsApp or Viber using the data connection."}
+      }
+    ]
+  }
+  </script>
 </div>
