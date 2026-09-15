@@ -98,6 +98,19 @@ module.exports = function (eleventyConfig) {
     return codes.some((c) => c.code === "ADAMANDLINDS" && !c.isInvalid);
   });
 
+  // Best code actually worth advertising right now: prefers a valid
+  // primary code, falls back to any other valid code, so a temporarily
+  // broken primary code doesn't hide a provider's other working codes
+  // (or get shown as if it still works).
+  eleventyConfig.addFilter("bestValidCode", function (codes) {
+    if (!Array.isArray(codes)) return null;
+    return (
+      codes.find((c) => c.isPrimary && !c.isInvalid) ||
+      codes.find((c) => !c.isInvalid) ||
+      null
+    );
+  });
+
   // Keep this at the end. Nothing after this.
   return {
     dir: { input: "src", output: "_site" },

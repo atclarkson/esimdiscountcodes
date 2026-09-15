@@ -92,8 +92,11 @@ description: "Find verified discount and promo codes for top eSIM providers. Sav
                         {% endif %}
                     </div>
                     <h3>{{ provider.name }}</h3>
-                    {% if provider.primaryCode %}
-                    <p class="discount">Save with code <strong>{{ provider.primaryCode }}</strong></p>
+                    {% set cardTopCode = provider.codes | bestValidCode %}
+                    {% if cardTopCode %}
+                    <p class="discount">Save with code <strong>{{ cardTopCode.code }}</strong></p>
+                    {% elif provider.codes.length > 0 %}
+                    <p class="discount">No active code right now</p>
                     {% else %}
                     <p class="discount">Coming soon</p>
                     {% endif %}
@@ -122,7 +125,7 @@ description: "Find verified discount and promo codes for top eSIM providers. Sav
         </thead>
         <tbody>
           {% for key, provider in codes %}
-          {% set topCode = provider.codes | findCode(provider.primaryCode) %}
+          {% set topCode = provider.codes | bestValidCode %}
           <tr>
             <td>
                 <a href="/{{ key }}/" class="provider-link-btn">
@@ -145,6 +148,8 @@ description: "Find verified discount and promo codes for top eSIM providers. Sav
                 {% if topCode.code == "ADAMANDLINDS" %}
                 <span class="our-code-badge our-code-badge--table"><i class="fas fa-star"></i> Ours</span>
                 {% endif %}
+                {% elif provider.codes.length > 0 %}
+                <span class="table-empty">No active code</span>
                 {% else %}
                 <span class="table-empty">Coming soon</span>
                 {% endif %}

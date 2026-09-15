@@ -1,7 +1,7 @@
 <!-- Airhub vs Instabridge Comparison Content -->
 <div class="content-section">
 
-  {% set airhubPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set airhubBest = providerA.codes | bestValidCode %}
   {% set instabridgePrimary = providerB.codes | findCode(providerB.primaryCode) %}
 
   <div class="content-callout">
@@ -39,10 +39,10 @@
   <h2>Discount Codes</h2>
   <div class="content-box content-box--tan">
     <ul>
-      <li><strong>Airhub:</strong> {{ providerA.primaryCode }}, {{ airhubPrimary.discount | lower }}. <a href="/airhub/">Full code list &rarr;</a></li>
+      <li><strong>Airhub:</strong> {{ airhubBest.code }}, {{ airhubBest.discount | lower }}. Our own code, ADAMANDLINDS, isn't currently applying at checkout (reported to Airhub, believed temporary), so this is the code to actually use for now. <a href="/airhub/">Full code list &rarr;</a></li>
       <li><strong>Instabridge:</strong> {{ providerB.primaryCode }}, {{ instabridgePrimary.discount | lower }} (or TRAVELESIMEXPERT, same 20%). <a href="/instabridge/">Full code list &rarr;</a></li>
     </ul>
-    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Airhub's code is ours, shown first by policy. Instabridge's 20% code is a public one, and it only works on Instabridge's web store at checkout, not typed into the phone app.</p>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Instabridge's 20% code is a public one, and it only works on Instabridge's web store at checkout, not typed into the phone app.</p>
   </div>
 
   <h2>The Bigger Code Wins More Often Than the Sticker Price Suggests</h2>

@@ -3,12 +3,20 @@
 
   <!-- Quick Answer -->
   {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  {% set bestCode = provider.codes | bestValidCode %}
   <div class="content-callout">
     <h2>Best Airhub Promo Code &bull; {{ buildMonthYear }}</h2>
+    {% if primary.isInvalid %}
     <p>
-      Use <strong>{{ provider.primaryCode }}</strong> for <strong>{{ primary.discount | lower }}</strong>. This is our own code, so we show it first, but it's worth knowing every other Airhub code we've verified gives the same 5% (one region-specific one gives less), so there's no better deal hiding elsewhere on this page.
+      Our own code, <strong>{{ provider.primaryCode }}</strong>, isn't applying a discount at Airhub's checkout right now. We tested it directly and confirmed it, then flagged it with Airhub; we expect this is a temporary issue on their end and we're still showing it as our code while we wait on a fix. In the meantime, <strong>{{ bestCode.code }}</strong> is the only Airhub code we've verified still works, for <strong>{{ bestCode.discount | lower }}</strong>.
+      <span class="callout-meta">Checked <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("MMM d, yyyy") }}</time>.</span>
+    </p>
+    {% else %}
+    <p>
+      Use <strong>{{ provider.primaryCode }}</strong> for <strong>{{ primary.discount | lower }}</strong>. This is our own code, so we show it first.
       <span class="callout-meta">Confirmed active <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("MMM d, yyyy") }}</time>.</span>
     </p>
+    {% endif %}
   </div>
 
   <!-- Headline -->
@@ -22,31 +30,28 @@
 
   <!-- Codes -->
   <div class="content-box content-box--tan">
-    <h3>Active codes</h3>
+    <h3>Code status, checked directly at checkout</h3>
     <ul>
-      <li><strong>{{ provider.primaryCode }}</strong>: {{ primary.discount | lower }} (our code, shown first)</li>
-      {% for code in provider.codes %}
-      {% if code.code != provider.primaryCode and not code.isInvalid %}
-      <li><strong>{{ code.code }}</strong>: {{ code.discount | lower }}</li>
-      {% endif %}
-      {% endfor %}
+      <li><strong>ESIMOFFER5</strong>: 5% off, confirmed working (the only one that currently applies)</li>
+      <li><strong>{{ provider.primaryCode }}</strong> (our code): not currently applying, reported to Airhub, expected temporary</li>
+      <li><strong>2025, SUMMER2025, MARCHFOREGYPT, NAMERICA4, JPESIM5</strong>: tested, none currently apply a discount</li>
     </ul>
-    <p style="margin-top:.75rem;margin-bottom:0;">Everything above is 5% off except the North America-specific code, which is 4%, so there's no reason to hunt for a "better" one, they're all roughly the same.</p>
+    <p style="margin-top:.75rem;margin-bottom:0;">Four of these were previously listed with a stray "COPY" left on the end of the code (like <code>JPESIM5COPY</code> instead of <code>JPESIM5</code>), a leftover from how we originally sourced them. That's fixed now; the codes above are what to actually type at checkout.</p>
   </div>
 
   <!-- Real operational note instead of generic setup tips -->
   <h2>Airhub's App Also Runs Its Own Deals, Separately From These Codes</h2>
   <p>
-    Airhub's own site currently advertises a 200MB no-commitment free trial for first-time users, plus a volume discount if you buy more than one eSIM in the same order: 15% off when you buy two, 25% off when you buy three. It also runs an app-exclusive code of its own. We haven't tested the app-exclusive code or the volume pricing ourselves, so we're not listing them as verified codes on this page, but if you're buying eSIMs for more than one traveler or device on the same trip, it's worth comparing that bundle price against just applying {{ provider.primaryCode }} to separate orders before you check out.
+    Airhub's own site currently advertises a 200MB no-commitment free trial for first-time users, plus a volume discount if you buy more than one eSIM in the same order: 15% off when you buy two, 25% off when you buy three. It also runs an app-exclusive code of its own. We haven't tested the app-exclusive code or the volume pricing ourselves, so we're not listing them as verified codes on this page, but if you're buying eSIMs for more than one traveler or device on the same trip, it's worth comparing that bundle price against applying {{ bestCode.code }} to separate orders before you check out.
   </p>
 
   <!-- How to -->
   <h2>Apply an Airhub Code in 3 Steps</h2>
   <div class="content-box">
     <ol>
-      <li>Copy <strong>{{ provider.primaryCode }}</strong></li>
+      <li>Copy <strong>{{ bestCode.code }}</strong></li>
       <li>Pick a country, regional, or global data package for your destination in the Airhub app or on airhubapp.com</li>
-      <li>Enter the code at checkout and confirm the price drops by {{ primary.discount | lower }} before paying</li>
+      <li>Enter the code at checkout and confirm the price drops by {{ bestCode.discount | lower }} before paying</li>
     </ol>
     <p class="content-note">Discount shows before payment is completed.</p>
   </div>
@@ -90,8 +95,8 @@
   <!-- CTA -->
   <div class="content-cta">
     <h2>Use the Code at Checkout</h2>
-    <p>Copy <code>{{ provider.primaryCode }}</code> then paste in the promo field</p>
-    <p>{{ primary.discount | lower }} on any Airhub plan.</p>
+    <p>Copy <code>{{ bestCode.code }}</code> then paste in the promo field</p>
+    <p>{{ bestCode.discount | lower }} on any Airhub plan.</p>
   </div>
 
   <!-- FAQ -->
@@ -99,7 +104,11 @@
   <div class="content-faq">
     <div class="content-faq-item">
       <h3>What is the best Airhub code right now</h3>
-      <p><strong>{{ provider.primaryCode }}</strong>: {{ primary.discount | lower }}. It's our own code, but every other verified Airhub code we list also gives 5% (one region-specific one gives 4%), so it's not hiding a better deal.</p>
+      <p><strong>ESIMOFFER5</strong>: 5% off, the only code we've confirmed still applies at checkout. Our own code, {{ provider.primaryCode }}, currently isn't working; we've reported it to Airhub and expect it back soon.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Why isn't your own code, {{ provider.primaryCode }}, working</h3>
+      <p>We tested it directly at Airhub's checkout and it isn't applying a discount right now. We've flagged this with Airhub and believe it's a temporary issue on their side rather than the code being discontinued, so we're keeping it listed as ours while we wait for confirmation it's fixed.</p>
     </div>
     <div class="content-faq-item">
       <h3>Does Airhub include calls</h3>
@@ -111,7 +120,7 @@
     </div>
     <div class="content-faq-item">
       <h3>Is it cheaper to buy multiple eSIMs at once</h3>
-      <p>Airhub advertises a volume discount, 15% off for two eSIMs and 25% off for three, bought in the same order. That's a separate offer from the promo codes on this page and we haven't tested it, so compare the total against applying {{ provider.primaryCode }} to individual orders before you buy.</p>
+      <p>Airhub advertises a volume discount, 15% off for two eSIMs and 25% off for three, bought in the same order. That's a separate offer from the promo codes on this page and we haven't tested it, so compare the total against applying {{ bestCode.code }} to individual orders before you buy.</p>
     </div>
     <div class="content-faq-item">
       <h3>How long do Airhub eSIMs last</h3>
@@ -128,7 +137,12 @@
       {
         "@type":"Question",
         "name":"What is the best Airhub promo code right now?",
-        "acceptedAnswer":{"@type":"Answer","text":"ADAMANDLINDS gives 5% off any Airhub plan. Every other verified Airhub code gives the same 5% except one region-specific code that gives 4%, so there is no hidden better deal."}
+        "acceptedAnswer":{"@type":"Answer","text":"ESIMOFFER5 gives 5% off and is the only Airhub code currently confirmed working at checkout. Airhub's own code, ADAMANDLINDS, is not currently applying a discount and has been reported to Airhub."}
+      },
+      {
+        "@type":"Question",
+        "name":"Why isn't the ADAMANDLINDS code working on Airhub?",
+        "acceptedAnswer":{"@type":"Answer","text":"Direct testing at Airhub's checkout confirmed it is not currently applying a discount. This has been reported to Airhub and is believed to be a temporary issue rather than a discontinued code."}
       },
       {
         "@type":"Question",
