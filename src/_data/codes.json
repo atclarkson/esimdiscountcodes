@@ -818,7 +818,7 @@
       {
         "code": "ADAMANDLINDS",
         "discount": "5% OFF ALL PLANS",
-        "description": "Our own code. The owner personally tested it at Airhub's checkout and it is not currently applying any discount. We've reported this to Airhub and are treating it as a temporary provider-side issue rather than dropping it as our primary code; we'll re-verify once Airhub confirms a fix.",
+        "description": "Our own code. Not currently applying a discount at Airhub's checkout. We've reported it to Airhub and expect this to be fixed soon.",
         "verified": true,
         "lastTested": "2026-09-15",
         "expiryDate": null,
@@ -829,7 +829,7 @@
       {
         "code": "2025",
         "discount": "5% OFF ALL PLANS",
-        "description": "Public code. The owner personally tested it at Airhub's checkout and it no longer applies any discount.",
+        "description": "Public code. Not currently applying a discount at Airhub's checkout.",
         "verified": true,
         "lastTested": "2026-09-15",
         "expiryDate": null,
@@ -840,7 +840,7 @@
       {
         "code": "SUMMER2025",
         "discount": "5% OFF ALL PLANS",
-        "description": "Public code. The owner personally tested it at Airhub's checkout and it no longer applies any discount.",
+        "description": "Public code. Not currently applying a discount at Airhub's checkout.",
         "verified": true,
         "lastTested": "2026-09-15",
         "expiryDate": null,
@@ -851,7 +851,7 @@
       {
         "code": "MARCHFOREGYPT",
         "discount": "5% OFF",
-        "description": "Egypt-region public code. Previously listed with an erroneous \"COPY\" suffix left over from how it was originally sourced; corrected here. The owner personally tested it at Airhub's checkout and it no longer applies any discount.",
+        "description": "Egypt-region public code. Not currently applying a discount at Airhub's checkout.",
         "verified": true,
         "lastTested": "2026-09-15",
         "expiryDate": null,
@@ -862,7 +862,7 @@
       {
         "code": "NAMERICA4",
         "discount": "4% OFF",
-        "description": "North America-region public code. Previously listed with an erroneous \"COPY\" suffix left over from how it was originally sourced; corrected here. The owner personally tested it at Airhub's checkout and it no longer applies any discount.",
+        "description": "North America-region public code. Not currently applying a discount at Airhub's checkout.",
         "verified": true,
         "lastTested": "2026-09-15",
         "expiryDate": null,
@@ -873,7 +873,7 @@
       {
         "code": "ESIMOFFER5",
         "discount": "5% OFF",
-        "description": "All-countries public code. Previously listed with an erroneous \"COPY\" suffix left over from how it was originally sourced; corrected here. The owner personally tested it at Airhub's checkout: 5% off applied and visible in the order summary before payment (proof on file). Currently the only Airhub code confirmed working.",
+        "description": "All-countries public code. Confirmed working at Airhub's checkout, 5% off applied before payment. Currently the only Airhub code we recommend.",
         "verified": true,
         "lastTested": "2026-09-15",
         "expiryDate": null,
@@ -884,7 +884,7 @@
       {
         "code": "JPESIM5",
         "discount": "5% OFF",
-        "description": "Japan-region public code. Previously listed with an erroneous \"COPY\" suffix left over from how it was originally sourced; corrected here. The owner personally tested it at Airhub's checkout and it no longer applies any discount.",
+        "description": "Japan-region public code. Not currently applying a discount at Airhub's checkout.",
         "verified": true,
         "lastTested": "2026-09-15",
         "expiryDate": null,
