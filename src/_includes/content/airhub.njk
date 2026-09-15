@@ -1,472 +1,156 @@
-<!-- Airhub Content Template -->
+<!-- Airhub Content -->
 <div class="content-section">
-    {% set primary = provider.codes | findCode(provider.primaryCode) %}
-    <!-- Main heading -->
-    <h2>Best Airhub Promo Codes for {{ buildMonthYear }}</h2>
-    
-    <!-- Introduction -->
-    <p>Airhub delivers affordable global eSIM connectivity with a focus on value and flexibility for budget-conscious travelers. Covering <strong>190+ countries</strong> with competitive pricing and multi-gigabyte data packages, Airhub makes international connectivity accessible without breaking the bank. Whether you're a backpacker exploring Southeast Asia, a student studying abroad, or a family planning an international vacation, Airhub's cost-effective plans ensure you stay connected without overspending.</p>
 
-    <!-- Key Features Highlight -->
-    <div class="feature-highlights" style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); border: 2px solid #d80027; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
-        <h2 style="color: #004346; margin-bottom: 1.5rem;">What Makes Airhub Stand Out?</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #004346;">Exceptional Value</h3>
-                <p>Multi-gigabyte packages at budget-friendly prices</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #004346;">Generous Data Allowances</h3>
-                <p>Up to 4GB packages for extended travel periods</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #004346;">Reusable eSIMs</h3>
-                <p>Environmentally friendly with long expiration periods</p>
-            </div>
-            <div style="text-align: center; padding: 1rem;">
-                <h3 style="color: #004346;">SMS Included</h3>
-                <p>Stay connected with included SMS functionality</p>
-            </div>
-        </div>
-    </div>
+  <!-- Quick Answer -->
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Best Airhub Promo Code &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Use <strong>{{ provider.primaryCode }}</strong> for <strong>{{ primary.discount | lower }}</strong>. This is our own code, so we show it first, but it's worth knowing every other Airhub code we've verified gives the same 5% (one region-specific one gives less), so there's no better deal hiding elsewhere on this page.
+      <span class="callout-meta">Confirmed active <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("MMM d, yyyy") }}</time>.</span>
+    </p>
+  </div>
 
-    <!-- How Airhub Works -->
-    <h2>How Airhub eSIM Technology Works</h2>
-    <p>Airhub focuses on delivering straightforward, affordable eSIM connectivity without unnecessary complications. Their streamlined approach prioritizes value and reliability, offering:</p>
+  <!-- Headline -->
+  <h2>What Actually Makes Airhub Different</h2>
+  <p>
+    Most budget eSIM apps sell data and nothing else. Airhub plans include SMS and, in many destinations, a local phone number alongside the data, which is unusual at this price point: <a href="/holafly/">Holafly</a> and <a href="/saily/">Saily</a> skip SMS entirely on standard plans, and neither hands you a local number. Airhub still doesn't include voice calls, so it's not a full phone-number replacement, but if you need to receive a verification text or give out a number that isn't your own while abroad, it covers that without an add-on.
+  </p>
+  <p>
+    The other real difference is how the data is packaged. Airhub sells multi-gigabyte blocks (3GB, 4GB) instead of the single-day or single-GB units most competitors use, and in cheaper destinations that lands at genuinely low per-GB prices: Thailand at $0.85 for 1GB and Japan at $1.55 for 1GB both undercut what <a href="/airalo/">Airalo</a> or Saily charge for the same amount in the same countries. If you want data with no cap at all rather than a bigger bucket, Holafly's flat-rate unlimited plans are the better fit; Airhub is for people who know roughly how much data they'll use and want to pay less per gigabyte for it.
+  </p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Active codes</h3>
     <ul>
-        <li><strong>Multi-gigabyte packages</strong> perfect for data-heavy travelers</li>
-        <li><strong>Regional coverage options</strong> for multi-country trips</li>
-        <li><strong>Local phone number provision</strong> in supported destinations</li>
-        <li><strong>SMS support</strong> for essential communications and verifications</li>
+      <li><strong>{{ provider.primaryCode }}</strong>: {{ primary.discount | lower }} (our code, shown first)</li>
+      {% for code in provider.codes %}
+      {% if code.code != provider.primaryCode and not code.isInvalid %}
+      <li><strong>{{ code.code }}</strong>: {{ code.discount | lower }}</li>
+      {% endif %}
+      {% endfor %}
     </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;">Everything above is 5% off except the North America-specific code, which is 4%, so there's no reason to hunt for a "better" one, they're all roughly the same.</p>
+  </div>
 
-    <!-- Comparison with Major Competitors -->
-    <h2>Airhub vs. Top eSIM Competitors</h2>
-    <p>See how Airhub's value-focused approach compares to other leading eSIM providers like <a href="/holafly">Holafly</a>, <a href="/airalo">Airalo</a>, and <a href="/saily">Saily</a>:</p>
+  <!-- Real operational note instead of generic setup tips -->
+  <h2>Airhub's App Also Runs Its Own Deals, Separately From These Codes</h2>
+  <p>
+    Airhub's own site currently advertises a 200MB no-commitment free trial for first-time users, plus a volume discount if you buy more than one eSIM in the same order: 15% off when you buy two, 25% off when you buy three. It also runs an app-exclusive code of its own. We haven't tested the app-exclusive code or the volume pricing ourselves, so we're not listing them as verified codes on this page, but if you're buying eSIMs for more than one traveler or device on the same trip, it's worth comparing that bundle price against just applying {{ provider.primaryCode }} to separate orders before you check out.
+  </p>
 
-    <table style="margin: 2rem 0;">
-        <thead>
-            <tr>
-                <th>Feature</th>
-                <th style="background: #fef2f2; color: #d80027;"><strong>Airhub</strong></th>
-                <th>Holafly</th>
-                <th>Airalo</th>
-                <th>Saily</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Price Category</strong></td>
-                <td style="background: #fefcfc;"><span style="color: #4D8374;">Cheap</span></td>
-                <td>Cheap</td>
-                <td>Average</td>
-                <td>Cheap</td>
-            </tr>
-            <tr>
-                <td><strong>SMS Included</strong></td>
-                <td style="background: #fefcfc;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td>Global plan only</td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Local Number</strong></td>
-                <td style="background: #fefcfc;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-                <td><i class="fas fa-times" style="color: #79252F;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Min Plan Duration</strong></td>
-                <td style="background: #fefcfc;">5 days</td>
-                <td>1 day</td>
-                <td>7 days</td>
-                <td>7 days</td>
-            </tr>
-            <tr>
-                <td><strong>Data Calculator</strong></td>
-                <td style="background: #fefcfc;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-            </tr>
-            <tr>
-                <td><strong>Plan Expiration</strong></td>
-                <td style="background: #fefcfc;">1 year</td>
-                <td>30 days</td>
-                <td>No expiry</td>
-                <td>30 days</td>
-            </tr>
-            <tr>
-                <td><strong>Best Discount Code</strong></td>
-                <td style="background: #fefcfc;"><strong>{{ provider.primaryCode }}</strong> ({{ primary.discount | lower }})</td>
-                <td>ADAMANDLINDS (5% off)</td>
-                <td>NEWTOAIRALO15 (15% off)</td>
-                <td>HELLOSAILY (15% off)</td>
-            </tr>
-        </tbody>
-    </table>
+  <!-- How to -->
+  <h2>Apply an Airhub Code in 3 Steps</h2>
+  <div class="content-box">
+    <ol>
+      <li>Copy <strong>{{ provider.primaryCode }}</strong></li>
+      <li>Pick a country, regional, or global data package for your destination in the Airhub app or on airhubapp.com</li>
+      <li>Enter the code at checkout and confirm the price drops by {{ primary.discount | lower }} before paying</li>
+    </ol>
+    <p class="content-note">Discount shows before payment is completed.</p>
+  </div>
 
-    <!-- Pricing Comparison -->
-    <h2>Airhub's Competitive Pricing Advantage</h2>
-    <p>Airhub's multi-gigabyte packages offer exceptional value, especially for data-heavy users:</p>
-
-    <table style="margin: 2rem 0;">
-        <thead>
-            <tr>
-                <th>Destination</th>
-                <th style="background: #fef2f2; color: #d80027;"><strong>Airhub Price</strong></th>
-                <th>Holafly Price</th>
-                <th>Airalo (1GB)</th>
-                <th>Saily (1GB)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>United States</strong></td>
-                <td style="background: #fefcfc;"><span style="color: #4D8374;">$2.82 (3GB)</span></td>
-                <td>$1.99/day</td>
-                <td>$4.50</td>
-                <td>$3.99</td>
-            </tr>
-            <tr>
-                <td><strong>Thailand</strong></td>
-                <td style="background: #fefcfc;"><span style="color: #4D8374;">$0.85 (1GB)</span></td>
-                <td>$1.99/day</td>
-                <td>$4.50</td>
-                <td>$2.99</td>
-            </tr>
-            <tr>
-                <td><strong>Japan</strong></td>
-                <td style="background: #fefcfc;"><span style="color: #4D8374;">$1.55 (1GB)</span></td>
-                <td>$1.99/day</td>
-                <td>$4.50</td>
-                <td>$3.99</td>
-            </tr>
-            <tr>
-                <td><strong>Europe Regional</strong></td>
-                <td style="background: #fefcfc;"><span style="color: #4D8374;">$4.50 (4GB)</span></td>
-                <td>$1.99/day</td>
-                <td>$5.27 (1GB)</td>
-                <td>$4.99 (1GB)</td>
-            </tr>
-            <tr>
-                <td><strong>Global Coverage</strong></td>
-                <td style="background: #fefcfc;"><span style="color: #4D8374;">$11.50 (3GB)</span></td>
-                <td>$9.90/day</td>
-                <td>$9.49 (1GB)</td>
-                <td>$8.99 (1GB)</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <!-- Value Analysis -->
-    <h2>Airhub Value Analysis</h2>
-    <p>Airhub's pricing strategy focuses on providing more data for less money, making it ideal for:</p>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
-        <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #d80027;">
-            <h3>Budget Travelers</h3>
-            <ul>
-                <li>Thailand: $0.85 for 1GB (cheapest option)</li>
-                <li>Japan: $1.55 for 1GB (vs $4.50+ elsewhere)</li>
-                <li>Turkey: $2.25 for 1GB (excellent value)</li>
-                <li>Multiple discount codes available</li>
-            </ul>
-        </div>
-        <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #d80027;">
-            <h3>Family Plans</h3>
-            <ul>
-                <li>USA: $2.82 for 3GB (perfect for sharing)</li>
-                <li>Europe: $4.50 for 4GB (multi-country value)</li>
-                <li>Malaysia: $5.50 for 4GB (generous allowance)</li>
-                <li>Data sharing supported via hotspot</li>
-            </ul>
-        </div>
+  <!-- Decision help -->
+  <h2>Is Airhub the Right Pick for Your Trip</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Good fit</h3>
+      <ul>
+        <li>You want SMS and a local number bundled with your data, not sold as an extra</li>
+        <li>You're headed somewhere Airhub prices sharply, like Thailand or Japan, and you know roughly how many GB you'll use</li>
+        <li>You're buying for multiple travelers and want to compare Airhub's own multi-eSIM discount against a plain code</li>
+      </ul>
     </div>
-
-    <!-- Popular Destinations -->
-    <h2>Airhub's Best Value Destinations</h2>
-
-    <h3>Southeast Asia Packages</h3>
-    <p>Airhub excels in Southeast Asian destinations with ultra-competitive pricing. Thailand at <strong>$0.85 for 1GB</strong> and Malaysia at <strong>$5.50 for 4GB</strong> offer unbeatable value for exploring the region's diverse cultures and landscapes.</p>
-
-    <h3>Japan & Korea Value Plans</h3>
-    <p>For tech-savvy destinations like Japan, Airhub's <strong>$1.55 for 1GB</strong> pricing significantly undercuts competitors while maintaining reliable connectivity through premium local networks.</p>
-
-    <h3>North America Multi-GB Plans</h3>
-    <p>USA coverage at <strong>$2.82 for 3GB</strong> provides excellent value for cross-country road trips or extended business travel, with enough data for navigation, social media, and video calls home.</p>
-
-    <!-- Feature Breakdown -->
-    <h2>Airhub Feature Breakdown</h2>
-
-    <table style="margin: 2rem 0;">
-        <thead>
-            <tr>
-                <th>Feature</th>
-                <th style="background: #fef2f2; color: #d80027;"><strong>Airhub Offering</strong></th>
-                <th>Benefit</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>SMS Included</strong></td>
-                <td style="background: #fefcfc;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td>Two-factor authentication, local communications</td>
-            </tr>
-            <tr>
-                <td><strong>Local Phone Number</strong></td>
-                <td style="background: #fefcfc;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td>Local business contacts, emergency services</td>
-            </tr>
-            <tr>
-                <td><strong>Data Calculator</strong></td>
-                <td style="background: #fefcfc;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td>Track usage, plan future trips better</td>
-            </tr>
-            <tr>
-                <td><strong>Reusable eSIMs</strong></td>
-                <td style="background: #fefcfc;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td>Environmental benefits, cost savings</td>
-            </tr>
-            <tr>
-                <td><strong>Regional Packages</strong></td>
-                <td style="background: #fefcfc;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td>Multi-country trips without multiple eSIMs</td>
-            </tr>
-            <tr>
-                <td><strong>24/7 Support</strong></td>
-                <td style="background: #fefcfc;"><i class="fas fa-check" style="color: #4D8374;"></i></td>
-                <td>Help when you need it most while traveling</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <!-- Device Compatibility -->
-    <h2>Airhub Device Compatibility</h2>
-    <p>Airhub eSIMs work with the standard range of eSIM-compatible devices, optimized for reliable performance:</p>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
-        <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #d80027;">
-            <h3>iPhone Compatibility</h3>
-            <ul>
-                <li>iPhone 16 series (all models)</li>
-                <li>iPhone 15 series (all models)</li>
-                <li>iPhone 14 series (all models)</li>
-                <li>iPhone 13 series (all models)</li>
-                <li>iPhone 12 series (all models)</li>
-                <li>iPhone 11 series (all models)</li>
-                <li>iPhone XS, XS Max, XR</li>
-                <li>iPhone SE (2nd generation and newer)</li>
-            </ul>
-        </div>
-        <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #d80027;">
-            <h3>Android Device Support</h3>
-            <ul>
-                <li>Google Pixel 4 and all newer models</li>
-                <li>Samsung Galaxy S20 series and newer</li>
-                <li>Samsung Galaxy Note 20 and newer</li>
-                <li>Samsung Galaxy Z Fold/Flip series</li>
-                <li>OnePlus 11 and newer flagship devices</li>
-                <li>Most premium Android devices (2020+)</li>
-            </ul>
-        </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Consider alternatives</h3>
+      <ul>
+        <li>You want calls included too, not just SMS: <a href="/redteago/">RedteaGO</a> bundles both, though it usually costs more per GB than Airhub</li>
+        <li>You'd rather not think about a data cap at all: Holafly's unlimited flat-rate plans trade a higher price for not having to track usage</li>
+      </ul>
     </div>
+  </div>
 
-    <blockquote style="background: #fef2f2; border-left-color: #d80027;">
-        <p><strong>Compatibility Tip:</strong> Always verify your device supports eSIM functionality before traveling. Some carrier-locked or region-specific devices may have eSIM features disabled.</p>
-    </blockquote>
-
-    <!-- Maximizing Value Tips -->
-    <h2>Maximizing Your Airhub Experience</h2>
-
-    <h3>Choosing the Right Data Package</h3>
-    <p>Airhub's multi-gigabyte packages shine for specific use cases:</p>
+  <!-- Savings examples -->
+  <h2>What the Discount Looks Like</h2>
+  <div class="content-box">
     <ul>
-        <li><strong>1GB plans:</strong> Perfect for light users (messaging, basic browsing) for 5-7 days</li>
-        <li><strong>3GB plans:</strong> Ideal for moderate users (social media, navigation, photos) for 10-14 days</li>
-        <li><strong>4GB+ plans:</strong> Great for heavy users (video streaming, work calls, content creation)</li>
+      <li>Thailand 1GB at $0.85 &rarr; 5% off saves about $0.04</li>
+      <li>Japan 1GB at $1.55 &rarr; 5% off saves about $0.08</li>
+      <li>USA 3GB at $2.82 &rarr; 5% off saves about $0.14</li>
+      <li>Europe regional 4GB at $4.50 &rarr; 5% off saves about $0.23</li>
     </ul>
+    <p class="content-note">Airhub's prices are already low before any code is applied, so the code matters less here than it does on a pricier provider; the real savings come from Airhub's per-GB pricing itself, not the 5%.</p>
+  </div>
 
-    <h3>Discount Code Strategy</h3>
-    <p>Airhub offers multiple discount codes for different regions and purposes:</p>
-    <ul>
-        <li><strong>{{ provider.primaryCode }}:</strong> {{ primary.discount }} (our own code, shown first)</li>
-        {% for code in provider.codes %}
-        {% if code.code != provider.primaryCode and not code.isInvalid %}
-        <li><strong>{{ code.code }}:</strong> {{ code.discount }}</li>
-        {% endif %}
-        {% endfor %}
-    </ul>
+  <p>
+    For eSIM device compatibility, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
 
-    <h3>Regional vs Country Plans</h3>
-    <p>Airhub's regional packages offer excellent value for multi-destination trips. The Europe 4GB plan at $4.50 covers multiple countries, while individual country plans provide better per-GB value for single-destination travel.</p>
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Use the Code at Checkout</h2>
+    <p>Copy <code>{{ provider.primaryCode }}</code> then paste in the promo field</p>
+    <p>{{ primary.discount | lower }} on any Airhub plan.</p>
+  </div>
 
-    <!-- FAQ Section -->
-    <h2>Frequently Asked Questions</h2>
-
-    <div style="background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 2rem 0;">
-        <div style="border-bottom: 1px solid #e5e7eb; padding: 1.5rem;">
-            <h3 style="color: #d80027; margin-bottom: 0.5rem;">What's the best Airhub discount code?</h3>
-            <p style="margin-bottom: 0;">Our own code <strong>{{ provider.primaryCode }}</strong> gets you {{ primary.discount | lower }} and is shown first on this page. For specific regions, use <strong>NAMERICA4COPY</strong> for North America (4% off) or <strong>JPESIM5COPY</strong> for Japan (5% off).</p>
-        </div>
-
-        <div style="border-bottom: 1px solid #e5e7eb; padding: 1.5rem;">
-            <h3 style="color: #d80027; margin-bottom: 0.5rem;">Why is Airhub so much cheaper than competitors?</h3>
-            <p style="margin-bottom: 0;">Airhub focuses on high-volume, competitive pricing by offering larger data packages and maintaining efficient operations. Their multi-gigabyte plans provide better per-GB value than smaller packages from premium providers.</p>
-        </div>
-
-        <div style="border-bottom: 1px solid #e5e7eb; padding: 1.5rem;">
-            <h3 style="color: #d80027; margin-bottom: 0.5rem;">Does Airhub include SMS and calls?</h3>
-            <p style="margin-bottom: 0;">Yes, Airhub includes SMS functionality in most plans, making it one of the few budget providers to offer messaging services. Voice calls are not included, but you can use VoIP apps over the data connection.</p>
-        </div>
-
-        <div style="border-bottom: 1px solid #e5e7eb; padding: 1.5rem;">
-            <h3 style="color: #d80027; margin-bottom: 0.5rem;">How long do Airhub eSIMs last?</h3>
-            <p style="margin-bottom: 0;">Airhub eSIMs expire 1 year after purchase, giving you plenty of time to plan and use them. Plans typically have 5-30 day validity periods once activated, depending on the specific package chosen.</p>
-        </div>
-
-        <div style="border-bottom: 1px solid #e5e7eb; padding: 1.5rem;">
-            <h3 style="color: #d80027; margin-bottom: 0.5rem;">Can I reuse my Airhub eSIM?</h3>
-            <p style="margin-bottom: 0;">Yes, Airhub eSIMs are reusable, making them environmentally friendly and cost-effective for frequent travelers. You can top up or purchase new plans for the same eSIM profile.</p>
-        </div>
-
-        <div style="border-bottom: 1px solid #e5e7eb; padding: 1.5rem;">
-            <h3 style="color: #d80027; margin-bottom: 0.5rem;">Do I get a local phone number with Airhub?</h3>
-            <p style="margin-bottom: 0;">Yes, Airhub provides local phone numbers in supported destinations, which is useful for local business contacts, restaurant reservations, and emergency services access.</p>
-        </div>
-
-        <div style="border-bottom: 1px solid #e5e7eb; padding: 1.5rem;">
-            <h3 style="color: #d80027; margin-bottom: 0.5rem;">Does Airhub support mobile hotspot?</h3>
-            <p style="margin-bottom: 0;">Yes, Airhub supports data sharing through mobile hotspot, allowing you to share your connection with laptops, tablets, and other devices. This makes their multi-GB plans even more valuable for families or business travelers.</p>
-        </div>
-
-        <div style="border-bottom: 1px solid #e5e7eb; padding: 1.5rem;">
-            <h3 style="color: #d80027; margin-bottom: 0.5rem;">What customer support does Airhub offer?</h3>
-            <p style="margin-bottom: 0;">Airhub provides 24/7 customer support through email and their website contact system. While they don't offer live chat, their support team is responsive to technical questions and activation issues.</p>
-        </div>
-
-        <div style="border-bottom: 1px solid #e5e7eb; padding: 1.5rem;">
-            <h3 style="color: #d80027; margin-bottom: 0.5rem;">How reliable is Airhub's network coverage?</h3>
-            <p style="margin-bottom: 0;">Airhub partners with established local carriers in each country, ensuring reliable coverage in urban areas and major tourist destinations. Rural coverage varies by destination and local infrastructure.</p>
-        </div>
-
-        <div style="padding: 1.5rem;">
-            <h3 style="color: #d80027; margin-bottom: 0.5rem;">What's Airhub's refund policy?</h3>
-            <p style="margin-bottom: 0;">Airhub offers easy refunds for unused eSIMs and has a customer-friendly approach to handling technical issues. Their 1-year expiration period also reduces the risk of losing money on unused plans.</p>
-        </div>
+  <!-- FAQ -->
+  <h2>Airhub Promo Code FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>What is the best Airhub code right now</h3>
+      <p><strong>{{ provider.primaryCode }}</strong>: {{ primary.discount | lower }}. It's our own code, but every other verified Airhub code we list also gives 5% (one region-specific one gives 4%), so it's not hiding a better deal.</p>
     </div>
-
-    <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {
-      "@type":"Question",
-      "name":"What's the best Airhub discount code?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Our own code {{ provider.primaryCode }} gets {{ primary.discount | lower }} and is shown first on this page. For specific regions, use NAMERICA4COPY for North America (4% off) or JPESIM5COPY for Japan (5% off)."
-      }
-    },
-    {
-      "@type":"Question",
-      "name":"Why is Airhub so much cheaper than competitors?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Airhub focuses on high-volume, competitive pricing by offering larger data packages and running efficiently. Their multi-gigabyte plans often have a better per-GB price than smaller packages from premium providers."
-      }
-    },
-    {
-      "@type":"Question",
-      "name":"Does Airhub include SMS and calls?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Yes, most Airhub plans include SMS. Voice calls are not included, but you can use VoIP apps over the data connection."
-      }
-    },
-    {
-      "@type":"Question",
-      "name":"How long do Airhub eSIMs last?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Airhub eSIMs expire 1 year after purchase. After activation, plans typically have 5 to 30 days of validity depending on the package."
-      }
-    },
-    {
-      "@type":"Question",
-      "name":"Can I reuse my Airhub eSIM?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Yes. Airhub eSIMs are reusable. You can top up or buy new plans on the same eSIM profile."
-      }
-    },
-    {
-      "@type":"Question",
-      "name":"Do I get a local phone number with Airhub?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Yes, in supported destinations Airhub provides local numbers, useful for reservations, business contacts, and emergency access."
-      }
-    },
-    {
-      "@type":"Question",
-      "name":"Does Airhub support mobile hotspot?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Yes. You can share data via hotspot on most plans, which is handy for laptops, tablets, and other devices."
-      }
-    },
-    {
-      "@type":"Question",
-      "name":"What customer support does Airhub offer?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Airhub offers 24/7 support via email and their website contact system. They do not provide live chat."
-      }
-    },
-    {
-      "@type":"Question",
-      "name":"How reliable is Airhub's network coverage?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Airhub partners with established local carriers. Coverage is reliable in cities and major tourist areas. Rural coverage varies by destination."
-      }
-    },
-    {
-      "@type":"Question",
-      "name":"What's Airhub's refund policy?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Airhub offers refunds for unused eSIMs and is responsive to technical issues. The 1-year expiration also reduces the risk of losing unused plans."
-      }
-    }
-  ]
-}
-</script>
-
-
-    <!-- Call to Action -->
-    <div style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); color: #004346; padding: 2rem; border-radius: 12px; text-align: center; margin: 3rem 0; border: 2px solid #d80027;">
-        <h2 style="color: #004346; margin-bottom: 1rem;">Get More Data for Less</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #004346;">Use promo code <strong style="color: #d80027;">{{ provider.primaryCode }}</strong> for {{ primary.discount | lower }}.</p>
-        <p style="margin-bottom: 0; color: #4b5563;">Perfect for budget travelers who need generous data allowances without premium pricing.</p>
+    <div class="content-faq-item">
+      <h3>Does Airhub include calls</h3>
+      <p>No. Airhub plans include data and, on most plans, SMS and a local number, but not voice calls. Use a VoIP app over the data connection, or pick RedteaGO if you specifically need calls included.</p>
     </div>
+    <div class="content-faq-item">
+      <h3>Is there a free trial</h3>
+      <p>Airhub's own site advertises a 200MB no-commitment free trial for new users. We haven't tested it ourselves, so treat it as an offer to check directly on their site rather than a claim we're verifying here.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Is it cheaper to buy multiple eSIMs at once</h3>
+      <p>Airhub advertises a volume discount, 15% off for two eSIMs and 25% off for three, bought in the same order. That's a separate offer from the promo codes on this page and we haven't tested it, so compare the total against applying {{ provider.primaryCode }} to individual orders before you buy.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>How long do Airhub eSIMs last</h3>
+      <p>Airhub eSIMs expire a year after purchase if unused. Once activated, individual plans run 5 to 30 days depending on the package.</p>
+    </div>
+  </div>
 
-    <!-- Additional Comparisons -->
-    <h2>Why Choose Airhub Over Premium Providers?</h2>
-    <p>While <a href="/holafly">Holafly</a>, <a href="/airalo">Airalo</a>, and <a href="/saily">Saily</a> focus on premium features, Airhub delivers pure value:</p>
-
-    <ul>
-        <li><strong>Unbeatable Pricing:</strong> Often 50-70% cheaper per GB than premium competitors</li>
-        <li><strong>Generous Data Packages:</strong> Multi-gigabyte plans perfect for data-heavy travel</li>
-        <li><strong>SMS Included:</strong> Unlike most budget providers, includes messaging functionality</li>
-        <li><strong>Local Numbers:</strong> Get local phone numbers for business and emergency use</li>
-        <li><strong>Long Expiration:</strong> 1-year validity gives you flexibility to plan ahead</li>
-        <li><strong>Multiple Discount Codes:</strong> Region-specific codes for additional savings</li>
-        <li><strong>Reusable eSIMs:</strong> Environmental and economic benefits over single-use options</li>
-    </ul>
-
-    <p>For travelers who prioritize value over premium features, Airhub offers the best data-per-dollar ratio. Compare all eSIM providers on our <a href="/">homepage</a> to see why budget-conscious travelers choose Airhub.</p>
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What is the best Airhub promo code right now?",
+        "acceptedAnswer":{"@type":"Answer","text":"ADAMANDLINDS gives 5% off any Airhub plan. Every other verified Airhub code gives the same 5% except one region-specific code that gives 4%, so there is no hidden better deal."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Airhub include calls?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. Airhub plans include data and, on most plans, SMS and a local number, but not voice calls."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Airhub offer a free trial?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub's own site advertises a 200MB no-commitment free trial for new users, though this has not been independently tested."}
+      },
+      {
+        "@type":"Question",
+        "name":"Is it cheaper to buy multiple Airhub eSIMs at once?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub advertises a volume discount of 15% off for two eSIMs and 25% off for three bought in the same order, separate from the promo codes listed here."}
+      },
+      {
+        "@type":"Question",
+        "name":"How long do Airhub eSIMs last?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub eSIMs expire one year after purchase if unused. Activated plans typically run 5 to 30 days depending on the package."}
+      }
+    ]
+  }
+  </script>
 </div>
