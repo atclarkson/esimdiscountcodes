@@ -53,5 +53,19 @@
   </section>
 
   <div class="footer-bottom">
+    {% if locales.length > 1 %}
+    {% set pageAlternates = collections.i18nMap | i18nAlternates(translationKey) %}
+    <p class="footer-lang-switcher">
+      {% for loc in locales %}
+      {% if loc.code == locale %}
+      <span class="lang-current" aria-current="true">{{ loc.label }}</span>
+      {% else %}
+      {% set targetUrl = pageAlternates[loc.code] or (('/' + loc.prefix + '/') if loc.prefix else '/') %}
+      <a href="{{ targetUrl }}">{{ loc.label }}</a>
+      {% endif %}
+      {% if not loop.last %}<span class="lang-sep">&middot;</span>{% endif %}
+      {% endfor %}
+    </p>
+    {% endif %}
     <p>&copy; {{ buildTime | fmtDate("yyyy") }} eSIMDiscountCodes.com. {{ 'footer.rightsReserved' | t(locale) }}</p>
   </div>

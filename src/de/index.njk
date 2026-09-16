@@ -1,0 +1,238 @@
+---
+layout: base.njk
+permalink: "/de/"
+title: "eSIM Rabattcodes - Die besten Gutscheincodes für internationale Reisen"
+description: "Finde geprüfte Rabatt- und Gutscheincodes für die besten eSIM-Anbieter. Spare bei Holafly, Airalo, Saily und mehr. Regelmäßig aktualisiert mit funktionierenden Codes für Reisen ins Ausland."
+translationKey: "page:home"
+locale: "de"
+ogLocale: "de_DE"
+---
+
+<div class="home-page">
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Finde einen eSIM-Deal, der wirklich funktioniert</h1>
+        <p class="hero-subtitle">Geprüfte Rabattcodes für die führenden eSIM-Marken der Welt, kontrolliert und immer wieder nachgeprüft, damit du es nicht selbst tun musst.</p>
+        {% set totalCodes = 0 %}
+        {% set totalProviders = 0 %}
+
+        {% for key, provider in codes %}
+            {% if provider.codes and provider.codes.length > 0 %}
+                {% set totalProviders = totalProviders + 1 %}
+                {% set totalCodes = totalCodes + provider.codes.length %}
+            {% endif %}
+        {% endfor %}
+
+        <div class="hero-search">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <label for="providerSearch" class="sr-only">Anbieter durchsuchen</label>
+            <input type="text" id="providerSearch" placeholder="Anbieter durchsuchen (z. B. Holafly, Airalo)" autocomplete="off">
+        </div>
+
+        <div class="hero-stats">
+            <span><i class="fas fa-circle-check"></i> {{ totalCodes }}+ geprüfte Codes</span>
+            <span><i class="fas fa-globe"></i> {{ totalProviders }} Anbieter</span>
+            <span><i class="fas fa-tag"></i> Regelmäßig aktualisiert</span>
+        </div>
+
+        <div class="hero-popular">
+            <span>Beliebt:</span>
+            {% for key in ["holafly", "airalo", "saily", "nomad", "ubigi"] %}
+            {% set alt = collections.i18nMap | i18nAlternates("provider:" + key) %}
+            <a href="{{ alt.de or alt.en or ('/' + key + '/') }}">{{ codes[key].name }}</a>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Unser Code: immer als Erstes gezeigt, ehrlich eingeordnet (keine
+         "beste Rabatt"-Behauptung - das war der Fehler der alten,
+         automatisch berechneten Version, die auch mal den Code eines
+         Wettbewerbers ausgespielt hat). -->
+    {% set ourProviders = [] %}
+    {% for key, provider in codes %}
+        {% set ourCode = provider.codes | findCode("ADAMANDLINDS") %}
+        {% if ourCode and ourCode.code == "ADAMANDLINDS" and not ourCode.isInvalid %}
+            {% set deO = codesDe[key] %}
+            {% set deCode = deO.codes.ADAMANDLINDS if (deO and deO.codes and deO.codes.ADAMANDLINDS) else null %}
+            {% set ourDiscount = (deCode.discount if deCode) or ourCode.discount %}
+            {% set alt = collections.i18nMap | i18nAlternates("provider:" + key) %}
+            {% set ourProviders = ourProviders.concat([{key: key, name: provider.name, discount: ourDiscount, url: (alt.de or alt.en or ('/' + key + '/'))}]) %}
+        {% endif %}
+    {% endfor %}
+    {% if ourProviders.length > 0 %}
+    <section class="content-callout own-code-section">
+        <h2><i class="fas fa-star"></i> Unser Rabattcode</h2>
+        <p>
+            <strong>ADAMANDLINDS</strong> ist unser eigener Code. Wir haben diese Seite gebaut, deshalb zeigen wir ihn überall zuerst, wo er gilt. Aktuell aktiv bei:
+        </p>
+        <ul class="own-code-list">
+            {% for p in ourProviders %}
+            <li><a href="{{ p.url }}">{{ p.name }}</a>: {{ p.discount }}</li>
+            {% endfor %}
+        </ul>
+        <p class="callout-meta">Er ist nicht automatisch der beste öffentliche Rabatt für jeden Anbieter. Jede Anbieterseite listet jeden von uns geprüften Code, damit du selbst vergleichen kannst.</p>
+    </section>
+    {% endif %}
+
+    <!-- Anbieter-Übersicht -->
+    <section class="providers-section" id="providers">
+        <h2>Top eSIM-Anbieter mit Rabattcodes</h2>
+        <div class="providers-grid">
+            {% for key, provider in codes %}
+            {% set alt = collections.i18nMap | i18nAlternates("provider:" + key) %}
+            {% set deO = codesDe[key] %}
+            {% set desc = (deO.description if deO) or provider.description %}
+            <a href="{{ alt.de or alt.en or ('/' + key + '/') }}" class="provider-card-link" data-search="{{ (provider.name + ' ' + desc) | lower }}">
+                <div class="provider-card">
+                    <div class="provider-logo">
+                        {% if provider.logo %}
+                            <img src="{{ provider.logo }}" alt="{{ provider.name }} Logo" class="logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="logo-fallback" style="display: none;">{{ provider.name }}</div>
+                        {% else %}
+                            <div class="logo-fallback">{{ provider.name }}</div>
+                        {% endif %}
+                    </div>
+                    <h3>{{ provider.name }}</h3>
+                    {% set cardTopCode = provider.codes | bestValidCode %}
+                    {% if cardTopCode %}
+                    <p class="discount">Spare mit Code <strong>{{ cardTopCode.code }}</strong></p>
+                    {% elif provider.codes.length > 0 %}
+                    <p class="discount">Aktuell kein aktiver Code</p>
+                    {% else %}
+                    <p class="discount">Demnächst</p>
+                    {% endif %}
+                    <p>{{ desc }}</p>
+                    <span class="provider-card-cta">{{ provider.name }}-Angebote ansehen <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <p class="providers-empty">Kein Anbieter passt zu dieser Suche.</p>
+    </section>
+
+    <div class="comparison-table-container">
+      <h2>eSIM-Anbieter im Vergleich</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th>Bester Rabatt</th>
+            <th>Bewertung</th>
+            <th>Weltweite Pakete <i class="fa fa-globe"></i></th>
+            <th>SMS-Tarife <i class="fa fa-mobile-alt"></i></th>
+            <th>Unbegrenzte Datenpakete <i class="fa fa-bolt"></i></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for key, provider in codes %}
+          {% set topCode = provider.codes | bestValidCode %}
+          {% set alt = collections.i18nMap | i18nAlternates("provider:" + key) %}
+          {% set deO = codesDe[key] %}
+          {% set deCode = deO.codes[topCode.code] if (topCode and deO and deO.codes and deO.codes[topCode.code]) else null %}
+          {% set topDiscount = (deCode.discount if deCode) or (topCode.discount if topCode) %}
+          <tr>
+            <td>
+                <a href="{{ alt.de or alt.en or ('/' + key + '/') }}" class="provider-link-btn">
+                {{ provider.name }}
+                </a>
+            </td>
+            <td>
+              <div class="provider-logo">
+                {% if provider.logo %}
+                  <img src="{{ provider.logo }}" alt="{{ provider.name }} Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                  <span class="logo-fallback" style="display:none;">{{ provider.name }}</span>
+                {% else %}
+                  <span class="logo-fallback">{{ provider.name }}</span>
+                {% endif %}
+              </div>
+            </td>
+            <td class="best-discount-cell">
+                {% if topCode and topCode.code and topDiscount %}
+                <strong>{{ topDiscount }}</strong> <span class="discount-code">({{ topCode.code }})</span>
+                {% if topCode.code == "ADAMANDLINDS" %}
+                <span class="our-code-badge our-code-badge--table"><i class="fas fa-star"></i> Unser</span>
+                {% endif %}
+                {% elif provider.codes.length > 0 %}
+                <span class="table-empty">Kein aktiver Code</span>
+                {% else %}
+                <span class="table-empty">Demnächst</span>
+                {% endif %}
+            </td>
+            <td>
+              {% if provider.totalScore %}
+                <span class="star-rating">
+                  {% set score = provider.totalScore | int %}
+                  {% for i in range(1, 6) %}
+                    {% if i <= score %}
+                      <i class="fa fa-star" style="color: #ffc107;"></i>
+                    {% else %}
+                      <i class="fa fa-star" style="color: #e4e5e9;"></i>
+                    {% endif %}
+                  {% endfor %}
+                  <span class="score-label">{{ score }}/5</span>
+                </span>
+              {% else %}
+                <span class="table-empty">k.A.</span>
+              {% endif %}
+            </td>
+            <td>
+              {% if provider.globalRegionalPackage %}
+                <i class="fa fa-check"></i>
+              {% else %}
+                <i class="fa fa-times"></i>
+              {% endif %}
+            </td>
+            <td>
+              {% if provider.smsIncluded %}
+                <i class="fa fa-check"></i>
+              {% else %}
+                <i class="fa fa-times"></i>
+              {% endif %}
+            </td>
+            <td>
+              {% if provider.unlimitedData %}
+                <i class="fa fa-check"></i>
+              {% else %}
+                <i class="fa fa-times"></i>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Was ist eine eSIM: erklärender Inhalt für Leser, die ohne
+         Vorwissen ankommen - bewusst unterhalb der eigentlichen Codes. -->
+    <section class="what-is-esim">
+        <h2>Was ist eine eSIM?</h2>
+        <p>Eine eSIM (embedded SIM) ist eine digitale SIM-Karte, mit der du dich ohne physische SIM-Karte mit Mobilfunknetzen verbinden kannst. Ideal für Reisen ins Ausland: eSIMs sparen teure Roaming-Gebühren und geben dir sofortige Konnektivität in über 170 Ländern.</p>
+
+        <div class="esim-benefits">
+            <div class="benefit">
+              <div class="benefit-icon">
+                <i class="fas fa-sim-card" aria-hidden="true"></i>
+              </div>
+              <h3>Keine physische SIM</h3>
+              <p>Digitale Aktivierung per QR-Code</p>
+            </div>
+            <div class="benefit">
+              <div class="benefit-icon">
+                <i class="fas fa-globe" aria-hidden="true"></i>
+              </div>
+              <h3>Weltweite Abdeckung</h3>
+              <p>Funktioniert in über 170 Ländern</p>
+            </div>
+            <div class="benefit">
+              <div class="benefit-icon">
+                <i class="fas fa-dollar-sign" aria-hidden="true"></i>
+              </div>
+              <h3>Kosteneffizient</h3>
+              <p>Deutlich günstiger als Roaming-Gebühren</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+</div>

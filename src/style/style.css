@@ -2001,6 +2001,52 @@ main {
   }
 }
 
+/* Language switcher (header) - reuses .dropdown/.dropdown-toggle/
+   .dropdown-menu chrome from the "more providers" dropdown above. */
+.lang-toggle {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+}
+
+.lang-menu a {
+  text-transform: none;
+}
+
+.lang-menu a.lang-active {
+  color: var(--brand-accent);
+  font-weight: 700;
+}
+
+/* Language switcher (footer) */
+.footer-lang-switcher {
+  margin-bottom: 0.6rem;
+}
+
+.footer-lang-switcher a,
+.footer-lang-switcher .lang-current {
+  padding: 0 0.4rem;
+}
+
+.footer-lang-switcher a {
+  color: rgba(235, 231, 209, 0.75);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-lang-switcher a:hover {
+  color: #6FB6A8;
+}
+
+.footer-lang-switcher .lang-current {
+  color: white;
+  font-weight: 700;
+}
+
+.footer-lang-switcher .lang-sep {
+  color: rgba(235, 231, 209, 0.4);
+}
+
 /* Our Code section (homepage) - reuses .content-callout for the card
    chrome; these rules cover the parts specific to this section. */
 .own-code-section {

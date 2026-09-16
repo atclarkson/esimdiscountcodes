@@ -2,6 +2,7 @@
   "en": {
     "header.toggleNav": "Toggle navigation",
     "header.moreProviders": "More Providers",
+    "header.language": "Language",
     "header.guides": "Guides",
     "header.findACode": "Find a Code",
     "footer.providers": "eSIM Providers",
@@ -16,6 +17,7 @@
   "de": {
     "header.toggleNav": "Navigation umschalten",
     "header.moreProviders": "Weitere Anbieter",
+    "header.language": "Sprache",
     "header.guides": "Anleitungen",
     "header.findACode": "Code finden",
     "footer.providers": "eSIM-Anbieter",

@@ -55,6 +55,28 @@
       {% endif %}
       <li><a href="/compatible-devices/">{{ 'header.guides' | t(locale) }}</a></li>
       <li><a href="/#providers" class="nav-cta">{{ 'header.findACode' | t(locale) }}</a></li>
+      {# Language switcher: links to this exact page's counterpart in each
+         enabled locale (via the i18nMap built in .eleventy.js), falling
+         back to that locale's homepage when this specific page hasn't
+         been translated yet, so it never points at a 404. #}
+      {% set pageAlternates = collections.i18nMap | i18nAlternates(translationKey) %}
+      {% if locales.length > 1 %}
+      <li class="dropdown lang-switcher">
+        <a href="#" class="dropdown-toggle lang-toggle" aria-label="{{ 'header.language' | t(locale) }}">
+          <i class="fas fa-globe" aria-hidden="true"></i> {{ locale | upper }} <i class="fas fa-chevron-down"></i>
+        </a>
+        <ul class="dropdown-menu lang-menu">
+          {% for loc in locales %}
+          {% set targetUrl = pageAlternates[loc.code] or (('/' + loc.prefix + '/') if loc.prefix else '/') %}
+          <li>
+            <a href="{{ targetUrl }}" {% if loc.code == locale %}class="lang-active" aria-current="true"{% endif %}>
+              {{ loc.label }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% endif %}
     </ul>
   </div>
 </nav>

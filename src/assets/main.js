@@ -248,23 +248,31 @@ function initMobileMenu() {
   });
 }
 
-// Dropdown functionality
+// Dropdown functionality (there can be more than one on a page, e.g. the
+// "more providers" nav dropdown and the language switcher)
 function initDropdown() {
-  const dropdown = document.querySelector(".dropdown");
-  const dropdownToggle = document.querySelector(".dropdown-toggle");
+  const dropdowns = document.querySelectorAll(".dropdown");
+  if (!dropdowns.length) return;
 
-  if (!dropdown || !dropdownToggle) return;
+  dropdowns.forEach(function (dropdown) {
+    const dropdownToggle = dropdown.querySelector(".dropdown-toggle");
+    if (!dropdownToggle) return;
 
-  dropdownToggle.addEventListener("click", function (e) {
-    e.preventDefault();
-    dropdown.classList.toggle("active");
+    dropdownToggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      const wasActive = dropdown.classList.contains("active");
+      dropdowns.forEach((d) => d.classList.remove("active"));
+      dropdown.classList.toggle("active", !wasActive);
+    });
   });
 
-  // Close dropdown when clicking outside
+  // Close any open dropdown when clicking outside all of them
   document.addEventListener("click", function (e) {
-    if (!dropdown.contains(e.target)) {
-      dropdown.classList.remove("active");
-    }
+    dropdowns.forEach(function (dropdown) {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove("active");
+      }
+    });
   });
 }
 
