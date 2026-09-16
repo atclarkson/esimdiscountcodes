@@ -1,16 +1,18 @@
 <!-- Footer -->
+  {% set locale = locale or "en" %}
   <div class="footer-content">
     <div class="footer-section footer-section--providers">
-      <h3>eSIM Providers</h3>
+      <h3>{{ 'footer.providers' | t(locale) }}</h3>
       <ul class="footer-providers-list">
         {% for key, provider in codes %}
-        <li><a href="/{{ key }}">{{ provider.name }} Codes</a></li>
+        {% set alt = collections.i18nMap | i18nAlternates("provider:" + key) %}
+        <li><a href="{{ alt[locale] or ('/' + key + '/') }}">{{ provider.name }} {{ 'footer.codesSuffix' | t(locale) }}</a></li>
         {% endfor %}
       </ul>
     </div>
 
     <div class="footer-section">
-      <h3>About</h3>
+      <h3>{{ 'footer.about' | t(locale) }}</h3>
       <ul>
         {% for item in about %}
         <li><a href="{{ item.url }}">{{ item.title }}</a></li>
@@ -19,7 +21,7 @@
     </div>
 
     <div class="footer-section">
-      <h3>Resources</h3>
+      <h3>{{ 'footer.resources' | t(locale) }}</h3>
       <ul>
         {% for item in resources %}
         <li><a href="{{ item.url }}">{{ item.title }}</a></li>
@@ -29,10 +31,11 @@
 
     {% if comparisons and comparisons.length > 0 %}
     <div class="footer-section footer-compare-list">
-      <h3>Compare Providers</h3>
+      <h3>{{ 'footer.compareProviders' | t(locale) }}</h3>
       <ul>
         {% for item in comparisons %}
-        <li><a href="/compare/{{ item.slug }}/">{{ codes[item.providerA].name }} vs {{ codes[item.providerB].name }}</a></li>
+        {% set alt = collections.i18nMap | i18nAlternates("compare:" + item.slug) %}
+        <li><a href="{{ alt[locale] or ('/compare/' + item.slug + '/') }}">{{ codes[item.providerA].name }} vs {{ codes[item.providerB].name }}</a></li>
         {% endfor %}
       </ul>
     </div>
@@ -44,11 +47,11 @@
     <div class="disclaimer-card">
       <p>
         <i class="fas fa-info-circle"></i>
-        Some codes and links on this site are affiliate codes, including our own (ADAMANDLINDS, where it applies). We may earn a commission if you use one, at no extra cost to you. We show our own code more prominently, not because it's automatically the best deal. <a href="/about/">Full breakdown &rarr;</a>
+        {{ 'footer.disclosure' | t(locale) }} <a href="/about/">{{ 'footer.fullBreakdown' | t(locale) }}</a>
       </p>
     </div>
   </section>
 
   <div class="footer-bottom">
-    <p>&copy; {{ buildTime | fmtDate("yyyy") }} eSIMDiscountCodes.com. All rights reserved.</p>
+    <p>&copy; {{ buildTime | fmtDate("yyyy") }} eSIMDiscountCodes.com. {{ 'footer.rightsReserved' | t(locale) }}</p>
   </div>

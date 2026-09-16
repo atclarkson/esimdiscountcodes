@@ -1,6 +1,7 @@
 <!-- Navigation -->
 <nav class="navbar">
   <div class="nav-container">
+    {% set locale = locale or "en" %}
     <a href="/" class="nav-logo">
       <svg
         width="28"
@@ -17,7 +18,7 @@
     </a>
 
     <!-- Mobile menu button -->
-    <button class="mobile-menu-btn" aria-label="Toggle navigation">
+    <button class="mobile-menu-btn" aria-label="{{ 'header.toggleNav' | t(locale) }}">
       <span class="hamburger"></span>
       <span class="hamburger"></span>
       <span class="hamburger"></span>
@@ -37,21 +38,23 @@
       {% endfor %}
       {% set providerArray = ourProviders.concat(otherProviders) %}
       {% for item in providerArray.slice(0, 3) %}
-      <li><a href="/{{ item.key }}">{{ item.provider.name }}</a></li>
+      {% set alt = collections.i18nMap | i18nAlternates("provider:" + item.key) %}
+      <li><a href="{{ alt[locale] or ('/' + item.key + '/') }}">{{ item.provider.name }}</a></li>
       {% endfor %} {% if providerArray.length > 3 %}
       <li class="dropdown">
         <a href="#" class="dropdown-toggle">
-          More Providers <i class="fas fa-chevron-down"></i>
+          {{ 'header.moreProviders' | t(locale) }} <i class="fas fa-chevron-down"></i>
         </a>
         <ul class="dropdown-menu">
           {% for item in providerArray.slice(3) %}
-          <li><a href="/{{ item.key }}">{{ item.provider.name }}</a></li>
+          {% set alt = collections.i18nMap | i18nAlternates("provider:" + item.key) %}
+          <li><a href="{{ alt[locale] or ('/' + item.key + '/') }}">{{ item.provider.name }}</a></li>
           {% endfor %}
         </ul>
       </li>
       {% endif %}
-      <li><a href="/compatible-devices/">Guides</a></li>
-      <li><a href="/#providers" class="nav-cta">Find a Code</a></li>
+      <li><a href="/compatible-devices/">{{ 'header.guides' | t(locale) }}</a></li>
+      <li><a href="/#providers" class="nav-cta">{{ 'header.findACode' | t(locale) }}</a></li>
     </ul>
   </div>
 </nav>

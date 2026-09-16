@@ -1,0 +1,30 @@
+{
+  "en": {
+    "header.toggleNav": "Toggle navigation",
+    "header.moreProviders": "More Providers",
+    "header.guides": "Guides",
+    "header.findACode": "Find a Code",
+    "footer.providers": "eSIM Providers",
+    "footer.codesSuffix": "Codes",
+    "footer.about": "About",
+    "footer.resources": "Resources",
+    "footer.compareProviders": "Compare Providers",
+    "footer.disclosure": "Some codes and links on this site are affiliate codes, including our own (ADAMANDLINDS, where it applies). We may earn a commission if you use one, at no extra cost to you. We show our own code more prominently, not because it's automatically the best deal.",
+    "footer.fullBreakdown": "Full breakdown →",
+    "footer.rightsReserved": "All rights reserved."
+  },
+  "de": {
+    "header.toggleNav": "Navigation umschalten",
+    "header.moreProviders": "Weitere Anbieter",
+    "header.guides": "Anleitungen",
+    "header.findACode": "Code finden",
+    "footer.providers": "eSIM-Anbieter",
+    "footer.codesSuffix": "Rabattcodes",
+    "footer.about": "Über uns",
+    "footer.resources": "Ratgeber",
+    "footer.compareProviders": "Anbieter im Vergleich",
+    "footer.disclosure": "Einige Codes und Links auf dieser Seite sind Affiliate-Codes, einschließlich unseres eigenen (ADAMANDLINDS, sofern verfügbar). Wenn du einen davon nutzt, erhalten wir möglicherweise eine Provision, ohne dass dir zusätzliche Kosten entstehen. Wir zeigen unseren eigenen Code prominenter an, nicht weil er automatisch das beste Angebot ist.",
+    "footer.fullBreakdown": "Vollständige Erklärung →",
+    "footer.rightsReserved": "Alle Rechte vorbehalten."
+  }
+}

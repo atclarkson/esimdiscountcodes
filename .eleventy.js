@@ -148,6 +148,15 @@ module.exports = function (eleventyConfig) {
     }));
   });
 
+  // Shared-chrome translation lookup: t("header.findACode", locale). Falls
+  // back to English, then to the raw key, so a missing translation never
+  // breaks a build or renders blank.
+  eleventyConfig.addFilter("t", function (key, localeCode) {
+    const i18n = require("./src/_data/i18n.json");
+    const loc = localeCode || "en";
+    return (i18n[loc] && i18n[loc][key]) || (i18n.en && i18n.en[key]) || key;
+  });
+
   // Look up one page's alternate-language URL map by its translationKey.
   eleventyConfig.addFilter("i18nAlternates", function (i18nMapCollection, translationKey) {
     if (!translationKey || !Array.isArray(i18nMapCollection)) return {};

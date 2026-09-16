@@ -1,0 +1,204 @@
+<!-- Holafly Content (German) -->
+<div class="content-section">
+
+  <!-- Quick Answer -->
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Bester Holafly Rabattcode &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Nutze <strong>{{ provider.primaryCode }}</strong> f&uuml;r <strong>5% Rabatt auf eine einzelne eSIM</strong> oder <strong>10% Rabatt auf einen monatlichen eSIM-Tarif</strong> bei Holafly. Funktioniert auch bei wiederholten K&auml;ufen. Es ist unser eigener Code, deshalb zeigen wir ihn hier zuerst. Die anderen funktionierenden Codes stehen oben, falls du vergleichen m&ouml;chtest.
+      <span class="callout-meta">Best&auml;tigt aktiv am <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("d. MMM yyyy") }}</time>.</span>
+    </p>
+  </div>
+
+  <!-- Headline -->
+  <h2>Was Holafly wirklich unterscheidet</h2>
+  <p>
+    Holafly verkauft unbegrenzte Daten statt eines festen GB-Kontingents. Das ist das ganze Versprechen: kein Z&auml;hlen von Gigabyte, keine Panik, wenn ein Videoanruf l&auml;nger dauert. Deshalb kostet Holafly pro Tag meist mehr als ein Anbieter mit GB-Limit bei einer kurzen Reise, kann sich aber lohnen, wenn du viele Daten brauchst oder schlecht mit einem Datenlimit haushaltest. Wenn du lieber pro Gigabyte zahlst und weniger verbrauchst, ist ein Anbieter wie <a href="/airalo/">Airalo</a> wahrscheinlich die bessere Wahl.
+  </p>
+  <p>
+    Ein Detail zum Code selbst: <strong>ADAMANDLINDS</strong> ist einer der wenigen Codes, die beide Holafly-Produktlinien abdecken: 5% Rabatt auf eine einmalige Ziel-eSIM und 10% Rabatt auf ein monatliches Plans-Abo. Die meisten anderen Codes gelten nur f&uuml;r eines von beiden (ein Code, der bei einer Ziel-eSIM funktioniert, gilt meist nicht f&uuml;r ein Plans-Abo, und umgekehrt), daher lohnt es sich zu pr&uuml;fen, welches Produkt ein anderswo gefundener Code tats&auml;chlich abdeckt, bevor du an der Kasse davon ausgehst.
+  </p>
+
+  <img class="content-photo"
+       src="https://media.adamandlinds.com/photos/large/37aef3cf-c064-4e44-ad18-a347fb2ad836.jpg"
+       alt="Ein Reisender arbeitet an Laptop und Handy, umgeben von Gep&auml;ck an einem Bahnhof in Vilnius, Litauen, w&auml;hrend einer Reise durch mehrere L&auml;nder"
+       width="1280" height="960">
+  <p class="content-photo-caption">Aufgenommen an einem Reisetag zwischen zwei L&auml;ndern, genau die Art von Trip, bei der sich ein regionaler eSIM-Tarif wirklich lohnt.</p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Aktive Codes</h3>
+    <ul>
+      <li><strong>ADAMANDLINDS</strong>: 5% Rabatt auf eine einzelne eSIM oder 10% auf einen monatlichen Tarif</li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Falls ein Code nicht angenommen wird, lade den Warenkorb neu oder versuche es in einem privaten Fenster erneut.</p>
+  </div>
+
+  <!-- Real re-test of the code and a live speed test -->
+  <h2>Wir haben es mit einem Spanien-Tarif nachgerechnet</h2>
+  <p>
+    Wir haben eine Holafly-eSIM f&uuml;r Spanien gekauft (1 Tag, unbegrenzte Daten), um erneut zu pr&uuml;fen, ob ADAMANDLINDS noch funktioniert: 3,90 $ regul&auml;r, 0,19 $ Rabatt bei 5%, macht 3,71 $ gesamt. Danach haben wir direkt hintereinander Ookla und Fast.com getestet, vom selben Handy am selben Ort, auf unserer Terrasse in Alicante.
+  </p>
+
+  <img class="content-photo"
+       src="/assets/holafly/ADAMANDLINDS.png"
+       alt="Holafly-Kasse f&uuml;r eine 1-Tages-eSIM mit unbegrenzten Daten f&uuml;r Spanien, bei der der Code ADAMANDLINDS f&uuml;r 5% Rabatt angewendet wurde und der Preis von 3,90 $ auf 3,71 $ sinkt"
+       width="1179" height="2556">
+  <p class="content-photo-caption">Von 3,90 $ auf 3,71 $ mit ADAMANDLINDS, f&uuml;r einen Tag unbegrenzte Daten in Spanien.</p>
+
+  <img class="content-photo"
+       src="/assets/holafly/speed_holafly_ookla_alicante_spain.PNG"
+       alt="Ookla-Speedtest-Ergebnisse auf der Holafly-eSIM f&uuml;r Spanien mit 21,7 Mbit/s Download und 7,55 Mbit/s Upload, verbunden &uuml;ber Lyntia Networks"
+       width="1179" height="2556">
+  <p class="content-photo-caption">21,7 Mbit/s Download, 7,55 Mbit/s Upload bei Ookla, &uuml;ber Lyntia Networks.</p>
+
+  <div class="content-box">
+    <ul>
+      <li>Ookla Speedtest: 21,7 Mbit/s Download / 7,55 Mbit/s Upload, &uuml;ber Lyntia Networks</li>
+      <li>Fast.com, gleiches Handy und gleicher Ort, direkt danach: 5,3 Mbit/s Download</li>
+    </ul>
+    <p class="content-note">Die gleiche Abweichung zwischen den beiden Tools haben wir auch bei eSIMs anderer Anbieter gesehen, also sollte man keinen einzelnen Speedtest-Wert &uuml;berbewerten, egal ob von Holafly oder sonst wem. Beide Werte liegen weit &uuml;ber dem, was f&uuml;r Karten, Nachrichten oder einen Videoanruf n&ouml;tig ist.</p>
+  </div>
+
+  <!-- How to -->
+  <h2>Holafly-Code in 3 Schritten einl&ouml;sen</h2>
+  <div class="content-box">
+    <ol>
+      <li><strong>ADAMANDLINDS</strong> kopieren</li>
+      <li>Bei Holafly ein L&auml;nder- oder Regional-Tarif mit unbegrenzten Daten ausw&auml;hlen</li>
+      <li>Den Code an der Kasse im Rabattfeld einf&uuml;gen und den Preisnachlass best&auml;tigen (5% bei einer einzelnen eSIM, 10% bei einem monatlichen Tarif)</li>
+    </ol>
+    <p class="content-note">Der Rabatt wird vor Abschluss der Zahlung angezeigt.</p>
+  </div>
+
+  <!-- Decision help -->
+  <h2>Ist Holafly die richtige Wahl f&uuml;r deine Reise</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Gut geeignet</h3>
+      <ul>
+        <li>Du wei&szlig;t wirklich nicht, wie viele Daten du brauchen wirst</li>
+        <li>Viel Streaming, Videoanrufe oder Hotspot-Nutzung</li>
+        <li>Reise durch mehrere L&auml;nder einer Region auf einem Tarif</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Alternativen pr&uuml;fen</h3>
+      <ul>
+        <li>Wenignutzer, der nur Karten und Nachrichten braucht</li>
+        <li>Abgelegene Gebiete, in denen ein lokaler Anbieter besseren Empfang hat</li>
+        <li>Du willst pro Gigabyte zahlen und Preise vergleichen</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Savings examples -->
+  <h2>So sieht der Rabatt konkret aus</h2>
+  <div class="content-box">
+    <p style="font-weight:600;color:#012F45;">Einzelne eSIM (5% Rabatt):</p>
+    <ul>
+      <li>Europa 7 Tage f&uuml;r 34,99 $ &rarr; 1,75 $ gespart</li>
+      <li>Asien 14 Tage f&uuml;r 79,99 $ &rarr; 4,00 $ gespart</li>
+    </ul>
+    <p style="font-weight:600;color:#012F45;margin-top:1rem;">Monatlicher eSIM-Tarif (10% Rabatt):</p>
+    <ul>
+      <li>USA 30 Tage f&uuml;r 99,99 $ &rarr; 10,00 $ gespart</li>
+    </ul>
+    <p class="content-note">Bei einem monatlichen Tarif ist der Rabattsatz doppelt so hoch.</p>
+  </div>
+
+  <!-- Real operational note instead of generic setup tips -->
+  <h2>Zwei Dinge, die die meisten Holafly-Seiten nicht erw&auml;hnen</h2>
+  <p>
+    <strong>Die China-eSIM hat ein integriertes VPN.</strong> Du musst vor dem Flug keine separate VPN-App installieren oder ein Abo abschlie&szlig;en. Google Maps, WhatsApp und Gmail funktionieren einfach &uuml;ber die Holafly-Verbindung. Das ist ein echter Unterschied, wenn China auf dem Reiseplan steht, da das Einrichten eines VPNs im Voraus f&uuml;r die meisten Reisenden einer der l&auml;stigeren Teile dieser Reise ist.
+  </p>
+  <p>
+    <strong>K&uuml;ndigst du ein Plans-Abo, bist du nicht komplett abgeschnitten.</strong> Holaflys "Always On"-Stufe reduziert dich auf 1 GB im Monat in 160+ Reisezielen statt auf null: genug, um irgendwo zu landen, ein Taxi zu rufen und online zu gehen, ohne f&uuml;r einen vollen Tarif zu zahlen, den du zwischen den Reisen nicht nutzt.
+  </p>
+  <p>
+    Unbegrenzt hei&szlig;t nicht unreguliert: Bei manchen Tarifen k&ouml;nnen Fair-Use-Grenzen die Geschwindigkeit nach sehr hoher Nutzung am selben Tag drosseln, und Hotspot-Unterst&uuml;tzung variiert je nach Tarif und ist nicht durchg&auml;ngig garantiert. Wenn das Tethern eines Laptops der Hauptgrund f&uuml;r die Reise ist, lohnt sich ein Blick auf die genaue Tarifseite.
+  </p>
+  <p>
+    Ein praktischer Tipp: Plane bei einer Ziel-eSIM lieber ein oder zwei Pufferage ein, statt die Laufzeit exakt auf die Reise zuzuschneiden. Fl&uuml;ge verspäten sich, und der Tarif l&auml;uft planm&auml;&szlig;ig ab, egal ob du p&uuml;nktlich gelandet bist.
+  </p>
+  <p>
+    F&uuml;r Ger&auml;te-Kompatibilit&auml;t und eSIM-Grundlagen, die &uuml;ber Holafly hinaus gelten, sieh dir unseren <a href="/compatible-devices/">eSIM-kompatible Ger&auml;te</a>-Guide an (auf Englisch). Wir haben au&szlig;erdem einen ausf&uuml;hrlicheren <a href="https://www.adamandlinds.com/blog/holafly-discount-code-esims-and-plans/" target="_blank" rel="noopener">Erfahrungsbericht zu Holafly</a> auf unserer Reise-Website geschrieben (ebenfalls auf Englisch), der zeigt, wo wir es tats&auml;chlich genutzt haben. Unsicher zwischen unbegrenzt und pro Gigabyte? Sieh dir unseren <a href="/compare/holafly-vs-airalo/">Holafly-vs-Airalo-Vergleich</a> an (Englisch).
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Code an der Kasse einl&ouml;sen</h2>
+    <p><code>ADAMANDLINDS</code> kopieren und ins Rabattfeld einf&uuml;gen</p>
+    <p>5% Rabatt auf eine einzelne eSIM oder 10% auf einen monatlichen Tarif. Einfach und zuverl&auml;ssig.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Holafly Rabattcode: H&auml;ufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist aktuell der beste Code</h3>
+      <p><strong>ADAMANDLINDS</strong>: 5% Rabatt auf eine einzelne eSIM oder 10% auf einen monatlichen Tarif. Gilt f&uuml;r Neu- und Bestandskunden.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>L&auml;uft der Code irgendwann ab</h3>
+      <p>Codes k&ouml;nnen sich &auml;ndern. Schau vor dem Kauf hier vorbei, um den aktuellen Stand zu sehen.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Kann ich Hotspot nutzen</h3>
+      <p>Die Hotspot-Unterst&uuml;tzung h&auml;ngt vom jeweiligen Tarif ab und ist nicht bei allen garantiert. Pr&uuml;fe die Tarifseite vor dem Kauf, falls du sie brauchst.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Ist "unbegrenzt" wirklich unbegrenzt</h3>
+      <p>F&uuml;r normale Handynutzung ja. Manche Tarife drosseln nach sehr hoher Nutzung am selben Tag aus Fair-Use-Gr&uuml;nden die Geschwindigkeit. Es ist ein echtes Kontingent, nur eben nicht ganz ohne Drosselung.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Brauche ich f&uuml;r China ein separates VPN</h3>
+      <p>Nein. Die China-eSIM von Holafly hat ein integriertes VPN, sodass Google Maps, WhatsApp und Gmail ohne zus&auml;tzliche Installation funktionieren. Eine Sorge weniger vor dieser speziellen Reise.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Wie schnell sind die Daten von Holafly in der Praxis</h3>
+      <p>In unserem eigenen Test auf einer Spanien-eSIM: 21,7 Mbit/s Download / 7,55 Mbit/s Upload bei Ookla, 5,3 Mbit/s Download bei Fast.com direkt danach vom selben Handy am selben Ort. Verschiedene Speedtest-Tools liefern unterschiedliche Werte; beide Ergebnisse reichen f&uuml;r normale Handynutzung locker aus.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist aktuell der beste Holafly Rabattcode?",
+        "acceptedAnswer":{"@type":"Answer","text":"ADAMANDLINDS gibt 5% Rabatt auf eine einzelne Holafly-eSIM oder 10% auf einen monatlichen eSIM-Tarif und gilt auch fuer wiederholte Bestellungen."}
+      },
+      {
+        "@type":"Question",
+        "name":"Laeuft der Code irgendwann ab?",
+        "acceptedAnswer":{"@type":"Answer","text":"Codes koennen sich aendern. Vor dem Kauf auf dieser Seite den aktuellen Stand pruefen."}
+      },
+      {
+        "@type":"Question",
+        "name":"Kann ich Hotspot mit Holafly nutzen?",
+        "acceptedAnswer":{"@type":"Answer","text":"Die Hotspot-Unterstuetzung haengt vom jeweiligen Tarif ab und ist nicht bei allen garantiert. Vor dem Kauf die Tarifseite pruefen, falls benoetigt."}
+      },
+      {
+        "@type":"Question",
+        "name":"Ist Holaflys unbegrenzte Datennutzung wirklich unbegrenzt?",
+        "acceptedAnswer":{"@type":"Answer","text":"Fuer normale Handynutzung ja. Manche Tarife drosseln nach sehr hoher Nutzung am selben Tag aus Fair-Use-Gruenden die Geschwindigkeit - ein echtes Kontingent, aber nicht ganz ohne Drosselung."}
+      },
+      {
+        "@type":"Question",
+        "name":"Brauche ich fuer China mit Holafly ein separates VPN?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nein. Die China-eSIM von Holafly hat ein integriertes VPN, sodass Google Maps, WhatsApp und Gmail ohne zusaetzliche Installation funktionieren."}
+      },
+      {
+        "@type":"Question",
+        "name":"Wie schnell sind Holaflys Daten in der Praxis?",
+        "acceptedAnswer":{"@type":"Answer","text":"Bei einem direkten Test auf einer Spanien-eSIM: 21,7 Mbit/s Download und 7,55 Mbit/s Upload bei Ookla, 5,3 Mbit/s Download bei Fast.com direkt danach vom selben Handy am selben Ort. Verschiedene Speedtest-Tools liefern unterschiedliche Werte; beide Ergebnisse reichen fuer normale Handynutzung locker aus."}
+      }
+    ]
+  }
+  </script>
+</div>

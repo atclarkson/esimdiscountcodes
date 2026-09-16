@@ -6,5 +6,13 @@
     "ogLocale": "en_US",
     "prefix": "",
     "default": true
+  },
+  {
+    "code": "de",
+    "hreflang": "de",
+    "label": "Deutsch",
+    "ogLocale": "de_DE",
+    "prefix": "de",
+    "default": false
   }
 ]

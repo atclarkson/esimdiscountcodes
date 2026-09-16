@@ -1,0 +1,23 @@
+{
+  "holafly": {
+    "description": "Internationale eSIM-Tarife für Reisende",
+    "codes": {
+      "ADAMANDLINDS": {
+        "discount": "5% RABATT AUF EINZELNE eSIMs / 10% RABATT AUF MONATSTARIFE",
+        "description": "5% Rabatt auf eine einzelne eSIM oder 10% Rabatt auf einen monatlichen eSIM-Tarif"
+      },
+      "STEPHANDPETE": {
+        "discount": "SONDERRABATT AUF JEDEN eSIM-TARIF",
+        "description": "Erhalte einen Sonderrabatt auf jeden eSIM-Tarif"
+      },
+      "MIKEANDASHLEY": {
+        "discount": "5% RABATT AUF DEINE eSIM",
+        "description": "5% Rabatt auf deine eSIM. Gute Reise!"
+      },
+      "MYESIMNOW5": {
+        "discount": "5% RABATT AUF DEINE NÄCHSTE BESTELLUNG",
+        "description": "5% Rabatt auf deine nächste Bestellung"
+      }
+    }
+  }
+}
