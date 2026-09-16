@@ -102,5 +102,13 @@
     "title": "Airhub vs Instabridge: Cheaper Sticker Price or Bigger Code? (2026 Comparison)",
     "description": "Airhub vs Instabridge compared: Airhub's cheaper raw per-GB pricing and bundled SMS/local number vs Instabridge's bigger 20% code and free WiFi hotspot database, and which actually wins after the codes are applied.",
     "lastUpdated": "2026-09-15"
+  },
+  {
+    "slug": "simlocal-vs-instabridge",
+    "providerA": "simlocal",
+    "providerB": "instabridge",
+    "title": "SimLocal vs Instabridge: No-Quibble Refunds or Free WiFi First? (2026 Comparison)",
+    "description": "SimLocal vs Instabridge compared: SimLocal's no-quibble refunds, real UK phone number and airport kiosks vs Instabridge's bigger 20% code and free WiFi hotspot database, discount codes, and which one fits your trip.",
+    "lastUpdated": "2026-09-16"
   }
 ]
