@@ -4,13 +4,19 @@ eleventyExcludeFromCollections: true
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   {% for item in comparisons %}
+  {% set alternates = collections.i18nMap | i18nAlternates("compare:" + item.slug) %}
   <url>
     <loc>{{ ("/compare/" + item.slug + "/") | url | absoluteUrl(site.url) }}</loc>
     <lastmod>{{ (item.lastUpdated or buildTime) | date("YYYY-MM-DD") }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    {% if alternates | length > 1 %}
+      {{ alternates | hreflangs(site.url) | safe }}
+    {% endif %}
   </url>
   {% endfor %}
 </urlset>

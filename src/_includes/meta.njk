@@ -27,7 +27,19 @@
 <meta property="og:description" content="{{ description or 'Find verified eSIM discount codes and promo codes for top providers worldwide.' }}">
 <meta property="og:image" content="{{ ogImageUrl }}">
 <meta property="og:site_name" content="eSIM Discount Codes">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="{{ ogLocale or 'en_US' }}">
+
+{# i18n: alternate-language versions of this exact page, if any exist yet.
+   See I18N.md. Emits nothing until a second locale is live - a
+   translationKey with only one locale isn't a real alternate-language
+   pair, so there's nothing worth telling a crawler about. #}
+{% set alternates = collections.i18nMap | i18nAlternates(translationKey) %}
+{% if alternates | length > 1 %}
+{% for altCode, altUrl in alternates %}
+<link rel="alternate" hreflang="{{ altCode }}" href="{{ altUrl | url | absoluteUrl(site.url) }}">
+{% endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ alternates[defaultLocale] | url | absoluteUrl(site.url) }}">
+{% endif %}
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">

@@ -4,8 +4,11 @@ eleventyExcludeFromCollections: true
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   {% for key, provider in codes %}
+  {% set alternates = collections.i18nMap | i18nAlternates("provider:" + key) %}
   <url>
     <loc>{{ ("/" + key + "/") | url | absoluteUrl(site.url) }}</loc>
     <lastmod>
@@ -17,6 +20,9 @@ layout: null
     </lastmod>
     <changefreq>{% if provider.isPopular %}daily{% else %}weekly{% endif %}</changefreq>
     <priority>{% if provider.isPopular %}0.9{% else %}0.8{% endif %}</priority>
+    {% if alternates | length > 1 %}
+      {{ alternates | hreflangs(site.url) | safe }}
+    {% endif %}
   </url>
   {% endfor %}
 

@@ -11,6 +11,8 @@ eleventyComputed:
   canonical: "{{ page.url | url | absoluteUrl(site.url) }}"
   ogImage: "/assets/og-image.jpg"
   modifiedISO: "{{ cmp.lastUpdated | fmtISO }}"
+  translationKey: "compare:{{ cmp.slug }}"
+  locale: "en"
 ---
 
 {% set providerA = codes[cmp.providerA] %}

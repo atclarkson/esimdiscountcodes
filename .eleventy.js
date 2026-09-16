@@ -19,6 +19,19 @@ module.exports = function (eleventyConfig) {
     name: "eSIM Discount Codes",
   });
 
+  // i18n: src/_data/locales.json is the single registry of enabled
+  // languages. The default locale (English) is unprefixed at the site
+  // root, exactly as it is today - adding a locale never moves or
+  // reissues an existing URL. A new locale gets a prefixed subtree
+  // (e.g. /de/holafly/) driven by its own templates; see I18N.md for
+  // the full pattern. These are just the defaults a page falls back to
+  // when it doesn't declare its own `locale` (i.e. every page today).
+  const locales = require("./src/_data/locales.json");
+  const defaultLocaleEntry = locales.find((l) => l.default) || locales[0];
+  eleventyConfig.addGlobalData("defaultLocale", defaultLocaleEntry.code);
+  eleventyConfig.addGlobalData("locale", defaultLocaleEntry.code);
+  eleventyConfig.addGlobalData("ogLocale", defaultLocaleEntry.ogLocale);
+
   // Existing date filter
   eleventyConfig.addFilter("date", function (date, format) {
     const d = new Date(date);
@@ -109,6 +122,56 @@ module.exports = function (eleventyConfig) {
       codes.find((c) => !c.isInvalid) ||
       null
     );
+  });
+
+  // i18n: any page that wants a translated-language counterpart sets
+  // `translationKey` (e.g. "provider:holafly") and `locale` (e.g. "de")
+  // in its own eleventyComputed. This collection groups every such page
+  // by translationKey into { translationKey, locales: { en: "/x/", de:
+  // "/de/x/" } }, which is how meta.njk and the sitemaps find a page's
+  // alternate-language URLs without any page needing to know about any
+  // other page. A translationKey with only one locale (the current,
+  // English-only reality) simply produces no hreflang output yet - nothing
+  // to fix when the next locale is added, it activates on its own.
+  eleventyConfig.addCollection("i18nMap", (collectionApi) => {
+    const map = {};
+    for (const item of collectionApi.getAll()) {
+      const key = item.data.translationKey;
+      const itemLocale = item.data.locale;
+      if (!key || !itemLocale) continue;
+      if (!map[key]) map[key] = {};
+      map[key][itemLocale] = item.url;
+    }
+    return Object.entries(map).map(([translationKey, localeUrls]) => ({
+      translationKey,
+      locales: localeUrls,
+    }));
+  });
+
+  // Look up one page's alternate-language URL map by its translationKey.
+  eleventyConfig.addFilter("i18nAlternates", function (i18nMapCollection, translationKey) {
+    if (!translationKey || !Array.isArray(i18nMapCollection)) return {};
+    const entry = i18nMapCollection.find((e) => e.translationKey === translationKey);
+    return entry ? entry.locales : {};
+  });
+
+  // Format a { locale: url } alternates map as sitemap hreflang
+  // annotations (xhtml:link, per Google's sitemap i18n spec), including
+  // an x-default pointing at the site's default-locale version.
+  eleventyConfig.addFilter("hreflangs", function (alternates, siteUrl) {
+    if (!alternates || Object.keys(alternates).length < 2) return "";
+    const localeMeta = require("./src/_data/locales.json");
+    const toAbs = (u) => (u.startsWith("http") ? u : siteUrl.replace(/\/$/, "") + u);
+    let out = "";
+    for (const [code, url] of Object.entries(alternates)) {
+      const hreflang = (localeMeta.find((l) => l.code === code) || {}).hreflang || code;
+      out += `\n    <xhtml:link rel="alternate" hreflang="${hreflang}" href="${toAbs(url)}"/>`;
+    }
+    const defaultCode = (localeMeta.find((l) => l.default) || localeMeta[0]).code;
+    if (alternates[defaultCode]) {
+      out += `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${toAbs(alternates[defaultCode])}"/>`;
+    }
+    return out;
   });
 
   // Keep this at the end. Nothing after this.

@@ -16,6 +16,8 @@ eleventyComputed:
   modifiedISO: "{{ (providerEntry[1].codesLastUpdated or buildTime) | fmtISO }}"
   buildPretty: "{{ buildTime | fmtDate('LLLL d, yyyy') }}"
   renderFaq: true
+  translationKey: "provider:{{ providerEntry[0] }}"
+  locale: "en"
 ---
 
 {% set providerKey = providerEntry[0] %}
