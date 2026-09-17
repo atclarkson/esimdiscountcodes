@@ -4,6 +4,7 @@ pagination:
   data: providerEntries
   size: 1
   alias: providerEntry
+  addAllPagesToCollections: true
 permalink: "/{{ providerEntry[0] }}/"
 eleventyComputed:
   title: "{% if providerEntry[1].primaryCode %}{{ providerEntry[1].primaryCode }} - {{ providerEntry[1].codes[0].discount }} Off {{ providerEntry[1].name }} eSIM (Verified {{ buildTime | fmtDate('LLLL yyyy') }}){% else %}{{ providerEntry[1].name }} Discount Codes - Checked {{ buildTime | fmtDate('LLLL yyyy') }}{% endif %}"

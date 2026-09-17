@@ -5,7 +5,7 @@
   <div class="content-callout">
     <h2>Globalesim Status &bull; {{ buildMonthYear }}</h2>
     <p>
-      We can no longer verify Globalesim or the <strong>{{ provider.primaryCode }}</strong> code. As of {{ buildMonthYear }}, globalesim.com resolves to a domain-parking page rather than the eSIM store we previously tested, which is a strong signal the business behind it has shut down or moved. We're marking the code invalid until we see evidence the site is back.
+      We can no longer verify Globalesim or the <strong>{{ provider.primaryCode }}</strong> code. As of {{ buildMonthYear }}, globalesim.com is not reachable as a working eSIM store (it's returned either a domain-parking page or a server error on our repeated checks), which is a strong signal the business behind it has shut down, moved, or is having serious technical trouble. We're marking the code invalid until we see evidence the site is back.
       <span class="callout-meta">Last checked <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("MMM d, yyyy") }}</time>.</span>
     </p>
   </div>
@@ -39,7 +39,7 @@
     </div>
     <div class="content-faq-item">
       <h3>What happened to Globalesim</h3>
-      <p>Their domain now shows a generic domain-parking page instead of the eSIM storefront we previously verified, which usually means the business has closed or changed domains. We'll update this page if that changes.</p>
+      <p>Their domain is no longer reachable as a working eSIM storefront: it's shown a generic domain-parking page on some checks and a server error on others. Either way, it's not the site we previously verified. We'll update this page if that changes.</p>
     </div>
     <div class="content-faq-item">
       <h3>What should I use instead</h3>
@@ -60,7 +60,7 @@
       {
         "@type":"Question",
         "name":"What happened to Globalesim?",
-        "acceptedAnswer":{"@type":"Answer","text":"Their domain now shows a generic domain-parking page instead of the eSIM storefront that was previously verified, which usually indicates the business has closed or changed domains."}
+        "acceptedAnswer":{"@type":"Answer","text":"Their domain is no longer reachable as a working eSIM storefront: it has shown a generic domain-parking page on some checks and a server error on others, neither of which is the site that was previously verified."}
       },
       {
         "@type":"Question",

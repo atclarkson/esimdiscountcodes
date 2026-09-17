@@ -19,5 +19,14 @@
         "description": "5% Rabatt auf deine nächste Bestellung"
       }
     }
+  },
+  "globalesim": {
+    "description": "Globale eSIM-Konnektivität",
+    "codes": {
+      "ESIMSIO10": {
+        "discount": "10% RABATT AUF ALLE TARIFE",
+        "description": "Globalesims eigene Domain ist nicht als funktionierender eSIM-Shop erreichbar (mal eine Domain-Parking-Seite, mal ein Serverfehler), daher können die Seite und dieser Code nicht mehr geprüft werden."
+      }
+    }
   }
 }

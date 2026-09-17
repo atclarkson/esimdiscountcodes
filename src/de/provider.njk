@@ -4,6 +4,7 @@ pagination:
   data: deProviderEntries
   size: 1
   alias: providerEntry
+  addAllPagesToCollections: true
 permalink: "/de/{{ providerEntry[0] }}/"
 eleventyComputed:
   title: "{% set deO = codesDe[providerEntry[0]] %}{% if providerEntry[1].primaryCode %}{{ providerEntry[1].primaryCode }} - {{ (deO.codes[providerEntry[1].primaryCode].discount if (deO and deO.codes and deO.codes[providerEntry[1].primaryCode])) or providerEntry[1].codes[0].discount }} Rabatt auf {{ providerEntry[1].name }} eSIM (Geprüft {{ buildTime | fmtDate('LLLL yyyy') }}){% else %}{{ providerEntry[1].name }} Rabattcodes - Geprüft {{ buildTime | fmtDate('LLLL yyyy') }}{% endif %}"
