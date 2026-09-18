@@ -28,5 +28,22 @@
         "description": "Globalesims eigene Domain ist nicht als funktionierender eSIM-Shop erreichbar (mal eine Domain-Parking-Seite, mal ein Serverfehler), daher können die Seite und dieser Code nicht mehr geprüft werden."
       }
     }
+  },
+  "instabridge": {
+    "description": "Globale eSIM- und WLAN-Lösungen",
+    "codes": {
+      "SP20": {
+        "discount": "20% RABATT",
+        "description": "Instabridge-Gutscheincode, 20% Rabatt auf alle Tarife, an der Kasse im Webshop getestet und bestätigt"
+      },
+      "TRAVELESIMEXPERT": {
+        "discount": "20% RABATT",
+        "description": "Instabridge-Neukunden-Gutschein, 20% Rabatt auf alle Tarife, ebenfalls getestet und bestätigt funktionierend"
+      },
+      "DPF10": {
+        "discount": "10% RABATT AUF ALLE TARIFE",
+        "description": "Instabridge-Rabatt, 10% Rabatt. An der Kasse getestet und als ungültig zurückgewiesen, funktioniert nicht mehr."
+      }
+    }
   }
 }

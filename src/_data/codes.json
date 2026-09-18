@@ -1294,9 +1294,9 @@
   },
   "orange": {
     "name": "Orange",
-    "lastModified": "2025-08-09",
+    "lastModified": "2026-09-18",
     "description": "European eSIM plans",
-    "url": "https://orange.com",
+    "url": "https://travel.orange.com/en",
     "affiliateUrl": null,
     "primaryCode": "AW0",
     "rating": 2.0,
@@ -1311,13 +1311,13 @@
       {
         "code": "AW0",
         "discount": "5% OFF",
-        "description": "5% off anything coupon code",
-        "verified": true,
-        "lastTested": "2026-09-16",
+        "description": "We checked Orange Travel's own store (travel.orange.com) directly and found no promo code field or code-based discount system anywhere in the checkout flow; its discounts are automatic strike-through sale prices on larger plans instead. We could not find AW0 advertised or working anywhere on the real site, so we're marking it invalid.",
+        "verified": false,
+        "lastTested": "2026-09-18",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public",
-        "isInvalid": false
+        "isInvalid": true
       }
     ],
     "totalScore": "2",

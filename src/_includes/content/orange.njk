@@ -1,158 +1,122 @@
-<!-- Orange Travel Content Template -->
+<!-- Orange Content -->
 <div class="content-section">
-  {% set primary = provider.codes | findCode(provider.primaryCode) %}
-  <!-- Main heading -->
-  <h2>Best Orange Travel eSIM Deals for {{ buildMonthYear }}</h2>
 
-  <!-- Introduction -->
-  <p>Orange Travel (from the Orange telecom group) offers global eSIMs with transparent pricing, in over <strong>200 destinations</strong>. Use code <strong>{{ provider.primaryCode }}</strong> for {{ primary.discount | lower }}.</p>
+  <!-- Quick Answer -->
+  <div class="content-callout">
+    <h2>No Working Orange Discount Code Right Now &bull; {{ buildMonthYear }}</h2>
+    <p>
+      We checked Orange Travel's own store (travel.orange.com) directly, including the checkout flow on its Europe plans, and found no promo code field anywhere. The code we previously listed here, <strong>AW0</strong>, doesn't appear on the real site and we can't confirm it ever worked, so we've marked it invalid rather than keep advertising it.
+    </p>
+  </div>
 
-  <!-- Key Features Highlight -->
-  <div class="feature-highlights" style="background: linear-gradient(135deg, #fff4e5 0%, #ffe4c4 100%); border: 2px solid #FF8000; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
-    <h2 style="color: #5A3A00; margin-bottom: 1.5rem;">Why Choose Orange Travel?</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
-      <div style="text-align: center; padding: 1rem;">
-        <h3 style="color: #5A3A00;">200+ Destinations</h3>
-        <p>Orange’s reach spans the globe thanks to subsidiaries and 700+ roaming partners.</p>
-      </div>
-      <div style="text-align: center; padding: 1rem;">
-        <h3 style="color: #5A3A00;">{{ primary.discount }}</h3>
-        <p>Use code {{ provider.primaryCode }} at checkout.</p>
-      </div>
-      <div style="text-align: center; padding: 1rem;">
-        <h3 style="color: #5A3A00;">Voice & SMS Support</h3>
-        <p>Some plans include calling and texts: great for Europe travelers.</p>
-      </div>
-      <div style="text-align: center; padding: 1rem;">
-        <h3 style="color: #5A3A00;">Clear Pricing</h3>
-        <p>No hidden fees: what you see is what you pay.</p>
-      </div>
-    </div>
+  <!-- Headline -->
+  <h2>What Actually Makes Orange Different</h2>
+  <p>
+    Orange Travel is the international eSIM arm of Orange, one of Europe's largest telecom groups, not a small independent reseller. That shows up in what's bundled as standard: its plans include <strong>unlimited calls and SMS plus hotspot tethering by default</strong>, not as a paid add-on the way <a href="/redteago/">RedteaGO</a> and most data-only eSIMs on this site sell it. Its own site also advertises 700+ roaming partner networks, which is what lets it cover 200+ destinations without building its own towers everywhere.
+  </p>
+  <p>
+    None of that makes it cheap. Orange sits in our "Expensive" price bracket, and once you compare it purely on price per gigabyte against a data-only provider like Airhub, it loses. What you're actually paying for is the calls/SMS/hotspot bundle and the backing of an established carrier, not the lowest sticker price.
+  </p>
+
+  <!-- Real operational note instead of generic feature grid / comparison table -->
+  <h2>The Discount Is Already in the Price, Not a Code</h2>
+  <p>
+    Orange's Europe pricing page shows the same pattern we found on <a href="/bnesim/">BNEsim</a>: bigger plans get an automatic strike-through markdown built into the sticker price, not a coupon field at checkout. On the Europe plan lineup we checked directly: a 14-day/20GB plan runs &euro;24.99 with no markdown shown, a 30-day/50GB plan runs &euro;44.99 with no markdown shown, a 30-day/100GB plan runs &euro;47.99 (30% off an &euro;68.99 list price), a 30-day/200GB plan runs &euro;57.99 (35% off &euro;89.99), and a 90-day/500GB plan runs &euro;99.99 (40% off &euro;169.99). The bigger and longer the plan, the bigger the automatic discount, so there's no code to hunt for here; the savings scale with how much you commit to upfront.
+  </p>
+
+  <!-- How to -->
+  <h2>What Else Is Actually Confirmed</h2>
+  <div class="content-box">
+    <ul>
+      <li>Europe coverage is 39 specifically named countries and territories, not a vague "200+ destinations" claim, at least for the Europe plan we checked</li>
+      <li>All Europe plans include unlimited calls and SMS plus hotspot, not just data</li>
+      <li>Orange advertises a full refund if the eSIM goes unused</li>
+      <li>The site markets dual-SIM compatibility, so your home number can stay active on the same phone alongside the Orange eSIM</li>
+      <li>Setup is a standard 3-step flow: pick the plan, add the eSIM via QR code or the operator app, then use it; installing requires an internet connection</li>
+    </ul>
   </div>
-  
-  <!-- How Orange Travel Works -->
-  <h2>How Orange Travel eSIM Works</h2>
-  <ul>
-    <li><strong>Pick destination</strong> from country or global plans</li>
-    <li><strong>Pay online</strong>: upfront pricing, secure checkout</li>
-    <li><strong>Get QR instantly</strong> via app or email</li>
-    <li><strong>Activate on arrival</strong>: plan starts when you land</li>
-    <li><strong>Top‑up anytime</strong> via app, keep same eSIM for renewals</li>
-  </ul>
-  
-  <!-- Comparison with Competitors -->
-  <h2>Orange Travel vs Other eSIMs</h2>
-  <table style="margin: 2rem 0;">
-    <thead>
-      <tr>
-        <th>Feature</th>
-        <th style="background: #fff4e5; color: #FF8000;"><strong>Orange</strong></th>
-        <th>Airalo</th>
-        <th>Ubigi</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Destinations</strong></td>
-        <td>200+</td>
-        <td>200+</td>
-        <td>190+</td>
-      </tr>
-      <tr>
-        <td><strong>Voice/SMS Included</strong></td>
-        <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-        <td>No (data-only)</td>
-        <td>Some plans data-only or data+calls</td>
-      </tr>
-      <tr>
-        <td><strong>Discount Code</strong></td>
-        <td><i class="fas fa-check" style="color: #4D8374;"></i> {{ primary.discount }}</td>
-        <td>NEWTOAIRALO15 (15%)</td>
-        <td>ADAMANDLINDS (10%)</td>
-      </tr>
-      <tr>
-        <td><strong>Auto Top-up</strong></td>
-        <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-        <td>No</td>
-        <td>No</td>
-      </tr>
-      <tr>
-        <td><strong>Clear Pricing</strong></td>
-        <td><i class="fas fa-check" style="color: #4D8374;"></i></td>
-        <td>Not always</td>
-        <td>Yes</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  <!-- Pricing Snapshot -->
-  <h2>Sample Holiday Europe Plans</h2>
-  <ul>
-    <li>1 GB – €4.99 (7 days, data-only)</li>
-    <li>12 GB – €21.99 (14 days, includes calls + SMS)</li>
-    <li>30 GB – €41.99 (31 days, includes calls + 1,000 SMS)</li>
-  </ul>
-  
-  <!-- Promo Note -->
-  <div style="background: #fff4e5; padding: 1rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #FF8000;">
-    <strong>Current code:</strong> {{ provider.primaryCode }} for {{ primary.discount | lower }}, sitewide.
-  </div>
-  
-  <!-- FAQ Section -->
-  <h2>FAQs</h2>
-  <div style="background: white; border-radius:8px; box-shadow:0 2px 4px rgba(0,0,0,0.1); margin:2rem 0;">
-    <div style="padding:1.5rem; border-bottom:1px solid #ffe4c4;">
-      <h3 style="color:#FF8000;">Voice & SMS – Yes or No?</h3>
-      <p>Some Holiday plans include voice + SMS. Choose the right plan for your needs.</p>
+
+  <!-- Decision help -->
+  <h2>Is Orange the Right Pick for Your Trip</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Good fit</h3>
+      <ul>
+        <li>You're traveling within Europe and want calls and SMS included standard, not as a separate purchase</li>
+        <li>You're booking a longer stay (up to 90 days) where the bigger automatic markdowns actually kick in</li>
+        <li>You want a full refund available if your plans change and the eSIM goes unused</li>
+      </ul>
     </div>
-    <div style="padding:1.5rem; border-bottom:1px solid #ffe4c4;">
-      <h3 style="color:#FF8000;">Activation Date?</h3>
-      <p>Your plan begins when you activate after landing, not when you buy.</p>
-    </div>
-    <div style="padding:1.5rem;">
-      <h3 style="color:#FF8000;">Can I Top-Up?</h3>
-      <p>Yes! Use the app to top-up or renew. Same eSIM works multiple times.</p>
+    <div class="decision-card decision-card--alt">
+      <h3>Consider alternatives</h3>
+      <ul>
+        <li>You want an actual discount code to apply today: see <a href="/holafly/">Holafly</a> for a real, working code on unlimited data, or <a href="/airhub/">Airhub</a> for the cheapest per-GB rate with a working code</li>
+        <li>You're on a short trip and only need data: a data-only plan from Airhub or RedteaGO will almost always beat Orange's calls/SMS/hotspot bundle on price</li>
+      </ul>
     </div>
   </div>
 
+  <p>
+    For eSIM device compatibility, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Orange FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Is there a working Orange discount code</h3>
+      <p>Not one we could verify. We checked Orange Travel's own checkout flow directly and found no promo code field. The code we previously listed, AW0, doesn't appear on the real site, so we've marked it invalid.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>How does Orange actually price its Europe plans</h3>
+      <p>Fixed-price tiers with an automatic strike-through discount built into bigger plans: up to 40% off the list price on the largest 90-day/500GB tier we checked, with no code needed or available.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does Orange include calls and texts</h3>
+      <p>Yes, on the Europe plans we checked, unlimited calls and SMS plus hotspot are included standard, not sold as an add-on the way most data-only eSIMs on this site do it.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>What if I don't end up using the eSIM</h3>
+      <p>Orange advertises a full refund on an unused eSIM on its own site.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I keep my regular phone number active too</h3>
+      <p>Yes. Orange markets dual-SIM compatibility, so the eSIM runs alongside your existing SIM and number on the same phone.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Voice & SMS – Yes or No?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Some Holiday plans include voice + SMS. Choose the right plan for your needs."
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Is there a working Orange discount code?",
+        "acceptedAnswer":{"@type":"Answer","text":"Not one that could be verified. Orange Travel's own checkout flow has no promo code field, and the previously listed code, AW0, doesn't appear on the real site, so it's now marked invalid."}
+      },
+      {
+        "@type":"Question",
+        "name":"How does Orange price its Europe eSIM plans?",
+        "acceptedAnswer":{"@type":"Answer","text":"Fixed-price tiers with an automatic strike-through discount built into bigger plans, up to 40% off list price on the largest 90-day/500GB tier checked, with no code needed or available."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Orange include calls and texts?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes, on the Europe plans checked, unlimited calls and SMS plus hotspot are included standard rather than sold separately."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Orange refund an unused eSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Orange advertises a full refund on an unused eSIM on its own site."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I keep my regular phone number active alongside an Orange eSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes, Orange markets dual-SIM compatibility so the eSIM runs alongside an existing SIM and number on the same phone."}
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Activation Date?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Your plan begins when you activate after landing, not when you buy."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I Top-Up?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! Use the app to top-up or renew. Same eSIM works multiple times."
-      }
-    }
-  ]
-}
-</script>
-
-  
-  <!-- Call to Action -->
-  <div style="background: linear-gradient(135deg, #fff4e5 0%, #ffe4c4 100%); padding:2rem; border:2px solid #FF8000; border-radius:12px; text-align:center; margin:3rem 0;">
-    <h2 style="color:#5A3A00;">Grab Your Orange eSIM Deal</h2>
-    <p style="font-size:1.2rem; margin-bottom:1rem;">Use code <strong>{{ provider.primaryCode }}</strong> for {{ primary.discount | lower }}.</p>
-    <p>Enter it in the promo field at checkout.</p>
-  </div>
+    ]
+  }
+  </script>
 </div>

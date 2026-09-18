@@ -1,0 +1,133 @@
+<!-- Yesim vs RedteaGO Comparison Content -->
+<div class="content-section">
+
+  {% set yesimPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set redteagoPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      These sit at opposite ends of the same decision. <strong>RedteaGO</strong> is one of the cheapest per-GB eSIMs on this site, but data expires in 30 days and a top-up is non-refundable the moment it activates. <strong>Yesim</strong> costs noticeably more, but its Pay & Fly balance rolls over instead of expiring, and it backs purchases with a 30-day money-back guarantee that RedteaGO simply doesn't offer. Pick RedteaGO if price per gigabyte is what matters. Pick Yesim if you'd rather pay for a safety net.
+    </p>
+  </div>
+
+  <h2>Price Snapshot (before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>RedteaGO</th>
+          <th>Yesim</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States</td><td>$2.00 (1GB)</td><td>$8.40 (1 day, Pay &amp; Fly)</td></tr>
+        <tr><td>Turkey</td><td>$1.50 (1GB)</td><td>$7.70 (1 day, Pay &amp; Fly)</td></tr>
+        <tr><td>UAE</td><td>$3.90 (1GB)</td><td>$7.70 (1 day, Pay &amp; Fly)</td></tr>
+        <tr><td>Global</td><td>$31.00 (6GB) &asymp; $5.17/GB</td><td>$20.90 (3GB) &asymp; $6.97/GB</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">These aren't quite apples to apples. RedteaGO sells a fixed GB bucket for a flat price. Yesim's country plans are priced by the day, not the gigabyte, through its Pay &amp; Fly balance system, which is separately advertised as working out to roughly $1.10/GB once you draw it down that way. The Global comparison above is the closest like-for-like: RedteaGO still wins on raw price per gigabyte there too.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Yesim:</strong> {{ providerA.primaryCode }}, {{ yesimPrimary.discount | lower }}, first purchase only. Returning customers should try WELCOMETOYESIM (15% off) or TRAVELFREE (&euro;3 flat off) instead. <a href="/yesim/">Full code list &rarr;</a></li>
+      <li><strong>RedteaGO:</strong> {{ providerB.primaryCode }}, {{ redteagoPrimary.discount | lower }}, works on every plan, repeat purchases included. <a href="/redteago/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Neither provider runs the kind of affiliate program that supports our own code, so both codes above are the best public ones we've verified.</p>
+  </div>
+
+  <h2>Is Yesim or RedteaGO the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Yesim if&hellip;</h3>
+      <ul>
+        <li>You travel often and want a data balance that rolls over between trips instead of expiring</li>
+        <li>You want a real refund option if your plans change and you don't use what you bought</li>
+        <li>You'd rather pay more upfront for that flexibility than chase the lowest sticker price</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with RedteaGO if&hellip;</h3>
+      <ul>
+        <li>You want the lowest realistic price per gigabyte and are booking a single trip</li>
+        <li>You're comfortable using the data inside a 30-day window with no refund on unused top-ups</li>
+        <li>Hotspot and tethering matter more to you than a phone number: RedteaGO's FAQ confirms it's available everywhere it operates</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>The refund policies aren't close.</strong> Yesim advertises a 30-day money-back guarantee on unused plans. RedteaGO's own FAQ states data top-ups are non-refundable because the plan activates immediately once the purchase completes. If you tend to buy ahead of a trip that might change, that gap alone could decide it.
+  </p>
+  <p>
+    <strong>Neither is a real phone-number provider.</strong> Yesim is data-only across the board; voice runs over apps like WhatsApp or Viber. RedteaGO is data-only by default too, and only adds calls/texts on plans specifically labeled "Calls/Texts Available" or through a separate Call &amp; Text package, not as standard. If a working phone number for calls or texts is the actual goal, see <a href="/simlocal/">SimLocal</a> instead, whose UK plans include one.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Yesim vs RedteaGO FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Yesim or RedteaGO</h3>
+      <p>RedteaGO, by a wide margin per gigabyte in every destination compared here. Yesim charges more for its Pay &amp; Fly balance model, but backs it with a refund guarantee and a balance that rolls over.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I get a refund if I don't use the plan</h3>
+      <p>With Yesim, yes: it advertises a 30-day money-back guarantee on unused plans. With RedteaGO, no: its own FAQ states data top-ups are non-refundable once the plan activates.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which lasts longer before the data expires</h3>
+      <p>Yesim. Its Pay &amp; Fly balance rolls over between trips instead of expiring on a fixed schedule. RedteaGO's data expires 30 days after purchase.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either include calls or texts</h3>
+      <p>Not by default. Both are primarily data-only. RedteaGO adds calls/texts only on plans labeled "Calls/Texts Available" or its separate Call &amp; Text package. Yesim has no calls/texts option at all; voice runs over data-based apps.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which is better for someone who travels frequently</h3>
+      <p>Yesim, if the same balance carrying over between trips matters more than price. RedteaGO is built more for a single trip at a time, since its data has a hard 30-day expiry.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Yesim or RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"RedteaGO is cheaper by a wide margin per gigabyte across the destinations compared. Yesim charges more for its Pay & Fly balance model but includes a refund guarantee and a balance that rolls over between trips."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I get a refund if I don't use a Yesim or RedteaGO plan?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim advertises a 30-day money-back guarantee on unused plans. RedteaGO's own FAQ states data top-ups are non-refundable once a plan activates, which happens immediately at purchase."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which lasts longer before the data expires, Yesim or RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim, since its Pay & Fly balance rolls over between trips instead of expiring on a fixed schedule. RedteaGO's data expires 30 days after purchase."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Yesim or RedteaGO include calls or texts?",
+        "acceptedAnswer":{"@type":"Answer","text":"Not by default for either. RedteaGO adds calls and texts only on plans labeled 'Calls/Texts Available' or a separate Call & Text package. Yesim has no calls or texts option; voice runs over data-based apps."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which is better for frequent travelers, Yesim or RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim, if a balance that carries over between trips matters more than price. RedteaGO is built more for a single trip at a time, since its data has a hard 30-day expiry."}
+      }
+    ]
+  }
+  </script>
+</div>
