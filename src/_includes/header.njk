@@ -2,7 +2,7 @@
 <nav class="navbar">
   <div class="nav-container">
     {% set locale = locale or "en" %}
-    <a href="/" class="nav-logo">
+    <a href="{{ locale | homeUrl }}" class="nav-logo">
       <svg
         width="28"
         height="28"
@@ -54,7 +54,7 @@
       </li>
       {% endif %}
       <li><a href="/compatible-devices/">{{ 'header.guides' | t(locale) }}</a></li>
-      <li><a href="/#providers" class="nav-cta">{{ 'header.findACode' | t(locale) }}</a></li>
+      <li><a href="{{ (locale | homeUrl) }}#providers" class="nav-cta">{{ 'header.findACode' | t(locale) }}</a></li>
       {# Language switcher: links to this exact page's counterpart in each
          enabled locale (via the i18nMap built in .eleventy.js), falling
          back to that locale's homepage when this specific page hasn't

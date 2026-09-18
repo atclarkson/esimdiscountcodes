@@ -164,6 +164,16 @@ module.exports = function (eleventyConfig) {
     return entry ? entry.locales : {};
   });
 
+  // The homepage URL for a given locale (e.g. "/" for the default locale,
+  // "/de/" for a prefixed one). Single source of truth so no template
+  // (header logo, breadcrumbs, etc.) hardcodes "/" and silently sends a
+  // non-default-locale reader back to the English homepage.
+  eleventyConfig.addFilter("homeUrl", function (localeCode) {
+    const localeMeta = require("./src/_data/locales.json");
+    const entry = localeMeta.find((l) => l.code === localeCode);
+    return entry && entry.prefix ? "/" + entry.prefix + "/" : "/";
+  });
+
   // Format a { locale: url } alternates map as sitemap hreflang
   // annotations (xhtml:link, per Google's sitemap i18n spec), including
   // an x-default pointing at the site's default-locale version.
