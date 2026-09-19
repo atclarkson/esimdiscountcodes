@@ -29,6 +29,27 @@
       }
     }
   },
+  "nomad": {
+    "description": "eSIM für digitale Nomaden",
+    "codes": {
+      "WOLF": {
+        "discount": "10% RABATT AUF ALLE TARIFE",
+        "description": "Nomad-Rabattcode, 10% Rabatt"
+      },
+      "NOMTRAVEL20": {
+        "discount": "20% RABATT",
+        "description": "Nomad eSIM Aktionscode, 20% Rabatt"
+      },
+      "TRAVELESIMEXPERT": {
+        "discount": "15% RABATT",
+        "description": "Nomad eSIM Gutschein, 15% Rabatt auf alle regulären Tarife"
+      },
+      "NOMCYBER20": {
+        "discount": "20% RABATT",
+        "description": "Nomad eSIM Cybernews-Aktionscode, 20% Rabatt"
+      }
+    }
+  },
   "instabridge": {
     "description": "Globale eSIM- und WLAN-Lösungen",
     "codes": {

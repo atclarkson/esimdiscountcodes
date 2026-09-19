@@ -1,0 +1,158 @@
+<!-- Nomad Content (German) -->
+<div class="content-section">
+
+  <!-- Quick Answer -->
+  {% set best1 = provider.codes | findCode("NOMTRAVEL20") %}
+  {% set best2 = provider.codes | findCode("NOMCYBER20") %}
+  <div class="content-callout">
+    <h2>Bester Nomad Rabattcode &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Nutze <strong>NOMTRAVEL20</strong> oder <strong>NOMCYBER20</strong> f&uuml;r <strong>20% Rabatt</strong>, den besten Satz unter Nomads vier funktionierenden &ouml;ffentlichen Codes. Beide sind gefundene Codes, nicht unser eigener (Nomads Partnerprogramm stellt uns keinen eigenen Code zur Verf&uuml;gung, wie es manche anderen Anbieter auf dieser Seite tun), und beide gew&auml;hren aktuell denselben Rabatt, also funktioniert entweder.
+      <span class="callout-meta">Best&auml;tigt aktiv am <time datetime="{{ (best1.lastTested or buildTime) | fmtISO }}">{{ (best1.lastTested or buildTime) | fmtDate("d. MMM yyyy") }}</time>.</span>
+    </p>
+  </div>
+
+  <!-- Headline -->
+  <h2>Was Nomad wirklich unterscheidet</h2>
+  <p>
+    Nomads reguläre Tarife funktionieren wie die meisten anderen eSIM-Apps auf dieser Seite: Land, Region oder Weltweit-Paket ausw&auml;hlen, bezahlen, QR-Code scannen, fertig. Der eigentliche Unterschied ist eine zweite Produktlinie namens <strong>Global-EX</strong>: gr&ouml;&szlig;ere Pakete (10 GB bis 50 GB), die bis zu einem Jahr g&uuml;ltig bleiben statt der &uuml;blichen 7 bis 30 Tage, mit einem Preis pro GB, der mit steigendem Datenvolumen sinkt, bis auf rund 2,58 $/GB bei den gr&ouml;&szlig;ten Paketen gegen&uuml;ber etwa 5,15 $/GB beim Standard-Global-Tarif. Das ist f&uuml;r jemanden gedacht, der tats&auml;chlich monatelang unterwegs lebt, nicht f&uuml;r einen zweiw&ouml;chigen Urlaub, und weder <a href="/holafly/">Holafly</a> noch <a href="/alosim/">AloSIM</a> bieten das auf dieser Seite an.
+  </p>
+  <p>
+    Nomad deckt au&szlig;erdem <strong>200+ Reiseziele</strong> ab, nicht die 120+, die auf dieser Seite fr&uuml;her genannt wurden: Diese Zahl war veraltet und wurde hier korrigiert.
+  </p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Aktive Codes</h3>
+    <ul>
+      {% for code in provider.codes %}
+      {% if not code.isInvalid %}
+      <li><strong>{{ code.code }}</strong>: {{ code.discount }}</li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Falls ein Code nicht angenommen wird, lade den Warenkorb neu oder versuche es in einem privaten Fenster erneut.</p>
+  </div>
+
+  <!-- Real operational notes instead of generic setup tips -->
+  <h2>Support l&auml;uft tats&auml;chlich rund um die Uhr per Live-Chat, nicht nur per E-Mail</h2>
+  <p>
+    Nomads eigene Website wirbt mit Kundensupport rund um die Uhr, sowohl per Live-Chat als auch per E-Mail. Das korrigiert eine fr&uuml;here Version dieser Seite, die den Support als reinen E-Mail-Kanal mit rund 24 Stunden Antwortzeit beschrieben hatte. Zwei weitere Dinge, die du vor dem Kauf wissen solltest: Nomads eSIMs unterst&uuml;tzen Hotspot/Tethering (nicht bei jedem Anbieter auf dieser Seite garantiert), und ein Tarif kann seine Daten &uuml;ber mehrere Ger&auml;te teilen, statt an ein einzelnes Handy gebunden zu sein.
+  </p>
+  <p>
+    Neukunden erhalten au&szlig;erdem eine kostenlose 1-GB-Test-eSIM, bevor sie sich f&uuml;r einen bezahlten Tarif entscheiden, und es gibt ein Empfehlungsprogramm, das dir und der geworbenen Person je 5 $ Rabatt bringt, f&uuml;r bis zu 5 Freunde. Beides erfordert keinen Rabattcode, nur ein Konto.
+  </p>
+
+  <!-- How to -->
+  <h2>Nomad-Code in 3 Schritten einl&ouml;sen</h2>
+  <div class="content-box">
+    <ol>
+      <li><strong>NOMTRAVEL20</strong> oder <strong>NOMCYBER20</strong> kopieren</li>
+      <li>Bei Nomad einen L&auml;nder-, Regional-, Global- oder Global-EX-Tarif ausw&auml;hlen</li>
+      <li>Den Code an der Kasse im Rabattfeld einf&uuml;gen und den 20%-Preisnachlass vor der Zahlung best&auml;tigen</li>
+    </ol>
+    <p class="content-note">Der Rabatt wird vor Abschluss der Zahlung angezeigt.</p>
+  </div>
+
+  <!-- Decision help -->
+  <h2>Ist Nomad die richtige Wahl f&uuml;r deine Reise</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Gut geeignet</h3>
+      <ul>
+        <li>Du bist f&uuml;r Monate statt Wochen unterwegs oder lebst im Ausland und willst eine eSIM, die nicht nach einer 30-Tage-Frist abl&auml;uft</li>
+        <li>Du willst per Hotspot einen Laptop &uuml;ber die Handy-Daten verbinden, ohne vorher nachzuschauen, ob der Tarif das erlaubt</li>
+        <li>Du erreichst lieber einen Menschen per Live-Chat, als auf eine E-Mail-Antwort zu warten</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Alternativen pr&uuml;fen</h3>
+      <ul>
+        <li>Du willst bei einer kurzen Reise in nur ein Land Daten, um die du dich nie k&uuml;mmern musst: sieh dir <a href="/holafly/">Holaflys</a> unbegrenzte Tarife an</li>
+        <li>Du willst einfach den g&uuml;nstigsten Preis f&uuml;r eine einmalige Reise: schau zuerst bei <a href="/redteago/">RedteaGO</a> oder <a href="/airhub/">Airhub</a> vorbei</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Savings examples -->
+  <h2>So sieht der Rabatt konkret aus</h2>
+  <div class="content-box">
+    <ul>
+      <li>USA 1 GB f&uuml;r 4,50 $ &rarr; 20% Rabatt spart 0,90 $</li>
+      <li>Europa (regional) 1 GB f&uuml;r 5 $ &rarr; 20% Rabatt spart 1,00 $</li>
+      <li>Weltweit 1 GB f&uuml;r 12 $ &rarr; 20% Rabatt spart 2,40 $</li>
+    </ul>
+    <p class="content-note">Das sind Preise f&uuml;r einzelne GB mit kurzer G&uuml;ltigkeit. Ein Global-EX-Paket wird anders pro GB berechnet (bis zu rund 2,58 $/GB vor dem Code), also rechne mit der konkreten Paketgr&ouml;&szlig;e und Laufzeit, die du brauchst, statt den obigen Pro-GB-Preis anzunehmen.</p>
+  </div>
+
+  <p>
+    F&uuml;r eSIM-Ger&auml;tekompatibilit&auml;t sieh dir unseren <a href="/compatible-devices/">eSIM-kompatible Ger&auml;te</a>-Guide an (auf Englisch). Vergleichst du Nomads Pro-GB-Preise mit einem unbegrenzten Tarif? Sieh dir unseren <a href="/compare/holafly-vs-airalo/">Holafly-vs-Airalo-Vergleich</a> an (Englisch), um zu sehen, wie sich dieser Kompromiss zwischen zwei anderen Anbietern auf dieser Seite auswirkt.
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Code an der Kasse einl&ouml;sen</h2>
+    <p><code>NOMTRAVEL20</code> oder <code>NOMCYBER20</code> kopieren und ins Rabattfeld einf&uuml;gen</p>
+    <p>20% Rabatt auf jeden Nomad-Tarif, einschlie&szlig;lich Global-EX.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Nomad Rabattcode: H&auml;ufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist aktuell der beste Code</h3>
+      <p><strong>NOMTRAVEL20</strong> oder <strong>NOMCYBER20</strong>: beide 20% Rabatt, der beste Satz unter Nomads vier funktionierenden Codes.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Was ist Global-EX</h3>
+      <p>Nomads Produktlinie mit langer G&uuml;ltigkeit: Pakete von 10 GB bis 50 GB, bis zu ein Jahr g&uuml;ltig, mit einem Preis pro GB, der bei gr&ouml;&szlig;eren und l&auml;nger laufenden Paketen niedriger ausf&auml;llt als beim Standard-Global-Tarif.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Unterst&uuml;tzt Nomad Hotspot oder Tethering</h3>
+      <p>Ja, Nomads eSIMs unterst&uuml;tzen Hotspot/Tethering, und die Daten eines Tarifs k&ouml;nnen &uuml;ber mehrere Ger&auml;te geteilt werden, statt an ein einzelnes Handy gebunden zu sein.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Ist der Support wirklich rund um die Uhr erreichbar</h3>
+      <p>Ja, laut Nomads eigener Website sowohl per Live-Chat als auch per E-Mail, beides rund um die Uhr verf&uuml;gbar.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Gibt es eine kostenlose Testversion</h3>
+      <p>Neukunden k&ouml;nnen eine kostenlose 1-GB-Test-eSIM erhalten, bevor sie f&uuml;r einen vollen Tarif bezahlen, ganz ohne Rabattcode.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist aktuell der beste Nomad Rabattcode?",
+        "acceptedAnswer":{"@type":"Answer","text":"NOMTRAVEL20 oder NOMCYBER20, beide 20% Rabatt, der beste Satz unter Nomads vier funktionierenden Codes."}
+      },
+      {
+        "@type":"Question",
+        "name":"Was ist Nomad Global-EX?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomads Produktlinie mit langer Gueltigkeit: Pakete von 10 GB bis 50 GB, bis zu ein Jahr gueltig, mit einem Preis pro GB, der bei groesseren und laenger laufenden Paketen niedriger ausfaellt als beim Standard-Global-Tarif."}
+      },
+      {
+        "@type":"Question",
+        "name":"Unterstuetzt Nomad Hotspot oder Tethering?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ja. Nomads eSIMs unterstuetzen Hotspot/Tethering, und die Daten eines Tarifs koennen ueber mehrere Geraete geteilt werden, statt an ein einzelnes Handy gebunden zu sein."}
+      },
+      {
+        "@type":"Question",
+        "name":"Ist Nomads Kundensupport wirklich rund um die Uhr erreichbar?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ja, laut Nomads eigener Website sowohl per Live-Chat als auch per E-Mail, beides rund um die Uhr verfuegbar."}
+      },
+      {
+        "@type":"Question",
+        "name":"Bietet Nomad eine kostenlose Testversion an?",
+        "acceptedAnswer":{"@type":"Answer","text":"Neukunden koennen eine kostenlose 1-GB-Test-eSIM erhalten, bevor sie fuer einen vollen Tarif bezahlen, ganz ohne Rabattcode."}
+      }
+    ]
+  }
+  </script>
+</div>

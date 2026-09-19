@@ -1,0 +1,132 @@
+<!-- Airhub vs Yesim Comparison Content -->
+<div class="content-section">
+
+  {% set airhubBest = providerA.codes | bestValidCode %}
+  {% set yesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>Airhub</strong> if you want the lowest raw per-GB price for a single trip and don't mind a modest discount code. Pick <strong>Yesim</strong> if you travel repeatedly and want a data balance that rolls over between trips, plus a genuine refund guarantee if your plans change. They're not really competing on the same thing: Airhub competes on sticker price, Yesim competes on flexibility.
+    </p>
+  </div>
+
+  <h2>The Core Difference: Fixed GB Blocks vs a Rollover Balance</h2>
+  <p>
+    Airhub sells data in fixed multi-gigabyte blocks (3GB, 4GB) that stay usable for up to a year after purchase but don't carry any credit forward once you activate and use them. Yesim's "Pay & Fly" plans work differently: you top up a dollar balance priced from $1.10/GB, and whatever you don't use rolls over to your next trip instead of expiring. If you take one trip a year, that difference barely matters. If you're a frequent flyer restocking the same balance every few months, Yesim's model means you're not starting from zero each time the way you would buying a fresh Airhub block.
+  </p>
+  <p>
+    The tradeoff is price. Airhub sits in our "Cheap" bracket and Yesim sits in "Expensive": on a straight per-GB or per-day basis, Airhub consistently costs less. You're paying Yesim's premium for the rollover balance and the refund policy below, not for a better raw rate.
+  </p>
+
+  <h2>Price Snapshot (before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Airhub</th>
+          <th>Yesim</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States</td><td>$2.82 (3GB)</td><td>$8.40 (1 day)</td></tr>
+        <tr><td>Japan</td><td>$1.55 (1GB)</td><td>$19.80 (7 days)</td></tr>
+        <tr><td>Europe regional</td><td>$4.50 (4GB)</td><td>$7.70 (1 day, unlimited)</td></tr>
+        <tr><td>Global</td><td>$11.50 (3GB)</td><td>$20.90 (3GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Most of these aren't apples-to-apples: Airhub prices by the gigabyte, Yesim mostly by the day (except its Global plan, which is priced by the GB and lines up directly with Airhub's above). A short, light-data trip skews the comparison toward Airhub; the Global row is the fairest direct read.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airhub:</strong> {{ airhubBest.code }}, {{ airhubBest.discount | lower }}. Airhub's own ADAMANDLINDS code isn't currently applying a discount at checkout; ESIMOFFER5 above is the only one we've confirmed still works. <a href="{{ '/' + providerAKey + '/' }}">Full code list &rarr;</a></li>
+      <li><strong>Yesim:</strong> {{ providerB.primaryCode }}, {{ yesimPrimary.discount | lower }}, on your first purchase only. <a href="{{ '/' + providerBKey + '/' }}">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Yesim's code is the bigger discount on paper, but it only helps once. Airhub's smaller 5% applies to every order, which matters more if you're a repeat buyer rather than a one-time first purchaser.</p>
+  </div>
+
+  <h2>Is Airhub or Yesim the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Airhub if&hellip;</h3>
+      <ul>
+        <li>You want the lowest per-GB sticker price for a single trip</li>
+        <li>You need SMS or a local number bundled with your data</li>
+        <li>You're comfortable with a smaller, but repeatable, discount code</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with Yesim if&hellip;</h3>
+      <ul>
+        <li>You travel often and want unused balance to roll over instead of expiring</li>
+        <li>You want a real refund option if you buy ahead and don't end up needing the plan</li>
+        <li>You'd rather have a bigger one-time discount than a smaller recurring one</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Airhub's own affiliate code is currently broken.</strong> ADAMANDLINDS isn't applying a discount at Airhub's checkout right now; it's been reported to Airhub and is expected to be fixed, but until then ESIMOFFER5 is the only Airhub code actually confirmed working. Yesim's TEE20 is confirmed working today, with no such asterisk, just the one-purchase limit.
+  </p>
+  <p>
+    <strong>Yesim's refund guarantee goes further than Airhub's.</strong> Yesim advertises a 30-day money-back guarantee on plans that were never used, not just ones that failed to activate. Airhub, like most cheap per-GB providers on this site, generally only refunds a plan that never connected in the first place. If you routinely buy eSIMs ahead of a trip that might change, that's a real reason to pay Yesim's premium.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Airhub vs Yesim FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Airhub or Yesim</h3>
+      <p>Airhub, on almost every destination we checked. Yesim sits in our "Expensive" price bracket while Airhub sits in "Cheap"; Yesim's higher price buys a rollover balance and a real refund guarantee, not a better rate.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either one roll data over between trips</h3>
+      <p>Yesim does, through its Pay & Fly balance: unused dollars carry forward to your next trip instead of expiring. Airhub's data blocks stay purchasable and usable for up to a year, but once activated they don't roll a leftover balance into a future purchase.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I get a refund if I don't use the plan</h3>
+      <p>Yesim advertises a 30-day money-back guarantee on plans that were never used at all. Airhub's refund policy, like most cheap per-GB providers on this site, generally only covers a plan that never connected in the first place.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which has the bigger discount code</h3>
+      <p>Yesim's TEE20 is 20% off, bigger than Airhub's current 5% ESIMOFFER5. Yesim's code only applies to a first purchase, though; Airhub's smaller discount applies to every order.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Airhub or Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub, on almost every destination checked. Yesim sits in the Expensive price bracket while Airhub sits in Cheap; Yesim's higher price buys a rollover balance and a real refund guarantee, not a better rate."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Airhub or Yesim roll data over between trips?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim does, through its Pay & Fly balance, where unused dollars carry forward to the next trip instead of expiring. Airhub's data blocks stay usable for up to a year after purchase but don't roll a leftover balance into a future purchase once activated."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I get a refund if I don't use an Airhub or Yesim plan?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim advertises a 30-day money-back guarantee on plans that were never used at all. Airhub's refund policy generally only covers a plan that never connected in the first place, the same as most cheap per-GB providers on this site."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which has the bigger discount code, Airhub or Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim's TEE20 code is 20% off, bigger than Airhub's currently working 5% ESIMOFFER5 code. Yesim's code applies only to a first purchase, while Airhub's smaller discount applies to every order."}
+      }
+    ]
+  }
+  </script>
+</div>

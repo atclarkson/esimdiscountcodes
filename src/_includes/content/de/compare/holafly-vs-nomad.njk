@@ -1,0 +1,138 @@
+<!-- Holafly vs Nomad Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set holaflyPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set nomadBest = providerB.codes | findCode("NOMTRAVEL20") %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set holaflyDeCode = deA.codes[providerA.primaryCode] if (deA and deA.codes and deA.codes[providerA.primaryCode]) else null %}
+  {% set nomadDeCode = deB.codes["NOMTRAVEL20"] if (deB and deB.codes and deB.codes["NOMTRAVEL20"]) else null %}
+  {% set holaflyDiscount = (holaflyDeCode.discount if holaflyDeCode) or holaflyPrimary.discount %}
+  {% set nomadDiscount = (nomadDeCode.discount if nomadDeCode) or nomadBest.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Wähle <strong>Holafly</strong> für eine einzelne Reise, bei der du lieber einen festen Pauschalpreis für unbegrenzte Daten zahlst, statt überhaupt etwas zu verfolgen. Wähle <strong>Nomad</strong>, wenn du langfristig unterwegs bist (Wochen bis zu einem ganzen Jahr) und einen Tarif willst, der pro Gigabyte berechnet wird und mit steigender Menge günstiger wird, statt einer Pauschale, die für einen kurzen Aufenthalt gedacht ist. Beide sind für wirklich unterschiedliche Reisedauern gebaut, sie konkurrieren nicht direkt um denselben Anwendungsfall.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Pauschal-Unbegrenzt vs. langlaufender Pro-GB-Tarif</h2>
+  <p>
+    Holafly verkauft eine Sache: unbegrenzte Daten zu einem festen Preis pro Tag, gültig für eine festgelegte Reisedauer (typischerweise wenige Tage bis zu einem Monat). Es gibt kein Gigabyte-Zählen, aber der Tarif läuft trotzdem planmäßig ab, sobald die Tage aufgebraucht sind. Nomads Standardtarife funktionieren ähnlich wie die meisten anderen eSIMs auf dieser Seite (ein GB-Kontingent kaufen, nutzen, es läuft erst nach der Aktivierung ab), aber die eigentliche Besonderheit ist die <strong>Global-EX</strong>-Linie: Pakete von 10 GB bis 50 GB, bis zu ein Jahr gültig, mit einem Preis pro GB, der bei größeren Paketen sinkt, bis auf rund 2,58 $/GB bei den größten gegenüber etwa 5,15 $/GB bei Nomads Standard-Global-Tarif.
+  </p>
+  <p>
+    Das macht Nomad zur sinnvolleren Wahl für alle, die tatsächlich monatelang im Ausland leben, statt eine einzelne Reise zu unternehmen. Holafly verkauft nichts, das für diesen Zeitraum gebaut ist: seine Tarife sind auf eine bestimmte Reisedauer zugeschnitten und beworben, nicht auf einen offenen Aufenthalt.
+  </p>
+
+  <h2>Preis-Schnappschuss (1-GB-Äquivalent, vor jedem Code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Ziel</th>
+          <th>Holafly</th>
+          <th>Nomad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>USA</td><td>1,99 $/Tag (unbegrenzt)</td><td>4,50 $ (1 GB)</td></tr>
+        <tr><td>Europa (regional)</td><td>1,99 $/Tag (unbegrenzt)</td><td>5,00 $ (1 GB)</td></tr>
+        <tr><td>Japan</td><td>1,99 $/Tag (unbegrenzt)</td><td>6,00 $ (1 GB)</td></tr>
+        <tr><td>Weltweit</td><td>9,90 $/Tag (unbegrenzt)</td><td>12,00 $ (1 GB), oder bis zu ca. 2,58 $/GB bei einem großen Global-EX-Paket</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Diese Zahlen sind nicht direkt vergleichbar: Holaflys Preis gilt pro Tag mit unbegrenzter Nutzung, Nomads Standardpreis pro Gigabyte. Eine kurze Reise mit geringem Datenverbrauch ist bei Nomads Standardtarifen meist günstiger; eine kurze Reise mit hohem Datenverbrauch meist bei Holafly; bei einem monatelangen Aufenthalt ziehen Nomads Global-EX-Pakete an beiden vorbei.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Holafly:</strong> {{ providerA.primaryCode }}, {{ holaflyDiscount | lower }}. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>Nomad:</strong> NOMTRAVEL20 oder NOMCYBER20, {{ nomadDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Holaflys Code ist unser eigener. Nomad betreibt kein Partnerprogramm, das einen solchen Code unterstützt, daher sind die hier genannten Codes die besten öffentlichen, die wir geprüft haben, und zwei davon liegen gleichauf beim selben Rabattsatz.</p>
+  </div>
+
+  <h2>Ist Holafly oder Nomad die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm Holafly, wenn&hellip;</h3>
+      <ul>
+        <li>Du eine einzelne Reise von wenigen Tagen bis zu einem Monat machst</li>
+        <li>Du wirklich nicht weißt, wie viele Daten du brauchst, und dir darüber keine Gedanken machen willst</li>
+        <li>China auf dem Reiseplan steht und du das integrierte VPN willst</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm Nomad, wenn&hellip;</h3>
+      <ul>
+        <li>Du für Monate statt Wochen unterwegs bist oder im Ausland lebst</li>
+        <li>Du per Hotspot einen Laptop verbinden willst, ohne vorher Tarifeinschränkungen zu prüfen</li>
+        <li>Du lieber einen Live-Chat erreichst, als auf eine E-Mail-Antwort zu warten</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Nomads Global-EX-Gültigkeit (bis zu einem Jahr) hat bei Holafly keine Entsprechung.</strong> Holaflys Tarife sind auf eine bestimmte Reisedauer zugeschnitten und bepreist; es gibt kein Langzeit-Paket, das mit steigender Menge pro GB günstiger wird, wie es Global-EX tut. Wer tatsächlich mehrere Monate im Ausland verbringt und beide direkt vergleicht, wird in der Regel feststellen, dass Nomads Modell besser zu diesem Zeitraum passt, selbst wenn man den Preis außer Acht lässt.
+  </p>
+  <p>
+    <strong>Holaflys China-eSIM hat ein integriertes VPN, Nomad bietet nichts Vergleichbares.</strong> Google Maps, WhatsApp und Gmail funktionieren bei Holaflys China-Tarif einfach, ohne vorher etwas Zusätzliches zu installieren. Nomad wirbt mit nichts Ähnlichem, daher bräuchte eine China-Reise mit Nomad ein separat im Voraus eingerichtetes VPN.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Holafly vs Nomad: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, Holafly oder Nomad?</h3>
+      <p>Kommt auf die Reise an. Bei einer kurzen Reise mit geringem Datenverbrauch sind Nomads Standard-Pro-GB-Tarife meist günstiger. Bei einer kurzen Reise mit hohem Datenverbrauch ist Holaflys Pauschalpreis meist günstiger. Bei einem mehrmonatigen Aufenthalt senken Nomads Global-EX-Pakete den Preis pro GB weiter als beide anderen Optionen, etwas, dem Holafly nichts Vergleichbares entgegensetzt.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welcher ist besser für Langzeitreisen oder ein Leben im Ausland?</h3>
+      <p>Nomad. Seine Global-EX-Pakete bleiben bis zu ein Jahr gültig und werden bei größerem Volumen günstiger pro GB, speziell für einen längeren Aufenthalt gebaut. Holaflys Tarife sind auf eine feste, kürzere Reisedauer zugeschnitten und beworben.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welcher ist besser für China?</h3>
+      <p>Holafly, wenn dir wichtig ist, kein separates VPN einzurichten: seine China-eSIM hat eins bereits eingebaut. Nomad bietet nichts Vergleichbares, weshalb eine China-Reise mit Nomad ein eigenes, vorab eingerichtetes VPN bräuchte.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Garantiert einer der beiden Hotspot oder Tethering?</h3>
+      <p>Nomad schon: seine eSIMs unterstützen Hotspot/Tethering und können Daten über mehrere Geräte teilen. Holaflys Tethering-Unterstützung hängt vom jeweiligen Tarif ab und ist nicht bei allen garantiert, also lohnt sich ein Blick auf die konkrete Tarifseite, falls das der Hauptgrund für die Reise ist.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, Holafly oder Nomad?",
+        "acceptedAnswer":{"@type":"Answer","text":"Das kommt auf die Reise an. Eine kurze Reise mit geringem Datenverbrauch ist meist bei Nomads Standard-Pro-GB-Tarifen günstiger. Eine kurze Reise mit hohem Datenverbrauch ist meist bei Holaflys Pauschalpreis günstiger. Bei einem mehrmonatigen Aufenthalt senken Nomads Global-EX-Pakete den Preis pro GB weiter als beide anderen Optionen."}
+      },
+      {
+        "@type":"Question",
+        "name":"Welcher ist besser für Langzeitreisen oder ein Leben im Ausland, Holafly oder Nomad?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad. Seine Global-EX-Pakete bleiben bis zu ein Jahr gültig und werden bei größerem Volumen günstiger pro GB, speziell für einen längeren Aufenthalt gebaut. Holaflys Tarife sind auf eine feste, kürzere Reisedauer zugeschnitten und beworben."}
+      },
+      {
+        "@type":"Question",
+        "name":"Welcher ist besser für eine Reise nach China, Holafly oder Nomad?",
+        "acceptedAnswer":{"@type":"Answer","text":"Holafly, für Reisende, die kein separates VPN einrichten wollen, da seine China-eSIM eins bereits eingebaut hat. Nomad bietet nichts Vergleichbares, weshalb eine China-Reise mit Nomad ein eigenes, vorab eingerichtetes VPN benötigen würde."}
+      },
+      {
+        "@type":"Question",
+        "name":"Garantieren Holafly oder Nomad Hotspot oder Tethering?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad schon: seine eSIMs unterstützen Hotspot/Tethering und können Daten über mehrere Geräte teilen. Holaflys Tethering-Unterstützung hängt vom jeweiligen Tarif ab und ist nicht bei allen garantiert."}
+      }
+    ]
+  }
+  </script>
+</div>

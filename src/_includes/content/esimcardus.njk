@@ -1,33 +1,123 @@
-<!-- eSIM Card Content Template -->
+<!-- eSIM Card Content -->
 <div class="content-section">
+
+  <!-- Quick Answer -->
   {% set primary = provider.codes | findCode(provider.primaryCode) %}
-  <h2>Best eSIM Card Promo Codes for {{ buildMonthYear }}</h2>
-
-  <p>eSIM Card offers prepaid eSIM data plans covering 170+ countries, with local, regional, and global packages installed by QR code.</p>
-
-  <div style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;padding:1.25rem;margin:1rem 0;">
-    <h3 style="margin:.25rem 0;color:#374151;">Active codes</h3>
-    <ul style="margin:.25rem 0 0 1.25rem;">
-      <li><strong>{{ provider.primaryCode }}:</strong> {{ primary.discount }}</li>
-    </ul>
-    <p style="margin:.5rem 0 0 0;color:#6b7280;font-size:.95rem;">This is a public code advertised on eSIM Card's own site, not an exclusive code of ours.</p>
+  <div class="content-callout">
+    <h2>Best eSIM Card Promo Code &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Use <strong>{{ provider.primaryCode }}</strong> for <strong>10% off any eSIM Card plan</strong>. It's a public code rather than one of ours (eSIM Card doesn't run the kind of affiliate program that lets us put our own code on it the way we do for Holafly or Ubigi), and we found it advertised directly on eSIM Card's own homepage, not just on a coupon-aggregator site.
+      <span class="callout-meta">Confirmed active <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("MMM d, yyyy") }}</time>.</span>
+    </p>
   </div>
 
-  <h2>How to Use It</h2>
-  <ol style="font-size:1.05rem;line-height:1.7;">
-    <li>Copy <strong>{{ provider.primaryCode }}</strong></li>
-    <li>Pick a country, regional, or global plan on eSIM Card</li>
-    <li>Enter the code at checkout to apply {{ primary.discount | lower }}</li>
-  </ol>
+  <!-- Headline -->
+  <h2>What Actually Makes eSIM Card Different</h2>
+  <p>
+    eSIM Card's real difference is how granular its own country pages are. Most providers on this site sell a handful of preset bundles per country: pick a data size, pick a length, done. eSIM Card's United States page alone lists roughly 30 combinations: seven fixed-data tiers (1GB, 3GB, 5GB, 10GB, 20GB, 50GB, 100GB) each sold at several different validity windows from 3 to 90 days, plus two separate unlimited tiers, "Unlimited" and "Unlimited Plus," running anywhere from 1 to 30 days. If you know exactly how much data and how many days you need, there's a plan sized for that instead of rounding up to whatever bundle a competitor happens to offer.
+  </p>
+  <p>
+    eSIM Card also runs a couple of things most data-only competitors don't: a separate Data + Voice eSIM product line, and a standalone virtual phone number add-on starting around $2.40, both sold inside the same app as its regular data plans. That's a similar idea to what <a href="/alosim/">AloSIM</a> does through its Hushed partnership, but here the number is its own paid purchase rather than something bundled free with a data plan.
+  </p>
 
-  <h2>FAQ</h2>
-  <div style="background:#ffffff;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,0.06);margin:1rem 0;">
-    <div style="padding:1rem 1.25rem;">
-      <h3 style="margin:.25rem 0;">What's the best eSIM Card code right now?</h3>
-      <p style="margin:0;">{{ provider.primaryCode }} for {{ primary.discount | lower }}, confirmed active {{ (primary.lastTested or buildTime) | fmtDate("MMMM yyyy") }}.</p>
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Active codes</h3>
+    <ul>
+      <li><strong>ESIM10</strong>: 10% off any eSIM Card plan</li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">This is a public code advertised on eSIM Card's own site, not an exclusive code of ours. If it doesn't apply, refresh the cart or try a private window, then retry.</p>
+  </div>
+
+  <!-- Real operational note instead of generic setup tips -->
+  <h2>Two Things eSIM Card Doesn't Spell Out on Its Own Site</h2>
+  <p>
+    The fair-use language on eSIM Card's unlimited plans reads: "Unlimited bundles provide an allowed limit of data at full speed per 24 hours and thereafter unlimited data at lower speeds." That's their own wording, and it confirms tethering/hotspot works on unlimited plans and that the plan activates on first use rather than at purchase. What it doesn't do is give you the actual number: how many GB at full speed before the slowdown kicks in. Some competitors publish that figure directly (<a href="/saily/">Saily</a>, for instance, states 5GB in a rolling 24 hours in most destinations, 3GB in some); eSIM Card just says "an allowed limit" without naming one.
+  </p>
+  <p>
+    The refund policy is also stricter than it might look at a glance. eSIM Card's own policy page describes eSIMs as fundamentally non-refundable once installed or used, with refunds limited to narrow cases like a genuine coverage failure or a technical fault on their end where zero data was consumed, and even then a claim has to be filed within 30 days of purchase. Buy the plan you're confident about, not one you're hoping to test and return.
+  </p>
+
+  <!-- How to -->
+  <h2>Apply an eSIM Card Code in 3 Steps</h2>
+  <div class="content-box">
+    <ol>
+      <li>Copy <strong>ESIM10</strong></li>
+      <li>Pick a country, regional, or global data plan (or a Data + Voice plan) on eSIM Card</li>
+      <li>Paste the code in the promo field at checkout and confirm the 10% price drop before paying</li>
+    </ol>
+    <p class="content-note">Discount shows before payment is completed.</p>
+  </div>
+
+  <!-- Decision help -->
+  <h2>Is eSIM Card the Right Pick for Your Trip</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Good fit</h3>
+      <ul>
+        <li>You know your exact data need and trip length and want a plan sized to match, rather than rounding up to a preset bundle</li>
+        <li>You want the option to add a virtual phone number or a voice-enabled eSIM from the same app you're already buying data through</li>
+        <li>You're confident about the plan before you buy it, since there's little room to change your mind after it's installed</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Consider alternatives</h3>
+      <ul>
+        <li>You want a phone number bundled in for free instead of bought separately: see <a href="/alosim/">AloSIM</a>, whose Hushed-partnered number comes at no extra cost</li>
+        <li>You want a bigger bundle at a lower per-GB rate: <a href="/airhub/">Airhub</a>'s 3GB US plan works out to under $1/GB, cheaper per gigabyte than eSIM Card's smallest US tier</li>
+        <li>You want an unlimited plan with a fair-use number actually published: see <a href="/saily/">Saily</a></li>
+      </ul>
     </div>
   </div>
 
+  <!-- Savings examples -->
+  <h2>What the Discount Looks Like</h2>
+  <div class="content-box">
+    <ul>
+      <li>United States 1GB, 3 days, at $1.92 &rarr; 10% off saves about $0.19</li>
+      <li>United States 10GB, 30 days, at $12.86 &rarr; 10% off saves about $1.29</li>
+      <li>United States Unlimited, 7 days, at $12.05 &rarr; 10% off saves about $1.21</li>
+    </ul>
+    <p class="content-note">Prices are eSIM Card's own listed rates for the United States at the time we checked; exact numbers vary by destination and change over time.</p>
+  </div>
+
+  <p>
+    For device setup and eSIM basics that apply beyond eSIM Card specifically, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Use the Code at Checkout</h2>
+    <p>Copy <code>ESIM10</code> then paste in the promo field</p>
+    <p>10% off any eSIM Card plan, data-only, unlimited, or Data + Voice.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>eSIM Card Promo Code FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>What is the best code right now</h3>
+      <p><strong>ESIM10</strong>: 10% off any eSIM Card plan. It's a public code advertised directly on eSIM Card's own homepage, not one of ours.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does eSIM Card sell unlimited plans</h3>
+      <p>Yes, two tiers per country: "Unlimited" and "Unlimited Plus," each available at several validity lengths, on top of the regular fixed-GB plans. eSIM Card's own site doesn't spell out exactly what separates the two tiers beyond price.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Is eSIM Card's unlimited data actually unlimited</h3>
+      <p>Per eSIM Card's own fair-use wording, unlimited bundles get "an allowed limit of data at full speed per 24 hours and thereafter unlimited data at lower speeds." The page confirms tethering/hotspot works on these plans, but doesn't publish the actual GB figure for that daily full-speed allowance the way some competitors do.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I get a phone number with eSIM Card</h3>
+      <p>Yes, as a separate virtual phone number add-on starting around $2.40, purchased inside the same app as the data eSIMs rather than bundled in for free.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I get a refund</h3>
+      <p>Rarely, once an eSIM is installed or used. eSIM Card's own refund policy describes eSIMs as fundamentally non-refundable, with exceptions limited to narrow cases like a genuine coverage failure or a technical fault with zero data consumed, claimed within 30 days of purchase.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -35,8 +125,28 @@
     "mainEntity":[
       {
         "@type":"Question",
-        "name":"What's the best eSIM Card code right now?",
-        "acceptedAnswer":{"@type":"Answer","text":"{{ provider.primaryCode }} for {{ primary.discount | lower }}."}
+        "name":"What is the best eSIM Card promo code right now?",
+        "acceptedAnswer":{"@type":"Answer","text":"ESIM10 gives 10% off any eSIM Card plan. It's a public code advertised directly on eSIM Card's own homepage, not an exclusive code of ours."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does eSIM Card sell unlimited plans?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes, two tiers per country, Unlimited and Unlimited Plus, each available at several validity lengths, alongside the regular fixed-GB plans. eSIM Card's site doesn't spell out exactly what separates the two tiers beyond price."}
+      },
+      {
+        "@type":"Question",
+        "name":"Is eSIM Card's unlimited data actually unlimited?",
+        "acceptedAnswer":{"@type":"Answer","text":"eSIM Card's own fair-use wording says unlimited bundles get an allowed limit of data at full speed per 24 hours and thereafter unlimited data at lower speeds. Tethering and hotspot are confirmed to work on these plans, but the actual GB figure for the daily full-speed allowance isn't published."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I get a phone number with eSIM Card?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes, as a separate virtual phone number add-on starting around $2.40, purchased inside the same app as the data eSIMs rather than bundled in for free."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I get a refund from eSIM Card?",
+        "acceptedAnswer":{"@type":"Answer","text":"Rarely once an eSIM is installed or used. eSIM Card's refund policy describes eSIMs as fundamentally non-refundable, with exceptions limited to cases like a genuine coverage failure or a technical fault with zero data consumed, claimed within 30 days of purchase."}
       }
     ]
   }
