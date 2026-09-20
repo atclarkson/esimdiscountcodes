@@ -134,5 +134,13 @@
     "title": "Airhub vs Yesim: Cheapest Per-GB or Rollover Balance? (2026 Comparison)",
     "description": "Airhub vs Yesim compared: Airhub's rock-bottom per-GB pricing and bundled SMS/local number vs Yesim's pricier Pay & Fly rollover balance and 30-day refund guarantee, discount codes, and which one fits your trip.",
     "lastUpdated": "2026-09-19"
+  },
+  {
+    "slug": "airhub-vs-bnesim",
+    "providerA": "airhub",
+    "providerB": "bnesim",
+    "title": "Airhub vs BNEsim: Discount Code or Automatic Sale Price? (2026 Comparison)",
+    "description": "Airhub vs BNEsim compared: Airhub's stackable promo code, real local number and SMS vs BNEsim's automatic strike-through sale pricing and no-expiration data tier, and which one actually saves more by destination.",
+    "lastUpdated": "2026-09-20"
   }
 ]

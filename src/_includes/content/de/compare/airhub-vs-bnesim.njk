@@ -1,0 +1,144 @@
+<!-- Airhub vs BNEsim Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set airhubPrimary = providerA.codes | findCode("ESIMOFFER5") %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set airhubDeCode = deA.codes["ESIMOFFER5"] if (deA and deA.codes and deA.codes["ESIMOFFER5"]) else null %}
+  {% set airhubDiscount = (airhubDeCode.discount if airhubDeCode) or airhubPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Wähle <strong>Airhub</strong>, wenn du einen Rabattcode willst, den du an der Kasse tatsächlich eingeben kannst, dazu eine echte lokale Nummer und SMS zusätzlich zu den Daten. Wähle <strong>BNEsim</strong>, wenn dir lieber ist, dass der Rabatt bereits automatisch als Sonderangebot im Preis steckt, ganz ohne Code-Suche, und du die Option willst, für etwas mehr Geld Daten zu bekommen, die nie ablaufen. Keiner der beiden gewinnt beim Preis durchgehend: Wer günstiger ist, wechselt je nach Reiseziel.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Ein Code, den du eingibst, oder ein Sonderpreis, den du nicht eingeben musst</h2>
+  <p>
+    Airhubs Rabatt gibt es nur, wenn an der Kasse ein Code eingegeben wird. Der eigene Affiliate-Code, ADAMANDLINDS, funktioniert aktuell nicht und bringt keinen Rabatt, weshalb wir derzeit nur den öffentlichen Code <strong>ESIMOFFER5</strong> für 5% Rabatt empfehlen können. BNEsim verzichtet komplett auf Codes: Die eigenen Preisseiten zeigen bereits einen durchgestrichenen Originalpreis neben einem niedrigeren Sonderpreis, automatisch um bis zu 70% reduziert, ohne dass irgendetwas eingegeben werden muss. Wenn es dich nervt, wenn ein Rabattcode nicht funktioniert (genau das ist Airhubs eigenem Code passiert), nimmt Airhubs Ansatz dieses Fehlerrisiko komplett weg, bedeutet aber auch: Es gibt keinen zusätzlichen Code, den man auf den bereits reduzierten BNEsim-Preis noch obendrauf legen könnte.
+  </p>
+  <p>
+    BNEsim läuft außerdem über ein Guthabenkonto, das du auffüllst und von dem du abbuchst, akzeptiert neben Karten auch Kryptowährungen und lässt dich einen Tarif für ein zukünftiges Datum vorplanen, statt ihn sofort beim Kauf zu aktivieren. Airhubs Kasse ist ein normaler Einmalkauf ohne all das.
+  </p>
+
+  <h2>Preis-Schnappschuss (pro GB, aktuelle Listenpreise)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Ziel</th>
+          <th>Airhub</th>
+          <th>BNEsim</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>USA</td><td>2,82 $ (3 GB) &approx; 0,94 $/GB</td><td>1,48 $ (1 GB)</td></tr>
+        <tr><td>Italien</td><td>5 $ (3 GB) &approx; 1,67 $/GB</td><td>1,67 $ (1 GB)</td></tr>
+        <tr><td>Thailand</td><td>0,85 $ (1 GB)</td><td>2,06 $ (1 GB)</td></tr>
+        <tr><td>Türkei</td><td>2,25 $ (1 GB)</td><td>0,92 $ (1 GB)</td></tr>
+        <tr><td>Weltweit</td><td>11,5 $ (3 GB) &approx; 3,83 $/GB</td><td>kein fester Weltweit-Tarif gelistet</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Airhub verkauft in größeren Mehr-GB-Paketen (meist 3-4 GB), während BNEsim einzelne 1-GB-Pakete verkauft, weshalb die Pro-GB-Rechnung oben die unterschiedlichen Paketgrößen ausgleicht. Trotzdem bleibt der Gesamtpreis eines Airhub-Pakets höher, selbst dort, wo der Pro-GB-Satz gewinnt. Keiner ist überall günstiger: Airhub gewinnt klar in Thailand und den USA, BNEsim gewinnt klar in der Türkei, und bei Italien ist es fast ein Gleichstand.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airhub:</strong> {{ airhubPrimary.code }}, {{ airhubDiscount | lower }}. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>BNEsim:</strong> kein funktionierender Code, aktuell stattdessen über ein automatisches Sonderangebot im ganzen Shop reduziert. <a href="{{ providerBUrl }}">Alle Details &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Airhubs eigener Affiliate-Code (ADAMANDLINDS) bringt aktuell keinen Rabatt, weshalb wir ESIMOFFER5 empfehlen. Auf der <a href="{{ providerAUrl }}">Airhub-Seite</a> steht die vollständige Übersicht, welche Codes nicht mehr funktionieren.</p>
+  </div>
+
+  <h2>Ist Airhub oder BNEsim die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm Airhub, wenn&hellip;</h3>
+      <ul>
+        <li>Du an ein Ziel reist, wo Airhubs Pro-GB-Preis klar gewinnt, etwa Thailand oder die USA</li>
+        <li>Du eine echte lokale Telefonnummer und SMS zusätzlich zu den Daten willst, nicht nur Daten</li>
+        <li>Du lieber einen einfachen Einmalkauf machst, statt ein Guthabenkonto einzurichten</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm BNEsim, wenn&hellip;</h3>
+      <ul>
+        <li>Du an ein Ziel reist, wo BNEsims Preis gewinnt, etwa die Türkei</li>
+        <li>Du ein Land unregelmäßig besuchst und dir die Option auf nie ablaufende Daten wichtig ist</li>
+        <li>Du lieber mit Krypto zahlst oder ein laufendes Guthaben nutzt, statt jedes Mal einzeln zu bezahlen</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Airhub bündelt SMS und eine lokale Nummer, BNEsim nicht.</strong> Wenn dir der Empfang einer SMS (ein Lieferstatus-Code, eine 2FA-Nachricht) auf deiner Reise wichtig ist, kann das allein einen kleinen Preisvorteil von BNEsim aufwiegen.
+  </p>
+  <p>
+    <strong>BNEsims Live-Chat ist echt, Airhubs nicht.</strong> BNEsim wirbt mit 24/7-Live-Chat und E-Mail. Airhubs Support ist ebenfalls rund um die Uhr erreichbar, aber über E-Mail/Ticket statt über ein echtes Live-Chat-Fenster, auch wenn ein kurzer Blick auf die Feature-Badges beider Seiten etwas anderes vermuten lässt.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Airhub vs BNEsim: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, Airhub oder BNEsim?</h3>
+      <p>Das hängt vom Reiseziel ab. Airhub ist pro GB klar günstiger in Thailand und den USA, BNEsim klar günstiger in der Türkei, bei Italien ist es fast ein Gleichstand. Vor dem Kauf lohnt es sich, beide zu prüfen, statt anzunehmen, dass einer überall gewinnt.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Hat BNEsim einen Rabattcode?</h3>
+      <p>Kein funktionierender wurde gefunden. BNEsim reduziert automatisch über ein Sonderangebot im ganzen Shop, gezeigt als durchgestrichener Preis, statt über einen Code an der Kasse.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Funktioniert Airhubs eigener Rabattcode?</h3>
+      <p>Aktuell nicht. Airhubs eigener Affiliate-Code, ADAMANDLINDS, bringt an der Kasse keinen Rabatt. Stattdessen wird der öffentliche Code ESIMOFFER5 empfohlen.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Wer gibt eine echte Telefonnummer, Airhub oder BNEsim?</h3>
+      <p>Airhub. Die Tarife unterstützen eine lokale Nummer und SMS zusätzlich zu den Daten. BNEsim ist reine Daten-eSIM ohne Nummer oder SMS.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Wer hat einen echten Live-Chat-Support, Airhub oder BNEsim?</h3>
+      <p>BNEsim wirbt mit 24/7-Live-Chat und E-Mail. Airhubs 24/7-Support läuft über E-Mail/Ticket statt über ein Live-Chat-Fenster.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, Airhub oder BNEsim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Das hängt vom Reiseziel ab. Airhub ist pro GB klar günstiger in Thailand und den USA, BNEsim klar günstiger in der Türkei, bei Italien ist es fast ein Gleichstand."}
+      },
+      {
+        "@type":"Question",
+        "name":"Hat BNEsim einen Rabattcode?",
+        "acceptedAnswer":{"@type":"Answer","text":"Kein funktionierender Code wurde gefunden. BNEsim reduziert automatisch über ein Sonderangebot im ganzen Shop, gezeigt als durchgestrichener Preis, statt über einen Code an der Kasse."}
+      },
+      {
+        "@type":"Question",
+        "name":"Funktioniert Airhubs eigener Rabattcode?",
+        "acceptedAnswer":{"@type":"Answer","text":"Aktuell nicht. Airhubs eigener Affiliate-Code, ADAMANDLINDS, bringt an der Kasse keinen Rabatt. Stattdessen wird der öffentliche Code ESIMOFFER5 empfohlen."}
+      },
+      {
+        "@type":"Question",
+        "name":"Wer gibt eine echte Telefonnummer, Airhub oder BNEsim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub. Die Tarife unterstützen eine lokale Nummer und SMS zusätzlich zu den Daten. BNEsim ist reine Daten-eSIM ohne Nummer oder SMS."}
+      },
+      {
+        "@type":"Question",
+        "name":"Wer hat einen echten Live-Chat-Support, Airhub oder BNEsim?",
+        "acceptedAnswer":{"@type":"Answer","text":"BNEsim wirbt mit 24/7-Live-Chat und E-Mail. Airhubs 24/7-Support läuft über E-Mail/Ticket statt über ein Live-Chat-Fenster."}
+      }
+    ]
+  }
+  </script>
+</div>
