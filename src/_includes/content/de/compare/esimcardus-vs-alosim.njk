@@ -1,0 +1,137 @@
+<!-- eSIM Card vs AloSIM Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set esimcardusPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set alosimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set esimcardusDeCode = deA.codes[providerA.primaryCode] if (deA and deA.codes and deA.codes[providerA.primaryCode]) else null %}
+  {% set alosimDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set esimcardusDiscount = (esimcardusDeCode.discount if esimcardusDeCode) or esimcardusPrimary.discount %}
+  {% set alosimDiscount = (alosimDeCode.discount if alosimDeCode) or alosimPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Wähle <strong>eSIM Card</strong>, wenn du deinen genauen Datenbedarf und deine Reisedauer kennst und einen Tarif willst, der passgenau zugeschnitten ist, bis auf den Tag. Wähle <strong>AloSIM</strong>, wenn dir weniger Auswahl lieber ist und eine kostenlose internationale Telefonnummer dazu willkommen ist. Beide verkaufen Tarife mit fester GB-Zahl und unbegrenzte Tarife, der eigentliche Unterschied liegt also nicht im Preismodell, sondern darin, wie fein die Größen gestaffelt sind und was zusätzlich zu den Daten dabei ist.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Dutzende abgestufte Tarife vs. eine einfache Auswahl</h2>
+  <p>
+    Allein die USA-Seite von eSIM Card listet rund 30 Kombinationen: sieben feste Datenstufen von 1 GB bis 100 GB, jede in mehreren Laufzeiten von 3 bis 90 Tagen erhältlich, dazu zwei unbegrenzte Stufen ("Unlimited" und "Unlimited Plus") mit 1 bis 30 Tagen Laufzeit. AloSIM hält es einfacher: eine Handvoll fester GB-Größen pro Land plus eine unbegrenzte Option, ohne separaten Kurzlaufzeit-Rabatt für weniger Zeit. Wer genau weiß, dass er nur 1 GB für einen 3-tägigen Zwischenstopp braucht, findet bei eSIM Card eine Stufe, die genau dafür gepreist ist. Wer nicht so viele Optionen vergleichen möchte, kommt mit AloSIMs kürzerer Liste schneller zurecht.
+  </p>
+  <p>
+    Diese Feinabstufung wirkt sich auf den Preis aus. Die 1-GB/3-Tage-Stufe von eSIM Card für die USA kostet 1,92 $ und ist damit günstiger als AloSIMs 1 GB für die USA zu 4,50 $, allerdings hat AloSIMs 1-GB-Tarif eine längere Mindestlaufzeit (7 Tage) fest eingebaut, statt sie als separate Kurzlaufzeit-Stufe zu verkaufen. Es sind also nicht ganz dieselben Produkte: eSIM Card bepreist ein kürzeres Zeitfenster, AloSIM bei dieser Größe ein längeres.
+  </p>
+
+  <h2>Preis-Schnappschuss (USA, vor jedem Code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Tarif</th>
+          <th>eSIM Card</th>
+          <th>AloSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1 GB</td><td>1,92 $ (3 Tage Laufzeit)</td><td>4,50 $ (7 Tage Mindestlaufzeit)</td></tr>
+        <tr><td>10 GB</td><td>12,86 $ (30 Tage Laufzeit)</td><td>Nicht als feste 10-GB-Stufe erhältlich</td></tr>
+        <tr><td>Unbegrenzt</td><td>12,05 $ (7 Tage Laufzeit)</td><td>Erhältlich, genauer Preis variiert je nach Laufzeit</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Die Preise von eSIM Card sind die eigenen, zum Zeitpunkt unserer Prüfung gelisteten US-Preise; die von AloSIM stammen aus dessen veröffentlichter Länderpreisliste. Beide ändern sich mit der Zeit und je nach Ziel, und die zusätzlichen Laufzeitstufen von eSIM Card bedeuten, dass hier nicht immer dasselbe Zeitfenster verglichen wird.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>eSIM Card:</strong> {{ providerA.primaryCode }}, {{ esimcardusDiscount | lower }}. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>AloSIM:</strong> {{ providerB.primaryCode }}, {{ alosimDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Keiner der beiden Anbieter betreibt ein Partnerprogramm, das einen eigenen Code von uns unterstützt, daher sind beide Codes hier die besten öffentlichen, die wir geprüft haben, keine exklusiven Codes von uns.</p>
+  </div>
+
+  <h2>Ist eSIM Card oder AloSIM die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm eSIM Card, wenn&hellip;</h3>
+      <ul>
+        <li>Du deinen genauen Datenbedarf und deine Reisedauer kennst und eine passgenau zugeschnittene Stufe willst, statt aufzurunden</li>
+        <li>Du dir vor dem Kauf sicher bist, denn Erstattungen bei eSIM Card sind auf enge Fälle wie einen echten Netzabdeckungsausfall beschränkt</li>
+        <li>Du die Option willst, eine virtuelle Telefonnummer oder eine sprachfähige eSIM aus derselben App heraus dazuzukaufen</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm AloSIM, wenn&hellip;</h3>
+      <ul>
+        <li>Dir eine kürzere, einfachere Tarifliste lieber ist</li>
+        <li>Du eine Telefonnummer kostenlos dabei haben willst, statt sie separat dazuzukaufen</li>
+        <li>Du dir die Möglichkeit offenhalten willst, es dir anders zu überlegen: AloSIM erstattet eSIMs, die keine Verbindung aufbauen oder sich als inkompatibel erweisen</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Die Telefonnummer ist nicht bei beiden kostenlos.</strong> AloSIM bündelt eine über Hushed bereitgestellte internationale Nummer kostenlos mit einem Datentarif. eSIM Card verkauft seine eigene virtuelle Nummer als separaten Zusatzkauf ab etwa 2,40 $, innerhalb derselben App wie die Daten-eSIMs, also ein Kauf und kein Bonus.
+  </p>
+  <p>
+    <strong>Die Erstattungsrichtlinien zeigen in entgegengesetzte Richtungen.</strong> Die eigene Richtlinie von eSIM Card beschreibt eSIMs als grundsätzlich nicht erstattungsfähig, sobald sie installiert oder genutzt wurden, mit Ausnahmen wie einem echten Netzabdeckungsausfall, der innerhalb von 30 Tagen gemeldet wird. AloSIM wirbt mit einer bedingungslosen Erstattung für eine eSIM, die sich nicht aktivieren lässt oder sich als inkompatibel mit dem Gerät erweist, wobei dieses Zeitfenster bei beiden Anbietern schließt, sobald die Daten tatsächlich genutzt wurden.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>eSIM Card vs AloSIM: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, eSIM Card oder AloSIM?</h3>
+      <p>Kommt auf Größe und Laufzeit an. Die Kurzlaufzeit-Stufen von eSIM Card (etwa die 3-Tage-1-GB-Stufe) sind günstiger als die gleiche Größe bei AloSIMs längerer Mindestlaufzeit. Für einen längeren Aufenthalt in einem Land sollten die konkrete Stufe und Laufzeit auf beiden Seiten direkt verglichen werden, da sich die Preise von eSIM Card je nach Laufzeitfenster anders verhalten als bei AloSIM.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bieten beide unbegrenzte Tarife an?</h3>
+      <p>Ja. eSIM Card verkauft zwei unbegrenzte Stufen ("Unlimited" und "Unlimited Plus") in mehreren Laufzeiten. Auch AloSIM verkauft unbegrenzte Tarife neben seinen Tarifen mit fester GB-Zahl.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welcher Anbieter bietet eine Telefonnummer?</h3>
+      <p>AloSIM bündelt eine kostenlose internationale Nummer über seine Hushed-Partnerschaft. eSIM Card verkauft seine eigene virtuelle Nummer als separaten Zusatzkauf ab etwa 2,40 $, statt sie kostenlos dazuzugeben.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Wer hat die bessere Erstattungsrichtlinie?</h3>
+      <p>AloSIM ist auf dem Papier großzügiger: eine bedingungslose Erstattung, wenn die eSIM keine Verbindung aufbaut oder mit dem Gerät inkompatibel ist. Die Richtlinie von eSIM Card behandelt eSIMs als weitgehend nicht erstattungsfähig, sobald sie installiert oder genutzt wurden, mit engen Ausnahmen wie einem echten Netzabdeckungsausfall, der innerhalb von 30 Tagen gemeldet wird.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, eSIM Card oder AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Das kommt auf Größe und Laufzeit an. Die Kurzlaufzeit-Stufen von eSIM Card, etwa die 3-Tage-1-GB-Stufe, sind günstiger als dieselbe Größe bei AloSIMs längerer Mindestlaufzeit. Für einen längeren Aufenthalt sollten die konkrete Stufe und Laufzeit auf beiden Seiten direkt verglichen werden."}
+      },
+      {
+        "@type":"Question",
+        "name":"Bieten eSIM Card und AloSIM beide unbegrenzte Tarife an?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ja. eSIM Card verkauft zwei unbegrenzte Stufen, Unlimited und Unlimited Plus, in mehreren Laufzeiten. Auch AloSIM verkauft unbegrenzte Tarife neben seinen Tarifen mit fester GB-Zahl."}
+      },
+      {
+        "@type":"Question",
+        "name":"Welcher Anbieter bietet eine Telefonnummer, eSIM Card oder AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"AloSIM bündelt eine kostenlose internationale Nummer über seine Hushed-Partnerschaft. eSIM Card verkauft seine eigene virtuelle Nummer als separaten Zusatzkauf ab etwa 2,40 Dollar, statt sie kostenlos dazuzugeben."}
+      },
+      {
+        "@type":"Question",
+        "name":"Wer hat die bessere Erstattungsrichtlinie, eSIM Card oder AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"AloSIM ist auf dem Papier großzügiger und bietet eine bedingungslose Erstattung, wenn die eSIM keine Verbindung aufbaut oder mit dem Gerät inkompatibel ist. eSIM Card behandelt eSIMs als weitgehend nicht erstattungsfähig, sobald sie installiert oder genutzt wurden, mit engen Ausnahmen wie einem echten Netzabdeckungsausfall, der innerhalb von 30 Tagen gemeldet wird."}
+      }
+    ]
+  }
+  </script>
+</div>

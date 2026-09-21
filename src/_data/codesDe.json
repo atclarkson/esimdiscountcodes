@@ -66,5 +66,30 @@
         "description": "Instabridge-Rabatt, 10% Rabatt. An der Kasse getestet und als ungültig zurückgewiesen, funktioniert nicht mehr."
       }
     }
+  },
+  "simlocal": {
+    "description": "Lokale eSIM-Tarife weltweit",
+    "codes": {
+      "ADAMANDLINDS": {
+        "discount": "10% RABATT AUF ALLE TARIFE",
+        "description": "Unser eigener SimLocal-Code, 10% Rabatt auf alle eSIM-Tarife, die beste verfügbare Rate"
+      },
+      "EMMANUEL": {
+        "discount": "5% RABATT AUF eSIM",
+        "description": "Öffentlicher SimLocal-Rabattcode, 5% Rabatt auf eSIM"
+      },
+      "LUKEPALMS": {
+        "discount": "5% RABATT AUF DIE ERSTE eSIM",
+        "description": "Öffentlicher SimLocal-Rabattcode, 5% Rabatt auf die erste eSIM"
+      },
+      "SAVANNAH": {
+        "discount": "ZUSÄTZLICHE 5% RABATT AUF DEINEN TARIF",
+        "description": "Öffentlicher SimLocal-Rabattcode, zusätzliche 5% Rabatt auf deinen Tarif"
+      },
+      "TWOROAMING": {
+        "discount": "5% RABATT AUF DEINE BESTELLUNG",
+        "description": "Öffentlicher SimLocal-Rabattcode, 5% Rabatt auf deine Bestellung"
+      }
+    }
   }
 }

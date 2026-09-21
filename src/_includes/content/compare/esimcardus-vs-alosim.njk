@@ -1,0 +1,131 @@
+<!-- eSIM Card vs AloSIM Comparison Content -->
+<div class="content-section">
+
+  {% set esimcardusPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set alosimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>eSIM Card</strong> if you know your exact data need and trip length and want a plan sized to match, down to the day. Pick <strong>AloSIM</strong> if you'd rather have fewer choices to make and a free international phone number thrown in. Both sell fixed-GB and unlimited plans, so the real difference isn't the pricing model, it's how granular the sizing is and what's bundled alongside the data.
+    </p>
+  </div>
+
+  <h2>The Core Difference: Dozens of Sized Tiers vs a Simple Lineup</h2>
+  <p>
+    eSIM Card's United States page alone lists roughly 30 combinations: seven fixed-data tiers from 1GB to 100GB, each sold at several validity windows from 3 to 90 days, plus two unlimited tiers ("Unlimited" and "Unlimited Plus") running 1 to 30 days. AloSIM keeps it simpler: a handful of fixed-GB sizes per country plus an unlimited option, with no separate short-validity discount for buying less time. If you know you only need 1GB for a 3-day layover, eSIM Card has a tier priced for exactly that. If you'd rather not compare that many options, AloSIM's shorter list is easier to scan.
+  </p>
+  <p>
+    That granularity shows up in price. eSIM Card's US 1GB/3-day tier runs $1.92, cheaper than AloSIM's US 1GB at $4.50, but AloSIM's 1GB has a longer minimum validity (7 days) built in rather than sold as a separate short-window tier. They're not quite the same product: eSIM Card is pricing a shorter window, AloSIM a longer one, at that size.
+  </p>
+
+  <h2>Price Snapshot (United States, before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>eSIM Card</th>
+          <th>AloSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1GB</td><td>$1.92 (3-day validity)</td><td>$4.50 (7-day minimum validity)</td></tr>
+        <tr><td>10GB</td><td>$12.86 (30-day validity)</td><td>Not sold as a fixed 10GB tier</td></tr>
+        <tr><td>Unlimited</td><td>$12.05 (7-day validity)</td><td>Sold, exact price varies by validity</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">eSIM Card prices are its own listed US rates at the time we checked; AloSIM's are from its published country pricing. Both change over time and by destination, and eSIM Card's extra validity tiers mean it isn't always comparing the same window of days.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>eSIM Card:</strong> {{ providerA.primaryCode }}, {{ esimcardusPrimary.discount | lower }}. <a href="/esimcardus/">Full code list &rarr;</a></li>
+      <li><strong>AloSIM:</strong> {{ providerB.primaryCode }}, {{ alosimPrimary.discount | lower }}. <a href="/alosim/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Neither provider runs the kind of affiliate program that supports our own code, so both codes here are the best public ones we've verified rather than exclusive codes of ours.</p>
+  </div>
+
+  <h2>Is eSIM Card or AloSIM the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with eSIM Card if&hellip;</h3>
+      <ul>
+        <li>You know your exact data need and trip length and want a tier sized to match instead of rounding up</li>
+        <li>You're confident about the plan before buying, since eSIM Card's refunds are limited to narrow cases like a genuine coverage failure</li>
+        <li>You want the option to add a virtual phone number or a voice-enabled eSIM from the same app</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with AloSIM if&hellip;</h3>
+      <ul>
+        <li>You'd rather pick from a shorter, simpler list of plans</li>
+        <li>You want a phone number bundled in for free instead of bought as a separate add-on</li>
+        <li>You want room to change your mind: AloSIM refunds eSIMs that fail to connect or turn out incompatible</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>The phone number isn't free on both.</strong> AloSIM bundles a Hushed-partnered international number at no extra cost with a data plan. eSIM Card sells its own virtual number as a separate add-on starting around $2.40, inside the same app as its data eSIMs, so it's a purchase rather than a perk.
+  </p>
+  <p>
+    <strong>Refund policies point in opposite directions.</strong> eSIM Card's own policy describes eSIMs as fundamentally non-refundable once installed or used, with exceptions limited to things like a genuine coverage failure claimed within 30 days. AloSIM advertises a no-questions refund for an eSIM that fails to activate or turns out incompatible with your device, though that window closes once you've made real use of the data on either provider.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>eSIM Card vs AloSIM FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, eSIM Card or AloSIM</h3>
+      <p>Depends on the size and length you need. eSIM Card's short-validity tiers (like its 3-day 1GB) are cheaper than AloSIM's equivalent size at AloSIM's longer minimum validity. For a longer single-country stay, compare the specific tier and length on each site, since eSIM Card's pricing shifts by validity window in a way AloSIM's doesn't.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Do both offer unlimited plans</h3>
+      <p>Yes. eSIM Card sells two unlimited tiers ("Unlimited" and "Unlimited Plus") at several validity lengths. AloSIM also sells unlimited plans alongside its fixed-GB options.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which one includes a phone number</h3>
+      <p>AloSIM bundles a free international number through its Hushed partnership. eSIM Card sells its own virtual number as a separate paid add-on starting around $2.40, rather than including one for free.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which has the better refund policy</h3>
+      <p>AloSIM's is more generous on paper: a no-questions refund if the eSIM fails to connect or is incompatible with your device. eSIM Card's policy treats eSIMs as largely non-refundable once installed or used, with narrow exceptions like a genuine coverage failure claimed within 30 days.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, eSIM Card or AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"It depends on the size and length needed. eSIM Card's short-validity tiers, such as its 3-day 1GB plan, are cheaper than AloSIM's equivalent size at AloSIM's longer minimum validity. For a longer stay, the specific tier and length should be compared on each site directly."}
+      },
+      {
+        "@type":"Question",
+        "name":"Do eSIM Card and AloSIM both offer unlimited plans?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. eSIM Card sells two unlimited tiers, Unlimited and Unlimited Plus, at several validity lengths. AloSIM also sells unlimited plans alongside its fixed-GB options."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which provider includes a phone number, eSIM Card or AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"AloSIM bundles a free international number through its Hushed partnership. eSIM Card sells its own virtual number as a separate paid add-on starting around $2.40 rather than including one for free."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which has the better refund policy, eSIM Card or AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"AloSIM's policy is more generous on paper, offering a no-questions refund if the eSIM fails to connect or is incompatible with the device. eSIM Card treats eSIMs as largely non-refundable once installed or used, with narrow exceptions such as a genuine coverage failure claimed within 30 days."}
+      }
+    ]
+  }
+  </script>
+</div>
