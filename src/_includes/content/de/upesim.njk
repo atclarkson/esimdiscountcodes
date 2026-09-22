@@ -1,0 +1,145 @@
+<!-- UPeSIM Content (German) -->
+<div class="content-section">
+
+  <!-- Quick Answer -->
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Bester UPeSIM Rabattcode &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Nutze <strong>{{ provider.primaryCode }}</strong> für <strong>10% Rabatt auf jeden UPeSIM-Tarif</strong>. Es ist ein öffentlicher Code, nicht unser eigener, aber der beste, den wir bestätigt haben. Zwei weitere 10%-Codes funktionieren ebenfalls, falls dieser mal nicht mehr angenommen wird.
+      <span class="callout-meta">Bestätigt aktiv am <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("d. MMM yyyy") }}</time>.</span>
+    </p>
+  </div>
+
+  <!-- Headline -->
+  <h2>Was UPeSIM wirklich unterscheidet</h2>
+  <p>
+    UPeSIM ist ein französischer MVNO mit Sitz in Paris, der seit 2018 läuft, und kein Reseller, der auf der eSIM-Plattform eines anderen Anbieters aufsetzt, wie es bei vielen neueren Reise-eSIM-Apps der Fall ist. Es deckt über 200 Länder und Gebiete durch lokale Netzbetreiber-Partnerschaften ab (die eigene Website nennt die kleinere Länderzahl aus älteren Reviews nicht mehr, falls du also anderswo noch "130+" liest, ist diese Zahl veraltet).
+  </p>
+  <p>
+    Die Tarife sind reine Prepaid-Pakete ohne Abo-Bindung: du kaufst einen festen Tage-Block, nutzt ihn, und er läuft ab, ohne sich automatisch zu verlängern oder dich erneut zu belasten. Das hat zwei Seiten. Es gibt keine überraschende wiederkehrende Abbuchung, wie sie bei einem Anbieter wie <a href="/ubigi/">Ubigi</a> passieren kann, wenn du das Kündigen vergisst, aber es bedeutet auch, dass UPeSIM deinen Tarif nicht heimlich verlängert, wenn du noch unterwegs bist und er ausläuft; du musst es selbst bemerken und nachladen.
+  </p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Aktive Codes</h3>
+    <ul>
+      <li><strong>REDDIT10</strong>: 10% Rabatt auf alle Tarife</li>
+      <li><strong>ESIMDB10</strong>: 10% Rabatt (Neukunden)</li>
+      <li><strong>T-DEALZ-10</strong>: 10% Rabatt</li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Alle drei gewähren aktuell denselben 10%-Satz. Falls einer an der Kasse nicht funktioniert, probiere den nächsten.</p>
+  </div>
+
+  <!-- Real operational note instead of generic setup tips -->
+  <h2>Dein Tarif beginnt erst zu laufen, wenn du gelandet bist</h2>
+  <p>
+    UPeSIMs Tarife starten erst, wenn sich dein Handy tatsächlich mit dem Netz am Zielort verbindet, nicht schon beim Installieren der eSIM oder beim Scannen des QR-Codes. Das heißt, du kannst die eSIM schon vor dem Flug in aller Ruhe zu Hause einrichten, ohne Stress am Flughafen, und sie bleibt inaktiv, bis du landest und dich in ein lokales Netz einbuchst. Der Haken ist die Kehrseite genau dieser Bequemlichkeit: UPeSIMs eigenes FAQ weist darauf hin, dass ein installiertes, aber nie aktiviertes eSIM-Profil nach 60 Tagen verfällt und in der App als abgelaufen angezeigt wird. Installiere also keine eSIM für eine Reise, die noch Monate entfernt ist, und erwarte, dass sie dann noch nutzbar ist.
+  </p>
+  <p>
+    Es ist reine Datennutzung. Anrufe und SMS laufen über deinen Heimatanbieter zu dessen Roaming-Tarifen, nicht über UPeSIM, daher sind WhatsApp oder Telegram über die Datenverbindung der praktische Weg, erreichbar zu bleiben, ohne eine zweite Rechnung zu riskieren.
+  </p>
+
+  <!-- How to -->
+  <h2>UPeSIM-Code in 3 Schritten einlösen</h2>
+  <div class="content-box">
+    <ol>
+      <li><strong>{{ provider.primaryCode }}</strong> kopieren</li>
+      <li>Bei UPeSIM einen Länder-, Regional- oder Welt-Tarif für dein Reiseziel auswählen</li>
+      <li>Den Code an der Kasse im Rabattfeld einfügen und den 10%-Preisnachlass vor der Zahlung bestätigen</li>
+    </ol>
+    <p class="content-note">Der Rabatt wird vor Abschluss der Zahlung angezeigt.</p>
+  </div>
+
+  <!-- Decision help -->
+  <h2>Ist UPeSIM die richtige Wahl für deine Reise</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Gut geeignet</h3>
+      <ul>
+        <li>Du willst die eSIM schon lange vor der Reise installieren, ohne dass dabei früh Daten verbraucht werden</li>
+        <li>Dir ist es lieber, wenn ein Tarif einfach abläuft, statt das Risiko einer unerwarteten automatischen Verlängerung einzugehen</li>
+        <li>Dir ist ein 24/7-Support mit schneller Antwort wichtiger als speziell Live-Chat</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Alternativen prüfen</h3>
+      <ul>
+        <li>Du willst eine garantierte Rückerstattung, falls die eSIM nicht funktioniert: sieh dir <a href="/alosim/">AloSIM</a> an, das eine solche Garantie bewirbt</li>
+        <li>Du reist erst in mehr als 60 Tagen und willst nicht daran denken müssen, die eSIM näher am Abflug zu installieren</li>
+        <li>Du willst einfach den niedrigsten Preis pro GB: schau zuerst bei <a href="/redteago/">RedteaGO</a> oder <a href="/airhub/">Airhub</a> vorbei</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>
+    Für eSIM-Gerätekompatibilität sieh dir unseren <a href="/compatible-devices/">eSIM-kompatible Geräte</a>-Guide an (auf Englisch).
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Code an der Kasse einlösen</h2>
+    <p><code>{{ provider.primaryCode }}</code> kopieren und ins Rabattfeld einfügen</p>
+    <p>10% Rabatt auf jeden UPeSIM-Tarif, über 200 Reiseziele.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>UPeSIM Rabattcode: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist aktuell der beste Code</h3>
+      <p><strong>REDDIT10</strong>: 10% Rabatt auf alle UPeSIM-Tarife. ESIMDB10 und T-DEALZ-10 geben ebenfalls 10%, falls dieser mal nicht funktioniert.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Startet der Tarif, wenn ich die eSIM installiere</h3>
+      <p>Nein. Er startet erst, wenn sich dein Handy tatsächlich mit dem Netz am Zielort verbindet, daher kostet dich die Installation vor dem Flug keine Gültigkeitstage.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Kann eine installierte eSIM ablaufen, bevor ich sie nutze</h3>
+      <p>Ja. UPeSIMs eigenes FAQ sagt, dass ein installiertes, aber nie aktiviertes Profil nach 60 Tagen verfällt und als abgelaufen angezeigt wird. Installiere die eSIM näher an deiner Reise, wenn sie mehr als zwei Monate entfernt ist.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Sind Anrufe oder SMS bei UPeSIM enthalten</h3>
+      <p>Nein, es ist reine Datennutzung. Anrufe und SMS laufen stattdessen über die Roaming-Tarife deines Heimatanbieters. WhatsApp oder Telegram über die Datenverbindung funktionieren als Ersatz.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bekomme ich eine Rückerstattung</h3>
+      <p>UPeSIM wirbt nicht öffentlich mit einer Rückerstattungsgarantie, wie es manche Wettbewerber tun, daher solltest du einen Kauf als endgültig betrachten, sobald er abgeschlossen ist.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist aktuell der beste UPeSIM Rabattcode?",
+        "acceptedAnswer":{"@type":"Answer","text":"REDDIT10 gibt 10% Rabatt auf alle UPeSIM-Tarife. ESIMDB10 und T-DEALZ-10 geben ebenfalls 10% Rabatt als Backup."}
+      },
+      {
+        "@type":"Question",
+        "name":"Startet ein UPeSIM-Tarif, wenn die eSIM installiert wird?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nein. Der Tarif startet erst, wenn das Handy sich mit dem Netz am Zielort verbindet, daher kostet die Installation vor dem Flug keine Gueltigkeitstage."}
+      },
+      {
+        "@type":"Question",
+        "name":"Kann eine installierte UPeSIM-eSIM ablaufen, bevor sie aktiviert wird?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ja. Laut UPeSIMs eigenem FAQ verfaellt ein installiertes, aber nie aktiviertes Profil nach 60 Tagen und wird in der App als abgelaufen angezeigt."}
+      },
+      {
+        "@type":"Question",
+        "name":"Sind Anrufe oder SMS bei UPeSIM enthalten?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nein, UPeSIM bietet nur Daten. Anrufe und SMS werden stattdessen als Roaming vom Heimatanbieter des Reisenden berechnet."}
+      },
+      {
+        "@type":"Question",
+        "name":"Bietet UPeSIM Rueckerstattungen an?",
+        "acceptedAnswer":{"@type":"Answer","text":"UPeSIM wirbt nicht oeffentlich mit einer Rueckerstattungsgarantie, daher sollte ein Kauf als endgueltig betrachtet werden."}
+      }
+    ]
+  }
+  </script>
+</div>

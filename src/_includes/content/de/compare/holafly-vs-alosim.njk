@@ -1,0 +1,137 @@
+<!-- Holafly vs AloSIM Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set holaflyPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set alosimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set holaflyDeCode = deA.codes[providerA.primaryCode] if (deA and deA.codes and deA.codes[providerA.primaryCode]) else null %}
+  {% set alosimDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set holaflyDiscount = (holaflyDeCode.discount if holaflyDeCode) or holaflyPrimary.discount %}
+  {% set alosimDiscount = (alosimDeCode.discount if alosimDeCode) or alosimPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Wähle <strong>Holafly</strong> für einen pauschalen Unbegrenzt-Preis ohne Gigabyte-Zählen. Wähle <strong>AloSIM</strong>, wenn du lieber pro GB zahlst und dazu eine kostenlose internationale Telefonnummer haben willst. AloSIM verkauft ebenfalls eigene Unbegrenzt-Tarife, es ist bei der Datenstruktur also nicht strikt das eine oder das andere; die Telefonnummer und die Code-Konditionen sind es, was die beiden tatsächlich unterscheidet.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Nur Unbegrenzt oder Beides, plus eine kostenlose Nummer</h2>
+  <p>
+    Holafly verkauft unbegrenzte Daten als das gesamte Produkt; es gibt überhaupt keine Option mit fester GB-Zahl. AloSIM verkauft sowohl Tarife mit fester GB-Zahl als auch eigene Unbegrenzt-Tarife, du kannst dir also das Preismodell aussuchen, ohne den Anbieter zu wechseln. Dort bietet AloSIM etwas, wofür Holafly kein Äquivalent hat: eine kostenlose internationale Telefonnummer durch eine Partnerschaft mit Hushed, separat in der AloSIM-App nach dem Kauf eines Tarifs eingerichtet. Wenn du eine Nummer brauchst, um einen Bestätigungscode zu empfangen oder weiterzugeben, ohne deine echte Nummer preiszugeben, ist das bei diesem Vergleich ein echtes AloSIM-exklusives Feature.
+  </p>
+  <p>
+    Holafly kontert mit etwas, das AloSIM nicht bietet: einer eSIM für China mit eingebautem VPN, sodass Google Maps, WhatsApp und Gmail funktionieren, ohne vorher eine separate VPN-App zu installieren. Wenn China das Reiseziel ist, spricht das unabhängig vom Preis für Holafly.
+  </p>
+
+  <h2>Preis-Schnappschuss (vor jedem Code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Ziel</th>
+          <th>Holafly</th>
+          <th>AloSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>USA</td><td>1,99 $/Tag (unbegrenzt)</td><td>4,50 $ (1 GB)</td></tr>
+        <tr><td>Europa (regional)</td><td>1,99 $/Tag (unbegrenzt)</td><td>5,00 $ (1 GB)</td></tr>
+        <tr><td>Weltweit</td><td>9,90 $/Tag (unbegrenzt)</td><td>Nicht als eigener "Global"-Tarif angeboten</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Holaflys Preis gilt pro Tag mit unbegrenzter Nutzung, AloSIMs Preis pro Gigabyte bei den festen Tarifen (AloSIMs eigene Unbegrenzt-Tarife sind hier nicht nach Zielort aufgeschlüsselt). Eine kurze Reise mit geringem Datenverbrauch ist bei AloSIMs festen Tarifen meist günstiger; eine längere oder datenintensive Reise spricht meist für Holaflys Pauschalpreis oder AloSIMs Unbegrenzt-Option.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Holafly:</strong> {{ providerA.primaryCode }}, {{ holaflyDiscount | lower }}. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>AloSIM:</strong> {{ providerB.primaryCode }}, {{ alosimDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Holaflys Code ist unser eigener; AloSIM betreibt kein Partnerprogramm, das einen solchen Code unterstützt, daher ist sein Code der beste öffentliche, den wir geprüft haben. Beide gelten auch für Folgekäufe, nicht nur für die erste Bestellung.</p>
+  </div>
+
+  <h2>Ist Holafly oder AloSIM die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm Holafly, wenn&hellip;</h3>
+      <ul>
+        <li>Du wirklich nicht weißt, wie viele Daten du brauchst</li>
+        <li>Viel Streaming, Videoanrufe oder Hotspot-Nutzung anstehen</li>
+        <li>China auf dem Reiseplan steht und du das integrierte VPN willst</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm AloSIM, wenn&hellip;</h3>
+      <ul>
+        <li>Du eine kostenlose internationale Nummer willst, ohne eine separate App zu brauchen</li>
+        <li>Du beim selben Checkout zwischen fester GB-Zahl und Unbegrenzt wählen willst</li>
+        <li>Du ein sparsamer Nutzer bist, der lieber pro GB zahlt als einen Pauschal-Unbegrenzt-Preis</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>AloSIMs Rückerstattungsgarantie hat einen zeitlichen Haken.</strong> Sie deckt eSIMs ab, die sich nicht verbinden lassen oder sich als inkompatibel mit dem Gerät herausstellen, nicht solche, die aktiviert und einfach kaum genutzt wurden. Kauf ruhig im Voraus (eine ungenutzte AloSIM-eSIM läuft nicht ab), aktiviere sie aber erst, wenn du sie wirklich nutzen willst. Holaflys Tarife haben kein vergleichbares Rückerstattungsfenster vor der Aktivierung; prüfe die Bedingungen des jeweiligen Tarifs vor dem Kauf.
+  </p>
+  <p>
+    <strong>Holaflys "Always On"-Stufe hält Abonnenten zwischen Reisen verbunden.</strong> Kündigst du ein monatliches Holafly-Plans-Abo, wirst du nicht auf null, sondern auf 1 GB pro Monat in 160+ Zielen zurückgestuft, genug, um irgendwo anzukommen und online zu gehen, ohne für einen vollen Tarif zu zahlen. AloSIM hat keine vergleichbare Standby-Stufe; seine Tarife sind einfach aktiv oder abgelaufen.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Holafly vs AloSIM: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, Holafly oder AloSIM?</h3>
+      <p>Kommt auf die Nutzung an. AloSIMs Tarife mit fester GB-Zahl sind meist günstiger bei geringem Datenverbrauch auf einer kurzen Reise. Holaflys pauschaler Unbegrenzt-Preis ist meist günstiger, oder zumindest entspannter, bei hohem Datenverbrauch.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bietet einer der beiden eine Telefonnummer?</h3>
+      <p>AloSIM schon, durch eine Partnerschaft mit Hushed: eine kostenlose internationale Nummer, die nach dem Kauf in der AloSIM-App eingerichtet wird. Holafly hat hierfür kein vergleichbares Feature.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welcher ist besser für eine Reise nach China?</h3>
+      <p>Holafly, für Reisende, die kein separates VPN einrichten wollen, da seine eSIM für China eins bereits eingebaut hat. AloSIM bietet hier nichts Vergleichbares.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Verkauft AloSIM auch Unbegrenzt-Tarife wie Holafly?</h3>
+      <p>Ja. AloSIM verkauft sowohl Tarife mit fester GB-Zahl als auch Unbegrenzt-Tarife, die Wahl zwischen beiden Preismodellen ist also bei AloSIM allein möglich, ohne dafür extra mit Holafly vergleichen zu müssen.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, Holafly oder AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Das kommt auf die Nutzung an. AloSIMs Tarife mit fester GB-Zahl sind meist günstiger bei geringem Datenverbrauch auf einer kurzen Reise. Holaflys pauschaler Unbegrenzt-Preis ist meist günstiger, oder zumindest entspannter, bei hohem Datenverbrauch."}
+      },
+      {
+        "@type":"Question",
+        "name":"Bieten Holafly oder AloSIM eine Telefonnummer?",
+        "acceptedAnswer":{"@type":"Answer","text":"AloSIM bietet über eine Partnerschaft mit Hushed eine kostenlose internationale Nummer, die nach dem Kauf in der AloSIM-App eingerichtet wird. Holafly hat kein vergleichbares Feature."}
+      },
+      {
+        "@type":"Question",
+        "name":"Welcher ist besser für eine Reise nach China, Holafly oder AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Holafly, da seine eSIM für China ein eingebautes VPN enthält, sodass Apps wie Google Maps und WhatsApp ohne zusätzliche Einrichtung funktionieren. AloSIM bietet hierfür kein vergleichbares Feature."}
+      },
+      {
+        "@type":"Question",
+        "name":"Verkauft AloSIM auch Unbegrenzt-Tarife wie Holafly?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ja. AloSIM verkauft sowohl Tarife mit fester GB-Zahl als auch Unbegrenzt-Tarife, die Wahl zwischen den Preismodellen ist also bei AloSIM allein möglich."}
+      }
+    ]
+  }
+  </script>
+</div>

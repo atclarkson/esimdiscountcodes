@@ -1,0 +1,130 @@
+<!-- BNEsim vs Nomad Comparison Content -->
+<div class="content-section">
+
+  {% set nomadBest = providerB.codes | findCode("NOMTRAVEL20") %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>BNEsim</strong> if you travel to the same handful of countries on an irregular schedule and want data that sits ready without a clock running while you wait. Pick <strong>Nomad</strong> if you're covering a lot of ground over months and want one big bundle that stretches across a year. Both are built around the same problem, data expiring before you actually use it, but they solve it in different ways.
+    </p>
+  </div>
+
+  <h2>The Core Difference: Per-Country No-Expiration vs. One Big Long-Validity Bundle</h2>
+  <p>
+    BNEsim sells per-country and per-region data packs, and most of them come in two versions: a cheaper one that expires 30 days after purchase, and a pricier version of the exact same pack that never expires. You can buy the no-expiration version for a country months before you land there and it just sits on your account, ready whenever you actually arrive. Nomad takes a different approach with its <strong>Global-EX</strong> line: instead of a per-country no-expiration option, it sells bigger bundles (10GB to 50GB) that stay valid for up to a year, with the per-GB price dropping as the bundle size goes up, down to roughly $2.58/GB on the largest tier versus around $5.15/GB on Nomad's standard Global plan.
+  </p>
+  <p>
+    In practice: BNEsim fits someone who knows which specific countries they'll be in but not exactly when. Nomad's Global-EX fits someone who wants one bundle that covers a lot of destinations over a long stretch of time without buying a new eSIM every time they cross a border.
+  </p>
+
+  <h2>Price Snapshot (1GB-equivalent, before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>BNEsim</th>
+          <th>Nomad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States</td><td>$1.48 (1GB)</td><td>$4.50 (1GB)</td></tr>
+        <tr><td>Europe regional</td><td>$0.95 (1GB)</td><td>$5.00 (1GB)</td></tr>
+        <tr><td>Asia regional</td><td>$2.82 (1GB)</td><td>$7.00 (1GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">BNEsim's numbers are already the discounted sale price shown on its own site, no code needed. Nomad's numbers are before a code; {{ providerB.primaryCode }} takes another {{ nomadBest.discount | lower }} off. Neither price reflects Nomad's Global-EX bundle rate, which is priced by the GB differently at larger sizes.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>BNEsim:</strong> No code to apply. Discounts of up to 70% show up automatically as a struck-through sale price on BNEsim's own pricing pages. <a href="/bnesim/">Full details &rarr;</a></li>
+      <li><strong>Nomad:</strong> {{ providerB.primaryCode }}, {{ nomadBest.discount | lower }}. <a href="/nomad/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">We checked BNEsim's homepage, pricing page, and coupon page directly and found no promo code advertised anywhere on the real site, so there's nothing to compare a code against there. Nomad's affiliate program doesn't give this site a code of our own either; {{ providerB.primaryCode }} is the best public code we've verified.</p>
+  </div>
+
+  <h2>Is BNEsim or Nomad the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with BNEsim if&hellip;</h3>
+      <ul>
+        <li>You visit the same country or two on an irregular schedule and don't want data expiring while you wait</li>
+        <li>You'd rather pay with crypto or keep a running account balance than check out separately every trip</li>
+        <li>You want to schedule a plan to start on a specific future date</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with Nomad if&hellip;</h3>
+      <ul>
+        <li>You're covering multiple countries over months, not returning to one spot repeatedly</li>
+        <li>You want a working discount code today, not a price that's already baked in</li>
+        <li>You want to hotspot a laptop or share data across devices without checking if it's allowed first</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>BNEsim's no-expiration option is per pack, not automatic.</strong> You have to choose the pricier no-expiration version of a given country pack at checkout; the standard version still expires in 30 days like most eSIMs on this site. Nomad's long-validity option works the other way: buy a Global-EX bundle and the up-to-a-year validity is just how that product line works, no extra tier to pick.
+  </p>
+  <p>
+    <strong>Nomad has a real discount code stack and BNEsim doesn't.</strong> BNEsim's pricing already reflects its sale price with nothing to type in at checkout, while Nomad's {{ providerB.primaryCode }} (or NOMCYBER20, same rate) takes another 20% off any plan including Global-EX. If a working code matters to you, that's a point in Nomad's favor regardless of which pricing structure otherwise fits your trip better.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>BNEsim vs Nomad FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, BNEsim or Nomad</h3>
+      <p>BNEsim, on a straight per-GB basis for most single-country pricing, and its discount is already baked into the price. Nomad can close some of that gap with its {{ providerB.primaryCode }} code, and its Global-EX bundles get cheaper per GB the bigger they are.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either one expire</h3>
+      <p>Both offer a way around the usual 30-day clock. BNEsim sells a pricier no-expiration version of most of its per-country packs. Nomad's Global-EX bundles stay valid for up to a year by default, no separate tier needed.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does BNEsim or Nomad have a working discount code</h3>
+      <p>Nomad does: {{ providerB.primaryCode }} or NOMCYBER20, both 20% off. BNEsim doesn't advertise a code anywhere on its real site; its discounts are already applied as a sale price.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which one is better for a digital nomad covering several countries</h3>
+      <p>Nomad's Global-EX line is built specifically for that: one bundle, up to a year of validity, covering 200+ destinations. BNEsim works better for someone returning to the same one or two countries repeatedly rather than moving through many.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, BNEsim or Nomad?",
+        "acceptedAnswer":{"@type":"Answer","text":"BNEsim is usually cheaper on a straight per-GB basis for single-country pricing, and its discount is already baked into the listed price. Nomad can close some of the gap with its discount code, and its Global-EX bundles get cheaper per GB the bigger they are."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does BNEsim or Nomad data expire?",
+        "acceptedAnswer":{"@type":"Answer","text":"Both offer a way around the usual 30-day clock. BNEsim sells a pricier no-expiration version of most of its per-country packs. Nomad's Global-EX bundles stay valid for up to a year by default, with no separate tier to select."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does BNEsim or Nomad have a working discount code?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad does, currently 20% off with its best public code. BNEsim doesn't advertise a promo code anywhere on its real site; its discounts already show as a marked-down sale price."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which is better for a digital nomad covering several countries?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad's Global-EX line is built specifically for that: one bundle with up to a year of validity covering 200+ destinations. BNEsim works better for someone returning repeatedly to the same one or two countries rather than moving through many."}
+      }
+    ]
+  }
+  </script>
+</div>

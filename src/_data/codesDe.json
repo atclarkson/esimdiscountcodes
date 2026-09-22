@@ -71,6 +71,23 @@
       }
     }
   },
+  "upesim": {
+    "description": "Erschwingliche eSIM-Konnektivität",
+    "codes": {
+      "REDDIT10": {
+        "discount": "10% RABATT AUF ALLE TARIFE",
+        "description": "UPeSIM Reddit-Rabatt, 10% Rabatt"
+      },
+      "ESIMDB10": {
+        "discount": "10% RABATT",
+        "description": "Neukunden-Aktionscode, 10% Rabatt"
+      },
+      "T-DEALZ-10": {
+        "discount": "10% RABATT",
+        "description": "Aktionscode, 10% Rabatt"
+      }
+    }
+  },
   "simlocal": {
     "description": "Lokale eSIM-Tarife weltweit",
     "codes": {

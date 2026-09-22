@@ -158,5 +158,13 @@
     "title": "eSIM Card vs AloSIM: Granular Sizing or a Free Phone Number? (2026 Comparison)",
     "description": "eSIM Card vs AloSIM compared: eSIM Card's dozens of per-day-priced tiers and paid phone number add-on vs AloSIM's simpler lineup with a free bundled Hushed number, discount codes, and which one fits your trip.",
     "lastUpdated": "2026-09-21"
+  },
+  {
+    "slug": "bnesim-vs-nomad",
+    "providerA": "bnesim",
+    "providerB": "nomad",
+    "title": "BNEsim vs Nomad: No-Expiration Packs or Year-Long Bundle? (2026 Comparison)",
+    "description": "BNEsim vs Nomad compared: BNEsim's per-country no-expiration data packs and automatic sale pricing vs Nomad's discount code and up-to-a-year Global-EX bundles, and which one fits long-term travel.",
+    "lastUpdated": "2026-09-22"
   }
 ]

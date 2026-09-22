@@ -1,0 +1,138 @@
+<!-- Comparativa Holafly vs Airalo (Español) -->
+<div class="content-section">
+
+  {% set holaflyPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set airaloPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set holaflyEsCode = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
+  {% set airaloEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set holaflyDiscount = (holaflyEsCode.discount if holaflyEsCode) or holaflyPrimary.discount %}
+  {% set airaloDiscount = (airaloEsCode.discount if airaloEsCode) or airaloPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>Holafly</strong> si prefieres pagar más por adelantado para no volver a pensar en un contador de datos. Elige <strong>Airalo</strong> si no te importa llevar la cuenta de los gigabytes a cambio de un precio más bajo. Ninguno es "mejor" en términos absolutos. Se basan en filosofías de precio opuestas, y cuál te ahorra dinero depende por completo de cuántos datos uses en realidad.
+    </p>
+  </div>
+
+  <h2>La diferencia principal: datos ilimitados o pago por GB</h2>
+  <p>
+    Holafly vende datos ilimitados como todo el producto: un precio por país o región, sin contar gigabytes. Airalo vende datos por gigabyte, así que un usuario que consume poco paga menos, pero tiene que vigilar el consumo. Para un viaje corto con mapas, mensajería y algo de navegación, Airalo suele salir más barato. Para alguien que consume muchos datos, o que prefiere pagar algo más antes que arriesgarse a quedarse sin datos a mitad de viaje, el precio ilimitado y plano de Holafly elimina esa preocupación por completo.
+  </p>
+  <p>
+    Airalo también vende <strong>eSIM regionales ilimitadas</strong> (Europa, Asia, Norteamérica, Latinoamérica, el Caribe, MENA y Australia), así que no es puramente pago por GB. Pero según la propia política de uso justo de Airalo, esos planes "ilimitados" van a velocidad completa los primeros 3 GB de cada día y después bajan a 1 Mbps hasta medianoche. Los planes ilimitados de Holafly también pueden aplicar una reducción de velocidad por uso justo tras un consumo muy alto en el mismo día, aunque no publica una cifra diaria concreta de GB como sí hace Airalo.
+  </p>
+
+  <h2>Precio de referencia (equivalente a 1 GB, antes de código)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Holafly</th>
+          <th>Airalo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Estados Unidos</td><td>1,99 $/día (ilimitado)</td><td>4,50 $ (1 GB)</td></tr>
+        <tr><td>Europa (regional)</td><td>1,99 $/día (ilimitado)</td><td>5,27 $ (1 GB)</td></tr>
+        <tr><td>Japón</td><td>1,99 $/día (ilimitado)</td><td>4,50 $ (1 GB)</td></tr>
+        <tr><td>Global</td><td>9,90 $/día (ilimitado)</td><td>9,49 $ (1 GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">El precio de Holafly es por día de uso ilimitado; el de Airalo es por gigabyte. No son cifras directamente comparables: un viaje de 3 días a EE. UU. con menos de 3 GB en total probablemente saldría más barato con Airalo; ese mismo viaje con streaming constante o navegación GPS continua probablemente saldría más barato con Holafly.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Holafly:</strong> {{ providerA.primaryCode }}, {{ holaflyDiscount | lower }}. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>Airalo:</strong> {{ providerB.primaryCode }}, {{ airaloDiscount | lower }}. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">El código de Holafly es el nuestro; Airalo no tiene el tipo de programa de afiliados que sostenga un código así, por lo que su código es el mejor público que hemos verificado. En la <a href="{{ providerBUrl }}">página de Airalo</a> explicamos por qué circulan tantos códigos distintos para este proveedor.</p>
+  </div>
+
+  <h2>¿Holafly o Airalo es la mejor opción?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige Holafly si&hellip;</h3>
+      <ul>
+        <li>Realmente no sabes cuántos datos vas a necesitar</li>
+        <li>Vas a hacer mucho streaming, videollamadas o usar el hotspot</li>
+        <li>China está en el itinerario y quieres la VPN incluida</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige Airalo si&hellip;</h3>
+      <ul>
+        <li>Consumes pocos datos: mapas, mensajería, algo de navegación</li>
+        <li>Es un viaje corto a un solo país donde puedes estimar bien los GB que necesitas</li>
+        <li>Prefieres pagar menos y vigilar un contador de datos</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>La eSIM de Holafly para China lleva una VPN integrada.</strong> Google Maps, WhatsApp y Gmail simplemente funcionan sin tener que instalar antes una app de VPN aparte. Airalo no tiene nada equivalente; necesitarías tu propia solución de VPN para China sea cual sea el plan de Airalo que compres.
+  </p>
+  <p>
+    <strong>Los muchos códigos de descuento distintos de Airalo no son señal de un programa de afiliados desordenado.</strong> Son en su mayoría códigos de referido de Airmoney de usuarios individuales, cada uno con 3 $ de descuento en la primera compra. El código ADAMANDLINDS de Holafly, en cambio, es un único código que cubre tanto sus eSIM individuales como sus planes mensuales, algo que no ocurre con la mayoría de los códigos de Holafly que circulan por ahí.
+  </p>
+  <p>
+    Para la configuración del dispositivo y lo básico sobre eSIM que aplica a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre Holafly vs Airalo</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, Holafly o Airalo?</h3>
+      <p>Depende del consumo. Airalo suele ser más barato para poco consumo de datos en un viaje corto. Holafly suele ser más barato, o al menos menos estresante, para un consumo alto de datos, ya que el precio no cambia sin importar cuánto se use.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos tiene datos verdaderamente ilimitados sin ningún límite?</h3>
+      <p>No del todo. Ambos aplican una reducción de velocidad por uso justo tras un consumo alto en el mismo día, en lugar de un corte total. Airalo publica una cifra exacta para sus planes regionales ilimitados (3 GB al día a velocidad completa, luego 1 Mbps); la política de Holafly es menos concreta pero funciona de forma similar en la práctica.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál es mejor para China?</h3>
+      <p>Holafly, si no quieres configurar una VPN aparte: su eSIM para China ya incluye una. Airalo no tiene nada equivalente, así que necesitarías tu propia solución de VPN sea cual sea el plan.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo usar uno para un viaje a varios países y el otro para uno solo?</h3>
+      <p>Sí, muchos viajeros hacen justo eso: los planes regionales ilimitados de Holafly para un tramo con mucho consumo de datos por varios países, y los planes locales más baratos por GB de Airalo para una parada corta en un solo país.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, Holafly o Airalo?",
+        "acceptedAnswer":{"@type":"Answer","text":"Depende del consumo. Airalo suele ser más barato para poco consumo de datos en un viaje corto. Holafly suele ser más barato, o al menos menos estresante, para un consumo alto de datos, ya que el precio no cambia sin importar cuánto se use."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Tienen Holafly o Airalo datos verdaderamente ilimitados sin ningún límite?",
+        "acceptedAnswer":{"@type":"Answer","text":"No del todo. Ambos aplican una reducción de velocidad por uso justo tras un consumo alto en el mismo día, en lugar de un corte total. Airalo publica una cifra exacta para sus planes regionales ilimitados, 3 GB al día a velocidad completa y después 1 Mbps; la política de Holafly es menos concreta pero funciona de forma similar en la práctica."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál es mejor para un viaje a China, Holafly o Airalo?",
+        "acceptedAnswer":{"@type":"Answer","text":"Holafly, para quienes no quieren configurar una VPN aparte, ya que su eSIM para China incluye una integrada. Airalo no tiene nada equivalente, por lo que hace falta una solución de VPN propia sea cual sea el plan."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Puedo usar Holafly y Airalo en el mismo viaje?",
+        "acceptedAnswer":{"@type":"Answer","text":"Sí. Un enfoque habitual es usar el plan regional ilimitado de Holafly para un tramo con mucho consumo de datos por varios países y los planes locales más baratos por GB de Airalo para una parada corta en un solo país."}
+      }
+    ]
+  }
+  </script>
+</div>

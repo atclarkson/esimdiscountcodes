@@ -1,0 +1,87 @@
+---
+layout: base.njk
+pagination:
+  data: esCompareEntries
+  size: 1
+  alias: cmp
+  addAllPagesToCollections: true
+permalink: "/es/compare/{{ cmp.slug }}/"
+eleventyComputed:
+  title: "{{ codes[cmp.providerA].name }} vs {{ codes[cmp.providerB].name }}: comparativa de eSIM {{ buildTime | fmtDate('yyyy') }}"
+  description: "{{ codes[cmp.providerA].name }} vs {{ codes[cmp.providerB].name }} comparados: precios, códigos de descuento y qué proveedor se adapta mejor a tu viaje."
+  canonical: "{{ page.url | url | absoluteUrl(site.url) }}"
+  ogImage: "/assets/og-image.jpg"
+  ogLocale: "es_ES"
+  modifiedISO: "{{ cmp.lastUpdated | fmtISO }}"
+  translationKey: "compare:{{ cmp.slug }}"
+  locale: "es"
+---
+
+{% set providerA = codes[cmp.providerA] %}
+{% set providerAKey = cmp.providerA %}
+{% set providerB = codes[cmp.providerB] %}
+{% set providerBKey = cmp.providerB %}
+{% set cmpSlug = cmp.slug %}
+{% set buildPretty = buildTime | fmtDate("d 'de' LLLL 'de' yyyy") %}
+{% set locale = "es" %}
+{# Link to each provider's Spanish page if it exists yet, else fall back to
+   its English page - same fallback pattern as the header/footer language
+   switcher, so this never points at a page that doesn't exist. #}
+{% set altA = collections.i18nMap | i18nAlternates("provider:" + providerAKey) %}
+{% set altB = collections.i18nMap | i18nAlternates("provider:" + providerBKey) %}
+{% set providerAUrl = altA.es or altA.en or ("/" + providerAKey + "/") %}
+{% set providerBUrl = altB.es or altB.en or ("/" + providerBKey + "/") %}
+
+<div class="provider-page compare-page" data-compare="{{ cmpSlug }}">
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="{{ 'es' | homeUrl }}">Inicio</a></li>
+      <li><span aria-current="page">{{ providerA.name }} vs {{ providerB.name }}</span></li>
+    </ol>
+  </nav>
+
+  <header class="vs-header">
+    <a class="vs-side" href="{{ providerAUrl }}">
+      {% if providerA.logo %}<img src="{{ providerA.logo }}" alt="Logo de {{ providerA.name }}" class="logo">{% endif %}
+      <span class="vs-name">{{ providerA.name }}</span>
+    </a>
+    <div class="vs-divider">VS</div>
+    <a class="vs-side" href="{{ providerBUrl }}">
+      {% if providerB.logo %}<img src="{{ providerB.logo }}" alt="Logo de {{ providerB.name }}" class="logo">{% endif %}
+      <span class="vs-name">{{ providerB.name }}</span>
+    </a>
+  </header>
+
+  <h1 class="vs-title">{{ providerA.name }} vs {{ providerB.name }}: ¿qué eSIM deberías comprar?</h1>
+  <p class="subtitle vs-subtitle">Actualizado el {{ buildPretty }}</p>
+
+  <section class="content-section">
+    {% include "content/es/compare/" + cmpSlug + ".njk" %}
+  </section>
+
+  <section class="compare-shop-links">
+    {% set outUrlA = providerA.affiliateUrl or providerA.url %}
+    {% set isAffiliateOutA = providerA.affiliateUrl and outUrlA == providerA.affiliateUrl %}
+    {% set outUrlB = providerB.affiliateUrl or providerB.url %}
+    {% set isAffiliateOutB = providerB.affiliateUrl and outUrlB == providerB.affiliateUrl %}
+    {% if outUrlA %}
+    <a class="get-deal-btn" href="{{ outUrlA }}" target="_blank" rel="{% if isAffiliateOutA %}sponsored noopener{% else %}noopener{% endif %}">
+      <i class="fas fa-arrow-up-right-from-square"></i>
+      <span>Ir a {{ providerA.name }}<span class="sr-only"> (abre la web de {{ providerA.name }} en una pestaña nueva)</span></span>
+    </a>
+    {% endif %}
+    {% if outUrlB %}
+    <a class="get-deal-btn" href="{{ outUrlB }}" target="_blank" rel="{% if isAffiliateOutB %}sponsored noopener{% else %}noopener{% endif %}">
+      <i class="fas fa-arrow-up-right-from-square"></i>
+      <span>Ir a {{ providerB.name }}<span class="sr-only"> (abre la web de {{ providerB.name }} en una pestaña nueva)</span></span>
+    </a>
+    {% endif %}
+  </section>
+
+  <section class="code-disclosure">
+    <p>
+      <i class="fas fa-circle-info"></i>
+      Algunos códigos y enlaces de esta página son códigos y enlaces de afiliado, incluido el nuestro (<strong>ADAMANDLINDS</strong>, cuando corresponde). Si usas uno, podemos recibir una comisión. Mostramos nuestro propio código de forma más destacada cuando lo tenemos, no porque sea automáticamente la mejor oferta. Consulta nuestra <a href="/about/">página sobre nosotros</a> (en inglés) para el detalle completo.
+    </p>
+  </section>
+</div>
