@@ -1,0 +1,131 @@
+<!-- Holafly vs Orange Comparison Content -->
+<div class="content-section">
+
+  {% set holaflyPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set orangePrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>Holafly</strong> if you just want data and a working discount code. Pick <strong>Orange</strong> if you specifically want calls and SMS bundled in from a household-name European carrier, and you're fine paying more for it. A lot of travelers land on Orange by default because it's a name they already recognize; it isn't the cheaper option once you compare it against a code-based independent eSIM.
+    </p>
+  </div>
+
+  <h2>The Core Difference: Independent Reseller or Carrier Bundle</h2>
+  <p>
+    Holafly sells unlimited data as the whole product, at a flat price per day for a single country or region, with a working 5%/10% discount code on top. Orange Travel is the international eSIM arm of Orange, one of Europe's largest telecom groups, and its plans bundle unlimited calls and SMS plus hotspot tethering in as standard, not something Holafly (or most data-only eSIMs on this site) sell at all. That bundle is the entire reason to consider Orange: if you only need data, you're paying for two features you won't use.
+  </p>
+  <p>
+    Price is not close. Orange sits in the "Expensive" bracket on this site; Holafly sits in "Cheap." Orange's own Europe pricing shows this directly: a 14-day/20GB plan runs &euro;24.99, all the way up to a 90-day/500GB plan at &euro;99.99 (40% off an &euro;169.99 list price, its biggest automatic markdown). Holafly's Europe unlimited eSIMs run $1.99/day before any code, and ADAMANDLINDS knocks another 5% off a single eSIM or 10% off a monthly plan.
+  </p>
+
+  <h2>Price Snapshot (Europe, before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Plan style</th>
+          <th>Holafly</th>
+          <th>Orange</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Short trip</td><td>$1.99/day (unlimited)</td><td>&euro;24.99 (14 days/20GB)</td></tr>
+        <tr><td>Month-long</td><td>$1.99/day (unlimited)</td><td>&euro;44.99 (30 days/50GB)</td></tr>
+        <tr><td>Longest tier</td><td>$1.99/day (unlimited)</td><td>&euro;99.99 (90 days/500GB, 40% off list)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Orange's numbers include unlimited calls and SMS plus hotspot; Holafly's is data-only. They aren't a clean apples-to-apples comparison, that's the point: you're paying Orange's premium specifically for the calls/SMS bundle, not for the data itself.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Holafly:</strong> {{ providerA.primaryCode }}, {{ holaflyPrimary.discount | lower }}. <a href="/holafly/">Full code list &rarr;</a></li>
+      <li><strong>Orange:</strong> No working code found. The code previously listed, AW0, doesn't appear on Orange's real checkout and is marked invalid. <a href="/orange/">Full details &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Orange's discount, where one exists, is baked into the sticker price on bigger plans automatically, not something you type in at checkout. See the <a href="/orange/">Orange page</a> for the exact tiers.</p>
+  </div>
+
+  <h2>Is Holafly or Orange the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Holafly if&hellip;</h3>
+      <ul>
+        <li>You just need data and want an actual working discount code today</li>
+        <li>You genuinely don't know how much data you'll use, or expect to use a lot of it</li>
+        <li>China is on the itinerary and you want the built-in VPN</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with Orange if&hellip;</h3>
+      <ul>
+        <li>You specifically want calls and SMS included standard, not as a separate purchase</li>
+        <li>You're booking a longer stay (up to 90 days) where the bigger automatic markdowns actually kick in</li>
+        <li>You'd rather buy from an established carrier brand than an independent reseller</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Orange's bundle is real, but it costs more than the sum of buying data-only and calling another way.</strong> If you'd normally just use WhatsApp or a video call app for voice while traveling, the calls/SMS bundle isn't worth much, and a data-only provider like Holafly (or a cheaper per-GB option like <a href="/airhub/">Airhub</a>) will usually beat Orange on price for the data alone.
+  </p>
+  <p>
+    <strong>Holafly's ADAMANDLINDS code is one of the only ones that covers both its product lines</strong>, a single destination eSIM and a monthly Plans subscription, at 5% and 10% off respectively. Orange has no comparable code-based discount at all right now: its markdowns are fixed into specific plan tiers, so there's nothing to apply or compare a code against.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Holafly vs Orange FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Holafly or Orange</h3>
+      <p>Holafly, for data. Orange sits in the "Expensive" price bracket on this site and its plans bundle in calls, SMS and hotspot as standard, which is most of what you're paying the premium for.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does Orange have a working discount code</h3>
+      <p>Not right now. The code previously listed for Orange, AW0, doesn't appear on its real checkout flow and is marked invalid. Its discounts instead come as an automatic markdown built into bigger plan tiers.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Do I need calls and SMS, or just data</h3>
+      <p>If you'll rely on WhatsApp, iMessage, or a similar app for calls and texting while traveling, as most travelers do, Orange's calls/SMS bundle isn't adding much value, and a data-only plan from Holafly will usually be the cheaper choice.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which is better for a long stay</h3>
+      <p>Orange's automatic markdowns get bigger on its longer, larger plans, up to 40% off list price on its 90-day/500GB tier, so a long stay is where its price gap with Holafly narrows the most, especially if you also want the calls/SMS bundle.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Holafly or Orange?",
+        "acceptedAnswer":{"@type":"Answer","text":"Holafly, for data. Orange sits in the Expensive price bracket on this site, and its plans bundle in calls, SMS and hotspot as standard, which is most of what the premium is paying for."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Orange have a working discount code?",
+        "acceptedAnswer":{"@type":"Answer","text":"Not currently. The code previously listed for Orange, AW0, doesn't appear on its real checkout flow and is marked invalid. Its discounts come instead as an automatic markdown built into bigger plan tiers."}
+      },
+      {
+        "@type":"Question",
+        "name":"Do I need Orange's bundled calls and SMS, or just data?",
+        "acceptedAnswer":{"@type":"Answer","text":"If WhatsApp, iMessage, or a similar app covers calls and texting while traveling, Orange's bundle adds little value, and a data-only plan from Holafly is usually the cheaper choice."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which is better for a long stay, Holafly or Orange?",
+        "acceptedAnswer":{"@type":"Answer","text":"Orange's automatic markdowns get bigger on its longer, larger plans, up to 40% off list price on its 90-day/500GB tier, so a long stay is where its price gap with Holafly narrows the most, especially for someone who also wants the calls/SMS bundle."}
+      }
+    ]
+  }
+  </script>
+</div>

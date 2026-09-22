@@ -35,6 +35,7 @@ eleventyComputed:
    blank. #}
 {% set deOverride = codesDe[providerKey] %}
 {% set providerDescription = (deOverride.description if deOverride) or provider.description %}
+{% set hasContent = providerKey | hasContentFile("de") %}
 
 
 <div class="provider-page" data-provider="{{ providerKey }}">
@@ -164,14 +165,16 @@ eleventyComputed:
     Hinweis: Einige Codes auf dieser Seite sind Affiliate-Codes und -Links, einschließlich unseres eigenen (<strong>ADAMANDLINDS</strong>, sofern verfügbar). Wenn du einen davon nutzt, erhalten wir möglicherweise eine Provision. Wir zeigen unseren eigenen Code weiter oben, weil er unser eigener ist, nicht weil er automatisch das beste Angebot ist. Jeder Code hier wurde von uns als weiterhin aktiv bestätigt, aber prüfe die Liste, bevor du kopierst: ein öffentlicher Code weiter unten spart dir möglicherweise mehr. Alle Details findest du auf unserer <a href="/about/">Über-uns-Seite</a> (auf Englisch).
   </p>
 </section>
+    {% endif %}
 
-        <!-- Content Section (German article, falls back silently if missing) -->
+    {% if hasContent %}
+        <!-- Content Section (real German article, shown even for a provider with no working code right now) -->
         <section class="content-section">
             {% include "content/de/" + providerKey + ".njk" %}
         </section>
 
-    {% else %}
-        <!-- No code yet, but still send the click somewhere -->
+    {% elif not (provider.codes and provider.codes.length > 0) %}
+        <!-- No code and no article yet, but still send the click somewhere -->
         {% set outUrl = provider.affiliateUrl or provider.url %}
         {% set isAffiliateOut = provider.affiliateUrl and outUrl == provider.affiliateUrl %}
         <section class="coming-soon-section">

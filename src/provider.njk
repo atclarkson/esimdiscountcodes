@@ -26,6 +26,7 @@ eleventyComputed:
 {% set buildPretty = buildTime | fmtDate("LLLL d, yyyy") %}
 {% set buildMonthYear = buildTime | fmtDate("LLLL yyyy") %}
 {% set lastModISO = (provider.codesLastUpdated or buildTime) | fmtISO %}
+{% set hasContent = providerKey | hasContentFile %}
 
 
 <div class="provider-page" data-provider="{{ providerKey }}">
@@ -152,14 +153,16 @@ eleventyComputed:
     Heads up: some codes on this page are affiliate codes and links, including our own (<strong>ADAMANDLINDS</strong> where it applies). If you use one, we may earn a commission. We put our own code higher up on the page because it's ours, not because it's automatically the best deal. Every code here is confirmed still active by us, but check the list before you copy: a public code below ours might save you more. See our <a href="/about/">about page</a> for the full breakdown.
   </p>
 </section>
+    {% endif %}
 
-        <!-- Content Section (check for markdown files) -->
+    {% if hasContent %}
+        <!-- Content Section (real article, shown even for a provider with no working code right now) -->
         <section class="content-section">
             {% include "content/" + providerKey + ".njk" %}
         </section>
-        
-    {% else %}
-        <!-- No code yet, but still send the click somewhere -->
+
+    {% elif not (provider.codes and provider.codes.length > 0) %}
+        <!-- No code and no article yet, but still send the click somewhere -->
         {% set outUrl = provider.affiliateUrl or provider.url %}
         {% set isAffiliateOut = provider.affiliateUrl and outUrl == provider.affiliateUrl %}
         <section class="coming-soon-section">

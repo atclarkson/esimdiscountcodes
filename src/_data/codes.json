@@ -107,7 +107,7 @@
     "url": "https://airalo.com",
     "affiliateUrl": "https://airalo.pxf.io/raoREy",
     "primaryCode": "NEWTOAIRALO15",
-    "rating": 4.0,
+    "rating": 4,
     "priceCategory": "Average",
     "brandColors": {
       "primary": "#B6496F",
@@ -402,7 +402,7 @@
     "url": "https://simlocal.com",
     "affiliateUrl": "https://www.awin1.com/cread.php?awinmid=68844&awinaffid=1117223&ued=https%3A%2F%2Fsimlocal.com%2F&platform=pl",
     "primaryCode": "ADAMANDLINDS",
-    "rating": 3.0,
+    "rating": 3,
     "priceCategory": "Cheap",
     "brandColors": {
       "primary": "#009C8F",
@@ -908,7 +908,7 @@
         "discount": "5% OFF (APP ONLY)",
         "description": "Advertised directly on Airhub's own homepage as an \"app exclusive\" 5% off at checkout when ordering through the Airhub mobile app. Not tested by us since it doesn't apply on the regular web checkout; ESIMOFFER5 remains the code we recommend for the browser.",
         "verified": true,
-        "lastTested": "2026-09-21",
+        "lastTested": "2026-09-22",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public",
@@ -1056,7 +1056,7 @@
     "url": "https://instabridge.com",
     "affiliateUrl": null,
     "primaryCode": "SP20",
-    "rating": 3.0,
+    "rating": 3,
     "priceCategory": "Cheap",
     "brandColors": {
       "primary": "#FF7261",
@@ -1160,9 +1160,9 @@
       {
         "code": "ESIMSIO10",
         "discount": "10% OFF ALL PLANS",
-        "description": "GlobaleSIM's own domain is unreachable as a working eSIM store (a parking page on some checks, a server error on others), so the site and this code can no longer be reached to confirm it works.",
+        "description": "GlobaleSIM's own domain is still unreachable as a working eSIM store (503 error on this check, a parking page on earlier checks), so the site and this code still cannot be confirmed working.",
         "verified": true,
-        "lastTested": "2026-09-21",
+        "lastTested": "2026-09-22",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public",
@@ -1321,7 +1321,7 @@
     "url": "https://travel.orange.com/en",
     "affiliateUrl": null,
     "primaryCode": "AW0",
-    "rating": 2.0,
+    "rating": 2,
     "priceCategory": "Expensive",
     "brandColors": {
       "primary": "#FF6600",
@@ -1429,7 +1429,7 @@
         "discount": "10% OFF ESIM",
         "description": "Public discount code advertised on eSIM Card's site",
         "verified": true,
-        "lastTested": "2026-09-21",
+        "lastTested": "2026-09-22",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public"

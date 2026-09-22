@@ -124,6 +124,17 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  // Whether a provider has a written article, independent of whether it
+  // currently has any codes to show - some providers (e.g. BNEsim) have a
+  // genuine de-templatized article even with zero working codes, and that
+  // article should still render instead of the "coming soon" stub.
+  eleventyConfig.addFilter("hasContentFile", function (key, lang) {
+    const fs = require("fs");
+    const path = require("path");
+    const dir = lang ? `content/${lang}` : "content";
+    return fs.existsSync(path.join(__dirname, "src/_includes", dir, `${key}.njk`));
+  });
+
   // i18n: any page that wants a translated-language counterpart sets
   // `translationKey` (e.g. "provider:holafly") and `locale` (e.g. "de")
   // in its own eleventyComputed. This collection groups every such page
