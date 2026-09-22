@@ -1,0 +1,23 @@
+{
+  "holafly": {
+    "description": "Planes de eSIM internacionales para viajeros",
+    "codes": {
+      "ADAMANDLINDS": {
+        "discount": "5% DE DESCUENTO EN eSIMs INDIVIDUALES / 10% EN PLANES MENSUALES",
+        "description": "5% de descuento en una eSIM individual, o 10% de descuento en un plan mensual de eSIM"
+      },
+      "STEPHANDPETE": {
+        "discount": "DESCUENTO ESPECIAL EN CUALQUIER PLAN eSIM",
+        "description": "Consigue un descuento especial en cualquier plan de eSIM"
+      },
+      "MIKEANDASHLEY": {
+        "discount": "5% DE DESCUENTO EN TU eSIM",
+        "description": "5% de descuento en tu eSIM. ¡Que disfrutes tu viaje!"
+      },
+      "MYESIMNOW5": {
+        "discount": "5% DE DESCUENTO EN TU PRÓXIMO PEDIDO",
+        "description": "Consigue un 5% de descuento en tu próximo pedido"
+      }
+    }
+  }
+}
