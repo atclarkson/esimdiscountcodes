@@ -23,5 +23,14 @@
         "description": "Consigue un 5% de descuento en tu próximo pedido"
       }
     }
+  },
+  "globalesim": {
+    "description": "Conectividad eSIM global",
+    "codes": {
+      "ESIMSIO10": {
+        "discount": "10% DE DESCUENTO EN TODOS LOS PLANES",
+        "description": "El propio dominio de Globalesim sigue sin funcionar como tienda de eSIM operativa (error 503 en esta comprobación, página de dominio aparcado en comprobaciones anteriores), así que ni la web ni este código se pueden confirmar como operativos."
+      }
+    }
   }
 }

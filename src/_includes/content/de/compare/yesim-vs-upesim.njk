@@ -1,0 +1,139 @@
+<!-- Yesim vs UPeSIM Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set yesimPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set upesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set yesimDeCode = deA.codes[providerA.primaryCode] if (deA and deA.codes and deA.codes[providerA.primaryCode]) else null %}
+  {% set upesimDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set yesimDiscount = (yesimDeCode.discount if yesimDeCode) or yesimPrimary.discount %}
+  {% set upesimDiscount = (upesimDeCode.discount if upesimDeCode) or upesimPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Wähle <strong>Yesim</strong>, wenn du häufig reist und willst, dass ungenutzte Daten auf deine nächste Reise übertragen werden, plus eine echte Rückerstattungsoption, falls sich Pläne ändern. Wähle <strong>UPeSIM</strong>, wenn du einfach einen unkomplizierten, günstigeren Prepaid-Tarif für eine einzelne Reise willst und kein Sicherheitsnetz brauchst. Beide sind reine Daten-Prepaid-eSIMs, aber Yesim verlangt mehr Geld für Flexibilität, die UPeSIM nicht bietet.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Übertragbares Guthaben oder festes Paket</h2>
+  <p>
+    Yesims "Pay & Fly"-Tarife funktionieren wie ein aufgeladenes Guthaben: Du bezahlst in Dollar statt eines festen GB-Betrags, ab 1,10 $/GB, und was übrig bleibt, wird in deinen nächsten Kauf übertragen statt zu verfallen. UPeSIM verkauft ein schlichtes festes Paket aus Tagen oder Gigabyte, das verfällt, sobald es aufgebraucht ist, ohne Übertrag und ohne automatische Verlängerung, sodass es bei beiden nie ein offenes Restguthaben zu verwalten gibt, nur auf unterschiedliche Weise.
+  </p>
+  <p>
+    Dieser Unterschied zählt am meisten, wenn du öfter als einmal im Jahr reist. Ein Yesim-Guthaben, das du auf einer Reise nicht vollständig aufbrauchst, steht dir bei der nächsten immer noch zur Verfügung. Ein UPeSIM-Tarif, den du nicht aufbrauchst, ist in dem Moment weg, in dem er verfällt, ohne Wenn und Aber.
+  </p>
+
+  <h2>Preis-Schnappschuss (vor jedem Code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Ziel</th>
+          <th>Yesim</th>
+          <th>UPeSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>USA</td><td>8,40 $ (1 Tag)</td><td>5,55 $ (1 GB)</td></tr>
+        <tr><td>Thailand</td><td>8,40 $ (1 Tag)</td><td>3,50 $ (1 GB)</td></tr>
+        <tr><td>Japan</td><td>19,80 $ (7 Tage)</td><td>5,80 $ (1 GB)</td></tr>
+        <tr><td>VAE</td><td>7,70 $ (1 Tag)</td><td>7 $ (1 GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Yesim rechnet pro Tag ab, UPeSIM pro Gigabyte, die Zahlen sind also nicht direkt eins zu eins vergleichbar. Auf dieser Seite liegt Yesim in der Preiskategorie "Teuer" und UPeSIM in "Durchschnittlich".</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Yesim:</strong> {{ providerA.primaryCode }}, {{ yesimDiscount | lower }}, nur beim ersten Kauf. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>UPeSIM:</strong> {{ providerB.primaryCode }}, {{ upesimDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Keiner der beiden Codes ist unser eigener. Beide Anbieter setzen auf öffentliche Codes statt auf ein Partnerprogramm, das uns hier einen eigenen Code ermöglichen würde.</p>
+  </div>
+
+  <h2>Ist Yesim oder UPeSIM die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm Yesim, wenn&hellip;</h3>
+      <ul>
+        <li>Du öfter als einmal im Jahr reist und willst, dass Restguthaben erhalten bleibt</li>
+        <li>Du lieber mehr zahlst für eine echte Rückerstattungsoption bei einem ungenutzten Tarif</li>
+        <li>Es dir nichts ausmacht, pro Tag statt pro Gigabyte zu zahlen</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm UPeSIM, wenn&hellip;</h3>
+      <ul>
+        <li>Es eine einmalige Reise ist und der Tarif sie nicht überdauern muss</li>
+        <li>Du den günstigeren Preis pro GB willst und auf eine Rückerstattung verzichten kannst</li>
+        <li>Du die eSIM lieber im Voraus einrichtest und dich danach bis zur Landung nicht mehr darum kümmerst</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Yesims Rückerstattungsregel ist ungewöhnlich großzügig.</strong> Sie wirbt mit einer 30-tägigen Geld-zurück-Garantie auf ungenutzte Tarife, nicht nur auf solche, die sich gar nicht erst aktivieren ließen. UPeSIM behandelt, wie die meisten Prepaid-eSIMs, einen gekauften Tarif nach dem Kauf als endgültig.
+  </p>
+  <p>
+    <strong>UPeSIMs Tarif beginnt erst zu laufen, wenn du gelandet bist.</strong> Er startet erst, wenn sich dein Handy tatsächlich mit dem Netz am Zielort verbindet, du kannst ihn also gut vor der Reise einrichten. Der Haken: Ein installiertes, aber nie aktiviertes UPeSIM-Profil verfällt nach 60 Tagen, richte es also nicht für eine Reise ein, die noch Monate entfernt ist. Yesims Guthabenmodell umgeht dieses Problem komplett, da ungenutzte Beträge einfach übertragen werden, statt nach einer festen Frist zu verfallen.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Yesim vs UPeSIM: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, Yesim oder UPeSIM?</h3>
+      <p>In den meisten Fällen UPeSIM. Yesim liegt bei uns in der Kategorie "Teuer" und UPeSIM in "Durchschnittlich", und UPeSIMs Preis pro GB schlägt meist Yesims Tagespreis bei einer einzelnen Reise.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Was ist besser für jemanden, der mehrmals im Jahr reist?</h3>
+      <p>Yesim, vor allem wegen des übertragbaren Guthabens. Geld, das auf einem Yesim-Pay-&-Fly-Tarif übrig bleibt, wird in den nächsten Kauf übernommen, während ein UPeSIM-Tarif verfällt und übrige Daten verloren gehen.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bekomme ich eine Rückerstattung, wenn ich den Tarif am Ende nicht nutze?</h3>
+      <p>Nur bei Yesim, das mit einer 30-tägigen Geld-zurück-Garantie auf ungenutzte Tarife wirbt. UPeSIM behandelt einen Kauf nach dem Kauf als endgültig.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Ist bei einem der beiden eine Telefonnummer oder Anrufe inklusive?</h3>
+      <p>Nein. Beide sind reine Datentarife. Telefonate laufen bei beiden Anbietern über Apps wie WhatsApp via Datenverbindung.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, Yesim oder UPeSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"UPeSIM ist in den meisten Fällen günstiger. Yesim liegt in der Preiskategorie Teuer und UPeSIM in der Kategorie Durchschnittlich, und UPeSIMs Preis pro GB schlägt meist Yesims Tagespreis bei einer einzelnen Reise."}
+      },
+      {
+        "@type":"Question",
+        "name":"Was ist besser für jemanden, der mehrmals im Jahr reist, Yesim oder UPeSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim, vor allem wegen des übertragbaren Guthabens. Geld, das auf einem Yesim-Pay-&-Fly-Tarif übrig bleibt, wird in den nächsten Kauf übernommen, während ein UPeSIM-Tarif verfällt und übrige Daten verloren gehen."}
+      },
+      {
+        "@type":"Question",
+        "name":"Bekomme ich eine Rückerstattung, wenn ich einen Yesim- oder UPeSIM-Tarif nicht nutze?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nur bei Yesim, das mit einer 30-tägigen Geld-zurück-Garantie auf ungenutzte Tarife wirbt. UPeSIM behandelt einen Kauf nach dem Kauf als endgültig."}
+      },
+      {
+        "@type":"Question",
+        "name":"Ist bei Yesim oder UPeSIM eine Telefonnummer oder sind Anrufe inklusive?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nein, beide sind reine Daten-eSIMs. Telefonate laufen bei beiden Anbietern über Apps wie WhatsApp via Datenverbindung."}
+      }
+    ]
+  }
+  </script>
+</div>

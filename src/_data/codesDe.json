@@ -112,5 +112,26 @@
         "description": "Öffentlicher SimLocal-Rabattcode, 5% Rabatt auf deine Bestellung"
       }
     }
+  },
+  "yesim": {
+    "description": "Globale eSIM-Lösungen",
+    "codes": {
+      "TEE20": {
+        "discount": "20% RABATT AUF DEINEN ERSTEN eSIM-KAUF",
+        "description": "20% Rabatt auf deinen ersten eSIM-Kauf"
+      },
+      "WELCOMETOYESIM": {
+        "discount": "15% RABATT AUF DEINEN ERSTEN eSIM-KAUF",
+        "description": "15% Rabatt auf deinen ersten eSIM-Kauf über das Yesim-Treueprogramm"
+      },
+      "TRAVELFREE": {
+        "discount": "3 € RABATT AUF DEINE BESTELLUNG",
+        "description": "3 € Rabatt auf deine Bestellung"
+      },
+      "BONUS3": {
+        "discount": "3 € BONUS",
+        "description": "3 € Bonus auf dein Konto"
+      }
+    }
   }
 }

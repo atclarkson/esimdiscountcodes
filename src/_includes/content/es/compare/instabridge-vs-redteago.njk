@@ -1,0 +1,138 @@
+<!-- Comparativa Instabridge vs RedteaGO (Español) -->
+<div class="content-section">
+
+  {% set instabridgePrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set redteagoPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set instabridgeEsCode = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
+  {% set redteagoEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set instabridgeDiscount = (instabridgeEsCode.discount if instabridgeEsCode) or instabridgePrimary.discount %}
+  {% set redteagoDiscount = (redteagoEsCode.discount if redteagoEsCode) or redteagoPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>Instabridge</strong> si te gusta la idea de buscar primero WiFi gratis y pagar datos solo como respaldo, y viajas a un lugar con buena densidad de puntos de acceso. Elige <strong>RedteaGO</strong> si simplemente quieres una eSIM de datos sencilla y barata sin nada de aplicaciones, o si necesitas específicamente un plan con llamadas y SMS. Ambos son proveedores económicos centrados en datos con códigos públicos en lugar de un programa de afiliados, pero resuelven el problema de "datos baratos en el extranjero" de formas totalmente distintas.
+    </p>
+  </div>
+
+  <h2>La diferencia clave: aplicación para compartir WiFi o tienda de eSIM directa</h2>
+  <p>
+    Instabridge no empezó como empresa de eSIM. Su producto principal es una base de datos con más de 20 millones de contraseñas de puntos de acceso WiFi aportadas por la comunidad, de uso gratuito y sin necesidad de comprar nada, y la eSIM es un complemento para cuando el WiFi gratis no está disponible o no es suficientemente rápido. RedteaGO no tiene nada equivalente: es una tienda de eSIM directa, y todo su argumento de venta son precios de entrada desde 0,52 $ para un plan de 37 países en Europa en su propia web, sin aplicación complementaria ni nivel gratuito.
+  </p>
+  <p>
+    Esa diferencia importa en cómo se usa cada uno en la práctica, no solo en el precio. Instabridge solo tiene sentido como híbrido: primero revisar el mapa de puntos de acceso gratuitos en tu destino, luego comprar datos para cubrir los huecos. RedteaGO es una compra de eSIM normal y única, sin necesidad de buscar redes.
+  </p>
+
+  <h2>Comparativa de precios (equivalente a 1GB, antes de aplicar cualquier código)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Instabridge</th>
+          <th>RedteaGO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Estados Unidos</td><td>2 $ (1GB)</td><td>2 $ (1GB)</td></tr>
+        <tr><td>Europa regional</td><td>2,80 $ (1GB)</td><td>2,79 $ (1GB)</td></tr>
+        <tr><td>Global</td><td>8 $ (1GB)</td><td>31 $ (6GB, &asymp;5,17 $/GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Los precios en Estados Unidos y Europa regional quedan prácticamente iguales, con diferencia de un centavo. La diferencia aparece en el paquete global: el 1GB global de Instabridge por 8 $ sale más barato por gigabyte que el paquete de 6GB de RedteaGO por 31 $, aunque el de RedteaGO es la compra única más grande si realmente necesitas 6GB.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Instabridge:</strong> {{ providerA.primaryCode }}, {{ instabridgeDiscount | lower }}. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>RedteaGO:</strong> {{ providerB.primaryCode }}, {{ redteagoDiscount | lower }}. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ninguno de los dos tiene un programa de afiliados que respalde un código propio como el nuestro, así que ambos son los mejores códigos públicos que hemos verificado. El 20% de Instabridge supera en porcentaje al 5% de RedteaGO, pero el código de Instabridge solo funciona en su tienda web, nunca escrito directamente en la aplicación del móvil; más detalles en la página de cada proveedor.</p>
+  </div>
+
+  <h2>¿Instabridge o RedteaGO es la mejor opción?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige Instabridge si&hellip;</h3>
+      <ul>
+        <li>Viajas a un lugar con buena densidad de puntos de acceso y quieres un respaldo de WiFi gratis, no un plan de datos principal</li>
+        <li>Quieres el mayor porcentaje de descuento (20% frente a 5%) y no te importa comprar por la tienda web en lugar de la aplicación</li>
+        <li>No necesitas llamadas ni SMS, solo datos</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige RedteaGO si&hellip;</h3>
+      <ul>
+        <li>Quieres una compra de eSIM sencilla, sin buscar redes ni depender de una base de datos de puntos de acceso</li>
+        <li>Necesitas un número de teléfono real para llamadas o SMS: RedteaGO vende planes etiquetados como "Calls/Texts Available" además de un paquete específico de llamadas y SMS; Instabridge no ofrece ninguna opción de llamadas o SMS</li>
+        <li>Viajas a una zona rural o poco transitada, donde una base de datos de puntos de acceso comunitaria probablemente tenga poca cobertura de todos modos</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>Solo RedteaGO puede darte un número de teléfono que funcione.</strong> Los planes de eSIM de Instabridge son exclusivamente de datos, sin llamadas ni SMS en ningún plan. RedteaGO tampoco es un proveedor de comunicación completo por defecto, la mayoría de sus planes también son solo de datos, pero sí vende planes concretos etiquetados como "Calls/Texts Available" y un paquete independiente de llamadas y SMS para quienes necesitan estar realmente localizables.
+  </p>
+  <p>
+    <strong>El código de descuento de Instabridge tiene una trampa que el de RedteaGO no tiene.</strong> SP20 y TRAVELESIMEXPERT solo funcionan al pagar en la tienda web de Instabridge (store.instabridge.com/mobile-data); el propio soporte de Instabridge confirmó que no hay forma de introducir un código promocional dentro de la aplicación del móvil. El código RTGF946FR de RedteaGO no tiene esa restricción. Ninguno de los dos proveedores tiene una política de reembolso claramente confirmada una vez activado un plan, así que no cuentes con recuperar el dinero de ninguno de los dos si cambias de opinión.
+  </p>
+  <p>
+    Para la configuración del dispositivo y lo básico sobre eSIM aplicable a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes: Instabridge vs RedteaGO</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, Instabridge o RedteaGO?</h3>
+      <p>En los precios de 1GB para Estados Unidos y Europa regional, ambos quedan prácticamente iguales. El plan global de 1GB de Instabridge sale más barato por gigabyte que el paquete global de 6GB de RedteaGO. En el código de descuento, el 20% de Instabridge también supera en porcentaje al 5% de RedteaGO.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo tener llamadas y SMS con alguno de los dos?</h3>
+      <p>Solo con RedteaGO, y únicamente en los planes etiquetados como "Calls/Texts Available", además de un paquete independiente de llamadas y SMS. Los planes de eSIM de Instabridge son exclusivamente de datos, sin opción de llamadas o SMS en ningún plan.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Por qué usaría Instabridge en lugar de una aplicación de eSIM normal?</h3>
+      <p>Porque no es una aplicación de eSIM cualquiera. Su producto principal es una base de datos gratuita con más de 20 millones de contraseñas de puntos de acceso WiFi aportadas por la comunidad, y la eSIM es un respaldo de pago para cuando el WiFi gratis no está disponible o no es suficientemente rápido. RedteaGO no tiene una capa de WiFi gratuito equivalente.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Los códigos de descuento funcionan igual en ambos?</h3>
+      <p>No. El código de RedteaGO funciona en cualquier parte de su proceso de pago normal. Los códigos de Instabridge solo funcionan en su tienda web, no dentro de la aplicación del móvil, algo que el propio soporte de Instabridge confirmó directamente.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, Instabridge o RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"En los precios de 1GB para Estados Unidos y Europa regional, ambos quedan prácticamente iguales. El plan global de 1GB de Instabridge sale más barato por gigabyte que el paquete global de 6GB de RedteaGO, y en el código de descuento el 20% de Instabridge también supera en porcentaje al 5% de RedteaGO."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se pueden tener llamadas y SMS con Instabridge o RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"Solo con RedteaGO, y únicamente en los planes etiquetados como 'Calls/Texts Available', además de un paquete independiente de llamadas y SMS. Los planes de eSIM de Instabridge son exclusivamente de datos, sin opción de llamadas o SMS en ningún plan."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Por qué usar Instabridge en lugar de una aplicación de eSIM normal?",
+        "acceptedAnswer":{"@type":"Answer","text":"Instabridge no es una aplicación de eSIM cualquiera. Su producto principal es una base de datos gratuita con más de 20 millones de contraseñas de puntos de acceso WiFi aportadas por la comunidad, y la eSIM es un respaldo de pago para cuando el WiFi gratis no está disponible o no es suficientemente rápido. RedteaGO no tiene una capa de WiFi gratuito equivalente."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Funcionan igual los códigos de descuento de Instabridge y RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. El código de RedteaGO funciona en cualquier parte de su proceso de pago normal. Los códigos de Instabridge solo funcionan en su tienda web, no dentro de la aplicación del móvil, algo que el propio soporte de Instabridge confirmó directamente."}
+      }
+    ]
+  }
+  </script>
+</div>

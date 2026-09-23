@@ -1,0 +1,138 @@
+<!-- Comparativa Holafly vs Ubigi (Español) -->
+<div class="content-section">
+
+  {% set holaflyPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set ubigiPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set holaflyEsCode = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
+  {% set ubigiEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set holaflyDiscount = (holaflyEsCode.discount if holaflyEsCode) or holaflyPrimary.discount %}
+  {% set ubigiDiscount = (ubigiEsCode.discount if ubigiEsCode) or ubigiPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>Holafly</strong> para un precio plano ilimitado y pensar lo mínimo posible en los datos. Elige <strong>Ubigi</strong> si quieres un plan recurrente estructurado para un destino que visitas a menudo, o si prefieres comprar a una operadora consolidada (la matriz de Ubigi, Transatel, forma parte del grupo NTT) antes que a un revendedor enfocado en viajes. Ambos usan el mismo código de descuento, <strong>ADAMANDLINDS</strong>, ya que es el nuestro en los dos.
+    </p>
+  </div>
+
+  <h2>La diferencia clave: tarifa plana ilimitada frente a plan recurrente por consumo</h2>
+  <p>
+    Holafly vende datos ilimitados como todo el producto: un precio fijo por día, por país o región, sin contar gigabytes. Ubigi vende datos por gigabyte como la mayoría de proveedores, pero ha construido una estructura de planes genuinamente distinta en torno a eso: junto a sus planes "puntuales" de GB fijos, vende suscripciones mensuales y anuales que se renuevan automáticamente con una nueva asignación cada periodo. Un plan mensual de Ubigi no se puede cancelar hasta haberlo mantenido un mínimo de tres meses; un plan anual se paga por adelantado y no se puede cancelar ni reembolsar en absoluto durante ese año. Holafly no tiene ningún producto recurrente equivalente; todos los planes de Holafly son una compra única por un número fijo de días.
+  </p>
+  <p>
+    Ubigi también es la opción más cara casi en todas partes: 4 $ por 1GB en Estados Unidos en Ubigi frente a aproximadamente 2 $ al día por datos genuinamente ilimitados en Holafly. Lo que Ubigi ofrece en lugar de un precio más bajo es una empresa distinta detrás: Ubigi es una marca de Transatel, un operador habilitador de MVNO que gestiona conectividad móvil desde principios de la década de 2000 y que ahora forma parte del grupo NTT, una de las mayores compañías de telecomunicaciones del mundo. La misma infraestructura de red que da servicio a una eSIM de viaje de Ubigi también da servicio a las SIM de coches conectados de marcas como BMW, Toyota, Jeep, Maserati, Fiat, Alfa Romeo, Mini, Jaguar y Land Rover.
+  </p>
+
+  <h2>Comparativa de precios (antes de aplicar cualquier código)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Holafly</th>
+          <th>Ubigi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Estados Unidos</td><td>1,99 $/día (ilimitado)</td><td>4 $ (1GB)</td></tr>
+        <tr><td>Francia</td><td>1,99 $/día (ilimitado)</td><td>4 $ (3GB)</td></tr>
+        <tr><td>Global</td><td>9,90 $/día (ilimitado)</td><td>25 $ (1GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">El precio de Holafly es por día de uso ilimitado; el de Ubigi es por gigabyte, sin acumulación de datos no usados en ningún tipo de plan. Resuelven problemas distintos: Holafly para no llevar la cuenta del consumo, Ubigi para un plan recurrente que configuras y prácticamente olvidas en un destino al que vuelves con frecuencia.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Holafly:</strong> {{ providerA.primaryCode }}, {{ holaflyDiscount | lower }}. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>Ubigi:</strong> {{ providerB.primaryCode }}, {{ ubigiDiscount | lower }}. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">ADAMANDLINDS es nuestro propio código en ambos proveedores, por eso aparece igual en las dos casillas. En Holafly cubre una eSIM individual (5% de descuento) o un plan mensual (10% de descuento); en Ubigi es un 10% plano en cualquier plan, puntual o recurrente.</p>
+  </div>
+
+  <h2>¿Holafly o Ubigi es la mejor opción?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige Holafly si&hellip;</h3>
+      <ul>
+        <li>Realmente no sabes cuántos datos vas a usar</li>
+        <li>Vas a hacer mucho streaming, videollamadas o a usar el móvil como punto de acceso</li>
+        <li>China está en el itinerario y quieres la VPN integrada</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige Ubigi si&hellip;</h3>
+      <ul>
+        <li>Visitas el mismo país lo bastante a menudo como para que un plan mensual recurrente compense frente a comprar una eSIM nueva cada viaje</li>
+        <li>Ya conduces un coche conectado de una de las marcas asociadas con Ubigi y te gusta la idea de un único proveedor</li>
+        <li>Prefieres comprar a un operador MVNO consolidado antes que a un revendedor enfocado en viajes, aunque cueste más</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>La eSIM de Holafly para China tiene una VPN integrada.</strong> Google Maps, WhatsApp y Gmail simplemente funcionan sin tener que instalar antes una aplicación de VPN aparte. Ubigi no menciona ninguna función equivalente en su web.
+  </p>
+  <p>
+    <strong>Un plan recurrente de Ubigi es un compromiso real, no un simple interruptor de comodidad.</strong> El nivel mensual te ata durante un mínimo de tres meses antes de poder cancelar, y el nivel anual no se puede cancelar ni reembolsar en absoluto durante su periodo de 12 meses. Holafly no tiene ese riesgo porque cada plan es una compra única con una fecha de fin fija.
+  </p>
+  <p>
+    Para la configuración del dispositivo y lo básico sobre eSIM aplicable a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes: Holafly vs Ubigi</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, Holafly o Ubigi?</h3>
+      <p>Holafly, en casi todos los casos. Su precio diario plano e ilimitado suele quedar por debajo del precio por GB de Ubigi, que ronda el doble de lo que cobran otros proveedores más baratos por GB en esta web.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos ofrece un plan de suscripción?</h3>
+      <p>Ubigi sí: mensual (solo se puede cancelar después de un mínimo de 3 meses) y anual (pagado por adelantado, no cancelable ni reembolsable durante el año). Holafly solo vende planes de compra única con un número fijo de días.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál es mejor para un viaje a China?</h3>
+      <p>Holafly, para quienes no quieran configurar una VPN aparte, ya que su eSIM para China incluye una integrada. Ubigi no menciona ninguna función equivalente en su web.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Holafly y Ubigi usan el mismo código de descuento?</h3>
+      <p>Sí, ambos usan ADAMANDLINDS porque es el código propio de la web en los dos proveedores. La cantidad de descuento y a qué se aplica varían según el proveedor: 5% o 10% en Holafly según el tipo de plan, un 10% plano en cualquier plan de Ubigi.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, Holafly o Ubigi?",
+        "acceptedAnswer":{"@type":"Answer","text":"Holafly, en casi todos los casos. Su precio diario plano e ilimitado suele quedar por debajo del precio por GB de Ubigi, que ronda el doble de lo que cobran otros proveedores más baratos por GB en esta web."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Holafly o Ubigi ofrecen un plan de suscripción?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ubigi sí, con niveles mensual (solo cancelable tras un mínimo de 3 meses) y anual (pagado por adelantado, no cancelable ni reembolsable durante el año). Holafly solo vende planes de compra única con un número fijo de días."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál es mejor para un viaje a China, Holafly o Ubigi?",
+        "acceptedAnswer":{"@type":"Answer","text":"Holafly, ya que su eSIM para China incluye una VPN integrada para que aplicaciones como Google Maps y WhatsApp funcionen sin configuración adicional. Ubigi no menciona ninguna función equivalente en su web."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Holafly y Ubigi usan el mismo código de descuento?",
+        "acceptedAnswer":{"@type":"Answer","text":"Sí, ADAMANDLINDS es el código propio de la web en ambos. En Holafly da un 5% de descuento en una eSIM individual o un 10% en un plan mensual; en Ubigi da un 10% plano en cualquier plan."}
+      }
+    ]
+  }
+  </script>
+</div>
