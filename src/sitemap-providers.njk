@@ -7,10 +7,16 @@ layout: null
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  {# One <url> entry per LOCALE VERSION of each provider page (English
+     plus any of German/Spanish that exist), each carrying the full
+     hreflang alternate set including itself - the pattern Google's
+     sitemap i18n docs recommend, rather than only listing the English
+     URL and hoping crawlers follow its hreflang links to the rest. #}
   {% for key, provider in codes %}
   {% set alternates = collections.i18nMap | i18nAlternates("provider:" + key) %}
+  {% for loc, locUrl in alternates %}
   <url>
-    <loc>{{ ("/" + key + "/") | url | absoluteUrl(site.url) }}</loc>
+    <loc>{{ locUrl | url | absoluteUrl(site.url) }}</loc>
     <lastmod>
       {% if provider.codesLastUpdated %}
         {{ provider.codesLastUpdated | date("YYYY-MM-DD") }}
@@ -24,6 +30,7 @@ layout: null
       {{ alternates | hreflangs(site.url) | safe }}
     {% endif %}
   </url>
+  {% endfor %}
   {% endfor %}
 
   {# Optional static groups #}

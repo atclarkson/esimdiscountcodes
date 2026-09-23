@@ -1,14 +1,14 @@
 [
   {
     "title": "About Us",
-    "url": "/about"
+    "url": "/about/"
   },
   {
     "title": "How We Find Codes",
-    "url": "/how-we-find-codes"
+    "url": "/how-we-find-codes/"
   },
   {
     "title": "Privacy Policy",
-    "url": "/privacy"
+    "url": "/privacy/"
   }
 ]

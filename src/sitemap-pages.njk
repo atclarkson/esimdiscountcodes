@@ -7,23 +7,20 @@ layout: null
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  {# Homepage #}
-  <url>
-    <loc>{{ "/" | url | absoluteUrl(site.url) }}</loc>
-    <lastmod>{{ page.inputPath | gitLastMod(buildTime) | date("YYYY-MM-DD") }}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  {# All non-draft site pages, excluding 404 and noindex #}
+  {# Every non-draft page EXCEPT provider and comparison pages, which get
+     their own dedicated, fully-multilingual entries in
+     sitemap-providers.xml / sitemap-comparisons.xml - listing them here
+     too would duplicate those URLs across two sitemaps. This still covers
+     the homepage in every locale (translationKey "page:home"), since that
+     one has no dedicated sitemap of its own. #}
   {% for p in collections.all %}
-    {% if p.url and p.url != "/404.html" and p.data.permalink != false and not p.data.draft and p.data.robots != "noindex" %}
+    {% if p.url and p.url != "/404.html" and p.data.permalink != false and not p.data.draft and p.data.robots != "noindex" and not (p.data.translationKey | startsWith("provider:")) and not (p.data.translationKey | startsWith("compare:")) %}
     {% set alternates = collections.i18nMap | i18nAlternates(p.data.translationKey) %}
     <url>
       <loc>{{ p.url | url | absoluteUrl(site.url) }}</loc>
       <lastmod>{{ p.inputPath | gitLastMod(p.date) | date("YYYY-MM-DD") }}</lastmod>
-      <changefreq>{{ p.data.changefreq or "monthly" }}</changefreq>
-      <priority>{{ p.data.priority or "0.6" }}</priority>
+      <changefreq>{{ p.data.changefreq or (p.url == "/" and "daily") or "monthly" }}</changefreq>
+      <priority>{{ p.data.priority or (p.url == "/" and "1.0") or "0.6" }}</priority>
       {% if alternates | length > 1 %}
         {{ alternates | hreflangs(site.url) | safe }}
       {% endif %}

@@ -7,10 +7,13 @@ layout: null
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  {# One <url> entry per locale version of each comparison page, same
+     rationale as sitemap-providers.njk. #}
   {% for item in comparisons %}
   {% set alternates = collections.i18nMap | i18nAlternates("compare:" + item.slug) %}
+  {% for loc, locUrl in alternates %}
   <url>
-    <loc>{{ ("/compare/" + item.slug + "/") | url | absoluteUrl(site.url) }}</loc>
+    <loc>{{ locUrl | url | absoluteUrl(site.url) }}</loc>
     <lastmod>{{ (item.lastUpdated or buildTime) | date("YYYY-MM-DD") }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -18,5 +21,6 @@ layout: null
       {{ alternates | hreflangs(site.url) | safe }}
     {% endif %}
   </url>
+  {% endfor %}
   {% endfor %}
 </urlset>

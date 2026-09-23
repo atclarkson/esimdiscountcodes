@@ -135,6 +135,14 @@ module.exports = function (eleventyConfig) {
     return fs.existsSync(path.join(__dirname, "src/_includes", dir, `${key}.njk`));
   });
 
+  // Used by sitemap-pages.njk to skip pages that already get their own
+  // dedicated, fully-multilingual entries in sitemap-providers.xml /
+  // sitemap-comparisons.xml, so a provider/comparison URL is never listed
+  // in two sitemaps at once.
+  eleventyConfig.addFilter("startsWith", function (str, prefix) {
+    return typeof str === "string" && str.indexOf(prefix) === 0;
+  });
+
   // i18n: any page that wants a translated-language counterpart sets
   // `translationKey` (e.g. "provider:holafly") and `locale` (e.g. "de")
   // in its own eleventyComputed. This collection groups every such page

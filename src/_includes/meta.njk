@@ -53,13 +53,16 @@
 <meta property="article:published_time" content="{{ buildTime | fmtISO }}">
 <meta property="article:modified_time" content="{{ modifiedISO }}">
 
-{# Site-level WebSite schema #}
+{# Site-level WebSite schema. This entity represents the whole (multilingual)
+   site, but the specific rendering on THIS page is in `locale`, so it still
+   gets inLanguage like every other schema block here. #}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "eSIM Discount Codes",
   "url": "{{ "/" | url | absoluteUrl(site.url) }}",
+  "inLanguage": "{{ locale or 'en' }}",
   "potentialAction": {
     "@type": "SearchAction",
     "target": "{{ "/search" | url | absoluteUrl(site.url) }}?q={search_term_string}",
@@ -75,8 +78,9 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "{{ providerName }} Discount Codes",
+    "name": "{{ providerName }} {{ 'meta.discountCodesSuffix' | t(locale) }}",
     "url": "{{ canonical }}",
+    "inLanguage": "{{ locale or 'en' }}",
     "datePublished": "{{ buildTime | fmtISO }}",
     "dateModified": "{{ modifiedISO }}"
   }
@@ -87,9 +91,10 @@
   {
     "@context":"https://schema.org",
     "@type":"BreadcrumbList",
+    "inLanguage":"{{ locale or 'en' }}",
     "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"{{ "/" | url | absoluteUrl(site.url) }}"},
-      {"@type":"ListItem","position":2,"name":"{{ providerName }} Discount Codes","item":"{{ canonical }}"}
+      {"@type":"ListItem","position":1,"name":"{{ 'meta.home' | t(locale) }}","item":"{{ (locale or 'en') | homeUrl | url | absoluteUrl(site.url) }}"},
+      {"@type":"ListItem","position":2,"name":"{{ providerName }} {{ 'meta.discountCodesSuffix' | t(locale) }}","item":"{{ canonical }}"}
     ]
   }
   </script>
