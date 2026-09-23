@@ -112,5 +112,30 @@
         "description": "Öffentlicher SimLocal-Rabattcode, 5% Rabatt auf deine Bestellung"
       }
     }
+  },
+  "ubigi": {
+    "description": "Flexible Datentarife weltweit",
+    "codes": {
+      "ADAMANDLINDS": {
+        "discount": "10% RABATT AUF ALLE TARIFE",
+        "description": "Bester Ubigi-Rabattcode, 10% Rabatt"
+      },
+      "ENCHANTEE": {
+        "discount": "10% RABATT AUF DAS GESAMTE SORTIMENT",
+        "description": "10% Rabatt auf das gesamte Sortiment bei Ubigi eSIM"
+      },
+      "DANNYANDDIGGY": {
+        "discount": "10% RABATT AUF DAS GESAMTE SORTIMENT",
+        "description": "10% Rabatt auf das gesamte Sortiment bei Ubigi eSIM"
+      },
+      "ESIMSR10": {
+        "discount": "10% RABATT NUR AUF DEN ERSTKAUF",
+        "description": "10% Rabatt, gilt nur für den ersten Kauf"
+      },
+      "E3MQXBBY": {
+        "discount": "CODE ABGELAUFEN",
+        "description": "Wird an der Ubigi-Kasse nicht mehr akzeptiert, direkt getestet und als abgelaufen bestätigt."
+      }
+    }
   }
 }

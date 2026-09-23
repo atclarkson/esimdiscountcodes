@@ -1,0 +1,145 @@
+<!-- Airhub vs Orange Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set airhubBest = providerA.codes | bestValidCode %}
+  {% set orangePrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set airhubDeCode = deA.codes[airhubBest.code] if (deA and deA.codes and deA.codes[airhubBest.code]) else null %}
+  {% set airhubDiscount = (airhubDeCode.discount if airhubDeCode) or airhubBest.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Wähle <strong>Airhub</strong>, wenn du einfach günstige Daten willst und SMS statt echter Anrufe ausreicht. Wähle <strong>Orange</strong>, wenn du unterwegs wirklich telefonieren willst, nicht nur Daten und SMS, und bereit bist, dafür deutlich mehr für einen bekannten europäischen Mobilfunkanbieter zu zahlen. Die beiden konkurrieren eigentlich gar nicht um dieselbe Zielgruppe: Airhub ist eine günstige, datenorientierte App, Orange ein komplettes Mobilfunk-Paket.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Günstige Daten-App oder komplettes Mobilfunk-Paket</h2>
+  <p>
+    Airhub verkauft Daten in Mehr-Gigabyte-Blöcken zu einigen der niedrigsten Pro-GB-Preisen auf dieser Seite und bündelt bei den meisten Tarifen SMS sowie eine lokale Telefonnummer mit ein, praktisch für den Empfang eines Bestätigungscodes oder um eine Nummer weiterzugeben, die nicht deine eigene ist. Was fehlt, sind echte Anrufe: Kein Airhub-Tarif erlaubt Telefonate über das Mobilfunknetz. Orange Travel, der internationale eSIM-Zweig von Orange, einem der größten europäischen Mobilfunkkonzerne, geht den umgekehrten Weg: Unbegrenzte Anrufe und SMS sowie Hotspot-Tethering sind bei jedem Tarif standardmäßig dabei, genau die Lücke, die Airhub offen lässt.
+  </p>
+  <p>
+    Für genau diese Lücke zahlst du. Airhub fällt auf dieser Seite in die Kategorie "Günstig", Orange in "Teuer". Ein funktionierender Rabattcode verringert den Abstand auf Airhub-Seite etwas, aber bei Weitem nicht genug, um beide preislich vergleichbar zu machen.
+  </p>
+
+  <h2>Preis-Schnappschuss (vor jedem Code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Ziel</th>
+          <th>Airhub</th>
+          <th>Orange (Europa-Tarife)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Thailand</td><td>0,85 $ (1 GB)</td><td>&mdash;</td></tr>
+        <tr><td>Japan</td><td>1,55 $ (1 GB)</td><td>&mdash;</td></tr>
+        <tr><td>USA</td><td>2,82 $ (3 GB)</td><td>23,99 $ (5 GB)</td></tr>
+        <tr><td>Europa regional</td><td>4,50 $ (4 GB)</td><td>24,99 &euro; (14 Tage/20 GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Orange enthält unbegrenzte Anrufe und SMS sowie Hotspot; Airhub ist Daten plus SMS und bei den meisten Tarifen eine lokale Nummer, aber nie Anrufe. Das ist kein sauberer 1:1-Vergleich, das ist der Punkt: Bei Orange zahlst du den Aufpreis für Telefonie, die Airhub zu keinem Preis anbietet.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airhub:</strong> {{ airhubBest.code }}, {{ airhubDiscount | lower }}, an der Kasse bestätigt. Unser eigener Code, {{ providerA.primaryCode }}, funktioniert aktuell nicht und wurde Airhub gemeldet. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a> (auf Englisch)</li>
+      <li><strong>Orange:</strong> Kein funktionierender Code gefunden. Der zuvor gelistete Code, AW0, taucht an Oranges echter Kasse nicht auf und ist als ungültig markiert. <a href="{{ providerBUrl }}">Alle Details &rarr;</a> (auf Englisch)</li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Wo Orange überhaupt einen Rabatt gewährt, steckt er automatisch im aufgedruckten Preis größerer Tarife, nicht in einem Code, den du eingibst.</p>
+  </div>
+
+  <h2>Ist Airhub oder Orange die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm Airhub, wenn&hellip;</h3>
+      <ul>
+        <li>Du einfach nur Daten brauchst und den niedrigsten Pro-GB-Preis auf dieser Seite willst, dazu einen Code, der wirklich funktioniert</li>
+        <li>SMS und eine lokale Nummer reichen dir; für Anrufe nutzt du WhatsApp oder eine ähnliche App</li>
+        <li>Du an ein Ziel reist, wo Airhub besonders günstig ist, etwa Thailand oder Japan</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm Orange, wenn&hellip;</h3>
+      <ul>
+        <li>Du echte Telefonate über das Mobilfunknetz brauchst, nicht nur Daten und SMS</li>
+        <li>Du einen längeren Europa-Aufenthalt buchst (bis zu 90 Tage), bei dem Oranges automatische Nachlässe größer werden</li>
+        <li>Du lieber bei einer etablierten Mobilfunkmarke kaufst als bei einer kleineren unabhängigen App</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Airhubs SMS und lokale Nummer sind kein Ersatz für Oranges Anrufe.</strong> Wenn eine Reise wirklich telefonische Erreichbarkeit erfordert, für die Arbeit, ein Hotel oder einen Kontakt vor Ort, kann Airhub das bei keinem Tarif leisten; dafür bräuchtest du Orange, oder einen Anbieter wie SimLocal, dessen UK-Tarife eine echte Nummer mit Anrufen bündeln, bestätigt durch direkten Kauf.
+  </p>
+  <p>
+    <strong>Orange hat aktuell überhaupt keinen codebasierten Rabatt.</strong> Die Nachlässe sind fest in bestimmte Tarifstufen eingebaut statt etwas, das du an der Kasse eingibst, es gibt also nichts, womit man einen Gutschein vergleichen könnte. Airhubs ESIMOFFER5 ist mit 5% klein, aber echt und funktioniert, was ihn aktuell nützlicher macht als Oranges nicht existierenden Code, trotz des kleineren Prozentsatzes.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Airhub vs Orange: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, Airhub oder Orange?</h3>
+      <p>Airhub, mit deutlichem Abstand. Airhub fällt auf dieser Seite in die Kategorie "Günstig" mit einigen der niedrigsten Pro-GB-Preisen; Orange fällt in "Teuer", weil seine Tarife standardmäßig Anrufe, SMS und Hotspot bündeln.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Kann man mit Airhub telefonieren?</h3>
+      <p>Nein. Airhub-Tarife enthalten Daten und bei den meisten Tarifen SMS sowie eine lokale Nummer, aber bei keinem Tarif Anrufe. Orange enthält bei jedem Tarif standardmäßig unbegrenzte Anrufe.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Hat Orange einen funktionierenden Rabattcode?</h3>
+      <p>Aktuell nicht. Der zuvor gelistete Code, AW0, taucht an Oranges echter Kasse nicht auf und ist als ungültig markiert. Die Ersparnis kommt stattdessen als automatischer Nachlass, der in größere Tarifstufen eingebaut ist.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Was ist aktuell der beste Airhub-Code?</h3>
+      <p>ESIMOFFER5, für 5% Rabatt, direkt an Airhubs Kasse bestätigt. Airhubs eigener Code, ADAMANDLINDS, wendet aktuell keinen Rabatt an und wurde Airhub gemeldet.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welcher ist besser für eine längere Europa-Reise?</h3>
+      <p>Das hängt davon ab, ob du Anrufe brauchst. Oranges automatische Nachlässe werden bei größeren, längeren Tarifen größer, bis zu 40% unter Listenpreis bei der größten Stufe, und es ist der Einzige von beiden mit echter Telefonie. Wer nur Daten braucht, fährt mit Airhub selbst auf einer langen Reise günstiger.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist guenstiger, Airhub oder Orange?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub, mit deutlichem Abstand. Airhub faellt auf dieser Seite in die Kategorie Guenstig mit einigen der niedrigsten Pro-GB-Preisen, waehrend Orange in Teuer faellt, weil seine Tarife standardmaessig Anrufe, SMS und Hotspot buendeln."}
+      },
+      {
+        "@type":"Question",
+        "name":"Kann man mit Airhub telefonieren?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nein. Airhub-Tarife enthalten Daten und bei den meisten Tarifen SMS sowie eine lokale Nummer, aber bei keinem Tarif Anrufe. Orange enthaelt bei jedem Tarif standardmaessig unbegrenzte Anrufe."}
+      },
+      {
+        "@type":"Question",
+        "name":"Hat Orange einen funktionierenden Rabattcode?",
+        "acceptedAnswer":{"@type":"Answer","text":"Aktuell nicht. Der zuvor gelistete Code, AW0, taucht an Oranges echter Kasse nicht auf und ist als ungueltig markiert. Die Ersparnis kommt stattdessen als automatischer Nachlass, der in groessere Tarifstufen eingebaut ist."}
+      },
+      {
+        "@type":"Question",
+        "name":"Was ist aktuell der beste Airhub-Rabattcode?",
+        "acceptedAnswer":{"@type":"Answer","text":"ESIMOFFER5 gibt 5% Rabatt und ist direkt an Airhubs Kasse bestaetigt. Airhubs eigener Code, ADAMANDLINDS, wendet aktuell keinen Rabatt an und wurde Airhub gemeldet."}
+      },
+      {
+        "@type":"Question",
+        "name":"Welcher ist besser fuer eine laengere Europa-Reise, Airhub oder Orange?",
+        "acceptedAnswer":{"@type":"Answer","text":"Das haengt davon ab, ob Anrufe gebraucht werden. Oranges automatische Nachlaesse werden bei groesseren, laengeren Tarifen groesser, bis zu 40% unter Listenpreis bei der groessten Stufe, und es ist der einzige von beiden mit echter Telefonie. Fuer reine Daten ist Airhub selbst auf einer langen Reise guenstiger."}
+      }
+    ]
+  }
+  </script>
+</div>

@@ -166,5 +166,13 @@
     "title": "BNEsim vs Nomad: No-Expiration Packs or Year-Long Bundle? (2026 Comparison)",
     "description": "BNEsim vs Nomad compared: BNEsim's per-country no-expiration data packs and automatic sale pricing vs Nomad's discount code and up-to-a-year Global-EX bundles, and which one fits long-term travel.",
     "lastUpdated": "2026-09-22"
+  },
+  {
+    "slug": "airhub-vs-orange",
+    "providerA": "airhub",
+    "providerB": "orange",
+    "title": "Airhub vs Orange: Cheapest Data or Calls Bundled In? (2026 Comparison)",
+    "description": "Airhub vs Orange compared: Airhub's cheap per-GB data plus SMS and a local number vs Orange's carrier-backed calls/SMS/hotspot bundle and automatic bulk discounts, discount codes, and which one fits your trip.",
+    "lastUpdated": "2026-09-23"
   }
 ]

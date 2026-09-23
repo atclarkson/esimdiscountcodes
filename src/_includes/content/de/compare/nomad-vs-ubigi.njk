@@ -1,0 +1,137 @@
+<!-- Nomad vs Ubigi Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set nomadBest = providerA.codes | findCode("NOMTRAVEL20") %}
+  {% set ubigiPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set nomadDeCode = deA.codes["NOMTRAVEL20"] if (deA and deA.codes and deA.codes["NOMTRAVEL20"]) else null %}
+  {% set ubigiDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set nomadDiscount = (nomadDeCode.discount if nomadDeCode) or nomadBest.discount %}
+  {% set ubigiDiscount = (ubigiDeCode.discount if ubigiDeCode) or ubigiPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Nomad und Ubigi richten sich beide an Reisende, die mehr als nur die Daten für eine kurze Reise brauchen, kommen aber auf entgegengesetzten Wegen dorthin. <strong>Nomad</strong> verkauft einmalig ein großes Prepaid-Paket (seine Global-EX-Reihe, bis zu einem Jahr gültig), danach bist du fertig, bis es aufgebraucht ist. <strong>Ubigi</strong> verkauft ein wiederkehrendes Abo, das sich automatisch verlängert und deine Karte belastet, bis du kündigst, und dessen eigene Kündigungsbedingungen strenger sind als bei den meisten einmaligen eSIMs. Wenn du keinen Tarif willst, der sich selbst erneut abrechnet, ohne dass du etwas tust, zählt dieser Unterschied mehr als der Preis der beiden Anbieter.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: ein großes Paket oder ein automatisch verlängertes Abo</h2>
+  <p>
+    Nomads <strong>Global-EX</strong>-Pakete reichen von 10 GB bis 50 GB, bleiben bis zu einem Jahr gültig und werden pro Gigabyte günstiger, je größer das Paket: rund 2,58 $/GB bei den größten Paketen gegenüber etwa 5,15 $/GB bei Nomads Standard-Global-Tarif. Du zahlst einmal, verbrauchst das Paket über bis zu ein Jahr hinweg, und nichts verlängert sich oder belastet dich erneut, es sei denn, du kaufst selbst ein weiteres Paket.
+  </p>
+  <p>
+    Ubigi verkauft stattdessen wiederkehrende Tarife, die sich von selbst verlängern: einen <strong>Monatstarif</strong>, der jeden Monat automatisch abgerechnet wird und laut Ubigis eigenem Hilfe-Center erst nach mindestens <strong>drei Monaten</strong> kündbar ist, oder einen <strong>Jahrestarif</strong>, der komplett im Voraus bezahlt wird und während dieser 12-monatigen Laufzeit <strong>überhaupt nicht gekündigt oder erstattet werden kann</strong>. Ubigi verkauft zwar auch einmalige Tarife ohne wiederkehrende Abrechnung, ähnlich wie Nomads Standardtarife, aber seine eigentliche Langzeit-Option ist das Abo, nicht ein großes Prepaid-Paket wie Global-EX.
+  </p>
+
+  <h2>Preis-Schnappschuss (entspricht 1 GB, vor jedem Code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Ziel</th>
+          <th>Nomad</th>
+          <th>Ubigi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>USA</td><td>4,50 $ (1 GB)</td><td>4,00 $ (1 GB)</td></tr>
+        <tr><td>Europa regional</td><td>5,00 $ (1 GB)</td><td>&mdash;</td></tr>
+        <tr><td>Global</td><td>12,00 $ (1 GB), oder bis zu ~2,58 $/GB bei einem großen Global-EX-Paket</td><td>25,00 $ (1 GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Ubigis Pro-GB-Preis liegt bei den meisten Zielen über Nomads Standardtarifen. Nomads Vorsprung wächst bei Langzeitnutzung weiter, sobald die Global-EX-Paketpreise greifen, wofür Ubigis wiederkehrende Tarife kein direktes Gegenstück haben: Ubigis Monats- und Jahrestarife bepreisen sich nach Abrechnungszeitraum, nicht nach gekauftem Gesamtvolumen.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Nomad:</strong> NOMTRAVEL20 oder NOMCYBER20, {{ nomadDiscount | lower }}. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a> (auf Englisch)</li>
+      <li><strong>Ubigi:</strong> {{ providerB.primaryCode }}, {{ ubigiDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ubigis Code ist unser eigener. Nomad betreibt kein Affiliate-Programm, das einen solchen Code stützt, daher sind seine Codes hier die besten öffentlichen, die wir verifiziert haben, und zwei davon liegen gleichauf.</p>
+  </div>
+
+  <h2>Ist Nomad oder Ubigi die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm Nomad, wenn&hellip;</h3>
+      <ul>
+        <li>Du monatelang reist oder im Ausland lebst und einmal für ein Paket zahlen willst, das bis zu einem Jahr reicht</li>
+        <li>Du nichts willst, das sich automatisch verlängert oder deine Karte erneut belastet, ohne dass du es kaufst</li>
+        <li>Du garantierten Hotspot/Tethering und 24/7-Live-Chat-Support willst</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm Ubigi, wenn&hellip;</h3>
+      <ul>
+        <li>Du regelmäßig genug ins selbe Land zurückkehrst, dass ein wiederkehrender Monatstarif dem ständigen Kauf neuer eSIMs tatsächlich überlegen ist</li>
+        <li>Du lieber bei einem etablierten MVNO kaufst (Ubigi wird von Transatel betrieben, Teil der NTT Group) als bei einem kleineren Reseller</li>
+        <li>Du dich mit mindestens 3 Monaten Bindung beim Monatstarif oder einem vollen, nicht kündbaren Jahr beim Jahrestarif abfindest, im Tausch gegen diese wiederkehrende Struktur</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Ubigis wiederkehrende Tarife binden dich; Nomads Global-EX nicht.</strong> Ubigis Monatstarif kann in den ersten 3 Monaten nicht gekündigt werden, und sein Jahrestarif kann während der 12-monatigen Laufzeit überhaupt nicht gekündigt oder erstattet werden. Nomads Global-EX ist ein reiner Prepaid-Kauf: Sobald du das Paket bezahlt hast, gibt es nichts mehr zu kündigen und nichts, das dich erneut belastet, außer du entscheidest dich, mehr zu kaufen.
+  </p>
+  <p>
+    <strong>Keiner der beiden Anbieter überträgt ungenutzte Daten, bei keinem Tarif.</strong> Was von einem Nomad-Paket bei Ablauf übrig ist, oder was in einem Ubigi-Abrechnungszeitraum bei der Verlängerung übrig bleibt, ist so oder so weg. Der Unterschied liegt darin, wie lange du Zeit hast, es zu verbrauchen: bis zu ein Jahr bei einem großen Nomad-Global-EX-Paket, gegenüber jeweils einem Abrechnungszyklus bei einem wiederkehrenden Ubigi-Tarif.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Nomad vs Ubigi: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, Nomad oder Ubigi?</h3>
+      <p>Nomad, bei den meisten geprüften Zielen. Ubigis Pro-GB-Preis liegt über Nomads Standardtarifen, und Nomads Global-EX-Pakete drücken den Pro-GB-Preis bei langen Aufenthalten weiter, wofür Ubigis wiederkehrende Tarife kein Gegenstück bieten.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welchen kann ich leichter kündigen?</h3>
+      <p>Nomad, weil es nichts zu kündigen gibt: Global-EX ist ein einmaliger Prepaid-Kauf. Ubigis Monatstarif verlangt eine Mindestbindung von 3 Monaten vor der Kündigung, und sein Jahrestarif kann während der 12-monatigen Laufzeit überhaupt nicht gekündigt oder erstattet werden.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welcher ist besser für jemanden, der oft ins selbe Land zurückkehrt?</h3>
+      <p>Ubigis wiederkehrender Monatstarif ist genau dafür gemacht, er erneuert sich automatisch, statt bei jeder Reise eine neue eSIM zu erfordern. Nomad bietet keine wiederkehrende Option; seine Langzeit-Antwort ist stattdessen ein großes Prepaid-Global-EX-Paket.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Hat einer der beiden eine nennenswerte Herkunft?</h3>
+      <p>Ubigi ist eine Marke von Transatel, einem französischen MVNO-Enabler seit den frühen 2000er-Jahren, mittlerweile Teil der NTT Group, die auch die Anbindung hinter Connected-Car-Systemen von Automarken wie BMW, Toyota und Jeep liefert. Nomad bewirbt kein vergleichbares Telekom-Mutterunternehmen.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist guenstiger, Nomad oder Ubigi?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad, bei den meisten geprueften Zielen. Ubigis Pro-GB-Preis liegt ueber Nomads Standardtarifen, und Nomads Global-EX-Pakete druecken den Pro-GB-Preis bei langen Aufenthalten weiter, wofuer Ubigis wiederkehrende Tarife kein Gegenstueck bieten."}
+      },
+      {
+        "@type":"Question",
+        "name":"Welcher laesst sich leichter kuendigen, Nomad oder Ubigi?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad, da Global-EX ein einmaliger Prepaid-Kauf ohne Kuendigungsbedarf ist. Ubigis Monatstarif verlangt eine Mindestbindung von 3 Monaten vor der Kuendigung, und sein Jahrestarif kann waehrend der 12-monatigen Laufzeit nicht gekuendigt oder erstattet werden."}
+      },
+      {
+        "@type":"Question",
+        "name":"Welcher ist besser fuer jemanden, der oft ins selbe Land zurueckkehrt?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ubigis wiederkehrender Monatstarif ist genau dafuer gemacht, er erneuert sich automatisch statt bei jeder Reise eine neue eSIM zu erfordern. Nomad hat keine wiederkehrende Option; seine Langzeit-Antwort ist stattdessen ein grosses Prepaid-Global-EX-Paket."}
+      },
+      {
+        "@type":"Question",
+        "name":"Hat Nomad oder Ubigi ein nennenswertes Mutterunternehmen?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ubigi ist eine Marke von Transatel, einem franzoesischen MVNO-Enabler seit den fruehen 2000er-Jahren, mittlerweile Teil der NTT Group, die auch Connected-Car-Anbindung fuer Automarken wie BMW, Toyota und Jeep liefert. Nomad bewirbt kein vergleichbares Telekom-Mutterunternehmen."}
+      }
+    ]
+  }
+  </script>
+</div>

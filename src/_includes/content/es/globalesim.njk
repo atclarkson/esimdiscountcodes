@@ -1,0 +1,73 @@
+<!-- Contenido de Globalesim (Español) -->
+<div class="content-section">
+
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Estado de Globalesim &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Ya no podemos verificar Globalesim ni el código <strong>{{ provider.primaryCode }}</strong>. En {{ buildMonthYear }}, globalesim.com no es accesible como tienda de eSIM en funcionamiento (nuestras comprobaciones repetidas han mostrado ya sea una página de dominio aparcado o un error de servidor), una señal clara de que la empresa detrás ha cerrado, se ha mudado, o tiene problemas técnicos serios. Marcamos el código como inválido hasta que veamos indicios de que el sitio vuelve a funcionar.
+      <span class="callout-meta">Última comprobación el <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("d MMM yyyy") }}</time>.</span>
+    </p>
+  </div>
+
+  <h2>Lo que verificamos anteriormente</h2>
+  <p>
+    Globalesim solía vender planes de datos eSIM en más de 150 países según su propia publicidad, con el código <strong>{{ provider.primaryCode }}</strong> dando {{ primary.discount | lower }}. Dejamos ese historial aquí como referencia, pero como no podemos acceder actualmente a la página de pago para confirmar nada, no intentes comprar ahí hasta que reaparezca un sitio activo.
+  </p>
+
+  <h2>A dónde ir en su lugar</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Alternativas que funcionan ahora mismo</h3>
+      <ul>
+        <li><a href="/holafly/">Holafly</a>, para planes de datos ilimitados con un pago que funciona de verdad</li>
+        <li><a href="/ubigi/">Ubigi</a>, por una cobertura de países igual de amplia</li>
+        <li><a href="/airhub/">Airhub</a>, si buscas el precio por gigabyte más bajo</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>
+    Para la compatibilidad de dispositivos con eSIM, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <h2>Globalesim: preguntas frecuentes</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Sigue funcionando {{ provider.primaryCode }}</h3>
+      <p>No. No podemos confirmarlo porque el propio sitio de Globalesim ya no carga como una tienda de eSIM en funcionamiento, así que hemos marcado el código como inválido.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Qué le pasó a Globalesim</h3>
+      <p>Su dominio ya no es accesible como una tienda de eSIM en funcionamiento: en algunas comprobaciones muestra una página genérica de dominio aparcado, en otras un error de servidor. En cualquier caso, no es el sitio que verificamos anteriormente. Actualizaremos esta página si eso cambia.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Qué debería usar en su lugar</h3>
+      <p>Consulta las alternativas de arriba. Holafly, Ubigi y Airhub están todos activos y verificados actualmente en este sitio.</p>
+    </div>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Sigue funcionando el codigo promocional de Globalesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. El propio sitio de Globalesim ya no carga como una tienda de eSIM en funcionamiento, por lo que el codigo esta marcado como invalido e inverificable."}
+      },
+      {
+        "@type":"Question",
+        "name":"Que le paso a Globalesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Su dominio ya no es accesible como una tienda de eSIM en funcionamiento: ha mostrado una pagina generica de dominio aparcado en algunas comprobaciones y un error de servidor en otras, ninguno de los dos es el sitio verificado anteriormente."}
+      },
+      {
+        "@type":"Question",
+        "name":"Que proveedor de eSIM se recomienda en lugar de Globalesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Holafly, Ubigi y Airhub son alternativas activas y verificadas actualmente en este sitio."}
+      }
+    ]
+  }
+  </script>
+</div>
