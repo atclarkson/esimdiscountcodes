@@ -1,0 +1,174 @@
+<!-- Instabridge Content (Spanish) -->
+<div class="content-section">
+
+  <!-- Quick Answer -->
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Mejor código promocional de Instabridge &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Usa <strong>{{ provider.primaryCode }}</strong> para conseguir <strong>20% de descuento en cualquier plan de eSIM de Instabridge</strong>. Es un código público, no uno nuestro (Instabridge no tiene el tipo de programa de afiliados que sostenga un código propio como en otros proveedores de esta web), pero lo hemos probado personalmente en el checkout y confirmado que funciona. Un detalle importante: solo funciona en la <strong>tienda web</strong> de Instabridge, no escrito directamente en la app del móvil.
+      <span class="callout-meta">Confirmado activo el <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("d 'de' LLLL 'de' yyyy") }}</time>.</span>
+    </p>
+  </div>
+
+  <!-- Headline -->
+  <h2>Qué hace a Instabridge realmente diferente</h2>
+  <p>
+    Instabridge no empezó como una empresa de eSIM. Es ante todo una app de WiFi compartido: su propia web anuncia acceso a más de <strong>20 millones de puntos WiFi gratuitos</strong> en todo el mundo, una base de datos de contraseñas de hotspots creada por la comunidad que existía antes de su producto de eSIM. Los planes de eSIM son un añadido a eso, vendidos como respaldo para cuando no hay WiFi gratis cerca o no va lo bastante rápido. Ese es un punto de partida realmente distinto al de un proveedor como <a href="/airalo/">Airalo</a> o <a href="/redteago/">RedteaGO</a>, que solo han vendido datos.
+  </p>
+  <p>
+    En la práctica eso significa que el WiFi gratis y la eSIM de pago no son productos realmente separados, son dos formas de resolver el mismo problema dentro de la misma app. Que eso valga la pena para ti depende por completo de si la cobertura de hotspots gratis es buena en tu destino: una base de datos creada por la comunidad es tan buena como la comunidad que la alimenta, así que es más fuerte en ciudades densas y muy visitadas que en zonas rurales o destinos nuevos.
+  </p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Códigos activos</h3>
+    <ul>
+      <li><strong>SP20</strong>: 20% de descuento en todos los planes, probado y confirmado funcionando en el checkout de la tienda web</li>
+      <li><strong>TRAVELESIMEXPERT</strong>: 20% de descuento, también probado y confirmado funcionando, aunque la propia descripción de Instabridge lo marca como cupón para nuevos usuarios</li>
+      <li><strong>DPF10</strong>: ya no funciona. Lo probamos en el checkout y salió como inválido, así que lo hemos quitado del primer puesto.</li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ambos códigos que funcionan dan el mismo 20%, así que cualquiera de los dos sirve. Introduce el código en la tienda web de Instabridge, no en la app del móvil, más abajo explicamos por qué importa.</p>
+  </div>
+
+  <!-- Real operational note instead of generic feature grid / comparison table -->
+  <h2>WiFi gratis primero, la eSIM como respaldo, no al revés</h2>
+  <p>
+    Si comparas Instabridge con una app de eSIM pura solo por precio, te estás perdiendo la propuesta real. La app en sí es gratis para instalar y usar para acceder a hotspots, sin necesidad de comprar nada, y la eSIM solo se compra cuando decides que el WiFi gratis no es suficiente. Eso hace que el precio de la eSIM aquí se parezca más a una recarga que a una compra principal: revisa primero el mapa de hotspots gratis para tu destino, y compra un plan de datos solo para cubrir los huecos.
+  </p>
+  <p>
+    Eso también significa que los planes de eSIM de Instabridge son solo de datos, sin llamadas ni mensajes, y un plan no se acumula ni se recarga automáticamente cuando se agota. Compra según lo que realmente esperas usar más allá del WiFi gratis que encuentres, no por el instinto de "coger siempre el plan más grande".
+  </p>
+
+  <!-- Owner-confirmed operational note -->
+  <h2>Los códigos promocionales solo funcionan en la tienda web, no en la app</h2>
+  <p>
+    Esto confunde a mucha gente: no puedes introducir un código promocional o de descuento dentro de la app móvil de Instabridge. Lo confirmamos directamente con el chat de soporte de Instabridge, que nos dijo claramente que un código promocional de eSIM de viaje hay que introducirlo en <strong>store.instabridge.com/mobile-data</strong> durante el checkout, y que los códigos promocionales "no se pueden introducir directamente en la app".
+  </p>
+  <p>
+    La app de Instabridge sí tiene su propia opción separada de "Canjear código de cupón de eSIM" (en Menú/Más dentro de la app), pero es un sistema distinto para un tipo de código distinto, no un sustituto de los códigos promocionales del checkout de esta página. Si estás en la app buscando dónde escribir SP20 o TRAVELESIMEXPERT y no encuentras el sitio, esa es la razón: compra a través del enlace a la tienda web de arriba en su lugar.
+  </p>
+
+  <!-- How to -->
+  <h2>Aplicar un código de Instabridge en 3 pasos</h2>
+  <div class="content-box">
+    <ol>
+      <li>Copia <strong>SP20</strong></li>
+      <li>Ve a <a href="https://store.instabridge.com/mobile-data" target="_blank" rel="noopener">store.instabridge.com/mobile-data</a> (no la app) y elige un plan de datos de eSIM por país, regional o global para tu destino</li>
+      <li>Pega el código en el campo de promoción en el checkout y confirma la bajada de precio del 20% antes de pagar</li>
+    </ol>
+    <p class="content-note">El descuento se muestra antes de completar el pago.</p>
+  </div>
+
+  <!-- Decision help -->
+  <h2>¿Es Instabridge la opción adecuada para tu viaje?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Buena opción</h3>
+      <ul>
+        <li>Vas a un destino con buena densidad de hotspots (grandes ciudades, zonas muy turísticas) y sobre todo quieres un respaldo de WiFi gratis</li>
+        <li>Quieres una sola app para buscar hotspots y recargar datos, en lugar de usar dos apps distintas</li>
+        <li>Tu consumo de datos es lo bastante ligero como para que la eSIM sea un respaldo, no tu conexión principal</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Considera alternativas</h3>
+      <ul>
+        <li>Quieres el precio más bajo posible por GB para un viaje con mucho consumo de datos: <a href="/airhub/">Airhub</a> sale más barato por gigabyte en la mayoría de destinos</li>
+        <li>Vas a un destino rural o poco transitado donde una base de datos de hotspots compartidos probablemente tenga poca cobertura: una eSIM de datos por GB pura como <a href="/redteago/">RedteaGO</a> no depende de que otros viajeros hayan estado antes ahí</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Pricing examples -->
+  <h2>Cuánto cuestan realmente los planes de Instabridge</h2>
+  <div class="content-box">
+    <ul>
+      <li>Estados Unidos 1 GB a 2 $ &rarr; 20% de descuento ahorra 0,40 $</li>
+      <li>Europa regional 1 GB a 2,80 $ &rarr; 20% de descuento ahorra 0,56 $</li>
+      <li>Global 1 GB a 8 $ &rarr; 20% de descuento ahorra 1,60 $</li>
+    </ul>
+    <p class="content-note">El precio por GB de Instabridge en EE. UU. y a nivel regional se acerca al de RedteaGO, pero Airhub sigue saliendo más barato por gigabyte si el precio es tu único criterio y no te importa el aspecto del WiFi.</p>
+  </div>
+
+  <p>
+    Para compatibilidad de dispositivos con eSIM, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Usa el código en el checkout</h2>
+    <p>Copia <code>SP20</code> y pégalo en el campo de promoción de la tienda web</p>
+    <p>20% de descuento en cualquier plan de eSIM de Instabridge, además de 20 millones de puntos WiFi gratuitos que te da la app sin coste alguno.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre el código promocional de Instabridge</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Cuál es el mejor código ahora mismo</h3>
+      <p><strong>SP20</strong> o <strong>TRAVELESIMEXPERT</strong>: ambos dan 20% de descuento, y ambos probados personalmente y confirmados funcionando en el checkout de la tienda web. DPF10, listado antes aquí, ya no funciona y se ha retirado.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Por qué no encuentro un campo de código promocional en la app de Instabridge</h3>
+      <p>Porque no existe. El propio soporte de Instabridge confirmó que los códigos promocionales y de descuento solo funcionan en el checkout de la tienda web (store.instabridge.com/mobile-data), no escritos directamente en la app del móvil. La app tiene una opción separada de "Canjear código de cupón de eSIM", pero es una función distinta, no un sustituto.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>El WiFi gratis es realmente gratis</h3>
+      <p>Sí. El producto principal de Instabridge es una base de datos de más de 20 millones de contraseñas de hotspots WiFi enviadas por la comunidad, gratis de usar en la app sin necesidad de comprar nada. La eSIM es un producto de pago aparte para cuando el WiFi gratis no está disponible o no va lo bastante rápido.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Incluye Instabridge llamadas o mensajes</h3>
+      <p>No. Los planes de eSIM de Instabridge son solo de datos.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Puedo conseguir un reembolso en una eSIM de Instabridge</h3>
+      <p>No hemos confirmado una política de reembolso clara para las compras de eSIM, así que no cuentes con ello. Revisa las condiciones propias de Instabridge antes de comprar si eso te importa.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Cuántos países cubre Instabridge</h3>
+      <p>Instabridge anuncia cobertura de eSIM en más de 190 países, además de su base de datos aparte de hotspots WiFi gratuitos, más fuerte en ciudades muy visitadas.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Cuál es el mejor código promocional de Instabridge ahora mismo?",
+        "acceptedAnswer":{"@type":"Answer","text":"SP20 o TRAVELESIMEXPERT, ambos con 20% de descuento y probados personalmente y confirmados funcionando en el checkout de la tienda web. Un código listado antes, DPF10, ya no funciona y ha sido retirado."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Por qué no hay un campo de código promocional en la app de Instabridge?",
+        "acceptedAnswer":{"@type":"Answer","text":"El propio soporte de Instabridge confirmó que los códigos promocionales y de descuento solo funcionan en el checkout de su tienda web (store.instabridge.com/mobile-data), no directamente en la app del móvil. La app tiene una función separada de 'Canjear código de cupón de eSIM' que no sustituye a esto."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Es realmente gratis el WiFi de Instabridge?",
+        "acceptedAnswer":{"@type":"Answer","text":"Sí. El producto principal de Instabridge es una base de datos de más de 20 millones de contraseñas de hotspots WiFi enviadas por la comunidad, gratis de usar sin necesidad de comprar nada. Sus planes de eSIM son un producto de pago aparte."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Incluye Instabridge llamadas o mensajes?",
+        "acceptedAnswer":{"@type":"Answer","text":"No, los planes de eSIM de Instabridge son solo de datos."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se puede conseguir un reembolso en una eSIM de Instabridge?",
+        "acceptedAnswer":{"@type":"Answer","text":"Instabridge no tiene una política de reembolso claramente confirmada para las compras de eSIM; conviene revisar sus condiciones antes de comprar."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuántos países cubre Instabridge?",
+        "acceptedAnswer":{"@type":"Answer","text":"Instabridge anuncia cobertura de eSIM en más de 190 países, además de su base de datos aparte de hotspots WiFi gratuitos, más fuerte en ciudades muy visitadas."}
+      }
+    ]
+  }
+  </script>
+</div>

@@ -1,0 +1,147 @@
+<!-- Comparativa eSIM Card vs UPeSIM (Español) -->
+<div class="content-section">
+
+  {% set esimcardusPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set upesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set esimcardusEsCode = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
+  {% set upesimEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set esimcardusDiscount = (esimcardusEsCode.discount if esimcardusEsCode) or esimcardusPrimary.discount %}
+  {% set upesimDiscount = (upesimEsCode.discount if upesimEsCode) or upesimPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>eSIM Card</strong> si quieres un plan ajustado exactamente a tu viaje, día a día, y no te importa elegir entre docenas de opciones para conseguirlo. Elige <strong>UPeSIM</strong> si prefieres instalar una eSIM semanas antes de volar y olvidarte de ella hasta que aterrizas. Ambos tienen precios ajustados, los dos ofrecen un código público del 10%, y ninguno da una devolución real una vez que ya has usado los datos.
+    </p>
+  </div>
+
+  <h2>La diferencia principal: docenas de niveles de tamaño frente a un plan que te espera</h2>
+  <p>
+    Solo la página de Estados Unidos de eSIM Card lista unas 30 combinaciones: siete niveles fijos de datos de 1 GB a 100 GB, cada uno vendido con varias ventanas de validez de 3 a 90 días, más dos niveles ilimitados ("Unlimited" y "Unlimited Plus") de 1 a 30 días. UPeSIM, un OMV francés en marcha desde 2018, vende una gama más simple de bloques prepago fijos sin renovación automática, con cobertura en más de 200 países y territorios mediante acuerdos con operadoras locales.
+  </p>
+  <p>
+    La diferencia práctica más importante es cuándo empieza a contar el reloj. La propia política de UPeSIM es que un plan no empieza a descontarse hasta que el teléfono se conecta de verdad a la red de destino, no al instalar la eSIM ni al escanear el código QR, así que está pensado para configurarse en casa mucho antes de salir de viaje. La pega: el propio FAQ de UPeSIM dice que un perfil instalado pero nunca activado caduca y aparece como expirado a los 60 días, así que solo sirve para viajes dentro de unos dos meses. Los propios materiales de eSIM Card no publican una política equivalente sobre el momento de activación, así que no podemos afirmar que instalarla con antelación funcione igual ahí; si compras eSIM Card, instálala más cerca de la fecha de viaje en lugar de dar por hecho que esperará.
+  </p>
+
+  <h2>Precio de referencia (nivel de 1 GB en EE. UU., antes de código)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>eSIM Card</th>
+          <th>UPeSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>~1 GB</td><td>1,92 $ (validez de 3 días)</td><td>5,55 $ (1 GB, validez mínima de 7 días)</td></tr>
+        <tr><td>10 GB</td><td>12,86 $ (validez de 30 días)</td><td>No se vende como nivel fijo de 10 GB</td></tr>
+        <tr><td>Ilimitado</td><td>12,05 $ (validez de 7 días)</td><td>No disponible; UPeSIM solo ofrece planes de GB fijos</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Los niveles de validez corta de eSIM Card hacen que su plan más pequeño parezca más barato, pero también cubren menos días que la validez mínima de 7 días de UPeSIM. UPeSIM no vende ningún nivel ilimitado, a diferencia de los dos que ofrece eSIM Card.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>eSIM Card:</strong> {{ providerA.primaryCode }}, {{ esimcardusDiscount | lower }}. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>UPeSIM:</strong> {{ providerB.primaryCode }}, {{ upesimDiscount | lower }}. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ninguno de los dos tiene el tipo de programa de afiliados que sostenga un código propio nuestro, así que ambos códigos son los mejores públicos que hemos verificado. UPeSIM tiene dos códigos de repuesto con 10% de descuento si el principal deja de funcionar algún día; eSIM Card solo tiene ese.</p>
+  </div>
+
+  <h2>¿eSIM Card o UPeSIM es la mejor opción?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige eSIM Card si&hellip;</h3>
+      <ul>
+        <li>Sabes exactamente cuántos datos necesitas y cuánto dura tu viaje, y quieres un nivel ajustado a eso en vez de redondear al alza</li>
+        <li>Te interesa poder añadir un número de teléfono virtual o una eSIM con voz desde la misma app</li>
+        <li>Vas a instalarla cerca de la salida, ya que no hay ninguna política publicada sobre instalarla con antelación</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige UPeSIM si&hellip;</h3>
+      <ul>
+        <li>Quieres instalar la eSIM semanas antes del viaje sin gastar validez de forma anticipada</li>
+        <li>Prefieres elegir entre una lista corta de bloques fijos en lugar de revisar toda una página de combinaciones por país</li>
+        <li>Te basta con un plan solo de datos, con llamadas y mensajes por el roaming de tu operadora habitual</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>Ninguno de los dos tiene una devolución real garantizada.</strong> La propia política de eSIM Card describe las eSIM como fundamentalmente no reembolsables una vez instaladas o usadas, con excepciones limitadas a casos concretos como un fallo real de cobertura reclamado dentro de los 30 días. UPeSIM ni siquiera anuncia públicamente una garantía de devolución. Si una devolución sin condiciones te importa más que el precio de cualquiera de los dos, merece la pena mirar <a href="/alosim/">AloSIM</a> (en inglés), que sí la anuncia.
+  </p>
+  <p>
+    <strong>Solo uno de los dos vende un número de teléfono.</strong> eSIM Card ofrece un número virtual como complemento aparte desde unos 2,40 $, además de su propia línea de eSIM Data + Voice, todo dentro de la misma app que sus planes de datos. UPeSIM no tiene nada equivalente: las llamadas y mensajes en un plan de UPeSIM van por el roaming de tu operadora habitual, así que WhatsApp o Telegram por la conexión de datos es la solución práctica.
+  </p>
+  <p>
+    Para la configuración del dispositivo y lo básico sobre eSIM que aplica a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre eSIM Card vs UPeSIM</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, eSIM Card o UPeSIM?</h3>
+      <p>Los niveles de validez más corta de eSIM Card, como su plan de 1 GB a 3 días por 1,92 $, salen más baratos que el 1 GB de UPeSIM a 5,55 $ con 7 días mínimos. No es exactamente comparable: el nivel de UPeSIM cubre más días por defecto. Conviene comparar la ventana de validez concreta que necesitas en cada web antes de fijarte solo en el precio más bajo.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo instalar cualquiera de las dos eSIM semanas antes de mi viaje?</h3>
+      <p>UPeSIM está pensada para eso: el plan solo empieza a contar cuando el teléfono se conecta a la red de destino, no al instalarla. El límite es que un perfil de UPeSIM instalado pero nunca activado caduca a los 60 días, así que solo sirve para viajes dentro de unos dos meses o menos. eSIM Card no publica una política equivalente, así que conviene instalarla más cerca de la fecha de salida.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos ofrece datos ilimitados?</h3>
+      <p>eSIM Card sí, con dos niveles ("Unlimited" y "Unlimited Plus") en varias duraciones. UPeSIM solo ofrece planes de GB fijos y no vende ningún plan ilimitado.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál de los dos incluye un número de teléfono?</h3>
+      <p>Solo eSIM Card, como complemento aparte desde unos 2,40 $. UPeSIM no ofrece ningún producto de número de teléfono; las llamadas y mensajes van por el roaming de tu operadora habitual.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo conseguir una devolución con alguno de los dos?</h3>
+      <p>No fácilmente con ninguno. eSIM Card trata las eSIM como prácticamente no reembolsables una vez instaladas o usadas, con excepciones limitadas como un fallo real de cobertura reclamado dentro de los 30 días. UPeSIM ni siquiera anuncia públicamente una garantía de devolución.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, eSIM Card o UPeSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"El nivel de validez más corta de eSIM Card, como su plan de 1 GB a 3 días por 1,92 $, sale más barato que el 1 GB de UPeSIM a 5,55 $ con 7 días mínimos. La comparación no es exacta porque el nivel de UPeSIM cubre más días por defecto, así que conviene comparar la ventana de validez concreta que se necesita en cada web."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se puede instalar alguna de las dos eSIM semanas antes del viaje?",
+        "acceptedAnswer":{"@type":"Answer","text":"UPeSIM está pensada para eso: el plan solo empieza a contar cuando el teléfono se conecta a la red de destino, no al instalarla. Un perfil de UPeSIM instalado pero nunca activado caduca a los 60 días, por lo que solo sirve para viajes dentro de unos dos meses o menos. eSIM Card no publica una política equivalente."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿eSIM Card o UPeSIM ofrecen datos ilimitados?",
+        "acceptedAnswer":{"@type":"Answer","text":"eSIM Card sí, con dos niveles ilimitados, Unlimited y Unlimited Plus, en varias duraciones. UPeSIM solo ofrece planes de GB fijos y no vende ningún plan ilimitado."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Qué proveedor incluye un número de teléfono, eSIM Card o UPeSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Solo eSIM Card, como complemento aparte desde unos 2,40 $. UPeSIM no ofrece ningún producto de número de teléfono; las llamadas y mensajes van por el roaming de la operadora habitual del viajero."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se puede conseguir una devolución con eSIM Card o UPeSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"No fácilmente con ninguno de los dos. eSIM Card trata las eSIM como prácticamente no reembolsables una vez instaladas o usadas, con excepciones limitadas como un fallo real de cobertura reclamado dentro de los 30 días. UPeSIM ni siquiera anuncia públicamente una garantía de devolución."}
+      }
+    ]
+  }
+  </script>
+</div>

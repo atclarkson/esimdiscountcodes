@@ -1,0 +1,164 @@
+<!-- Ubigi Content (German) -->
+<div class="content-section">
+
+  <!-- Quick Answer -->
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Bester Ubigi-Rabattcode &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Nutze <strong>{{ provider.primaryCode }}</strong> für <strong>10% Rabatt auf jeden Ubigi-Tarif</strong>. Das ist unser eigener Code, deshalb zeigen wir ihn hier zuerst. Jeder andere funktionierende Ubigi-Code, den wir gefunden haben, gibt ebenfalls 10% Rabatt, es gibt also keinen echten Grund, nach einem besseren zu suchen, wie man es bei Airalo vielleicht tun würde.
+      <span class="callout-meta">Bestätigt aktiv am <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("d. MMM yyyy") }}</time>.</span>
+    </p>
+  </div>
+
+  <!-- Headline -->
+  <h2>Was Ubigi wirklich unterscheidet</h2>
+  <p>
+    Ubigi ist kein Reise-Startup, das sich Kapazität bei einem Mobilfunknetz mietet. Es ist eine Marke von Transatel, einem französischen MVNO-Enabler, der seit den frühen 2000er-Jahren Mobilfunkanbindung betreibt und heute Teil der NTT Group ist, eines der größten Telekomunternehmen der Welt. Das ist ein wirklich anderer Stammbaum als bei den meisten eSIM-Apps auf dieser Seite, und er zeigt sich an einer ungewöhnlichen Stelle: Ubigi verkauft auch die SIM-Konnektivität, die in vernetzten Autos von BMW, Toyota, Jeep, Maserati, Fiat, Alfa Romeo, Mini, Jaguar und Land Rover verbaut ist. Die Reise-eSIM, die du für dein Handy kaufst, läuft über dieselbe zugrunde liegende Netzinfrastruktur wie das Modem im Jeep von irgendjemandem.
+  </p>
+  <p>
+    Das macht Ubigi nicht automatisch zur besten Wahl für dein Handy. Beim Preis ist es auf dieser Seite meist die teurere Option: 4 $ für 1 GB in den USA sind ungefähr doppelt so viel, wie <a href="/airhub/">Airhub</a> oder <a href="/redteago/">RedteaGO</a> für dasselbe Gigabyte verlangen. Was du dafür bekommst, ist eine Tarifstruktur, die die Rabattcode-eSIM-Apps so nicht wirklich anbieten.
+  </p>
+
+  <img class="content-photo"
+       src="https://media.adamandlinds.com/photos/large/551b9748-29e5-4c56-9644-92ec877c6d68.jpg"
+       alt="Ein lächelnder bärtiger Mann mit Brille macht ein Selfie in einer gemütlichen Wohnung, im Hintergrund eine schneebedeckte Straße in Helsinki und ein historisches Steingebäude durchs Fenster sichtbar"
+       width="960" height="1280">
+  <p class="content-photo-caption">Ein Arbeitstag aus einer Wohnung in Helsinki, genau die Art von wiederkehrendem Reiseziel, bei dem ein wiederkehrender Monatstarif (statt jedes Mal einer neuen Einmal-eSIM) tatsächlich Sinn ergibt.</p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Aktive Codes</h3>
+    <ul>
+      <li><strong>ADAMANDLINDS</strong>: 10% Rabatt auf alle Tarife (unser eigener Code)</li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Falls ein Code nicht angenommen wird, lade den Warenkorb neu oder versuche es in einem privaten Fenster erneut.</p>
+  </div>
+
+  <!-- Real operational note instead of generic feature grid / comparison table -->
+  <h2>Einmalig oder wiederkehrend: das Detail, das hier wirklich zählt</h2>
+  <p>
+    Die meisten eSIM-Anbieter verkaufen nur eine Sache: ein festes Datenkontingent, das nach einer bestimmten Anzahl von Tagen abläuft. Ubigi verkauft das auch (seine "Einmal"-Tarife), aber daneben auch <strong>wiederkehrende</strong> Tarife, und das Kleingedruckte dazu solltest du vor dem Kauf lesen, nicht danach.
+  </p>
+  <p>
+    Ein wiederkehrender <strong>Monatstarif</strong> verlängert sich selbst und belastet deine Karte automatisch jeden Monat, und Ubigis eigenes Hilfe-Center sagt ausdrücklich, dass er erst nach <strong>mindestens drei Monaten</strong> gekündigt werden kann. Ein wiederkehrender <strong>Jahrestarif</strong> ist in einer bestimmten Hinsicht noch strenger: Du zahlst die vollen 12 Monate im Voraus, und er <strong>kann während dieses Jahres überhaupt nicht gekündigt oder erstattet werden</strong>, im Austausch dafür, dass jeden Monat ein frisches Datenkontingent bereitsteht. So oder so: Was du in einem Monat nicht verbrauchst, ist weg. Ubigi überträgt ungenutzte Daten bei keinem Tarif, weder einmalig noch wiederkehrend, in den nächsten Zeitraum.
+  </p>
+  <p>
+    Das alles macht wiederkehrende Tarife nicht zu einer schlechten Option. Wenn du wirklich regelmäßig ins selbe Land reist, kann ein Monatstarif am Ende günstiger ausfallen als vor jeder Reise eine neue Einmal-eSIM zu kaufen. Man sollte nur nicht aus Versehen dort klicken und denken, es wäre ein normaler Einmalkauf.
+  </p>
+
+  <!-- How to -->
+  <h2>Ubigi-Code in 3 Schritten einlösen</h2>
+  <div class="content-box">
+    <ol>
+      <li><strong>ADAMANDLINDS</strong> kopieren</li>
+      <li>Bei Ubigi einen Einmal- oder wiederkehrenden Datentarif für dein Reiseziel auswählen</li>
+      <li>Den Code an der Kasse im Rabattfeld einfügen und den Preisnachlass von 10% bestätigen, bevor du bezahlst</li>
+    </ol>
+    <p class="content-note">Der Rabatt wird vor Abschluss der Zahlung angezeigt.</p>
+  </div>
+
+  <!-- Decision help -->
+  <h2>Ist Ubigi die richtige Wahl für deine Reise</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Gut geeignet</h3>
+      <ul>
+        <li>Du besuchst dasselbe Land oft genug, dass ein wiederkehrender Monatstarif dem Kauf einer neuen eSIM jedes Mal überlegen ist</li>
+        <li>Du fährst bereits ein vernetztes Auto von einem der Automarken-Partner von Ubigi und magst die Idee eines einzigen Anbieters</li>
+        <li>Du kaufst lieber bei einem etablierten MVNO als bei einem kleineren Reseller, auch zu einem höheren Preis</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Alternativen prüfen</h3>
+      <ul>
+        <li>Du willst einfach den günstigsten Preis pro GB: Ubigi kostet etwa doppelt so viel wie <a href="/airhub/">Airhub</a> oder <a href="/redteago/">RedteaGO</a></li>
+        <li>Du willst einen jederzeit kündbaren oder erstattungsfähigen Tarif: Bleib bei den Einmaltarifen, oder vermeide die 3-Monats-Bindung beim Monatstarif und die nicht erstattungsfähige Jahreslaufzeit ganz</li>
+        <li>Du willst unbegrenzte Daten statt eines festen Kontingents: siehe <a href="/holafly/">Holafly</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Savings examples -->
+  <h2>So sieht der Rabatt konkret aus</h2>
+  <div class="content-box">
+    <ul>
+      <li>USA 1 GB für 4 $ &rarr; 10% Rabatt spart 0,40 $</li>
+      <li>Frankreich 3 GB für 4 $ &rarr; 10% Rabatt spart 0,40 $</li>
+      <li>Weltweit 1 GB für 25 $ &rarr; 10% Rabatt spart 2,50 $</li>
+    </ul>
+    <p class="content-note">Ubigis Preis pro GB liegt über den meisten anderen Anbietern auf dieser Seite, daher fallen die 10% bei einem größeren Regional- oder Welttarif mehr ins Gewicht als bei einer kleinen Aufladung für ein einzelnes Land.</p>
+  </div>
+
+  <p>
+    Für eSIM-Gerätekompatibilität, sieh dir unseren <a href="/compatible-devices/">eSIM-kompatible Geräte</a>-Guide an (auf Englisch).
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Code an der Kasse einlösen</h2>
+    <p><code>ADAMANDLINDS</code> kopieren und ins Rabattfeld einfügen</p>
+    <p>10% Rabatt auf jeden Ubigi-Tarif, einmalig oder wiederkehrend.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Ubigi-Rabattcode: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist aktuell der beste Code</h3>
+      <p><strong>ADAMANDLINDS</strong>: 10% Rabatt auf jeden Ubigi-Tarif. Es ist unser eigener Code, deshalb zuerst gezeigt; andere funktionierende Codes geben denselben Rabatt von 10%.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Was ist der Unterschied zwischen einem Einmal- und einem wiederkehrenden Ubigi-Tarif</h3>
+      <p>Ein Einmaltarif ist ein festes Datenkontingent, gültig für eine bestimmte Anzahl von Tagen, einmal gekauft. Ein wiederkehrender Tarif verlängert sich automatisch: monatlich (jeden Monat abgebucht und aufgefrischt, erst nach mindestens 3 Monaten kündbar) oder jährlich (die vollen 12 Monate im Voraus bezahlt, während des Jahres weder kündbar noch erstattungsfähig).</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Kann ich einen wiederkehrenden Ubigi-Tarif kündigen</h3>
+      <p>Einen Monatstarif ja, aber erst, nachdem du ihn mindestens 3 Monate gehabt hast. Ein Jahrestarif kann während seiner 12-monatigen Laufzeit weder gekündigt noch erstattet werden.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Werden ungenutzte Ubigi-Daten übertragen</h3>
+      <p>Nein. Was du in einem Abrechnungszeitraum nicht verbrauchst, ist weg, egal ob Einmal-, Monats- oder Jahrestarif.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Wer betreibt Ubigi eigentlich</h3>
+      <p>Transatel, ein französischer MVNO-Enabler, der seit den frühen 2000er-Jahren aktiv und heute Teil der NTT Group ist. Transatel liefert auch die Konnektivität hinter Connected-Car-Systemen für BMW, Toyota, Jeep, Maserati, Fiat, Alfa Romeo, Mini, Jaguar und Land Rover.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist aktuell der beste Ubigi-Rabattcode?",
+        "acceptedAnswer":{"@type":"Answer","text":"ADAMANDLINDS gibt 10% Rabatt auf jeden Ubigi-Tarif. Es ist unser eigener Code, deshalb zuerst gezeigt; andere funktionierende Codes geben denselben Rabatt von 10%."}
+      },
+      {
+        "@type":"Question",
+        "name":"Was unterscheidet einen Einmal- von einem wiederkehrenden Ubigi-Tarif?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ein Einmaltarif ist ein festes Datenkontingent für eine bestimmte Anzahl von Tagen, einmal gekauft. Ein wiederkehrender Tarif verlängert sich automatisch: monatlich (erst nach mindestens 3 Monaten kündbar) oder jährlich (im Voraus für 12 Monate bezahlt, während des Jahres weder kündbar noch erstattungsfähig)."}
+      },
+      {
+        "@type":"Question",
+        "name":"Kann man einen wiederkehrenden Ubigi-Tarif kündigen?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ein Monatstarif kann nach einer Mindestlaufzeit von 3 Monaten gekündigt werden. Ein Jahrestarif kann während seiner 12-monatigen Laufzeit weder gekündigt noch erstattet werden."}
+      },
+      {
+        "@type":"Question",
+        "name":"Werden ungenutzte Ubigi-Daten übertragen?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nein. Ungenutzte Daten verfallen am Ende jedes Abrechnungszeitraums, unabhängig vom Tariftyp."}
+      },
+      {
+        "@type":"Question",
+        "name":"Wer betreibt Ubigi?",
+        "acceptedAnswer":{"@type":"Answer","text":"Transatel, ein französischer MVNO-Enabler, der seit den frühen 2000er-Jahren aktiv und heute Teil der NTT Group ist, die auch Connected-Car-Konnektivität für Automarken wie BMW, Toyota, Jeep, Maserati, Fiat, Alfa Romeo, Mini, Jaguar und Land Rover liefert."}
+      }
+    ]
+  }
+  </script>
+</div>

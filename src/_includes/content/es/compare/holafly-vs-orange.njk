@@ -1,0 +1,138 @@
+<!-- Comparativa Holafly vs Orange (Español) -->
+<div class="content-section">
+
+  {% set holaflyPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set orangePrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set holaflyEsCode = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
+  {% set orangeEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set holaflyDiscount = (holaflyEsCode.discount if holaflyEsCode) or holaflyPrimary.discount %}
+  {% set orangeDiscount = (orangeEsCode.discount if orangeEsCode) or orangePrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>Holafly</strong> si solo quieres datos y un código de descuento que funcione de verdad. Elige <strong>Orange</strong> si específicamente quieres llamadas y SMS incluidos de una operadora europea conocida, y no te importa pagar más por ello. Muchos viajeros acaban en Orange por defecto porque es un nombre que ya conocen; no es la opción más barata en cuanto se compara con una eSIM independiente basada en códigos.
+    </p>
+  </div>
+
+  <h2>La diferencia principal: revendedor independiente o paquete de operadora</h2>
+  <p>
+    Holafly vende datos ilimitados como todo el producto, a un precio fijo por día para un país o región, con un código de descuento del 5%/10% que funciona de verdad. Orange Travel es la división internacional de eSIM de Orange, uno de los mayores grupos de telecomunicaciones de Europa, y sus planes incluyen llamadas y SMS ilimitados más hotspot de serie, algo que Holafly (o la mayoría de las eSIM de solo datos de esta web) no vende en absoluto. Ese paquete es el único motivo real para considerar Orange: si solo necesitas datos, estás pagando por dos funciones que no vas a usar.
+  </p>
+  <p>
+    El precio no es ni de lejos parecido. Orange está en la categoría "Cara" en esta web; Holafly está en "Barata". Los propios precios de Orange en Europa lo dejan claro: un plan de 14 días/20 GB cuesta 24,99 &euro;, hasta un plan de 90 días/500 GB a 99,99 &euro; (40% de descuento sobre un precio de lista de 169,99 &euro;, su mayor rebaja automática). Las eSIM ilimitadas de Holafly para Europa cuestan 1,99 $/día antes de cualquier código, y ADAMANDLINDS resta otro 5% en una eSIM individual o 10% en un plan mensual.
+  </p>
+
+  <h2>Precio de referencia (Europa, antes de código)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo de plan</th>
+          <th>Holafly</th>
+          <th>Orange</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Viaje corto</td><td>1,99 $/día (ilimitado)</td><td>24,99 &euro; (14 días/20 GB)</td></tr>
+        <tr><td>Un mes</td><td>1,99 $/día (ilimitado)</td><td>44,99 &euro; (30 días/50 GB)</td></tr>
+        <tr><td>Nivel más largo</td><td>1,99 $/día (ilimitado)</td><td>99,99 &euro; (90 días/500 GB, 40% de descuento sobre el precio de lista)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Las cifras de Orange incluyen llamadas y SMS ilimitados más hotspot; las de Holafly son solo de datos. No es una comparación directa, y esa es la cuestión: el sobreprecio de Orange se paga específicamente por el paquete de llamadas/SMS, no por los datos en sí.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Holafly:</strong> {{ providerA.primaryCode }}, {{ holaflyDiscount | lower }}. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>Orange:</strong> No hemos encontrado ningún código que funcione. El código que figuraba antes, AW0, no aparece en el checkout real de Orange y está marcado como inválido. <a href="{{ providerBUrl }}">Ver todos los detalles &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">El descuento de Orange, cuando existe, viene incluido de forma automática en el precio de los planes más grandes, no es algo que se introduzca en el checkout. Consulta la <a href="{{ providerBUrl }}">página de Orange</a> para ver los tramos exactos.</p>
+  </div>
+
+  <h2>¿Holafly o Orange es la mejor opción?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige Holafly si&hellip;</h3>
+      <ul>
+        <li>Solo necesitas datos y quieres un código de descuento que funcione hoy mismo</li>
+        <li>Realmente no sabes cuántos datos vas a necesitar, o esperas usar muchos</li>
+        <li>China está en el itinerario y quieres la VPN incluida</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige Orange si&hellip;</h3>
+      <ul>
+        <li>Quieres específicamente llamadas y SMS incluidos de serie, no como compra aparte</li>
+        <li>Vas a reservar una estancia larga (hasta 90 días) donde las rebajas automáticas más grandes entran en juego</li>
+        <li>Prefieres comprar a una operadora consolidada antes que a un revendedor independiente</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>El paquete de Orange es real, pero cuesta más que comprar solo datos y llamar por otra vía.</strong> Si normalmente usarías WhatsApp o una app de videollamada para hablar mientras viajas, el paquete de llamadas/SMS no aporta gran cosa, y un proveedor de solo datos como Holafly (o una opción más barata por GB como <a href="/airhub/">Airhub</a>) suele ganar a Orange en precio solo por los datos.
+  </p>
+  <p>
+    <strong>El código ADAMANDLINDS de Holafly es de los pocos que cubre sus dos líneas de producto</strong>, una eSIM de destino único y una suscripción mensual de Planes, con un 5% y un 10% de descuento respectivamente. Orange no tiene ahora mismo ningún descuento comparable basado en código: sus rebajas están fijadas en tramos de plan concretos, así que no hay nada que aplicar ni que comparar con un código.
+  </p>
+  <p>
+    Para la configuración del dispositivo y lo básico sobre eSIM que aplica a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre Holafly vs Orange</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, Holafly o Orange?</h3>
+      <p>Holafly, para datos. Orange está en la categoría de precio "Cara" en esta web y sus planes incluyen llamadas, SMS y hotspot de serie, que es la mayor parte de lo que se paga con ese sobreprecio.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Tiene Orange un código de descuento que funcione?</h3>
+      <p>Ahora mismo no. El código que figuraba antes para Orange, AW0, no aparece en su checkout real y está marcado como inválido. Sus descuentos vienen en cambio como una rebaja automática integrada en los tramos de plan más grandes.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Necesito llamadas y SMS, o solo datos?</h3>
+      <p>Si vas a depender de WhatsApp, iMessage o una app similar para llamar y escribir mientras viajas, como hace la mayoría de los viajeros, el paquete de llamadas/SMS de Orange no aporta mucho valor, y un plan de solo datos de Holafly suele ser la opción más barata.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál es mejor para una estancia larga?</h3>
+      <p>Las rebajas automáticas de Orange crecen en sus planes más largos y grandes, hasta un 40% de descuento sobre el precio de lista en su nivel de 90 días/500 GB, así que una estancia larga es donde su diferencia de precio con Holafly más se reduce, sobre todo si además quieres el paquete de llamadas/SMS.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, Holafly o Orange?",
+        "acceptedAnswer":{"@type":"Answer","text":"Holafly, para datos. Orange está en la categoría de precio Cara en esta web, y sus planes incluyen llamadas, SMS y hotspot de serie, que es la mayor parte de lo que se paga con ese sobreprecio."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Tiene Orange un código de descuento que funcione?",
+        "acceptedAnswer":{"@type":"Answer","text":"Actualmente no. El código que figuraba antes para Orange, AW0, no aparece en su flujo de checkout real y está marcado como inválido. Sus descuentos vienen en cambio como una rebaja automática integrada en los tramos de plan más grandes."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Hacen falta las llamadas y SMS de Orange, o solo los datos?",
+        "acceptedAnswer":{"@type":"Answer","text":"Si WhatsApp, iMessage o una app similar cubre las llamadas y los mensajes durante el viaje, el paquete de Orange aporta poco valor, y un plan de solo datos de Holafly suele ser la opción más barata."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál es mejor para una estancia larga, Holafly u Orange?",
+        "acceptedAnswer":{"@type":"Answer","text":"Las rebajas automáticas de Orange crecen en sus planes más largos y grandes, hasta un 40% de descuento sobre el precio de lista en su nivel de 90 días/500 GB, así que una estancia larga es donde más se reduce su diferencia de precio con Holafly, especialmente para quien también quiera el paquete de llamadas/SMS."}
+      }
+    ]
+  }
+  </script>
+</div>
