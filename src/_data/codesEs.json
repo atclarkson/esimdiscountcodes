@@ -3,6 +3,27 @@
     "description": "Planes de eSIM asequibles en todo el mundo",
     "codes": {}
   },
+  "nomad": {
+    "description": "eSIM para nómadas digitales",
+    "codes": {
+      "WOLF": {
+        "discount": "10% DE DESCUENTO EN TODOS LOS PLANES",
+        "description": "Código de descuento de Nomad, 10% de descuento"
+      },
+      "NOMTRAVEL20": {
+        "discount": "20% DE DESCUENTO",
+        "description": "Código promocional de Nomad eSIM, 20% de descuento"
+      },
+      "TRAVELESIMEXPERT": {
+        "discount": "15% DE DESCUENTO",
+        "description": "Cupón de Nomad eSIM, 15% de descuento en todos los planes regulares"
+      },
+      "NOMCYBER20": {
+        "discount": "20% DE DESCUENTO",
+        "description": "Código promocional Cybernews de Nomad eSIM, 20% de descuento"
+      }
+    }
+  },
   "holafly": {
     "description": "Planes de eSIM internacionales para viajeros",
     "codes": {

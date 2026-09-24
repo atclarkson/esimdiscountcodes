@@ -182,5 +182,13 @@
     "title": "eSIM Card vs UPeSIM: Granular Sizing or a Plan That Waits for You? (2026 Comparison)",
     "description": "eSIM Card vs UPeSIM compared: eSIM Card's dozens of per-day-priced tiers and paid phone number add-on vs UPeSIM's simple fixed blocks and buy-ahead activation timing, discount codes, and which one fits your trip.",
     "lastUpdated": "2026-09-24"
+  },
+  {
+    "slug": "airhub-vs-alosim",
+    "providerA": "airhub",
+    "providerB": "alosim",
+    "title": "Airhub vs AloSIM: Cheapest Per-GB or a Free Phone Number? (2026 Comparison)",
+    "description": "Airhub vs AloSIM compared: Airhub's rock-bottom per-GB pricing with bundled SMS and a local number vs AloSIM's free international Hushed number and choice of fixed-GB or unlimited plans, discount codes, and which one fits your trip.",
+    "lastUpdated": "2026-09-24"
   }
 ]

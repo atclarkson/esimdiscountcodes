@@ -1,0 +1,151 @@
+<!-- AloSIM Inhalt (Deutsch) -->
+<div class="content-section">
+
+  <!-- Kurzantwort -->
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Bester AloSIM-Rabattcode &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Nutze <strong>{{ provider.primaryCode }}</strong> für <strong>15% Rabatt auf jeden AloSIM-Tarif</strong>. Es ist ein öffentlicher Code, keiner von uns (AloSIM betreibt kein Partnerprogramm, das einen eigenen Code wie bei manchen anderen Anbietern auf dieser Seite unterstützt), aber der beste, den wir geprüft haben.
+      <span class="callout-meta">Bestätigt aktiv am <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("d. MMM yyyy") }}</time>.</span>
+    </p>
+  </div>
+
+  <!-- Überschrift -->
+  <h2>Was AloSIM wirklich unterscheidet</h2>
+  <p>
+    Die meisten eSIM-Apps verkaufen dir Daten und sonst nichts. AloSIM bündelt eine kostenlose internationale Telefonnummer über eine Partnerschaft mit Hushed, der Zweitnummern-App. Das ist kein vollständiger Ersatz für deine reguläre Nummer (du richtest sie separat in der AloSIM-App ein, nachdem du einen Tarif gekauft hast), aber ein echtes Unterscheidungsmerkmal: Wenn du eine Nummer brauchst, um einen Bestätigungscode zu empfangen oder sie einem Hotel im Ausland zu geben, ohne deine echte herauszugeben, bieten die meisten Konkurrenten auf dieser Seite nichts Vergleichbares.
+  </p>
+  <p>
+    AloSIM verkauft außerdem sowohl Tarife mit festem Datenvolumen als auch unbegrenzte Tarife, statt sich wie <a href="/airalo/">Airalo</a> (nur pro Gigabyte) oder <a href="/de/holafly/">Holafly</a> (nur unbegrenzt) auf ein Modell festzulegen. Das gibt dir die Wahl direkt auf der eigenen Seite, statt Anbieter vergleichen zu müssen, um sie zu bekommen.
+  </p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Aktive Codes</h3>
+    <ul>
+      <li><strong>ALOSAVE</strong>: 15% Rabatt auf alle Tarife</li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Falls ein Code nicht greift, Warenkorb neu laden oder ein privates Fenster ausprobieren, dann erneut versuchen.</p>
+  </div>
+
+  <!-- Echter Praxishinweis statt generisches Feature-Raster -->
+  <h2>Die Rückgabe ist großzügig, mit einem Haken</h2>
+  <p>
+    AloSIM wirbt mit einer Erstattung ohne Rückfragen, wenn deine eSIM sich nicht verbinden lässt oder sich dein Gerät als inkompatibel erweist, eine deutlich kundenfreundlichere öffentliche Haltung als bei den meisten eSIM-Apps. Der Haken liegt beim Timing: Diese Garantie gilt für eSIMs, die nicht aktivieren, nicht für solche, die du aktiviert und dann einfach kaum genutzt hast. Kauf ruhig im Voraus vor einer Reise (ein ungenutzter AloSIM-Tarif verfällt nicht), aber aktiviere ihn erst, wenn du wirklich gelandet bist und weißt, dass du ihn brauchst, sonst verlierst du zusammen mit den Daten auch das Rückgabefenster.
+  </p>
+
+  <!-- Anleitung -->
+  <h2>Einen AloSIM-Code in 3 Schritten anwenden</h2>
+  <div class="content-box">
+    <ol>
+      <li><strong>ALOSAVE</strong> kopieren</li>
+      <li>Bei AloSIM einen Länder-, Regional- oder Unbegrenzt-Tarif für dein Ziel auswählen</li>
+      <li>Den Code an der Kasse im Rabattfeld einfügen und den 15%-Preisnachlass vor der Zahlung bestätigen</li>
+    </ol>
+    <p class="content-note">Der Rabatt wird vor Abschluss der Zahlung angezeigt.</p>
+  </div>
+
+  <!-- Entscheidungshilfe -->
+  <h2>Ist AloSIM die richtige Wahl für deine Reise</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Gut geeignet</h3>
+      <ul>
+        <li>Du willst beim selben Anbieter die Wahl zwischen festem GB-Kontingent oder unbegrenzten Daten haben</li>
+        <li>Du willst eine internationale Nummer für Bestätigungscodes oder Buchungsanrufe, ohne deine echte herauszugeben</li>
+        <li>Du kaufst lieber im Voraus und aktivierst erst nach der Landung, damit die Rückgabeoption erhalten bleibt</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Alternativen prüfen</h3>
+      <ul>
+        <li>Du willst einfach den günstigsten Preis pro Gigabyte: sieh dir zuerst <a href="/redteago/">RedteaGO</a> oder <a href="/airhub/">Airhub</a> an</li>
+        <li>Du willst einen Anbieter mit großem öffentlichem Partnerprogramm zum Vergleichen: siehe <a href="/airalo/">Airalo</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Sparbeispiele -->
+  <h2>So sieht der Rabatt konkret aus</h2>
+  <div class="content-box">
+    <ul>
+      <li>USA 1 GB für 4,50 $ &rarr; 15% Rabatt spart 0,68 $</li>
+      <li>Europa (regional) 1 GB für 5 $ &rarr; 15% Rabatt spart 0,75 $</li>
+      <li>Japan 1 GB für 4,50 $ &rarr; 15% Rabatt spart 0,68 $</li>
+    </ul>
+    <p class="content-note">AloSIM bepreist einzelne Länder und Regionen fast genauso wie Airalo, der 15%-Code ist also das, was die beiden preislich tatsächlich unterscheidet.</p>
+  </div>
+
+  <p>
+    Für eSIM-Gerätekompatibilität siehe unseren <a href="/compatible-devices/">eSIM-kompatible Geräte</a>-Guide (auf Englisch). Vergleichst du AloSIM mit einer Pay-per-GB-Alternative? Sieh dir unseren <a href="/compare/airalo-vs-saily/">Airalo-vs-Saily-Vergleich</a> an (auf Englisch), um zu sehen, wie sich dieses Preismodell zwischen zwei anderen Anbietern auswirkt.
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Code an der Kasse einlösen</h2>
+    <p><code>ALOSAVE</code> kopieren und ins Rabattfeld einfügen</p>
+    <p>15% Rabatt auf jeden AloSIM-Tarif, mit festem GB-Kontingent oder unbegrenzt.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>AloSIM-Rabattcode: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist gerade der beste Code</h3>
+      <p><strong>ALOSAVE</strong>: 15% Rabatt auf alle AloSIM-Tarife, mit festem GB-Kontingent oder unbegrenzt.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Enthält AloSIM eine Telefonnummer</h3>
+      <p>Kann sein. AloSIM kooperiert mit Hushed für eine kostenlose internationale Telefonnummer, die separat in der AloSIM-App nach dem Kauf eingerichtet wird. Es ist eine Zweitleitung für Anrufe oder SMS, kein Ersatz für deine bestehende Nummer.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bekomme ich eine Erstattung, wenn die eSIM nicht funktioniert</h3>
+      <p>Ja, AloSIM wirbt mit einer Erstattung für eSIMs, die sich nicht verbinden lassen oder sich als inkompatibel mit deinem Gerät erweisen. Diese Garantie gilt, bevor du die Daten wirklich genutzt hast, aktiviere einen Tarif also erst, wenn du ihn wirklich brauchst.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Verfällt ein ungenutzter AloSIM-Tarif</h3>
+      <p>Nein. Du kannst vor einer Reise im Voraus kaufen, und die eSIM bleibt ungenutzt liegen, bis du sie installierst und aktivierst, ein früher Kauf kostet also keine Daten.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Festes GB-Kontingent oder unbegrenzt, was soll ich wählen</h3>
+      <p>Wenn du deinen Verbrauch abschätzen kannst, ist ein Tarif mit festem GB-Kontingent meist günstiger. Wenn du lieber keinen Datenzähler im Blick behalten willst, deckt AloSIMs unbegrenzter Tarif das ab, ohne den Anbieter wechseln zu müssen.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist gerade der beste AloSIM-Rabattcode?",
+        "acceptedAnswer":{"@type":"Answer","text":"ALOSAVE gibt 15% Rabatt auf alle AloSIM-Tarife, mit festem GB-Kontingent oder unbegrenzt."}
+      },
+      {
+        "@type":"Question",
+        "name":"Enthält AloSIM eine Telefonnummer?",
+        "acceptedAnswer":{"@type":"Answer","text":"AloSIM kooperiert mit Hushed fuer eine kostenlose internationale Telefonnummer, die separat in der AloSIM-App nach dem Kauf eingerichtet wird. Es ist eine Zweitleitung, kein Ersatz fuer eine bestehende Nummer."}
+      },
+      {
+        "@type":"Question",
+        "name":"Gibt es eine Erstattung, wenn eine AloSIM-eSIM nicht funktioniert?",
+        "acceptedAnswer":{"@type":"Answer","text":"AloSIM wirbt mit einer Erstattung fuer eSIMs, die sich nicht verbinden lassen oder mit dem Geraet inkompatibel sind, gueltig bevor der Tarif wirklich genutzt wurde."}
+      },
+      {
+        "@type":"Question",
+        "name":"Verfaellt ein ungenutzter AloSIM-Tarif?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nein. Eine AloSIM-eSIM kann vor einer Reise im Voraus gekauft werden und bleibt ohne Ablaufdatum liegen, bis sie installiert und aktiviert wird."}
+      },
+      {
+        "@type":"Question",
+        "name":"Festes GB-Kontingent oder unbegrenzter AloSIM-Tarif, was ist besser?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ein Tarif mit festem GB-Kontingent ist meist guenstiger, wenn sich der Verbrauch im Voraus abschaetzen laesst. Ein unbegrenzter Tarif vermeidet einen Datenzaehler, ohne den Anbieter wechseln zu muessen."}
+      }
+    ]
+  }
+  </script>
+</div>

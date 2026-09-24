@@ -1,0 +1,149 @@
+<!-- Airhub vs AloSIM Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set airhubBest = providerA.codes | findCode("ESIMOFFER5") %}
+  {% set alosimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set airhubDeCode = deA.codes["ESIMOFFER5"] if (deA and deA.codes and deA.codes["ESIMOFFER5"]) else null %}
+  {% set alosimDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set airhubDiscount = (airhubDeCode.discount if airhubDeCode) or airhubBest.discount %}
+  {% set alosimDiscount = (alosimDeCode.discount if alosimDeCode) or alosimPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Wähle <strong>Airhub</strong>, wenn dir der niedrigste Preis pro Gigabyte am wichtigsten ist und du SMS plus eine lokale Nummer direkt in den Daten-Tarif eingebaut haben willst. Wähle <strong>AloSIM</strong>, wenn du eine kostenlose internationale Telefonnummer willst, die in jedem Land gleich funktioniert, dazu die Wahl zwischen festem GB-Kontingent oder unbegrenzten Daten in einem einzigen Checkout, und einen 15%-Code, den du nicht erst gegenprüfen musst, bevor du dich darauf verlässt.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Niedrigster Preis pro GB vs. eingebaute Telefonnummer</h2>
+  <p>
+    Airhubs ganzes Versprechen ist der Preis: Der Anbieter verkauft Mehr-Gigabyte-Pakete (3 GB, 4 GB) statt der Einzel-GB-Einheiten, die die meisten Konkurrenten nutzen, und das führt in günstigeren Zielen zu wirklich niedrigen Preisen, darunter 0,85 $ für 1 GB in Thailand und 1,55 $ für 1 GB in Japan. Die meisten Airhub-Tarife bündeln außerdem SMS und eine lokale Telefonnummer, etwas, das AloSIM und die meisten anderen reinen Daten-eSIMs auf dieser Seite nicht standardmäßig anbieten. AloSIM antwortet mit einer anderen Art von Extra: einer kostenlosen internationalen Nummer über Hushed, die separat in der eigenen App nach dem Kauf eingerichtet wird. Es ist keine an das Zielland gebundene lokale Nummer, sondern eine Zweitleitung, die überall gleich funktioniert, praktisch, um einen Bestätigungscode zu empfangen oder eine Nummer herauszugeben, die nicht deine echte ist.
+  </p>
+  <p>
+    Der andere echte Unterschied liegt in der Tarifstruktur. AloSIM verkauft sowohl Tarife mit festem GB-Kontingent als auch unbegrenzte Tarife im selben Checkout, sodass du je nach Reise wählen kannst, ohne den Anbieter zu wechseln. Airhub bietet ausschließlich festes GB-Kontingent an, und die Daten verfallen erst ein Jahr nach dem Kauf, falls sie ungenutzt bleiben, länger als die "nutzen oder verlieren"-Frist vieler Konkurrenten, aber immer noch eine feste Grenze, die AloSIMs Tarife nicht haben.
+  </p>
+
+  <h2>Preis-Schnappschuss (pro GB, aktuell gelistete Preise)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Ziel</th>
+          <th>Airhub</th>
+          <th>AloSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>USA</td><td>2,82 $ (3 GB) &approx; 0,94 $/GB</td><td>4,50 $ (1 GB)</td></tr>
+        <tr><td>Japan</td><td>1,55 $ (1 GB)</td><td>4,50 $ (1 GB)</td></tr>
+        <tr><td>Thailand</td><td>0,85 $ (1 GB)</td><td>5,00 $ (1 GB)</td></tr>
+        <tr><td>Europa (regional)</td><td>4,50 $ (4 GB) &approx; 1,13 $/GB</td><td>5,00 $ (1 GB)</td></tr>
+        <tr><td>Weltweit</td><td>11,50 $ (3 GB) &approx; 3,83 $/GB</td><td>kein fester Weltweit-Tarif gelistet</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Airhub verkauft größere Mehr-GB-Pakete, während AloSIM in festen Einzel-GB-Schritten bepreist, deshalb gleicht die Pro-GB-Rechnung oben die Paketgrößen zum Vergleich an. Selbst so gerechnet gewinnt Airhubs Preis pro GB in jedem hier geprüften Ziel; bei AloSIM zahlst du für die eingebaute Hushed-Nummer und die Wahlmöglichkeit zwischen festem GB-Kontingent und unbegrenzt, nicht für die günstigeren Rohdaten.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airhub:</strong> {{ airhubBest.code }}, {{ airhubDiscount | lower }}. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>AloSIM:</strong> {{ providerB.primaryCode }}, {{ alosimDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codedetails &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Airhubs eigener Affiliate-Code (ADAMANDLINDS) wendet gerade keinen Rabatt an, deshalb ist ESIMOFFER5 die Alternative. AloSIMs ALOSAVE ist ein öffentlicher Code, keiner von uns, aber der beste geprüfte, und er hat bisher sauber funktioniert.</p>
+  </div>
+
+  <h2>Ist Airhub oder AloSIM die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm Airhub, wenn&hellip;</h3>
+      <ul>
+        <li>Du den niedrigsten realistischen Preis pro GB willst und mit einem öffentlichen Code statt unserem defekten Code einverstanden bist</li>
+        <li>Du SMS und eine lokale Nummer direkt in den Daten-Tarif eingebaut haben willst, nicht als separate App-Ergänzung</li>
+        <li>Du für mehrere Reisende kaufst und Airhubs eigenen Mehrfach-eSIM-Rabatt (15% bei zwei, 25% bei drei) gegen einen einfachen Code abwägen willst</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm AloSIM, wenn&hellip;</h3>
+      <ul>
+        <li>Du eine Nummer willst, die in jedem Land gleich funktioniert, nicht eine länderspezifische lokale Nummer</li>
+        <li>Du festes GB-Kontingent und unbegrenzte Daten von einem einzigen Anbieter willst</li>
+        <li>Du lieber im Voraus kaufst, ohne dass für ungenutzte Daten eine Verfallsfrist tickt</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Airhubs eigener Affiliate-Code ist gerade defekt.</strong> ADAMANDLINDS wurde direkt an Airhubs Kasse getestet und wendet keinen Rabatt an; es wurde Airhub gemeldet und gilt als vorübergehendes Problem, kein eingestellter Code, aber ESIMOFFER5 (5% Rabatt) ist der, der gerade tatsächlich funktioniert.
+  </p>
+  <p>
+    <strong>Die beiden "Telefonnummer"-Funktionen lösen unterschiedliche Probleme.</strong> AloSIMs Hushed-Nummer ist eine kostenlose internationale Zweitleitung, eingerichtet in der eigenen App, die unabhängig vom Reiseland gleich funktioniert. Airhubs eingebaute Nummer und SMS sind an das Zielland gebunden und im Tarif selbst enthalten, ohne separate App-Einrichtung, aber Airhub bietet bei keinem der beiden Anbieter Telefonate an; wer wirklich Anrufe garantiert braucht, findet sie bei <a href="/simlocal/">SimLocal</a>s UK-Tarifen, die eine echte Nummer für Anrufe und SMS bündeln.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Airhub vs AloSIM: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, Airhub oder AloSIM?</h3>
+      <p>Airhub, in jedem hier geprüften Ziel. Die Mehr-Gigabyte-Pakete ergeben einen niedrigeren Preis pro GB als AloSIMs feste Einzel-GB-Preise, teils deutlich (besonders Thailand und Japan).</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Funktioniert Airhubs eigener Rabattcode?</h3>
+      <p>Gerade nicht. Airhubs eigener Affiliate-Code ADAMANDLINDS wendet an der Kasse keinen Rabatt an. Der öffentliche Code ESIMOFFER5 ist die Alternative.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Enthalten Airhub und AloSIM beide eine Telefonnummer?</h3>
+      <p>Beide, aber unterschiedlich. Airhub bündelt SMS und eine lokale Nummer direkt in die meisten Tarife. AloSIM kooperiert mit Hushed für eine kostenlose internationale Nummer, separat in der eigenen App nach dem Kauf eingerichtet, die in jedem Land gleich funktioniert.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Verfällt eines der beiden Datenpakete bei Nichtnutzung?</h3>
+      <p>Airhubs Daten verfallen ein Jahr nach dem Kauf, falls ungenutzt. AloSIMs Daten verfallen gar nicht, bis sie installiert und aktiviert werden, lassen sich also weiter im Voraus kaufen.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welcher Anbieter bietet unbegrenzte Daten?</h3>
+      <p>AloSIM. Es verkauft sowohl Tarife mit festem GB-Kontingent als auch unbegrenzte Tarife im selben Checkout. Airhub bietet ausschließlich festes GB-Kontingent.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, Airhub oder AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub, in jedem geprueften Ziel. Die Mehr-Gigabyte-Pakete ergeben einen niedrigeren Preis pro GB als AloSIMs feste Einzel-GB-Preise, teils deutlich, besonders in Thailand und Japan."}
+      },
+      {
+        "@type":"Question",
+        "name":"Funktioniert Airhubs eigener Rabattcode?",
+        "acceptedAnswer":{"@type":"Answer","text":"Aktuell nicht. Airhubs eigener Affiliate-Code ADAMANDLINDS wendet an der Kasse keinen Rabatt an. Der oeffentliche Code ESIMOFFER5 wird stattdessen empfohlen."}
+      },
+      {
+        "@type":"Question",
+        "name":"Enthalten Airhub und AloSIM beide eine Telefonnummer?",
+        "acceptedAnswer":{"@type":"Answer","text":"Beide, aber unterschiedlich. Airhub buendelt SMS und eine lokale Nummer direkt in die meisten Tarife. AloSIM kooperiert mit Hushed fuer eine kostenlose internationale Nummer, separat in der eigenen App eingerichtet, die in jedem Land gleich funktioniert."}
+      },
+      {
+        "@type":"Question",
+        "name":"Verfallen die Daten von Airhub oder AloSIM bei Nichtnutzung?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhubs Daten verfallen ein Jahr nach dem Kauf, falls ungenutzt. AloSIMs Daten verfallen erst nach Installation und Aktivierung, lassen sich also weiter im Voraus kaufen."}
+      },
+      {
+        "@type":"Question",
+        "name":"Bietet Airhub oder AloSIM unbegrenzte Daten an?",
+        "acceptedAnswer":{"@type":"Answer","text":"AloSIM, mit sowohl festem GB-Kontingent als auch unbegrenzten Tarifen im selben Checkout. Airhub bietet ausschliesslich festes GB-Kontingent."}
+      }
+    ]
+  }
+  </script>
+</div>

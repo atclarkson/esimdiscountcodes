@@ -3,6 +3,15 @@
     "description": "Erschwingliche eSIM-Tarife weltweit",
     "codes": {}
   },
+  "alosim": {
+    "description": "Einfache eSIM-Tarife für Reisen weltweit",
+    "codes": {
+      "ALOSAVE": {
+        "discount": "15% RABATT AUF ALLE TARIFE",
+        "description": "Bester AloSIM-Rabattcode, 15% Rabatt"
+      }
+    }
+  },
   "holafly": {
     "description": "Internationale eSIM-Tarife für Reisende",
     "codes": {
