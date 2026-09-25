@@ -176,5 +176,42 @@
         "description": "3 € Bonus auf dein Konto"
       }
     }
+  },
+  "airhub": {
+    "description": "Weltweite eSIM-Konnektivität",
+    "codes": {
+      "ADAMANDLINDS": {
+        "discount": "5% RABATT AUF ALLE TARIFE",
+        "description": "Unser eigener Code. Wendet an der Airhub-Kasse aktuell keinen Rabatt an. Wir haben es Airhub gemeldet und erwarten, dass das bald behoben wird."
+      },
+      "2025": {
+        "discount": "5% RABATT AUF ALLE TARIFE",
+        "description": "Öffentlicher Code. Wendet an der Airhub-Kasse aktuell keinen Rabatt an."
+      },
+      "SUMMER2025": {
+        "discount": "5% RABATT AUF ALLE TARIFE",
+        "description": "Öffentlicher Code. Wendet an der Airhub-Kasse aktuell keinen Rabatt an."
+      },
+      "MARCHFOREGYPT": {
+        "discount": "5% RABATT",
+        "description": "Öffentlicher Code für die Region Ägypten. Wendet an der Airhub-Kasse aktuell keinen Rabatt an."
+      },
+      "NAMERICA4": {
+        "discount": "4% RABATT",
+        "description": "Öffentlicher Code für die Region Nordamerika. Wendet an der Airhub-Kasse aktuell keinen Rabatt an."
+      },
+      "ESIMOFFER5": {
+        "discount": "5% RABATT",
+        "description": "Öffentlicher Code für alle Länder. Funktioniert bestätigt an der Airhub-Kasse, 5% Rabatt wird vor der Zahlung angezeigt. Aktuell der einzige Airhub-Code, den wir empfehlen."
+      },
+      "JPESIM5": {
+        "discount": "5% RABATT",
+        "description": "Öffentlicher Code für die Region Japan. Wendet an der Airhub-Kasse aktuell keinen Rabatt an."
+      },
+      "AIRHUBAPP05": {
+        "discount": "5% RABATT (NUR APP)",
+        "description": "Wird direkt auf Airhubs eigener Startseite als „App-exklusiver“ 5%-Rabatt an der Kasse beworben, wenn über die Airhub-Mobile-App bestellt wird. Von uns nicht getestet, da er an der regulären Web-Kasse nicht gilt; ESIMOFFER5 bleibt der Code, den wir für den Browser empfehlen."
+      }
+    }
   }
 }
