@@ -1,0 +1,157 @@
+<!-- Saily vs SimLocal Comparativa (Español) -->
+<div class="content-section">
+
+  {% set sailyPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set simlocalPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set simlocalEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set sailyDiscount = sailyPrimary.discount %}
+  {% set simlocalDiscount = (simlocalEsCode.discount if simlocalEsCode) or simlocalPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      <strong>Saily</strong> es la opción si quieres un paquete de seguridad (VPN, bloqueo de anuncios, bloqueo de malware) integrado en la propia eSIM, además de un perfil universal que sigue funcionando al cruzar fronteras. <strong>SimLocal</strong> es la opción si te importa más lo que pasa cuando algo sale mal: una política de reembolso incondicional, soporte por WhatsApp y, específicamente para un viaje al Reino Unido, un número de teléfono británico real incluido en el plan. Ninguna de las dos cosas aparece en una tabla de precios, así que lee las diferencias de abajo antes de decidir solo por el porcentaje de descuento.
+    </p>
+  </div>
+
+  <h2>Comparativa de características</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>&nbsp;</th>
+          <th>Saily</th>
+          <th>SimLocal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Mejor código</td><td>15% de descuento, en toda la tienda</td><td>10% de descuento, nuestro propio código</td></tr>
+        <tr><td>Extras de seguridad</td><td>VPN, bloqueo de anuncios/malware incluido</td><td>Ninguno</td></tr>
+        <tr><td>Una eSIM para varios países</td><td>Sí, un único perfil universal</td><td>No, planes por país/región</td></tr>
+        <tr><td>Política de reembolso</td><td>Reembolso total si nunca se activó (30 días)</td><td>Incondicional, cancela cuando quieras, sin justificar</td></tr>
+        <tr><td>Canal de soporte</td><td>Chat en vivo, correo</td><td>WhatsApp, correo, centro de ayuda</td></tr>
+        <tr><td>Número de teléfono incluido</td><td>No</td><td>Sí, en la mayoría de planes de Reino Unido</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">SimLocal no publica precios por país como Saily, así que esta comparativa se centra en lo que incluye cada plan en lugar de un precio por gigabyte, que tampoco sería una comparación justa dado lo distinto que es cada producto.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Saily:</strong> {{ providerA.primaryCode }}, {{ sailyDiscount | lower }}. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>SimLocal:</strong> {{ providerB.primaryCode }}, {{ simlocalDiscount | lower }}. Nuestro propio código, y el mejor de los cinco códigos funcionales de SimLocal; los otros cuatro dan solo un 5%. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">El código de Saily se aplica en toda la tienda sin importar el tamaño del plan. El de SimLocal funciona igual en la web y en la app.</p>
+  </div>
+
+  <h2>Un paquete de seguridad frente a un reembolso que de verdad puedes usar</h2>
+  <p>
+    Saily es la eSIM propia de NordVPN, creada por la misma empresa y no solo "asociada" con ella, así que cada plan incluye bloqueo de anuncios, bloqueo de malware y phishing, y una herramienta de ubicación virtual, además de la propia conectividad. También vende una única eSIM universal que sigue funcionando al entrar en cada nuevo país compatible, en lugar de cambiar de perfil en cada frontera como exigen la mayoría de sus competidores, SimLocal incluido. SimLocal no tiene nada de eso. Lo que sí tiene es una política de "No Quibble Refunds": recupera tu dinero si cambias de opinión, sin necesidad de justificarlo, una política de devolución mucho más flexible que la de la mayoría de vendedores de eSIM de esta web, Saily incluido, donde el reembolso suele depender de que la eSIM nunca se haya activado.
+  </p>
+  <p>
+    El soporte también es una diferencia real, no solo una insignia. El canal 24/7 de SimLocal es WhatsApp en lugar de un chat en la web, útil si prefieres escribir desde el móvil en pleno viaje en vez de buscar un portátil. Saily usa un chat en vivo más convencional, además de un centro de reembolsos automático que puede procesar casos elegibles sin necesidad de abrir un ticket de soporte.
+  </p>
+
+  <h2>Solo SimLocal incluye un número de teléfono real, y solo para el Reino Unido</h2>
+  <p>
+    La mayoría de los planes de SimLocal para el Reino Unido incluyen un número de teléfono británico completo para llamadas y mensajes, no solo datos, confirmado comprando uno directamente. Los planes de Saily son solo de datos en todas partes, sin llamadas ni mensajes en ningún destino. Si el plan es viajar al Reino Unido y tener un número que dar importa, esa es una función que solo ofrece SimLocal entre estos dos. Fuera del Reino Unido, ninguno de los dos incluye llamadas de voz.
+  </p>
+  <p>
+    Otra cosa a tener en cuenta si Saily está entre tus opciones: su web y su app estuvieron entre las bloqueadas en Turquía por el regulador de telecomunicaciones del país (BTK) desde mediados de 2025. Una eSIM comprada e instalada antes de aterrizar sigue funcionando una vez activa; el bloqueo solo afecta a comprar o recargar estando físicamente en Turquía. Según lo que hemos podido confirmar, SimLocal no aparece en esa misma lista de bloqueo, pero eso no es garantía de que no esté afectado, así que conviene comprobar el estado actual directamente en cualquiera de los dos casos.
+  </p>
+  <p>
+    Para conceptos básicos de configuración de eSIM y compatibilidad de dispositivos que aplican a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <h2>¿Saily o SimLocal es la mejor opción?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige Saily si&hellip;</h3>
+      <ul>
+        <li>Normalmente pagarías por una VPN o un bloqueador de anuncios al viajar de todos modos</li>
+        <li>Vas a cruzar varios países y no quieres una eSIM nueva en cada frontera</li>
+        <li>Viajas lo bastante a menudo como para que la suscripción Saily Ultra te compense</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige SimLocal si&hellip;</h3>
+      <ul>
+        <li>Quieres un reembolso real sin preguntas si el plan no te convence</li>
+        <li>Vas al Reino Unido y quieres un número real incluido con los datos</li>
+        <li>Prefieres escribir al soporte por WhatsApp en lugar de un chat en la web</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre Saily vs SimLocal</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Quién tiene el mayor descuento, Saily o SimLocal?</h3>
+      <p>El código HELLOSAILY de Saily da un 15% de descuento en toda la tienda. El código propio de SimLocal, ADAMANDLINDS, da un 10%, el mejor de sus cinco códigos funcionales.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos incluye VPN?</h3>
+      <p>Saily sí: cada plan incluye bloqueo de anuncios, bloqueo de malware y phishing, y una herramienta de ubicación virtual, desarrollados por la empresa matriz de NordVPN. SimLocal no tiene funciones de seguridad equivalentes.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo conseguir un reembolso con alguno de los dos?</h3>
+      <p>SimLocal anuncia una política de "No Quibble Refunds": dinero de vuelta si cambias de opinión, sin necesidad de justificarlo. Saily reembolsa un plan que nunca se instaló ni activó dentro de los 30 días, o uno en el que se usó menos del 1% de los datos.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos incluye un número de teléfono real?</h3>
+      <p>La mayoría de los planes de SimLocal para el Reino Unido incluyen un número de teléfono británico completo para llamadas y mensajes. Saily es solo de datos en todas partes, sin llamadas ni mensajes en ningún destino.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Hace falta una eSIM nueva en cada frontera?</h3>
+      <p>Con Saily no: vende una eSIM universal que sigue funcionando al entrar en cada nuevo país compatible. SimLocal vende planes por país y región, así que un viaje por varios países implica elegir el plan adecuado para cada tramo.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Funciona alguno de los dos en Turquía?</h3>
+      <p>La web y la app de Saily estuvieron entre las bloqueadas por el regulador de telecomunicaciones turco desde mediados de 2025; compra e instala antes de aterrizar, ya que el bloqueo solo afecta a compras hechas físicamente dentro de Turquía. SimLocal no aparece en esa misma lista de bloqueo, aunque eso no garantiza que no esté afectado.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Quién tiene el mayor descuento, Saily o SimLocal?",
+        "acceptedAnswer":{"@type":"Answer","text":"El código HELLOSAILY de Saily da un 15% de descuento en toda la tienda. El código propio de SimLocal, ADAMANDLINDS, da un 10%, el mejor de sus cinco códigos funcionales."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Saily o SimLocal incluyen VPN?",
+        "acceptedAnswer":{"@type":"Answer","text":"Saily sí: cada plan incluye bloqueo de anuncios, bloqueo de malware y phishing, y una herramienta de ubicación virtual, desarrollados por la empresa matriz de NordVPN. SimLocal no tiene funciones de seguridad equivalentes."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se puede conseguir un reembolso con Saily o SimLocal?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal anuncia una política de No Quibble Refunds: dinero de vuelta si se cambia de opinión, sin necesidad de justificarlo. Saily reembolsa un plan que nunca se instaló ni activó dentro de los 30 días, o uno en el que se usó menos del 1% de los datos."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Saily o SimLocal incluyen un número de teléfono real?",
+        "acceptedAnswer":{"@type":"Answer","text":"La mayoría de los planes de SimLocal para el Reino Unido incluyen un número de teléfono británico completo para llamadas y mensajes. Saily es solo de datos en todas partes, sin llamadas ni mensajes en ningún destino."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Hace falta una eSIM nueva en cada frontera con Saily o SimLocal?",
+        "acceptedAnswer":{"@type":"Answer","text":"Con Saily no, ya que vende una eSIM universal que sigue funcionando al entrar en cada nuevo país compatible. SimLocal vende planes por país y región, así que un viaje por varios países implica elegir el plan adecuado para cada tramo."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Funciona Saily o SimLocal en Turquía?",
+        "acceptedAnswer":{"@type":"Answer","text":"La web y la app de Saily estuvieron entre las bloqueadas por el regulador de telecomunicaciones turco desde mediados de 2025; una eSIM comprada e instalada antes de aterrizar sigue funcionando, pero no se puede comprar ni recargar estando físicamente dentro de Turquía. SimLocal no aparece en esa misma lista de bloqueo, aunque eso no es garantía de no estar afectado."}
+      }
+    ]
+  }
+  </script>
+</div>

@@ -1,0 +1,182 @@
+<!-- SimLocal Contenido (Español) -->
+<div class="content-section">
+
+  <!-- Respuesta rápida -->
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Mejor código de descuento de SimLocal &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Usa <strong>{{ provider.primaryCode }}</strong> para conseguir <strong>10% de descuento</strong> en cualquier plan eSIM de SimLocal, la mejor tasa que hemos encontrado. Es nuestro propio código, por eso lo mostramos primero aquí. Los otros cuatro códigos públicos de abajo dan un 5% menor, así que no hace falta buscar más.
+      <span class="callout-meta">Confirmado activo el <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("d 'de' LLLL 'de' yyyy") }}</time>.</span>
+    </p>
+  </div>
+
+  <!-- Titular -->
+  <h2>Qué hace realmente diferente a SimLocal</h2>
+  <p>
+    SimLocal aplica una política de "No Quibble Refunds" (reembolsos sin peros): cancela y recupera tu dinero si cambias de opinión, sin necesidad de dar explicaciones. Es una política de devolución mucho más flexible que la de la mayoría de vendedores de eSIM de esta web, donde un reembolso suele depender de que la eSIM nunca se haya activado.
+  </p>
+  <p>
+    El soporte también merece mención, porque no es lo que sugiere la insignia de esta página. SimLocal no tiene un chat en vivo en su web: su canal de soporte 24/7 es <strong>WhatsApp</strong>, además de correo electrónico y un centro de ayuda. Si eres de los que prefiere escribir al soporte desde el móvil en pleno viaje en lugar de buscar un portátil, eso encaja mejor que un chat perdido en una web de escritorio.
+  </p>
+
+  <!-- Compra real, no solo una revisión de la página de marketing -->
+  <h2>Compramos un plan del Reino Unido nosotros mismos</h2>
+  <p>
+    Elegimos SimLocal para un viaje al Reino Unido en gran parte por una característica: la mayoría de sus planes para el Reino Unido incluyen un número de teléfono británico completo, no solo datos, así que pudimos recibir llamadas y mensajes en un número local real en lugar de solo compartir datos por hotspot. Eso no es algo que un competidor de GB fijo como <a href="/alosim/">AloSIM</a> ofrezca de la misma manera; el número de AloSIM, basado en Hushed, es una línea internacional aparte que se configura dentro de su propia app, no un número específico del Reino Unido incluido en el plan. En el pago, <strong>ADAMANDLINDS</strong> se aplicó sin problemas para un 10% de descuento.
+  </p>
+
+  <!-- Códigos -->
+  <div class="content-box content-box--tan">
+    <h3>Códigos activos</h3>
+    <ul>
+      <li><strong>ADAMANDLINDS</strong>: 10% de descuento en todos los planes (nuestro propio código)</li>
+      <li><strong>EMMANUEL</strong>: 5% de descuento en eSIM</li>
+      <li><strong>LUKEPALMS</strong>: 5% de descuento en tu primera eSIM</li>
+      <li><strong>SAVANNAH</strong>: 5% de descuento extra en tu plan</li>
+      <li><strong>TWOROAMING</strong>: 5% de descuento en tu pedido</li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Si un código no se aplica, actualiza el carrito o prueba en una ventana privada y vuelve a intentarlo.</p>
+  </div>
+
+  <!-- Real operational note -->
+  <h2>Dos detalles que la mayoría de análisis de SimLocal se saltan</h2>
+  <p>
+    SimLocal vende <strong>planes eSIM específicos para estudiantes</strong> junto a sus opciones habituales por país y región, pensados para estancias más largas que un viaje corto. Si te vas a algún sitio para un semestre en lugar de una semana, merece la pena revisar esos planes en vez de uno turístico estándar pensado para una validez más corta.
+  </p>
+  <p>
+    También mantiene una pequeña red de tiendas físicas en algunos aeropuertos, además de la app y la web. Llevamos años comprando eSIMs de SimLocal y solo hace poco descubrimos esto: un mostrador atendido de verdad en Heathrow. La mayoría de competidores de esta web solo funcionan por app y navegador, así que es una diferencia real si prefieres que alguien te guíe en persona en lugar de seguir un artículo de ayuda a 9.000 metros de altura.
+  </p>
+
+  <img class="content-photo"
+       src="https://media.adamandlinds.com/photos/large/ab82ac50-08d1-42fc-abf1-af2c5119b790.jpg"
+       alt="Un quiosco de eSIM de SimLocal dentro del aeropuerto de Heathrow con pantallas que dicen &quot;Compra aquí tu eSIM local&quot;, un mostrador atendido y expositores de tarjetas SIM"
+       width="3024" height="4032">
+  <p class="content-photo-caption">El mostrador real de SimLocal en Heathrow, visto en un viaje reciente por Londres.</p>
+
+  <p>
+    La propia app puede guardar hasta 10 perfiles de eSIM en un mismo dispositivo, lo cual importa si sueles conservar eSIMs de destinos anteriores en lugar de borrarlas después de cada viaje.
+  </p>
+
+  <!-- How to -->
+  <h2>Cómo aplicar un código de SimLocal en 3 pasos</h2>
+  <div class="content-box">
+    <ol>
+      <li>Copia <strong>ADAMANDLINDS</strong></li>
+      <li>Elige un plan por país, regional o de estudiante para tu destino en SimLocal</li>
+      <li>Pega el código en el campo de promoción al pagar y confirma que el precio baja un 10% antes de completar el pago</li>
+    </ol>
+    <p class="content-note">El descuento se muestra antes de completar el pago.</p>
+  </div>
+
+  <!-- Decision help -->
+  <h2>¿SimLocal es la opción adecuada para tu viaje?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Encaja bien si&hellip;</h3>
+      <ul>
+        <li>Quieres un reembolso sin preguntas si la eSIM no funciona como esperabas</li>
+        <li>Prefieres escribir al soporte por WhatsApp en lugar de buscar en un widget de ayuda</li>
+        <li>Vas a estudiar en el extranjero y quieres un plan pensado para una estancia larga</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Considera alternativas si&hellip;</h3>
+      <ul>
+        <li>Quieres chat en vivo 24/7 en la propia web: prueba <a href="/holafly/">Holafly</a> o <a href="/saily/">Saily</a></li>
+        <li>Quieres datos ilimitados en lugar de un bloque fijo de GB: mira <a href="/holafly/">Holafly</a></li>
+        <li>No estás cerca de una tienda física de SimLocal y tampoco necesitas ayuda presencial</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>
+    Para conceptos básicos de configuración de eSIM que aplican más allá de SimLocal, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Usa el código al pagar</h2>
+    <p>Copia <code>ADAMANDLINDS</code> y pégalo en el campo de promoción</p>
+    <p>10% de descuento en cualquier plan eSIM de SimLocal.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre el código de SimLocal</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Cuál es el mejor código ahora mismo?</h3>
+      <p><strong>ADAMANDLINDS</strong>: 10% de descuento en todos los planes, la mejor tasa disponible. Es nuestro propio código, por eso se muestra primero; los otros cuatro códigos funcionales dan un 5% menor.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿De verdad puedo conseguir un reembolso?</h3>
+      <p>Sí. SimLocal anuncia una política de "No Quibble Refunds": recupera tu dinero si cambias de opinión, sin necesidad de justificarlo.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Hay chat en vivo?</h3>
+      <p>No un widget de chat en la web. El canal de soporte 24/7 de SimLocal es WhatsApp, además de correo electrónico y un centro de ayuda.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿SimLocal tiene planes para estudiantes en el extranjero?</h3>
+      <p>Sí, además de sus eSIM habituales por país y región, SimLocal vende planes específicos para estudiantes, pensados para una estancia más larga que un viaje corto típico.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo comprar una eSIM de SimLocal en persona?</h3>
+      <p>En un puñado de ubicaciones de aeropuerto, sí. Es uno de los pocos proveedores de esta web con presencia física de algún tipo; el resto solo funciona por app y navegador.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuántas eSIM puedo guardar en la app?</h3>
+      <p>Hasta 10 perfiles de eSIM guardados en un mismo dispositivo, así que no hace falta borrar las eSIM de destinos anteriores después de cada viaje.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Un plan de SimLocal para el Reino Unido incluye un número de teléfono real?</h3>
+      <p>La mayoría de los planes de SimLocal para el Reino Unido sí: un número de teléfono británico completo para llamadas y mensajes, no solo datos. Compramos uno nosotros mismos y lo confirmamos.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Cuál es el mejor código de descuento de SimLocal ahora mismo?",
+        "acceptedAnswer":{"@type":"Answer","text":"ADAMANDLINDS da un 10% de descuento en todos los planes de SimLocal, la mejor tasa disponible. Es nuestro propio código, por eso se muestra primero; los otros cuatro códigos funcionales dan un 5% menor."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se puede conseguir de verdad un reembolso de SimLocal?",
+        "acceptedAnswer":{"@type":"Answer","text":"Sí. SimLocal anuncia una política de No Quibble Refunds: dinero de vuelta si cambias de opinión, sin necesidad de justificarlo."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Hay chat en vivo en SimLocal?",
+        "acceptedAnswer":{"@type":"Answer","text":"No un widget de chat en la web. El canal de soporte 24/7 de SimLocal es WhatsApp, además de correo electrónico y un centro de ayuda."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿SimLocal tiene planes eSIM para estudiantes?",
+        "acceptedAnswer":{"@type":"Answer","text":"Sí, además de sus eSIM habituales por país y región, SimLocal vende planes específicos para estudiantes pensados para una estancia más larga que un viaje corto típico."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se puede comprar una eSIM de SimLocal en persona?",
+        "acceptedAnswer":{"@type":"Answer","text":"En un puñado de ubicaciones de aeropuerto, sí, además de la app y la web."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuántas eSIM puede guardar la app de SimLocal?",
+        "acceptedAnswer":{"@type":"Answer","text":"Hasta 10 perfiles de eSIM guardados en un mismo dispositivo."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Un plan de SimLocal para el Reino Unido incluye un número de teléfono real?",
+        "acceptedAnswer":{"@type":"Answer","text":"La mayoría de los planes de SimLocal para el Reino Unido incluyen un número de teléfono británico completo para llamadas y mensajes, no solo datos. Confirmado comprando uno directamente."}
+      }
+    ]
+  }
+  </script>
+</div>

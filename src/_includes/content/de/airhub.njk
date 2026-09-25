@@ -1,0 +1,176 @@
+<!-- Airhub Inhalt (Deutsch) -->
+<div class="content-section">
+
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  {% set bestCode = provider.codes | bestValidCode %}
+  {% set deO = codesDe[providerKey] %}
+  {% set primaryDe = deO.codes[provider.primaryCode] if (deO and deO.codes and deO.codes[provider.primaryCode]) else null %}
+  {% set bestDe = deO.codes[bestCode.code] if (deO and deO.codes and deO.codes[bestCode.code]) else null %}
+  {% set primaryDiscount = (primaryDe.discount if primaryDe) or primary.discount %}
+  {% set bestDiscount = (bestDe.discount if bestDe) or bestCode.discount %}
+
+  <div class="content-callout">
+    <h2>Bester Airhub Rabattcode &bull; {{ buildMonthYear }}</h2>
+    {% if primary.isInvalid %}
+    <p>
+      Unser eigener Code, <strong>{{ provider.primaryCode }}</strong>, wendet an Airhubs Kasse gerade keinen Rabatt an. Wir haben ihn direkt getestet und das bestätigt, dann Airhub darauf hingewiesen; wir gehen von einem vorübergehenden Problem auf deren Seite aus und zeigen ihn weiterhin als unseren Code, während wir auf eine Behebung warten. In der Zwischenzeit ist <strong>{{ bestCode.code }}</strong> der einzige Airhub-Code, den wir noch als funktionierend bestätigt haben, für <strong>{{ bestDiscount | lower }}</strong>.
+      <span class="callout-meta">Geprüft am <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("d. LLLL yyyy") }}</time>.</span>
+    </p>
+    {% else %}
+    <p>
+      Verwende <strong>{{ provider.primaryCode }}</strong> für <strong>{{ primaryDiscount | lower }}</strong>. Das ist unser eigener Code, deshalb zeigen wir ihn zuerst.
+      <span class="callout-meta">Bestätigt aktiv am <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("d. LLLL yyyy") }}</time>.</span>
+    </p>
+    {% endif %}
+  </div>
+
+  <!-- Headline -->
+  <h2>Was Airhub wirklich anders macht</h2>
+  <p>
+    Die meisten günstigen eSIM-Apps verkaufen nur Daten und sonst nichts. Airhub-Tarife enthalten SMS und, an vielen Zielen, eine lokale Telefonnummer zusätzlich zu den Daten, was für diese Preisklasse ungewöhnlich ist: <a href="/de/holafly/">Holafly</a> und <a href="/saily/">Saily</a> verzichten bei ihren Standardtarifen komplett auf SMS, und keiner der beiden gibt dir eine lokale Nummer. Airhub enthält immer noch keine Telefonanrufe, ist also kein vollständiger Ersatz für eine Telefonnummer, aber wenn du eine Verifizierungs-SMS empfangen oder eine Nummer angeben musst, die nicht deine eigene ist, deckt das genau diesen Fall ab, ohne dass du etwas dazubuchen musst.
+  </p>
+  <p>
+    Der andere echte Unterschied liegt darin, wie die Daten verpackt sind. Airhub verkauft mehrere Gigabyte am Stück (3 GB, 4 GB) statt einzelner Tages- oder GB-Einheiten wie die meisten Wettbewerber, und in günstigeren Zielländern landet das bei wirklich niedrigen Preisen pro GB: Thailand für 0,85 $ pro GB und Japan für 1,55 $ pro GB unterbieten beide, was <a href="/airalo/">Airalo</a> oder Saily für dieselbe Menge im selben Land verlangen. Wenn du gar keine Obergrenze willst statt eines größeren Datenblocks, sind Holaflys pauschale Unbegrenzt-Tarife die bessere Wahl; Airhub ist für Leute, die ungefähr wissen, wie viele Daten sie brauchen, und dafür weniger pro Gigabyte zahlen wollen.
+  </p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Code-Status, direkt an der Kasse geprüft</h3>
+    <ul>
+      <li><strong>ESIMOFFER5</strong>: 5% Rabatt, bestätigt funktionierend (der einzige, der aktuell greift)</li>
+      <li><strong>{{ provider.primaryCode }}</strong> (unser Code): wendet gerade keinen Rabatt an, Airhub gemeldet, voraussichtlich vorübergehend</li>
+      <li><strong>2025, SUMMER2025, MARCHFOREGYPT, NAMERICA4, JPESIM5</strong>: getestet, keiner davon wendet aktuell einen Rabatt an</li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;">Wir prüfen jeden Code direkt an Airhubs Kasse, verwende also lieber ESIMOFFER5 oben statt einem der anderen, bis sich diese Liste ändert.</p>
+  </div>
+
+  <!-- Real operational note -->
+  <h2>Airhubs App fährt auch eigene Aktionen, getrennt von diesen Codes</h2>
+  <p>
+    Airhubs eigene Website bewirbt aktuell eine unverbindliche 200-MB-Testversion für Neukunden, dazu einen Mengenrabatt, wenn du mehr als eine eSIM in derselben Bestellung kaufst: 15% Rabatt bei zwei Stück, 25% bei drei. Außerdem gibt es einen eigenen App-exklusiven Code. Wir haben weder den App-exklusiven Code noch die Mengenpreise selbst getestet, listen sie also nicht als geprüfte Codes auf dieser Seite, aber wenn du eSIMs für mehr als einen Reisenden oder ein Gerät auf derselben Reise kaufst, lohnt es sich, diesen Bundle-Preis mit der Anwendung von {{ bestCode.code }} auf getrennte Bestellungen zu vergleichen, bevor du zur Kasse gehst.
+  </p>
+
+  <!-- How to -->
+  <h2>So verwendest du einen Airhub-Code in 3 Schritten</h2>
+  <div class="content-box">
+    <ol>
+      <li>Kopiere <strong>{{ bestCode.code }}</strong></li>
+      <li>Wähle ein Länder-, Regional- oder globales Datenpaket für dein Ziel in der Airhub-App oder auf airhubapp.com</li>
+      <li>Gib den Code an der Kasse ein und prüfe, ob der Preis um {{ bestDiscount | lower }} sinkt, bevor du bezahlst</li>
+    </ol>
+    <p class="content-note">Der Rabatt wird vor Abschluss der Zahlung angezeigt.</p>
+  </div>
+
+  <!-- Decision help -->
+  <h2>Ist Airhub die richtige Wahl für deine Reise</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Gut geeignet, wenn&hellip;</h3>
+      <ul>
+        <li>Du SMS und eine lokale Nummer zusammen mit den Daten willst, nicht als Extra verkauft</li>
+        <li>Du irgendwohin reist, wo Airhub scharf kalkuliert, wie Thailand oder Japan, und ungefähr weißt, wie viele GB du brauchst</li>
+        <li>Du für mehrere Reisende einkaufst und Airhubs eigenen Mehrfach-eSIM-Rabatt mit einem einfachen Code vergleichen willst</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Alternativen in Betracht ziehen, wenn&hellip;</h3>
+      <ul>
+        <li>Du eine echte Telefonnummer mit garantierten Anrufen und SMS willst, nicht nur SMS: <a href="/simlocal/">SimLocals</a> UK-Tarife enthalten eine (wir haben selbst eine gekauft und bestätigt)</li>
+        <li>Du überhaupt nicht über ein Datenlimit nachdenken willst: Holaflys pauschale Unbegrenzt-Tarife kosten mehr, dafür musst du den Verbrauch nicht im Blick behalten</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Savings examples -->
+  <h2>So sieht der Rabatt aus</h2>
+  <div class="content-box">
+    <ul>
+      <li>Thailand 1 GB für 0,85 $ &rarr; 5% Rabatt spart etwa 0,04 $</li>
+      <li>Japan 1 GB für 1,55 $ &rarr; 5% Rabatt spart etwa 0,08 $</li>
+      <li>USA 3 GB für 2,82 $ &rarr; 5% Rabatt spart etwa 0,14 $</li>
+      <li>Europa regional 4 GB für 4,50 $ &rarr; 5% Rabatt spart etwa 0,23 $</li>
+    </ul>
+    <p class="content-note">Airhubs Preise sind schon vor jedem Code niedrig, der Code fällt hier also weniger ins Gewicht als bei einem teureren Anbieter; die eigentliche Ersparnis kommt von Airhubs Preis pro GB selbst, nicht von den 5%.</p>
+  </div>
+
+  <p>
+    Zur eSIM-Gerätekompatibilität siehe unseren <a href="/compatible-devices/">Guide zu kompatiblen eSIM-Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Code an der Kasse verwenden</h2>
+    <p>Kopiere <code>{{ bestCode.code }}</code> und füge ihn ins Rabattfeld ein</p>
+    <p>{{ bestDiscount | lower }} auf jeden Airhub-Tarif.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Airhub Rabattcode: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist gerade der beste Airhub-Code</h3>
+      <p><strong>ESIMOFFER5</strong>: 5% Rabatt, der einzige Code, den wir aktuell an der Kasse bestätigt haben. Unser eigener Code, {{ provider.primaryCode }}, funktioniert momentan nicht; wir haben es Airhub gemeldet und erwarten eine baldige Lösung.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Warum funktioniert euer eigener Code, {{ provider.primaryCode }}, nicht</h3>
+      <p>Wir haben ihn direkt an Airhubs Kasse getestet, und er wendet gerade keinen Rabatt an. Wir haben das Airhub gemeldet und gehen von einem vorübergehenden Problem aus statt einem eingestellten Code, deshalb führen wir ihn weiterhin als unseren, während wir auf Bestätigung der Behebung warten.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Sind bei Airhub Anrufe enthalten</h3>
+      <p>Nein. Airhub-Tarife enthalten Daten und bei den meisten Tarifen SMS und eine lokale Nummer, aber keine Telefonanrufe. Nutze eine VoIP-App über die Datenverbindung, oder schau bei SimLocals UK-Tarifen vorbei, wenn du eine echte Nummer mit garantierten Anrufen brauchst.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Gibt es eine kostenlose Testversion</h3>
+      <p>Airhubs eigene Website bewirbt eine unverbindliche 200-MB-Testversion für Neukunden. Wir haben sie nicht selbst getestet, behandle sie also eher als Angebot, das du direkt auf deren Website prüfst, statt als hier verifizierten Anspruch.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Ist es günstiger, mehrere eSIMs auf einmal zu kaufen</h3>
+      <p>Airhub bewirbt einen Mengenrabatt, 15% für zwei eSIMs und 25% für drei, in derselben Bestellung gekauft. Das ist ein separates Angebot zu den Codes auf dieser Seite, und wir haben es nicht getestet, vergleiche also den Gesamtpreis mit der Anwendung von {{ bestCode.code }} auf einzelne Bestellungen, bevor du kaufst.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Wie lange sind Airhub-eSIMs gültig</h3>
+      <p>Airhub-eSIMs verfallen ein Jahr nach dem Kauf, wenn sie nicht genutzt werden. Einmal aktiviert, laufen einzelne Tarife je nach Paket 5 bis 30 Tage.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist gerade der beste Airhub-Rabattcode?",
+        "acceptedAnswer":{"@type":"Answer","text":"ESIMOFFER5 gibt 5% Rabatt und ist der einzige Airhub-Code, der aktuell an der Kasse bestätigt funktioniert. Airhubs eigener Code, ADAMANDLINDS, wendet momentan keinen Rabatt an und wurde Airhub gemeldet."}
+      },
+      {
+        "@type":"Question",
+        "name":"Warum funktioniert der Code ADAMANDLINDS bei Airhub nicht?",
+        "acceptedAnswer":{"@type":"Answer","text":"Direkte Tests an Airhubs Kasse haben bestätigt, dass er momentan keinen Rabatt anwendet. Das wurde Airhub gemeldet und gilt als vermutlich vorübergehendes Problem statt eines eingestellten Codes."}
+      },
+      {
+        "@type":"Question",
+        "name":"Sind bei Airhub Anrufe enthalten?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nein. Airhub-Tarife enthalten Daten und bei den meisten Tarifen SMS und eine lokale Nummer, aber keine Telefonanrufe."}
+      },
+      {
+        "@type":"Question",
+        "name":"Bietet Airhub eine kostenlose Testversion?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhubs eigene Website bewirbt eine unverbindliche 200-MB-Testversion für Neukunden, allerdings wurde diese nicht unabhängig getestet."}
+      },
+      {
+        "@type":"Question",
+        "name":"Ist es günstiger, mehrere Airhub-eSIMs auf einmal zu kaufen?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub bewirbt einen Mengenrabatt von 15% für zwei eSIMs und 25% für drei in derselben Bestellung, getrennt von den hier aufgeführten Rabattcodes."}
+      },
+      {
+        "@type":"Question",
+        "name":"Wie lange sind Airhub-eSIMs gültig?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub-eSIMs verfallen ein Jahr nach dem Kauf, wenn sie ungenutzt bleiben. Aktivierte Tarife laufen je nach Paket typischerweise 5 bis 30 Tage."}
+      }
+    ]
+  }
+  </script>
+</div>

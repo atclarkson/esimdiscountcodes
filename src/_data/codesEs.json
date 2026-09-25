@@ -96,5 +96,30 @@
         "description": "Código promocional, 10% de descuento"
       }
     }
+  },
+  "simlocal": {
+    "description": "Planes eSIM locales en todo el mundo",
+    "codes": {
+      "ADAMANDLINDS": {
+        "discount": "10% DE DESCUENTO EN TODOS LOS PLANES",
+        "description": "Nuestro propio código de SimLocal, 10% de descuento en todos los planes eSIM, la mejor tasa disponible"
+      },
+      "EMMANUEL": {
+        "discount": "5% DE DESCUENTO EN eSIM",
+        "description": "Código público de descuento de SimLocal, 5% de descuento en eSIM"
+      },
+      "LUKEPALMS": {
+        "discount": "5% DE DESCUENTO EN TU PRIMERA eSIM",
+        "description": "Código público de descuento de SimLocal, 5% de descuento en tu primera eSIM"
+      },
+      "SAVANNAH": {
+        "discount": "5% DE DESCUENTO EXTRA EN TU PLAN",
+        "description": "Código público de descuento de SimLocal, 5% de descuento extra en tu plan"
+      },
+      "TWOROAMING": {
+        "discount": "5% DE DESCUENTO EN TU PEDIDO",
+        "description": "Código público de descuento de SimLocal, 5% de descuento en tu pedido"
+      }
+    }
   }
 }
