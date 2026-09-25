@@ -1,0 +1,153 @@
+<!-- ByteSIM vs RedteaGO Comparison Content -->
+<div class="content-section">
+
+  {% set bytesimPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set redteagoPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      This isn't really a "which is cheaper" comparison, it's a "what do you actually need" one. <strong>ByteSIM</strong> sells real local phone numbers, calls and texts included, in a handful of countries, at a higher price and with an ID-verification step. <strong>RedteaGO</strong> sells data and nothing else by default, at some of the lowest starting prices on this site, with calls and texts only on plans specifically labeled for it. Pick ByteSIM if a working local number matters to your trip. Pick RedteaGO if all you want is cheap data.
+    </p>
+  </div>
+
+  <h2>The Core Difference: A Real Phone Number vs. Data-Only by Default</h2>
+  <p>
+    ByteSIM is unusual among the cheap data-only eSIM apps on this site because it also sells real local phone numbers, with calls, texts, hotspot sharing, and a local IP address, in select countries including the US, Canada, UK, France, Spain, Australia, Vietnam, South Korea, and Thailand. We bought one ourselves: ByteSIM's Spain "Mega Plan with Unlimited Calls & EU Roaming," which came with 100GB of Spain data, 15GB of EU roaming data, unlimited calls within Spain, 500 minutes of EU roaming calls, and a real <strong>+34 Spanish phone number</strong>, for 27 days. Getting that number required uploading a passport photo and a selfie for ID verification, which ByteSIM's own site says applies only to local-number plans, not its regular data-only travel eSIMs.
+  </p>
+  <p>
+    RedteaGO's own FAQ says plainly that call and text service is "only available in certain regions," on plans marked with a separate "Calls/Texts Available" label, plus a distinct Call & Text eSIM package sold apart from the regular data plans. Most RedteaGO plans are data-only. If a working phone number is part of what you're buying, RedteaGO isn't the default answer the way ByteSIM's number plans are; you'd need to specifically find a labeled plan or the separate Call & Text package.
+  </p>
+
+  <h2>Price and Feature Snapshot</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>ByteSIM</th>
+          <th>RedteaGO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Real local phone number</td><td>Yes, in select countries (ID verification required)</td><td>No by default; only on plans labeled "Calls/Texts Available," or a separate package</td></tr>
+        <tr><td>Cheapest advertised starting price</td><td>Varies by destination</td><td>From $0.52 (Europe, 37 countries), $0.70 (US, Japan, Thailand)</td></tr>
+        <tr><td>Spain, 1GB-equivalent data</td><td>$13.90 (100GB + 15GB EU roaming + unlimited Spain calls + 500 EU roaming minutes, 27 days), $13.20 with the automatic sale</td><td>$2 (1GB)</td></tr>
+        <tr><td>Unlimited data plan</td><td>Not offered</td><td>Not offered; fixed data buckets only</td></tr>
+        <tr><td>Hotspot / tethering</td><td>Included on local-number plans</td><td>Confirmed in all countries and regions RedteaGO operates in</td></tr>
+        <tr><td>Countries covered</td><td>Local numbers in 9 select countries; broader data-only coverage separately</td><td>180+ countries and regions</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">The Spain row isn't apples-to-apples on purpose: RedteaGO's $2 buys 1GB of data and nothing else, while ByteSIM's $13.90 buys a much bigger data allowance plus unlimited local calls, EU roaming minutes, and a real phone number attached to it. Compare the actual plan you'd buy for your trip, not just the headline price.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>ByteSIM:</strong> {{ providerA.primaryCode }}, advertised as 10% off but tested at roughly 5% in practice. <a href="/bytesim/">Full code list &rarr;</a></li>
+      <li><strong>RedteaGO:</strong> {{ providerB.primaryCode }}, {{ redteagoPrimary.discount | lower }}. <a href="/redteago/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Neither code is a huge percentage. ByteSIM's real-world savings landed close to what its own automatic site-wide sale already applies with no code needed, so check the price at checkout before assuming the advertised 10%. RedteaGO's 5% is a public code, not one of ours, but it's the best rate we've verified, and its already-low per-GB pricing means even a modest percentage can still beat a bigger discount on a pricier competitor.</p>
+  </div>
+
+  <h2>Is ByteSIM or RedteaGO the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with ByteSIM if&hellip;</h3>
+      <ul>
+        <li>You need a real local number that can actually receive calls and texts, not just data</li>
+        <li>Your destination is one of ByteSIM's supported local-number countries</li>
+        <li>You're fine uploading ID and paying more upfront for a number-included bundle</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with RedteaGO if&hellip;</h3>
+      <ul>
+        <li>You just want data at the lowest realistic starting price and don't need a phone number</li>
+        <li>Your destination isn't one of ByteSIM's local-number countries</li>
+        <li>You want to hotspot a laptop or tablet and are fine with a fixed data bucket instead of unlimited</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>ByteSIM's billing doesn't start until you tap activate, even after ID verification is done.</strong> In our own test, the eSIM didn't come online right away after verification, and ByteSIM's WhatsApp support explained that nothing counts against the plan until activation is actually tapped, then proactively checked back in about two hours later to confirm it had come online. RedteaGO works differently on this front: its FAQ states data top-ups are non-refundable because the plan activates immediately once the purchase is complete, so there's no equivalent grace period once you've bought in.
+  </p>
+  <p>
+    <strong>"Calls/Texts Available" is the detail to actually check on RedteaGO, not assume.</strong> RedteaGO's FAQ is explicit that most plans are data-only and that voice/text support is limited to labeled plans or its separate Call & Text eSIM package. ByteSIM doesn't have that ambiguity for its number plans: buying the Spain Mega Plan, for example, meant unlimited Spain calls and EU roaming minutes were simply included, not something to hunt for on the product page.
+  </p>
+  <p>
+    For eSIM device compatibility that applies to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide. If a real local number matters more than price, our <a href="/compare/bytesim-vs-alosim/">ByteSIM vs AloSIM comparison</a> covers a real number against a free virtual one instead.
+  </p>
+
+  <!-- FAQ -->
+  <h2>ByteSIM vs RedteaGO FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, ByteSIM or RedteaGO</h3>
+      <p>For plain data, RedteaGO, with starting prices from $0.52 to $2.90 depending on the region. ByteSIM's data-only pricing varies by destination, and its number-included plans (like the Spain bundle we bought at $13.90, $13.20 with the automatic sale) cost more because they bundle in calls and a much larger data allowance, not because ByteSIM's data itself is pricier.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either give you a real phone number</h3>
+      <p>ByteSIM does, in select countries including the US, Canada, UK, France, Spain, Australia, Vietnam, South Korea, and Thailand. RedteaGO doesn't by default; its own FAQ says calls and texts are only on plans labeled "Calls/Texts Available," plus a separate Call & Text eSIM package.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Do I need to verify my identity for either provider</h3>
+      <p>Only for ByteSIM, and only on its local-number plans, per local telecom regulation; ByteSIM's own site says most of its travel eSIM plans don't require verification. RedteaGO's own materials don't mention an identity-verification requirement for its plans.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either offer unlimited data</h3>
+      <p>No. Neither provider was found to offer a flat unlimited-data plan. RedteaGO sells fixed data buckets (2GB, 5GB, and similar), and ByteSIM's plans, including the number-included ones, are sold with specific GB allowances too.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I get a refund if I don't end up using the plan</h3>
+      <p>RedteaGO's FAQ says no: data top-ups are non-refundable because the plan activates immediately on purchase. ByteSIM doesn't start billing until you tap activate, even after ID verification, so there's more room before it counts against you, though that's a billing-timing detail rather than a refund policy.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which one supports hotspot or tethering</h3>
+      <p>Both, in the plans we could confirm it for. RedteaGO's FAQ states hotspot sharing is available in all countries and regions it operates in. ByteSIM's local-number plans include hotspot sharing as part of the bundle.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, ByteSIM or RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"For plain data, RedteaGO, with starting prices from $0.52 to $2.90 depending on the region. ByteSIM's data-only pricing varies by destination, and its number-included plans, like the Spain bundle purchased at $13.90 (or $13.20 with the automatic sale), cost more because they bundle in calls and a much larger data allowance, not because ByteSIM's data itself is pricier."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does ByteSIM or RedteaGO give you a real phone number?",
+        "acceptedAnswer":{"@type":"Answer","text":"ByteSIM does, in select countries including the US, Canada, UK, France, Spain, Australia, Vietnam, South Korea, and Thailand. RedteaGO doesn't by default; its own FAQ states calls and texts are only available on plans labeled 'Calls/Texts Available,' plus a separate Call & Text eSIM package."}
+      },
+      {
+        "@type":"Question",
+        "name":"Do you need to verify your identity with ByteSIM or RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"Only with ByteSIM, and only for its local-number plans, per local telecom regulation. ByteSIM's own site states most of its travel eSIM plans don't require verification. RedteaGO's own materials don't mention an identity-verification requirement for its plans."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does ByteSIM or RedteaGO offer unlimited data?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. Neither provider was found to offer a flat unlimited-data plan. RedteaGO sells fixed data buckets, and ByteSIM's plans, including its number-included ones, are sold with specific GB allowances as well."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I get a refund if I don't use a ByteSIM or RedteaGO plan?",
+        "acceptedAnswer":{"@type":"Answer","text":"RedteaGO's FAQ states data top-ups are non-refundable because the plan activates immediately on purchase. ByteSIM does not start billing until activation is tapped, even after ID verification is complete, which gives more room before it counts against the plan, though that is a billing-timing detail rather than a refund policy."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does ByteSIM or RedteaGO support hotspot or tethering?",
+        "acceptedAnswer":{"@type":"Answer","text":"Both do, in the plans this was confirmed for. RedteaGO's FAQ states hotspot sharing is available in all countries and regions it operates in. ByteSIM's local-number plans include hotspot sharing as part of the bundle."}
+      }
+    ]
+  }
+  </script>
+</div>
