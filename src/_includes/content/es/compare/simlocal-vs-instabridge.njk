@@ -1,0 +1,154 @@
+<!-- Comparativa SimLocal vs Instabridge (Español) -->
+<div class="content-section">
+
+  {% set simlocalBest = providerA.codes | bestValidCode %}
+  {% set instabridgeBest = providerB.codes | bestValidCode %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set simlocalEsCode = esA.codes[simlocalBest.code] if (esA and esA.codes and simlocalBest and esA.codes[simlocalBest.code]) else null %}
+  {% set instabridgeEsCode = esB.codes[instabridgeBest.code] if (esB and esB.codes and instabridgeBest and esB.codes[instabridgeBest.code]) else null %}
+  {% set simlocalDiscount = (simlocalEsCode.discount if simlocalEsCode) or simlocalBest.discount %}
+  {% set instabridgeDiscount = (instabridgeEsCode.discount if instabridgeEsCode) or instabridgeBest.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      <strong>SimLocal</strong> es la compra más segura si algo sale mal: una política de reembolso sin preguntas de verdad, soporte por WhatsApp y (para viajes concretamente a Reino Unido) un número de teléfono británico real incluido en el plan. <strong>Instabridge</strong> responde con un código de descuento mayor, una base de datos gratuita de puntos de WiFi integrada en la misma app y paquetes de datos pequeños más baratos en varios países. Ni una política de reembolso ni un número de teléfono aparecen en una tabla de precios, así que no decidas solo por precio sin leer antes las dos diferencias de abajo.
+    </p>
+  </div>
+
+  <h2>Comparativa de precios de partida (antes de aplicar código)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>SimLocal</th>
+          <th>Instabridge</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Estados Unidos</td><td>3 GB desde 7,50 $ (2,50 $/GB)</td><td>3 GB por 4,50 $ (1,50 $/GB)</td></tr>
+        <tr><td>Francia / Alemania</td><td>1 GB desde 4,00 $</td><td>1 GB por 2,00 $</td></tr>
+        <tr><td>Tailandia</td><td>3 GB desde 5,75 $ (1,92 $/GB)</td><td>1 GB por 1,00 $</td></tr>
+        <tr><td>Reino Unido</td><td>20 GB desde 13,50 $ (0,675 $/GB)</td><td>sin plan específico para Reino Unido; regional Europa 1 GB a 2,80 $</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">SimLocal e Instabridge venden tamaños de paquete distintos, así que no siempre es una comparación directa: los paquetes más pequeños de 1 GB de Instabridge ganan a SimLocal en precio para una recarga rápida en EE. UU., Francia o Tailandia, pero el paquete de 20 GB de SimLocal para Reino Unido sale mucho más barato por gigabyte que comprar la misma cantidad de datos en Instabridge a base de paquetes regionales pequeños uno a uno.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>SimLocal:</strong> {{ simlocalBest.code }}, {{ simlocalDiscount | lower }}. Nuestro propio código. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>Instabridge:</strong> {{ instabridgeBest.code }}, {{ instabridgeDiscount | lower }} (o TRAVELESIMEXPERT, también un 20%). Código público, probado y confirmado que funciona. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">El código de Instabridge solo funciona en su tienda web al pagar (store.instabridge.com/mobile-data), no escrito directamente en la app del móvil. El código de SimLocal funciona igual tanto en la web como en la app.</p>
+  </div>
+
+  <h2>Una red de seguridad de reembolso frente a una alternativa gratuita de WiFi</h2>
+  <p>
+    SimLocal aplica una política de "Reembolso sin preguntas": recuperas tu dinero si cambias de opinión, sin necesidad de explicación. Es una red de seguridad real que la mayoría de vendedores de eSIM de este sitio no ofrecen, donde un reembolso suele depender de que la eSIM nunca se haya activado. Instabridge no publica en ningún sitio que hayamos podido encontrar una política de reembolso clara para eSIM, así que no cuentes con recuperar el dinero si un plan resulta no ser el adecuado.
+  </p>
+  <p>
+    El contrapeso propio de Instabridge es distinto: empezó como una app para compartir puntos de WiFi, y su base de datos gratuita de más de 20 millones de contraseñas de hotspot enviadas por la comunidad viene integrada en la misma app desde la que se vende la eSIM. Si vas a un sitio con buena cobertura de hotspots, es un respaldo real para el que SimLocal no tiene equivalente. Si vas a una zona rural o poco transitada, es poco probable que esa base de datos ayude mucho y la comparación vuelve a depender de las cifras de arriba.
+  </p>
+
+  <h2>Solo SimLocal incluye un número de teléfono real, y solo para Reino Unido</h2>
+  <p>
+    La mayoría de planes de SimLocal para Reino Unido incluyen un número de teléfono británico completo para llamadas y mensajes, no solo datos, confirmado comprando uno directamente. Los planes de eSIM de Instabridge son solo de datos en todos los destinos, sin llamadas ni mensajes en ninguno. Si el plan real es un viaje a Reino Unido y quieres un número que puedas dar o en el que te puedan llamar, esa es una función exclusiva de SimLocal entre estos dos proveedores. Fuera de Reino Unido, ninguno de los dos incluye llamadas de voz.
+  </p>
+  <p>
+    Para la configuración del dispositivo y lo básico sobre eSIM que aplica a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <h2>¿SimLocal o Instabridge es la opción adecuada?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige SimLocal si&hellip;</h3>
+      <ul>
+        <li>Quieres un reembolso sin preguntas si el plan no funciona como esperabas</li>
+        <li>Vas a Reino Unido y quieres un número de teléfono británico real incluido con los datos</li>
+        <li>Prefieres escribir al soporte por WhatsApp, o recibir ayuda en persona en uno de sus mostradores de aeropuerto</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige Instabridge si&hellip;</h3>
+      <ul>
+        <li>Solo necesitas una pequeña recarga de datos en EE. UU., Francia o Tailandia, donde su precio base más el código del 20% gana a SimLocal</li>
+        <li>Vas a un destino con buena cobertura de hotspots WiFi gratuitos y quieres la eSIM como respaldo, no como tu conexión principal</li>
+        <li>No necesitas garantía de reembolso ni número de teléfono, solo datos</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre SimLocal vs Instabridge</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, SimLocal o Instabridge?</h3>
+      <p>Para paquetes pequeños en EE. UU., Francia o Tailandia, el precio base más bajo de Instabridge junto con su código del 20% suele ganar al código del 10% de SimLocal. Para un viaje a Reino Unido, el paquete de 20 GB de SimLocal sale mucho más barato por gigabyte que comprar la misma cantidad de datos en Instabridge en paquetes regionales pequeños.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo conseguir un reembolso con alguno de los dos?</h3>
+      <p>SimLocal anuncia una política de "Reembolso sin preguntas": dinero de vuelta si cambias de opinión, sin necesidad de explicación. Instabridge no publica una política de reembolso clara para sus planes de eSIM, así que no cuentes con ella.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos incluye un número de teléfono real?</h3>
+      <p>La mayoría de planes de SimLocal para Reino Unido incluyen un número de teléfono británico completo para llamadas y mensajes. Los planes de eSIM de Instabridge son solo de datos en todos los destinos, sin llamadas ni mensajes en ninguno.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Por qué usaría Instabridge en lugar de una app de eSIM normal?</h3>
+      <p>Instabridge integra una base de datos gratuita de más de 20 millones de contraseñas de hotspot WiFi enviadas por la comunidad en la misma app, de modo que la eSIM funciona como respaldo cuando no hay WiFi gratis disponible en lugar de ser tu única opción. SimLocal no tiene una función equivalente.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Los códigos de descuento funcionan igual en los dos?</h3>
+      <p>No. El código de SimLocal funciona igual en su web y en su app. El código del 20% de Instabridge solo funciona al pagar en su tienda web (store.instabridge.com/mobile-data), no escrito directamente en la app del móvil.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo comprar alguno de los dos en persona?</h3>
+      <p>SimLocal tiene una pequeña presencia de mostradores físicos en un puñado de aeropuertos, incluido Heathrow. Instabridge solo está disponible por app y navegador, sin presencia física en tiendas.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, SimLocal o Instabridge?",
+        "acceptedAnswer":{"@type":"Answer","text":"Para paquetes pequeños en EE. UU., Francia o Tailandia, el precio base más bajo de Instabridge junto con su código del 20% suele ganar al código del 10% de SimLocal. Para un viaje a Reino Unido, el paquete de 20 GB de SimLocal sale mucho más barato por gigabyte que comprar la misma cantidad de datos en Instabridge en paquetes regionales pequeños."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se puede conseguir un reembolso con SimLocal o Instabridge?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal anuncia una política de reembolso sin preguntas: dinero de vuelta si el cliente cambia de opinión, sin necesidad de explicación. Instabridge no publica una política de reembolso clara para sus planes de eSIM."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Incluyen SimLocal o Instabridge un número de teléfono real?",
+        "acceptedAnswer":{"@type":"Answer","text":"La mayoría de planes de SimLocal para Reino Unido incluyen un número de teléfono británico completo para llamadas y mensajes. Los planes de eSIM de Instabridge son solo de datos en todos los destinos, sin llamadas ni mensajes en ninguno."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Por qué alguien usaría Instabridge en lugar de una app de eSIM normal?",
+        "acceptedAnswer":{"@type":"Answer","text":"Instabridge integra una base de datos gratuita de más de 20 millones de contraseñas de hotspot WiFi enviadas por la comunidad en la misma app, de modo que su eSIM funciona como respaldo cuando no hay WiFi gratis disponible. SimLocal no tiene una función equivalente."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Funcionan igual los códigos de descuento de SimLocal e Instabridge?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. El código de SimLocal funciona igual en su web y en su app. El código del 20% de Instabridge solo funciona al pagar en su tienda web, no directamente en la app del móvil."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se puede comprar una eSIM de SimLocal o Instabridge en persona?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal tiene una pequeña presencia de mostradores físicos en un puñado de aeropuertos, incluido Heathrow. Instabridge solo está disponible por app y navegador, sin presencia física en tiendas."}
+      }
+    ]
+  }
+  </script>
+</div>
