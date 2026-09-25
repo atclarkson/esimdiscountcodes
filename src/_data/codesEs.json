@@ -96,5 +96,30 @@
         "description": "Código promocional, 10% de descuento"
       }
     }
+  },
+  "simlocal": {
+    "description": "Planes de eSIM locales en todo el mundo",
+    "codes": {
+      "ADAMANDLINDS": {
+        "discount": "10% DE DESCUENTO EN TODOS LOS PLANES",
+        "description": "Mejor código de descuento de SimLocal, confirmado al comprar un plan real de Reino Unido con él. El único código que da un 10%; los demás códigos públicos dan un 5%."
+      },
+      "EMMANUEL": {
+        "discount": "5% DE DESCUENTO ESPECIAL EN eSIM",
+        "description": "5% de descuento especial en planes de eSIM"
+      },
+      "LUKEPALMS": {
+        "discount": "5% DE DESCUENTO EN TU PRIMERA eSIM",
+        "description": "5% de descuento en tu primera compra de eSIM"
+      },
+      "SAVANNAH": {
+        "discount": "5% DE DESCUENTO EXTRA EN TU PLAN",
+        "description": "5% de descuento extra en tu plan de eSIM"
+      },
+      "TWOROAMING": {
+        "discount": "5% DE DESCUENTO EN TU PEDIDO",
+        "description": "5% de descuento en tu pedido de SimLocal"
+      }
+    }
   }
 }
