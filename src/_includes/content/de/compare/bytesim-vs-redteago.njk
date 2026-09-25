@@ -1,0 +1,158 @@
+<!-- ByteSIM vs RedteaGO Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set bytesimPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set redteagoPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set bytesimDeCode = deA.codes[providerA.primaryCode] if (deA and deA.codes and deA.codes[providerA.primaryCode]) else null %}
+  {% set redteagoDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set redteagoDiscount = (redteagoDeCode.discount if redteagoDeCode) or redteagoPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Hier geht es eigentlich nicht um "was ist günstiger", sondern um "was brauchst du wirklich". <strong>ByteSIM</strong> verkauft echte lokale Telefonnummern, inklusive Anrufen und SMS, in einer Handvoll Länder, zu einem höheren Preis und mit einem Identitätsprüfungsschritt. <strong>RedteaGO</strong> verkauft standardmäßig nur Daten und sonst nichts, zu einigen der niedrigsten Startpreise auf dieser Seite, wobei Anrufe und SMS nur bei speziell dafür gekennzeichneten Tarifen dabei sind. Wähle ByteSIM, wenn eine funktionierende lokale Nummer für deine Reise wichtig ist. Wähle RedteaGO, wenn du nur günstige Daten willst.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Eine echte Telefonnummer oder standardmäßig nur Daten</h2>
+  <p>
+    ByteSIM ist unter den günstigen, reinen Daten-eSIM-Apps auf dieser Seite ungewöhnlich, weil es zusätzlich echte lokale Telefonnummern verkauft, mit Anrufen, SMS, Hotspot-Sharing und einer lokalen IP-Adresse, in ausgewählten Ländern wie den USA, Kanada, Großbritannien, Frankreich, Spanien, Australien, Vietnam, Südkorea und Thailand. Wir haben selbst eine gekauft: ByteSIMs Spanien-Tarif "Mega Plan with Unlimited Calls & EU Roaming", der 100 GB Spanien-Daten, 15 GB EU-Roaming-Daten, unbegrenzte Anrufe innerhalb Spaniens, 500 Minuten EU-Roaming-Gespräche und eine echte <strong>spanische Nummer mit Vorwahl +34</strong> enthielt, für 27 Tage. Um diese Nummer zu bekommen, mussten wir ein Passfoto und ein Selfie zur Identitätsprüfung hochladen, was laut ByteSIMs eigener Website nur für Tarife mit Nummer gilt, nicht für die regulären reinen Daten-eSIMs für Reisen.
+  </p>
+  <p>
+    RedteaGOs eigenes FAQ sagt ausdrücklich, dass Anruf- und SMS-Dienste "nur in bestimmten Regionen verfügbar" sind, bei Tarifen mit einer separaten Kennzeichnung "Calls/Texts Available", plus einem eigenständigen "Call & Text eSIM"-Paket, das getrennt von den regulären Datentarifen verkauft wird. Die meisten RedteaGO-Tarife enthalten nur Daten. Wenn eine funktionierende Telefonnummer Teil dessen ist, was du kaufen willst, ist RedteaGO nicht die Standardantwort, so wie es ByteSIMs Nummer-Tarife sind; du müsstest gezielt nach einem gekennzeichneten Tarif oder dem separaten Call & Text Paket suchen.
+  </p>
+
+  <h2>Preis- und Funktions-Schnappschuss</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>ByteSIM</th>
+          <th>RedteaGO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Echte lokale Telefonnummer</td><td>Ja, in ausgewählten Ländern (Identitätsprüfung erforderlich)</td><td>Standardmäßig nein; nur bei Tarifen mit der Kennzeichnung "Calls/Texts Available" oder einem separaten Paket</td></tr>
+        <tr><td>Günstigster beworbener Startpreis</td><td>Je nach Reiseziel unterschiedlich</td><td>Ab 0,52 $ (Europa, 37 Länder), 0,70 $ (USA, Japan, Thailand)</td></tr>
+        <tr><td>Spanien, 1-GB-Äquivalent</td><td>13,90 $ (100 GB + 15 GB EU-Roaming + unbegrenzte Spanien-Anrufe + 500 EU-Roaming-Minuten, 27 Tage), 13,20 $ mit dem automatischen Rabatt</td><td>2 $ (1 GB)</td></tr>
+        <tr><td>Unbegrenzter Datentarif</td><td>Nicht im Angebot</td><td>Nicht im Angebot; nur feste Datenpakete</td></tr>
+        <tr><td>Hotspot / Tethering</td><td>Bei Tarifen mit Nummer enthalten</td><td>In allen Ländern und Regionen bestätigt, in denen RedteaGO aktiv ist</td></tr>
+        <tr><td>Abgedeckte Länder</td><td>Lokale Nummern in 9 ausgewählten Ländern; reine Datenabdeckung separat breiter</td><td>180+ Länder und Regionen</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Die Spanien-Zeile ist absichtlich kein direkter Vergleich: RedteaGOs 2 $ kaufen 1 GB Daten und sonst nichts, während ByteSIMs 13,90 $ eine deutlich größere Datenmenge plus unbegrenzte lokale Anrufe, EU-Roaming-Minuten und eine echte Telefonnummer dazu kaufen. Vergleiche den Tarif, den du für deine Reise tatsächlich kaufen würdest, nicht nur den Kopfpreis.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>ByteSIM:</strong> {{ providerA.primaryCode }}, beworben als 10 % Rabatt, in der Praxis aber bei rund 5 % getestet. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>RedteaGO:</strong> {{ providerB.primaryCode }}, {{ redteagoDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Keiner der beiden Codes bringt einen riesigen Prozentsatz. ByteSIMs tatsächliche Ersparnis lag nah an dem, was der automatische, seitenweite Sale ohne Code ohnehin schon anwendet, also solltest du den Preis an der Kasse prüfen, bevor du von den beworbenen 10 % ausgehst. RedteaGOs 5 % sind ein öffentlicher Code, nicht unser eigener, aber die beste Rate, die wir geprüft haben, und die ohnehin niedrigen Preise pro GB bedeuten, dass selbst ein moderater Prozentsatz einen größeren Rabatt bei einem teureren Konkurrenten noch schlagen kann.</p>
+  </div>
+
+  <h2>Ist ByteSIM oder RedteaGO die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm ByteSIM, wenn&hellip;</h3>
+      <ul>
+        <li>Du eine echte lokale Nummer brauchst, die tatsächlich Anrufe und SMS empfangen kann, nicht nur Daten</li>
+        <li>Dein Reiseziel eines der von ByteSIM unterstützten Länder mit lokaler Nummer ist</li>
+        <li>Es dir nichts ausmacht, ein Ausweisdokument hochzuladen und mehr im Voraus für ein Paket mit Nummer zu zahlen</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm RedteaGO, wenn&hellip;</h3>
+      <ul>
+        <li>Du einfach Daten zum niedrigsten realistischen Startpreis willst und keine Telefonnummer brauchst</li>
+        <li>Dein Reiseziel keines der Länder mit lokaler Nummer von ByteSIM ist</li>
+        <li>Du einen Laptop oder ein Tablet per Hotspot verbinden willst und mit einem festen Datenpaket statt unbegrenzten Daten zufrieden bist</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>ByteSIMs Abrechnung beginnt erst, wenn du auf Aktivieren tippst, selbst nach abgeschlossener Identitätsprüfung.</strong> In unserem eigenen Test ging die eSIM nach der Verifizierung nicht sofort online, und ByteSIMs WhatsApp-Support erklärte, dass nichts gegen den Tarif zählt, bis die Aktivierung tatsächlich angetippt wird, und meldete sich dann von sich aus rund zwei Stunden später zurück, um zu bestätigen, dass alles funktionierte. RedteaGO funktioniert hier anders: Laut eigenem FAQ sind Daten-Top-ups nicht erstattungsfähig, weil der Tarif sofort nach Abschluss des Kaufs aktiv wird, es gibt also keine vergleichbare Karenzzeit nach dem Kauf.
+  </p>
+  <p>
+    <strong>"Calls/Texts Available" ist das Detail, das man bei RedteaGO wirklich prüfen und nicht annehmen sollte.</strong> RedteaGOs FAQ ist eindeutig, dass die meisten Tarife nur Daten enthalten und Anruf-/SMS-Unterstützung auf gekennzeichnete Tarife oder das separate Call & Text eSIM Paket beschränkt ist. Bei ByteSIMs Nummer-Tarifen gibt es diese Unklarheit nicht: Beim Kauf des Spanien Mega Plans waren unbegrenzte Spanien-Anrufe und EU-Roaming-Minuten einfach enthalten, kein Detail, das man auf der Produktseite suchen musste.
+  </p>
+  <p>
+    Für eSIM-Gerätekompatibilität, die für beide Anbieter gilt, siehe unseren <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch). Wenn eine echte lokale Nummer wichtiger ist als der Preis, vergleicht unser <a href="/compare/bytesim-vs-alosim/">ByteSIM vs AloSIM Vergleich</a> (auf Englisch) eine echte Nummer mit einer kostenlosen virtuellen.
+  </p>
+
+  <!-- FAQ -->
+  <h2>ByteSIM vs RedteaGO: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, ByteSIM oder RedteaGO?</h3>
+      <p>Für reine Daten RedteaGO, mit Startpreisen von 0,52 $ bis 2,90 $ je nach Region. ByteSIMs reine Datenpreise variieren nach Reiseziel, und die Tarife mit Nummer (wie das von uns gekaufte Spanien-Paket für 13,90 $, mit automatischem Rabatt 13,20 $) kosten mehr, weil sie Anrufe und eine viel größere Datenmenge enthalten, nicht weil ByteSIMs Daten an sich teurer wären.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Gibt einer der beiden eine echte Telefonnummer?</h3>
+      <p>ByteSIM schon, in ausgewählten Ländern wie den USA, Kanada, Großbritannien, Frankreich, Spanien, Australien, Vietnam, Südkorea und Thailand. RedteaGO standardmäßig nicht; das eigene FAQ sagt, Anrufe und SMS gibt es nur bei Tarifen mit der Kennzeichnung "Calls/Texts Available", plus einem separaten Call & Text eSIM Paket.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Muss ich meine Identität bei einem der beiden Anbieter verifizieren?</h3>
+      <p>Nur bei ByteSIM, und nur bei dessen Tarifen mit lokaler Nummer, laut lokaler Telekommunikationsregulierung; ByteSIMs eigene Website sagt, dass die meisten Reise-eSIM-Tarife keine Verifizierung erfordern. RedteaGOs eigenes Material erwähnt keine Anforderung zur Identitätsprüfung für seine Tarife.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bietet einer der beiden unbegrenzte Daten an?</h3>
+      <p>Nein. Bei keinem der beiden Anbieter wurde ein pauschaler Unbegrenzt-Tarif gefunden. RedteaGO verkauft feste Datenpakete (2 GB, 5 GB und Ähnliches), und auch ByteSIMs Tarife, einschließlich der mit Nummer, werden mit konkreten GB-Kontingenten verkauft.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bekomme ich eine Rückerstattung, wenn ich den Tarif am Ende nicht nutze?</h3>
+      <p>RedteaGOs FAQ sagt nein: Daten-Top-ups sind nicht erstattungsfähig, weil der Tarif sofort mit dem Kauf aktiv wird. ByteSIM beginnt mit der Abrechnung erst, wenn du auf Aktivieren tippst, selbst nach abgeschlossener Identitätsprüfung, es gibt also mehr Spielraum, bevor es gegen den Tarif zählt, auch wenn das eher ein Detail zum Abrechnungszeitpunkt als eine Rückerstattungsrichtlinie ist.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welcher von beiden unterstützt Hotspot oder Tethering?</h3>
+      <p>Beide, soweit wir es bestätigen konnten. RedteaGOs FAQ besagt, dass Hotspot-Sharing in allen Ländern und Regionen verfügbar ist, in denen RedteaGO aktiv ist. ByteSIMs Tarife mit lokaler Nummer enthalten Hotspot-Sharing als Teil des Pakets.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, ByteSIM oder RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"Für reine Daten ist RedteaGO günstiger, mit Startpreisen von 0,52 $ bis 2,90 $ je nach Region. ByteSIMs reine Datenpreise variieren nach Reiseziel, und die Tarife mit Nummer, wie das gekaufte Spanien-Paket für 13,90 $ (mit automatischem Rabatt 13,20 $), kosten mehr, weil sie Anrufe und eine viel größere Datenmenge enthalten, nicht weil ByteSIMs Daten an sich teurer wären."}
+      },
+      {
+        "@type":"Question",
+        "name":"Geben ByteSIM oder RedteaGO eine echte Telefonnummer?",
+        "acceptedAnswer":{"@type":"Answer","text":"ByteSIM schon, in ausgewählten Ländern wie den USA, Kanada, Großbritannien, Frankreich, Spanien, Australien, Vietnam, Südkorea und Thailand. RedteaGO standardmäßig nicht; das eigene FAQ besagt, Anrufe und SMS gibt es nur bei Tarifen mit der Kennzeichnung 'Calls/Texts Available', plus einem separaten Call & Text eSIM Paket."}
+      },
+      {
+        "@type":"Question",
+        "name":"Muss man bei ByteSIM oder RedteaGO die Identität verifizieren?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nur bei ByteSIM, und nur bei dessen Tarifen mit lokaler Nummer, laut lokaler Telekommunikationsregulierung. ByteSIMs eigene Website besagt, dass die meisten Reise-eSIM-Tarife keine Verifizierung erfordern. RedteaGOs eigenes Material erwähnt keine Anforderung zur Identitätsprüfung für seine Tarife."}
+      },
+      {
+        "@type":"Question",
+        "name":"Bieten ByteSIM oder RedteaGO unbegrenzte Daten an?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nein. Bei keinem der beiden Anbieter wurde ein pauschaler Unbegrenzt-Tarif gefunden. RedteaGO verkauft feste Datenpakete, und auch ByteSIMs Tarife, einschließlich der mit Nummer, werden mit konkreten GB-Kontingenten verkauft."}
+      },
+      {
+        "@type":"Question",
+        "name":"Gibt es eine Rückerstattung, wenn ein ByteSIM- oder RedteaGO-Tarif nicht genutzt wird?",
+        "acceptedAnswer":{"@type":"Answer","text":"RedteaGOs FAQ besagt, dass Daten-Top-ups nicht erstattungsfähig sind, weil der Tarif sofort mit dem Kauf aktiv wird. ByteSIM beginnt mit der Abrechnung erst nach dem Antippen der Aktivierung, selbst nach abgeschlossener Identitätsprüfung, was mehr Spielraum gibt, bevor es gegen den Tarif zählt, auch wenn dies eher ein Detail zum Abrechnungszeitpunkt als eine Rückerstattungsrichtlinie ist."}
+      },
+      {
+        "@type":"Question",
+        "name":"Unterstützen ByteSIM oder RedteaGO Hotspot oder Tethering?",
+        "acceptedAnswer":{"@type":"Answer","text":"Beide, soweit dies bestätigt werden konnte. RedteaGOs FAQ besagt, dass Hotspot-Sharing in allen Ländern und Regionen verfügbar ist, in denen RedteaGO aktiv ist. ByteSIMs Tarife mit lokaler Nummer enthalten Hotspot-Sharing als Teil des Pakets."}
+      }
+    ]
+  }
+  </script>
+</div>
