@@ -1,4 +1,25 @@
 {
+  "yesim": {
+    "description": "Soluciones globales de eSIM",
+    "codes": {
+      "TEE20": {
+        "discount": "20% DE DESCUENTO EN TU PRIMERA COMPRA DE ESIM",
+        "description": "20% de descuento en tu primera compra de eSIM"
+      },
+      "WELCOMETOYESIM": {
+        "discount": "15% DE DESCUENTO EN TU PRIMERA COMPRA DE ESIM",
+        "description": "15% de descuento en tu primera compra de eSIM a través del programa de fidelidad de Yesim"
+      },
+      "TRAVELFREE": {
+        "discount": "3 € DE DESCUENTO EN TU PEDIDO",
+        "description": "3 € de descuento en tu pedido"
+      },
+      "BONUS3": {
+        "discount": "3 € DE BONO",
+        "description": "Obtén un bono de 3 € en tu cuenta"
+      }
+    }
+  },
   "bnesim": {
     "description": "Planes de eSIM asequibles en todo el mundo",
     "codes": {}

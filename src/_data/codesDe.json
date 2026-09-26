@@ -1,4 +1,13 @@
 {
+  "redteago": {
+    "description": "Globale eSIM-Konnektivitätslösungen",
+    "codes": {
+      "RTGF946FR": {
+        "discount": "5% RABATT AUF ALLE TARIFE",
+        "description": "RedteaGO-Rabattcode, 5% Rabatt. Nicht auf RedteaGOs eigener Website beworben; als bester gefundener öffentlicher Code bestätigt."
+      }
+    }
+  },
   "bnesim": {
     "description": "Erschwingliche eSIM-Tarife weltweit",
     "codes": {}

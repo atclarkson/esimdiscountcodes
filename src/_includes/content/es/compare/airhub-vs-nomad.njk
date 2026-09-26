@@ -1,0 +1,136 @@
+<!-- Comparativa Airhub vs Nomad (Español) -->
+<div class="content-section">
+
+  {% set airhubBest = providerA.codes | bestValidCode %}
+  {% set nomadBest = providerB.codes | findCode("NOMTRAVEL20") %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set airhubEsCode = esA.codes[airhubBest.code] if (esA and esA.codes and airhubBest and esA.codes[airhubBest.code]) else null %}
+  {% set nomadEsCode = esB.codes["NOMTRAVEL20"] if (esB and esB.codes and esB.codes["NOMTRAVEL20"]) else null %}
+  {% set airhubDiscount = (airhubEsCode.discount if airhubEsCode) or airhubBest.discount %}
+  {% set nomadDiscount = (nomadEsCode.discount if nomadEsCode) or nomadBest.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      <strong>Airhub</strong> es más barato por gigabyte, antes y después de aplicar un código, en todos los destinos que revisamos. Pero eso no es realmente lo que decide esta comparativa. Con <strong>Nomad</strong> el tema es la validez, no el precio: sus eSIM estándar nunca caducan una vez compradas, y sus paquetes Global-EX duran hasta un año, algo para lo que Airhub no tiene equivalente. Elige Airhub para un viaje corto en el que sepas más o menos cuántos datos vas a usar. Elige Nomad si quieres comprar con antelación, viajar durante meses seguidos, o simplemente no quieres tener un plazo de compra corriendo en tu contra.
+    </p>
+  </div>
+
+  <h2>Precio por GB (antes de aplicar cualquier código)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Airhub (por GB)</th>
+          <th>Nomad (por GB)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Estados Unidos</td><td>0,94 $ (paquete de 3GB, 2,82 $)</td><td>4,50 $ (1GB)</td></tr>
+        <tr><td>Francia</td><td>1,17 $ (paquete de 3GB, 3,50 $)</td><td>4,50 $ (1GB)</td></tr>
+        <tr><td>Italia</td><td>1,67 $ (paquete de 3GB, 5 $)</td><td>4,50 $ (1GB)</td></tr>
+        <tr><td>Tailandia</td><td>0,85 $ (1GB)</td><td>5,00 $ (1GB)</td></tr>
+        <tr><td>Japón</td><td>1,55 $ (1GB)</td><td>6,00 $ (1GB)</td></tr>
+        <tr><td>España</td><td>2,00 $ (paquete de 3GB, 6 $)</td><td>4,50 $ (1GB)</td></tr>
+        <tr><td>Turquía</td><td>2,25 $ (1GB)</td><td>4,50 $ (1GB)</td></tr>
+        <tr><td>Malasia</td><td>1,38 $ (paquete de 4GB, 5,50 $)</td><td>5,00 $ (1GB)</td></tr>
+        <tr><td>EAU</td><td>2,80 $ (1GB)</td><td>4,50 $ (1GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Airhub vende bloques fijos de varios GB (3GB, 4GB) en lugar de unidades de 1GB, así que las cifras de arriba son el precio del paquete dividido entre su tamaño en GB, para una comparación justa por GB. Airhub es más barato en los nueve destinos, y el código del 20% de Nomad no basta para cerrar esa diferencia en una compra comparable para un viaje corto: incluso con descuento, el precio de Airhub en Tailandia (0,81 $/GB) sigue por debajo de la tarifa con descuento más barata de Nomad aquí (3,60 $/GB en EE. UU.). Los paquetes Global-EX de Nomad bajan la tarifa por GB hasta unos 2,58 $ en los tamaños más grandes, lo que reduce la diferencia para quien compra mucho en viajes largos, pero sigue sin superar los destinos más baratos de Airhub.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airhub:</strong> {{ airhubBest.code }}, {{ airhubDiscount | lower }}. Nuestro propio código, ADAMANDLINDS, no está aplicando descuento en el pago ahora mismo (lo hemos reportado a Airhub, creemos que es temporal), así que este es el código que conviene usar por ahora. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>Nomad:</strong> {{ nomadBest.code }}, {{ nomadDiscount | lower }} (o NOMCYBER20, también 20%). El programa de afiliados de Nomad no nos da un código propio, así que este es el mejor código público que hemos verificado. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">El código de Nomad es cuatro veces mayor que el de Airhub, pero el precio por GB de Airhub es tan bajo que el código más grande no cambia el ganador en una comparación de compra única para un viaje corto. Pesa más cuando comparas un paquete Global-EX frente a varias compras individuales de Airhub repartidas en meses.</p>
+  </div>
+
+  <h2>Por qué alguien elegiría la opción más cara</h2>
+  <p>
+    Las eSIM de Airhub caducan un año después de la compra si nunca se activan. Las eSIM estándar de Nomad no caducan nunca tras la compra; puedes comprar una ahora y activarla cuando el viaje realmente ocurra, algo útil si acumulas eSIM en una oferta o compras meses antes de viajar. Nomad también vende paquetes <strong>Global-EX</strong> específicamente: de 10GB a 50GB, válidos hasta un año, pensados para alguien que vive con la maleta a cuestas durante meses, no unas vacaciones de dos semanas. Airhub no tiene ninguna línea de producto de larga validez con la que compararlo; cada paquete de Airhub está pensado para un único viaje corto.
+  </p>
+  <p>
+    El soporte también es realmente distinto, no solo de cara a la galería. Nomad ofrece chat en vivo real además de correo electrónico; el soporte de Airhub funciona por correo/ticket sin opción de chat en vivo. Si quieres contactar con una persona rápido mientras viajas, eso es un punto real a favor de Nomad, con independencia del precio.
+  </p>
+  <p>
+    Para la configuración del dispositivo y lo básico de eSIM que aplica a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <h2>¿Airhub o Nomad es la mejor opción para ti</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige Airhub si&hellip;</h3>
+      <ul>
+        <li>Haces un único viaje y sabes más o menos cuántos datos necesitarás</li>
+        <li>Quieres el precio por GB más bajo; gana en todos los destinos que revisamos</li>
+        <li>Quieres SMS y, en muchos países, un número local incluidos con los datos</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige Nomad si&hellip;</h3>
+      <ul>
+        <li>Viajas durante meses, no semanas, y quieres un paquete que no caduque a los 30 días</li>
+        <li>Prefieres comprar con antelación, con una eSIM que nunca caduca sin usar</li>
+        <li>Quieres soporte por chat en vivo real, no solo correo electrónico</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre Airhub vs Nomad</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, Airhub o Nomad?</h3>
+      <p>Airhub, en todos los destinos que revisamos, antes y después de aplicar códigos. El código del 20% de Nomad reduce la diferencia pero no la cierra en una compra comparable para un viaje corto. Los paquetes Global-EX de Nomad bajan la tarifa por GB en compras grandes y de larga validez, pero Airhub suele seguir siendo más barato por gigabyte.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Por qué elegir Nomad si es más caro?</h3>
+      <p>Por validez y flexibilidad. Las eSIM estándar de Nomad nunca caducan tras la compra, y los paquetes Global-EX duran hasta un año para viajes largos, algo que Airhub no ofrece. Nomad también tiene soporte por chat en vivo real, Airhub no.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos incluye SMS o un número local?</h3>
+      <p>Airhub incluye SMS y, en muchos destinos, un número de teléfono local. Nomad incluye SMS pero no un número local. Ninguno de los dos incluye llamadas.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál es mejor para un viaje largo en el extranjero?</h3>
+      <p>Nomad. Sus paquetes Global-EX (de 10GB a 50GB, válidos hasta un año) y sus eSIM estándar que nunca caducan están pensados para meses de viaje. Los paquetes de Airhub están pensados para un único viaje corto y caducan un año después de la compra si no se usan.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, Airhub o Nomad?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub, en todos los destinos revisados, antes y después de aplicar códigos. El código del 20% de Nomad reduce la diferencia pero no la cierra en una compra comparable para un viaje corto, y los paquetes Global-EX bajan la tarifa por GB en compras grandes de larga validez sin llegar a igualar los destinos más baratos de Airhub."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Por qué elegir Nomad si cuesta más?",
+        "acceptedAnswer":{"@type":"Answer","text":"Por validez y flexibilidad. Las eSIM estándar de Nomad nunca caducan tras la compra, y los paquetes Global-EX duran hasta un año para viajes largos, algo que Airhub no ofrece. Nomad también tiene soporte por chat en vivo real, Airhub no."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Airhub o Nomad incluyen SMS o un número local?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub incluye SMS y, en muchos destinos, un número de teléfono local. Nomad incluye SMS pero no un número local. Ninguno de los dos incluye llamadas."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál es mejor para un viaje largo en el extranjero, Airhub o Nomad?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad. Sus paquetes Global-EX, de 10GB a 50GB y válidos hasta un año, junto con sus eSIM estándar que nunca caducan, están pensados para meses de viaje. Los paquetes de Airhub están pensados para un único viaje corto y caducan un año después de la compra si no se usan."}
+      }
+    ]
+  }
+  </script>
+</div>
