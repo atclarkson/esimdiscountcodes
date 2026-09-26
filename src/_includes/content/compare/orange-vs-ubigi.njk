@@ -1,0 +1,132 @@
+<!-- Orange vs Ubigi Comparison Content -->
+<div class="content-section">
+
+  {% set orangePrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set ubigiPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Both sit in this site's "Expensive" bracket, but for opposite reasons. <strong>Orange</strong> charges more because you're getting a carrier-grade bundle: unlimited calls, SMS, and hotspot included standard, backed by one of Europe's largest telecom groups. <strong>Ubigi</strong> charges more because it's an established MVNO (part of NTT Group) selling per-GB and recurring subscription plans rather than the cheapest possible data. Neither is priced to compete with a budget data-only eSIM; the question is which kind of "expensive" you're actually paying for.
+    </p>
+  </div>
+
+  <h2>The Core Difference: Calls Bundle or Recurring Data Subscription</h2>
+  <p>
+    Orange Travel is the international eSIM arm of Orange, and its plans include unlimited calls and SMS plus hotspot tethering as standard, not a paid add-on. Its discounts are automatic strike-through markdowns built into bigger plan tiers, not a code you type in; we checked its checkout flow directly and found no promo code field at all, so the AW0 code once listed here is now marked invalid.
+  </p>
+  <p>
+    Ubigi is a brand of Transatel, a French MVNO enabler now part of NTT Group, and it sells data-only plans in two structures: one-off fixed allowances, or recurring subscriptions that renew automatically. Its monthly plan can't be cancelled until you've held it three months minimum; its annual plan is paid upfront and can't be cancelled or refunded at all during that year. Unlike Orange, Ubigi does have a working discount code, ADAMANDLINDS, and it's ours.
+  </p>
+
+  <h2>Price Snapshot (1GB-equivalent, before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Orange</th>
+          <th>Ubigi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States</td><td>$23.99 (5GB)</td><td>$4.00 (1GB)</td></tr>
+        <tr><td>Europe regional</td><td>$5.99 (1GB)</td><td>$9.00 (3GB)</td></tr>
+        <tr><td>Global</td><td>$52.99 (20GB)</td><td>$25.00 (1GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Orange's numbers include unlimited calls, SMS, and hotspot; Ubigi's is data-only. Outside its home region of Europe, Orange's per-GB price runs well above Ubigi's even though Ubigi is already one of the pricier data-only options on this site, because you're paying for the calls/SMS bundle on top of the data.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Orange:</strong> No working code found. The code previously listed, AW0, doesn't appear on Orange's real checkout and is marked invalid. <a href="/orange/">Full details &rarr;</a></li>
+      <li><strong>Ubigi:</strong> {{ providerB.primaryCode }}, {{ ubigiPrimary.discount | lower }}. <a href="/ubigi/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ubigi's code is ours; Orange's discount, where one exists, is baked into the sticker price automatically on bigger plans rather than something you apply at checkout.</p>
+  </div>
+
+  <h2>Is Orange or Ubigi the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Orange if&hellip;</h3>
+      <ul>
+        <li>You specifically want calls and SMS included standard, not as a separate purchase</li>
+        <li>You're booking a longer stay (up to 90 days) where the bigger automatic markdowns kick in</li>
+        <li>You'd rather buy from an established carrier brand than a smaller reseller</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with Ubigi if&hellip;</h3>
+      <ul>
+        <li>You just want data, not a calls/SMS bundle you won't use</li>
+        <li>You return to the same country regularly enough that a recurring monthly plan makes sense</li>
+        <li>You want a working discount code today rather than a fixed automatic markdown</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Orange's bundle only pays for itself if you'd otherwise be paying for calls and texts anyway.</strong> If WhatsApp or a similar app covers your calling and texting while traveling, as it does for most people, you're paying Orange's premium for a bundle you won't use, and a data-only plan from Ubigi (or a cheaper per-GB provider like <a href="/airhub/">Airhub</a>) will usually beat it on price for the data alone.
+  </p>
+  <p>
+    <strong>Ubigi's recurring plans lock you in a way Orange's don't.</strong> Orange sells fixed-term plans with no auto-renewal to worry about. Ubigi's monthly subscription can't be cancelled for three months, and its annual plan can't be cancelled or refunded at all during its 12-month term, something worth reading before you pick a recurring option over a one-off.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Orange vs Ubigi FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Orange or Ubigi</h3>
+      <p>Ubigi, for data alone, outside Orange's home region of Europe. Orange's higher price includes unlimited calls, SMS, and hotspot as standard, which Ubigi doesn't offer at all; if you only need data, that bundle isn't buying you anything.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either have a working discount code</h3>
+      <p>Ubigi does: ADAMANDLINDS gives 10% off any plan, and it's our own code. Orange doesn't; its previously listed code, AW0, doesn't appear on its real checkout and is marked invalid. Its discounts instead come as automatic markdowns on bigger plan tiers.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which is better if I need calls and texts, not just data</h3>
+      <p>Orange, without question. Its Europe plans bundle unlimited calls and SMS in as standard. Ubigi is data-only across every plan it sells.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which is easier to cancel</h3>
+      <p>Orange, since its plans are fixed-term with nothing that auto-renews. Ubigi's monthly subscription requires a 3-month minimum commitment before cancellation, and its annual plan can't be cancelled or refunded during its 12-month term at all.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Orange or Ubigi?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ubigi, for data alone, outside Orange's home region of Europe. Orange's higher price includes unlimited calls, SMS, and hotspot as standard, which Ubigi does not offer at all."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Orange or Ubigi have a working discount code?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ubigi does: ADAMANDLINDS gives 10% off any plan. Orange does not; its previously listed code, AW0, does not appear on its real checkout and is marked invalid, with discounts instead built into bigger plan tiers automatically."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which is better for calls and texts, not just data?",
+        "acceptedAnswer":{"@type":"Answer","text":"Orange, whose Europe plans bundle unlimited calls and SMS in as standard. Ubigi sells data-only plans across its entire lineup."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which is easier to cancel, Orange or Ubigi?",
+        "acceptedAnswer":{"@type":"Answer","text":"Orange, since its plans are fixed-term with no auto-renewal. Ubigi's monthly subscription requires a 3-month minimum before cancellation, and its annual plan cannot be cancelled or refunded during its 12-month term."}
+      }
+    ]
+  }
+  </script>
+</div>

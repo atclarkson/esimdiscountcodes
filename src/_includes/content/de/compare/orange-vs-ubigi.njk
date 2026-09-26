@@ -1,0 +1,136 @@
+<!-- Orange vs Ubigi Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set orangePrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set ubigiPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set ubigiDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set ubigiDiscount = (ubigiDeCode.discount if ubigiDeCode) or ubigiPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Beide liegen in unserer Preiskategorie "Teuer", allerdings aus entgegengesetzten Gr&uuml;nden. <strong>Orange</strong> ist teurer, weil du ein Paket im Telekom-Standard bekommst: unbegrenzte Anrufe, SMS und Hotspot standardm&auml;&szlig;ig inklusive, abgesichert von einem der gr&ouml;&szlig;ten europ&auml;ischen Telekommunikationskonzerne. <strong>Ubigi</strong> ist teurer, weil es ein etablierter MVNO (Teil der NTT Group) ist, der Pro-GB- und wiederkehrende Abo-Tarife verkauft, statt m&ouml;glichst g&uuml;nstige Daten. Keiner der beiden konkurriert preislich mit einem g&uuml;nstigen reinen Daten-eSIM; die Frage ist, welche Art von "teuer" du tats&auml;chlich bezahlst.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Telefonie-Paket oder wiederkehrendes Daten-Abo</h2>
+  <p>
+    Orange Travel ist der internationale eSIM-Zweig von Orange, und seine Tarife enthalten standardm&auml;&szlig;ig unbegrenzte Anrufe und SMS plus Hotspot-Tethering, nicht als kostenpflichtiges Extra. Die Rabatte sind automatische Streichpreise in gr&ouml;&szlig;eren Tarifstufen, kein Code zum Eingeben; wir haben den Bestellvorgang direkt gepr&uuml;ft und dort kein Rabattcode-Feld gefunden, weshalb der hier fr&uuml;her gelistete Code AW0 jetzt als ung&uuml;ltig markiert ist.
+  </p>
+  <p>
+    Ubigi ist eine Marke von Transatel, einem franz&ouml;sischen MVNO-Enabler, der inzwischen zur NTT Group geh&ouml;rt, und verkauft reine Datentarife in zwei Strukturen: einmalige feste Kontingente oder wiederkehrende Abos, die sich automatisch verl&auml;ngern. Der monatliche Tarif kann erst nach mindestens drei Monaten gek&uuml;ndigt werden; der Jahrestarif wird im Voraus bezahlt und kann w&auml;hrend dieses Jahres &uuml;berhaupt nicht gek&uuml;ndigt oder erstattet werden. Anders als Orange hat Ubigi jedoch einen funktionierenden Rabattcode, ADAMANDLINDS, und der ist unser eigener.
+  </p>
+
+  <h2>Preis-Schnappschuss (1-GB-&Auml;quivalent, vor jedem Code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Ziel</th>
+          <th>Orange</th>
+          <th>Ubigi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>USA</td><td>23,99 $ (5 GB)</td><td>4,00 $ (1 GB)</td></tr>
+        <tr><td>Europa (regional)</td><td>5,99 $ (1 GB)</td><td>9,00 $ (3 GB)</td></tr>
+        <tr><td>Weltweit</td><td>52,99 $ (20 GB)</td><td>25,00 $ (1 GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Orange-Zahlen beinhalten unbegrenzte Anrufe, SMS und Hotspot; Ubigis Preis ist reiner Datentarif. Au&szlig;erhalb von Orange's Heimregion Europa liegt der Pro-GB-Preis von Orange deutlich &uuml;ber dem von Ubigi, obwohl Ubigi bereits zu den teureren reinen Datenanbietern auf dieser Seite geh&ouml;rt, weil du beim Orange-Preis zus&auml;tzlich f&uuml;r das Anruf-/SMS-Paket bezahlst.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Orange:</strong> Kein funktionierender Code gefunden. Der fr&uuml;her gelistete Code AW0 taucht in Orange's echtem Bestellvorgang nicht auf und ist als ung&uuml;ltig markiert. <a href="{{ providerAUrl }}">Alle Details &rarr;</a></li>
+      <li><strong>Ubigi:</strong> {{ providerB.primaryCode }}, {{ ubigiDiscount | lower }}. <a href="{{ providerBUrl }}">Vollst&auml;ndige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ubigis Code ist unser eigener; Orange's Rabatt, sofern vorhanden, ist automatisch in den Preis gr&ouml;&szlig;erer Tarife eingerechnet statt etwas, das du an der Kasse eingibst.</p>
+  </div>
+
+  <h2>Ist Orange oder Ubigi die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm Orange, wenn&hellip;</h3>
+      <ul>
+        <li>Du gezielt Anrufe und SMS standardm&auml;&szlig;ig inklusive willst, nicht als separaten Kauf</li>
+        <li>Du einen l&auml;ngeren Aufenthalt buchst (bis zu 90 Tage), bei dem die gr&ouml;&szlig;eren automatischen Preisnachl&auml;sse greifen</li>
+        <li>Du lieber bei einer etablierten Telekom-Marke kaufst als bei einem kleineren Anbieter</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm Ubigi, wenn&hellip;</h3>
+      <ul>
+        <li>Du nur Daten willst, kein Anruf-/SMS-Paket, das du ohnehin nicht nutzt</li>
+        <li>Du regelm&auml;&szlig;ig ins gleiche Land reist, sodass ein wiederkehrender Monatstarif Sinn ergibt</li>
+        <li>Du heute einen funktionierenden Rabattcode willst statt eines festen automatischen Preisnachlasses</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Orange's Paket lohnt sich nur, wenn du sonst ohnehin f&uuml;r Anrufe und SMS bezahlen w&uuml;rdest.</strong> Wenn WhatsApp oder eine &auml;hnliche App auf Reisen dein Telefonieren und Schreiben abdeckt, wie bei den meisten Menschen, zahlst du bei Orange den Aufpreis f&uuml;r ein Paket, das du nicht nutzt, und ein reiner Datentarif von Ubigi (oder ein g&uuml;nstigerer Pro-GB-Anbieter wie <a href="/de/airhub/">Airhub</a>) schl&auml;gt Orange bei den reinen Datenkosten meist deutlich.
+  </p>
+  <p>
+    <strong>Ubigis wiederkehrende Tarife binden dich l&auml;nger als Orange's Tarife.</strong> Orange verkauft Tarife mit fester Laufzeit ohne automatische Verl&auml;ngerung, um die man sich sorgen m&uuml;sste. Ubigis monatliches Abo kann erst nach drei Monaten gek&uuml;ndigt werden, und der Jahrestarif kann w&auml;hrend seiner 12-monatigen Laufzeit &uuml;berhaupt nicht gek&uuml;ndigt oder erstattet werden, ein Punkt, den man vor der Wahl eines wiederkehrenden Tarifs statt eines einmaligen Kaufs kennen sollte.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Ger&auml;tekompatibilit&auml;t, die f&uuml;r beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Ger&auml;ten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Orange vs Ubigi: H&auml;ufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist g&uuml;nstiger, Orange oder Ubigi?</h3>
+      <p>Ubigi, rein bei den Datenkosten, au&szlig;erhalb von Orange's Heimregion Europa. Orange's h&ouml;herer Preis enth&auml;lt standardm&auml;&szlig;ig unbegrenzte Anrufe, SMS und Hotspot, was Ubigi &uuml;berhaupt nicht anbietet; wenn du nur Daten brauchst, bringt dir dieses Paket nichts.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Hat einer der beiden einen funktionierenden Rabattcode?</h3>
+      <p>Ubigi ja: ADAMANDLINDS gibt 10% Rabatt auf jeden Tarif, und das ist unser eigener Code. Orange nicht; der fr&uuml;her gelistete Code AW0 taucht im echten Bestellvorgang nicht auf und ist als ung&uuml;ltig markiert. Die Rabatte kommen dort stattdessen als automatische Preisnachl&auml;sse auf gr&ouml;&szlig;ere Tarifstufen.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welcher ist besser, wenn ich Anrufe und SMS brauche, nicht nur Daten?</h3>
+      <p>Orange, ganz klar. Seine Europa-Tarife enthalten standardm&auml;&szlig;ig unbegrenzte Anrufe und SMS. Ubigi ist bei allen Tarifen ein reiner Datenanbieter.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welcher l&auml;sst sich leichter k&uuml;ndigen?</h3>
+      <p>Orange, da seine Tarife eine feste Laufzeit haben und sich nicht automatisch verl&auml;ngern. Ubigis monatliches Abo erfordert eine Mindestlaufzeit von 3 Monaten vor der K&uuml;ndigung, und der Jahrestarif kann w&auml;hrend seiner 12-monatigen Laufzeit &uuml;berhaupt nicht gek&uuml;ndigt oder erstattet werden.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist guenstiger, Orange oder Ubigi?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ubigi, rein bei den Datenkosten, ausserhalb von Orange's Heimregion Europa. Orange's hoeherer Preis enthaelt standardmaessig unbegrenzte Anrufe, SMS und Hotspot, was Ubigi ueberhaupt nicht anbietet."}
+      },
+      {
+        "@type":"Question",
+        "name":"Hat Orange oder Ubigi einen funktionierenden Rabattcode?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ubigi ja: ADAMANDLINDS gibt 10% Rabatt auf jeden Tarif. Orange nicht; der fruehere Code AW0 taucht im echten Bestellvorgang nicht auf und ist als ungueltig markiert, die Rabatte kommen dort stattdessen automatisch in groesseren Tarifstufen."}
+      },
+      {
+        "@type":"Question",
+        "name":"Welcher ist besser fuer Anrufe und SMS statt nur Daten?",
+        "acceptedAnswer":{"@type":"Answer","text":"Orange, dessen Europa-Tarife standardmaessig unbegrenzte Anrufe und SMS enthalten. Ubigi verkauft bei allen Tarifen reine Datenpakete."}
+      },
+      {
+        "@type":"Question",
+        "name":"Welcher laesst sich leichter kuendigen, Orange oder Ubigi?",
+        "acceptedAnswer":{"@type":"Answer","text":"Orange, da seine Tarife eine feste Laufzeit ohne automatische Verlaengerung haben. Ubigis monatliches Abo erfordert eine Mindestlaufzeit von 3 Monaten, und der Jahrestarif kann waehrend seiner 12-monatigen Laufzeit ueberhaupt nicht gekuendigt oder erstattet werden."}
+      }
+    ]
+  }
+  </script>
+</div>

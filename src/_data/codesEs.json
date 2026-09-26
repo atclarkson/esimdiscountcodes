@@ -97,6 +97,65 @@
       }
     }
   },
+  "airalo": {
+    "description": "La primera tienda de eSIM del mundo para viajeros",
+    "codes": {
+      "NEWTOAIRALO15": {
+        "discount": "15% DE DESCUENTO EN LA PRIMERA eSIM",
+        "description": "15% de descuento para nuevos usuarios de Airalo"
+      },
+      "AIRALOESIM10": {
+        "discount": "10% DE DESCUENTO EN COMPRAS DE 10 $ O MAS",
+        "description": "10% de descuento para clientes existentes en compras de 10 $ o más"
+      },
+      "JOHANN4201": {
+        "discount": "15% DE DESCUENTO O 3 € DE DESCUENTO",
+        "description": "15% o 3 € de descuento en planes eSIM"
+      },
+      "BRIAN0890": {
+        "discount": "3 $ DE DESCUENTO EN TU PRIMERA COMPRA",
+        "description": "3 $ de descuento en tu primera compra de eSIM de Airalo"
+      },
+      "HAPPY3": {
+        "discount": "3 $ DE DESCUENTO EN CUALQUIER COMPRA",
+        "description": "3 $ de descuento en planes eSIM de Airalo. Ya no es válido."
+      }
+    }
+  },
+  "ubigi": {
+    "description": "Planes de datos flexibles en todo el mundo",
+    "codes": {
+      "ADAMANDLINDS": {
+        "discount": "10% DE DESCUENTO EN TODOS LOS PLANES",
+        "description": "Mejor código de descuento de Ubigi, 10% de descuento"
+      },
+      "ENCHANTEE": {
+        "discount": "10% DE DESCUENTO EN TODA LA TIENDA",
+        "description": "10% de descuento en toda la tienda de Ubigi eSIM"
+      },
+      "DANNYANDDIGGY": {
+        "discount": "10% DE DESCUENTO EN TODA LA TIENDA",
+        "description": "10% de descuento en toda la tienda de Ubigi eSIM"
+      },
+      "ESIMSR10": {
+        "discount": "10% DE DESCUENTO SOLO EN LA PRIMERA COMPRA",
+        "description": "10% de descuento, válido solo en la primera compra"
+      },
+      "E3MQXBBY": {
+        "discount": "CODIGO CADUCADO",
+        "description": "Ya no se acepta en el checkout de Ubigi, confirmado como caducado mediante prueba directa."
+      }
+    }
+  },
+  "orange": {
+    "description": "Planes de eSIM europeos",
+    "codes": {
+      "AW0": {
+        "discount": "5% DE DESCUENTO",
+        "description": "Revisamos directamente la propia tienda de Orange Travel (travel.orange.com) y no encontramos ningún campo de código promocional ni sistema de descuento por código en el proceso de compra; sus descuentos son precios tachados automáticos en los planes más grandes. No pudimos encontrar AW0 anunciado ni funcionando en la web real, así que lo marcamos como inválido."
+      }
+    }
+  },
   "simlocal": {
     "description": "Planes de eSIM locales en todo el mundo",
     "codes": {

@@ -1,0 +1,161 @@
+<!-- Airalo Content (Spanish) -->
+<div class="content-section">
+
+  <!-- Quick Answer -->
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Mejor c&oacute;digo de descuento Airalo &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Usa <strong>{{ provider.primaryCode }}</strong> para conseguir <strong>15% de descuento en tu primera eSIM de Airalo</strong>. No es un c&oacute;digo nuestro (Airalo no tiene un programa de afiliados que permita un c&oacute;digo de descuento propio como s&iacute; hacen Holafly o Ubigi), pero es el mejor c&oacute;digo p&uacute;blico que hemos verificado que sigue funcionando. &iquest;Ya has comprado antes en Airalo? <strong>AIRALOESIM10</strong> da a los clientes existentes un 10% de descuento en compras superiores a 10 $.
+      <span class="callout-meta">Confirmado activo el <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("d MMM yyyy") }}</time>.</span>
+    </p>
+  </div>
+
+  <!-- Headline -->
+  <h2>Qu&eacute; hace realmente diferente a Airalo</h2>
+  <p>
+    Airalo vende datos por gigabyte, no de forma ilimitada. Es la apuesta opuesta a <a href="/holafly/">Holafly</a>: en lugar de pagar m&aacute;s por adelantado para no pensar nunca en un contador de datos, pagas menos por adelantado y tienes que controlar realmente lo que consumes. Para alguien con poco consumo en un viaje corto (mapas, mensajer&iacute;a, algo de navegaci&oacute;n), eso no es ning&uacute;n problema y suele ser la opci&oacute;n m&aacute;s barata. Para una familia usando navegaci&oacute;n, videollamadas y una tablet infantil a la vez, controlar los GB se convierte en una carga mental real, encima de todo lo dem&aacute;s que hay que gestionar en un viaje.
+  </p>
+  <p>
+    Airalo tambi&eacute;n vende <strong>eSIM regionales ilimitadas</strong> (Europa, Asia, Norteam&eacute;rica, Latinoam&eacute;rica, el Caribe, MENA, &Aacute;frica y Australia), as&iacute; que no es una operaci&oacute;n puramente limitada por GB. El matiz, indicado en la propia pol&iacute;tica de uso justo de Airalo: los planes ilimitados funcionan a m&aacute;xima velocidad durante los primeros 3 GB de uso al d&iacute;a, y despu&eacute;s bajan a 1 Mbps hasta medianoche, cuando se reinicia el l&iacute;mite. Es un dato real que conviene conocer antes de asumir que "ilimitado" significa sin ninguna limitaci&oacute;n de velocidad. Sigue siendo claramente mejor que un l&iacute;mite fijo de datos, solo que no es infinito.
+  </p>
+
+  <img class="content-photo"
+       src="https://media.adamandlinds.com/photos/large/d37ce5f2-e763-4165-a860-783353e14dc8.jpg"
+       alt="Un hombre se hace un selfie despeinado por el viento en una acera de Copenhague mientras una mujer camina detr&aacute;s de &eacute;l frente a una tienda 7-Eleven"
+       width="1280" height="960">
+  <p class="content-photo-caption">Foto tomada en una escapada corta a Copenhague, justo el tipo de visita ligera y a un solo pa&iacute;s donde un plan limitado por GB como el de Airalo tiene m&aacute;s sentido que pagar por datos ilimitados.</p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>C&oacute;digos activos</h3>
+    <ul>
+      <li><strong>NEWTOAIRALO15</strong>: 15% de descuento en tu primera compra de eSIM</li>
+      <li><strong>AIRALOESIM10</strong>: 10% de descuento en compras de 10 $ o m&aacute;s (clientes existentes)</li>
+      <li><strong>JOHANN4201</strong>: 15% de descuento, o 3 &euro; de descuento en planes eSIM</li>
+      <li><strong>BRIAN0890</strong>: 3 $ de descuento en tu primera compra</li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Si un c&oacute;digo no se aplica, actualiza el carrito o pru&eacute;balo en una ventana privada.</p>
+  </div>
+
+  <!-- Why so many $3 codes -->
+  <h2>Por qu&eacute; hay tantos c&oacute;digos de Airalo de "3 $ de descuento"</h2>
+  <p>
+    Airalo tiene un programa de referidos llamado Airmoney: cuando alguien se registra con tu c&oacute;digo de referido y hace su primera compra, esa persona recibe 3 $ de descuento y t&uacute; recibes 3 $ en cr&eacute;dito Airmoney para tu pr&oacute;xima eSIM. Por eso internet est&aacute; lleno de c&oacute;digos personales de "3 $ de descuento" de gente individual, en lugar de una &uacute;nica promoci&oacute;n oficial. C&oacute;digos como BRIAN0890, m&aacute;s arriba, son exactamente eso: el c&oacute;digo de referido de una persona real, no un acuerdo especial negociado con un medio. Es un mecanismo genuinamente distinto al sistema de c&oacute;digo de afiliado de Holafly o Ubigi, y por eso tampoco tenemos un c&oacute;digo propio de Airalo como s&iacute; tenemos con esos proveedores.
+  </p>
+
+  <!-- How to -->
+  <h2>Aplicar un c&oacute;digo de Airalo en 3 pasos</h2>
+  <div class="content-box">
+    <ol>
+      <li>Copia <strong>NEWTOAIRALO15</strong> (primera compra) o <strong>AIRALOESIM10</strong> (cliente existente, pedido de 10 $ o m&aacute;s)</li>
+      <li>Elige un plan eSIM local, regional o mundial en la app de Airalo o en airalo.com</li>
+      <li>Pega el c&oacute;digo en el campo de promoci&oacute;n al pagar y confirma la rebaja de precio antes de completar el pago</li>
+    </ol>
+    <p class="content-note">El descuento se muestra antes de completar el pago.</p>
+  </div>
+
+  <!-- Decision help -->
+  <h2>&iquest;Es Airalo la opci&oacute;n adecuada para tu viaje?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Buena opci&oacute;n</h3>
+      <ul>
+        <li>Uso de datos ligero: mapas, mensajer&iacute;a, algo de navegaci&oacute;n</li>
+        <li>Viajes cortos a un solo pa&iacute;s donde puedes estimar bien los GB que necesitas</li>
+        <li>Te sientes c&oacute;modo revisando un contador de datos durante el viaje</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Considera alternativas</h3>
+      <ul>
+        <li>Familia o grupo donde varias personas comparten el consumo de un mismo plan</li>
+        <li>Mucho streaming o videollamadas, donde preferir&iacute;as no llevar la cuenta de un contador</li>
+        <li>Pagar&iacute;as m&aacute;s por no volver a pensar en datos (mira <a href="/holafly/">Holafly</a>)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Savings examples -->
+  <h2>As&iacute; se ve el descuento en la pr&aacute;ctica</h2>
+  <div class="content-box">
+    <ul>
+      <li>Estados Unidos 1 GB a 4,50 $ &rarr; 15% de descuento ahorra unos 0,68 $</li>
+      <li>Europa regional 1 GB a 5,27 $ &rarr; 15% de descuento ahorra unos 0,79 $</li>
+      <li>Mundial 1 GB a 9,49 $ &rarr; 15% de descuento ahorra unos 1,42 $</li>
+    </ul>
+    <p class="content-note">Al vender datos por GB, el descuento de Airalo es peque&ntilde;o en un plan &uacute;nico y peque&ntilde;o, y suma m&aacute;s en paquetes de datos m&aacute;s grandes o en compras repetidas.</p>
+  </div>
+
+  <p>
+    Para compatibilidad de dispositivos con eSIM (qu&eacute; tel&eacute;fonos admiten eSIM), consulta nuestra gu&iacute;a de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en ingl&eacute;s). Se aplica igual sin importar qu&eacute; proveedor uses. Tambi&eacute;n hemos escrito una <a href="https://www.adamandlinds.com/blog/best-prepaid-sim-cards-tourists/" target="_blank" rel="noopener">comparativa m&aacute;s detallada de Holafly, Airalo y Airhub</a> en nuestro sitio de viajes (en ingl&eacute;s), basada en nuestra propia experiencia con cada uno. &iquest;Dudando entre pagar por GB o datos ilimitados? Consulta nuestra <a href="/es/compare/holafly-vs-airalo/">comparativa de Holafly vs Airalo</a>.
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Usa el c&oacute;digo al pagar</h2>
+    <p>Copia <code>NEWTOAIRALO15</code> y p&eacute;galo en el campo de promoci&oacute;n</p>
+    <p>15% de descuento en tu primera compra de eSIM de Airalo.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre el c&oacute;digo de descuento de Airalo</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>&iquest;Cu&aacute;l es el mejor c&oacute;digo ahora mismo?</h3>
+      <p><strong>NEWTOAIRALO15</strong>: 15% de descuento en tu primera eSIM de Airalo. &iquest;Ya eres cliente? Usa <strong>AIRALOESIM10</strong> para un 10% de descuento en pedidos superiores a 10 $.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>&iquest;Tiene Airalo planes ilimitados?</h3>
+      <p>S&iacute;, a nivel regional (Europa, Asia, Norteam&eacute;rica, Latinoam&eacute;rica, el Caribe, MENA, &Aacute;frica, Australia). Van a m&aacute;xima velocidad durante los primeros 3 GB de cada d&iacute;a, y despu&eacute;s se limitan a 1 Mbps hasta que el l&iacute;mite diario se reinicia a medianoche.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>&iquest;Puedo usar el hotspot con Airalo?</h3>
+      <p>S&iacute;, el hotspot est&aacute; disponible en los planes de Airalo en general, y no tiene restricciones en las eSIM regionales Unlimited (sujeto a la misma limitaci&oacute;n diaria de uso justo que el uso normal).</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>&iquest;Por qu&eacute; todo el mundo tiene un c&oacute;digo de Airalo distinto?</h3>
+      <p>El programa de referidos de Airalo (Airmoney) da a cada usuario su propio c&oacute;digo personal de 3 $ de descuento para compartir, en lugar de gestionar un &uacute;nico descuento de afiliado centralizado. Por eso circulan tantos c&oacute;digos distintos en lugar de uno solo oficial.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>&iquest;Caducan las eSIM de Airalo?</h3>
+      <p>La eSIM en s&iacute; no caduca antes de activarse, as&iacute; que puedes comprarla con antelaci&oacute;n a tu viaje. Una vez activada, empieza a contar el periodo de validez del plan (normalmente entre 7 y 30 d&iacute;as, seg&uacute;n el plan).</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Cual es el mejor codigo de descuento de Airalo ahora mismo?",
+        "acceptedAnswer":{"@type":"Answer","text":"NEWTOAIRALO15 da un 15% de descuento en la primera compra de eSIM de Airalo. Los clientes existentes pueden usar AIRALOESIM10 para un 10% de descuento en pedidos superiores a 10 $."}
+      },
+      {
+        "@type":"Question",
+        "name":"Tiene Airalo planes ilimitados?",
+        "acceptedAnswer":{"@type":"Answer","text":"Si, a nivel regional, cubriendo Europa, Asia, Norteamerica, Latinoamerica, el Caribe, MENA, Africa y Australia. Funcionan a maxima velocidad durante los primeros 3 GB de uso al dia, y despues se limitan a 1 Mbps hasta que el limite diario se reinicia a medianoche."}
+      },
+      {
+        "@type":"Question",
+        "name":"Se puede usar el hotspot con Airalo?",
+        "acceptedAnswer":{"@type":"Answer","text":"Si. El hotspot funciona en los planes de Airalo en general y no tiene restricciones en las eSIM regionales Unlimited, sujeto a la misma limitacion diaria de uso justo que el uso normal."}
+      },
+      {
+        "@type":"Question",
+        "name":"Por que parece que todo el mundo tiene un codigo de descuento de Airalo distinto?",
+        "acceptedAnswer":{"@type":"Answer","text":"El programa de referidos Airmoney de Airalo da a cada usuario su propio codigo personal de 3 dolares de descuento para compartir, en lugar de un unico descuento de afiliado centralizado, por lo que circulan muchos codigos distintos en vez de uno solo oficial."}
+      },
+      {
+        "@type":"Question",
+        "name":"Caducan las eSIM de Airalo?",
+        "acceptedAnswer":{"@type":"Answer","text":"La eSIM en si no caduca antes de activarse, por lo que puede comprarse con antelacion al viaje. Una vez activada, comienza a contar el periodo de validez del plan, normalmente entre 7 y 30 dias segun el plan."}
+      }
+    ]
+  }
+  </script>
+</div>
