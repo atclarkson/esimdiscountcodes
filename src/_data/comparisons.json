@@ -206,5 +206,13 @@
     "title": "Orange vs Ubigi: Carrier Bundle or MVNO Subscription? (2026 Comparison)",
     "description": "Orange vs Ubigi compared: Orange's carrier-backed calls/SMS/hotspot bundle and automatic tiered discounts vs Ubigi's per-GB MVNO plans and working discount code, and which expensive option is actually worth it.",
     "lastUpdated": "2026-09-26"
+  },
+  {
+    "slug": "airhub-vs-bytesim",
+    "providerA": "airhub",
+    "providerB": "bytesim",
+    "title": "Airhub vs ByteSIM: No-ID Local Number or Verified Real Number? (2026 Comparison)",
+    "description": "Airhub vs ByteSIM compared: Airhub's bundled SMS-only local number with no ID check vs ByteSIM's verified real phone number with calls in select countries, discount codes, and which one fits your trip.",
+    "lastUpdated": "2026-09-27"
   }
 ]

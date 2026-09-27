@@ -1,0 +1,131 @@
+<!-- Comparación Airhub vs ByteSIM (Español) -->
+<div class="content-section">
+
+  {% set airhubBest = providerA.codes | bestValidCode %}
+  {% set bytesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set airhubBestEsCode = esA.codes[airhubBest.code] if (esA and esA.codes and esA.codes[airhubBest.code]) else null %}
+  {% set airhubBestDiscount = (airhubBestEsCode.discount if airhubBestEsCode) or airhubBest.discount %}
+  {% set bytesimEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set bytesimDiscount = (bytesimEsCode.discount if bytesimEsCode) or bytesimPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>Airhub</strong> si quieres que te den automáticamente SMS y un número local junto con un plan de datos barato, sin pasos extra. Elige <strong>ByteSIM</strong> si necesitas específicamente un número real con el que puedas hacer y recibir llamadas, y no te importa subir una foto del pasaporte y un selfie para conseguirlo. El número de Airhub es un extra incluido; el de ByteSIM es el producto en sí.
+    </p>
+  </div>
+
+  <h2>La diferencia principal: un extra incluido o un número real verificado</h2>
+  <p>
+    Airhub incorpora un número de teléfono local en la mayoría de sus planes de datos sin pedir ninguna verificación de identidad, pero ese número solo recibe SMS. No puede hacer ni recibir llamadas, así que cubre cosas como recibir un código de verificación o dar un número que no sea el tuyo propio, pero no sustituye a un número de teléfono real. ByteSIM va más allá en países seleccionados (Estados Unidos, Canadá, Reino Unido, Francia, España, Australia, Vietnam, Corea del Sur y Tailandia): sus planes con número incluyen llamadas, mensajes de texto, uso compartido por hotspot y una dirección IP local, un producto realmente distinto a una eSIM de solo datos. La pega es que la propia web de ByteSIM deja claro que los planes con número local requieren verificación de identidad, una foto del pasaporte y un selfie, según la normativa de telecomunicaciones local, mientras que sus eSIM de solo datos no lo requieren. El número incluido de Airhub, en cambio, no pide ningún tipo de identificación.
+  </p>
+  <p>
+    Eso también se nota en los códigos. El código propio de Airhub no está aplicando ningún descuento en el pago ahora mismo (lo hemos reportado y esperamos que se solucione pronto), así que ESIMOFFER5 es el código de Airhub que realmente recomendamos en este momento. El TPDBYTE de ByteSIM se anuncia en otros sitios como 10% de descuento, pero probado en un pedido real solo ahorró alrededor de un 5%, prácticamente lo mismo que la Rebaja de Verano automática que ByteSIM ya aplica sin necesidad de código. En ninguno de los dos proveedores el descuento anunciado es exactamente lo que parece a primera vista.
+  </p>
+
+  <h2>Comparativa de precios</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Airhub</th>
+          <th>ByteSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>España</td><td>6,00 $ (3 GB), solo datos, sin número</td><td>13,90 $ (100 GB + 15 GB de roaming en la UE + llamadas ilimitadas en España + un número real +34), 13,20 $ tras la rebaja automática de ByteSIM</td></tr>
+        <tr><td>Tailandia</td><td>0,85 $ (1 GB), solo datos</td><td>Las eSIM locales parten de unos 2,90 $, según la propia web de ByteSIM</td></tr>
+        <tr><td>Estados Unidos</td><td>2,82 $ (3 GB), datos + SMS + número local</td><td>Hay planes con número local disponibles; comprueba el precio actual en ByteSIM antes de comprar</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">No son planes directamente comparables: el precio de Airhub en España es solo de datos, mientras que el plan de ByteSIM en España combina una gran cantidad de datos con un número de teléfono que realmente funciona. Airhub es la forma más barata de conectarte con un número extra capaz de recibir SMS; ByteSIM es la forma más cara de conseguir un número que funciona de verdad como un número de teléfono.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airhub:</strong> {{ airhubBest.code }}, {{ airhubBestDiscount | lower }}. El código propio de Airhub, {{ providerA.primaryCode }}, no está aplicando ningún descuento en el pago ahora mismo; {{ airhubBest.code }} es el único que hemos confirmado que sigue funcionando. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>ByteSIM:</strong> {{ providerB.primaryCode }}, anunciado como 10% de descuento pero probado en la práctica en torno al 5%. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ninguno de los dos descuentos es grande. Si el tamaño del código es lo que va a decidirte, en realidad no debería serlo, porque el verdadero valor de ambos proveedores está en lo que incluye el plan, no en el porcentaje de descuento.</p>
+  </div>
+
+  <h2>¿Airhub o ByteSIM es la opción adecuada?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige Airhub si&hellip;</h3>
+      <ul>
+        <li>Solo quieres un número con capacidad de SMS incluido, sin tener que entregar tu identificación</li>
+        <li>Vas a un destino donde Airhub tiene precios muy ajustados, como Tailandia o Japón</li>
+        <li>No necesitas hacer llamadas reales con ese número</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige ByteSIM si&hellip;</h3>
+      <ul>
+        <li>Necesitas un número real con el que puedas llamar y no solo recibir SMS</li>
+        <li>Tu destino está entre los países con número local que admite ByteSIM</li>
+        <li>No te importa completar una verificación de identidad para ese plan concreto</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>
+    Si un número de teléfono real no es lo que buscas en absoluto, estas no son las únicas opciones: <a href="/alosim/">AloSIM</a> incluye un número virtual gratuito de Hushed sin verificación de identidad, y los planes de <a href="/es/simlocal/">SimLocal</a> en el Reino Unido incluyen un número real con llamadas garantizadas, algo que compramos y confirmamos nosotros mismos. Para la compatibilidad de dispositivos con eSIM, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre Airhub vs ByteSIM</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿El número local de Airhub permite hacer llamadas?</h3>
+      <p>No. El número incluido de Airhub recibe SMS, pero no gestiona llamadas de voz. Los planes con número local de ByteSIM, en sus países compatibles, incluyen llamadas reales además de SMS y uso compartido por hotspot.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Hace falta verificación de identidad para el número de alguno de los dos?</h3>
+      <p>ByteSIM exige una foto del pasaporte y un selfie para sus planes con número local, según la normativa de telecomunicaciones local; sus eSIM de solo datos no lo requieren. El número de SMS incluido de Airhub no pide verificación de identidad.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, Airhub o ByteSIM?</h3>
+      <p>Airhub, en precios de solo datos: supera en precio a la mayoría de la competencia en destinos como Tailandia y Japón. Los planes de ByteSIM que incluyen un número real con capacidad de llamada cuestan más, porque estás pagando por un producto realmente distinto, no solo por datos.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Merece la pena alguno de los dos códigos de descuento?</h3>
+      <p>No demasiado. El código que funciona de Airhub, ESIMOFFER5, da un 5% de descuento. El TPDBYTE de ByteSIM se anuncia como 10% de descuento, pero probado en un pedido real solo ahorró alrededor de un 5%, similar a la propia Rebaja de Verano automática de ByteSIM. Elige cualquiera de los dos proveedores por lo que incluye el plan, no por el código.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿El número local de Airhub permite hacer llamadas?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. El número incluido de Airhub recibe SMS, pero no gestiona llamadas de voz. Los planes con número local de ByteSIM, en sus países compatibles, incluyen llamadas reales además de SMS y uso compartido por hotspot."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Hace falta verificación de identidad para el número de Airhub o ByteSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"ByteSIM exige una foto del pasaporte y un selfie para sus planes con número local, según la normativa de telecomunicaciones local. Sus eSIM de solo datos no lo requieren. El número de SMS incluido de Airhub no pide verificación de identidad."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, Airhub o ByteSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub es más barato en precios de solo datos, superando a la mayoría de la competencia en destinos como Tailandia y Japón. Los planes de ByteSIM con un número real con capacidad de llamada cuestan más, ya que se trata de un producto realmente distinto."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Merecen la pena los códigos de descuento de Airhub o ByteSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"No demasiado. El código que funciona de Airhub, ESIMOFFER5, da un 5% de descuento. El TPDBYTE de ByteSIM se anuncia como 10% de descuento, pero probado en un pedido real solo ahorró alrededor de un 5%, similar a su propia Rebaja de Verano automática."}
+      }
+    ]
+  }
+  </script>
+</div>

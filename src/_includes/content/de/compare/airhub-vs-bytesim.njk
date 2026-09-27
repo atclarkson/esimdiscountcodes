@@ -1,0 +1,131 @@
+<!-- Airhub vs ByteSIM Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set airhubBest = providerA.codes | bestValidCode %}
+  {% set bytesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set airhubBestDeCode = deA.codes[airhubBest.code] if (deA and deA.codes and deA.codes[airhubBest.code]) else null %}
+  {% set airhubBestDiscount = (airhubBestDeCode.discount if airhubBestDeCode) or airhubBest.discount %}
+  {% set bytesimDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set bytesimDiscount = (bytesimDeCode.discount if bytesimDeCode) or bytesimPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Nimm <strong>Airhub</strong>, wenn du SMS und eine lokale Nummer automatisch zu einem g&uuml;nstigen Datentarif dazubekommen willst, ohne zus&auml;tzliche Schritte. Nimm <strong>ByteSIM</strong>, wenn du gezielt eine echte Nummer brauchst, mit der du telefonieren kannst, und es dir nichts ausmacht, daf&uuml;r ein Passfoto und ein Selfie hochzuladen. Airhubs Nummer ist ein Bonus obendrauf; ByteSIMs Nummer ist das eigentliche Produkt.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Bonus-Extra oder verifizierte echte Nummer</h2>
+  <p>
+    Airhub packt bei den meisten Datentarifen eine lokale Telefonnummer mit dazu, ohne irgendeine Identit&auml;tspr&uuml;fung zu verlangen, aber diese Nummer empf&auml;ngt nur SMS. Sie kann weder anrufen noch angerufen werden, deckt also Dinge wie einen Best&auml;tigungscode per SMS oder das Herausgeben einer Nummer ab, die nicht deine private ist, ist aber kein Ersatz f&uuml;r eine echte Telefonnummer. ByteSIM geht in ausgew&auml;hlten L&auml;ndern (den USA, Kanada, Gro&szlig;britannien, Frankreich, Spanien, Australien, Vietnam, S&uuml;dkorea und Thailand) weiter: Seine Nummer-Tarife bringen Anrufe, SMS, Hotspot-Freigabe und eine lokale IP-Adresse mit, ein wirklich anderes Produkt als ein reiner Daten-eSIM. Der Haken: ByteSIMs eigene Website macht klar, dass Tarife mit lokaler Nummer eine Identit&auml;tspr&uuml;fung erfordern, ein Passfoto und ein Selfie, gem&auml;&szlig; &ouml;rtlicher Telekom-Vorschriften, w&auml;hrend die reinen Daten-eSIMs das nicht verlangen. Airhubs mitgelieferte Nummer verlangt dagegen &uuml;berhaupt keine ID.
+    </p>
+  <p>
+    Das zeigt sich auch bei den Codes. Airhubs eigener Affiliate-Code wendet an der Kasse derzeit keinen Rabatt an (wir haben es gemeldet und erwarten eine baldige Behebung), weshalb ESIMOFFER5 der Airhub-Code ist, den wir aktuell tats&auml;chlich empfehlen. ByteSIMs TPDBYTE wird andernorts als 10% Rabatt beworben, hat bei einer echten Bestellung aber nur rund 5% gespart, was in etwa dem automatischen Summer-Sale-Rabatt entspricht, den ByteSIM ohnehin ohne Code gew&auml;hrt. Bei keinem der beiden Anbieter ist der beworbene Rabatt ganz das, was er zu sein scheint.
+  </p>
+
+  <h2>Preis-Schnappschuss</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Ziel</th>
+          <th>Airhub</th>
+          <th>ByteSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Spanien</td><td>6,00 $ (3 GB), nur Daten, keine Nummer</td><td>13,90 $ (100 GB + 15 GB EU-Roaming + unbegrenzte Anrufe in Spanien + eine echte +34-Nummer), 13,20 $ nach ByteSIMs automatischem Rabatt</td></tr>
+        <tr><td>Thailand</td><td>0,85 $ (1 GB), nur Daten</td><td>Lokale eSIMs starten laut ByteSIMs eigener Website bei rund 2,90 $</td></tr>
+        <tr><td>USA</td><td>2,82 $ (3 GB), Daten + SMS + lokale Nummer</td><td>Tarife mit lokaler Nummer verf&uuml;gbar; aktuellen Preis vor dem Kauf bei ByteSIM pr&uuml;fen</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Das sind keine wirklich vergleichbaren Tarife: Airhubs Spanien-Preis ist reiner Datentarif, w&auml;hrend ByteSIMs Spanien-Tarif ein riesiges Datenkontingent mit einer funktionierenden Telefonnummer kombiniert. Airhub ist der g&uuml;nstigere Weg, online zu gehen und dazu eine SMS-f&auml;hige Zusatznummer zu bekommen; ByteSIM ist der teurere Weg zu einer Nummer, die tats&auml;chlich wie eine echte Telefonnummer funktioniert.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airhub:</strong> {{ airhubBest.code }}, {{ airhubBestDiscount | lower }}. Airhubs eigener {{ providerA.primaryCode }}-Code wendet an der Kasse aktuell keinen Rabatt an; {{ airhubBest.code }} ist der einzige, den wir bestätigt noch funktionierend gefunden haben. <a href="{{ providerAUrl }}">Vollst&auml;ndige Codeliste &rarr;</a></li>
+        <li><strong>ByteSIM:</strong> {{ providerB.primaryCode }}, beworben als 10% Rabatt, in der Praxis aber getestet bei rund 5%. <a href="{{ providerBUrl }}">Vollst&auml;ndige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Keiner der beiden Rabatte ist gro&szlig;. Wenn die H&ouml;he des Codes bei dir den Ausschlag geben soll, sollte sie das eigentlich nicht, denn der wirkliche Wert liegt bei beiden Anbietern in dem, was der Tarif selbst mitbringt, nicht im Prozentrabatt.</p>
+  </div>
+
+  <h2>Ist Airhub oder ByteSIM die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm Airhub, wenn&hellip;</h3>
+      <ul>
+        <li>Du einfach eine SMS-f&auml;hige Nummer mitgeliefert bekommen willst, ohne eine ID herauszugeben</li>
+        <li>Du dorthin reist, wo Airhub besonders g&uuml;nstig ist, etwa Thailand oder Japan</li>
+        <li>Du auf dieser Nummer nicht tats&auml;chlich telefonieren musst</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm ByteSIM, wenn&hellip;</h3>
+      <ul>
+        <li>Du eine echte Nummer brauchst, mit der du anrufen und telefonieren kannst, nicht nur SMS empfangen</li>
+        <li>Dein Reiseziel eines von ByteSIMs unterst&uuml;tzten L&auml;ndern mit lokaler Nummer ist</li>
+        <li>Es dir nichts ausmacht, f&uuml;r diesen Tarif eine Identit&auml;tspr&uuml;fung zu durchlaufen</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>
+    Wenn eine echte Telefonnummer &uuml;berhaupt nicht der Punkt ist, sind das nicht die einzigen Optionen: <a href="/de/alosim/">AloSIM</a> bringt eine kostenlose virtuelle Hushed-Nummer ohne ID-Pr&uuml;fung mit, und <a href="/de/simlocal/">SimLocals</a> UK-Tarife enthalten eine echte Nummer mit garantierten Anrufen, was wir selbst gekauft und best&auml;tigt haben. F&uuml;r die eSIM-Ger&auml;tekompatibilit&auml;t siehe unseren Leitfaden zu <a href="/compatible-devices/">eSIM-kompatiblen Ger&auml;ten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Airhub vs ByteSIM: H&auml;ufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Kann man mit Airhubs lokaler Nummer telefonieren</h3>
+      <p>Nein. Airhubs mitgelieferte Nummer empf&auml;ngt SMS, kann aber keine Anrufe t&auml;tigen oder entgegennehmen. ByteSIMs Tarife mit lokaler Nummer bringen in den unterst&uuml;tzten L&auml;ndern echte Anrufe zus&auml;tzlich zu SMS und Hotspot-Freigabe mit.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Braucht man f&uuml;r die Nummer eines der beiden Anbieter eine ID-Pr&uuml;fung</h3>
+      <p>ByteSIM verlangt f&uuml;r seine Tarife mit lokaler Nummer ein Passfoto und ein Selfie, gem&auml;&szlig; &ouml;rtlicher Telekom-Vorschriften; die reinen Daten-eSIMs verlangen das nicht. Airhubs mitgelieferte SMS-Nummer verlangt keine ID-Pr&uuml;fung.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Was ist g&uuml;nstiger, Airhub oder ByteSIM</h3>
+      <p>Airhub, bei reinen Datentarifen: Es unterbietet die meisten Konkurrenten in Zielen wie Thailand und Japan. ByteSIMs Tarife mit einer echten, telefonief&auml;higen Nummer kosten mehr, weil du damit f&uuml;r ein wirklich anderes Produkt bezahlst, nicht nur f&uuml;r Daten.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Lohnt sich einer der beiden Rabattcodes wirklich</h3>
+      <p>Nicht besonders. Airhubs funktionierender Code, ESIMOFFER5, bringt 5% Rabatt. ByteSIMs TPDBYTE wird als 10% Rabatt beworben, hat aber bei einer echten Bestellung nur rund 5% gespart, &auml;hnlich wie ByteSIMs eigener automatischer Summer Sale. Entscheide dich f&uuml;r einen der beiden Anbieter wegen dem, was der Tarif mitbringt, nicht wegen des Codes.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Kann man mit Airhubs lokaler Nummer telefonieren?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nein. Airhubs mitgelieferte Nummer empfängt SMS, kann aber keine Anrufe tätigen oder entgegennehmen. ByteSIMs Tarife mit lokaler Nummer bringen in den unterstützten Ländern echte Anrufe zusätzlich zu SMS und Hotspot-Freigabe mit."}
+      },
+      {
+        "@type":"Question",
+        "name":"Braucht man für die Nummer von Airhub oder ByteSIM eine ID-Prüfung?",
+        "acceptedAnswer":{"@type":"Answer","text":"ByteSIM verlangt für seine Tarife mit lokaler Nummer ein Passfoto und ein Selfie, gemäß örtlicher Telekom-Vorschriften. Die reinen Daten-eSIMs verlangen das nicht. Airhubs mitgelieferte SMS-Nummer verlangt keine ID-Prüfung."}
+      },
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, Airhub oder ByteSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub ist bei reinen Datentarifen günstiger und unterbietet die meisten Konkurrenten in Zielen wie Thailand und Japan. ByteSIMs Tarife mit einer echten, telefoniefähigen Nummer kosten mehr, weil es ein wirklich anderes Produkt ist."}
+      },
+      {
+        "@type":"Question",
+        "name":"Lohnen sich die Rabattcodes von Airhub oder ByteSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nicht besonders. Airhubs funktionierender Code, ESIMOFFER5, bringt 5% Rabatt. ByteSIMs TPDBYTE wird als 10% Rabatt beworben, hat aber bei einer echten Bestellung nur rund 5% gespart, ähnlich wie ByteSIMs eigener automatischer Summer Sale."}
+      }
+    ]
+  }
+  </script>
+</div>

@@ -1,0 +1,125 @@
+<!-- Airhub vs ByteSIM Comparison Content -->
+<div class="content-section">
+
+  {% set airhubBest = providerA.codes | bestValidCode %}
+  {% set bytesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>Airhub</strong> if you want SMS and a local number handed to you automatically with a cheap data plan, no extra steps. Pick <strong>ByteSIM</strong> if you specifically need a real number that can make and receive calls, and you don't mind uploading a passport photo and a selfie to get it. Airhub's number is a bundled extra; ByteSIM's is the actual product.
+    </p>
+  </div>
+
+  <h2>The Core Difference: A Bundled Extra vs a Verified Real Number</h2>
+  <p>
+    Airhub folds a local phone number into most of its data plans without asking for any identity verification, but that number only receives SMS. It doesn't make or take calls, so it covers things like a verification text or giving out a number that isn't your personal one, not a phone-number replacement. ByteSIM goes further in select countries (the US, Canada, UK, France, Spain, Australia, Vietnam, South Korea, and Thailand): its number plans bundle in calls, texts, hotspot sharing, and a local IP address, a genuinely different product from a data-only eSIM. The catch is that ByteSIM's own site is explicit that local-number plans require identity verification, a passport photo and a selfie, per local telecom regulation, while its plain data-only eSIMs don't. Airhub's bundled number, by contrast, doesn't ask for any ID at all.
+  </p>
+  <p>
+    That trade-off shows up in the codes, too. Airhub's own affiliate code isn't currently applying a discount at checkout (we've reported it and expect it fixed), so ESIMOFFER5 is the Airhub code we actually recommend right now. ByteSIM's TPDBYTE is advertised elsewhere as 10% off, but tested on a real order it only saved about 5%, roughly matching the automatic Summer Sale ByteSIM already applies without any code. Neither provider's headline discount is quite what it first appears to be.
+  </p>
+
+  <h2>Price Snapshot</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Airhub</th>
+          <th>ByteSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Spain</td><td>$6 (3GB), data only, no number</td><td>$13.90 (100GB + 15GB EU roaming + unlimited Spain calls + a real +34 number), $13.20 after ByteSIM's automatic sale</td></tr>
+        <tr><td>Thailand</td><td>$0.85 (1GB), data only</td><td>Local eSIMs start around $2.90, per ByteSIM's own site</td></tr>
+        <tr><td>USA</td><td>$2.82 (3GB), data + SMS + local number</td><td>Local number plans available; check current price on ByteSIM before buying</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">These aren't apples-to-apples plans: Airhub's Spain price is data only, while ByteSIM's Spain plan bundles a huge data allowance with a working phone number that can call and text. Airhub is the cheaper way to get online with an SMS-capable extra number; ByteSIM is the more expensive way to get a number that actually functions like a phone number.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airhub:</strong> {{ airhubBest.code }}, {{ airhubBest.discount | lower }}. Airhub's own {{ providerA.primaryCode }} code isn't currently applying a discount at checkout; {{ airhubBest.code }} is the only one we've confirmed still works. <a href="{{ '/' + providerAKey + '/' }}">Full code list &rarr;</a></li>
+      <li><strong>ByteSIM:</strong> {{ providerB.primaryCode }}, advertised as 10% off but tested at roughly 5% in practice. <a href="{{ '/' + providerBKey + '/' }}">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Neither discount is large. If the code amount is the deciding factor for you, it shouldn't be, since both providers' real value is in what the plan itself includes rather than a percentage off.</p>
+  </div>
+
+  <h2>Is Airhub or ByteSIM the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Airhub if&hellip;</h3>
+      <ul>
+        <li>You just want an SMS-capable number bundled in without handing over ID</li>
+        <li>You're headed somewhere Airhub prices sharply, like Thailand or Japan</li>
+        <li>You don't need to actually make or receive phone calls on the number</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with ByteSIM if&hellip;</h3>
+      <ul>
+        <li>You need a real number that can call and text, not just receive SMS</li>
+        <li>Your destination is one of ByteSIM's supported local-number countries</li>
+        <li>You're fine completing ID verification for that specific plan</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>
+    Neither of these is the only option if a real phone number isn't the point at all: <a href="/alosim/">AloSIM</a> bundles a free Hushed virtual number with no ID check required, and <a href="/simlocal/">SimLocal</a>'s UK plans include a real number with calls guaranteed, which we bought and confirmed ourselves. For eSIM device compatibility, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Airhub vs ByteSIM FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Does Airhub's local number make calls</h3>
+      <p>No. Airhub's bundled number receives SMS but doesn't handle voice calls. ByteSIM's local-number plans, in its supported countries, include actual calls alongside texts and hotspot sharing.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Do I need ID verification for either provider's number</h3>
+      <p>ByteSIM requires a passport photo and a selfie for its local-number plans specifically, per local telecom regulation; its plain data-only eSIMs don't require this. Airhub's bundled SMS number doesn't ask for ID verification.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Airhub or ByteSIM</h3>
+      <p>Airhub, for data-only pricing: it undercuts most competitors in destinations like Thailand and Japan. ByteSIM's plans that include a real, callable phone number cost more, since you're paying for a genuinely different product, not just data.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Is either discount code worth much</h3>
+      <p>Not really. Airhub's working code, ESIMOFFER5, is 5% off. ByteSIM's TPDBYTE is advertised as 10% off but tested on a real order only saved about 5%, similar to ByteSIM's own automatic Summer Sale. Pick either provider for what the plan includes, not for the code.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Does Airhub's local number make calls?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. Airhub's bundled number receives SMS but doesn't handle voice calls. ByteSIM's local-number plans, in its supported countries, include actual calls alongside texts and hotspot sharing."}
+      },
+      {
+        "@type":"Question",
+        "name":"Do you need ID verification for Airhub or ByteSIM's phone number?",
+        "acceptedAnswer":{"@type":"Answer","text":"ByteSIM requires a passport photo and a selfie for its local-number plans specifically, per local telecom regulation. Its plain data-only eSIMs don't require this. Airhub's bundled SMS number doesn't ask for ID verification."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Airhub or ByteSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub is cheaper for data-only pricing, undercutting most competitors in destinations like Thailand and Japan. ByteSIM's plans with a real callable phone number cost more, reflecting a genuinely different product."}
+      },
+      {
+        "@type":"Question",
+        "name":"Are the Airhub or ByteSIM discount codes worth much?",
+        "acceptedAnswer":{"@type":"Answer","text":"Not particularly. Airhub's working code, ESIMOFFER5, is 5% off. ByteSIM's TPDBYTE is advertised as 10% off but tested on a real order only saved about 5%, similar to its own automatic Summer Sale."}
+      }
+    ]
+  }
+  </script>
+</div>
