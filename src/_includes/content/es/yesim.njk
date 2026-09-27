@@ -1,0 +1,155 @@
+<!-- Yesim Content (Spanish) -->
+<div class="content-section">
+
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Mejor código promocional de Yesim &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Usa <strong>{{ provider.primaryCode }}</strong> para conseguir <strong>20% de descuento en tu primera compra de eSIM</strong>. Es un código público, no uno nuestro (Yesim no tiene el tipo de programa de afiliados que nos permitiría tener un código propio aquí), pero es el mejor que hemos verificado.
+      <span class="callout-meta">Confirmado activo el <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("d 'de' LLLL 'de' yyyy") }}</time>.</span>
+    </p>
+  </div>
+
+  <!-- Headline -->
+  <h2>Qué hace a Yesim realmente diferente</h2>
+  <p>
+    La mayoría de las apps de eSIM en esta web te venden un bloque fijo de datos y ahí termina la relación hasta que vuelves a comprar. Los planes "Pay & Fly" de Yesim funcionan más como un saldo prepago: compras datos en dólares en vez de en gigabytes, con un precio desde 1,10 $/GB, y lo que no uses se traslada al siguiente viaje en lugar de caducar en cuanto termina el actual. Si eres un viajero frecuente que recarga el mismo saldo viaje tras viaje en vez de comprar un bloque nuevo cada vez, ese es un modelo genuinamente distinto de los planes de GB fijo o de días fijos que venden <a href="/airhub/">Airhub</a> y la mayoría de los demás proveedores de esta web.
+  </p>
+  <p>
+    Yesim también anuncia cambio automático de red (lo llaman "SwitchLess Networks") entre supuestamente más de 800 redes asociadas, de modo que la eSIM salta a la operadora local que dé mejor señal en vez de dejarte atado a una sola red asociada, como ocurre con muchas eSIM de un solo operador. No hemos medido ese cambio de red de forma independiente sobre el terreno, así que trátalo como una afirmación propia de Yesim y no como algo que hayamos verificado.
+  </p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Códigos activos</h3>
+    <ul>
+      <li><strong>TEE20</strong>: 20% de descuento en tu primera compra de eSIM</li>
+      <li><strong>WELCOMETOYESIM</strong>: 15% de descuento en tu primera compra de eSIM</li>
+      <li><strong>TRAVELFREE</strong>: 3&euro; de descuento en tu pedido</li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Si un código no aplica al pagar, recarga el carrito o prueba en una ventana privada, y vuelve a intentarlo.</p>
+  </div>
+
+  <!-- Real operational note -->
+  <h2>La política de reembolso es mejor que la de la mayoría de apps de eSIM</h2>
+  <p>
+    Yesim anuncia una garantía de devolución de 30 días en planes sin usar, reembolsable según su propia política y no solo para eSIM que nunca llegan a activarse. La mayoría de los proveedores de esta web, incluidos competidores de Yesim más baratos, solo reembolsan un plan que nunca llegó a conectarse, y tratan cualquier plan activado como definitivo. Vale la pena saberlo si sueles comprar con antelación a un viaje sin estar seguro de que vayas a usar el plan.
+  </p>
+  <p>
+    La contrapartida es el precio. Yesim está en nuestro rango "Caro": los planes por días van desde aproximadamente 1,56 $ hasta 31 $ según el destino, notablemente por encima de lo que cobran <a href="/holafly/">Holafly</a> o <a href="/airhub/">Airhub</a> por una cobertura comparable. Pagas por la flexibilidad del reembolso y el modelo de saldo Pay & Fly, no por la tarifa más barata por GB.
+  </p>
+
+  <!-- How to -->
+  <h2>Aplica un código de Yesim en 3 pasos</h2>
+  <div class="content-box">
+    <ol>
+      <li>Copia <strong>{{ provider.primaryCode }}</strong></li>
+      <li>Elige un plan de país, regional o de saldo Pay & Fly para tu destino en Yesim</li>
+      <li>Pega el código en el campo de promoción al pagar y confirma la bajada de precio antes de completar el pago</li>
+    </ol>
+    <p class="content-note">El descuento se muestra antes de completar el pago.</p>
+  </div>
+
+  <!-- Decision help -->
+  <h2>¿Es Yesim la opción adecuada para tu viaje?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Encaja bien si&hellip;</h3>
+      <ul>
+        <li>Viajas a menudo y quieres un saldo de datos que se traslade entre viajes en vez de un plan que caduque</li>
+        <li>Quieres la opción de un reembolso real si compras con antelación y al final no necesitas el plan</li>
+        <li>Prefieres pagar en dólares por los datos usados en vez de controlar un cupo fijo de GB</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Considera alternativas si&hellip;</h3>
+      <ul>
+        <li>Solo quieres la tarifa más barata para un único viaje: mira primero <a href="/airhub/">Airhub</a> u <a href="/holafly/">Holafly</a></li>
+        <li>Quieres datos ilimitados sin ningún control de consumo: consulta <a href="/holafly/">Holafly</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Savings examples -->
+  <h2>Así se ve el descuento</h2>
+  <div class="content-box">
+    <ul>
+      <li>Estados Unidos 1 día a 8,40 $ &rarr; 20% de descuento ahorra 1,68 $</li>
+      <li>Japón 7 días a 19,80 $ &rarr; 20% de descuento ahorra 3,96 $</li>
+      <li>EAU 1 día a 7,70 $ &rarr; 20% de descuento ahorra 1,54 $</li>
+    </ul>
+    <p class="content-note">{{ provider.primaryCode }} solo aplica a tu primera compra en Yesim. Después, <strong>WELCOMETOYESIM</strong> (15% de descuento) y <strong>TRAVELFREE</strong> (3 &euro; de descuento fijo) son los códigos que vale la pena probar en pedidos posteriores.</p>
+  </div>
+
+  <p>
+    Para la compatibilidad de dispositivos con eSIM, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Usa el código al pagar</h2>
+    <p>Copia <code>{{ provider.primaryCode }}</code> y pégalo en el campo de promoción</p>
+    <p>20% de descuento en tu primera eSIM de Yesim.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre el código de Yesim</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Cuál es el mejor código ahora mismo?</h3>
+      <p><strong>{{ provider.primaryCode }}</strong>: 20% de descuento en tu primera compra de eSIM. Los clientes recurrentes deberían probar <strong>WELCOMETOYESIM</strong> o <strong>TRAVELFREE</strong> en su lugar.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Qué es un plan Pay &amp; Fly?</h3>
+      <p>Es la opción de saldo de Yesim: recargas una cantidad en dólares en vez de comprar un bloque fijo de GB, con precio desde 1,10 $/GB, y el saldo no usado se traslada a tu próximo viaje en lugar de caducar.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo conseguir un reembolso si no uso el plan?</h3>
+      <p>Yesim anuncia una garantía de devolución de 30 días en planes sin usar, un paso más allá de lo que ofrecen la mayoría de proveedores de eSIM en esta web, que solo reembolsan un plan que nunca llegó a conectarse. Los reembolsos se gestionan según la propia política de Yesim, no a través de nosotros.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Es Yesim la opción más barata?</h3>
+      <p>No. Yesim está en nuestro rango de precio "Caro". Si el precio por GB es tu principal preocupación, revisa Airhub u Holafly antes de comprar.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Yesim incluye número de teléfono?</h3>
+      <p>No. Es solo de datos, como la mayoría de las eSIM de esta web. Las llamadas de voz pasan por apps como WhatsApp o Viber usando la conexión de datos.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Cuál es el mejor código promocional de Yesim ahora mismo?",
+        "acceptedAnswer":{"@type":"Answer","text":"TEE20 da 20% de descuento en la primera compra de eSIM para compradores primerizos. Los clientes recurrentes deberían probar WELCOMETOYESIM o TRAVELFREE en su lugar."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Qué es un plan Pay & Fly de Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Una opción basada en saldo, con precio desde 1,10 $/GB, en la que se recarga una cantidad en dólares en vez de comprar un bloque fijo de datos, y el saldo no usado se traslada a un viaje futuro en lugar de caducar."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Puedo conseguir un reembolso si no uso un plan de Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim anuncia una garantía de devolución de 30 días en planes sin usar, un paso más allá de la mayoría de sus competidores, que solo reembolsan un plan que nunca llegó a conectarse."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Es Yesim la opción de eSIM más barata?",
+        "acceptedAnswer":{"@type":"Answer","text":"No, Yesim está en el rango de precio Caro de esta web. Airhub y Holafly son opciones más baratas para quienes priorizan el precio por GB."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Yesim incluye número de teléfono?",
+        "acceptedAnswer":{"@type":"Answer","text":"No, Yesim es solo de datos. Las llamadas de voz pasan por apps como WhatsApp o Viber usando la conexión de datos."}
+      }
+    ]
+  }
+  </script>
+</div>

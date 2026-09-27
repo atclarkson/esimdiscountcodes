@@ -1,0 +1,139 @@
+<!-- Saily vs RedteaGO Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set sailyPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set redteagoPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set sailyDeCode = deA.codes[providerA.primaryCode] if (deA and deA.codes and deA.codes[providerA.primaryCode]) else null %}
+  {% set redteagoDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set sailyDiscount = (sailyDeCode.discount if sailyDeCode) or sailyPrimary.discount %}
+  {% set redteagoDiscount = (redteagoDeCode.discount if redteagoDeCode) or redteagoPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Wähle <strong>Saily</strong>, wenn du unterwegs sowieso für ein VPN oder einen Werbeblocker bezahlen würdest und das gerne direkt in den Datentarif eingebaut haben möchtest. Wähle <strong>RedteaGO</strong>, wenn du einfach den niedrigsten realistischen Startpreis bei einem reinen Daten-eSIM willst und dir Sicherheits-Extras egal sind. Preislich liegen die beiden nicht nah beieinander: RedteaGOs Einstiegstarife starten unter einem Dollar, während Saily's günstigste Pro-GB-Rate ein Vielfaches davon beträgt, sobald man einbezieht, was jeweils tatsächlich enthalten ist.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Sicherheitspaket vs. schlichter Datentarif</h2>
+  <p>
+    Saily ist der eSIM-Ableger von NordVPN, entwickelt von Nord Security selbst und nicht nur mit ihnen "partnerschaftlich verbunden", und jeder Tarif kommt mit eingebautem Werbeblocker, Schutz vor Malware/Phishing-Seiten und einem virtuellen Standort-Tool. Außerdem verkauft Saily eine einzige universelle eSIM, die beim Grenzübertritt in ein neues unterstütztes Land einfach weiterläuft, statt ein separates Profil pro Region zu benötigen. RedteaGO verzichtet auf all das: Die Tarife sind feste Datenkontingente (2 GB, 5 GB und Ähnliches), wir konnten keinen unbegrenzten Tarif finden, und laut RedteaGOs eigener FAQ sind Anrufe und SMS nur bei Tarifen mit dem Label "Calls/Texts Available" enthalten, nicht standardmäßig.
+    </p>
+  <p>
+    Was RedteaGO für sich hat, ist der Startpreis. Der eigene Shop bewirbt eSIMs ab 0,52 $ für einen europaweiten Tarif und 0,70 $ für einen Tarif für USA, Japan oder Thailand, beides Preise der kleinsten Datenstufe über angeblich 180+ Länder und Regionen. Sailys Tarife starten bei rund 3,99 $ für eine 1-GB-eSIM in den USA, vor dessen 15%-Code. Hier vergleicht man nicht dasselbe Produkt zu zwei Preisen: Man vergleicht ein Sicherheits- und Komfortpaket mit einer abgespeckten Datenmenge.
+  </p>
+
+  <h2>Preis-Schnappschuss (1-GB-Äquivalent, vor jedem Code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Ziel</th>
+          <th>Saily</th>
+          <th>RedteaGO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>USA</td><td>3,99 $ (1 GB)</td><td>2,00 $ (1 GB)</td></tr>
+        <tr><td>Europa (regional)</td><td>4,99 $ (1 GB)</td><td>2,79 $ (1 GB)</td></tr>
+        <tr><td>Türkei</td><td>Nicht verfügbar (Kauf im Land blockiert)</td><td>1,50 $ (1 GB)</td></tr>
+        <tr><td>Weltweit</td><td>8,99 $ (1 GB)</td><td>31 $ (6 GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">RedteaGO ist bei den meisten Ein-Land-Tarifen pro Gigabyte günstiger. Sailys Weltweit-Rate sieht auf dem Papier pro GB schlechter aus, aber die "unbegrenzten" Tarife (hier nicht gezeigt) drosseln nach einem Tageskontingent auf 1 Mbit/s statt komplett abzuschneiden, was den Vergleich für alle ändert, die mehr als 1-2 GB kaufen.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Saily:</strong> {{ providerA.primaryCode }}, {{ sailyDiscount | lower }}. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>RedteaGO:</strong> {{ providerB.primaryCode }}, {{ redteagoDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Keiner der beiden Codes ist unser eigener. Saily und RedteaGO betreiben kein Partnerprogramm, das einen eigenen Code wie bei Holafly oder Ubigi unterstützt, daher sind beides die besten öffentlichen Codes, die wir geprüft haben. Sailys 15% gelten sitzeweit; RedteaGOs 5% sind bescheidener, kommen aber zu einem bereits niedrigen Grundpreis dazu.</p>
+  </div>
+
+  <h2>Ist Saily oder RedteaGO die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm Saily, wenn&hellip;</h3>
+      <ul>
+        <li>Du unterwegs sowieso für ein VPN oder einen Werbeblocker bezahlen würdest</li>
+        <li>Es eine Reise durch mehrere Länder ist und du nicht an jeder Grenze eine neue eSIM willst</li>
+        <li>Du eine echte Rückerstattungsoption willst, falls die eSIM nie aktiviert wird</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm RedteaGO, wenn&hellip;</h3>
+      <ul>
+        <li>Du den niedrigsten realistischen Startpreis willst und dir Sicherheits-Extras egal sind</li>
+        <li>Du ungefähr weißt, wie viele Daten du brauchst, und ein festes Kontingent dir nichts ausmacht</li>
+        <li>Du einen Laptop per Hotspot über dein Handy verbinden musst, bestätigt überall dort, wo RedteaGO tätig ist</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>RedteaGOs Datenaufladungen sind nach Aktivierung nicht erstattungsfähig.</strong> Die eigene FAQ gibt an, dass der Tarif sofort nach dem Kauf aktiviert wird, ohne Rückerstattung für ungenutzte Daten. Saily bietet dagegen eine vollständige Rückerstattung, wenn die eSIM innerhalb von 30 Tagen nie installiert oder aktiviert wurde, oder wenn weniger als 1% der Daten genutzt wurden.
+  </p>
+  <p>
+    <strong>Saily ist für den Kauf innerhalb der Türkei gesperrt.</strong> Die türkische Telekommunikationsaufsicht (BTK) hat Sailys Website und App seit Mitte 2025 für Käufe oder Aufladungen blockiert, solange man sich physisch im Land befindet (eine vor der Ankunft gekaufte und installierte eSIM funktioniert weiterhin). RedteaGO unterliegt keiner solchen Einschränkung und ist speziell für die Türkei eine der günstigeren Optionen, bei 1,50 $/GB.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch). Falls keines der beiden Preismodelle passt, lohnt sich ein Blick auf <a href="{{ (collections.i18nMap | i18nAlternates('provider:holafly')).de or '/holafly/' }}">Holaflys</a> pauschalen Unbegrenzt-Preis für Vielnutzer, die weder einen GB-Zähler noch eine Fair-Use-Drosselung im Blick behalten wollen.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Saily vs RedteaGO: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, Saily oder RedteaGO?</h3>
+      <p>RedteaGO, auf reiner Pro-GB-Basis für die meisten Ziele. Saily kostet pro Gigabyte mehr, bietet dafür aber ein VPN-artiges Sicherheitspaket und Werbeblocker, die RedteaGO gar nicht anbietet.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bietet einer der beiden unbegrenzte Daten?</h3>
+      <p>Saily schon, mit einem täglichen Fair-Use-Kontingent (5 GB volle Geschwindigkeit in den meisten Zielen, 3 GB in manchen, danach Drosselung auf 1 Mbit/s). RedteaGO nicht: Alles auf der Website wird als festes Datenkontingent verkauft.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welcher eignet sich besser für Anrufe und SMS?</h3>
+      <p>Keiner der beiden ist standardmäßig auf Sprachtelefonie ausgelegt. Saily ist durchgängig nur für Daten gedacht. RedteaGO enthält Anrufe/SMS nur bei Tarifen mit dem Label "Calls/Texts Available", plus einem separaten Call & Text eSIM-Paket.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bekomme ich bei einem der beiden eine Rückerstattung, wenn ich es mir anders überlege?</h3>
+      <p>Bei Saily ja, innerhalb von 30 Tagen, wenn die eSIM nie installiert oder aktiviert wurde, oder wenn unter 1% der Daten genutzt wurden. Bei RedteaGO nein: Die FAQ gibt an, dass Datenaufladungen nach Aktivierung des Tarifs nicht erstattungsfähig sind.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, Saily oder RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"RedteaGO ist auf reiner Pro-GB-Basis für die meisten Ziele günstiger. Saily kostet pro Gigabyte mehr, bietet dafür aber ein VPN-artiges Sicherheitspaket und Werbeblocker, die RedteaGO nicht anbietet."}
+      },
+      {
+        "@type":"Question",
+        "name":"Bieten Saily oder RedteaGO unbegrenzte Daten?",
+        "acceptedAnswer":{"@type":"Answer","text":"Saily schon, mit einem täglichen Fair-Use-Kontingent von 5 GB voller Geschwindigkeit in den meisten Zielen (3 GB in manchen), danach Drosselung auf 1 Mbit/s. RedteaGO nicht; die Tarife werden als feste Datenkontingente verkauft."}
+      },
+      {
+        "@type":"Question",
+        "name":"Was eignet sich besser für Anrufe und SMS, Saily oder RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"Keiner der beiden ist standardmäßig auf Sprachtelefonie ausgelegt. Saily ist durchgängig nur für Daten gedacht. RedteaGO enthält Anrufe und SMS nur bei Tarifen mit dem Label 'Calls/Texts Available', plus einem separaten Call & Text eSIM-Paket."}
+      },
+      {
+        "@type":"Question",
+        "name":"Bekomme ich von Saily oder RedteaGO eine Rückerstattung?",
+        "acceptedAnswer":{"@type":"Answer","text":"Saily bietet eine Rückerstattung innerhalb von 30 Tagen, wenn die eSIM nie installiert oder aktiviert wurde, oder wenn unter 1% der Daten genutzt wurden. RedteaGOs FAQ gibt an, dass Datenaufladungen nach Aktivierung des Tarifs nicht erstattungsfähig sind."}
+      }
+    ]
+  }
+  </script>
+</div>
