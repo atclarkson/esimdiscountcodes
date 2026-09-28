@@ -1,0 +1,140 @@
+<!-- Airhub vs RedteaGO Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set airhubBest = providerA.codes | findCode("ESIMOFFER5") %}
+  {% set redteagoPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set airhubBestDeCode = deA.codes["ESIMOFFER5"] if (deA and deA.codes and deA.codes["ESIMOFFER5"]) else null %}
+  {% set redteagoDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set airhubBestDiscount = (airhubBestDeCode.discount if airhubBestDeCode) or airhubBest.discount %}
+  {% set redteagoDiscount = (redteagoDeCode.discount if redteagoDeCode) or redteagoPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Beide gehören zu den günstigsten eSIMs auf dieser Seite, kommen aber auf unterschiedlichen Wegen dorthin. <strong>Airhub</strong> bringt bei den meisten Tarifen SMS und eine lokale Nummer mit, gibt dir ein volles Jahr Zeit, die Daten zu verbrauchen, und lässt dich einen Fehlkauf mit einer echten Rückerstattung rückgängig machen. <strong>RedteaGO</strong> unterbietet fast alle bei seiner günstigsten Einstiegs-Datenstufe und funktioniert überall zuverlässig per Hotspot, ist aber standardmäßig reiner Datentarif, verfällt schneller und erstattet ein ungenutztes Top-up nicht. Vergleicht man die reinen Preise pro GB in den unten getrackten Größen, gewinnt Airhub in den meisten Ländern; in der Türkei gewinnt RedteaGO.
+    </p>
+  </div>
+
+  <h2>Preis-Schnappschuss (nächstgelegene passende Größe, vor jedem Code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Ziel</th>
+          <th>Airhub</th>
+          <th>RedteaGO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>USA</td><td>2,82 $ (3 GB) &asymp; 0,94 $/GB</td><td>2 $ (1 GB)</td></tr>
+        <tr><td>Thailand</td><td>0,85 $ (1 GB)</td><td>2,50 $ (1 GB)</td></tr>
+        <tr><td>Japan</td><td>1,55 $ (1 GB)</td><td>2,50 $ (1 GB)</td></tr>
+        <tr><td>Türkei</td><td>2,25 $ (1 GB)</td><td>1,50 $ (1 GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Airhub verkauft einige dieser Pakete als 3-GB- oder 4-GB-Bundle statt als flaches 1 GB, wodurch die Pro-GB-Rechnung zugunsten von Airhub ausfällt, selbst wenn der Preis auf den ersten Blick ähnlich aussieht. RedteaGOs Shop wirbt außerdem separat mit "ab"-Einstiegspreisen von nur 0,52 $ bis 0,70 $ für seine kleinste Datenstufe in manchen Regionen, was günstiger ist als beide Zahlen oben, aber für weniger als ein volles 1 GB gilt. Prüfe also die tatsächliche GB-Menge, bevor du diesen Preis für den Endpreis hältst.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airhub:</strong> {{ airhubBest.code }}, {{ airhubBestDiscount | lower }}. Unser eigener Code, {{ providerA.primaryCode }}, wendet an der Kasse aktuell keinen Rabatt an, Details dazu auf der <a href="{{ providerAUrl }}">Airhub-Seite</a>. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>RedteaGO:</strong> {{ providerB.primaryCode }}, {{ redteagoDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Beide geben aktuell die gleichen 5% Rabatt, der Code selbst ist hier also nicht entscheidend, sondern der zugrunde liegende Tarif.</p>
+  </div>
+
+  <h2>Ist Airhub oder RedteaGO die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm Airhub, wenn&hellip;</h3>
+      <ul>
+        <li>Du SMS und eine lokale Nummer im Paket willst, nicht als separates Extra</li>
+        <li>Du im Voraus für eine Reise kaufst und ein volles Jahr Zeit haben willst, bevor die Daten verfallen</li>
+        <li>Du die Möglichkeit einer Rückerstattung willst, falls die eSIM nicht funktioniert</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm RedteaGO, wenn&hellip;</h3>
+      <ul>
+        <li>Du nur wenig Daten brauchst und den niedrigstmöglichen Einstiegspreis willst</li>
+        <li>Du speziell in die Türkei reist, wo RedteaGO günstiger ist als Airhub</li>
+        <li>Dir ein reiner Datentarif reicht und du keine Anrufe oder SMS brauchst</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>RedteaGO ist nicht der "Rundum-Kommunikations"-Anbieter, als der er in manchen Listen dargestellt wird.</strong> Das eigene FAQ sagt, dass Anruf- und SMS-Dienste nur bei Tarifen mit der Kennzeichnung "Calls/Texts Available" dabei sind, plus einem separaten Call & Text eSIM Paket, nicht als Standardfunktion. Airhub bringt SMS und eine lokale Nummer standardmäßig bei den meisten Tarifen mit, ohne dass man nach einer separaten Kennzeichnung suchen muss.
+  </p>
+  <p>
+    <strong>Airhubs eigener Partnercode funktioniert gerade nicht.</strong> Wir haben {{ providerA.primaryCode }} direkt getestet, und er wendet an Airhubs Kasse keinen Rabatt an, deshalb haben wir ihn von der Top-Position genommen und empfehlen stattdessen den öffentlichen Code ESIMOFFER5, bis das behoben ist. RedteaGOs Code hat dieses Problem nicht, bringt aber ohnehin nur die gleichen 5%, sodass beide bei der Rabatthöhe derzeit gleichauf liegen.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Airhub vs RedteaGO: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, Airhub oder RedteaGO?</h3>
+      <p>Meist Airhub, pro Gigabyte, in den von uns geprüften Ländern (USA, Thailand, Japan). In der Türkei ist RedteaGO günstiger, und seine beworbenen Einstiegspreise liegen in manchen Regionen unter dem 1-GB-Preis beider Anbieter, allerdings für weniger Daten.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Sind bei RedteaGO Anrufe und SMS dabei wie bei Airhubs SMS?</h3>
+      <p>Nicht standardmäßig. RedteaGO bietet Anrufe und SMS nur bei Tarifen mit der Kennzeichnung "Calls/Texts Available" oder seinem separaten Call & Text Paket. Airhub bringt SMS und eine lokale Nummer bei den meisten regulären Tarifen mit.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Wer hat die besseren Rückerstattungsbedingungen?</h3>
+      <p>Airhub. RedteaGOs eigenes FAQ sagt, dass Daten-Top-ups nicht erstattungsfähig sind, sobald ein Tarif aktiviert ist, was sofort beim Kauf passiert.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Wessen Daten verfallen später?</h3>
+      <p>Airhub, mit deutlichem Abstand: Die Daten bleiben bis zu ein Jahr nach dem Kauf gültig, bei RedteaGO sind es rund 30 Tage.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Funktioniert Airhubs eigener Rabattcode?</h3>
+      <p>Aktuell nicht. Wir haben ihn direkt getestet, und er wendet keinen Rabatt an, deshalb empfehlen wir bis zur Behebung den öffentlichen Code ESIMOFFER5 (ebenfalls 5% Rabatt).</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, Airhub oder RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"Meist Airhub, pro Gigabyte, in den geprüften Ländern (USA, Thailand, Japan). In der Türkei ist RedteaGO günstiger, und seine beworbenen Einstiegspreise liegen in manchen Regionen unter dem 1-GB-Preis beider Anbieter, allerdings für weniger Daten."}
+      },
+      {
+        "@type":"Question",
+        "name":"Sind bei RedteaGO Anrufe und SMS dabei wie bei Airhubs SMS?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nicht standardmäßig. RedteaGO bietet Anrufe und SMS nur bei Tarifen mit der Kennzeichnung 'Calls/Texts Available' oder seinem separaten Call & Text Paket. Airhub bringt SMS und eine lokale Nummer bei den meisten regulären Tarifen mit."}
+      },
+      {
+        "@type":"Question",
+        "name":"Wer hat die besseren Rückerstattungsbedingungen, Airhub oder RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub. RedteaGOs eigenes FAQ besagt, dass Daten-Top-ups nicht erstattungsfähig sind, sobald ein Tarif aktiviert ist, was sofort beim Kauf passiert."}
+      },
+      {
+        "@type":"Question",
+        "name":"Wessen Daten verfallen später, Airhub oder RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub, mit deutlichem Abstand: Die Daten bleiben bis zu ein Jahr nach dem Kauf gültig, bei RedteaGO sind es rund 30 Tage."}
+      },
+      {
+        "@type":"Question",
+        "name":"Funktioniert Airhubs eigener Rabattcode aktuell?",
+        "acceptedAnswer":{"@type":"Answer","text":"Aktuell nicht. Er wurde direkt getestet und wendet keinen Rabatt an, deshalb wird bis zur Behebung der öffentliche Code ESIMOFFER5 (ebenfalls 5% Rabatt) empfohlen."}
+      }
+    ]
+  }
+  </script>
+</div>

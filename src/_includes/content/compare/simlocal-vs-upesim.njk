@@ -1,0 +1,142 @@
+<!-- SimLocal vs UPeSIM Comparison Content -->
+<div class="content-section">
+
+  {% set simlocalPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set upesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>SimLocal</strong> if you want a real refund guarantee and, for a UK trip specifically, a full local phone number bundled into the plan. Pick <strong>UPeSIM</strong> if you'd rather install the eSIM weeks before you fly without burning any validity, and you're fine treating the purchase as final. Both are straightforward prepaid data resellers with a 10% code, but they land on opposite sides of "buy now, worry later" versus "buy now, no safety net."
+    </p>
+  </div>
+
+  <h2>The Core Difference: Refund Safety Net vs. Early-Install Flexibility</h2>
+  <p>
+    SimLocal runs a "No Quibble Refunds" policy: cancel and get your money back if you change your mind, no explanation required. UPeSIM doesn't publicly advertise anything like that, so a UPeSIM purchase should be treated as final the moment you buy it.
+  </p>
+  <p>
+    UPeSIM's counter-offer is timing flexibility. Its plans only start counting down once your phone actually connects to the destination network, not when you install the eSIM, so you can set it up at home, days or weeks ahead of a trip, with zero rush at the airport. SimLocal's plans behave the same way at the point of activation (its own UAE listing confirms the plan "starts automatically when the eSIM first connects to a network at your destination"), so that part isn't actually a UPeSIM exclusive. The real gap is on the other end: UPeSIM's own FAQ says an eSIM that's installed but never activated goes stale after 60 days and shows as expired, so don't install one for a trip that's still months away. SimLocal doesn't publish an equivalent install-to-expiry window.
+  </p>
+
+  <h2>Price Snapshot (closest matching size, before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>SimLocal</th>
+          <th>UPeSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States</td><td>$7.50 (3GB, 7 days)</td><td>$5.55 (1GB)</td></tr>
+        <tr><td>Thailand</td><td>$5.75 (3GB, 7 days)</td><td>$3.50 (1GB)</td></tr>
+        <tr><td>Japan</td><td>$13.00 (unlimited, 4 days; no fixed-GB option)</td><td>$5.80 (1GB)</td></tr>
+        <tr><td>UAE</td><td>$9.00 (3GB, 7 days)</td><td>$7.00 (1GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Checked directly on each provider's own site. SimLocal doesn't sell a fixed-GB plan for Japan at all, only unlimited tiers starting at $13 for 4 days, so there's no like-for-like Japan comparison; everywhere else, SimLocal's 3GB tier costs roughly 2 to 3 times UPeSIM's 1GB price, so UPeSIM wins on pure per-GB rate almost everywhere it's tested here.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>SimLocal:</strong> {{ providerA.primaryCode }}, {{ simlocalPrimary.discount | lower }}. Our own code. <a href="/simlocal/">Full code list &rarr;</a></li>
+      <li><strong>UPeSIM:</strong> {{ providerB.primaryCode }}, {{ upesimPrimary.discount | lower }}. <a href="/upesim/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Both currently give the same 10% off, so the code itself isn't the deciding factor here, the plan terms are.</p>
+  </div>
+
+  <h2>Is SimLocal or UPeSIM the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with SimLocal if&hellip;</h3>
+      <ul>
+        <li>You want the option of a no-questions refund if the eSIM doesn't work out</li>
+        <li>You're headed to the UK and want a real local phone number bundled into the plan, not just data</li>
+        <li>You'd rather message support on WhatsApp than dig through a help widget</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with UPeSIM if&hellip;</h3>
+      <ul>
+        <li>You want the lower per-GB price on a like-for-like plan</li>
+        <li>You're installing the eSIM well ahead of a trip and want it to just sit inactive until you land</li>
+        <li>You're fine with a data-only plan and don't need calls, texts, or a refund option</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>SimLocal has physical presence, UPeSIM doesn't.</strong> SimLocal runs a small footprint of staffed airport kiosks, including one at Heathrow, on top of its app and website. UPeSIM is app-and-browser only, like most providers on this site.
+  </p>
+  <p>
+    <strong>Neither includes calls or texts by default.</strong> UPeSIM is data-only across the board, with roaming calls and SMS routed through your home carrier at whatever rate it charges. SimLocal is also data-only except on most of its UK plans specifically, which bundle a real UK phone number for calls and texts, a detail that doesn't extend to its other destinations.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>SimLocal vs UPeSIM FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, SimLocal or UPeSIM</h3>
+      <p>UPeSIM, per gigabyte, in every destination checked here except Japan, where SimLocal doesn't sell a fixed-GB plan at all. SimLocal's 3GB tiers run roughly 2 to 3 times UPeSIM's 1GB price in the US, Thailand, and UAE.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which one can I get a refund from</h3>
+      <p>SimLocal. It advertises a "No Quibble Refunds" policy with no justification required. UPeSIM doesn't publicly offer an equivalent, so treat a UPeSIM purchase as final.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I install either eSIM weeks before my trip</h3>
+      <p>Yes for both, since neither starts counting validity until the phone actually connects to the destination network. UPeSIM is explicit that an installed-but-inactive profile expires after 60 days; SimLocal doesn't publish an equivalent limit.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either come with a real phone number</h3>
+      <p>Most SimLocal UK plans do, bundling a full UK number for calls and texts. UPeSIM is data-only everywhere, with calls and SMS routed through your home carrier's roaming rates instead.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I talk to a real person in person with either provider</h3>
+      <p>Only SimLocal, which runs a small number of staffed airport kiosks, including one at Heathrow. UPeSIM is app-and-browser only.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, SimLocal or UPeSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"UPeSIM is cheaper per gigabyte in every destination checked except Japan, where SimLocal has no fixed-GB plan at all. SimLocal's 3GB tiers run roughly 2 to 3 times UPeSIM's 1GB price in the US, Thailand, and UAE."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which one offers a refund, SimLocal or UPeSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal advertises a No Quibble Refunds policy requiring no justification. UPeSIM does not publicly offer an equivalent, so a UPeSIM purchase should be treated as final."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can a SimLocal or UPeSIM eSIM be installed weeks before a trip?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes for both, since validity only starts once the phone connects to the destination network. UPeSIM states an installed-but-inactive profile expires after 60 days; SimLocal does not publish an equivalent limit."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does SimLocal or UPeSIM include a phone number?",
+        "acceptedAnswer":{"@type":"Answer","text":"Most SimLocal UK plans bundle a real UK phone number for calls and texts. UPeSIM is data-only everywhere, with calls and SMS routed through the traveler's home carrier."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I get in-person help from SimLocal or UPeSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Only SimLocal, which operates a small number of staffed airport kiosks including one at Heathrow. UPeSIM is app-and-browser only."}
+      }
+    ]
+  }
+  </script>
+</div>

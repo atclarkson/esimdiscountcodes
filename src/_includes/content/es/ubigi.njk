@@ -1,0 +1,164 @@
+<!-- Ubigi Content (Spanish) -->
+<div class="content-section">
+
+  <!-- Quick Answer -->
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Mejor código promocional de Ubigi &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Usa <strong>{{ provider.primaryCode }}</strong> para conseguir <strong>10% de descuento en cualquier plan de Ubigi</strong>. Es nuestro propio código, por eso lo mostramos primero aquí. Todos los demás códigos de Ubigi que funcionan y que hemos encontrado también dan un 10% de descuento, así que no hay ningún motivo real para buscar uno mejor, como sí podría pasar con Airalo.
+      <span class="callout-meta">Confirmado activo el <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("d 'de' LLLL 'de' yyyy") }}</time>.</span>
+    </p>
+  </div>
+
+  <!-- Headline -->
+  <h2>Qué hace a Ubigi realmente diferente</h2>
+  <p>
+    Ubigi no es una startup de viajes que alquila capacidad a una red móvil. Es una marca de Transatel, un facilitador de MVNO francés que lleva ofreciendo conectividad móvil desde principios de los años 2000 y que ahora forma parte de NTT Group, una de las mayores empresas de telecomunicaciones del mundo. Es un origen realmente distinto al de la mayoría de apps de eSIM de esta web, y eso se nota en un sitio inesperado: Ubigi también vende la conectividad SIM integrada en los coches conectados de BMW, Toyota, Jeep, Maserati, Fiat, Alfa Romeo, Mini, Jaguar y Land Rover. La eSIM de viaje que compras para tu móvil funciona sobre la misma infraestructura de red de fondo que el módem del Jeep de cualquiera.
+  </p>
+  <p>
+    Eso no convierte automáticamente a Ubigi en la mejor opción para tu móvil. En precio, suele ser la opción más cara de esta web: 4 $ por 1 GB en Estados Unidos es aproximadamente el doble de lo que cobran <a href="/airhub/">Airhub</a> o <a href="/redteago/">RedteaGO</a> por el mismo gigabyte. Lo que sí obtienes a cambio es una estructura de planes que las apps de eSIM con código de descuento no suelen ofrecer.
+  </p>
+
+  <img class="content-photo"
+       src="https://media.adamandlinds.com/photos/large/551b9748-29e5-4c56-9644-92ec877c6d68.jpg"
+       alt="Un hombre sonriente con barba y gafas se hace un selfie dentro de un apartamento acogedor, con una calle nevada de Helsinki y un edificio histórico de piedra visibles a través de la ventana detrás de él"
+       width="960" height="1280">
+  <p class="content-photo-caption">Un día de trabajo desde un apartamento en Helsinki, el tipo de estancia en un destino recurrente donde un plan mensual recurrente (en lugar de una eSIM nueva cada vez) empieza a tener sentido de verdad.</p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Códigos activos</h3>
+    <ul>
+      <li><strong>ADAMANDLINDS</strong>: 10% de descuento en todos los planes (nuestro propio código)</li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Si un código no se aplica, recarga el carrito o pruébalo en una ventana privada, y vuelve a intentarlo.</p>
+  </div>
+
+  <!-- Real operational note instead of generic feature grid / comparison table -->
+  <h2>Compra única o recurrente: el detalle que de verdad importa aquí</h2>
+  <p>
+    La mayoría de proveedores de eSIM solo venden una cosa: una bolsa de datos fija que caduca pasado un número determinado de días. Ubigi también vende eso (sus planes "de una sola vez"), pero además vende planes <strong>recurrentes</strong>, y la letra pequeña de esos planes merece leerse antes de comprar, no después.
+  </p>
+  <p>
+    Un plan <strong>mensual</strong> recurrente se renueva solo y cobra a tu tarjeta automáticamente cada mes, y el propio centro de ayuda de Ubigi deja claro que no se puede cancelar hasta que hayas estado suscrito <strong>un mínimo de tres meses</strong>. Un plan <strong>anual</strong> recurrente es peor en un aspecto concreto: pagas los 12 meses completos por adelantado, y <strong>no se puede cancelar ni reembolsar durante ese año</strong> bajo ningún concepto, a cambio de recibir una asignación de datos nueva cada mes. En cualquier caso, lo que no uses en un mes determinado se pierde. Ubigi no traspasa los datos no usados al siguiente periodo en ningún tipo de plan, ni de una sola vez ni recurrente.
+  </p>
+  <p>
+    Nada de esto convierte a los planes recurrentes en una mala opción. Si de verdad visitas el mismo país con regularidad, un plan mensual puede salir más barato que comprar una eSIM nueva antes de cada viaje. Simplemente no es algo en lo que quieras hacer clic sin querer pensando que es una compra puntual normal.
+  </p>
+
+  <!-- How to -->
+  <h2>Cómo aplicar un código de Ubigi en 3 pasos</h2>
+  <div class="content-box">
+    <ol>
+      <li>Copia <strong>ADAMANDLINDS</strong></li>
+      <li>Elige un plan de datos de una sola vez o recurrente para tu destino en Ubigi</li>
+      <li>Pega el código en el campo de promoción al pagar y confirma la rebaja del 10% antes de pagar</li>
+    </ol>
+    <p class="content-note">El descuento se muestra antes de completar el pago.</p>
+  </div>
+
+  <!-- Decision help -->
+  <h2>¿Es Ubigi la opción adecuada para tu viaje?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Te encaja bien si&hellip;</h3>
+      <ul>
+        <li>Visitas el mismo país con la frecuencia suficiente para que un plan mensual recurrente compense frente a comprar una eSIM nueva cada vez</li>
+        <li>Ya conduces un coche conectado de una de las marcas asociadas a Ubigi y te gusta la idea de tener un solo proveedor</li>
+        <li>Prefieres comprar a un MVNO consolidado antes que a un revendedor más pequeño, aunque cueste más</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Considera otras opciones si&hellip;</h3>
+      <ul>
+        <li>Solo quieres el precio más bajo por GB: Ubigi cuesta aproximadamente el doble que <a href="/airhub/">Airhub</a> o <a href="/redteago/">RedteaGO</a></li>
+        <li>Quieres un plan que puedas cancelar o reembolsar en cualquier momento: quédate con los planes de una sola vez, o evita directamente la permanencia de 3 meses del plan mensual y la anualidad sin reembolso</li>
+        <li>Quieres datos ilimitados en lugar de una bolsa fija: mira <a href="/es/holafly/">Holafly</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Savings examples -->
+  <h2>Así es el descuento en la práctica</h2>
+  <div class="content-box">
+    <ul>
+      <li>Estados Unidos 1 GB a 4 $ &rarr; 10% de descuento ahorra 0,40 $</li>
+      <li>Francia 3 GB a 4 $ &rarr; 10% de descuento ahorra 0,40 $</li>
+      <li>Global 1 GB a 25 $ &rarr; 10% de descuento ahorra 2,50 $</li>
+    </ul>
+    <p class="content-note">El precio por GB de Ubigi está por encima del de la mayoría de proveedores de esta web, así que el 10% importa más en un plan regional o global grande que en una recarga pequeña de un solo país.</p>
+  </div>
+
+  <p>
+    Para la compatibilidad de dispositivos con eSIM, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Usa el código al pagar</h2>
+    <p>Copia <code>ADAMANDLINDS</code> y pégalo en el campo de promoción</p>
+    <p>10% de descuento en cualquier plan de Ubigi, de una sola vez o recurrente.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre el código de Ubigi</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Cuál es el mejor código ahora mismo?</h3>
+      <p><strong>ADAMANDLINDS</strong>: 10% de descuento en cualquier plan de Ubigi. Es nuestro propio código, por eso se muestra primero; los demás códigos que funcionan dan el mismo 10%.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál es la diferencia entre un plan de Ubigi de una sola vez y uno recurrente?</h3>
+      <p>Un plan de una sola vez es una asignación de datos fija, válida durante un número determinado de días, comprada una única vez. Un plan recurrente se renueva automáticamente: mensual (se cobra y se renueva cada mes, cancelable solo después de un mínimo de 3 meses) o anual (se paga por adelantado en su totalidad por 12 meses de renovaciones mensuales, no cancelable ni reembolsable durante ese año).</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo cancelar un plan recurrente de Ubigi?</h3>
+      <p>Un plan mensual sí, pero no hasta que lo hayas tenido al menos 3 meses. Un plan anual no se puede cancelar ni reembolsar durante su periodo de 12 meses.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Los datos no usados de Ubigi se acumulan?</h3>
+      <p>No. Lo que no uses en un periodo de facturación se pierde, ya sea en un plan de una sola vez, mensual o anual.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Quién está realmente detrás de Ubigi?</h3>
+      <p>Transatel, un facilitador de MVNO francés en funcionamiento desde principios de los años 2000 y ahora parte de NTT Group. Transatel también suministra la conectividad detrás de los sistemas de coche conectado de BMW, Toyota, Jeep, Maserati, Fiat, Alfa Romeo, Mini, Jaguar y Land Rover.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Cuál es el mejor código promocional de Ubigi ahora mismo?",
+        "acceptedAnswer":{"@type":"Answer","text":"ADAMANDLINDS da un 10% de descuento en cualquier plan de Ubigi. Es nuestro propio código, por eso se muestra primero; los demás códigos que funcionan dan el mismo 10%."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál es la diferencia entre un plan de Ubigi de una sola vez y uno recurrente?",
+        "acceptedAnswer":{"@type":"Answer","text":"Un plan de una sola vez es una asignación de datos fija, válida durante un número determinado de días, comprada una única vez. Un plan recurrente se renueva automáticamente: mensual (cancelable solo después de un mínimo de 3 meses) o anual (pagado por adelantado por 12 meses, no cancelable ni reembolsable durante ese año)."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se puede cancelar un plan recurrente de Ubigi?",
+        "acceptedAnswer":{"@type":"Answer","text":"Un plan mensual se puede cancelar tras un compromiso mínimo de 3 meses. Un plan anual no se puede cancelar ni reembolsar durante su periodo de 12 meses."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se acumulan los datos no usados de Ubigi?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. Los datos no usados se pierden al final de cada periodo de facturación, sea cual sea el tipo de plan."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Quién está detrás de Ubigi?",
+        "acceptedAnswer":{"@type":"Answer","text":"Transatel, un facilitador de MVNO francés en funcionamiento desde principios de los años 2000 y ahora parte de NTT Group, que también suministra la conectividad de coche conectado a fabricantes como BMW, Toyota, Jeep, Maserati, Fiat, Alfa Romeo, Mini, Jaguar y Land Rover."}
+      }
+    ]
+  }
+  </script>
+</div>

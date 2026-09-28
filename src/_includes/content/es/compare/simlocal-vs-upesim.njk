@@ -1,0 +1,148 @@
+<!-- SimLocal vs UPeSIM Comparativa (Español) -->
+<div class="content-section">
+
+  {% set simlocalPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set upesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set simlocalEsCode = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
+  {% set upesimEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set simlocalDiscount = (simlocalEsCode.discount if simlocalEsCode) or simlocalPrimary.discount %}
+  {% set upesimDiscount = (upesimEsCode.discount if upesimEsCode) or upesimPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>SimLocal</strong> si quieres una garantía de reembolso real y, para un viaje al Reino Unido en concreto, un número de teléfono local completo incluido en el plan. Elige <strong>UPeSIM</strong> si prefieres instalar la eSIM semanas antes de volar sin quemar validez, y no te importa que la compra sea definitiva. Los dos son revendedores de datos prepago sencillos con un código del 10%, pero se sitúan en polos opuestos: "compra ahora, preocúpate después" frente a "compra ahora, sin red de seguridad".
+    </p>
+  </div>
+
+  <h2>La diferencia principal: red de seguridad de reembolso frente a flexibilidad para instalar con antelación</h2>
+  <p>
+    SimLocal aplica una política de "reembolsos sin peros": cancelas y recuperas tu dinero si cambias de opinión, sin necesidad de dar explicaciones. UPeSIM no anuncia públicamente nada parecido, así que una compra en UPeSIM debe tratarse como definitiva en el momento en que la haces.
+  </p>
+  <p>
+    La contrapartida de UPeSIM es la flexibilidad de fechas. Sus planes solo empiezan a contar cuando el teléfono se conecta de verdad a la red de destino, no cuando instalas la eSIM, así que puedes configurarla en casa, días o semanas antes del viaje, sin prisas de última hora en el aeropuerto. Los planes de SimLocal funcionan igual en el momento de la activación (su propia ficha de EAU confirma que el plan "se activa automáticamente en cuanto la eSIM se conecta por primera vez a una red en tu destino"), así que esa parte tampoco es una exclusiva de UPeSIM. La diferencia real está en el otro extremo: las propias preguntas frecuentes de UPeSIM dicen que una eSIM instalada pero nunca activada caduca a los 60 días y aparece como expirada, así que no instales una para un viaje que aún está a meses de distancia. SimLocal no publica una ventana equivalente entre instalación y caducidad.
+  </p>
+
+  <h2>Comparativa de precios (tamaño más parecido, antes de cualquier código)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>SimLocal</th>
+          <th>UPeSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Estados Unidos</td><td>7,50 $ (3 GB, 7 días)</td><td>5,55 $ (1 GB)</td></tr>
+        <tr><td>Tailandia</td><td>5,75 $ (3 GB, 7 días)</td><td>3,50 $ (1 GB)</td></tr>
+        <tr><td>Japón</td><td>13,00 $ (ilimitado, 4 días; sin opción de GB fijos)</td><td>5,80 $ (1 GB)</td></tr>
+        <tr><td>EAU</td><td>9,00 $ (3 GB, 7 días)</td><td>7,00 $ (1 GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Comprobado directamente en la web de cada proveedor. SimLocal no vende ningún plan de GB fijos para Japón, solo niveles ilimitados desde 13 $ para 4 días, así que no hay una comparación equivalente para Japón; en el resto de destinos, el nivel de 3 GB de SimLocal cuesta entre 2 y 3 veces el precio del 1 GB de UPeSIM, así que UPeSIM gana en precio por GB en casi todos los casos comprobados aquí.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>SimLocal:</strong> {{ providerA.primaryCode }}, {{ simlocalDiscount | lower }}. Nuestro propio código. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>UPeSIM:</strong> {{ providerB.primaryCode }}, {{ upesimDiscount | lower }}. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ambos dan actualmente el mismo 10% de descuento, así que el código en sí no es lo que decide aquí, sino las condiciones de cada plan.</p>
+  </div>
+
+  <h2>¿SimLocal o UPeSIM es la opción adecuada?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige SimLocal si&hellip;</h3>
+      <ul>
+        <li>Quieres tener la opción de un reembolso sin preguntas si la eSIM no te funciona bien</li>
+        <li>Vas al Reino Unido y quieres un número de teléfono local real incluido en el plan, no solo datos</li>
+        <li>Prefieres escribir al soporte por WhatsApp antes que buscar en un widget de ayuda</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige UPeSIM si&hellip;</h3>
+      <ul>
+        <li>Quieres el precio por GB más bajo en un plan equivalente</li>
+        <li>Vas a instalar la eSIM con mucha antelación al viaje y quieres que se quede inactiva hasta que aterrices</li>
+        <li>Te vale con un plan solo de datos y no necesitas llamadas, mensajes ni opción de reembolso</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>SimLocal tiene presencia física, UPeSIM no.</strong> SimLocal cuenta con un pequeño número de mostradores atendidos en aeropuertos, incluido uno en Heathrow, además de su app y su web. UPeSIM funciona solo por app y navegador, como la mayoría de proveedores de este sitio.
+  </p>
+  <p>
+    <strong>Ninguno incluye llamadas ni mensajes por defecto.</strong> UPeSIM es solo datos en todos sus planes, con las llamadas y SMS en itinerancia facturados según la tarifa de tu operador habitual. SimLocal también es solo datos, salvo en la mayoría de sus planes del Reino Unido en concreto, que incluyen un número de teléfono británico real para llamadas y mensajes, un detalle que no se extiende a sus otros destinos.
+  </p>
+  <p>
+    Para la configuración del dispositivo y los conceptos básicos de eSIM que aplican a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre SimLocal vs UPeSIM</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Cuál es más barato, SimLocal o UPeSIM?</h3>
+      <p>UPeSIM, por gigabyte, en todos los destinos comprobados aquí excepto Japón, donde SimLocal no vende ningún plan de GB fijos. Los niveles de 3 GB de SimLocal cuestan entre 2 y 3 veces el precio del 1 GB de UPeSIM en Estados Unidos, Tailandia y EAU.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿De cuál de los dos puedo conseguir un reembolso?</h3>
+      <p>De SimLocal. Anuncia una política de "reembolsos sin peros" que no exige justificación. UPeSIM no ofrece públicamente nada equivalente, así que conviene tratar una compra en UPeSIM como definitiva.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo instalar cualquiera de las dos eSIM semanas antes del viaje?</h3>
+      <p>Sí, en ambos casos, ya que ninguno empieza a contar la validez hasta que el teléfono se conecta realmente a la red de destino. UPeSIM indica explícitamente que un perfil instalado pero inactivo caduca a los 60 días; SimLocal no publica un límite equivalente.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos incluye un número de teléfono real?</h3>
+      <p>La mayoría de los planes de SimLocal para el Reino Unido sí, con un número británico completo para llamadas y mensajes. UPeSIM es solo datos en todos sus destinos, con las llamadas y SMS facturadas según las tarifas de itinerancia de tu operador habitual.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo hablar en persona con alguien de cualquiera de los dos proveedores?</h3>
+      <p>Solo con SimLocal, que cuenta con un pequeño número de mostradores atendidos en aeropuertos, incluido uno en Heathrow. UPeSIM funciona solo por app y navegador.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Cuál es más barato, SimLocal o UPeSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"UPeSIM es más barato por gigabyte en todos los destinos comprobados excepto Japón, donde SimLocal no tiene ningún plan de GB fijos. Los niveles de 3 GB de SimLocal cuestan entre 2 y 3 veces el precio del 1 GB de UPeSIM en Estados Unidos, Tailandia y EAU."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál de los dos ofrece reembolso, SimLocal o UPeSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal anuncia una política de reembolsos sin peros que no exige justificación. UPeSIM no ofrece públicamente nada equivalente, así que una compra en UPeSIM debe tratarse como definitiva."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se puede instalar una eSIM de SimLocal o UPeSIM semanas antes de un viaje?",
+        "acceptedAnswer":{"@type":"Answer","text":"Sí, en ambos casos, ya que la validez solo empieza a contar cuando el teléfono se conecta a la red de destino. UPeSIM indica que un perfil instalado pero inactivo caduca a los 60 días; SimLocal no publica un límite equivalente."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿SimLocal o UPeSIM incluyen un número de teléfono?",
+        "acceptedAnswer":{"@type":"Answer","text":"La mayoría de los planes de SimLocal para el Reino Unido incluyen un número británico real para llamadas y mensajes. UPeSIM es solo datos en todos sus destinos, con las llamadas y SMS facturadas a través del operador habitual del viajero."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se puede recibir ayuda en persona de SimLocal o UPeSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Solo con SimLocal, que opera un pequeño número de mostradores atendidos en aeropuertos, incluido uno en Heathrow. UPeSIM funciona solo por app y navegador."}
+      }
+    ]
+  }
+  </script>
+</div>
