@@ -1,0 +1,163 @@
+<!-- RedteaGO Inhalt (Deutsch) -->
+<div class="content-section">
+
+  <!-- Kurzantwort -->
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Bester RedteaGO-Rabattcode &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Nutze <strong>{{ provider.primaryCode }}</strong> für <strong>5% Rabatt auf jeden RedteaGO-eSIM-Tarif</strong>. Es handelt sich um einen öffentlichen Code, nicht um unseren eigenen (RedteaGO betreibt kein Partnerprogramm der Art, die unseren eigenen Code wie bei manchen anderen Anbietern auf dieser Seite unterstützen würde), und RedteaGO bewirbt ihn auf der eigenen Seite nicht direkt, daher ist das der beste Satz, den wir bislang bestätigen konnten.
+      <span class="callout-meta">Bestätigt aktiv am <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("d. MMM yyyy") }}</time>.</span>
+    </p>
+  </div>
+
+  <!-- Überschrift -->
+  <h2>Was RedteaGO wirklich unterscheidet</h2>
+  <p>
+    RedteaGOs eigentliches Argument ist der Startpreis, nicht eine Liste voller Funktionen. Der eigene Shop bewirbt eSIMs ab <strong>0,52 $</strong> für einen europaweiten Tarif (37 Länder), <strong>0,70 $</strong> für einen Tarif in den USA, Japan oder Thailand, und <strong>2,90 $</strong> für einen globalen Tarif (130+ Regionen), über insgesamt behauptete <strong>180+ Länder und Regionen</strong>. Das sind Einstiegspreise für die kleinste Datenstufe, nicht das, was ein typischer Reisender am Ende zahlt, also prüfe die tatsächliche GB-Menge, bevor du annimmst, die Schlagzeile sei dein Endpreis. Aber selbst unter Berücksichtigung dessen ist RedteaGO regelmäßig eine der günstigsten Pro-GB-Optionen auf dieser Seite.
+  </p>
+  <p>
+    Wir haben RedteaGOs eigene Startseite und FAQ direkt geprüft und mussten unsere eigene frühere Beschreibung hier korrigieren: Das ist nicht standardmäßig ein vollwertiger Anbieter für Anrufe und SMS. Siehe unten.
+  </p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Aktive Codes</h3>
+    <ul>
+      <li><strong>{{ provider.primaryCode }}</strong>: 5% Rabatt auf alle Tarife (öffentlicher Code, nicht auf RedteaGOs eigener Seite beworben)</li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Wenn der Code nicht angewendet wird, aktualisiere den Warenkorb oder probiere ein privates Fenster, dann versuche es erneut.</p>
+  </div>
+
+  <!-- Echte operative Anmerkung statt generischem Feature-Raster / Vergleichstabelle -->
+  <h2>Die meisten Tarife sind reine Daten-Tarife, keine "vollständige Kommunikation"</h2>
+  <p>
+    RedteaGOs eigene FAQ sagt unmissverständlich, dass "Anruf- und SMS-Dienste nur in bestimmten Regionen verfügbar sind" und dass Tarife, die sie unterstützen, mit einer separaten Kennzeichnung "Calls/Texts Available" markiert sind, statt standardmäßiger Bestandteil jedes Tarifs zu sein. Es gibt außerdem ein eigenständiges "Call & Text eSIM"-Paket, getrennt von den regulären Daten-Tarifen. Wenn du eine funktionierende Telefonnummer für Anrufe oder SMS brauchst, geh nicht davon aus, dass irgendein RedteaGO-Tarif dir eine gibt; prüfe zuerst, ob der konkrete Tarif, den du kaufst, diese Kennzeichnung trägt.
+  </p>
+  <p>
+    Wir konnten auf RedteaGOs Seite außerdem keinen unbegrenzten Datentarif finden: Alles, was wir gesehen haben, wird als feste Datenmenge verkauft (2 GB, 5 GB und Ähnliches), nicht als pauschale unbegrenzte Menge. Bestätigt für die gesamte Seite ist hingegen Hotspot- und Tethering-Unterstützung, RedteaGOs FAQ erklärt, dass sie "in allen Ländern und Regionen" verfügbar ist, ohne Ausnahme nach Tariftyp.
+  </p>
+
+  <!-- Anleitung -->
+  <h2>Einen RedteaGO-Code in 3 Schritten einlösen</h2>
+  <div class="content-box">
+    <ol>
+      <li>Kopiere <strong>{{ provider.primaryCode }}</strong></li>
+      <li>Wähle einen Länder-, Regional- oder globalen Datentarif bei RedteaGO, achte dabei auf die Kennzeichnung "Calls/Texts Available", falls du eine funktionierende Nummer brauchst</li>
+      <li>Füge den Code beim Bezahlvorgang in das Promo-Feld ein und bestätige den 5%-Preisnachlass, bevor du zahlst</li>
+    </ol>
+    <p class="content-note">Der Rabatt wird vor Abschluss der Zahlung angezeigt.</p>
+  </div>
+
+  <!-- Entscheidungshilfe -->
+  <h2>Ist RedteaGO die richtige Wahl für deine Reise</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Gut geeignet</h3>
+      <ul>
+        <li>Du willst den niedrigsten realistischen Startpreis für eine reine Daten-eSIM und prüfst gerne vorher die tatsächliche GB-Menge</li>
+        <li>Du willst einen Laptop oder ein Tablet über die Daten deines Handys per Hotspot verbinden, das funktioniert überall, wo RedteaGO aktiv ist</li>
+        <li>Du kaufst Daten im Voraus und bist damit einverstanden, keine Rückerstattung für ungenutzte Aufladungen nach der Aktivierung eines Tarifs zu bekommen</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Alternativen in Betracht ziehen</h3>
+      <ul>
+        <li>Du brauchst speziell eine echte Telefonnummer für Anrufe und SMS, nicht nur Daten: siehe <a href="/de/simlocal/">SimLocal</a>, dessen UK-Tarife eine vollständige britische Nummer für Anrufe und SMS enthalten (wir haben selbst einen gekauft und das bestätigt), statt RedteaGOs Add-on-Ansatz mit Kennzeichnung</li>
+        <li>Du zahlst lieber einen festen Preis für unbegrenzte Daten, statt GB-Mengen im Blick zu behalten: siehe <a href="/de/holafly/">Holafly</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Ersparnisbeispiele -->
+  <h2>So sieht der Rabatt aus</h2>
+  <div class="content-box">
+    <ul>
+      <li>USA 1 GB für 2 $ &rarr; 5% Rabatt spart 0,10 $</li>
+      <li>Türkei 1 GB für 1,50 $ &rarr; 5% Rabatt spart 0,08 $</li>
+      <li>Global 6 GB für 31 $ &rarr; 5% Rabatt spart 1,55 $</li>
+    </ul>
+    <p class="content-note">5% ist ein bescheidener Rabattsatz im Vergleich zu manch anderem Anbieter auf dieser Seite, aber RedteaGOs zugrunde liegender Preis pro GB ist bereits so niedrig, dass er trotzdem einen höheren Prozentsatz bei einem teureren Konkurrenten schlagen kann. Rechne für den konkreten Tarif nach, den du willst, statt anzunehmen, dass der größte Prozentsatz automatisch gewinnt.</p>
+  </div>
+
+  <p>
+    Zur eSIM-Gerätekompatibilität siehe unseren <a href="/compatible-devices/">Guide zu kompatiblen eSIM-Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Code beim Bezahlvorgang einlösen</h2>
+    <p>Kopiere <code>{{ provider.primaryCode }}</code> und füge ihn in das Promo-Feld ein</p>
+    <p>5% Rabatt auf jeden RedteaGO-eSIM-Tarif.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Häufige Fragen zum RedteaGO-Rabattcode</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist gerade der beste RedteaGO-Code</h3>
+      <p><strong>{{ provider.primaryCode }}</strong>: 5% Rabatt auf alle Tarife. Es ist ein öffentlicher Code, nicht auf RedteaGOs eigener Seite beworben, aber der beste, den wir bestätigen konnten.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Sind bei RedteaGO Anrufe und SMS enthalten</h3>
+      <p>Nicht standardmäßig. RedteaGOs eigene FAQ sagt, dass Anruf- und SMS-Dienste nur bei Tarifen verfügbar sind, die mit "Calls/Texts Available" gekennzeichnet sind, plus einem separaten Call & Text eSIM-Paket. Die meisten aufgeführten Tarife sind reine Daten-Tarife.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bietet RedteaGO unbegrenzte Daten an</h3>
+      <p>Nicht, dass wir das finden konnten. Die Tarife werden als feste Datenmengen verkauft (2 GB, 5 GB und Ähnliches), nicht als pauschale unbegrenzte Menge.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Unterstützt RedteaGO Hotspot oder Tethering</h3>
+      <p>Ja. RedteaGOs eigene FAQ gibt an, dass die Hotspot-Freigabe in allen Ländern und Regionen verfügbar ist, in denen der Anbieter aktiv ist.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bekomme ich eine Rückerstattung für eine RedteaGO-Aufladung</h3>
+      <p>Nein. RedteaGOs FAQ gibt an, dass Datenaufladungen nicht erstattungsfähig sind, da der Tarif sofort nach Abschluss des Kaufs aktiviert wird.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Wie viele Länder deckt RedteaGO ab</h3>
+      <p>RedteaGO bewirbt auf der eigenen Seite 180+ Länder und Regionen.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist gerade der beste RedteaGO-Rabattcode?",
+        "acceptedAnswer":{"@type":"Answer","text":"RTGF946FR gibt 5% Rabatt auf alle Tarife. Es ist ein öffentlicher Code, nicht auf RedteaGOs eigener Seite beworben, aber der beste, den wir bislang bestätigen konnten."}
+      },
+      {
+        "@type":"Question",
+        "name":"Sind bei RedteaGO Anrufe und SMS enthalten?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nicht standardmäßig. RedteaGOs eigene FAQ gibt an, dass Anruf- und SMS-Dienste nur bei Tarifen verfügbar sind, die mit 'Calls/Texts Available' gekennzeichnet sind, plus einem separaten Call & Text eSIM-Paket. Die meisten aufgeführten Tarife sind reine Daten-Tarife."}
+      },
+      {
+        "@type":"Question",
+        "name":"Bietet RedteaGO unbegrenzte Daten an?",
+        "acceptedAnswer":{"@type":"Answer","text":"Auf RedteaGOs Seite wurde kein unbegrenzter Datentarif gefunden. Die Tarife werden als feste Datenmengen verkauft, nicht als pauschale unbegrenzte Menge."}
+      },
+      {
+        "@type":"Question",
+        "name":"Unterstützt RedteaGO Hotspot oder Tethering?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ja, RedteaGOs eigene FAQ gibt an, dass die Hotspot-Freigabe in allen Ländern und Regionen verfügbar ist, in denen der Anbieter aktiv ist."}
+      },
+      {
+        "@type":"Question",
+        "name":"Bekomme ich eine Rückerstattung für eine RedteaGO-Datenaufladung?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nein. RedteaGOs FAQ gibt an, dass Datenaufladungen nicht erstattungsfähig sind, da der Tarif sofort nach Abschluss des Kaufs aktiviert wird."}
+      },
+      {
+        "@type":"Question",
+        "name":"Wie viele Länder deckt RedteaGO ab?",
+        "acceptedAnswer":{"@type":"Answer","text":"RedteaGO bewirbt auf der eigenen Seite eine Abdeckung von 180+ Ländern und Regionen."}
+      }
+    ]
+  }
+  </script>
+</div>

@@ -1,0 +1,139 @@
+<!-- Saily vs AloSIM Comparison Content -->
+<div class="content-section">
+
+  {% set sailyPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set alosimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>Saily</strong> if you'd normally pay for a VPN or ad-blocker when traveling anyway and want one eSIM that keeps working as you cross borders. Pick <strong>AloSIM</strong> if you want a free international phone number bundled in and the choice of a fixed-GB or unlimited plan from the same provider. Both are priced close enough that the 15% code each one offers matters more than the sticker price.
+    </p>
+  </div>
+
+  <h2>The Core Difference: A Security Suite vs. A Free Phone Number</h2>
+  <p>
+    Saily is NordVPN's eSIM spin-off, built by the same company (Nord Security), and every plan ships with ad blocking, malware/phishing site blocking, and a virtual-location tool included. It also sells one universal eSIM that keeps working as you cross into a new supported country, rather than a separate profile per region.
+  </p>
+  <p>
+    AloSIM's point of difference is a free international phone number through a partnership with Hushed, set up separately inside the AloSIM app after you buy a plan. It's not a swap for your real number, but it's useful for receiving a verification text or giving out to a hotel abroad. AloSIM also sells both fixed-data and unlimited plans on its own site, so you get that choice without switching providers.
+  </p>
+
+  <img class="content-photo"
+       src="https://media.adamandlinds.com/photos/large/54adb95c-7ef0-4635-b159-2186e91c68b5.jpg"
+       alt="Four adults wearing headphones sit around a table covered in laptops and iced drinks in a busy Thai mall food court, grinning at the camera"
+       width="1280" height="960">
+  <p class="content-photo-caption">Working from a mall food court in Chiang Mai on public Wi-Fi, the kind of spot where Saily's bundled ad and malware blocking actually gets used rather than just AloSIM's number-only extra.</p>
+
+  <h2>Price Snapshot (1GB-equivalent, before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Saily</th>
+          <th>AloSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States</td><td>$3.99 (1GB)</td><td>$4.50 (1GB)</td></tr>
+        <tr><td>Europe regional</td><td>$4.99 (1GB)</td><td>$5 (1GB)</td></tr>
+        <tr><td>Japan</td><td>$3.99 (1GB)</td><td>$4.50 (1GB)</td></tr>
+        <tr><td>Global</td><td>$8.99 (1GB)</td><td>not listed as a single regional bucket</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">The two are within a few cents of each other on raw per-GB price in every destination we checked. AloSIM doesn't sell one flat "Global" region bucket the way Saily does; it prices by country and by the regions it does cover instead.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Saily:</strong> {{ providerA.primaryCode }}, {{ sailyPrimary.discount | lower }}. <a href="/saily/">Full code list &rarr;</a></li>
+      <li><strong>AloSIM:</strong> {{ providerB.primaryCode }}, {{ alosimPrimary.discount | lower }}. <a href="/alosim/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Neither code is ours. Saily and AloSIM don't run the kind of affiliate program that supports our own code the way Holafly or Ubigi do, so both codes here are the best public ones we've verified.</p>
+  </div>
+
+  <h2>Is Saily or AloSIM the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Saily if&hellip;</h3>
+      <ul>
+        <li>You'd normally pay for a VPN or ad-blocker separately when traveling anyway</li>
+        <li>Multi-country trip where you don't want a new eSIM profile at every border</li>
+        <li>You're a frequent enough flyer that the $59.99/month Ultra tier's lounge passes could pay for themselves</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with AloSIM if&hellip;</h3>
+      <ul>
+        <li>You want a free second phone number for verification texts or hotel bookings without handing out your real one</li>
+        <li>You want the choice of a fixed-GB or unlimited plan from the same provider</li>
+        <li>You want to buy ahead of a trip and only activate once you land, keeping AloSIM's refund window open</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Saily is currently blocked from being purchased or topped up while you're physically inside Turkey.</strong> It's one of several eSIM providers, alongside Airalo and Holafly, hit by a mid-2025 block from Turkey's telecom regulator (BTK). An eSIM bought and installed before you land still works once you're there; you just can't buy or top up in-country. We haven't seen AloSIM named in the same reporting, but if Turkey is on the itinerary, the safer move either way is to buy and install before you land.
+  </p>
+  <p>
+    <strong>AloSIM's refund guarantee only covers eSIMs that never activate.</strong> If your eSIM won't connect or your phone turns out incompatible, AloSIM will refund it. Once you've activated a plan and started using data, that window closes even if you've barely touched your allowance. Saily's refund policy is similar in spirit (full refund if never installed, or if you've used under 1% of the data), so neither provider is generous once a plan is genuinely in use.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Saily vs AloSIM FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Saily or AloSIM</h3>
+      <p>They're within a few cents of each other per GB before any code. Saily runs slightly cheaper in the destinations we checked; AloSIM's 15% code closes most of that gap.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which one includes a VPN or security tools</h3>
+      <p>Saily. Every plan bundles ad blocking, malware/phishing site blocking, and a virtual-location tool, since Saily is built by NordVPN's parent company, Nord Security. AloSIM has no equivalent.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which one gives me a phone number</h3>
+      <p>AloSIM, through a free partnership with Hushed, set up inside the AloSIM app after purchase. Saily doesn't offer an equivalent phone number feature.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I get a refund on either if I don't end up using the data</h3>
+      <p>Only if you never activated the eSIM (or, on Saily, used under 1% of your data). Once a plan is genuinely in use on either provider, the refund window is closed.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Saily or AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"They're within a few cents of each other per GB before any code. Saily runs slightly cheaper in most destinations checked; AloSIM's 15% code closes most of that gap."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which one includes a VPN or security tools, Saily or AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Saily. Every plan bundles ad blocking, malware and phishing site blocking, and a virtual-location tool, since Saily is built by NordVPN's parent company, Nord Security. AloSIM has no equivalent feature."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which one gives me a phone number, Saily or AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"AloSIM, through a free partnership with Hushed, set up inside the AloSIM app after purchase. Saily does not offer an equivalent phone number feature."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I get a refund on Saily or AloSIM if I don't use the data?",
+        "acceptedAnswer":{"@type":"Answer","text":"Only if the eSIM was never activated, or on Saily if under 1% of the data was used. Once a plan is genuinely in use on either provider, the refund window closes."}
+      }
+    ]
+  }
+  </script>
+</div>

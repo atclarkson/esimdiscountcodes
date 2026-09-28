@@ -1,0 +1,137 @@
+<!-- ByteSIM vs AloSIM Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set bytesimPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set alosimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set bytesimDeCode = deA.codes[providerA.primaryCode] if (deA and deA.codes and deA.codes[providerA.primaryCode]) else null %}
+  {% set alosimDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set alosimDiscount = (alosimDeCode.discount if alosimDeCode) or alosimPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Beide bündeln eine Telefonnummer mit deinen Daten, lösen das aber unterschiedlich. <strong>ByteSIM</strong> gibt dir eine echte lokale Nummer in einer Handvoll Ländern, auf Kosten einer Identitätsprüfung. <strong>AloSIM</strong> gibt dir eine kostenlose virtuelle Zweitnummer über Hushed, in jedem Land, ganz ohne Ausweiskontrolle. Was für dich passt, hängt davon ab, ob du eine Nummer brauchst, die eine lokale Bank oder Firma tatsächlich anrufen kann, oder einfach nur eine Nummer, die du herausgeben kannst, ohne deine echte preiszugeben.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Eine echte lokale Nummer oder eine virtuelle</h2>
+  <p>
+    ByteSIM verkauft Tarife mit einer echten lokalen Telefonnummer in ausgewählten Ländern (USA, Kanada, Großbritannien, Frankreich, Spanien, Australien, Vietnam, Südkorea und Thailand), gebündelt mit lokalen Anrufen, SMS, Hotspot-Freigabe und einer lokalen IP-Adresse. Um diese Nummer zu bekommen, musst du ein Passfoto und ein Selfie zur Identitätsprüfung hochladen, üblich, um überhaupt eine Nummer nach lokalem Telekommunikationsrecht ausgestellt zu bekommen, aber ein echter zusätzlicher Schritt im Vergleich zum bloßen Datenkauf.
+  </p>
+  <p>
+    AloSIMs Telefonnummer kommt stattdessen aus einer Partnerschaft mit Hushed: eine kostenlose internationale virtuelle Nummer, die du nach dem Kauf eines beliebigen Tarifs in der AloSIM-App einrichtest, ganz ohne Ausweiskontrolle. Sie ist wirklich nützlich, um einen Bestätigungscode zu empfangen oder einem Hotel eine Nummer zu geben, die nicht deine echte ist, aber es ist eine Zweitnummer für SMS und App-basierte Anrufe, keine echte lokale Nummer, die wie bei ByteSIM mit dem regulären Telefonnetz verbunden ist.
+  </p>
+
+  <h2>Preis-Schnappschuss</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Tariftyp</th>
+          <th>ByteSIM</th>
+          <th>AloSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Nur Daten, 1-GB-Äquivalent</td><td>Je nach Ziel unterschiedlich</td><td>4,50 $ (1 GB)</td></tr>
+        <tr><td>Beispiel Tarif mit Nummer</td><td>Spanien: 13,90 $ (100 GB + lokale Anrufe + EU-Roaming, 27 Tage)</td><td>Kostenlose Hushed-Nummer bei jedem Tarif</td></tr>
+        <tr><td>Ausweiskontrolle nötig</td><td>Nur bei Tarifen mit Nummer</td><td>Nein</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Das ist kein direkter Vergleich: ByteSIMs Tarife mit Nummer bündeln lokale Gesprächsminuten und ein deutlich größeres Datenvolumen für ein bestimmtes Land, während AloSIMs Hushed-Nummer kostenlos auf einem einfachen Datentarif mitläuft. Vergleiche den konkreten Tarif, den du auf jeder Seite tatsächlich kaufen würdest, statt einer einzelnen Preis-pro-GB-Zahl.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>ByteSIM:</strong> {{ providerA.primaryCode }}, beworben als 10% Rabatt, in der Praxis aber bei rund 5% getestet. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>AloSIM:</strong> {{ providerB.primaryCode }}, {{ alosimDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">AloSIMs Code ist der klarere Rabatt von beiden. ByteSIMs tatsächliche Ersparnis lag nahe an dem, was der eigene automatische websiteweite Sale ohnehin ganz ohne Code gewährt, prüfe also den Preis an der Kasse, bevor du vom beworbenen Prozentsatz ausgehst.</p>
+  </div>
+
+  <h2>Ist ByteSIM oder AloSIM die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm ByteSIM, wenn&hellip;</h3>
+      <ul>
+        <li>Du eine Nummer brauchst, die eine lokale Bank, ein Lieferdienst oder Vermieter tatsächlich anrufen oder anschreiben kann</li>
+        <li>Dein Reiseziel eines von ByteSIMs unterstützten Ländern mit lokaler Nummer ist</li>
+        <li>Es dir nichts ausmacht, einen Ausweis hochzuladen, um eine echte Nummer zu bekommen</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm AloSIM, wenn&hellip;</h3>
+      <ul>
+        <li>Du nur eine Nummer für Bestätigungscodes brauchst oder deine echte nicht herausgeben willst</li>
+        <li>Du lieber ganz auf Ausweiskontrolle verzichten würdest</li>
+        <li>Du die Wahl zwischen festem GB-Tarif oder unbegrenzten Daten willst, nicht nur Tarife mit Nummer</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>ByteSIMs Tarife mit Nummer rechnen nach deinem Zeitplan ab.</strong> Laut ByteSIMs eigenem Support beginnt ein Tarif erst dann, auf deine Daten oder Minuten angerechnet zu werden, wenn du ihn tatsächlich aktivierst, selbst nach abgeschlossener Ausweiskontrolle, es gibt also keine Eile, sobald du ihn installiert hast. AloSIM funktioniert stattdessen bei der Rückerstattung ähnlich: Es wirbt mit einer bedingungslosen Rückerstattung, falls sich eine eSIM nicht verbindet oder das Gerät sich als inkompatibel herausstellt, solange du sie noch nicht wirklich genutzt hast.
+  </p>
+  <p>
+    <strong>Auch der Support-Stil unterscheidet sich.</strong> ByteSIM bietet Support über WhatsApp mit einer echten Person, die sich bei Aktivierungsproblemen proaktiv meldet, statt auf eine weitere Nachricht zu warten. AloSIMs Rückerstattungsrichtlinie deckt dasselbe Aktivierungsproblem aus einem anderen Blickwinkel ab: statt eines Support-Gesprächs bekommst du dein Geld zurück.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>ByteSIM vs AloSIM: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Welche Telefonnummer ist nützlicher, ByteSIM oder AloSIM?</h3>
+      <p>Kommt auf den Einsatzzweck an. ByteSIMs Nummer ist echt und funktioniert wie eine normale lokale Nummer, aber nur in den unterstützten Ländern und nur nach Ausweiskontrolle. AloSIMs Hushed-Nummer ist kostenlos und braucht keinen Ausweis, ist aber eine virtuelle Zweitnummer statt einer vollwertigen lokalen Nummer.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Muss ich bei einem der beiden meine Identität nachweisen?</h3>
+      <p>Nur bei ByteSIM, und auch nur, wenn du einen Tarif mit lokaler Telefonnummer kaufst. AloSIM verlangt keine Ausweiskontrolle, weder für seine Hushed-Nummer noch für Standard-Datentarife.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welcher ist günstiger?</h3>
+      <p>Auf Nummern-Ebene sind sie nicht wirklich vergleichbar: ByteSIM bündelt lokale Anrufe und ein großes Datenvolumen in seine Tarife mit Nummer, während AloSIMs Nummer kostenlos auf einem einfachen Datentarif mitläuft. Vergleiche den konkreten Tarif, den du auf jeder Seite tatsächlich kaufen würdest.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Was, wenn die eSIM nicht funktioniert?</h3>
+      <p>AloSIM wirbt mit einer unkomplizierten Rückerstattung für eSIMs, die sich nicht verbinden oder mit dem Gerät nicht kompatibel sind. ByteSIM setzt stattdessen auf reaktionsschnellen WhatsApp-Support, und seine Tarife rechnen erst ab dem Antippen der Aktivierung ab, es besteht also weniger Druck bei verzögerter Aktivierung.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Welche Telefonnummer ist nützlicher, ByteSIM oder AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"ByteSIMs Nummer ist echt und funktioniert wie eine normale lokale Nummer, aber nur in den unterstützten Ländern und nur nach Ausweiskontrolle. AloSIMs Hushed-Nummer ist kostenlos und braucht keinen Ausweis, ist aber eine virtuelle Zweitnummer statt einer vollwertigen lokalen Nummer."}
+      },
+      {
+        "@type":"Question",
+        "name":"Muss ich bei ByteSIM oder AloSIM meine Identität nachweisen?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nur bei ByteSIM, und nur für Tarife mit lokaler Telefonnummer. AloSIM verlangt keine Ausweiskontrolle, weder für die Hushed-Nummer noch für Standard-Datentarife."}
+      },
+      {
+        "@type":"Question",
+        "name":"Ist ByteSIM oder AloSIM günstiger?",
+        "acceptedAnswer":{"@type":"Answer","text":"Auf Nummern-Ebene sind sie nicht direkt vergleichbar, da ByteSIM lokale Anrufe und ein großes Datenvolumen in seine Tarife mit Nummer bündelt, während AloSIMs Nummer kostenlos auf einem einfachen Datentarif mitläuft. Der jeweils konkret gekaufte Tarif sollte direkt verglichen werden."}
+      },
+      {
+        "@type":"Question",
+        "name":"Was passiert, wenn eine ByteSIM- oder AloSIM-eSIM nicht funktioniert?",
+        "acceptedAnswer":{"@type":"Answer","text":"AloSIM wirbt mit einer Rückerstattung für eSIMs, die sich nicht verbinden oder mit dem Gerät nicht kompatibel sind. ByteSIM bietet stattdessen reaktionsschnellen WhatsApp-Support, und seine Tarife rechnen erst ab der angetippten Aktivierung ab."}
+      }
+    ]
+  }
+  </script>
+</div>

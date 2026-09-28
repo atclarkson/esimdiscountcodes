@@ -214,5 +214,13 @@
     "title": "Airhub vs ByteSIM: No-ID Local Number or Verified Real Number? (2026 Comparison)",
     "description": "Airhub vs ByteSIM compared: Airhub's bundled SMS-only local number with no ID check vs ByteSIM's verified real phone number with calls in select countries, discount codes, and which one fits your trip.",
     "lastUpdated": "2026-09-27"
+  },
+  {
+    "slug": "saily-vs-alosim",
+    "providerA": "saily",
+    "providerB": "alosim",
+    "title": "Saily vs AloSIM: Bundled VPN or a Free Phone Number? (2026 Comparison)",
+    "description": "Saily vs AloSIM compared: Saily's NordVPN-built security suite and one universal eSIM vs AloSIM's free Hushed phone number and choice of fixed-GB or unlimited plans, discount codes, and which one fits your trip.",
+    "lastUpdated": "2026-09-28"
   }
 ]

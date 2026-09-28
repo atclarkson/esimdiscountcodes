@@ -1,0 +1,145 @@
+<!-- Saily vs AloSIM Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set sailyPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set alosimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set sailyDeCode = deA.codes[providerA.primaryCode] if (deA and deA.codes and deA.codes[providerA.primaryCode]) else null %}
+  {% set alosimDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set sailyDiscount = (sailyDeCode.discount if sailyDeCode) or sailyPrimary.discount %}
+  {% set alosimDiscount = (alosimDeCode.discount if alosimDeCode) or alosimPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Wähle <strong>Saily</strong>, wenn du unterwegs sowieso für ein VPN oder einen Werbeblocker zahlen würdest und eine eSIM willst, die beim Grenzübertritt einfach weiterläuft. Wähle <strong>AloSIM</strong>, wenn dir eine kostenlose internationale Telefonnummer wichtig ist und du bei einem Anbieter zwischen einem festen GB-Tarif oder unbegrenzten Daten wählen willst. Preislich liegen beide so nah beieinander, dass der jeweilige 15%-Code mehr ausmacht als der Grundpreis.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Sicherheitspaket vs. kostenlose Telefonnummer</h2>
+  <p>
+    Saily ist der eSIM-Ableger von NordVPN, gebaut von derselben Firma (Nord Security), und das merkt man dem Produkt an: Jeder Saily-Tarif enthält Werbeblocker, Schutz vor Malware- und Phishing-Seiten sowie ein virtuelles Standort-Tool. Saily verkauft außerdem eine einzige, weltweit gültige eSIM statt eines separaten Profils pro Region, sie läuft einfach weiter, wenn du in ein neues unterstütztes Land einreist.
+  </p>
+  <p>
+    AloSIMs Besonderheit ist eine kostenlose internationale Telefonnummer über eine Partnerschaft mit Hushed, die du nach dem Kauf separat in der AloSIM-App einrichtest. Sie ersetzt nicht deine echte Nummer, ist aber nützlich, um einen Bestätigungscode zu empfangen oder sie einem Hotel im Ausland zu geben. AloSIM verkauft zudem sowohl feste Datenpakete als auch unbegrenzte Tarife auf derselben Seite, du hast also diese Wahl, ohne den Anbieter zu wechseln.
+  </p>
+
+  <img class="content-photo"
+       src="https://media.adamandlinds.com/photos/large/54adb95c-7ef0-4635-b159-2186e91c68b5.jpg"
+       alt="Vier Erwachsene mit Kopfhörern sitzen an einem Tisch voller Laptops und Eisgetränke in einem belebten thailändischen Food Court und lächeln in die Kamera"
+       width="1280" height="960">
+  <p class="content-photo-caption">Arbeiten in einem Food Court in Chiang Mai über öffentliches WLAN, genau die Art von Situation, in der Sailys eingebauter Werbe- und Malware-Schutz tatsächlich zum Einsatz kommt, während AloSIMs Extra nur die Nummer betrifft.</p>
+
+  <h2>Preis-Schnappschuss (1-GB-Äquivalent, vor jedem Code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Ziel</th>
+          <th>Saily</th>
+          <th>AloSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>USA</td><td>3,99 $ (1 GB)</td><td>4,50 $ (1 GB)</td></tr>
+        <tr><td>Europa (regional)</td><td>4,99 $ (1 GB)</td><td>5 $ (1 GB)</td></tr>
+        <tr><td>Japan</td><td>3,99 $ (1 GB)</td><td>4,50 $ (1 GB)</td></tr>
+        <tr><td>Weltweit</td><td>8,99 $ (1 GB)</td><td>kein einzelnes Weltweit-Paket gelistet</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Bei jedem geprüften Ziel liegen beide beim reinen Preis pro GB nur wenige Cent auseinander. AloSIM verkauft kein einzelnes pauschales "Weltweit"-Paket wie Saily, sondern preist stattdessen nach Land und nach den Regionen, die es abdeckt.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Saily:</strong> {{ providerA.primaryCode }}, {{ sailyDiscount | lower }}. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>AloSIM:</strong> {{ providerB.primaryCode }}, {{ alosimDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Keiner der beiden Codes ist unser eigener. Saily und AloSIM betreiben kein Partnerprogramm, das einen eigenen Code wie bei Holafly oder Ubigi unterstützt, daher sind beide Codes hier die besten öffentlichen, die wir geprüft haben.</p>
+  </div>
+
+  <h2>Ist Saily oder AloSIM die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm Saily, wenn&hellip;</h3>
+      <ul>
+        <li>Du unterwegs sowieso für ein VPN oder einen Werbeblocker zahlen würdest</li>
+        <li>Es eine Reise durch mehrere Länder ist und du nicht an jeder Grenze ein neues eSIM-Profil willst</li>
+        <li>Du oft genug fliegst, dass sich die Lounge-Zugänge des 59,99-$-Ultra-Tarifs pro Monat lohnen könnten</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm AloSIM, wenn&hellip;</h3>
+      <ul>
+        <li>Du eine kostenlose zweite Telefonnummer für Bestätigungscodes oder Hotelbuchungen willst, ohne deine echte herauszugeben</li>
+        <li>Du bei einem Anbieter zwischen festem GB-Tarif und unbegrenzten Daten wählen willst</li>
+        <li>Du vor der Reise kaufen und erst nach der Landung aktivieren willst, um dir AloSIMs Rückerstattungsfenster offenzuhalten</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Saily kann aktuell nicht gekauft oder aufgeladen werden, solange du dich physisch in der Türkei befindest.</strong> Es gehört, neben Airalo und Holafly, zu mehreren eSIM-Anbietern, die Mitte 2025 von der türkischen Telekommunikationsaufsicht (BTK) gesperrt wurden. Eine eSIM, die du vor der Landung gekauft und installiert hast, funktioniert vor Ort weiterhin, kaufen oder aufladen kannst du im Land selbst aber nicht. Für AloSIM haben wir keine entsprechende Berichterstattung gefunden, aber wenn die Türkei auf dem Reiseplan steht, ist es bei beiden Anbietern sicherer, vor der Landung zu kaufen und zu installieren.
+  </p>
+  <p>
+    <strong>AloSIMs Rückerstattungsgarantie gilt nur für eSIMs, die nie aktiviert werden.</strong> Verbindet sich deine eSIM nicht oder ist dein Handy nicht kompatibel, erstattet AloSIM den Kaufpreis. Sobald du einen Tarif aktiviert und mit der Datennutzung begonnen hast, schließt sich dieses Fenster, selbst wenn du dein Datenvolumen kaum angerührt hast. Sailys Rückerstattungsrichtlinie ist ähnlich streng (volle Erstattung nur, wenn nie installiert, oder wenn unter 1% der Daten verbraucht wurden), keiner der beiden Anbieter ist also großzügig, sobald ein Tarif tatsächlich in Benutzung ist.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Saily vs AloSIM: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, Saily oder AloSIM?</h3>
+      <p>Sie liegen beim Preis pro GB nur wenige Cent auseinander. Saily ist bei den geprüften Zielen etwas günstiger; AloSIMs 15%-Code gleicht diesen Abstand größtenteils aus.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welcher der beiden enthält ein VPN oder Sicherheitstools?</h3>
+      <p>Saily. Jeder Tarif enthält Werbeblocker, Schutz vor Malware- und Phishing-Seiten sowie ein virtuelles Standort-Tool, da Saily von NordVPNs Mutterfirma Nord Security gebaut wird. AloSIM bietet nichts Vergleichbares.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welcher der beiden gibt mir eine Telefonnummer?</h3>
+      <p>AloSIM, über eine kostenlose Partnerschaft mit Hushed, eingerichtet in der AloSIM-App nach dem Kauf. Saily bietet keine vergleichbare Telefonnummern-Funktion.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bekomme ich bei einem der beiden eine Rückerstattung, wenn ich die Daten nicht nutze?</h3>
+      <p>Nur wenn die eSIM nie aktiviert wurde (bei Saily auch, wenn unter 1% der Daten verbraucht wurden). Sobald ein Tarif bei einem der beiden Anbieter tatsächlich in Benutzung ist, ist das Rückerstattungsfenster geschlossen.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, Saily oder AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Sie liegen beim Preis pro GB nur wenige Cent auseinander. Saily ist bei den meisten geprüften Zielen etwas günstiger; AloSIMs 15%-Code gleicht diesen Abstand größtenteils aus."}
+      },
+      {
+        "@type":"Question",
+        "name":"Welcher der beiden enthält ein VPN oder Sicherheitstools, Saily oder AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Saily. Jeder Tarif enthält Werbeblocker, Schutz vor Malware- und Phishing-Seiten sowie ein virtuelles Standort-Tool, da Saily von NordVPNs Mutterfirma Nord Security gebaut wird. AloSIM bietet keine vergleichbare Funktion."}
+      },
+      {
+        "@type":"Question",
+        "name":"Welcher der beiden gibt mir eine Telefonnummer, Saily oder AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"AloSIM, über eine kostenlose Partnerschaft mit Hushed, eingerichtet in der AloSIM-App nach dem Kauf. Saily bietet keine vergleichbare Telefonnummern-Funktion."}
+      },
+      {
+        "@type":"Question",
+        "name":"Bekomme ich bei Saily oder AloSIM eine Rückerstattung, wenn ich die Daten nicht nutze?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nur wenn die eSIM nie aktiviert wurde, oder bei Saily, wenn unter 1% der Daten verbraucht wurden. Sobald ein Tarif bei einem der beiden Anbieter tatsächlich in Benutzung ist, schließt sich das Rückerstattungsfenster."}
+      }
+    ]
+  }
+  </script>
+</div>
