@@ -1162,7 +1162,7 @@
         "discount": "10% OFF ALL PLANS",
         "description": "GlobaleSIM's own domain is still unreachable as a working eSIM store (503 error on this check, a parking page on earlier checks), so the site and this code still cannot be confirmed working.",
         "verified": true,
-        "lastTested": "2026-09-27",
+        "lastTested": "2026-09-28",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public",
@@ -1408,7 +1408,7 @@
         "discount": "~5% OFF (ADVERTISED AS 10%)",
         "description": "Advertised elsewhere as 10% off travel eSIM plans. Tested at checkout on a $2.90 order and it only knocked off $0.15, about 5%, roughly matching what ByteSIM's own site-wide Summer Sale already applies automatically without any code.",
         "verified": true,
-        "lastTested": "2026-09-27",
+        "lastTested": "2026-09-28",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public"
@@ -1429,7 +1429,7 @@
         "discount": "10% OFF ESIM",
         "description": "Public discount code advertised on eSIM Card's site",
         "verified": true,
-        "lastTested": "2026-09-27",
+        "lastTested": "2026-09-28",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public"
