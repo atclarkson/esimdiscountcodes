@@ -1,0 +1,139 @@
+<!-- AloSIM vs Airalo Comparativa (Español) -->
+<div class="content-section">
+
+  {% set alosimPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set airaloPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set alosimEsCode = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
+  {% set airaloEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set alosimDiscount = (alosimEsCode.discount if alosimEsCode) or alosimPrimary.discount %}
+  {% set airaloDiscount = (airaloEsCode.discount if airaloEsCode) or airaloPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Ambos venden datos por gigabyte a un precio muy parecido, así que esta decisión suele reducirse a dos cosas más pequeñas: si quieres un número de teléfono internacional gratis incluido (AloSIM, gracias a su alianza con Hushed), y si eres un comprador nuevo o recurrente. El mejor código público de Airalo es un 15% de descuento de un solo uso solo para clientes nuevos; el código del 15% de AloSIM se aplica en cada compra.
+    </p>
+  </div>
+
+  <h2>La similitud principal: ambos cobran por GB</h2>
+  <p>
+    Ni AloSIM ni Airalo venden solo planes ilimitados como <a href="/es/holafly/">Holafly</a>. Los dos se basan en bolsas de datos de GB fijos con precio por país o región, y ambos también ofrecen una opción ilimitada junto a sus planes fijos, sin obligarte a elegir proveedor para conseguir una. La cobertura es prácticamente la misma en los dos lados: más de 200 destinos.
+  </p>
+  <p>
+    Donde realmente se diferencian es en los extras. AloSIM incluye un número gratis a través de Hushed, que se configura dentro de su app después de comprar un plan; útil si quieres un sitio donde recibir un SMS de verificación o dárselo a un hotel sin ceder tu número real. Airalo no tiene nada equivalente, pero cuenta con un ecosistema público de afiliados/referidos mucho más grande: el programa "Airmoney" es la razón de que circulen tantos códigos distintos de Airalo por internet, cada uno el enlace de referido de un usuario concreto que da 3 $ de descuento, no una promoción oficial de toda la tienda.
+  </p>
+
+  <h2>Comparativa de precios (1GB, antes de aplicar cualquier código)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>AloSIM</th>
+          <th>Airalo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>EE. UU.</td><td>4,50 $</td><td>4,50 $</td></tr>
+        <tr><td>Europa (regional)</td><td>5,00 $</td><td>5,27 $</td></tr>
+        <tr><td>Japón</td><td>4,50 $</td><td>4,50 $</td></tr>
+        <tr><td>Mundial</td><td>No se ofrece como un único plan "Mundial"</td><td>9,49 $</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Los precios por país y para Europa están lo bastante cerca entre ambos como para que el código de descuento que realmente puedas aplicar importe más que el precio base. Airalo vende un plan Mundial dedicado; la gama regional de AloSIM no incluye actualmente uno equivalente.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>AloSIM:</strong> {{ providerA.primaryCode }}, {{ alosimDiscount | lower }}. <a href="{{ providerAUrl }}">Detalles completos del código &rarr;</a></li>
+      <li><strong>Airalo:</strong> {{ providerB.primaryCode }}, {{ airaloDiscount | lower }}. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ninguno de los dos códigos es nuestro; ambos son los mejores códigos públicos que hemos verificado para cada proveedor. La diferencia que realmente importa: el código de AloSIM funciona en compras repetidas, mientras que el mejor código de Airalo es solo para clientes nuevos (su código de 10% de descuento para clientes existentes, AIRALOESIM10, es el que hay que usar en un segundo pedido).</p>
+  </div>
+
+  <h2>¿Es AloSIM o Airalo la opción adecuada?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige AloSIM si&hellip;</h3>
+      <ul>
+        <li>Quieres un número internacional gratis incluido sin añadir una app aparte</li>
+        <li>Compras a menudo y quieres un código que siga funcionando en cada pedido</li>
+        <li>Quieres poder elegir entre un plan de GB fijos o ilimitado desde el mismo pago</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige Airalo si&hellip;</h3>
+      <ul>
+        <li>Quieres un único plan "Mundial" dedicado en lugar de comprar por continente</li>
+        <li>Compras por primera vez y quieres el mayor descuento de un solo uso (código del 15% para clientes nuevos)</li>
+        <li>Quieres el proveedor con el ecosistema público de códigos de referidos más grande para comparar</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que merece la pena saber antes de decidir</h2>
+  <p>
+    <strong>La garantía de reembolso de AloSIM tiene una trampa de tiempos.</strong> Cubre eSIM que fallan al conectar o resultan incompatibles con tu dispositivo, no las que activaste y simplemente no usaste mucho. Puedes comprar con antelación si quieres (una eSIM de AloSIM sin usar no caduca), solo evita activarla hasta que vayas a usarla de verdad.
+  </p>
+  <p>
+    <strong>Los muchos códigos de descuento de Airalo no son un único programa oficial con distintos niveles.</strong> Son sobre todo códigos de referido de usuarios concretos del programa Airmoney, cada uno con un descuento fijo de 3 $ en una primera compra, más los dos códigos oficiales (15% para cliente nuevo, 10% para cliente existente con un mínimo de 10 $). AloSIM, en cambio, se queda con un único código para toda la tienda.
+  </p>
+  <p>
+    Para la configuración del dispositivo y conceptos básicos de eSIM que aplican a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre AloSIM vs Airalo</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Cuál es más barato, AloSIM o Airalo?</h3>
+      <p>El precio base por GB es casi idéntico en la mayoría de planes por país y regionales. Lo que suele decidirlo es el código de descuento que realmente puedas aplicar: el código de AloSIM funciona en cada pedido, mientras que el mejor código de Airalo es solo para clientes nuevos.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos incluye un número de teléfono?</h3>
+      <p>AloSIM sí, gracias a una alianza con Hushed: un número internacional gratis que se configura dentro de la app de AloSIM después de comprar un plan. Airalo no tiene ninguna función equivalente.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo usar el mismo código en mi segundo pedido con cualquiera de los dos?</h3>
+      <p>Con AloSIM, sí: ALOSAVE se aplica también en compras repetidas. Con Airalo, su mejor código público (NEWTOAIRALO15) es solo para la primera compra; usa AIRALOESIM10 para conseguir un 10% de descuento en pedidos repetidos de 10 $ o más.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos vende un único plan mundial?</h3>
+      <p>Airalo sí, una eSIM Mundial dedicada. La gama regional actual de AloSIM no incluye una opción equivalente de un solo plan.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Cuál es más barato, AloSIM o Airalo?",
+        "acceptedAnswer":{"@type":"Answer","text":"El precio base por GB es casi identico en la mayoria de planes por pais y regionales. Lo que suele decidirlo es el codigo de descuento aplicable: el codigo de AloSIM funciona en cada pedido, mientras que el mejor codigo publico de Airalo es solo para clientes nuevos."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿AloSIM o Airalo incluyen numero de telefono?",
+        "acceptedAnswer":{"@type":"Answer","text":"AloSIM si, gracias a una alianza con Hushed: un numero internacional gratis configurado dentro de la app de AloSIM tras la compra. Airalo no tiene ninguna funcion equivalente."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se puede usar el mismo codigo de descuento en un segundo pedido con AloSIM o Airalo?",
+        "acceptedAnswer":{"@type":"Answer","text":"El codigo ALOSAVE de AloSIM se aplica en compras repetidas. El mejor codigo publico de Airalo, NEWTOAIRALO15, es solo para la primera compra; su codigo AIRALOESIM10 da un 10% de descuento en pedidos repetidos de 10 $ o mas."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿AloSIM o Airalo venden un unico plan mundial?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airalo vende una eSIM Mundial dedicada. La gama regional de AloSIM no incluye actualmente una opcion equivalente de un solo plan."}
+      }
+    ]
+  }
+  </script>
+</div>

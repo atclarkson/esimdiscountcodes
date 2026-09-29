@@ -227,5 +227,42 @@
         "description": "5% de descuento en tu pedido de SimLocal"
       }
     }
+  },
+  "airhub": {
+    "description": "Conectividad eSIM global",
+    "codes": {
+      "ADAMANDLINDS": {
+        "discount": "5% DE DESCUENTO EN TODOS LOS PLANES",
+        "description": "Nuestro propio código. No se está aplicando actualmente en el pago de Airhub. Se lo hemos notificado a Airhub y esperamos que se solucione pronto."
+      },
+      "2025": {
+        "discount": "5% DE DESCUENTO EN TODOS LOS PLANES",
+        "description": "Código público. No se está aplicando actualmente en el pago de Airhub."
+      },
+      "SUMMER2025": {
+        "discount": "5% DE DESCUENTO EN TODOS LOS PLANES",
+        "description": "Código público. No se está aplicando actualmente en el pago de Airhub."
+      },
+      "MARCHFOREGYPT": {
+        "discount": "5% DE DESCUENTO",
+        "description": "Código público para la región de Egipto. No se está aplicando actualmente en el pago de Airhub."
+      },
+      "NAMERICA4": {
+        "discount": "4% DE DESCUENTO",
+        "description": "Código público para la región de Norteamérica. No se está aplicando actualmente en el pago de Airhub."
+      },
+      "ESIMOFFER5": {
+        "discount": "5% DE DESCUENTO",
+        "description": "Código público válido para todos los países. Confirmado que funciona en el pago de Airhub, aplicando un 5% de descuento antes de pagar. Actualmente es el único código de Airhub que recomendamos."
+      },
+      "JPESIM5": {
+        "discount": "5% DE DESCUENTO",
+        "description": "Código público para la región de Japón. No se está aplicando actualmente en el pago de Airhub."
+      },
+      "AIRHUBAPP05": {
+        "discount": "5% DE DESCUENTO (SOLO EN LA APP)",
+        "description": "Anunciado directamente en la propia web de Airhub como un 5% de descuento \"exclusivo de la app\" al pagar al pedir a través de la app móvil de Airhub. No lo hemos probado nosotros porque no se aplica en el pago normal desde el navegador; ESIMOFFER5 sigue siendo el código que recomendamos para el navegador."
+      }
+    }
   }
 }

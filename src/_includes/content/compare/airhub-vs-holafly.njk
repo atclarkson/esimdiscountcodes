@@ -1,0 +1,134 @@
+<!-- Airhub vs Holafly Comparison Content -->
+<div class="content-section">
+
+  {% set airhubPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set airhubBest = providerA.codes | bestValidCode %}
+  {% set holaflyPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>Airhub</strong> if you know roughly how much data you'll use and want to pay as little as possible per gigabyte, plus get SMS and a local number bundled in. Pick <strong>Holafly</strong> if you'd rather pay a flat rate and never look at a data meter again. They're not really competing on the same axis: Airhub is a cheap, GB-metered plan with a couple of extras; Holafly is an unlimited flat-rate plan with a higher day-rate.
+    </p>
+  </div>
+
+  <h2>The Core Difference: Cheap Per-GB Bundles vs. Unlimited Flat Rate</h2>
+  <p>
+    Airhub sells multi-gigabyte blocks (3GB, 4GB) instead of single-day or single-GB units, and in cheaper destinations that lands at genuinely low per-GB prices: Thailand at $0.85 for 1GB and Japan at $1.55 for 1GB. Holafly skips the GB question entirely and charges a flat daily (or monthly) rate for unlimited data, no matter how much you actually use. If you can estimate your data use and want to pay less, Airhub wins on price. If you can't, or you'd rather not think about it, Holafly's flat rate removes the risk of running out mid-trip.
+  </p>
+  <p>
+    Airhub also bundles SMS and, in many destinations, a local phone number in with the data, which most GB-priced competitors don't do. Holafly's plans are data-only. Neither provider includes voice calls, so neither replaces a real phone number if you need to make or receive calls.
+  </p>
+
+  <h2>Price Snapshot (before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Airhub</th>
+          <th>Holafly</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Thailand</td><td>$0.85 (1GB)</td><td>$1.99/day (unlimited)</td></tr>
+        <tr><td>Japan</td><td>$1.55 (1GB)</td><td>$1.99/day (unlimited)</td></tr>
+        <tr><td>United States</td><td>$2.82 (3GB)</td><td>$1.99/day (unlimited)</td></tr>
+        <tr><td>Europe regional</td><td>$4.50 (4GB)</td><td>$1.99/day (unlimited)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Airhub's price is per data bundle; Holafly's is per day of unlimited use. They're not directly comparable numbers: a short trip using well under the bundle size would likely cost less on Airhub, while a trip with heavy streaming or navigation would likely cost less (or at least be less stressful) on Holafly.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airhub:</strong> ESIMOFFER5, {{ airhubBest.discount | lower }}. Airhub's own code, {{ providerA.primaryCode }}, isn't currently applying at checkout. <a href="/airhub/">Full code list &rarr;</a></li>
+      <li><strong>Holafly:</strong> {{ providerB.primaryCode }}, {{ holaflyPrimary.discount | lower }}. This one's ours. <a href="/holafly/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Holafly's code is ours, so we show it prominently. Airhub's best working code right now is a public one, not ours, since our own Airhub code has a reported issue at checkout.</p>
+  </div>
+
+  <h2>Is Airhub or Holafly the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Airhub if&hellip;</h3>
+      <ul>
+        <li>You can estimate roughly how many GB you'll use</li>
+        <li>You want SMS and a local number bundled with your data, not sold as an extra</li>
+        <li>You're headed somewhere Airhub prices sharply, like Thailand or Japan</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with Holafly if&hellip;</h3>
+      <ul>
+        <li>You genuinely don't know how much data you'll use</li>
+        <li>Heavy streaming, video calls, or hotspot use</li>
+        <li>China is on the itinerary and you want the built-in VPN</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Airhub bundles SMS and a local number; Holafly doesn't sell either.</strong> If you need to receive a verification text or hand out a number that isn't your own while traveling, Airhub covers that without an add-on. Neither provider includes voice calls, though: if you need a real number with calls guaranteed, <a href="/simlocal/">SimLocal</a>'s UK plans are a better fit than either of these two.
+  </p>
+  <p>
+    <strong>Holafly's China eSIM has a VPN built in.</strong> Google Maps, WhatsApp, and Gmail work over the Holafly connection without installing a separate VPN app first. Airhub has no equivalent, so if China is on the trip, you'd need your own VPN solution regardless of which Airhub plan you buy.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Airhub vs Holafly FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Airhub or Holafly</h3>
+      <p>Airhub, if you can estimate your data use ahead of time: its per-GB bundle pricing is sharply lower than Holafly's flat daily rate in most destinations. Holafly can work out cheaper (or at least less stressful) if you'd otherwise buy multiple Airhub bundles to cover heavy same-day use.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either one include a phone number</h3>
+      <p>Airhub includes a local number in many destinations alongside the data. Holafly is data-only and doesn't offer a number. Neither includes voice calls.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which is better for China</h3>
+      <p>Holafly, since its China eSIM has a VPN built in so common apps and sites work without extra setup. Airhub has no equivalent, so a separate VPN would be needed regardless of plan.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I use one for a multi-country trip and the other for a single-country trip</h3>
+      <p>Yes. A common approach is Holafly's unlimited regional plan for a data-heavy multi-country leg, and Airhub's cheaper per-GB bundles for a light, predictable single-country stop.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Airhub or Holafly?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub is usually cheaper if you can estimate your data use ahead of time, since its per-GB bundle pricing is sharply lower than Holafly's flat daily rate in most destinations. Holafly can work out cheaper, or at least less stressful, for heavy same-day data use."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Airhub or Holafly include a phone number?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub includes a local phone number in many destinations alongside the data. Holafly is data-only and doesn't offer a number. Neither provider includes voice calls."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which is better for a trip to China, Airhub or Holafly?",
+        "acceptedAnswer":{"@type":"Answer","text":"Holafly, since its China eSIM includes a VPN so common apps and sites work without extra setup. Airhub has no equivalent, so a separate VPN would be needed regardless of plan."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I use Airhub and Holafly on the same trip?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. A common approach is Holafly's unlimited regional plan for a data-heavy multi-country leg and Airhub's cheaper per-GB bundles for a light, predictable single-country stop."}
+      }
+    ]
+  }
+  </script>
+</div>

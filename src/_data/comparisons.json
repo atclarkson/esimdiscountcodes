@@ -238,5 +238,13 @@
     "title": "BNEsim vs Orange: No-Expiration Data Packs or a Carrier's Calls-and-SMS Bundle? (2026 Comparison)",
     "description": "BNEsim vs Orange compared: BNEsim's no-expiration data packs, crypto payment, and scheduled activation vs Orange's carrier-backed unlimited calls/SMS/hotspot bundle for Europe, neither with a working discount code right now, and which one actually fits your trip.",
     "lastUpdated": "2026-09-29"
+  },
+  {
+    "slug": "airhub-vs-holafly",
+    "providerA": "airhub",
+    "providerB": "holafly",
+    "title": "Airhub vs Holafly: Cheap Per-GB Bundles or Unlimited Flat Rate? (2026 Comparison)",
+    "description": "Airhub vs Holafly compared: Airhub's multi-GB bundles with SMS and a local number vs Holafly's unlimited flat-rate data and built-in China VPN, discount codes, and which one actually fits your trip.",
+    "lastUpdated": "2026-09-29"
   }
 ]

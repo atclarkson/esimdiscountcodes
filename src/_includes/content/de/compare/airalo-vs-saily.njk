@@ -1,0 +1,138 @@
+<!-- Airalo vs Saily Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set airaloPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set sailyPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set airaloDeCode = deA.codes[providerA.primaryCode] if (deA and deA.codes and deA.codes[providerA.primaryCode]) else null %}
+  {% set sailyDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set airaloDiscount = (airaloDeCode.discount if airaloDeCode) or airaloPrimary.discount %}
+  {% set sailyDiscount = (sailyDeCode.discount if sailyDeCode) or sailyPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Diese beiden sind engere Konkurrenten als die meisten Paare auf dieser Seite: Beide verkaufen Daten pro Gigabyte statt zuerst auf unbegrenzt zu setzen. <strong>Saily</strong> ist meist etwas günstiger pro GB und bündelt Werbe-/Malware-Blocking in jeden Tarif, da es von derselben Firma wie NordVPN stammt. <strong>Airalo</strong> hat den größeren, etablierteren Katalog einzelner Länder-eSIMs und sein eigenes, eigenwilliges Empfehlungscode-Ökosystem. Wenn du dir lieber nie wieder Gedanken über einen Datenzähler machen willst, ist keiner der beiden die richtige Wahl: sieh dir stattdessen <a href="/de/holafly/">Holafly</a> an.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Ein VPN-Unternehmen vs. ein eSIM-Spezialist</h2>
+  <p>
+    Airalo wurde gezielt zum Verkauf von Reise-eSIMs aufgebaut und ist schon länger dabei, mit einem tiefen Katalog einzelner Länder- und Regionalprofile. Saily ist das eSIM-Produkt von Nord Security, derselben Firma hinter NordVPN, und jeder Saily-Tarif kommt mit Werbeblocker, Malware-/Phishing-Seiten-Blockierung und einem virtuellen Standort-Tool eingebaut statt separat verkauft. Wenn du beim Reisen ohnehin für eine VPN-App zahlen würdest, ist das bei Saily schon inklusive. Wenn du nur das billigstmögliche GB willst und dir die Extras egal sind, ist das kein Grund, sich für den einen oder anderen zu entscheiden.
+  </p>
+  <p>
+    Saily verkauft außerdem eine einzige universelle eSIM, die weiterläuft, sobald du in ein neues unterstütztes Land einreist, statt für jede Region ein neues Profil zu benötigen. Airalos Modell setzt eher darauf, vorab die richtige lokale, regionale oder globale eSIM für deine konkrete Reise auszuwählen.
+  </p>
+
+  <h2>Preis-Schnappschuss (1 GB, vor jedem Code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Ziel</th>
+          <th>Airalo</th>
+          <th>Saily</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>USA</td><td>4,50 $</td><td>3,99 $</td></tr>
+        <tr><td>Europa (regional)</td><td>5,27 $</td><td>4,99 $</td></tr>
+        <tr><td>Weltweit</td><td>9,49 $</td><td>8,99 $</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Saily liegt in unserer Stichprobe durchgehend etwas günstiger pro GB, vor Anwendung eines der beiden Rabattcodes.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airalo:</strong> {{ providerA.primaryCode }}, {{ airaloDiscount | lower }}. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>Saily:</strong> {{ providerB.primaryCode }}, {{ sailyDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Airalos Code ist der beste öffentliche, den wir geprüft haben, da Airalo ein Empfehlungsprogramm (Airmoney) statt eines zentralen Partnerrabatts betreibt, weshalb dafür so viele unterschiedliche Codes kursieren. Sailys HELLOSAILY gilt im ganzen Shop und ist nicht an einen Erstkauf gebunden.</p>
+  </div>
+
+  <h2>Ist Airalo oder Saily die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm Airalo, wenn&hellip;</h3>
+      <ul>
+        <li>Du die größte Auswahl einzelner Länder-eSIMs willst</li>
+        <li>Du für den niedrigstmöglichen Grundpreis einen Datenzähler im Blick behalten kannst</li>
+        <li>Dir ein integriertes VPN oder ein Werbeblocker egal ist</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm Saily, wenn&hellip;</h3>
+      <ul>
+        <li>Du beim Reisen ohnehin für ein VPN oder einen Werbeblocker separat zahlen würdest</li>
+        <li>Reise durch mehrere Länder, bei der du nicht an jeder Grenze eine neue eSIM willst</li>
+        <li>Du den etwas niedrigeren Preis pro GB willst</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Beide wurden vom Verkauf in der Türkei blockiert.</strong> Die türkische Telekomaufsicht (BTK) hat die Websites und Apps von Airalo und Saily ab Mitte 2025 für Käufe blockiert, zusammen mit mehreren anderen eSIM-Anbietern. Eine eSIM von beiden, die vor der Landung gekauft und installiert wurde, funktioniert vor Ort weiterhin einwandfrei; die Sperre verhindert nur den Kauf oder das Aufladen, während man sich physisch im Land befindet.
+  </p>
+  <p>
+    <strong>Saily hat eine Abo-Stufe, für die Airalo eigentlich kein Äquivalent hat.</strong> Saily Ultra (59,99 $/Monat) bündelt 30 GB Hochgeschwindigkeitsdaten in 121+ Reisezielen, die komplette NordVPN-/NordPass-/NordLayer-/Incogni-Suite, 8% Cashback als Saily-Guthaben und einen monatlichen Flughafen-Lounge-Zugang plus Fast-Track-Sicherheitspass. Ein echtes Schnäppchen für jemanden, der ständig unterwegs ist und sonst für die VPN-Suite separat zahlen würde; eine schlechte Wahl für einen Gelegenheitsreisenden, der nur Daten für eine einzelne Reise braucht.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Airalo vs Saily: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, Airalo oder Saily?</h3>
+      <p>Saily, leicht, in den meisten von uns geprüften Reisezielen: etwa 10-12% weniger pro GB als Airalo, vor Anwendung eines der beiden Rabattcodes.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Macht Sailys eingebautes VPN wirklich einen Unterschied?</h3>
+      <p>Nur wenn du sonst für eins zahlen würdest. Sailys Werbeblocker, Malware-/Phishing-Blockierung und virtuelles Standort-Tool sind ohne Aufpreis in jedem Tarif enthalten. Airalo hat hier keine Entsprechung; du bräuchtest eine separate App für denselben Schutz.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Kann ich eines der beiden in der Türkei nutzen?</h3>
+      <p>Ja, wenn du es vor der Landung kaufst und installierst. Sowohl Airalos als auch Sailys Websites und Apps wurden ab Mitte 2025 von der türkischen Telekomaufsicht für neue Käufe und Aufladungen innerhalb der Türkei blockiert, aber eine bereits installierte eSIM funktioniert weiter.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Warum hat Airalo so viele verschiedene Rabattcodes?</h3>
+      <p>Airalo betreibt ein Empfehlungsprogramm (Airmoney), das jedem Nutzer einen eigenen persönlichen 3-$-Rabattcode zum Teilen gibt, statt eines zentralen Partnerrabatts. Saily betreibt kein solches Programm, weshalb es stattdessen einen einzigen, shopweiten Code hat.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, Airalo oder Saily?",
+        "acceptedAnswer":{"@type":"Answer","text":"Saily ist in den meisten geprüften Reisezielen leicht günstiger, etwa 10 bis 12 Prozent weniger pro GB als Airalo, vor Anwendung eines der beiden Rabattcodes."}
+      },
+      {
+        "@type":"Question",
+        "name":"Macht Sailys eingebautes VPN wirklich einen Unterschied?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nur wenn man sonst separat dafür zahlen würde. Sailys Werbeblocker, Malware- und Phishing-Blockierung sowie virtuelles Standort-Tool sind ohne Aufpreis in jedem Tarif enthalten, während Airalo hier keine eingebaute Entsprechung hat."}
+      },
+      {
+        "@type":"Question",
+        "name":"Kann ich Airalo oder Saily in der Türkei nutzen?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ja, wenn vor der Ankunft gekauft und installiert. Die Websites und Apps beider Anbieter wurden ab Mitte 2025 von der türkischen Telekomaufsicht für neue Käufe und Aufladungen innerhalb der Türkei blockiert, aber eine bereits installierte eSIM funktioniert weiter."}
+      },
+      {
+        "@type":"Question",
+        "name":"Warum hat Airalo so viele verschiedene Rabattcodes?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airalo betreibt ein Empfehlungsprogramm namens Airmoney, das jedem Nutzer einen persönlichen 3-Dollar-Rabattcode zum Teilen gibt, statt eines zentralen Partnerrabatts, weshalb dafür viele verschiedene Codes kursieren."}
+      }
+    ]
+  }
+  </script>
+</div>
