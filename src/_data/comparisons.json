@@ -230,5 +230,13 @@
     "title": "SimLocal vs UPeSIM: Refund Guarantee or Cheaper Per-GB Price? (2026 Comparison)",
     "description": "SimLocal vs UPeSIM compared: SimLocal's No Quibble Refunds policy and bundled UK phone number vs UPeSIM's cheaper per-GB pricing and early-install flexibility, discount codes, and which one fits your trip.",
     "lastUpdated": "2026-09-28"
+  },
+  {
+    "slug": "bnesim-vs-orange",
+    "providerA": "bnesim",
+    "providerB": "orange",
+    "title": "BNEsim vs Orange: No-Expiration Data Packs or a Carrier's Calls-and-SMS Bundle? (2026 Comparison)",
+    "description": "BNEsim vs Orange compared: BNEsim's no-expiration data packs, crypto payment, and scheduled activation vs Orange's carrier-backed unlimited calls/SMS/hotspot bundle for Europe, neither with a working discount code right now, and which one actually fits your trip.",
+    "lastUpdated": "2026-09-29"
   }
 ]

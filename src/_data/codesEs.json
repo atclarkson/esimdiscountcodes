@@ -3,6 +3,15 @@
     "description": "Planes de eSIM asequibles en todo el mundo",
     "codes": {}
   },
+  "alosim": {
+    "description": "Planes de eSIM sencillos para viajar por el mundo",
+    "codes": {
+      "ALOSAVE": {
+        "discount": "15% DE DESCUENTO EN TODOS LOS PLANES",
+        "description": "El mejor código de descuento de AloSIM: 15% de descuento"
+      }
+    }
+  },
   "yesim": {
     "description": "Soluciones globales de eSIM",
     "codes": {

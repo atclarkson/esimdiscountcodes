@@ -1,0 +1,155 @@
+<!-- eSIM Card Content (German) -->
+<div class="content-section">
+
+  <!-- Quick Answer -->
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Bester eSIM Card Rabattcode &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Nutze <strong>{{ provider.primaryCode }}</strong> f&uuml;r <strong>10% Rabatt auf jeden eSIM Card Tarif</strong>. Es ist ein &ouml;ffentlicher Code und keiner von unseren (eSIM Card betreibt kein Partnerprogramm, das uns einen eigenen Code erlauben w&uuml;rde, wie bei Holafly oder Ubigi), und wir haben ihn direkt auf der eigenen Startseite von eSIM Card gefunden, nicht nur auf einer Gutschein-Sammelseite.
+      <span class="callout-meta">Best&auml;tigt aktiv am <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("d. MMM yyyy") }}</time>.</span>
+    </p>
+  </div>
+
+  <!-- Headline -->
+  <h2>Was eSIM Card wirklich unterscheidet</h2>
+  <p>
+    Der eigentliche Unterschied bei eSIM Card ist, wie feingliedrig die einzelnen L&auml;nderseiten aufgebaut sind. Die meisten Anbieter auf dieser Seite verkaufen eine Handvoll fester Pakete pro Land: Datengr&ouml;&szlig;e w&auml;hlen, Laufzeit w&auml;hlen, fertig. Allein die USA-Seite von eSIM Card listet rund 30 Kombinationen: sieben feste Datenstufen (1GB, 3GB, 5GB, 10GB, 20GB, 50GB, 100GB), jede in mehreren Laufzeiten von 3 bis 90 Tagen erh&auml;ltlich, plus zwei separate Unlimited-Stufen, "Unlimited" und "Unlimited Plus", mit Laufzeiten von 1 bis 30 Tagen. Wer genau wei&szlig;, wie viele Daten und wie viele Tage n&ouml;tig sind, findet einen passend zugeschnittenen Tarif, statt auf das n&auml;chstgr&ouml;&szlig;ere Paket eines Wettbewerbers aufrunden zu m&uuml;ssen.
+  </p>
+  <p>
+    eSIM Card bietet auch zwei Dinge an, die die meisten reinen Daten-Anbieter nicht haben: eine eigene Data + Voice eSIM-Produktlinie und eine virtuelle Telefonnummer als Zusatzoption ab etwa 2,40 $, beide innerhalb derselben App wie die regul&auml;ren Datentarife. Das ist eine &auml;hnliche Idee wie bei <a href="/de/alosim/">AloSIM</a>s Hushed-Partnerschaft, nur dass die Nummer hier ein eigener, separat bezahlter Kauf ist statt kostenlos in einem Datentarif enthalten zu sein.
+  </p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Aktive Codes</h3>
+    <ul>
+      <li><strong>ESIM10</strong>: 10% Rabatt auf jeden eSIM Card Tarif</li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Das ist ein &ouml;ffentlicher Code, der auf der eigenen Website von eSIM Card beworben wird, kein exklusiver Code von uns. Falls er nicht angenommen wird, lade den Warenkorb neu oder versuche es in einem privaten Fenster erneut.</p>
+  </div>
+
+  <!-- Real operational note instead of generic setup tips -->
+  <h2>Zwei Dinge, die eSIM Card auf der eigenen Website nicht ausspricht</h2>
+  <p>
+    Die Fair-Use-Formulierung bei den Unlimited-Tarifen von eSIM Card lautet: "Unlimited bundles provide an allowed limit of data at full speed per 24 hours and thereafter unlimited data at lower speeds." Das ist ihre eigene Formulierung, und sie best&auml;tigt, dass Tethering/Hotspot bei Unlimited-Tarifen funktioniert und dass der Tarif erst bei der ersten Nutzung aktiviert wird, nicht schon beim Kauf. Was sie nicht liefert, ist die tats&auml;chliche Zahl: wie viele GB mit voller Geschwindigkeit, bevor die Drosselung einsetzt. Manche Wettbewerber ver&ouml;ffentlichen diese Zahl direkt (<a href="/de/saily/">Saily</a> etwa nennt 5GB in einem rollierenden 24-Stunden-Fenster in den meisten Reisezielen, 3GB in manchen); eSIM Card nennt nur "an allowed limit", ohne eine Zahl zu benennen.
+  </p>
+  <p>
+    Auch die R&uuml;ckerstattungsregel ist strenger, als sie auf den ersten Blick wirkt. Die eigene Richtlinienseite von eSIM Card beschreibt eSIMs als grundlegend nicht erstattbar, sobald sie installiert oder genutzt wurden, mit Ausnahmen nur in engen F&auml;llen wie einem echten Abdeckungsausfall oder einem technischen Fehler auf ihrer Seite bei null verbrauchten Daten, und selbst dann muss die Reklamation innerhalb von 30 Tagen nach dem Kauf eingereicht werden. Kaufe den Tarif, bei dem du dir sicher bist, nicht einen zum Ausprobieren mit Rückgabe-Hintergedanken.
+  </p>
+
+  <!-- How to -->
+  <h2>eSIM Card Code in 3 Schritten einl&ouml;sen</h2>
+  <div class="content-box">
+    <ol>
+      <li><strong>ESIM10</strong> kopieren</li>
+      <li>Bei eSIM Card einen L&auml;nder-, Regional- oder Global-Datentarif (oder einen Data + Voice Tarif) ausw&auml;hlen</li>
+      <li>Den Code an der Kasse im Rabattfeld einf&uuml;gen und den 10%-Preisnachlass vor der Zahlung best&auml;tigen</li>
+    </ol>
+    <p class="content-note">Der Rabatt wird vor Abschluss der Zahlung angezeigt.</p>
+  </div>
+
+  <!-- Decision help -->
+  <h2>Ist eSIM Card die richtige Wahl f&uuml;r deine Reise</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Gut geeignet</h3>
+      <ul>
+        <li>Du kennst deinen genauen Datenbedarf und die Reisel&auml;nge und willst einen passend zugeschnittenen Tarif statt ein aufgerundetes Standardpaket</li>
+        <li>Du willst optional eine virtuelle Telefonnummer oder eine Voice-f&auml;hige eSIM aus derselben App kaufen, in der du schon Daten kaufst</li>
+        <li>Du bist dir vor dem Kauf sicher, welchen Tarif du willst, da es nach der Installation kaum Spielraum gibt, es dir anders zu &uuml;berlegen</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Alternativen pr&uuml;fen</h3>
+      <ul>
+        <li>Du willst eine Telefonnummer kostenlos inklusive statt separat gekauft: siehe <a href="/de/alosim/">AloSIM</a>, deren Hushed-Nummer ohne Aufpreis dabei ist</li>
+        <li>Du willst ein gr&ouml;&szlig;eres Paket zu einem niedrigeren Preis pro GB: <a href="/de/airhub/">Airhub</a>s 3GB-USA-Tarif liegt unter 1 $/GB, g&uuml;nstiger pro Gigabyte als eSIM Cards kleinste USA-Stufe</li>
+        <li>Du willst einen Unlimited-Tarif mit tats&auml;chlich ver&ouml;ffentlichter Fair-Use-Zahl: siehe <a href="/de/saily/">Saily</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Savings examples -->
+  <h2>So sieht der Rabatt konkret aus</h2>
+  <div class="content-box">
+    <ul>
+      <li>USA 1GB, 3 Tage, f&uuml;r 1,92 $ &rarr; 10% Rabatt spart etwa 0,19 $</li>
+      <li>USA 10GB, 30 Tage, f&uuml;r 12,86 $ &rarr; 10% Rabatt spart etwa 1,29 $</li>
+      <li>USA Unlimited, 7 Tage, f&uuml;r 12,05 $ &rarr; 10% Rabatt spart etwa 1,21 $</li>
+    </ul>
+    <p class="content-note">Preise sind die eigenen, zum Zeitpunkt unserer Pr&uuml;fung gelisteten Tarife von eSIM Card f&uuml;r die USA; die genauen Zahlen variieren je nach Reiseziel und &auml;ndern sich mit der Zeit.</p>
+  </div>
+
+  <p>
+    F&uuml;r Ger&auml;te-Einrichtung und eSIM-Grundlagen, die &uuml;ber eSIM Card hinaus gelten, sieh dir unseren <a href="/compatible-devices/">eSIM-kompatible Ger&auml;te</a>-Guide an (auf Englisch).
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Code an der Kasse einl&ouml;sen</h2>
+    <p><code>ESIM10</code> kopieren und ins Rabattfeld einf&uuml;gen</p>
+    <p>10% Rabatt auf jeden eSIM Card Tarif, ob reine Daten, Unlimited oder Data + Voice.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>eSIM Card Rabattcode: H&auml;ufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist aktuell der beste Code</h3>
+      <p><strong>ESIM10</strong>: 10% Rabatt auf jeden eSIM Card Tarif. Es ist ein &ouml;ffentlicher Code, der direkt auf der eigenen Startseite von eSIM Card beworben wird, keiner von unseren.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Verkauft eSIM Card Unlimited-Tarife</h3>
+      <p>Ja, zwei Stufen pro Land: "Unlimited" und "Unlimited Plus", jede in mehreren Laufzeiten erh&auml;ltlich, zus&auml;tzlich zu den regul&auml;ren Tarifen mit fester GB-Zahl. Die eigene Website von eSIM Card erkl&auml;rt nicht genau, was die beiden Stufen au&szlig;er dem Preis unterscheidet.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Ist eSIM Cards Unlimited-Datennutzung tats&auml;chlich unbegrenzt</h3>
+      <p>Laut eSIM Cards eigener Fair-Use-Formulierung erhalten Unlimited-Pakete "an allowed limit of data at full speed per 24 hours and thereafter unlimited data at lower speeds". Die Seite best&auml;tigt, dass Tethering/Hotspot bei diesen Tarifen funktioniert, ver&ouml;ffentlicht aber nicht die tats&auml;chliche GB-Zahl f&uuml;r dieses t&auml;gliche Vollgeschwindigkeits-Kontingent, wie manche Wettbewerber es tun.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bekomme ich bei eSIM Card eine Telefonnummer</h3>
+      <p>Ja, als separate virtuelle Telefonnummer-Zusatzoption ab etwa 2,40 $, gekauft innerhalb derselben App wie die Daten-eSIMs statt kostenlos enthalten.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bekomme ich eine R&uuml;ckerstattung</h3>
+      <p>Selten, sobald eine eSIM installiert oder genutzt wurde. Die eigene R&uuml;ckerstattungsrichtlinie von eSIM Card beschreibt eSIMs als grundlegend nicht erstattbar, mit Ausnahmen nur in engen F&auml;llen wie einem echten Abdeckungsausfall oder einem technischen Fehler bei null verbrauchten Daten, reklamiert innerhalb von 30 Tagen nach dem Kauf.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist aktuell der beste eSIM Card Rabattcode?",
+        "acceptedAnswer":{"@type":"Answer","text":"ESIM10 gibt 10% Rabatt auf jeden eSIM Card Tarif. Es ist ein oeffentlicher Code, der direkt auf der eigenen Startseite von eSIM Card beworben wird, kein exklusiver Code von uns."}
+      },
+      {
+        "@type":"Question",
+        "name":"Verkauft eSIM Card Unlimited-Tarife?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ja, zwei Stufen pro Land, Unlimited und Unlimited Plus, jede in mehreren Laufzeiten erhaeltlich, zusaetzlich zu den regulaeren Tarifen mit fester GB-Zahl. Die eigene Website erklaert nicht genau, was die beiden Stufen ausser dem Preis unterscheidet."}
+      },
+      {
+        "@type":"Question",
+        "name":"Ist eSIM Cards Unlimited-Datennutzung tatsaechlich unbegrenzt?",
+        "acceptedAnswer":{"@type":"Answer","text":"Laut eigener Fair-Use-Formulierung erhalten Unlimited-Pakete ein Kontingent mit voller Geschwindigkeit pro 24 Stunden und danach unbegrenzte Daten mit geringerer Geschwindigkeit. Tethering und Hotspot sind bei diesen Tarifen bestaetigt nutzbar, die tatsaechliche GB-Zahl fuer das taegliche Vollgeschwindigkeits-Kontingent wird aber nicht veroeffentlicht."}
+      },
+      {
+        "@type":"Question",
+        "name":"Bekomme ich bei eSIM Card eine Telefonnummer?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ja, als separate virtuelle Telefonnummer-Zusatzoption ab etwa 2,40 $, gekauft innerhalb derselben App wie die Daten-eSIMs statt kostenlos enthalten."}
+      },
+      {
+        "@type":"Question",
+        "name":"Bekomme ich von eSIM Card eine Rueckerstattung?",
+        "acceptedAnswer":{"@type":"Answer","text":"Selten, sobald eine eSIM installiert oder genutzt wurde. Die Rueckerstattungsrichtlinie beschreibt eSIMs als grundlegend nicht erstattbar, mit Ausnahmen nur in Faellen wie einem echten Abdeckungsausfall oder einem technischen Fehler bei null verbrauchten Daten, reklamiert innerhalb von 30 Tagen nach dem Kauf."}
+      }
+    ]
+  }
+  </script>
+</div>

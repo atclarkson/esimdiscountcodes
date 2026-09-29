@@ -1,0 +1,140 @@
+<!-- Yesim vs RedteaGO Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set yesimPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set redteagoPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set yesimDeCode = deA.codes[providerA.primaryCode] if (deA and deA.codes and deA.codes[providerA.primaryCode]) else null %}
+  {% set redteagoDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set yesimDiscount = (yesimDeCode.discount if yesimDeCode) or yesimPrimary.discount %}
+  {% set redteagoDiscount = (redteagoDeCode.discount if redteagoDeCode) or redteagoPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Die beiden stehen an entgegengesetzten Enden derselben Entscheidung. <strong>RedteaGO</strong> ist eine der g&uuml;nstigsten eSIMs pro GB auf dieser Seite, aber die Daten laufen nach 30 Tagen ab und ein Guthaben-Aufladen ist ab dem Moment der Aktivierung nicht erstattbar. <strong>Yesim</strong> kostet deutlich mehr, aber sein Pay &amp; Fly-Guthaben verf&auml;llt nicht, sondern wird &uuml;bertragen, und Yesim sichert K&auml;ufe mit einer 30-Tage-Geld-zur&uuml;ck-Garantie ab, die RedteaGO schlicht nicht anbietet. Nimm RedteaGO, wenn der Preis pro Gigabyte entscheidend ist. Nimm Yesim, wenn dir ein Sicherheitsnetz den Aufpreis wert ist.
+    </p>
+  </div>
+
+  <h2>Preis-Schnappschuss (vor jedem Code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Ziel</th>
+          <th>RedteaGO</th>
+          <th>Yesim</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>USA</td><td>2,00 $ (1 GB)</td><td>8,40 $ (1 Tag, Pay &amp; Fly)</td></tr>
+        <tr><td>T&uuml;rkei</td><td>1,50 $ (1 GB)</td><td>7,70 $ (1 Tag, Pay &amp; Fly)</td></tr>
+        <tr><td>VAE</td><td>3,90 $ (1 GB)</td><td>7,70 $ (1 Tag, Pay &amp; Fly)</td></tr>
+        <tr><td>Weltweit</td><td>31,00 $ (6 GB) &asymp; 5,17 $/GB</td><td>20,90 $ (3 GB) &asymp; 6,97 $/GB</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Das ist nicht ganz eins zu eins vergleichbar. RedteaGO verkauft ein festes GB-Kontingent zum Pauschalpreis. Yesims L&auml;ndertarife werden pro Tag berechnet, nicht pro Gigabyte, &uuml;ber das Pay &amp; Fly-Guthabensystem, das separat mit etwa 1,10 $/GB beworben wird, wenn man es so herunterrechnet. Der Weltweit-Vergleich oben ist der n&auml;chste echte Vergleich: RedteaGO gewinnt auch dort beim reinen Preis pro Gigabyte.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Yesim:</strong> {{ providerA.primaryCode }}, {{ yesimDiscount | lower }}, nur f&uuml;r den ersten Kauf. Bestandskunden sollten stattdessen WELCOMETOYESIM (15% Rabatt) oder TRAVELFREE (3&nbsp;&euro; Pauschalrabatt) nutzen. <a href="{{ providerAUrl }}">Vollst&auml;ndige Codeliste &rarr;</a></li>
+      <li><strong>RedteaGO:</strong> {{ providerB.primaryCode }}, {{ redteagoDiscount | lower }}, funktioniert bei jedem Tarif, auch bei wiederholten K&auml;ufen. <a href="{{ providerBUrl }}">Vollst&auml;ndige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Keiner der beiden Anbieter betreibt ein Partnerprogramm, das einen eigenen Code von uns unterst&uuml;tzt, daher sind die beiden Codes oben die besten &ouml;ffentlichen, die wir gepr&uuml;ft haben.</p>
+  </div>
+
+  <h2>Ist Yesim oder RedteaGO die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm Yesim, wenn&hellip;</h3>
+      <ul>
+        <li>Du h&auml;ufig reist und ein Datenguthaben willst, das zwischen Reisen erhalten bleibt statt abzulaufen</li>
+        <li>Du eine echte R&uuml;ckerstattungsoption willst, falls sich deine Pl&auml;ne &auml;ndern und du das Gekaufte nicht nutzt</li>
+        <li>Du lieber im Voraus mehr f&uuml;r diese Flexibilit&auml;t zahlst, statt dem niedrigsten Listenpreis nachzujagen</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm RedteaGO, wenn&hellip;</h3>
+      <ul>
+        <li>Du den realistisch niedrigsten Preis pro Gigabyte willst und eine einzelne Reise planst</li>
+        <li>Es dir nichts ausmacht, die Daten innerhalb eines 30-Tage-Fensters ohne R&uuml;ckerstattung auf ungenutzte Aufladungen zu nutzen</li>
+        <li>Hotspot und Tethering dir wichtiger sind als eine Telefonnummer: RedteaGOs eigenes FAQ best&auml;tigt, dass es &uuml;berall verf&uuml;gbar ist, wo der Dienst l&auml;uft</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Die R&uuml;ckerstattungsregeln liegen weit auseinander.</strong> Yesim wirbt mit einer 30-Tage-Geld-zur&uuml;ck-Garantie auf ungenutzte Tarife. RedteaGOs eigenes FAQ besagt, dass Daten-Aufladungen nicht erstattbar sind, weil der Tarif sofort nach Abschluss des Kaufs aktiviert wird. Wenn du gerne im Voraus f&uuml;r eine Reise kaufst, die sich noch &auml;ndern k&ouml;nnte, kann allein dieser Unterschied die Entscheidung ausmachen.
+  </p>
+  <p>
+    <strong>Keiner der beiden ist ein echter Telefonnummer-Anbieter.</strong> Yesim ist durchgehend reine Daten; Sprachtelefonie l&auml;uft &uuml;ber Apps wie WhatsApp oder Viber. Auch RedteaGO ist standardm&auml;&szlig;ig reine Daten und f&uuml;gt Anrufe/SMS nur bei Tarifen hinzu, die ausdr&uuml;cklich als "Calls/Texts Available" gekennzeichnet sind, oder &uuml;ber ein separates Call &amp; Text-Paket, nicht als Standard. Wenn eine funktionierende Telefonnummer f&uuml;r Anrufe oder SMS das eigentliche Ziel ist, sieh dir stattdessen <a href="/de/simlocal/">SimLocal</a> an, dessen UK-Tarife eine Nummer enthalten.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Ger&auml;tekompatibilit&auml;t, die f&uuml;r beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Ger&auml;ten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Yesim vs RedteaGO: H&auml;ufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist g&uuml;nstiger, Yesim oder RedteaGO?</h3>
+      <p>RedteaGO, mit deutlichem Abstand pro Gigabyte in jedem hier verglichenen Reiseziel. Yesim verlangt f&uuml;r sein Pay &amp; Fly-Guthabenmodell mehr, sichert es aber mit einer R&uuml;ckerstattungsgarantie und einem &uuml;bertragbaren Guthaben ab.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bekomme ich eine R&uuml;ckerstattung, wenn ich den Tarif nicht nutze?</h3>
+      <p>Bei Yesim ja: es wirbt mit einer 30-Tage-Geld-zur&uuml;ck-Garantie auf ungenutzte Tarife. Bei RedteaGO nein: das eigene FAQ besagt, dass Daten-Aufladungen ab Aktivierung des Tarifs nicht erstattbar sind.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welcher h&auml;lt l&auml;nger, bevor die Daten abgelaufen sind?</h3>
+      <p>Yesim. Sein Pay &amp; Fly-Guthaben wird zwischen Reisen &uuml;bertragen, statt zu einem festen Zeitpunkt abzulaufen. RedteaGOs Daten laufen 30 Tage nach dem Kauf ab.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Enth&auml;lt einer der beiden Anrufe oder SMS?</h3>
+      <p>Standardm&auml;&szlig;ig nicht. Beide sind vor allem reine Daten. RedteaGO f&uuml;gt Anrufe/SMS nur bei Tarifen mit der Kennzeichnung "Calls/Texts Available" oder &uuml;ber sein separates Call &amp; Text-Paket hinzu. Yesim hat gar keine Anrufe/SMS-Option; Sprachtelefonie l&auml;uft &uuml;ber datenbasierte Apps.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welcher ist besser f&uuml;r jemanden, der h&auml;ufig reist?</h3>
+      <p>Yesim, wenn ein zwischen Reisen &uuml;bertragenes Guthaben wichtiger ist als der Preis. RedteaGO ist eher f&uuml;r jeweils eine einzelne Reise gedacht, da seine Daten eine feste 30-Tage-Ablauffrist haben.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, Yesim oder RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"RedteaGO ist mit deutlichem Abstand pro Gigabyte günstiger in allen verglichenen Reisezielen. Yesim verlangt für sein Pay & Fly-Guthabenmodell mehr, sichert es aber mit einer Rückerstattungsgarantie und einem zwischen Reisen übertragbaren Guthaben ab."}
+      },
+      {
+        "@type":"Question",
+        "name":"Bekomme ich eine Rückerstattung, wenn ich einen Yesim- oder RedteaGO-Tarif nicht nutze?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim wirbt mit einer 30-Tage-Geld-zurück-Garantie auf ungenutzte Tarife. RedteaGOs eigenes FAQ besagt, dass Daten-Aufladungen nicht erstattbar sind, sobald ein Tarif aktiviert wird, was sofort beim Kauf passiert."}
+      },
+      {
+        "@type":"Question",
+        "name":"Welcher hält länger, bevor die Daten ablaufen, Yesim oder RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim, da sein Pay & Fly-Guthaben zwischen Reisen übertragen wird statt zu einem festen Zeitpunkt abzulaufen. RedteaGOs Daten laufen 30 Tage nach dem Kauf ab."}
+      },
+      {
+        "@type":"Question",
+        "name":"Enthalten Yesim oder RedteaGO Anrufe oder SMS?",
+        "acceptedAnswer":{"@type":"Answer","text":"Standardmäßig nicht bei beiden. RedteaGO fügt Anrufe und SMS nur bei Tarifen mit der Kennzeichnung 'Calls/Texts Available' oder einem separaten Call & Text-Paket hinzu. Yesim hat keine Anrufe- oder SMS-Option; Sprachtelefonie läuft über datenbasierte Apps."}
+      },
+      {
+        "@type":"Question",
+        "name":"Welcher ist besser für häufig Reisende, Yesim oder RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim, wenn ein zwischen Reisen übertragenes Guthaben wichtiger ist als der Preis. RedteaGO ist eher für jeweils eine einzelne Reise gedacht, da seine Daten eine feste 30-Tage-Ablauffrist haben."}
+      }
+    ]
+  }
+  </script>
+</div>

@@ -1335,7 +1335,7 @@
         "discount": "5% OFF",
         "description": "We checked Orange Travel's own store (travel.orange.com) directly and found no promo code field or code-based discount system anywhere in the checkout flow; its discounts are automatic strike-through sale prices on larger plans instead. We could not find AW0 advertised or working anywhere on the real site, so we're marking it invalid.",
         "verified": false,
-        "lastTested": "2026-09-27",
+        "lastTested": "2026-09-29",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public",
@@ -1429,7 +1429,7 @@
         "discount": "10% OFF ESIM",
         "description": "Public discount code advertised on eSIM Card's site",
         "verified": true,
-        "lastTested": "2026-09-28",
+        "lastTested": "2026-09-29",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public"
