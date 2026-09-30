@@ -1,0 +1,139 @@
+<!-- Comparativa eSIM Card vs ByteSIM (Español) -->
+<div class="content-section">
+
+  {% set esimcardusPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set bytesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set esimcardusEsCode = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
+  {% set bytesimEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set esimcardusDiscount = (esimcardusEsCode.discount if esimcardusEsCode) or esimcardusPrimary.discount %}
+  {% set bytesimDiscount = (bytesimEsCode.discount if bytesimEsCode) or bytesimPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>eSIM Card</strong> si sabes exactamente cuántos datos y cuántos días necesitas y quieres un plan a medida, con un número de teléfono como extra opcional. Elige <strong>ByteSIM</strong> si de verdad necesitas un número local real, con llamadas y SMS incluidos en el propio plan, en uno de sus países compatibles, y no te importa pasar una verificación de identidad para conseguirlo.
+    </p>
+  </div>
+
+  <h2>La diferencia principal: planes a medida por día o un número local incluido</h2>
+  <p>
+    Todo el enfoque de eSIM Card es la granularidad. Solo su página de Estados Unidos lista cerca de 30 combinaciones: siete niveles fijos de datos, de 1 GB a 100 GB, cada uno disponible en varias duraciones de 3 a 90 días, más dos niveles ilimitados independientes de 1 a 30 días. Si sabes con precisión cuántos datos y cuántos días necesitas, hay un plan hecho a esa medida, en lugar de redondear hacia arriba al paquete que ofrezca un competidor.
+  </p>
+  <p>
+    ByteSIM va por otro camino: la mayoría de sus planes son solo de datos, como en casi todos los demás proveedores, pero en países seleccionados (Estados Unidos, Canadá, Reino Unido, Francia, España, Australia, Vietnam, Corea del Sur y Tailandia) vende planes que incluyen un número de teléfono local real, con llamadas, SMS, uso de hotspot y una IP local, junto a los datos. eSIM Card también ofrece un número, pero como extra de pago independiente desde unos 2,40 $, comprado aparte del plan de datos en lugar de venir incluido.
+  </p>
+
+  <h2>Comparativa de funciones</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Función</th>
+          <th>eSIM Card</th>
+          <th>ByteSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Tamaño de planes</td><td>~30 combinaciones por país (7 niveles de GB &times; varias duraciones, más 2 niveles ilimitados)</td><td>Planes estándar de GB fijos e ilimitados; planes con número incluido en países seleccionados</td></tr>
+        <tr><td>Número de teléfono</td><td>Extra de pago independiente por un número virtual, desde ~2,40 $</td><td>Número local real incluido en planes de países seleccionados, con llamadas/SMS incluidos</td></tr>
+        <tr><td>Verificación de identidad</td><td>No se menciona para los planes de datos estándar</td><td>Obligatoria para planes con número (foto de pasaporte + selfie), según la regulación local de telecomunicaciones</td></tr>
+        <tr><td>Reembolsos</td><td>No reembolsable una vez instalado o usado, con excepciones limitadas dentro de 30 días</td><td>No se detalla en su web más allá de los avisos habituales sobre eSIM</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Los datos proceden de la web de cada proveedor y, en el caso de ByteSIM, de nuestra propia compra. La disponibilidad y los precios exactos varían según el destino y cambian con el tiempo.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>eSIM Card:</strong> {{ providerA.primaryCode }}, {{ esimcardusDiscount | lower }}. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>ByteSIM:</strong> {{ providerB.primaryCode }}, {{ bytesimDiscount | lower }}. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ninguno de los dos códigos es nuestro; ambos son códigos públicos que encontramos en la propia web de cada proveedor. El de eSIM Card se anuncia como 10% de descuento y coincidió con lo que vimos en su página de inicio. El de ByteSIM también se anuncia en otros sitios como 10% de descuento, pero lo probamos en un pedido real y solo restó cerca de un 5%, más o menos lo mismo que la Summer Sale automática de ByteSIM que se aplica sin ningún código.</p>
+  </div>
+
+  <h2>¿eSIM Card o ByteSIM es la mejor opción</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige eSIM Card si&hellip;</h3>
+      <ul>
+        <li>Sabes exactamente cuántos datos y cuántos días necesitas y quieres un plan hecho a esa medida</li>
+        <li>Quieres la opción de añadir más adelante un número o una eSIM con voz, desde la misma app</li>
+        <li>Tienes claro el plan antes de comprarlo, ya que apenas hay margen para cambiar de idea después</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige ByteSIM si&hellip;</h3>
+      <ul>
+        <li>Necesitas un número local real, con llamadas y SMS, no solo datos</li>
+        <li>Tu destino es uno de los países compatibles con número local de ByteSIM</li>
+        <li>Prefieres hablar con una persona real por WhatsApp si algo falla durante la activación</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>eSIM Card no publica el límite exacto de velocidad de uso justo en sus planes ilimitados.</strong> Su propia redacción solo promete "un límite permitido de datos a velocidad completa cada 24 horas" sin dar la cifra en GB. Si prefieres un proveedor que sí publique esa cifra, mira <a href="/saily/">Saily</a>, que indica 5 GB en un periodo móvil de 24 horas en la mayoría de destinos.
+  </p>
+  <p>
+    <strong>El descuento anunciado de ByteSIM no coincide con lo que realmente ahorra.</strong> Compramos un plan real y TPDBYTE dio cerca de un 5% de descuento, no el 10% anunciado en otros sitios. Si un número de teléfono incluido no es imprescindible para ti y prefieres uno gratuito en lugar de un extra de pago, o un descuento que no cumple lo que promete, echa un vistazo a <a href="/es/alosim/">AloSIM</a>, que incluye un número virtual Hushed gratuito en sus planes.
+  </p>
+  <p>
+    Para la configuración del dispositivo y lo básico sobre eSIM, válido para ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre eSIM Card vs ByteSIM</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, eSIM Card o ByteSIM?</h3>
+      <p>Depende de lo que necesites. Para solo datos, la granularidad de eSIM Card evita pagar por datos que no vas a usar. Si necesitas un número local real, los planes de ByteSIM con número y llamadas incluidos evitan pagar aparte por un número.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Los dos ofrecen número de teléfono?</h3>
+      <p>Sí, pero de forma distinta. eSIM Card vende un número virtual como extra de pago independiente desde unos 2,40 $. ByteSIM incluye un número local real, con llamadas, SMS y uso de hotspot, directamente en planes de países seleccionados, pero exige verificación de identidad para conseguirlo.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Merecen la pena los códigos de descuento?</h3>
+      <p>El código ESIM10 de eSIM Card coincidió con el 10% de descuento anunciado en su propia web. El código TPDBYTE de ByteSIM se anuncia en otros sitios como 10% de descuento, pero en un pedido real solo ahorró cerca de un 5%, similar a la Summer Sale automática de ByteSIM que no requiere código.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál es mejor para quien solo quiere datos sin complicarse con el número de teléfono?</h3>
+      <p>eSIM Card, si no quieres ninguna verificación de identidad: sus planes de datos estándar no la requieren. Si además quieres un número virtual gratuito en lugar de un extra de pago, AloSIM es la mejor opción.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, eSIM Card o ByteSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Depende de lo que se necesite. Para solo datos, la granularidad de eSIM Card evita pagar por datos que no se van a usar. Para un número local real, los planes de ByteSIM con número y llamadas incluidos evitan pagar aparte por un número."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿eSIM Card y ByteSIM ofrecen ambos número de teléfono?",
+        "acceptedAnswer":{"@type":"Answer","text":"Sí, pero de forma distinta. eSIM Card vende un número virtual como extra de pago independiente desde unos 2,40 $. ByteSIM incluye un número local real, con llamadas, SMS y uso de hotspot, directamente en planes de países seleccionados, pero exige verificación de identidad."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Merecen la pena los códigos de descuento de eSIM Card y ByteSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"El código ESIM10 de eSIM Card coincidió con el 10% de descuento anunciado en su propia web. El código TPDBYTE de ByteSIM se anuncia en otros sitios como 10% de descuento, pero en un pedido real solo ahorró cerca de un 5%, similar a la Summer Sale automática de ByteSIM sin necesidad de código."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál es mejor para quien solo quiere datos sin complicarse con el número de teléfono?",
+        "acceptedAnswer":{"@type":"Answer","text":"eSIM Card, para quien no quiere ninguna verificación de identidad, ya que sus planes de datos estándar no la requieren. Quien además quiera un número virtual gratuito en lugar de un extra de pago debería considerar AloSIM."}
+      }
+    ]
+  }
+  </script>
+</div>

@@ -1,0 +1,161 @@
+<!-- Airalo Content (German) -->
+<div class="content-section">
+
+  <!-- Quick Answer -->
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Bester Airalo Rabattcode &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Nutze <strong>{{ provider.primaryCode }}</strong> für <strong>15% Rabatt auf deine erste Airalo-eSIM</strong>. Es ist nicht unser eigener Code (Airalo betreibt kein Partnerprogramm, das einen Rabattcode wie bei Holafly oder Ubigi unterstützt), aber es ist der beste öffentliche Code, den wir geprüft haben und der noch funktioniert. Schon einmal bei Airalo gekauft? <strong>AIRALOESIM10</strong> gibt Bestandskunden 10% Rabatt auf Einkäufe ab $10.
+      <span class="callout-meta">Bestätigt aktiv am <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("d. MMM yyyy") }}</time>.</span>
+    </p>
+  </div>
+
+  <!-- Headline -->
+  <h2>Was Airalo wirklich unterscheidet</h2>
+  <p>
+    Airalo verkauft Daten pro Gigabyte, nicht unbegrenzt. Das ist die entgegengesetzte Wette zu <a href="/de/holafly/">Holafly</a>: Statt im Voraus mehr zu zahlen, um sich nie wieder um einen Datenzähler kümmern zu müssen, zahlst du weniger im Voraus, musst aber tatsächlich verfolgen, was du verbrauchst. Für einen sparsamen Nutzer auf einer kurzen Reise (Karten, Nachrichten, etwas Surfen) ist das kein Problem und meist die günstigere Wahl. Für eine Familie, die gleichzeitig Navigation, Videoanrufe und ein Kinder-Tablet laufen lässt, wird die GB-Verfolgung zu echtem mentalen Zusatzaufwand, obendrauf auf alles andere, was man auf einer Reise ohnehin schon jonglieren muss.
+  </p>
+  <p>
+    Airalo verkauft ebenfalls <strong>unbegrenzte regionale eSIMs</strong> (Europa, Asien, Nordamerika, Lateinamerika, die Karibik, MENA, Afrika und Australien), es ist also nicht rein ein GB-gedeckeltes Angebot. Der Haken, den Airalos eigene Fair-Use-Richtlinie klar benennt: Unbegrenzte Tarife laufen die ersten 3 GB pro Tag mit voller Geschwindigkeit, danach werden sie bis Mitternacht auf 1 Mbit/s gedrosselt, wenn das Kontingent zurückgesetzt wird. Das ist eine konkrete Zahl, die es wert ist zu kennen, bevor man annimmt, "unbegrenzt" bedeute ungedrosselt. Es ist trotzdem deutlich besser als eine harte Datengrenze, nur eben nicht grenzenlos.
+  </p>
+
+  <img class="content-photo"
+       src="https://media.adamandlinds.com/photos/large/d37ce5f2-e763-4165-a860-783353e14dc8.jpg"
+       alt="Ein Mann macht ein windzerzaustes Selfie auf einem Kopenhagener Gehweg, während eine Frau hinter ihm an einem 7-Eleven-Geschäft vorbeigeht"
+       width="1280" height="960">
+  <p class="content-photo-caption">Aufgenommen auf einem kurzen Städtetrip nach Kopenhagen, genau die Art von leichtem Ein-Land-Besuch, bei dem ein GB-gedeckelter Tarif wie der von Airalo mehr Sinn ergibt als für unbegrenzt zu zahlen.</p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Aktive Codes</h3>
+    <ul>
+      <li><strong>NEWTOAIRALO15</strong>: 15% Rabatt auf den ersten eSIM-Kauf</li>
+      <li><strong>AIRALOESIM10</strong>: 10% Rabatt auf Einkäufe ab $10 (Bestandskunden)</li>
+      <li><strong>JOHANN4201</strong>: 15% Rabatt, oder 3 &euro; Rabatt auf eSIM-Tarife</li>
+      <li><strong>BRIAN0890</strong>: 3 $ Rabatt auf den ersten Einkauf</li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Falls ein Code nicht angenommen wird, lade den Warenkorb neu oder versuche es in einem privaten Fenster erneut.</p>
+  </div>
+
+  <!-- Why so many $3 codes -->
+  <h2>Warum es so viele "3 $ Rabatt"-Codes für Airalo gibt</h2>
+  <p>
+    Airalo betreibt ein Empfehlungsprogramm namens Airmoney: Wenn sich jemand mit deinem Empfehlungscode anmeldet und einen ersten Kauf tätigt, bekommt diese Person 3 $ Rabatt und du 3 $ Airmoney-Guthaben für deine nächste eSIM. Deshalb ist das Internet voll mit persönlichen "3 $ Rabatt"-Codes einzelner Nutzer statt eines einzigen offiziellen Rabatts. Codes wie BRIAN0890 oben sind genau das: der echte Empfehlungscode einer realen Person, kein speziell mit einem Publisher ausgehandelter Deal. Das ist ein grundlegend anderer Mechanismus als das Partnercode-System von Holafly oder Ubigi, weshalb wir für Airalo auch keinen eigenen Code haben wie für diese Anbieter.
+  </p>
+
+  <!-- How to -->
+  <h2>Einen Airalo-Code in 3 Schritten einlösen</h2>
+  <div class="content-box">
+    <ol>
+      <li>Kopiere <strong>NEWTOAIRALO15</strong> (erster Kauf) oder <strong>AIRALOESIM10</strong> (Bestandskunde, Bestellung ab $10)</li>
+      <li>Wähle einen lokalen, regionalen oder globalen eSIM-Tarif in der Airalo-App oder auf airalo.com</li>
+      <li>Füge den Code beim Checkout ins Rabattfeld ein und bestätige den Preisnachlass vor der Zahlung</li>
+    </ol>
+    <p class="content-note">Der Rabatt wird vor Abschluss der Zahlung angezeigt.</p>
+  </div>
+
+  <!-- Decision help -->
+  <h2>Ist Airalo die richtige Wahl für deine Reise</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Gut geeignet</h3>
+      <ul>
+        <li>Geringer Datenverbrauch: Karten, Nachrichten, etwas Surfen</li>
+        <li>Kurze Reisen in nur ein Land, bei denen du den GB-Bedarf gut schätzen kannst</li>
+        <li>Du bist es gewohnt, unterwegs einen Datenzähler zu prüfen</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Alternativen in Betracht ziehen</h3>
+      <ul>
+        <li>Familie oder Gruppe, bei der sich mehrere Personen den Datenverbrauch eines Tarifs teilen</li>
+        <li>Viel Streaming oder Videoanrufe, bei denen du lieber keinen Zähler im Blick behalten willst</li>
+        <li>Du würdest mehr bezahlen, um nie wieder an Daten denken zu müssen (siehe <a href="/de/holafly/">Holafly</a>)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Savings examples -->
+  <h2>So sieht der Rabatt aus</h2>
+  <div class="content-box">
+    <ul>
+      <li>USA 1 GB für 4,50 $ &rarr; 15% Rabatt spart etwa 0,68 $</li>
+      <li>Europa (regional) 1 GB für 5,27 $ &rarr; 15% Rabatt spart etwa 0,79 $</li>
+      <li>Weltweit 1 GB für 9,49 $ &rarr; 15% Rabatt spart etwa 1,42 $</li>
+    </ul>
+    <p class="content-note">Airalos Preis pro Gigabyte bedeutet, dass der Rabatt bei einem einzelnen kleinen Tarif gering ausfällt und sich bei größeren Datenpaketen oder wiederholten Käufen stärker bemerkbar macht.</p>
+  </div>
+
+  <p>
+    Zur eSIM-Gerätekompatibilität (welche Handys überhaupt eSIM unterstützen) siehe unseren <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch). Er gilt unabhängig davon, welchen Anbieter du nutzt. Wir haben außerdem einen ausführlicheren <a href="https://www.adamandlinds.com/blog/best-prepaid-sim-cards-tourists/" target="_blank" rel="noopener">selbst getesteten Vergleich von Holafly, Airalo und Airhub</a> auf unserer Reiseseite geschrieben, der zeigt, wo sich für uns welcher Anbieter tatsächlich gelohnt hat. Wenn du zwischen Bezahlung pro GB und unbegrenzt abwägst, sieh dir unseren <a href="/compare/holafly-vs-airalo/">Holafly vs Airalo Vergleich</a> an (auf Englisch).
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Code an der Kasse nutzen</h2>
+    <p>Kopiere <code>NEWTOAIRALO15</code> und füge ihn ins Rabattfeld ein</p>
+    <p>15% Rabatt auf deinen ersten Airalo-eSIM-Kauf.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Airalo Rabattcode FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist gerade der beste Code</h3>
+      <p><strong>NEWTOAIRALO15</strong>: 15% Rabatt auf deine erste Airalo-eSIM. Schon Kunde? Nutze <strong>AIRALOESIM10</strong> für 10% Rabatt auf Bestellungen über $10.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Hat Airalo unbegrenzte Tarife</h3>
+      <p>Ja, regional (Europa, Asien, Nordamerika, Lateinamerika, die Karibik, MENA, Afrika, Australien). Volle Geschwindigkeit für die ersten 3 GB pro Tag, danach gedrosselt auf 1 Mbit/s, bis sich das Tageskontingent um Mitternacht zurücksetzt.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Kann ich bei Airalo einen Hotspot nutzen</h3>
+      <p>Ja, Hotspot-Tethering wird bei Airalo-Tarifen generell unterstützt und ist bei den unbegrenzten regionalen eSIMs uneingeschränkt möglich (unterliegt derselben täglichen Fair-Use-Drosselung wie die normale Nutzung).</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Warum hat jeder einen anderen Airalo-Code</h3>
+      <p>Airalos Empfehlungsprogramm (Airmoney) gibt jedem Nutzer einen eigenen persönlichen 3-$-Rabattcode zum Teilen, statt einen zentralen Partnerrabatt zu betreiben. Deshalb kursieren viele verschiedene Codes statt eines einzigen offiziellen.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Verfallen Airalo-eSIMs</h3>
+      <p>Die eSIM selbst verfällt vor der Aktivierung nicht, du kannst also schon vor der Reise kaufen. Sobald sie aktiviert ist, beginnt das Gültigkeitsfenster des Tarifs (je nach Tarif meist 7-30 Tage) herunterzuzählen.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist gerade der beste Airalo-Rabattcode?",
+        "acceptedAnswer":{"@type":"Answer","text":"NEWTOAIRALO15 gibt 15% Rabatt auf den ersten Airalo-eSIM-Kauf. Bestandskunden können AIRALOESIM10 für 10% Rabatt auf Bestellungen über $10 nutzen."}
+      },
+      {
+        "@type":"Question",
+        "name":"Hat Airalo unbegrenzte Tarife?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ja, regional für Europa, Asien, Nordamerika, Lateinamerika, die Karibik, MENA, Afrika und Australien. Sie laufen die ersten 3 GB pro Tag mit voller Geschwindigkeit, danach gedrosselt auf 1 Mbit/s, bis sich das Tageskontingent um Mitternacht zurücksetzt."}
+      },
+      {
+        "@type":"Question",
+        "name":"Kann man bei Airalo einen Hotspot nutzen?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ja. Hotspot-Tethering funktioniert bei Airalo-Tarifen generell und ist bei den unbegrenzten regionalen eSIMs uneingeschränkt möglich, unterliegt aber derselben täglichen Fair-Use-Drosselung wie die normale Nutzung."}
+      },
+      {
+        "@type":"Question",
+        "name":"Warum scheint jeder einen anderen Airalo-Rabattcode zu haben?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airalos Airmoney-Empfehlungsprogramm gibt jedem Nutzer einen eigenen persönlichen 3-$-Rabattcode zum Teilen, statt eines zentralen Partnerrabatts, weshalb viele verschiedene Codes statt eines einzigen offiziellen kursieren."}
+      },
+      {
+        "@type":"Question",
+        "name":"Verfallen Airalo-eSIMs?",
+        "acceptedAnswer":{"@type":"Answer","text":"Die eSIM selbst verfällt vor der Aktivierung nicht und kann daher schon vor einer Reise gekauft werden. Sobald sie aktiviert ist, beginnt das Gültigkeitsfenster des Tarifs, je nach Tarif meist 7 bis 30 Tage, herunterzuzählen."}
+      }
+    ]
+  }
+  </script>
+</div>

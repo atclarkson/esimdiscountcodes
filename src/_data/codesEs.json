@@ -1,4 +1,41 @@
 {
+  "airhub": {
+    "description": "Conectividad eSIM global",
+    "codes": {
+      "ADAMANDLINDS": {
+        "discount": "5% DE DESCUENTO EN TODOS LOS PLANES",
+        "description": "Nuestro propio código. No está aplicando descuento actualmente en el checkout de Airhub. Se lo hemos reportado a Airhub y esperamos que se solucione pronto."
+      },
+      "2025": {
+        "discount": "5% DE DESCUENTO EN TODOS LOS PLANES",
+        "description": "Código público. No está aplicando descuento actualmente en el checkout de Airhub."
+      },
+      "SUMMER2025": {
+        "discount": "5% DE DESCUENTO EN TODOS LOS PLANES",
+        "description": "Código público. No está aplicando descuento actualmente en el checkout de Airhub."
+      },
+      "MARCHFOREGYPT": {
+        "discount": "5% DE DESCUENTO",
+        "description": "Código público para la región de Egipto. No está aplicando descuento actualmente en el checkout de Airhub."
+      },
+      "NAMERICA4": {
+        "discount": "4% DE DESCUENTO",
+        "description": "Código público para la región de Norteamérica. No está aplicando descuento actualmente en el checkout de Airhub."
+      },
+      "ESIMOFFER5": {
+        "discount": "5% DE DESCUENTO",
+        "description": "Código público válido para todos los países. Confirmado que funciona en el checkout de Airhub, aplica un 5% de descuento antes del pago. Actualmente el único código de Airhub que recomendamos."
+      },
+      "JPESIM5": {
+        "discount": "5% DE DESCUENTO",
+        "description": "Código público para la región de Japón. No está aplicando descuento actualmente en el checkout de Airhub."
+      },
+      "AIRHUBAPP05": {
+        "discount": "5% DE DESCUENTO (SOLO APP)",
+        "description": "Anunciado directamente en la propia web de Airhub como un descuento «exclusivo de la app» del 5% en el checkout al pedir a través de la app móvil de Airhub. No lo hemos probado nosotros, ya que no se aplica en el checkout web normal; ESIMOFFER5 sigue siendo el código que recomendamos para el navegador."
+      }
+    }
+  },
   "bnesim": {
     "description": "Planes de eSIM asequibles en todo el mundo",
     "codes": {}

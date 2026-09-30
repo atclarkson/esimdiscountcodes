@@ -238,5 +238,13 @@
     "title": "BNEsim vs Orange: No-Expiration Data Packs or a Carrier's Calls-and-SMS Bundle? (2026 Comparison)",
     "description": "BNEsim vs Orange compared: BNEsim's no-expiration data packs, crypto payment, and scheduled activation vs Orange's carrier-backed unlimited calls/SMS/hotspot bundle for Europe, neither with a working discount code right now, and which one actually fits your trip.",
     "lastUpdated": "2026-09-29"
+  },
+  {
+    "slug": "esimcardus-vs-bytesim",
+    "providerA": "esimcardus",
+    "providerB": "bytesim",
+    "title": "eSIM Card vs ByteSIM: Granular GB Sizing or a Real Local Phone Number? (2026 Comparison)",
+    "description": "eSIM Card vs ByteSIM compared: eSIM Card's granular per-GB, per-day plan sizing and cheap standalone virtual number add-on vs ByteSIM's real bundled local phone numbers with calls and texts in select countries, plus each one's discount code and which actually fits your trip.",
+    "lastUpdated": "2026-09-30"
   }
 ]

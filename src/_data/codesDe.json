@@ -1,4 +1,29 @@
 {
+  "airalo": {
+    "description": "Der weltweit erste eSIM-Store für Reisende",
+    "codes": {
+      "NEWTOAIRALO15": {
+        "discount": "15% RABATT AUF DEN ERSTEN eSIM-KAUF",
+        "description": "15% Rabatt für neue Airalo-Nutzer"
+      },
+      "AIRALOESIM10": {
+        "discount": "10% RABATT AUF eSIMs AB $10",
+        "description": "10% Rabatt für Bestandskunden auf Einkäufe ab $10"
+      },
+      "JOHANN4201": {
+        "discount": "15% RABATT ODER 3 € RABATT AUF eSIM-TARIFE",
+        "description": "15% oder 3 € Rabatt auf eSIM-Tarife"
+      },
+      "BRIAN0890": {
+        "discount": "3 $ RABATT AUF DEN ERSTEN EINKAUF",
+        "description": "3 $ Rabatt auf deinen ersten Airalo-eSIM-Kauf"
+      },
+      "HAPPY3": {
+        "discount": "3 $ RABATT AUF JEDEN EINKAUF",
+        "description": "Spare jederzeit 3 $ auf Airalo-eSIM-Tarife"
+      }
+    }
+  },
   "bnesim": {
     "description": "Erschwingliche eSIM-Tarife weltweit",
     "codes": {}
