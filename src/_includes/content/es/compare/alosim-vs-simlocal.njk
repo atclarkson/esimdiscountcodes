@@ -1,0 +1,147 @@
+<!-- Comparativa AloSIM vs SimLocal (Español) -->
+<div class="content-section">
+
+  {% set alosimPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set simlocalPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set alosimEsCode = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
+  {% set simlocalEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set alosimDiscount = (alosimEsCode.discount if alosimEsCode) or alosimPrimary.discount %}
+  {% set simlocalDiscount = (simlocalEsCode.discount if simlocalEsCode) or simlocalPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Ambos venden datos de eSIM con GB fijos a precios parecidos en los planes pequeños, así que la diferencia real no está en el precio por gigabyte, sino en lo que cada proveedor añade alrededor. AloSIM incluye un número de teléfono internacional gratis a través de Hushed. SimLocal incluye un número de Reino Unido de verdad en la mayoría de sus planes para ese país, además de una política de reembolso realmente sin preguntas, soporte por WhatsApp 24/7 e incluso algunas tiendas físicas en aeropuertos.
+    </p>
+  </div>
+
+  <h2>La similitud principal: ambos cobran por GB, a precios muy cercanos</h2>
+  <p>
+    Ni AloSIM ni SimLocal venden solo planes ilimitados, a diferencia de <a href="/es/holafly/">Holafly</a>. En un plan pequeño de un solo país, los precios de entrada quedan muy cerca: los planes de AloSIM para Estados Unidos empiezan alrededor de 4,50 $ por 1 GB, y la propia web de SimLocal muestra opciones globales en ese mismo rango de 4-5 $ por GB. Donde se diferencian es en la estructura del plan: AloSIM cobra en incrementos de 1 GB, mientras que SimLocal también vende paquetes más grandes (su propia web muestra un plan de Reino Unido de 13,50 $ por 20 GB, y uno de Estados Unidos de 7,25 $ por 3 GB) que salen más baratos por gigabyte cuanto más datos se compran de una vez.
+  </p>
+
+  <h2>Precio de referencia (antes de cualquier código)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>AloSIM</th>
+          <th>SimLocal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Estados Unidos, plan pequeño</td><td>4,50 $ (1 GB)</td><td>7,25 $ (3 GB), unos 2,42 $/GB</td></tr>
+        <tr><td>Paquete regional/de país más grande</td><td>Precio por GB, sin tramo de descuento por volumen</td><td>13,50 $ (20 GB) en Reino Unido, unos 0,68 $/GB</td></tr>
+        <tr><td>Política de reembolso</td><td>Solo si la eSIM no se activa o es incompatible</td><td>"No Quibble Refunds": cualquier motivo, sin necesidad de justificación</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">AloSIM y SimLocal no venden tamaños de plan idénticos, así que esto no es un precio por unidad estrictamente comparable. El patrón se mantiene en ambos casos: los planes en paquete de SimLocal salen más baratos por GB cuanto más grande es la compra, mientras que la tarifa por GB de AloSIM se mantiene plana sin importar el tamaño del plan.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>AloSIM:</strong> {{ providerA.primaryCode }}, {{ alosimDiscount | lower }}. <a href="{{ providerAUrl }}">Detalles completos del código &rarr;</a></li>
+      <li><strong>SimLocal:</strong> {{ providerB.primaryCode }}, {{ simlocalDiscount | lower }} (nuestro propio código). <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">El código principal de SimLocal que mostramos aquí es el nuestro, por eso lo mostramos primero en la página de ese proveedor; no es automáticamente el mayor de los dos descuentos. El de AloSIM es un código público, no nuestro.</p>
+  </div>
+
+  <h2>¿AloSIM o SimLocal es la mejor opción?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige AloSIM si&hellip;</h3>
+      <ul>
+        <li>Quieres un número internacional que funcione fuera de Reino Unido, configurado por separado en la app de AloSIM</li>
+        <li>Quieres poder elegir entre un plan de GB fijos o ilimitado desde el mismo checkout</li>
+        <li>Compras un plan pequeño de un solo país, donde la tarifa plana por GB de AloSIM ya es competitiva</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige SimLocal si&hellip;</h3>
+      <ul>
+        <li>Quieres específicamente un número de teléfono real de Reino Unido incluido en el propio plan, no como un añadido de otra app</li>
+        <li>Quieres una opción de reembolso que no dependa de que la eSIM falle técnicamente</li>
+        <li>Compras un paquete de datos más grande, o estudias en el extranjero y quieres un plan pensado para una estancia larga</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>La garantía de reembolso de AloSIM tiene una letra pequeña sobre el momento.</strong> Solo cubre eSIM que no logran conectarse o resultan incompatibles con tu dispositivo, no las que activaste y simplemente apenas usaste. La política "No Quibble Refunds" de SimLocal es más amplia: no exige demostrar que la eSIM estaba fallando.
+  </p>
+  <p>
+    <strong>Las dos funciones de "número de teléfono" no son lo mismo.</strong> La de AloSIM es un número internacional gratuito a través de Hushed, configurado como una línea aparte dentro de la propia app de AloSIM después de la compra; funciona en cualquier lugar, pero es un añadido, no un número local real. La mayoría de los planes de SimLocal para Reino Unido, en cambio, incluyen un número de teléfono británico completo para llamadas y mensajes como parte del propio plan, algo confirmado al comprar uno directamente. Si necesitas específicamente un número local de Reino Unido en lugar de uno internacional genérico, esa es la opción de SimLocal, no un añadido de app.
+  </p>
+  <p>
+    <strong>El soporte de ninguno de los dos proveedores es exactamente lo que sugieren sus etiquetas.</strong> AloSIM anuncia soporte por chat en vivo; el canal 24/7 de SimLocal es WhatsApp en lugar de un widget de chat en la web. Si quieres específicamente poder escribir desde el móvil en mitad del viaje, el enfoque de SimLocal encaja mejor con eso, aunque no esté etiquetado como "chat en vivo" en el navegador.
+  </p>
+  <p>
+    Para la configuración del dispositivo y lo básico sobre eSIM que aplica a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre AloSIM vs SimLocal</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, AloSIM o SimLocal?</h3>
+      <p>Para un plan pequeño de un solo país, los precios están muy cerca. Para un paquete de datos más grande, los planes grandes de SimLocal salen más baratos por gigabyte, ya que AloSIM cobra en incrementos planos de 1 GB sin tramo de descuento por volumen.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál tiene la mejor política de reembolso?</h3>
+      <p>La de SimLocal es más amplia: su política "No Quibble Refunds" no exige demostrar que la eSIM estaba fallando. AloSIM solo reembolsa eSIM que no logran conectarse o que son incompatibles con el dispositivo.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos incluye un número de teléfono?</h3>
+      <p>Ambos lo hacen, pero de forma distinta. AloSIM colabora con Hushed para un número internacional gratuito, configurado aparte dentro de su app. La mayoría de los planes de SimLocal para Reino Unido incluyen un número británico completo para llamadas y mensajes como parte del propio plan.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo comprar alguna de las dos eSIM en persona, no solo online?</h3>
+      <p>SimLocal tiene un pequeño número de tiendas físicas en aeropuertos seleccionados, además de su app y su web. AloSIM solo está disponible por app y navegador.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos tiene planes para una estancia larga, como estudiar en el extranjero?</h3>
+      <p>SimLocal vende planes de eSIM específicos para estudiantes, con precios pensados para estancias largas. La oferta de AloSIM son planes de GB fijos o ilimitados, sin un tramo dedicado a estancias largas.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, AloSIM o SimLocal?",
+        "acceptedAnswer":{"@type":"Answer","text":"Para un plan pequeño de un solo país, los precios están muy cerca. Para un paquete de datos más grande, los planes grandes de SimLocal salen más baratos por gigabyte, ya que AloSIM cobra en incrementos planos de 1 GB sin tramo de descuento por volumen."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál tiene la mejor política de reembolso, AloSIM o SimLocal?",
+        "acceptedAnswer":{"@type":"Answer","text":"La política No Quibble Refunds de SimLocal es más amplia y no exige demostrar que la eSIM estaba fallando. AloSIM solo reembolsa eSIM que no logran conectarse o que son incompatibles con el dispositivo."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿AloSIM o SimLocal incluyen un número de teléfono?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ambos lo hacen, pero de forma distinta. AloSIM colabora con Hushed para un número internacional gratuito, configurado aparte dentro de su app. La mayoría de los planes de SimLocal para Reino Unido incluyen un número británico completo para llamadas y mensajes como parte del propio plan."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se puede comprar una eSIM de AloSIM o SimLocal en persona?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal tiene un pequeño número de tiendas físicas en aeropuertos seleccionados, además de su app y su web. AloSIM solo está disponible por app y navegador."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿AloSIM o SimLocal ofrecen planes para estancias largas como estudiar en el extranjero?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal vende planes de eSIM específicos para estudiantes, con precios pensados para estancias largas. AloSIM ofrece planes de GB fijos o ilimitados sin un tramo dedicado a estancias largas."}
+      }
+    ]
+  }
+  </script>
+</div>

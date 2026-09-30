@@ -1,0 +1,163 @@
+<!-- Contenido de RedteaGO (Español) -->
+<div class="content-section">
+
+  <!-- Quick Answer -->
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Mejor código promocional de RedteaGO &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Usa <strong>{{ provider.primaryCode }}</strong> para conseguir <strong>5% de descuento en cualquier plan eSIM de RedteaGO</strong>. Es un código público, no uno nuestro (RedteaGO no tiene el tipo de programa de afiliados que sostiene nuestro propio código como en otros proveedores de esta web), y la propia web de RedteaGO no lo anuncia directamente, así que es la mejor tarifa que hemos verificado.
+      <span class="callout-meta">Confirmado activo el <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("d 'de' LLLL 'de' yyyy") }}</time>.</span>
+    </p>
+  </div>
+
+  <!-- Headline -->
+  <h2>Qué hace a RedteaGO realmente diferente</h2>
+  <p>
+    La verdadera propuesta de RedteaGO es el precio de entrada, no una lista de funciones. Su propia tienda anuncia eSIM desde tan solo <strong>0,52 $</strong> para un plan de toda Europa (37 países), <strong>0,70 $</strong> para un plan de EE. UU., Japón o Tailandia, y <strong>2,90 $</strong> para un plan global (más de 130 zonas), todo ello en un total declarado de <strong>más de 180 países y regiones</strong>. Son precios de entrada, del nivel de datos más pequeño, no lo que acaba pagando un viajero típico, así que conviene comprobar la cantidad real de GB antes de dar por bueno el número destacado como precio final, pero aun teniendo eso en cuenta, RedteaGO suele ser una de las opciones más baratas por GB de esta web.
+  </p>
+  <p>
+    Revisamos directamente la propia página de inicio y las preguntas frecuentes de RedteaGO, y tuvimos que corregir nuestra propia descripción anterior aquí: por defecto, esto no es un proveedor completo de voz y SMS. Sigue leyendo.
+  </p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Códigos activos</h3>
+    <ul>
+      <li><strong>{{ provider.primaryCode }}</strong>: 5% de descuento en todos los planes (código público, no anunciado en la propia web de RedteaGO)</li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Si el código no se aplica, recarga el carrito o pruébalo en una ventana privada, y vuelve a intentarlo.</p>
+  </div>
+
+  <!-- Real operational note instead of generic feature grid / comparison table -->
+  <h2>La mayoría de planes son solo de datos, no "comunicación completa"</h2>
+  <p>
+    Las propias preguntas frecuentes de RedteaGO dicen claramente que "los servicios de llamadas y mensajes solo están disponibles en ciertas regiones", y que los planes que los incluyen llevan una etiqueta aparte, "Calls/Texts Available", en lugar de ser algo estándar en todos los planes. También existe un paquete específico, "Call & Text eSIM", que se vende por separado de los planes de datos normales. Si necesitas un número de teléfono que funcione para llamadas o mensajes, no des por hecho que cualquier plan de RedteaGO te lo da; comprueba primero esa etiqueta en el plan concreto que vayas a comprar.
+  </p>
+  <p>
+    Tampoco encontramos ningún plan de datos ilimitados en la web de RedteaGO: todo lo que vimos se vende como una bolsa de datos fija (2 GB, 5 GB y similares), no como una asignación ilimitada. Lo que sí está confirmado en toda la web es el soporte de punto de acceso (hotspot) y anclaje a red: las preguntas frecuentes de RedteaGO indican que está disponible "en todos los países y regiones", sin excepciones según el tipo de plan.
+  </p>
+
+  <!-- How to -->
+  <h2>Cómo aplicar un código de RedteaGO en 3 pasos</h2>
+  <div class="content-box">
+    <ol>
+      <li>Copia <strong>{{ provider.primaryCode }}</strong></li>
+      <li>Elige un plan de datos por país, regional o global en RedteaGO, comprobando la etiqueta "Calls/Texts Available" si necesitas un número que funcione</li>
+      <li>Pega el código en el campo de promoción al pagar y confirma la rebaja del 5% antes de completar el pago</li>
+    </ol>
+    <p class="content-note">El descuento se muestra antes de completar el pago.</p>
+  </div>
+
+  <!-- Decision help -->
+  <h2>¿Es RedteaGO la opción adecuada para tu viaje?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Te encaja bien si&hellip;</h3>
+      <ul>
+        <li>Quieres el precio de entrada más bajo y realista en una eSIM solo de datos, y no te importa comprobar los GB reales antes de comprar</li>
+        <li>Quieres compartir conexión con un portátil o una tablet desde los datos del móvil, algo compatible en todos los lugares donde opera RedteaGO</li>
+        <li>No te importa pagar los datos por adelantado y no recibir reembolso por recargas sin usar una vez activado el plan</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Considera otras opciones si&hellip;</h3>
+      <ul>
+        <li>Necesitas específicamente un número de teléfono real para llamadas y mensajes, no solo datos: consulta <a href="/es/simlocal/">SimLocal</a>, cuyos planes de Reino Unido incluyen un número británico completo para llamadas y mensajes (compramos uno y lo confirmamos), en lugar del complemento etiquetado aparte que ofrece RedteaGO</li>
+        <li>Prefieres pagar un precio único por datos ilimitados en vez de controlar bolsas de GB: consulta <a href="/es/holafly/">Holafly</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Savings examples -->
+  <h2>Así es el descuento en la práctica</h2>
+  <div class="content-box">
+    <ul>
+      <li>Estados Unidos 1 GB a 2 $ &rarr; el 5% de descuento ahorra 0,10 $</li>
+      <li>Turquía 1 GB a 1,50 $ &rarr; el 5% de descuento ahorra 0,08 $</li>
+      <li>Global 6 GB a 31 $ &rarr; el 5% de descuento ahorra 1,55 $</li>
+    </ul>
+    <p class="content-note">El 5% es un porcentaje de descuento modesto comparado con otros proveedores de esta web, pero el precio por GB de RedteaGO ya es tan bajo que aun así puede superar a un porcentaje mayor sobre un competidor más caro. Haz el cálculo sobre el plan concreto que quieras en lugar de asumir que gana siempre el porcentaje más alto.</p>
+  </div>
+
+  <p>
+    Para la compatibilidad de dispositivos con eSIM, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Usa el código al pagar</h2>
+    <p>Copia <code>{{ provider.primaryCode }}</code> y pégalo en el campo de promoción</p>
+    <p>5% de descuento en cualquier plan eSIM de RedteaGO.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre el código de RedteaGO</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Cuál es el mejor código de RedteaGO ahora mismo?</h3>
+      <p><strong>{{ provider.primaryCode }}</strong>: 5% de descuento en todos los planes. Es un código público, no anunciado en la propia web de RedteaGO, pero es el mejor que hemos verificado.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿RedteaGO incluye llamadas y mensajes?</h3>
+      <p>No por defecto. Las propias preguntas frecuentes de RedteaGO indican que el servicio de llamadas y mensajes solo está disponible en los planes marcados como "Calls/Texts Available", además de un paquete aparte, Call & Text eSIM. La mayoría de los planes listados son solo de datos.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿RedteaGO ofrece datos ilimitados?</h3>
+      <p>No hemos encontrado ninguno. Sus planes se venden como bolsas de datos fijas (2 GB, 5 GB y similares), no como una asignación ilimitada.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿RedteaGO admite punto de acceso (hotspot) o anclaje a red?</h3>
+      <p>Sí. Las propias preguntas frecuentes de RedteaGO indican que compartir conexión está disponible en todos los países y regiones donde opera.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo obtener un reembolso de una recarga de RedteaGO?</h3>
+      <p>No. Las preguntas frecuentes de RedteaGO indican que las recargas de datos no son reembolsables porque el plan se activa de inmediato al completar la compra.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuántos países cubre RedteaGO?</h3>
+      <p>RedteaGO anuncia más de 180 países y regiones en su propia web.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Cuál es el mejor código promocional de RedteaGO ahora mismo?",
+        "acceptedAnswer":{"@type":"Answer","text":"RTGF946FR da un 5% de descuento en todos los planes. Es un codigo publico, no anunciado en la propia web de RedteaGO, pero es el mejor verificado actualmente."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿RedteaGO incluye llamadas y mensajes?",
+        "acceptedAnswer":{"@type":"Answer","text":"No por defecto. Las propias preguntas frecuentes de RedteaGO indican que el servicio de llamadas y mensajes solo esta disponible en los planes marcados como 'Calls/Texts Available', ademas de un paquete aparte, Call & Text eSIM. La mayoria de los planes listados son solo de datos."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿RedteaGO ofrece datos ilimitados?",
+        "acceptedAnswer":{"@type":"Answer","text":"No se encontro ningun plan de datos ilimitados en la web de RedteaGO. Los planes se venden como bolsas de datos fijas en lugar de una asignacion ilimitada."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿RedteaGO admite punto de acceso (hotspot) o anclaje a red?",
+        "acceptedAnswer":{"@type":"Answer","text":"Si, las propias preguntas frecuentes de RedteaGO indican que compartir conexion esta disponible en todos los paises y regiones donde opera."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se puede obtener un reembolso de una recarga de datos de RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. Las preguntas frecuentes de RedteaGO indican que las recargas de datos no son reembolsables porque el plan se activa de inmediato al completar la compra."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuantos paises cubre RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"RedteaGO anuncia cobertura en mas de 180 paises y regiones en su propia web."}
+      }
+    ]
+  }
+  </script>
+</div>
