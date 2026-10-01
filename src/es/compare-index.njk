@@ -1,0 +1,79 @@
+---
+layout: base.njk
+title: "Comparativa de proveedores de eSIM | eSIM Discount Codes"
+description: "Todas las comparativas de proveedores de eSIM de este sitio, agrupadas por lo que realmente importa: ilimitado vs. pago por GB, duelos económicos de pago por GB, funciones de número de teléfono, paquetes de operadoras y políticas de reembolso."
+permalink: "/es/compare/"
+ogImage: "/assets/og-image.jpg"
+ogLocale: "es_ES"
+translationKey: "compare-hub"
+locale: "es"
+---
+
+{% set categories = [
+  {
+    title: "Ilimitado vs. pago por GB",
+    intro: "Planes ilimitados de precio fijo frente al pago por gigabyte. Qué filosofía ahorra más dinero depende de cuántos datos consumas.",
+    slugs: ["holafly-vs-airalo", "holafly-vs-saily", "holafly-vs-alosim", "holafly-vs-ubigi", "holafly-vs-nomad", "holafly-vs-orange"]
+  },
+  {
+    title: "Duelos económicos de pago por GB",
+    intro: "Los proveedores más baratos por gigabyte de este sitio, comparados cara a cara.",
+    slugs: ["airalo-vs-saily", "alosim-vs-airalo", "airhub-vs-instabridge", "airhub-vs-redteago", "airhub-vs-yesim", "airhub-vs-bnesim", "yesim-vs-redteago", "instabridge-vs-redteago", "yesim-vs-upesim"]
+  },
+  {
+    title: "Número de teléfono y funciones de voz",
+    intro: "Proveedores que incluyen, o venden como extra, un número de teléfono real o virtual junto a los datos.",
+    slugs: ["alosim-vs-simlocal", "bytesim-vs-alosim", "esimcardus-vs-alosim", "airhub-vs-alosim", "bytesim-vs-redteago", "airhub-vs-bytesim", "saily-vs-alosim", "esimcardus-vs-bytesim"]
+  },
+  {
+    title: "Operadoras, MVNO y planes de larga duración",
+    intro: "Paquetes respaldados por operadoras establecidas, suscripciones recurrentes y planes pensados para viajes largos en vez de una sola visita corta.",
+    slugs: ["saily-vs-ubigi", "nomad-vs-ubigi", "orange-vs-ubigi", "bnesim-vs-orange", "bnesim-vs-nomad"]
+  },
+  {
+    title: "Políticas de reembolso y garantías",
+    intro: "Qué pasa realmente cuando una eSIM no funciona, comparado lado a lado.",
+    slugs: ["simlocal-vs-instabridge", "esimcardus-vs-upesim", "simlocal-vs-upesim"]
+  }
+] %}
+
+<div class="provider-page compare-hub-page">
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="{{ 'es' | homeUrl }}">Inicio</a></li>
+      <li><span aria-current="page">Comparativa de proveedores de eSIM</span></li>
+    </ol>
+  </nav>
+
+  <h1 class="vs-title">Comparativa de proveedores de eSIM</h1>
+  <p class="compare-hub-intro">
+    Todas las comparativas directas de este sitio, agrupadas por lo que realmente influye en la decisión, no una lista alfabética sin más. Elige la categoría que mejor se ajuste a tu viaje y lee la comparativa.
+  </p>
+
+  {% for category in categories %}
+  <section class="compare-hub-category">
+    <h2>{{ category.title }}</h2>
+    <p class="compare-hub-category-intro">{{ category.intro }}</p>
+    <div class="compare-hub-grid">
+      {% for slug in category.slugs %}
+      {% set cmp = comparisons | findComparison(slug) %}
+      {% if cmp %}
+      {% set pA = codes[cmp.providerA] %}
+      {% set pB = codes[cmp.providerB] %}
+      {% set altCmp = collections.i18nMap | i18nAlternates("compare:" + cmp.slug) %}
+      {% set cmpUrl = altCmp.es or ("/compare/" + cmp.slug + "/") %}
+      <a class="compare-hub-card" href="{{ cmpUrl }}">
+        <div class="compare-hub-card-vs">
+          {% if pA.logo %}<img src="{{ pA.logo }}" alt="Logo de {{ pA.name }}">{% endif %}
+          <span class="compare-hub-divider">VS</span>
+          {% if pB.logo %}<img src="{{ pB.logo }}" alt="Logo de {{ pB.name }}">{% endif %}
+        </div>
+        <h3>{{ pA.name }} vs {{ pB.name }}</h3>
+        <span class="compare-hub-card-cta">Leer la comparativa <i class="fas fa-arrow-right"></i></span>
+      </a>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+</div>

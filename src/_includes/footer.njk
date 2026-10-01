@@ -33,10 +33,12 @@
     <div class="footer-section footer-compare-list">
       <h3>{{ 'footer.compareProviders' | t(locale) }}</h3>
       <ul>
-        {% for item in comparisons %}
+        {% for item in comparisons | reverse | limit(5) %}
         {% set alt = collections.i18nMap | i18nAlternates("compare:" + item.slug) %}
         <li><a href="{{ alt[locale] or ('/compare/' + item.slug + '/') }}">{{ codes[item.providerA].name }} vs {{ codes[item.providerB].name }}</a></li>
         {% endfor %}
+        {% set hubAlt = collections.i18nMap | i18nAlternates("compare-hub") %}
+        <li><a href="{{ hubAlt[locale] or '/compare/' }}" class="footer-compare-viewall">{{ 'footer.viewAllComparisons' | t(locale) }}</a></li>
       </ul>
     </div>
     {% endif %}

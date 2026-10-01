@@ -158,6 +158,16 @@
         "type": "public"
       },
       {
+        "code": "ADAMLINDS3",
+        "discount": "$3 OFF YOUR FIRST PURCHASE",
+        "description": "Our own personal Airmoney referral code for Airalo, found advertised on our own travel site (adamandlinds.com) rather than negotiated as a branded affiliate deal, since Airalo's referral system doesn't support custom-named codes the way Holafly or Ubigi's does.",
+        "verified": true,
+        "lastTested": "2026-10-01",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public"
+      },
+      {
         "code": "HAPPY3",
         "discount": "$3 OFF ANY PURCHASE",
         "description": "Save $3 anytime on Airalo eSIM plans",

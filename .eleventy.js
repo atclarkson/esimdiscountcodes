@@ -103,6 +103,22 @@ module.exports = function (eleventyConfig) {
     return codes.find((c) => c.code === code) || codes[0] || null;
   });
 
+  // Look up a comparisons.json entry by slug, so the /compare/ hub page can
+  // group curated slug lists into categories without depending on
+  // Nunjucks's selectattr/first support.
+  eleventyConfig.addFilter("findComparison", function (comparisons, slug) {
+    if (!Array.isArray(comparisons)) return null;
+    return comparisons.find((c) => c.slug === slug) || null;
+  });
+
+  // First N items of an array. Nunjucks's own `slice` filter partitions an
+  // array into N groups (Jinja2-style), not a start/stop range, so it can't
+  // be used for "just the first 5" the way it looks like it should.
+  eleventyConfig.addFilter("limit", function (arr, n) {
+    if (!Array.isArray(arr)) return arr;
+    return arr.slice(0, n);
+  });
+
   // Whether a provider's code list includes our own affiliate code
   // (valid, not invalidated). Used to prioritize our own providers in
   // places like nav ordering, instead of raw list position.
