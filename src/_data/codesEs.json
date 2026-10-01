@@ -236,7 +236,7 @@
     "codes": {
       "AW0": {
         "discount": "5% DE DESCUENTO",
-        "description": "Revisamos directamente la propia tienda de Orange Travel (travel.orange.com) y no encontramos ningún campo de código promocional ni sistema de descuento por código en el proceso de compra; sus descuentos son precios tachados automáticos en los planes más grandes. No pudimos encontrar AW0 anunciado ni funcionando en la web real, así que lo marcamos como inválido."
+        "description": "Revisamos directamente la propia tienda de Orange Travel (travel.orange.com) y no encontramos ningún campo de código promocional ni sistema de descuento por código en el proceso de compra; sus descuentos son precios tachados automáticos en los planes más grandes (actualmente anuncian hasta un 50% de descuento como oferta temporal sin necesidad de código). No pudimos encontrar AW0 anunciado ni funcionando en la web real, así que lo marcamos como inválido."
       }
     }
   },

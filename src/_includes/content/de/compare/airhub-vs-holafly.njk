@@ -1,0 +1,138 @@
+<!-- Airhub vs Holafly Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set airhubPrimary = providerA.codes | findCode("ESIMOFFER5") %}
+  {% set holaflyPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set airhubDeCode = deA.codes["ESIMOFFER5"] if (deA and deA.codes and deA.codes["ESIMOFFER5"]) else null %}
+  {% set holaflyDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set airhubDiscount = (airhubDeCode.discount if airhubDeCode) or airhubPrimary.discount %}
+  {% set holaflyDiscount = (holaflyDeCode.discount if holaflyDeCode) or holaflyPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Wähle <strong>Airhub</strong>, wenn du ungefähr weißt, wie viele GB du brauchst, und den niedrigsten Preis pro Gigabyte willst, dazu SMS und oft eine lokale Nummer inklusive. Wähle <strong>Holafly</strong>, wenn du lieber einen festen Tagespreis zahlst und dir nie wieder Gedanken über ein Datenlimit machen willst. Beide konkurrieren eigentlich nicht um dieselbe Reise: Airhub belohnt vorausschauende Planung, Holafly verlangt Geld dafür, dass du gar nicht erst planen musst.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Günstige Datenblöcke vs. Pauschal unbegrenzt</h2>
+  <p>
+    Airhub verkauft Daten in mehreren Gigabyte-Blöcken (3 GB, 4 GB) statt in Tages- oder Einzel-GB-Einheiten, und in günstigeren Zielen ergibt das wirklich niedrige Preise pro GB: Thailand für 0,85 $ pro GB und Japan für 1,55 $ pro GB. Holafly verzichtet komplett auf das Gigabyte-Rechnen und verlangt einen festen Preis pro Tag oder pro Tarif für unbegrenzte Daten, die Rechnung bleibt also gleich, egal ob du an dem Tag 200 MB oder 20 GB verbrauchst.
+  </p>
+  <p>
+    Der andere echte Unterschied ist, was inklusive ist. Airhub-Tarife enthalten SMS und in vielen Zielen eine lokale Telefonnummer zusätzlich zu den Daten, was Holafly bei seinen Standardtarifen nicht anbietet. Telefonate sind bei keinem der beiden inklusive. Wenn dir eine Verifizierungs-SMS oder eine temporäre Nummer wichtiger ist als die Art der Datenabrechnung, spricht das unabhängig vom Datenverbrauch für Airhub.
+  </p>
+
+  <h2>Preis-Schnappschuss (vor jedem Code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Ziel</th>
+          <th>Airhub</th>
+          <th>Holafly</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Japan</td><td>1,55 $ (1 GB)</td><td>1,99 $/Tag (unbegrenzt)</td></tr>
+        <tr><td>USA</td><td>2,82 $ (3 GB)</td><td>1,99 $/Tag (unbegrenzt)</td></tr>
+        <tr><td>Europa (regional)</td><td>4,50 $ (4 GB)</td><td>1,99 $/Tag (unbegrenzt)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Airhubs Preis gilt pro festem Datenblock, egal wie lange er reicht; Holaflys Preis gilt pro Tag mit unbegrenzter Nutzung. Ein sparsamer Nutzer mit unter 1-2 GB pro Tag zahlt bei Airhub meist weniger; wer viel streamt oder schlecht mit einem Datenlimit haushalten kann, zahlt bei Holafly meist weniger und hat weniger zu überwachen.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airhub:</strong> {{ airhubPrimary.code }}, {{ airhubDiscount | lower }}. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>Holafly:</strong> {{ providerB.primaryCode }}, {{ holaflyDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Holaflys Code ist unser eigener. Airhubs eigener Code, ADAMANDLINDS, wendet an der Kasse aktuell keinen Rabatt an (Airhub wurde informiert, wir gehen von einem vorübergehenden Problem aus), daher ist {{ airhubPrimary.code }} der öffentliche Code, den wir aktuell als funktionierend bestätigt haben. Den aktuellen Status findest du auf der <a href="{{ providerAUrl }}">Airhub-Seite</a>.</p>
+  </div>
+
+  <h2>Ist Airhub oder Holafly die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm Airhub, wenn&hellip;</h3>
+      <ul>
+        <li>Du ungefähr weißt, wie viele GB du brauchst, und den niedrigsten Preis pro Gigabyte willst</li>
+        <li>Du SMS und eine lokale Nummer zu deinen Daten dazu willst, nicht als Extra</li>
+        <li>Du in ein Ziel reist, wo Airhub besonders günstig ist, etwa Thailand oder Japan</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm Holafly, wenn&hellip;</h3>
+      <ul>
+        <li>Du wirklich nicht weißt, wie viele Daten du brauchst</li>
+        <li>Viel Streaming, Videoanrufe oder Hotspot-Nutzung anstehen</li>
+        <li>China auf dem Reiseplan steht und du das integrierte VPN willst</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Airhub ersetzt trotzdem keine echte Telefonnummer.</strong> Es bringt SMS und bei den meisten Tarifen eine lokale Nummer mit, aber keine Telefonie, also ist es kein vollwertiger Ersatz, wenn du im Ausland tatsächlich Anrufe empfangen oder tätigen musst. Wenn dir eine echte Nummer mit garantierter Telefonie wichtig ist: <a href="/simlocal/">SimLocals</a> UK-Tarife enthalten eine.
+  </p>
+  <p>
+    <strong>Keines der beiden "unbegrenzt"-Angebote ist wirklich ohne jede Steuerung.</strong> Holaflys unbegrenzte Tarife können nach sehr hohem Verbrauch am selben Tag gedrosselt werden, allerdings ohne eine konkret veröffentlichte Tages-GB-Zahl. Bei Airhub stellt sich dieses Problem gar nicht erst, da du von vornherein einen festen Block kaufst: Du verbrauchst einfach das, was du gekauft hast.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Airhub vs Holafly: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, Airhub oder Holafly?</h3>
+      <p>Airhub, für die meisten Reisen, weil du einen niedrigen Preis pro GB-Block zahlst statt eines festen täglichen Unbegrenzt-Preises. Holafly gewinnt bei Preis oder zumindest Planbarkeit nur, wenn du sonst mehrere Airhub-Datenblöcke an einem einzigen Tag verbrauchen würdest.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bekomme ich bei Airhub eine Telefonnummer wie bei einer echten SIM?</h3>
+      <p>Bei den meisten Tarifen ja, eine lokale Nummer plus SMS, aber keine Telefonie. Das deckt eine Verifizierungs-SMS oder eine temporäre Nummer ab, nicht das Führen oder Annehmen von Telefonaten.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welcher ist besser für eine Reise nach China?</h3>
+      <p>Holafly, wenn du kein separates VPN einrichten willst: seine eSIM für China hat eins bereits eingebaut. Airhub bietet dafür keine Lösung.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Kann ich einfach das jeweils günstigere für mein Ziel kaufen?</h3>
+      <p>Für eine einzelne kurze Reise funktioniert das. Bei längeren oder datenintensiveren Reisen solltest du vorher den erwarteten GB-Bedarf pro Tag gegen Airhubs Blockpreise durchrechnen, denn ab einem bestimmten Punkt wird Holaflys Pauschalpreis günstiger.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, Airhub oder Holafly?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub ist für die meisten Reisen günstiger, da ein niedriger Preis pro GB-Block statt eines festen täglichen Unbegrenzt-Preises berechnet wird. Holafly ist bei Preis oder zumindest Planbarkeit nur dann im Vorteil, wenn sonst mehrere Airhub-Datenblöcke an einem einzigen Tag verbraucht würden."}
+      },
+      {
+        "@type":"Question",
+        "name":"Bekommt man bei Airhub eine Telefonnummer wie bei einer echten SIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Bei den meisten Tarifen ist eine lokale Nummer plus SMS inklusive, aber keine Telefonie, was eine Verifizierungs-SMS oder eine temporäre Nummer abdeckt, nicht das Führen oder Annehmen von Telefonaten."}
+      },
+      {
+        "@type":"Question",
+        "name":"Welcher ist besser für eine Reise nach China, Airhub oder Holafly?",
+        "acceptedAnswer":{"@type":"Answer","text":"Holafly, für Reisende, die kein separates VPN einrichten wollen, da seine eSIM für China eins bereits eingebaut hat. Airhub bietet dafür keine Lösung."}
+      },
+      {
+        "@type":"Question",
+        "name":"Sollte man einfach das jeweils günstigere für das eigene Reiseziel kaufen?",
+        "acceptedAnswer":{"@type":"Answer","text":"Für eine einzelne kurze Reise funktioniert das. Bei längeren oder datenintensiveren Reisen lohnt es sich, den erwarteten GB-Bedarf pro Tag gegen Airhubs Blockpreise durchzurechnen, da Holaflys Pauschalpreis ab einem bestimmten Verbrauch günstiger wird."}
+      }
+    ]
+  }
+  </script>
+</div>

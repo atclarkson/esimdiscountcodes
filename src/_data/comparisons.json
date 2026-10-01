@@ -254,5 +254,13 @@
     "title": "Airalo vs Nomad: Short Trip or Long-Term Bundle? (2026 Comparison)",
     "description": "Airalo vs Nomad compared: both pay-per-GB, but Nomad's Global-EX bundles run up to a year for long-term travel while Airalo sticks to single-trip plans, plus each one's discount code and which fits your trip.",
     "lastUpdated": "2026-09-30"
+  },
+  {
+    "slug": "airhub-vs-holafly",
+    "providerA": "airhub",
+    "providerB": "holafly",
+    "title": "Airhub vs Holafly: Cheap Per-GB or Unlimited Flat Rate? (2026 Comparison)",
+    "description": "Airhub vs Holafly compared: Airhub's cheap multi-gigabyte blocks with bundled SMS and a local number vs Holafly's flat-rate unlimited data, plus each one's discount code and which pricing model actually suits your trip.",
+    "lastUpdated": "2026-10-01"
   }
 ]
