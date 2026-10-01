@@ -1,0 +1,150 @@
+<!-- Airhub vs Instabridge comparativa (Español) -->
+<div class="content-section">
+
+  {% set airhubBest = providerA.codes | bestValidCode %}
+  {% set instabridgePrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set airhubEsCode = esA.codes[airhubBest.code] if (esA and esA.codes and airhubBest and esA.codes[airhubBest.code]) else null %}
+  {% set instabridgeEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set airhubDiscount = (airhubEsCode.discount if airhubEsCode) or airhubBest.discount %}
+  {% set instabridgeDiscount = (instabridgeEsCode.discount if instabridgeEsCode) or instabridgePrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      <strong>Airhub</strong> suele tener el precio por gigabyte más bajo antes de aplicar cualquier código, y añade SMS y un número local que Instabridge no ofrece. <strong>Instabridge</strong> contraataca con un código mucho más grande, 20% frente al 5% de Airhub, además de una base de datos de puntos WiFi gratis incluida en la misma app. Haz el cálculo con ambos códigos aplicados en vez de asumir que gana el precio inicial más bajo: en varios países no es así.
+    </p>
+  </div>
+
+  <h2>Comparativa de precio por GB (antes de aplicar cualquier código)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Airhub (por GB)</th>
+          <th>Instabridge (por GB)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Estados Unidos</td><td>0,94 $ (paquete de 3 GB, 2,82 $)</td><td>2,00 $ (1 GB)</td></tr>
+        <tr><td>Francia</td><td>1,17 $ (paquete de 3 GB, 3,50 $)</td><td>2,00 $ (1 GB)</td></tr>
+        <tr><td>Italia</td><td>1,67 $ (paquete de 3 GB, 5 $)</td><td>2,00 $ (1 GB)</td></tr>
+        <tr><td>Tailandia</td><td>0,85 $ (1 GB)</td><td>1,00 $ (1 GB)</td></tr>
+        <tr><td>Japón</td><td>1,55 $ (1 GB)</td><td>2,50 $ (1 GB)</td></tr>
+        <tr><td>España</td><td>2,00 $ (paquete de 3 GB, 6 $)</td><td>2,00 $ (1 GB)</td></tr>
+        <tr><td>Turquía</td><td>2,25 $ (1 GB)</td><td>2,00 $ (1 GB)</td></tr>
+        <tr><td>Malasia</td><td>1,38 $ (paquete de 4 GB, 5,50 $)</td><td>1,00 $ (1 GB)</td></tr>
+        <tr><td>EAU</td><td>2,80 $ (1 GB)</td><td>3,00 $ (1 GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Airhub vende bloques fijos de varios GB (3 GB, 4 GB) en lugar de unidades de 1 GB, así que las cifras anteriores son el precio del paquete dividido por su tamaño en GB, para una comparación justa por gigabyte. Airhub es más barato antes de aplicar cualquier código en seis de estos nueve países; Instabridge es más barato en Turquía y Malasia, y en España hay un empate exacto. Ese orden cambia una vez aplicado el código de cada uno, como se ve a continuación.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airhub:</strong> {{ airhubBest.code }}, {{ airhubDiscount | lower }}. Nuestro propio código, ADAMANDLINDS, no está aplicando descuento en el checkout actualmente (se lo hemos reportado a Airhub, creemos que es temporal), así que este es el código que conviene usar por ahora. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>Instabridge:</strong> {{ providerB.primaryCode }}, {{ instabridgeDiscount | lower }} (o TRAVELESIMEXPERT, también 20%). <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">El código del 20% de Instabridge es público, y solo funciona en el checkout de la tienda web de Instabridge, no escrito en la app móvil.</p>
+  </div>
+
+  <h2>El código más grande gana más veces de las que sugiere el precio inicial</h2>
+  <p>
+    El código del 20% de Instabridge es cuatro veces mayor que el 5% de Airhub, y una vez aplicados ambos, esa diferencia supera el precio inicial más barato de Airhub en más países de los que no. Haciendo el cálculo con ambos códigos aplicados: Airhub sigue ganando en Estados Unidos, Francia, Italia y Japón, donde su precio por GB empieza tan bajo que un 5% de descuento sigue superando a un 20% sobre una cifra más alta. Pero Instabridge termina siendo más barato tras aplicar los códigos en Tailandia, España, Turquía, Malasia y EAU, incluidos dos países (Tailandia y EAU) donde Airhub era en realidad la opción más barata antes de aplicar cualquier código. Si decides solo por precio, calcula ambos códigos para tu destino concreto en lugar de asumir que gana el precio inicial más bajo en el checkout.
+  </p>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>Instabridge no es solo una app de eSIM.</strong> Empezó como una app para compartir puntos WiFi con una base de datos comunitaria de más de 20 millones de contraseñas de hotspots gratuitos, y la eSIM es un complemento de pago para cuando no hay WiFi gratis disponible. Airhub no tiene nada equivalente; siempre ha vendido solo datos. Si la cobertura de WiFi gratis en tu destino es buena, la app de Instabridge aporta valor más allá de lo que muestra la comparativa de eSIM anterior.
+  </p>
+  <p>
+    <strong>Airhub incluye SMS y, en muchos destinos, un número de teléfono local; los planes de eSIM de Instabridge son solo de datos.</strong> Ninguno de los dos incluye llamadas de voz. Si necesitas recibir un SMS de verificación o dar un número que no sea el tuyo, eso lo cubre solo Airhub entre estos dos.
+  </p>
+  <p>
+    Para la configuración del dispositivo y conceptos básicos de eSIM que aplican a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <h2>¿Airhub o Instabridge es la mejor opción?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige Airhub si&hellip;</h3>
+      <ul>
+        <li>Viajas a EE. UU., Francia, Italia o Japón, donde sigue siendo más barato incluso tras aplicar ambos códigos</li>
+        <li>Quieres SMS o un número local incluidos con los datos</li>
+        <li>Prefieres una eSIM sencilla por GB sin tener que aprender un ecosistema de app aparte</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige Instabridge si&hellip;</h3>
+      <ul>
+        <li>Viajas a Tailandia, España, Turquía, Malasia o EAU, donde su código del 20% supera el precio de Airhub tras aplicar ambos códigos</li>
+        <li>Vas a un destino con buena cobertura de puntos WiFi gratis y quieres la eSIM solo como respaldo, no como conexión principal</li>
+        <li>No necesitas SMS ni número local, solo datos</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre Airhub vs Instabridge</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, Airhub o Instabridge?</h3>
+      <p>Depende del país y de si se compara antes o después de aplicar los códigos. El precio inicial por GB de Airhub es más bajo en la mayoría de países comprobados, pero el código del 20% de Instabridge, cuatro veces mayor que el 5% de Airhub, cambia el ganador tras aplicar los códigos a favor de Instabridge en Tailandia, España, Turquía, Malasia y EAU.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos incluye llamadas o SMS?</h3>
+      <p>Airhub incluye SMS y, en muchos destinos, un número de teléfono local, pero no llamadas. Los planes de eSIM de Instabridge son solo de datos, sin SMS ni llamadas.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Por qué usar Instabridge en vez de una app de eSIM normal?</h3>
+      <p>Instabridge incluye una base de datos gratuita con más de 20 millones de contraseñas de puntos WiFi aportadas por la comunidad en la misma app, así que la eSIM funciona como respaldo cuando no hay WiFi gratis disponible, en vez de ser la única opción.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo introducir el código de Instabridge en la app?</h3>
+      <p>No. Los códigos de descuento de Instabridge solo funcionan en el checkout de su tienda web (store.instabridge.com/mobile-data), no dentro de la app móvil.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál de los dos vende paquetes de datos más grandes?</h3>
+      <p>Airhub, que vende bloques fijos de 3 GB y 4 GB en la mayoría de países. Instabridge vende en unidades más pequeñas de 1 GB, así que quien necesita más datos termina acumulando más compras individuales.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, Airhub o Instabridge?",
+        "acceptedAnswer":{"@type":"Answer","text":"Depende del país y de si se compara antes o después de aplicar los códigos. El precio inicial por GB de Airhub es más bajo en la mayoría de los países comprobados, pero el código del 20% de Instabridge, cuatro veces mayor que el 5% de Airhub, cambia el ganador tras aplicar los códigos a favor de Instabridge en Tailandia, España, Turquía, Malasia y EAU."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Airhub o Instabridge incluyen llamadas o SMS?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub incluye SMS y, en muchos destinos, un número de teléfono local, pero no llamadas de voz. Los planes de eSIM de Instabridge son solo de datos, sin SMS ni llamadas."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Por qué alguien usaría Instabridge en vez de una app de eSIM normal?",
+        "acceptedAnswer":{"@type":"Answer","text":"Instabridge incluye una base de datos gratuita con más de 20 millones de contraseñas de puntos WiFi aportadas por la comunidad en la misma app, así que su eSIM funciona como respaldo cuando no hay WiFi gratis disponible, en vez de ser la única opción."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se puede introducir el código de descuento de Instabridge en la app?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. Los códigos de descuento de Instabridge solo funcionan en el checkout de su tienda web, no dentro de la app móvil."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál vende paquetes de datos más grandes, Airhub o Instabridge?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub, que vende bloques fijos de 3 GB y 4 GB en la mayoría de países. Instabridge vende en unidades más pequeñas de 1 GB."}
+      }
+    ]
+  }
+  </script>
+</div>

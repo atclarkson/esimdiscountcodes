@@ -262,5 +262,13 @@
     "title": "Airhub vs Holafly: Cheap Per-GB or Unlimited Flat Rate? (2026 Comparison)",
     "description": "Airhub vs Holafly compared: Airhub's cheap multi-gigabyte blocks with bundled SMS and a local number vs Holafly's flat-rate unlimited data, plus each one's discount code and which pricing model actually suits your trip.",
     "lastUpdated": "2026-10-01"
+  },
+  {
+    "slug": "instabridge-vs-yesim",
+    "providerA": "instabridge",
+    "providerB": "yesim",
+    "title": "Instabridge vs Yesim: Free WiFi Backup or Rolling Data Balance? (2026 Comparison)",
+    "description": "Instabridge vs Yesim compared: Instabridge's cheap data-only eSIM bundled with a free WiFi hotspot app vs Yesim's pricier Pay & Fly rolling balance with a real refund guarantee, plus each one's discount code and which model fits your trip.",
+    "lastUpdated": "2026-10-01"
   }
 ]
