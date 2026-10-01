@@ -1,0 +1,142 @@
+<!-- Airalo vs Nomad Comparison Content -->
+<div class="content-section">
+
+  {% set airaloPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set nomadBest = providerB.codes | findCode("NOMTRAVEL20") %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>Airalo</strong> for a single trip: a country, a region, or one global plan bought by the gigabyte (plus the option of an unlimited regional eSIM), with validity that runs 7 to 30 days depending on the plan. Pick <strong>Nomad</strong> if you're away for longer than a normal trip: its standard plans work the same pay-per-GB way as Airalo's, but its <strong>Global-EX</strong> bundles add something Airalo doesn't sell at all, 10GB to 50GB of data valid for up to a year, at a per-GB rate that drops as the bundle gets bigger. Both are pay-per-GB at heart. The real split is trip length.
+    </p>
+  </div>
+
+  <h2>The Core Difference: Short-Trip Pay-Per-GB vs. Long-Term Bundles</h2>
+  <p>
+    Airalo sells data by the gigabyte for a specific country, a region, or a global plan, the same basic model as most eSIMs on this site. It also sells <strong>unlimited regional eSIMs</strong> (Europe, Asia, North America, Latin America, the Caribbean, MENA, Africa, and Australia), though those run at full speed for the first 3GB each day per Airalo's fair-use policy, then drop to 1Mbps until the daily allowance resets at midnight. Nothing in Airalo's lineup is built to last past a normal trip: validity tops out around 30 days.
+  </p>
+  <p>
+    Nomad's regular plans are pay-per-GB too, pick a country, region, or global bundle, activate, use it until it runs out or the validity window closes. What Nomad adds is <strong>Global-EX</strong>: bigger bundles (10GB to 50GB) valid for up to a year instead of the usual 7 to 30 days, with a per-GB rate that drops as the bundle size goes up, to roughly $2.58/GB on the largest bundles versus around $5.15/GB on Nomad's own standard Global plan. That's built for someone actually living out of a bag for months, not a two-week vacation, and Airalo has no equivalent product at any price.
+  </p>
+
+  <h2>Price Snapshot (1GB-equivalent, before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Airalo</th>
+          <th>Nomad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States</td><td>$4.50 (1GB)</td><td>$4.50 (1GB)</td></tr>
+        <tr><td>Europe regional</td><td>$5.27 (1GB)</td><td>$5.00 (1GB)</td></tr>
+        <tr><td>Japan</td><td>$4.50 (1GB)</td><td>$6.00 (1GB)</td></tr>
+        <tr><td>Global</td><td>$9.49 (1GB)</td><td>$12.00 (1GB), or as low as roughly $2.58/GB on a large Global-EX bundle</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Small-plan pricing splits by destination: Airalo is cheaper in Japan and on a single-GB global plan, Nomad is slightly cheaper in Europe, and the US is a tie. None of that matters much for a long stay, though, since a large Global-EX bundle undercuts both providers' standard per-GB rate once you're buying in bulk.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airalo:</strong> {{ providerA.primaryCode }}, {{ airaloPrimary.discount | lower }}. Existing customers can use AIRALOESIM10 for 10% off orders over $10. <a href="/airalo/">Full code list &rarr;</a></li>
+      <li><strong>Nomad:</strong> NOMTRAVEL20 or NOMCYBER20, {{ nomadBest.discount | lower }}, the best of Nomad's four working codes. <a href="/nomad/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Neither code here is ours. Airalo doesn't run the kind of affiliate program that supports a code like that, and most of its other codes are individual users' $3-off Airmoney referral codes rather than one official discount. Nomad's codes are found public codes too, with two tied at the same 20% rate.</p>
+  </div>
+
+  <h2>Is Airalo or Nomad the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Airalo if&hellip;</h3>
+      <ul>
+        <li>You're on a single trip of a few days to a few weeks</li>
+        <li>You want the option of an unlimited regional eSIM, not just per-GB</li>
+        <li>You're comfortable estimating GB needs and checking a data meter</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with Nomad if&hellip;</h3>
+      <ul>
+        <li>You're traveling or living abroad for months, not weeks</li>
+        <li>You want to buy data in bulk and have the per-GB rate drop as the bundle gets bigger</li>
+        <li>You want to hotspot a laptop or share data across devices without checking restrictions first</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Nomad's Global-EX bundles have no Airalo equivalent.</strong> Airalo's plans are priced and sold around a single trip, with validity that runs out at 30 days at the outside. There's nothing in its lineup built for a stay of months, the way Nomad's 10GB-to-50GB, up-to-a-year bundles are.
+  </p>
+  <p>
+    <strong>Airalo has an unlimited option, Nomad doesn't.</strong> Airalo's regional unlimited eSIMs cover Europe, Asia, North America, Latin America, the Caribbean, MENA, Africa, and Australia, running at full speed for the first 3GB each day before throttling to 1Mbps. Nomad doesn't sell an unlimited product at all, only per-GB plans and Global-EX bundles.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide. Weighing a flat unlimited price against pay-per-GB instead? See our <a href="/compare/holafly-vs-airalo/">Holafly vs Airalo comparison</a>.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Airalo vs Nomad FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Airalo or Nomad</h3>
+      <p>It splits by destination on a small plan: Airalo is cheaper in Japan and on a single-GB global plan, Nomad is slightly cheaper in Europe, and US pricing ties at $4.50. For a long stay bought in bulk, Nomad's Global-EX bundles undercut both providers' standard per-GB rate, down to roughly $2.58/GB on the largest size.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>What is Nomad Global-EX, and does Airalo have anything like it</h3>
+      <p>Global-EX is Nomad's long-validity plan line: 10GB to 50GB bundles valid for up to a year, priced lower per GB the larger the bundle gets. Airalo has no equivalent; its plans run 7 to 30 days of validity, built around a single trip rather than months abroad.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does Airalo or Nomad have unlimited data plans</h3>
+      <p>Airalo does, on a regional basis (Europe, Asia, North America, Latin America, the Caribbean, MENA, Africa, Australia), full speed for the first 3GB each day then throttled to 1Mbps until the daily reset. Nomad doesn't sell an unlimited product; it's per-GB plans and Global-EX bundles only.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which has the better discount code</h3>
+      <p>Nomad's best public codes, NOMTRAVEL20 and NOMCYBER20, both give 20% off. Airalo's best is NEWTOAIRALO15 for 15% off a first purchase, or AIRALOESIM10 for 10% off existing-customer orders over $10; most other Airalo codes are individual users' $3-off referral codes rather than one official discount.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I use hotspot or share data across devices with either one</h3>
+      <p>Nomad's eSIMs support hotspot/tethering and can share a plan's data across multiple devices rather than locking it to one phone. Airalo supports hotspot tethering generally too, and it's unrestricted on the Unlimited regional eSIMs, subject to the same daily fair-use throttle as normal use.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Airalo or Nomad?",
+        "acceptedAnswer":{"@type":"Answer","text":"It splits by destination on a small plan: Airalo is cheaper in Japan and on a single-GB global plan, Nomad is slightly cheaper in Europe, and US pricing ties at $4.50. For a long stay bought in bulk, Nomad's Global-EX bundles undercut both providers' standard per-GB rate, down to roughly $2.58/GB on the largest size."}
+      },
+      {
+        "@type":"Question",
+        "name":"What is Nomad Global-EX, and does Airalo have anything like it?",
+        "acceptedAnswer":{"@type":"Answer","text":"Global-EX is Nomad's long-validity plan line: 10GB to 50GB bundles valid for up to a year, priced lower per GB the larger the bundle gets. Airalo has no equivalent; its plans run 7 to 30 days of validity, built around a single trip rather than months abroad."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Airalo or Nomad have unlimited data plans?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airalo does, on a regional basis covering Europe, Asia, North America, Latin America, the Caribbean, MENA, Africa, and Australia, running at full speed for the first 3GB each day then throttled to 1Mbps until the daily reset. Nomad doesn't sell an unlimited product; it offers per-GB plans and Global-EX bundles only."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which has the better discount code, Airalo or Nomad?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad's best public codes, NOMTRAVEL20 and NOMCYBER20, both give 20% off. Airalo's best is NEWTOAIRALO15 for 15% off a first purchase, or AIRALOESIM10 for 10% off existing-customer orders over $10; most other Airalo codes are individual users' $3-off referral codes rather than one official discount."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I use hotspot or share data across devices with Airalo or Nomad?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad's eSIMs support hotspot/tethering and can share a plan's data across multiple devices rather than locking it to one phone. Airalo supports hotspot tethering generally too, and it's unrestricted on the Unlimited regional eSIMs, subject to the same daily fair-use throttle as normal use."}
+      }
+    ]
+  }
+  </script>
+</div>

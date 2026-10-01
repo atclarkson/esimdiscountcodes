@@ -1,0 +1,132 @@
+<!-- Airhub vs Holafly Comparison Content -->
+<div class="content-section">
+
+  {% set airhubPrimary = providerA.codes | findCode("ESIMOFFER5") %}
+  {% set holaflyPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>Airhub</strong> if you know roughly how much data you'll use and want the lowest price per gigabyte, plus SMS and often a local number bundled in. Pick <strong>Holafly</strong> if you'd rather pay a flat daily rate and never think about a data cap at all. They're not really competing for the same trip: Airhub rewards planning ahead, Holafly charges for not having to.
+    </p>
+  </div>
+
+  <h2>The Core Difference: Cheap Blocks vs. Flat Unlimited</h2>
+  <p>
+    Airhub sells data in multi-gigabyte blocks (3GB, 4GB) rather than single-day or single-GB units, and in cheaper destinations that lands at genuinely low per-GB prices: Thailand at $0.85 for 1GB and Japan at $1.55 for 1GB. Holafly skips the gigabyte math entirely and charges one flat price per day or per plan for unlimited data, so the bill is the same whether you use 200MB or 20GB that day.
+  </p>
+  <p>
+    The other real difference is what's bundled. Airhub plans include SMS and, in many destinations, a local phone number alongside the data, something Holafly doesn't offer on its standard plans. Neither includes voice calls. If receiving a verification text or handing out a temporary number matters more to you than the data pricing model itself, that tips things toward Airhub regardless of how much data you'll use.
+  </p>
+
+  <h2>Price Snapshot (before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Airhub</th>
+          <th>Holafly</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Japan</td><td>$1.55 (1GB)</td><td>$1.99/day (unlimited)</td></tr>
+        <tr><td>United States</td><td>$2.82 (3GB)</td><td>$1.99/day (unlimited)</td></tr>
+        <tr><td>Europe regional</td><td>$4.50 (4GB)</td><td>$1.99/day (unlimited)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Airhub's price is per fixed block of data, however long it lasts you; Holafly's is per day of unlimited use. A light user burning under 1-2GB a day will usually spend less on Airhub; a heavy streamer or anyone bad at rationing a cap will usually spend less, and worry less, on Holafly.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airhub:</strong> {{ airhubPrimary.code }}, {{ airhubPrimary.discount | lower }}. <a href="/airhub/">Full code list &rarr;</a></li>
+      <li><strong>Holafly:</strong> {{ providerB.primaryCode }}, {{ holaflyPrimary.discount | lower }}. <a href="/holafly/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Holafly's code is ours. Airhub's own code, ADAMANDLINDS, isn't currently applying a discount at checkout (reported to Airhub, believed temporary), so {{ airhubPrimary.code }} is the public code we've verified still works there. See the <a href="/airhub/">Airhub page</a> for the current status.</p>
+  </div>
+
+  <h2>Is Airhub or Holafly the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Airhub if&hellip;</h3>
+      <ul>
+        <li>You know roughly how many GB you'll use and want the lowest price per gigabyte</li>
+        <li>You want SMS and a local number bundled with your data, not sold as an extra</li>
+        <li>You're headed somewhere Airhub prices sharply, like Thailand or Japan</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with Holafly if&hellip;</h3>
+      <ul>
+        <li>You genuinely don't know how much data you'll use</li>
+        <li>Heavy streaming, video calls, or hotspot use</li>
+        <li>China is on the itinerary and you want the built-in VPN</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Airhub still doesn't replace a real phone number.</strong> It bundles SMS and, on most plans, a local number, but there's no voice calling, so it's not a full substitute if you need to actually receive or make calls abroad. If a real number with calls guaranteed matters, <a href="/simlocal/">SimLocal</a>'s UK plans include one.
+  </p>
+  <p>
+    <strong>Neither "unlimited" is truly unmanaged.</strong> Holafly's unlimited plans can apply a fair-use speed reduction after very heavy same-day use, though it isn't published as a specific daily GB number. Airhub has no such issue since you're buying a fixed block to begin with: you simply run out of what you bought.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Airhub vs Holafly FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Airhub or Holafly</h3>
+      <p>Airhub, for most trips, since you're paying a low per-GB block price instead of a flat daily unlimited rate. Holafly only wins on price (or at least on predictability) if you'd otherwise burn through multiple Airhub blocks in a single day.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does Airhub include a phone number like a real SIM</h3>
+      <p>On most plans, yes, a local number plus SMS, but not voice calls. It covers receiving a verification text or giving out a temporary number, not making or taking phone calls.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which one is better for a trip to China</h3>
+      <p>Holafly, if you don't want to set up a separate VPN: its China eSIM includes one built in. Airhub has no equivalent for China.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I just buy whichever is cheapest for my specific destination</h3>
+      <p>That works for a single short trip. For longer or heavier-use trips, run the math on expected GB per day against Airhub's block pricing before assuming it's the cheaper option; past a certain point Holafly's flat rate overtakes it.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Airhub or Holafly?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub is cheaper for most trips since it charges a low per-GB block price instead of a flat daily unlimited rate. Holafly only wins on price, or at least on predictability, for travelers who would otherwise burn through multiple Airhub data blocks in a single day."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Airhub include a phone number like a real SIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"On most plans Airhub includes a local number plus SMS, but not voice calls, so it covers receiving a verification text or giving out a temporary number rather than making or taking phone calls."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which is better for a trip to China, Airhub or Holafly?",
+        "acceptedAnswer":{"@type":"Answer","text":"Holafly, for travelers who don't want to set up a separate VPN, since its China eSIM includes one built in. Airhub has no equivalent for China."}
+      },
+      {
+        "@type":"Question",
+        "name":"Should I just buy whichever is cheapest for my destination?",
+        "acceptedAnswer":{"@type":"Answer","text":"That works for a single short trip. For longer or heavier-use trips, it is worth running the math on expected gigabytes per day against Airhub's block pricing, since past a certain usage level Holafly's flat rate becomes the cheaper option."}
+      }
+    ]
+  }
+  </script>
+</div>
