@@ -13,7 +13,7 @@ locale: "es"
   {
     title: "Ilimitado vs. pago por GB",
     intro: "Planes ilimitados de precio fijo frente al pago por gigabyte. Qué filosofía ahorra más dinero depende de cuántos datos consumas.",
-    slugs: ["holafly-vs-airalo", "holafly-vs-saily", "holafly-vs-alosim", "holafly-vs-ubigi", "holafly-vs-nomad", "holafly-vs-orange"]
+    slugs: ["holafly-vs-airalo", "holafly-vs-saily", "holafly-vs-alosim", "holafly-vs-ubigi", "holafly-vs-nomad", "holafly-vs-orange", "airhub-vs-holafly"]
   },
   {
     title: "Duelos económicos de pago por GB",
@@ -28,7 +28,7 @@ locale: "es"
   {
     title: "Operadoras, MVNO y planes de larga duración",
     intro: "Paquetes respaldados por operadoras establecidas, suscripciones recurrentes y planes pensados para viajes largos en vez de una sola visita corta.",
-    slugs: ["saily-vs-ubigi", "nomad-vs-ubigi", "orange-vs-ubigi", "bnesim-vs-orange", "bnesim-vs-nomad"]
+    slugs: ["saily-vs-ubigi", "nomad-vs-ubigi", "orange-vs-ubigi", "bnesim-vs-orange", "bnesim-vs-nomad", "airalo-vs-nomad"]
   },
   {
     title: "Políticas de reembolso y garantías",
@@ -50,30 +50,49 @@ locale: "es"
     Todas las comparativas directas de este sitio, agrupadas por lo que realmente influye en la decisión, no una lista alfabética sin más. Elige la categoría que mejor se ajuste a tu viaje y lee la comparativa.
   </p>
 
+  {% macro compareCard(cmp) %}
+  {% set pA = codes[cmp.providerA] %}
+  {% set pB = codes[cmp.providerB] %}
+  {% set altCmp = collections.i18nMap | i18nAlternates("compare:" + cmp.slug) %}
+  {% set cmpUrl = altCmp.es or ("/compare/" + cmp.slug + "/") %}
+  <a class="compare-hub-card" href="{{ cmpUrl }}">
+    <div class="compare-hub-card-vs">
+      {% if pA.logo %}<img src="{{ pA.logo }}" alt="Logo de {{ pA.name }}">{% endif %}
+      <span class="compare-hub-divider">VS</span>
+      {% if pB.logo %}<img src="{{ pB.logo }}" alt="Logo de {{ pB.name }}">{% endif %}
+    </div>
+    <h3>{{ pA.name }} vs {{ pB.name }}</h3>
+    <span class="compare-hub-card-cta">Leer la comparativa <i class="fas fa-arrow-right"></i></span>
+  </a>
+  {% endmacro %}
+
+  {% set usedSlugs = [] %}
+  {% for category in categories %}
+    {% set usedSlugs = usedSlugs.concat(category.slugs) %}
+  {% endfor %}
+  {% set leftover = comparisons | excludeSlugs(usedSlugs) | reverse %}
+
   {% for category in categories %}
   <section class="compare-hub-category">
     <h2>{{ category.title }}</h2>
     <p class="compare-hub-category-intro">{{ category.intro }}</p>
     <div class="compare-hub-grid">
-      {% for slug in category.slugs %}
-      {% set cmp = comparisons | findComparison(slug) %}
-      {% if cmp %}
-      {% set pA = codes[cmp.providerA] %}
-      {% set pB = codes[cmp.providerB] %}
-      {% set altCmp = collections.i18nMap | i18nAlternates("compare:" + cmp.slug) %}
-      {% set cmpUrl = altCmp.es or ("/compare/" + cmp.slug + "/") %}
-      <a class="compare-hub-card" href="{{ cmpUrl }}">
-        <div class="compare-hub-card-vs">
-          {% if pA.logo %}<img src="{{ pA.logo }}" alt="Logo de {{ pA.name }}">{% endif %}
-          <span class="compare-hub-divider">VS</span>
-          {% if pB.logo %}<img src="{{ pB.logo }}" alt="Logo de {{ pB.name }}">{% endif %}
-        </div>
-        <h3>{{ pA.name }} vs {{ pB.name }}</h3>
-        <span class="compare-hub-card-cta">Leer la comparativa <i class="fas fa-arrow-right"></i></span>
-      </a>
-      {% endif %}
+      {% for cmp in comparisons | resolveSlugs(category.slugs) %}
+      {{ compareCard(cmp) }}
       {% endfor %}
     </div>
   </section>
   {% endfor %}
+
+  {% if leftover.length > 0 %}
+  <section class="compare-hub-category">
+    <h2>Más comparativas</h2>
+    <p class="compare-hub-category-intro">Comparativas más recientes que todavía no se han clasificado en una categoría anterior.</p>
+    <div class="compare-hub-grid">
+      {% for cmp in leftover %}
+      {{ compareCard(cmp) }}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
 </div>

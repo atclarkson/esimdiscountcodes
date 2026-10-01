@@ -119,6 +119,28 @@ module.exports = function (eleventyConfig) {
     return arr.slice(0, n);
   });
 
+  // comparisons.json entries whose slug isn't in the given list of already
+  // hand-categorized slugs. Backs the /compare/ hub's "More Comparisons"
+  // catch-all, so a new comparison the recurring content routine adds is
+  // never dropped off the hub just because nobody has sorted it into a
+  // named category yet.
+  eleventyConfig.addFilter("excludeSlugs", function (comparisons, usedSlugs) {
+    if (!Array.isArray(comparisons)) return [];
+    const used = new Set(usedSlugs || []);
+    return comparisons.filter((c) => !used.has(c.slug));
+  });
+
+  // comparisons.json entries matching a curated list of slugs, in that
+  // order, skipping any slug that doesn't (yet) exist. Lets the /compare/
+  // hub define each category as a plain slug list instead of juggling two
+  // different shapes of "category" data.
+  eleventyConfig.addFilter("resolveSlugs", function (comparisons, slugs) {
+    if (!Array.isArray(comparisons) || !Array.isArray(slugs)) return [];
+    return slugs
+      .map((slug) => comparisons.find((c) => c.slug === slug))
+      .filter(Boolean);
+  });
+
   // Whether a provider's code list includes our own affiliate code
   // (valid, not invalidated). Used to prioritize our own providers in
   // places like nav ordering, instead of raw list position.

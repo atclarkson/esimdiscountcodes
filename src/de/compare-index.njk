@@ -13,7 +13,7 @@ locale: "de"
   {
     title: "Unbegrenzt vs. Bezahlung pro GB",
     intro: "Pauschale Unbegrenzt-Tarife gegen Bezahlung pro Gigabyte. Welche Philosophie wirklich Geld spart, hängt davon ab, wie viele Daten du verbrauchst.",
-    slugs: ["holafly-vs-airalo", "holafly-vs-saily", "holafly-vs-alosim", "holafly-vs-ubigi", "holafly-vs-nomad", "holafly-vs-orange"]
+    slugs: ["holafly-vs-airalo", "holafly-vs-saily", "holafly-vs-alosim", "holafly-vs-ubigi", "holafly-vs-nomad", "holafly-vs-orange", "airhub-vs-holafly"]
   },
   {
     title: "Günstige Pro-GB-Duelle",
@@ -28,7 +28,7 @@ locale: "de"
   {
     title: "Mobilfunkanbieter, MVNO & Langzeit-Tarife",
     intro: "Tarife etablierter Netzbetreiber, wiederkehrende Abos und Pläne für längere Reisen statt eines einzelnen kurzen Besuchs.",
-    slugs: ["saily-vs-ubigi", "nomad-vs-ubigi", "orange-vs-ubigi", "bnesim-vs-orange", "bnesim-vs-nomad"]
+    slugs: ["saily-vs-ubigi", "nomad-vs-ubigi", "orange-vs-ubigi", "bnesim-vs-orange", "bnesim-vs-nomad", "airalo-vs-nomad"]
   },
   {
     title: "Rückerstattung & Garantien",
@@ -50,32 +50,49 @@ locale: "de"
     Alle direkten Vergleiche dieser Seite, gruppiert nach dem, was für die Entscheidung wirklich zählt, statt einer alphabetischen Liste. Wähle die Kategorie, die zu deiner Reise passt, und lies den Vergleich.
   </p>
 
+  {% macro compareCard(cmp) %}
+  {% set pA = codes[cmp.providerA] %}
+  {% set pB = codes[cmp.providerB] %}
+  {% set altCmp = collections.i18nMap | i18nAlternates("compare:" + cmp.slug) %}
+  {% set cmpUrl = altCmp.de or ("/compare/" + cmp.slug + "/") %}
+  <a class="compare-hub-card" href="{{ cmpUrl }}">
+    <div class="compare-hub-card-vs">
+      {% if pA.logo %}<img src="{{ pA.logo }}" alt="{{ pA.name }} Logo">{% endif %}
+      <span class="compare-hub-divider">VS</span>
+      {% if pB.logo %}<img src="{{ pB.logo }}" alt="{{ pB.name }} Logo">{% endif %}
+    </div>
+    <h3>{{ pA.name }} vs {{ pB.name }}</h3>
+    <span class="compare-hub-card-cta">Vergleich lesen <i class="fas fa-arrow-right"></i></span>
+  </a>
+  {% endmacro %}
+
+  {% set usedSlugs = [] %}
+  {% for category in categories %}
+    {% set usedSlugs = usedSlugs.concat(category.slugs) %}
+  {% endfor %}
+  {% set leftover = comparisons | excludeSlugs(usedSlugs) | reverse %}
+
   {% for category in categories %}
   <section class="compare-hub-category">
     <h2>{{ category.title }}</h2>
     <p class="compare-hub-category-intro">{{ category.intro }}</p>
     <div class="compare-hub-grid">
-      {% for slug in category.slugs %}
-      {% set cmp = comparisons | findComparison(slug) %}
-      {% if cmp %}
-      {% set pA = codes[cmp.providerA] %}
-      {% set pB = codes[cmp.providerB] %}
-      {% set altA = collections.i18nMap | i18nAlternates("provider:" + cmp.providerA) %}
-      {% set altB = collections.i18nMap | i18nAlternates("provider:" + cmp.providerB) %}
-      {% set altCmp = collections.i18nMap | i18nAlternates("compare:" + cmp.slug) %}
-      {% set cmpUrl = altCmp.de or ("/compare/" + cmp.slug + "/") %}
-      <a class="compare-hub-card" href="{{ cmpUrl }}">
-        <div class="compare-hub-card-vs">
-          {% if pA.logo %}<img src="{{ pA.logo }}" alt="{{ pA.name }} Logo">{% endif %}
-          <span class="compare-hub-divider">VS</span>
-          {% if pB.logo %}<img src="{{ pB.logo }}" alt="{{ pB.name }} Logo">{% endif %}
-        </div>
-        <h3>{{ pA.name }} vs {{ pB.name }}</h3>
-        <span class="compare-hub-card-cta">Vergleich lesen <i class="fas fa-arrow-right"></i></span>
-      </a>
-      {% endif %}
+      {% for cmp in comparisons | resolveSlugs(category.slugs) %}
+      {{ compareCard(cmp) }}
       {% endfor %}
     </div>
   </section>
   {% endfor %}
+
+  {% if leftover.length > 0 %}
+  <section class="compare-hub-category">
+    <h2>Weitere Vergleiche</h2>
+    <p class="compare-hub-category-intro">Neuere Gegenüberstellungen, die noch keiner Kategorie oben zugeordnet wurden.</p>
+    <div class="compare-hub-grid">
+      {% for cmp in leftover %}
+      {{ compareCard(cmp) }}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
 </div>
