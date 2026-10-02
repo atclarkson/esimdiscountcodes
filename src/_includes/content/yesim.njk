@@ -5,7 +5,7 @@
   <div class="content-callout">
     <h2>Best Yesim Promo Code &bull; {{ buildMonthYear }}</h2>
     <p>
-      Use <strong>{{ provider.primaryCode }}</strong> for <strong>{{ primary.discount | lower }}</strong>. It's a public code, not one of ours (Yesim doesn't run an affiliate program of the kind that would let us have our own code here), but it's the best one we've verified.
+      Use <strong>{{ provider.primaryCode }}</strong> for <strong>{{ primary.discount | lower }}</strong>. It's a public code, not one of ours. We're now a Yesim affiliate, but Yesim hasn't given us our own discount code yet; we'll feature it here the moment that changes.
       <span class="callout-meta">Confirmed active <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("MMM d, yyyy") }}</time>.</span>
     </p>
   </div>

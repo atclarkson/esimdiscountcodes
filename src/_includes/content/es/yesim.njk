@@ -5,7 +5,7 @@
   <div class="content-callout">
     <h2>Mejor código de descuento de Yesim &bull; {{ buildMonthYear }}</h2>
     <p>
-      Usa <strong>{{ provider.primaryCode }}</strong> para conseguir <strong>{{ primary.discount | lower }}</strong>. Es un código público, no es nuestro (Yesim no tiene un programa de afiliados del tipo que nos permitiría tener un código propio aquí), pero es el mejor que hemos verificado.
+      Usa <strong>{{ provider.primaryCode }}</strong> para conseguir <strong>{{ primary.discount | lower }}</strong>. Es un código público, no es nuestro. Ahora somos afiliados de Yesim, pero todavía no nos han dado un código de descuento propio; en cuanto eso cambie, lo mostraremos aquí.
       <span class="callout-meta">Confirmado activo el <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("d MMM yyyy") }}</time>.</span>
     </p>
   </div>
