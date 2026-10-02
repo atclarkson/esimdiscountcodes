@@ -70,23 +70,6 @@
       }
     }
   },
-  "upesim": {
-    "description": "Conectividad eSIM asequible",
-    "codes": {
-      "REDDIT10": {
-        "discount": "10% DE DESCUENTO EN TODOS LOS PLANES",
-        "description": "Descuento de Reddit para UPeSIM, 10% de descuento"
-      },
-      "ESIMDB10": {
-        "discount": "10% DE DESCUENTO",
-        "description": "Código promocional para clientes nuevos, 10% de descuento"
-      },
-      "T-DEALZ-10": {
-        "discount": "10% DE DESCUENTO",
-        "description": "Código promocional, 10% de descuento"
-      }
-    }
-  },
   "nomad": {
     "description": "eSIM para nómadas digitales",
     "codes": {
@@ -275,15 +258,6 @@
       "TWOROAMING": {
         "discount": "5% DE DESCUENTO EN TU PEDIDO",
         "description": "5% de descuento en tu pedido de SimLocal"
-      }
-    }
-  },
-  "esimcardus": {
-    "description": "Soluciones globales de eSIM",
-    "codes": {
-      "ESIM10": {
-        "discount": "10% DE DESCUENTO EN eSIM",
-        "description": "Código de descuento público anunciado en la web de eSIM Card"
       }
     }
   },
