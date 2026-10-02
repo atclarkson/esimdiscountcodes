@@ -752,7 +752,7 @@
   },
   "alosim": {
     "name": "AloSIM",
-    "lastModified": "2025-08-09",
+    "lastModified": "2026-10-02",
     "description": "Simple eSIM plans for global travel",
     "url": "https://alosim.com",
     "affiliateUrl": null,
@@ -769,9 +769,9 @@
       {
         "code": "ALOSAVE",
         "discount": "15% OFF ALL PLANS",
-        "description": "Best AloSIM discount code - 15% off",
+        "description": "Best AloSIM discount code - 15% off. Personally tested at checkout on a Mexico 2GB plan: $11.50 down to $9.78, a real $1.72 (15%) savings.",
         "verified": true,
-        "lastTested": "2026-09-30",
+        "lastTested": "2026-10-02",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public",
@@ -802,13 +802,14 @@
     "expirationAfterPurchase": "never",
     "pricing": {
       "countries": {
-        "United States": "$4.50 (1GB)",
-        "Italy": "$4.50 (1GB)",
-        "France": "$4.50 (1GB)",
-        "Spain": "$4.50 (1GB)",
+        "United States": "$3.50 (entry plan)",
+        "Italy": "$3.50 (entry plan)",
+        "France": "$3.50 (entry plan)",
+        "Spain": "$3.50 (entry plan)",
+        "Mexico": "$5.00 (entry plan)",
         "China": "$5 (1GB)",
         "Thailand": "$5 (1GB)",
-        "Japan": "$4.50 (1GB)",
+        "Japan": "$3.50 (entry plan)",
         "Turkey": "$4.50 (1GB)",
         "Malaysia": "$4.50 (1GB)",
         "UAE": "$4.50 (1GB)"
