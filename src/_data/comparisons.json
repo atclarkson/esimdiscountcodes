@@ -270,5 +270,13 @@
     "title": "Instabridge vs Yesim: Free WiFi Backup or Rolling Data Balance? (2026 Comparison)",
     "description": "Instabridge vs Yesim compared: Instabridge's cheap data-only eSIM bundled with a free WiFi hotspot app vs Yesim's pricier Pay & Fly rolling balance with a real refund guarantee, plus each one's discount code and which model fits your trip.",
     "lastUpdated": "2026-10-01"
+  },
+  {
+    "slug": "simlocal-vs-esimcardus",
+    "providerA": "simlocal",
+    "providerB": "esimcardus",
+    "title": "SimLocal vs eSIM Card: Bundled UK Number or a Pay-As-You-Go Add-On? (2026 Comparison)",
+    "description": "SimLocal vs eSIM Card compared: SimLocal's UK plans with a real phone number built in and a no-quibble refund policy vs eSIM Card's granular per-GB, per-day plan sizing with a separate paid virtual number add-on, plus each one's discount code and which fits your trip.",
+    "lastUpdated": "2026-10-02"
   }
 ]

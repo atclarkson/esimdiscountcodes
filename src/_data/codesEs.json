@@ -286,5 +286,14 @@
         "description": "Código de descuento público anunciado en la web de eSIM Card"
       }
     }
+  },
+  "saily": {
+    "description": "Planes de eSIM de NordVPN",
+    "codes": {
+      "HELLOSAILY": {
+        "discount": "15% DE DESCUENTO EN TODOS LOS PLANES",
+        "description": "Mejor código de descuento de Saily, 15% de descuento"
+      }
+    }
   }
 }

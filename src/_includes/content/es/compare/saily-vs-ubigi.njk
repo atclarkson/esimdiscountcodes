@@ -1,0 +1,138 @@
+<!-- Saily vs Ubigi Comparativa (Español) -->
+<div class="content-section">
+
+  {% set sailyPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set ubigiPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set sailyEsCode = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
+  {% set sailyDiscount = (sailyEsCode.discount if sailyEsCode) or sailyPrimary.discount %}
+  {% set ubigiEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set ubigiDiscount = (ubigiEsCode.discount if ubigiEsCode) or ubigiPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>Saily</strong> para una eSIM de un solo uso con un paquete de seguridad (bloqueo de anuncios y malware al estilo VPN) ya incluido, respaldado por la empresa matriz de NordVPN. Elige <strong>Ubigi</strong> si quieres un plan recurrente mensual o anual para un destino que visitas a menudo, respaldado por una operadora establecida en lugar de un revendedor centrado en viajes.
+    </p>
+  </div>
+
+  <h2>La diferencia principal: paquete de seguridad puntual o suscripción recurrente</h2>
+  <p>
+    Ambos proveedores cobran por gigabyte, y las tarifas base están bastante cerca entre sí, pero los productos detrás están pensados para situaciones distintas. Saily es la rama eSIM de Nord Security (la empresa detrás de NordVPN), y cada plan incluye de serie bloqueo de anuncios, bloqueo de sitios de malware y phishing, y una herramienta de ubicación virtual. También vende una eSIM universal que sigue funcionando al cruzar a un nuevo país compatible, así que un viaje por varios países no implica reinstalar en cada frontera.
+  </p>
+  <p>
+    Ubigi es una marca de Transatel, un habilitador de MVNO que opera conectividad móvil desde principios de los 2000 y que ahora forma parte del grupo NTT. En lugar de un paquete de seguridad, su diferenciador es la estructura de planes: junto a los planes puntuales de GB fijo, vende suscripciones mensuales recurrentes (cancelables solo tras un mínimo de 3 meses) y anuales (pagadas por adelantado, no cancelables ni reembolsables durante el año). Ni Saily ni Ubigi acumulan los datos no usados para el siguiente periodo.
+  </p>
+
+  <h2>Resumen de precios (antes de aplicar ningún código)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Saily</th>
+          <th>Ubigi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Estados Unidos</td><td>3,99 $ (1 GB)</td><td>4,00 $ (1 GB)</td></tr>
+        <tr><td>Francia</td><td>3,99 $ (1 GB)</td><td>4,00 $ (3 GB)</td></tr>
+        <tr><td>Global</td><td>8,99 $ (1 GB)</td><td>25,00 $ (1 GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Los precios por país están bastante cerca entre ambos; la diferencia se amplía en los planes regionales y globales, donde Ubigi queda muy por encima de Saily. La opción recurrente de Ubigi es algo para lo que Saily no tiene ningún equivalente.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Saily:</strong> {{ providerA.primaryCode }}, {{ sailyDiscount | lower }}. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>Ubigi:</strong> {{ providerB.primaryCode }}, {{ ubigiDiscount | lower }}. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">El código de Ubigi es el nuestro; Saily no tiene un programa de afiliados de ese tipo que admita un código así, así que el suyo es el mejor código público que hemos verificado. Ambos se aplican en toda la tienda, no solo a un primer pedido.</p>
+  </div>
+
+  <h2>¿Saily o Ubigi es la mejor opción?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige Saily si&hellip;</h3>
+      <ul>
+        <li>Normalmente pagarías una VPN o un bloqueador de anuncios por separado al viajar de todos modos</li>
+        <li>Haces un viaje por varios países y no quieres una eSIM nueva en cada frontera</li>
+        <li>Solo quieres un plan puntual, sin compromiso recurrente</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige Ubigi si&hellip;</h3>
+      <ul>
+        <li>Visitas el mismo país lo bastante a menudo como para que un plan mensual recurrente supere a una eSIM nueva cada viaje</li>
+        <li>Ya conduces un coche conectado de uno de los socios automovilísticos de Ubigi</li>
+        <li>Prefieres comprar a un MVNO establecido en lugar de a un revendedor centrado en viajes</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>Saily fue bloqueado para compras nuevas en Turquía.</strong> La web y la app de Saily estuvieron entre las bloqueadas por el regulador de telecomunicaciones de Turquía (BTK) a partir de mediados de 2025, junto con Holafly, Airalo y varios otros. Una eSIM comprada e instalada antes de aterrizar sigue funcionando; simplemente no se puede comprar ni recargar estando físicamente dentro del país. No hemos encontrado la misma información para Ubigi, así que no asumas que le afecta igual sin comprobarlo cerca de tu viaje.
+  </p>
+  <p>
+    <strong>Un plan recurrente de Ubigi es un compromiso real.</strong> El nivel mensual te ata durante un mínimo de tres meses antes de poder cancelar, y el nivel anual no se puede cancelar ni reembolsar en absoluto durante su periodo de 12 meses. Saily no conlleva ese riesgo, ya que cada plan es una compra única.
+  </p>
+  <p>
+    Para la configuración del dispositivo y conceptos básicos de eSIM que aplican a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Saily vs Ubigi: preguntas frecuentes</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, Saily o Ubigi?</h3>
+      <p>Los precios por país están bastante cerca, pero Ubigi queda notablemente más caro en planes regionales y globales. La suscripción recurrente de Ubigi puede salir más barata que compras puntuales repetidas para un destino visitado a menudo.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos incluye una VPN o un paquete de seguridad?</h3>
+      <p>Saily sí: bloqueo de anuncios, bloqueo de malware y phishing, y una herramienta de ubicación virtual vienen de serie en cada plan. Ubigi no menciona en su web ningún paquete de seguridad equivalente.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos ofrece un plan de suscripción?</h3>
+      <p>Ubigi sí, con niveles mensuales y anuales recurrentes. Saily solo vende planes puntuales, aunque su nivel Ultra es una suscripción separada de 59,99 $/mes que incluye el paquete completo NordVPN/NordPass/NordLayer/Incogni en lugar de un plan de datos recurrente en sí.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Ubigi funciona en Turquía igual que Saily?</h3>
+      <p>Hemos confirmado que Saily fue bloqueado para compras nuevas en Turquía desde mediados de 2025. No hemos encontrado confirmación en ningún sentido para Ubigi, así que conviene comprobarlo cerca de tu viaje en lugar de asumirlo.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, Saily o Ubigi?",
+        "acceptedAnswer":{"@type":"Answer","text":"Los precios por país están bastante cerca, pero Ubigi queda notablemente más caro en planes regionales y globales. La suscripción recurrente de Ubigi puede salir más barata que compras puntuales repetidas para un destino visitado a menudo."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Saily o Ubigi incluyen una VPN o un paquete de seguridad?",
+        "acceptedAnswer":{"@type":"Answer","text":"Saily sí: bloqueo de anuncios, bloqueo de malware y phishing, y una herramienta de ubicación virtual vienen de serie en cada plan. Ubigi no menciona en su web ningún paquete de seguridad equivalente."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Saily o Ubigi ofrecen un plan de suscripción recurrente?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ubigi sí, con niveles mensuales y anuales recurrentes. Saily solo vende planes puntuales de eSIM; su nivel Ultra separado es una suscripción de 59,99 dólares al mes que incluye un paquete NordVPN/NordPass/NordLayer/Incogni en lugar de un plan de datos recurrente."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Tiene Ubigi el mismo bloqueo en Turquía que Saily?",
+        "acceptedAnswer":{"@type":"Answer","text":"Se ha confirmado que Saily fue bloqueado para compras nuevas en Turquía desde mediados de 2025. Eso no se ha confirmado en ningún sentido para Ubigi, así que conviene comprobarlo cerca del viaje en lugar de asumirlo."}
+      }
+    ]
+  }
+  </script>
+</div>

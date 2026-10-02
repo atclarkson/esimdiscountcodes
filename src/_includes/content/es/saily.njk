@@ -1,0 +1,171 @@
+<!-- Contenido de Saily (Español) -->
+<div class="content-section">
+
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Mejor código promocional de Saily &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Usa <strong>{{ provider.primaryCode }}</strong> para obtener <strong>15% de descuento en cualquier plan de Saily</strong>. No es nuestro propio código (Saily no tiene el tipo de programa de afiliados que nos permita poner nuestro propio código como hacemos con Holafly o Ubigi), pero es el mejor código público que hemos verificado que sigue funcionando, y se aplica en toda la tienda en lugar de estar restringido a compradores nuevos.
+      <span class="callout-meta">Confirmado activo el <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("MMM d, yyyy") }}</time>.</span>
+    </p>
+  </div>
+
+  <!-- Headline -->
+  <h2>Qué hace realmente diferente a Saily</h2>
+  <p>
+    Saily es la rama eSIM de NordVPN, creada por la misma empresa (Nord Security) en lugar de simplemente estar "asociada" con ella, y eso se nota en el propio producto: cada plan de Saily viene con bloqueo de anuncios, bloqueo de sitios de malware/phishing y una herramienta de ubicación virtual integrados, en lugar de que la conectividad sea todo el producto. Si no te importa nada de eso y solo quieres el GB más barato, no es una razón para elegir Saily por encima de <a href="/airalo/">Airalo</a>. Pero si eres de los que normalmente pagarían una VPN por separado al viajar, aquí ya viene incluida.
+  </p>
+  <p>
+    Saily también vende una eSIM universal en lugar de un perfil separado por región como hacen la mayoría de competidores. Una vez instalada, sigue funcionando al cruzar a un nuevo país compatible. No tienes que reinstalar ni cambiar de eSIM en cada frontera.
+  </p>
+
+  <img class="content-photo"
+       src="https://media.adamandlinds.com/photos/large/54adb95c-7ef0-4635-b159-2186e91c68b5.jpg"
+       alt="Cuatro adultos con auriculares sentados alrededor de una mesa llena de portátiles y bebidas con hielo en una concurrida zona de restaurantes de un centro comercial en Tailandia, sonriendo a la cámara"
+       width="1280" height="960">
+  <p class="content-photo-caption">Trabajando desde la zona de restaurantes de un centro comercial en Chiang Mai, justo el tipo de wifi público y concurrido donde una eSIM centrada en seguridad demuestra su valor.</p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Códigos activos</h3>
+    <ul>
+      <li><strong>HELLOSAILY</strong>: 15% de descuento en todos los planes de Saily</li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Si un código no se aplica, actualiza el carrito o prueba en una ventana privada, y vuelve a intentarlo.</p>
+  </div>
+
+  <!-- Real operational note instead of generic setup tips -->
+  <h2>La letra pequeña de "ilimitado" que Saily no pone en la portada</h2>
+  <p>
+    La propia política de uso justo de Saily limita los planes "ilimitados" a velocidad completa durante los primeros <strong>5 GB en una ventana móvil de 24 horas en la mayoría de destinos (3 GB en algunos)</strong>, y luego reduce la velocidad a 1 Mbit/s hasta el reinicio a medianoche local. Es una cantidad realmente utilizable para el uso normal del teléfono (mapas, mensajería, videollamadas, algo de streaming), pero conviene saberlo antes de asumir que "ilimitado" significa que no hay ningún tope, sobre todo si varias personas comparten el hotspot de un mismo plan.
+  </p>
+  <p>
+    También existe un nivel de suscripción que la mayoría de competidores no tiene equivalente: <strong>Saily Ultra</strong>, por 59,99 $/mes, incluye 30 GB de datos de alta velocidad en más de 121 destinos (luego ilimitado a 1 Mbit/s), el paquete completo de suscripción NordVPN/NordPass/NordLayer/Incogni, 8% de reembolso en crédito Saily, y un pase de sala VIP de aeropuerto más un pase de acceso rápido de seguridad al mes que se acumulan hasta tres meses si no se usan. Es un producto real para alguien que viaja constantemente y que de otra forma pagaría igualmente por el paquete de VPN. Es un mal trato para un viajero ocasional que solo necesita datos para un viaje.
+  </p>
+  <p>
+    Una limitación que conviene señalar directamente: Saily está entre los proveedores de eSIM cuyas webs y apps fueron bloqueadas en Turquía por el regulador de telecomunicaciones del país (BTK) a partir de mediados de 2025, junto con Airalo, Holafly y varios otros. Una eSIM comprada e instalada <em>antes</em> de aterrizar sigue funcionando una vez allí: el bloqueo afecta a comprar o recargar estando físicamente en Turquía, no a las eSIM ya activas en el teléfono. Conviene tenerlo en cuenta si Turquía está en el itinerario.
+  </p>
+  <p>
+    Para la configuración del dispositivo y conceptos básicos de eSIM que van más allá de Saily en concreto, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- How to -->
+  <h2>Aplicar un código de Saily en 3 pasos</h2>
+  <div class="content-box">
+    <ol>
+      <li>Copia <strong>HELLOSAILY</strong></li>
+      <li>Elige un plan de eSIM por país, regional o global en la app de Saily o en saily.com</li>
+      <li>Pega el código en el campo de promoción al finalizar la compra y confirma la bajada del 15% antes de pagar</li>
+    </ol>
+    <p class="content-note">El descuento se muestra antes de completar el pago.</p>
+  </div>
+
+  <!-- Decision help -->
+  <h2>¿Es Saily la opción adecuada para tu viaje?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Buena opción</h3>
+      <ul>
+        <li>Normalmente pagarías una VPN/bloqueador de anuncios por separado al viajar de todos modos</li>
+        <li>Viaje a varios países donde no quieres instalar una eSIM nueva en cada frontera</li>
+        <li>Viajero frecuente que realmente podría aprovechar los pases de sala VIP del nivel Ultra</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Considera alternativas</h3>
+      <ul>
+        <li>Solo quieres el GB más barato posible y no te importan los extras de seguridad</li>
+        <li>El viaje incluye tiempo físicamente dentro de Turquía (compra e instala antes de aterrizar)</li>
+        <li>Quieres un ilimitado sin ningún número de limitación diaria (revisa la letra pequeña de cualquier proveedor que lo afirme)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Savings examples -->
+  <h2>Cómo se ve el descuento</h2>
+  <div class="content-box">
+    <ul>
+      <li>Estados Unidos 1 GB a 3,99 $ &rarr; 15% de descuento ahorra unos 0,60 $</li>
+      <li>Europa regional 1 GB a 4,99 $ &rarr; 15% de descuento ahorra unos 0,75 $</li>
+      <li>Global 1 GB a 8,99 $ &rarr; 15% de descuento ahorra unos 1,35 $</li>
+    </ul>
+    <p class="content-note">HELLOSAILY se aplica en toda la tienda, así que el descuento funciona igual tanto si compras un plan pequeño como si recargas datos en un viaje más largo.</p>
+  </div>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Usa el código al pagar</h2>
+    <p>Copia <code>HELLOSAILY</code> y pégalo en el campo de promoción</p>
+    <p>15% de descuento en todos los planes de eSIM de Saily.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre el código promocional de Saily</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Cuál es el mejor código ahora mismo?</h3>
+      <p><strong>HELLOSAILY</strong>: 15% de descuento en todos los planes de Saily, en toda la tienda.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Los datos "ilimitados" de Saily son realmente ilimitados?</h3>
+      <p>Para un uso normal, sí. La propia política de uso justo de Saily da velocidad completa hasta 5 GB en una ventana móvil de 24 horas en la mayoría de destinos (3 GB en algunos), y luego reduce la velocidad a 1 Mbit/s hasta el reinicio a medianoche local.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Qué es Saily Ultra?</h3>
+      <p>Un nivel de suscripción de 59,99 $/mes: 30 GB de datos de alta velocidad en más de 121 destinos (luego ilimitado a 1 Mbit/s), el paquete completo NordVPN/NordPass/NordLayer/Incogni, 8% de reembolso en crédito Saily, y un pase mensual de sala VIP de aeropuerto más un pase de acceso rápido que se acumulan hasta tres meses.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Funciona Saily en Turquía?</h3>
+      <p>La web y la app de Saily estuvieron entre las bloqueadas por el regulador de telecomunicaciones de Turquía a partir de mediados de 2025. Compra e instala la eSIM antes de aterrizar: sigue funcionando una vez activa, pero no se puede comprar ni recargar estando físicamente dentro de Turquía.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál es la política de reembolso de Saily?</h3>
+      <p>Reembolso completo si la eSIM nunca se instaló ni activó, dentro de los 30 días posteriores a la compra. También puedes calificar si has usado menos del 1% de tus datos o si hubo un problema real de calidad del servicio. Saily tiene un centro de reembolso automático que gestiona los casos elegibles sin necesidad de un ticket de soporte.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo usar el hotspot con Saily?</h3>
+      <p>Sí, la función de compartir conexión es compatible con los planes de datos de Saily; activa el hotspot móvil en la configuración de tu teléfono como lo harías con una SIM física.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Cuál es el mejor código promocional de Saily ahora mismo?",
+        "acceptedAnswer":{"@type":"Answer","text":"HELLOSAILY da un 15% de descuento en todos los planes de Saily, en toda la tienda."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Los datos ilimitados de Saily son realmente ilimitados?",
+        "acceptedAnswer":{"@type":"Answer","text":"Para el uso normal, sí. La política de uso justo de Saily permite velocidad completa hasta 5 GB en una ventana móvil de 24 horas en la mayoría de destinos (3 GB en algunos), y luego reduce la velocidad a 1 Mbit/s hasta el reinicio a medianoche local."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Qué es Saily Ultra?",
+        "acceptedAnswer":{"@type":"Answer","text":"Una suscripción de 59,99 dólares al mes: 30 GB de datos de alta velocidad en más de 121 destinos y luego ilimitado a 1 Mbit/s, el paquete completo NordVPN/NordPass/NordLayer/Incogni, 8% de reembolso en crédito Saily, y un pase mensual de sala VIP de aeropuerto más un pase de acceso rápido que se acumulan hasta tres meses."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Funciona Saily en Turquía?",
+        "acceptedAnswer":{"@type":"Answer","text":"La web y la app de Saily estuvieron entre las bloqueadas por el regulador de telecomunicaciones de Turquía a partir de mediados de 2025. Una eSIM comprada e instalada antes de llegar sigue funcionando, pero no se puede comprar ni recargar estando físicamente dentro de Turquía."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál es la política de reembolso de Saily?",
+        "acceptedAnswer":{"@type":"Answer","text":"Reembolso completo si la eSIM nunca se instaló ni activó, dentro de los 30 días posteriores a la compra, o si se usó menos del 1% del plan de datos, o si hubo un problema real de calidad del servicio. Saily gestiona un centro de reembolso automático para los casos elegibles."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se puede usar el hotspot con Saily?",
+        "acceptedAnswer":{"@type":"Answer","text":"Sí. La función de compartir conexión es compatible con los planes de datos de Saily activando el hotspot móvil en la configuración del teléfono."}
+      }
+    ]
+  }
+  </script>
+</div>
