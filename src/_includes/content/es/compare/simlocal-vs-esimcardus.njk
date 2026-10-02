@@ -1,0 +1,140 @@
+<!-- SimLocal vs eSIM Card Comparativa (Español) -->
+<div class="content-section">
+
+  {% set simlocalPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set esimcardusPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set simlocalEsCode = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
+  {% set esimcardusEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set simlocalDiscount = (simlocalEsCode.discount if simlocalEsCode) or simlocalPrimary.discount %}
+  {% set esimcardusDiscount = (esimcardusEsCode.discount if esimcardusEsCode) or esimcardusPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>SimLocal</strong> si quieres un plan que ya incluya un número de teléfono real y prefieras una devolución sin preguntas si no funciona. Elige <strong>eSIM Card</strong> si quieres ajustar un plan exactamente a los GB y días que necesitas y estás dispuesto a pagar un número por separado. Ambos son vendedores tipo marketplace con una amplia cobertura de países; la diferencia real está en qué viene incluido y qué se vende como extra.
+    </p>
+  </div>
+
+  <h2>La diferencia principal: número incluido o extra de pago</h2>
+  <p>
+    La mayoría de los planes de SimLocal para Reino Unido incluyen un número de teléfono británico completo para llamadas y mensajes además de los datos, confirmado al comprar uno nosotros mismos. eSIM Card no incluye ningún número en sus planes de datos; en su lugar vende un número de teléfono virtual como extra, desde unos 2,40 $, dentro de la misma app que sus eSIM de datos habituales. Si tener un número local real te importa, SimLocal te lo da sin coste extra para Reino Unido; eSIM Card te lo da en cualquier otro destino, pero con un coste añadido sobre el plan de datos.
+  </p>
+  <p>
+    Los dos también se diferencian en cuán preciso puede ser un plan. Solo la página de Estados Unidos de eSIM Card lista unas 30 combinaciones en siete niveles fijos de datos (de 1 GB a 100 GB) con validez de 3 a 90 días, más dos niveles ilimitados independientes. SimLocal vende planes por país, regionales y específicos para estudiantes, pero no esa misma matriz granular de GB por día; está construido más en torno a elegir un destino y un tamaño de paquete que a ajustar una combinación exacta de datos y días.
+  </p>
+
+  <h2>Resumen de precios (Estados Unidos, antes de aplicar ningún código)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>eSIM Card</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1 GB, 3 días</td><td>1,92 $</td></tr>
+        <tr><td>10 GB, 30 días</td><td>12,86 $</td></tr>
+        <tr><td>Ilimitado, 7 días</td><td>12,05 $</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">SimLocal no publica una tarifa comparable por GB para Estados Unidos del mismo modo; sus precios se fijan por destino y plan en lugar de una matriz fija por GB como la de eSIM Card. Los precios anteriores son las tarifas propias de eSIM Card para Estados Unidos en el momento de la comprobación y pueden cambiar.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>SimLocal:</strong> {{ providerA.primaryCode }}, {{ simlocalDiscount | lower }}. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>eSIM Card:</strong> {{ providerB.primaryCode }}, {{ esimcardusDiscount | lower }}. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">El código de SimLocal es el nuestro, confirmado al comprar un plan real de Reino Unido con él. eSIM Card no tiene el tipo de programa de afiliados que admita un código así, así que ESIM10 es el mejor código público que hemos verificado, encontrado anunciado directamente en la propia web de eSIM Card.</p>
+  </div>
+
+  <h2>¿SimLocal o eSIM Card es la mejor opción?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige SimLocal si&hellip;</h3>
+      <ul>
+        <li>Viajas a Reino Unido y quieres un número local real para llamadas y mensajes, no solo datos</li>
+        <li>Te importa poder recibir una devolución sin preguntas si la eSIM no funciona</li>
+        <li>Prefieres escribir al soporte por WhatsApp en lugar de buscar en un widget de ayuda</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige eSIM Card si&hellip;</h3>
+      <ul>
+        <li>Conoces tu necesidad exacta de datos y la duración del viaje y quieres un plan ajustado a eso</li>
+        <li>Quieres la opción de añadir un número virtual o una eSIM con voz fuera de Reino Unido</li>
+        <li>Estás seguro del plan antes de comprarlo, ya que hay poco margen para cambiar de opinión tras instalarlo</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>Las políticas de devolución son casi opuestas.</strong> SimLocal anuncia una política de "No Quibble Refunds": te devuelven el dinero si cambias de opinión, sin necesidad de justificarlo. La propia página de políticas de eSIM Card describe las eSIM como fundamentalmente no reembolsables una vez instaladas o usadas, con excepciones limitadas a casos concretos como un fallo real de cobertura, reclamado dentro de los 30 días. Si existe alguna posibilidad de que quieras echarte atrás, esta diferencia por sí sola podría decidirlo.
+  </p>
+  <p>
+    <strong>SimLocal tiene una pequeña presencia física que eSIM Card no tiene.</strong> SimLocal opera un puñado de mostradores con personal en aeropuertos, incluido uno que hemos visto nosotros mismos en Heathrow, además de su app y web. eSIM Card, como la mayoría de proveedores de este sitio, solo funciona por app y navegador. Si prefieres que alguien te guíe en persona durante la configuración, eso es un punto real a favor de SimLocal, aunque solo cerca de una de sus pocas ubicaciones.
+  </p>
+  <p>
+    Si ninguno de los dos te convence, <a href="{{ (collections.i18nMap | i18nAlternates('provider:alosim')).es or (collections.i18nMap | i18nAlternates('provider:alosim')).en or '/alosim/' }}">AloSIM</a> incluye un número internacional gratuito basado en Hushed en sus planes sin coste extra, un tercer enfoque que vale la pena mirar si un número de teléfono te importa pero tu destino no es Reino Unido.
+  </p>
+  <p>
+    Para la configuración del dispositivo y conceptos básicos de eSIM que aplican a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>SimLocal vs eSIM Card: preguntas frecuentes</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, SimLocal o eSIM Card?</h3>
+      <p>No están en la misma escala de precios: eSIM Card lista una estructura de precios granular por GB y por día para Estados Unidos desde menos de 2 $ por un paquete pequeño, mientras que SimLocal fija precios por destino y plan en lugar de una matriz fija por GB. Para viajes a Reino Unido, el número de teléfono incluido de SimLocal puede hacerlo la mejor opción una vez se cuenta lo que costaría un número separado en otro lugar.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos da un número de teléfono real?</h3>
+      <p>SimLocal sí, como parte de la mayoría de sus planes de Reino Unido, confirmado al comprar uno directamente. eSIM Card vende un número como extra de pago, desde unos 2,40 $, en lugar de incluirlo en el plan de datos.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál tiene la mejor política de devolución?</h3>
+      <p>SimLocal, por un margen amplio. Su política "No Quibble Refunds" devuelve el dinero si cambias de opinión, sin necesidad de justificarlo. La política de eSIM Card trata las eSIM como no reembolsables una vez instaladas o usadas, con solo excepciones muy limitadas.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo comprar alguna de las dos eSIM en persona en un aeropuerto?</h3>
+      <p>SimLocal opera un pequeño número de mostradores con personal en aeropuertos además de su app y web. eSIM Card, como la mayoría de proveedores de este sitio, solo funciona por app y navegador.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, SimLocal o eSIM Card?",
+        "acceptedAnswer":{"@type":"Answer","text":"No están en la misma escala de precios. eSIM Card lista una estructura de precios granular por GB y por día para Estados Unidos desde menos de 2 dólares por un paquete pequeño, mientras que SimLocal fija precios por destino y plan en lugar de una matriz fija por GB. Para viajes a Reino Unido, el número de teléfono incluido de SimLocal puede ser la mejor opción una vez se cuenta lo que costaría un número separado en otro lugar."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿SimLocal o eSIM Card dan un número de teléfono real?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal incluye un número de teléfono real en la mayoría de sus planes de Reino Unido, confirmado al comprar uno directamente. eSIM Card vende un número como extra de pago desde unos 2,40 dólares en lugar de incluirlo en el plan de datos."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál tiene la mejor política de devolución, SimLocal o eSIM Card?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal, por un margen amplio. La política No Quibble Refunds devuelve el dinero si se cambia de opinión, sin necesidad de justificarlo. eSIM Card trata las eSIM como no reembolsables una vez instaladas o usadas, con solo excepciones muy limitadas."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se puede comprar una eSIM de SimLocal o eSIM Card en persona?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal opera un pequeño número de mostradores con personal en aeropuertos además de su app y web. eSIM Card, como la mayoría de proveedores de este sitio, solo funciona por app y navegador."}
+      }
+    ]
+  }
+  </script>
+</div>

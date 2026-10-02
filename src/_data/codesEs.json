@@ -277,5 +277,23 @@
         "description": "5% de descuento en tu pedido de SimLocal"
       }
     }
+  },
+  "esimcardus": {
+    "description": "Soluciones globales de eSIM",
+    "codes": {
+      "ESIM10": {
+        "discount": "10% DE DESCUENTO EN eSIM",
+        "description": "Código de descuento público anunciado en la web de eSIM Card"
+      }
+    }
+  },
+  "saily": {
+    "description": "Planes de eSIM de NordVPN",
+    "codes": {
+      "HELLOSAILY": {
+        "discount": "15% DE DESCUENTO EN TODOS LOS PLANES",
+        "description": "Mejor código de descuento de Saily, 15% de descuento"
+      }
+    }
   }
 }

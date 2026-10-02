@@ -1,0 +1,155 @@
+<!-- eSIM Card Content (Spanish) -->
+<div class="content-section">
+
+  <!-- Quick Answer -->
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Mejor código de descuento de eSIM Card &bull; {{ buildMonthYear }}</h2>
+    <p>
+      Usa <strong>{{ provider.primaryCode }}</strong> para obtener <strong>10% de descuento en cualquier plan de eSIM Card</strong>. Es un código público, no uno nuestro (eSIM Card no tiene el tipo de programa de afiliados que nos permite poner nuestro propio código como hacemos con Holafly o Ubigi), y lo encontramos anunciado directamente en la propia página de inicio de eSIM Card, no solo en un sitio agregador de cupones.
+      <span class="callout-meta">Confirmado activo el <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("d 'de' LLLL 'de' yyyy") }}</time>.</span>
+    </p>
+  </div>
+
+  <!-- Headline -->
+  <h2>Qué hace realmente diferente a eSIM Card</h2>
+  <p>
+    La verdadera diferencia de eSIM Card está en lo granulares que son sus propias páginas por país. La mayoría de proveedores de esta web venden un puñado de paquetes predefinidos por país: eliges un tamaño de datos, eliges una duración, y ya está. Solo la página de Estados Unidos de eSIM Card lista unas 30 combinaciones: siete niveles fijos de datos (1 GB, 3 GB, 5 GB, 10 GB, 20 GB, 50 GB, 100 GB), cada uno disponible con varias duraciones de validez de entre 3 y 90 días, además de dos niveles ilimitados independientes, "Unlimited" y "Unlimited Plus", de entre 1 y 30 días. Si sabes exactamente cuántos datos y cuántos días necesitas, hay un plan hecho a esa medida en vez de tener que redondear hacia arriba al paquete que ofrezca un competidor.
+  </p>
+  <p>
+    eSIM Card también ofrece un par de cosas que la mayoría de competidores que venden solo datos no tienen: una línea de producto separada de eSIM de Datos + Voz, y un complemento de número de teléfono virtual independiente desde unos 2,40 $, ambos disponibles en la misma app que sus planes normales de datos. Es una idea parecida a lo que hace <a href="/es/alosim/">AloSIM</a> con su asociación con Hushed, pero aquí el número es una compra de pago aparte en lugar de venir incluido gratis con un plan de datos.
+  </p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Códigos activos</h3>
+    <ul>
+      <li><strong>ESIM10</strong>: 10% de descuento en cualquier plan de eSIM Card</li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Es un código público anunciado en la propia web de eSIM Card, no un código exclusivo nuestro. Si no se aplica, recarga el carrito o pruébalo en una ventana privada, y vuelve a intentarlo.</p>
+  </div>
+
+  <!-- Real operational note instead of generic setup tips -->
+  <h2>Dos cosas que eSIM Card no explica claramente en su propia web</h2>
+  <p>
+    El texto de uso razonable de los planes ilimitados de eSIM Card dice: "Unlimited bundles provide an allowed limit of data at full speed per 24 hours and thereafter unlimited data at lower speeds" (los paquetes ilimitados ofrecen un límite permitido de datos a velocidad completa cada 24 horas y, a partir de ahí, datos ilimitados a velocidades más bajas). Es su propio texto, y confirma que el anclaje/hotspot funciona en los planes ilimitados y que el plan se activa con el primer uso en lugar de en el momento de la compra. Lo que no hace es dar la cifra real: cuántos GB a velocidad completa antes de que empiece la reducción. Algunos competidores publican esa cifra directamente (<a href="/es/saily/">Saily</a>, por ejemplo, indica 5 GB en un periodo móvil de 24 horas en la mayoría de destinos, 3 GB en algunos); eSIM Card simplemente dice "un límite permitido" sin concretar ninguno.
+  </p>
+  <p>
+    La política de reembolso también es más estricta de lo que parece a primera vista. La propia página de políticas de eSIM Card describe las eSIM como fundamentalmente no reembolsables una vez instaladas o usadas, con reembolsos limitados a casos concretos como un fallo real de cobertura o un fallo técnico de su parte en el que no se haya consumido ningún dato, y aun así hay que presentar la reclamación dentro de los 30 días posteriores a la compra. Compra el plan del que estés seguro, no uno que esperas probar y devolver.
+  </p>
+
+  <!-- How to -->
+  <h2>Cómo aplicar un código de eSIM Card en 3 pasos</h2>
+  <div class="content-box">
+    <ol>
+      <li>Copia <strong>ESIM10</strong></li>
+      <li>Elige un plan de datos nacional, regional o global (o un plan de Datos + Voz) en eSIM Card</li>
+      <li>Pega el código en el campo de promoción al pagar y confirma la rebaja del 10% antes de pagar</li>
+    </ol>
+    <p class="content-note">El descuento se muestra antes de completar el pago.</p>
+  </div>
+
+  <!-- Decision help -->
+  <h2>¿Es eSIM Card la opción adecuada para tu viaje?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Te encaja bien si&hellip;</h3>
+      <ul>
+        <li>Sabes exactamente cuántos datos necesitas y cuánto dura tu viaje, y quieres un plan hecho a esa medida en vez de redondear hacia arriba a un paquete predefinido</li>
+        <li>Quieres la opción de añadir un número de teléfono virtual o una eSIM con voz desde la misma app en la que ya compras los datos</li>
+        <li>Estás seguro del plan antes de comprarlo, ya que hay poco margen para cambiar de opinión una vez instalado</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Mejor considerar otras opciones si&hellip;</h3>
+      <ul>
+        <li>Quieres un número de teléfono incluido gratis en lugar de comprado por separado: mira <a href="/es/alosim/">AloSIM</a>, cuyo número asociado con Hushed no tiene coste adicional</li>
+        <li>Quieres un paquete más grande a un precio por GB más bajo: el plan de 3 GB para EE. UU. de <a href="/airhub/">Airhub</a> sale a menos de 1 $/GB, más barato por gigabyte que el nivel más pequeño de eSIM Card para EE. UU.</li>
+        <li>Quieres un plan ilimitado con una cifra de uso razonable realmente publicada: mira <a href="/es/saily/">Saily</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Savings examples -->
+  <h2>Así se ve el descuento</h2>
+  <div class="content-box">
+    <ul>
+      <li>Estados Unidos 1 GB, 3 días, a 1,92 $ &rarr; 10% de descuento ahorra unos 0,19 $</li>
+      <li>Estados Unidos 10 GB, 30 días, a 12,86 $ &rarr; 10% de descuento ahorra unos 1,29 $</li>
+      <li>Estados Unidos Unlimited, 7 días, a 12,05 $ &rarr; 10% de descuento ahorra unos 1,21 $</li>
+    </ul>
+    <p class="content-note">Los precios son las tarifas propias de eSIM Card para Estados Unidos en el momento en que las comprobamos; las cifras exactas varían según el destino y cambian con el tiempo.</p>
+  </div>
+
+  <p>
+    Para la configuración del dispositivo y conceptos básicos de eSIM que van más allá de eSIM Card en concreto, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Usa el código al pagar</h2>
+    <p>Copia <code>ESIM10</code> y pégalo en el campo de promoción</p>
+    <p>10% de descuento en cualquier plan de eSIM Card, solo datos, ilimitado o Datos + Voz.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre el código de eSIM Card</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Cuál es el mejor código ahora mismo?</h3>
+      <p><strong>ESIM10</strong>: 10% de descuento en cualquier plan de eSIM Card. Es un código público anunciado directamente en la propia página de inicio de eSIM Card, no uno nuestro.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿eSIM Card vende planes ilimitados?</h3>
+      <p>Sí, dos niveles por país: "Unlimited" y "Unlimited Plus", cada uno disponible con varias duraciones de validez, además de los planes normales con GB fijos. La propia web de eSIM Card no explica exactamente qué diferencia a los dos niveles más allá del precio.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Los datos ilimitados de eSIM Card son realmente ilimitados?</h3>
+      <p>Según el propio texto de uso razonable de eSIM Card, los paquetes ilimitados obtienen "un límite permitido de datos a velocidad completa cada 24 horas y, a partir de ahí, datos ilimitados a velocidades más bajas". La página confirma que el anclaje/hotspot funciona en estos planes, pero no publica la cifra real de GB para esa asignación diaria a velocidad completa como sí hacen algunos competidores.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo conseguir un número de teléfono con eSIM Card?</h3>
+      <p>Sí, como complemento de número de teléfono virtual independiente desde unos 2,40 $, comprado dentro de la misma app que las eSIM de datos en lugar de incluido gratis.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo conseguir un reembolso?</h3>
+      <p>Raramente, una vez que una eSIM está instalada o se ha usado. La propia política de reembolso de eSIM Card describe las eSIM como fundamentalmente no reembolsables, con excepciones limitadas a casos concretos como un fallo real de cobertura o un fallo técnico con cero datos consumidos, reclamado dentro de los 30 días posteriores a la compra.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Cuál es el mejor código de descuento de eSIM Card ahora mismo?",
+        "acceptedAnswer":{"@type":"Answer","text":"ESIM10 da un 10% de descuento en cualquier plan de eSIM Card. Es un código público anunciado directamente en la propia página de inicio de eSIM Card, no uno exclusivo nuestro."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿eSIM Card vende planes ilimitados?",
+        "acceptedAnswer":{"@type":"Answer","text":"Sí, dos niveles por país, Unlimited y Unlimited Plus, cada uno disponible con varias duraciones de validez, además de los planes normales con GB fijos. La web de eSIM Card no explica exactamente qué diferencia a los dos niveles más allá del precio."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Los datos ilimitados de eSIM Card son realmente ilimitados?",
+        "acceptedAnswer":{"@type":"Answer","text":"El propio texto de uso razonable de eSIM Card indica que los paquetes ilimitados obtienen un límite permitido de datos a velocidad completa cada 24 horas y, a partir de ahí, datos ilimitados a velocidades más bajas. Se confirma que el anclaje y el hotspot funcionan en estos planes, pero no se publica la cifra real de GB para esa asignación diaria a velocidad completa."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se puede conseguir un número de teléfono con eSIM Card?",
+        "acceptedAnswer":{"@type":"Answer","text":"Sí, como complemento de número de teléfono virtual independiente desde unos 2,40 $, comprado dentro de la misma app que las eSIM de datos en lugar de incluido gratis."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se puede conseguir un reembolso de eSIM Card?",
+        "acceptedAnswer":{"@type":"Answer","text":"Raramente una vez que una eSIM está instalada o se ha usado. La política de reembolso de eSIM Card describe las eSIM como fundamentalmente no reembolsables, con excepciones limitadas a casos como un fallo real de cobertura o un fallo técnico con cero datos consumidos, reclamado dentro de los 30 días posteriores a la compra."}
+      }
+    ]
+  }
+  </script>
+</div>

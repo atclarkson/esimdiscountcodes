@@ -1,0 +1,146 @@
+<!-- Instabridge vs Yesim Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set instabridgePrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set yesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set instabridgeDeCode = deA.codes[providerA.primaryCode] if (deA and deA.codes and deA.codes[providerA.primaryCode]) else null %}
+  {% set yesimDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set instabridgeDiscount = (instabridgeDeCode.discount if instabridgeDeCode) or instabridgePrimary.discount %}
+  {% set yesimDiscount = (yesimDeCode.discount if yesimDeCode) or yesimPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      <strong>Instabridge</strong> ist die günstigere Option in jedem Zielland, das wir geprüft haben, und bündelt zusätzlich zur eSIM eine kostenlose WLAN-Hotspot-Datenbank. <strong>Yesim</strong> kostet durchweg mehr, aber das Pay-&amp;-Fly-Guthaben wird auf die nächste Reise übertragen statt zu verfallen, und Käufe sind durch eine echte 30-Tage-Rückgabegarantie abgesichert. Preislich liegen beide nicht nah beieinander, Yesim lohnt sich also nur, wenn dir eines dieser beiden Dinge, die Instabridge nicht bietet, wirklich wichtig ist.
+    </p>
+  </div>
+
+  <h2>Preis-Schnappschuss (vor jedem Code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Ziel</th>
+          <th>Instabridge (pro GB)</th>
+          <th>Yesim (pro Tag)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>USA</td><td>2 $ (1 GB)</td><td>8,40 $ (1 Tag)</td></tr>
+        <tr><td>Italien</td><td>2 $ (1 GB)</td><td>8,40 $ (1 Tag)</td></tr>
+        <tr><td>Frankreich</td><td>2 $ (1 GB)</td><td>8,40 $ (1 Tag)</td></tr>
+        <tr><td>Spanien</td><td>2 $ (1 GB)</td><td>8,40 $ (1 Tag)</td></tr>
+        <tr><td>China</td><td>2,50 $ (1 GB)</td><td>6 $ (1 Tag)</td></tr>
+        <tr><td>Thailand</td><td>1 $ (1 GB)</td><td>8,40 $ (1 Tag)</td></tr>
+        <tr><td>Japan</td><td>2,50 $ (1 GB)</td><td>19,80 $ (7 Tage)</td></tr>
+        <tr><td>Türkei</td><td>2 $ (1 GB)</td><td>7,70 $ (1 Tag)</td></tr>
+        <tr><td>Malaysia</td><td>1 $ (1 GB)</td><td>24,20 $ (7 Tage)</td></tr>
+        <tr><td>VAE</td><td>3 $ (1 GB)</td><td>7,70 $ (1 Tag)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Diese Zahlen sind nicht direkt vergleichbar: Instabridge verkauft feste 1-GB-Blöcke, Yesim verkauft einen Tag Zugang vom Pay-&amp;-Fly-Guthaben (ab 1,10 $/GB berechnet). Wer genau Gigabyte zählt, findet Instabridge fast überall günstiger; wer lieber gar kein GB zählen will, bekommt dafür einen Tagessatz, aber einen teureren.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Instabridge:</strong> {{ providerA.primaryCode }}, {{ instabridgeDiscount | lower }} (oder TRAVELESIMEXPERT, ebenfalls 20%). Funktioniert nur an der Kasse im Webshop von Instabridge, nicht in der Handy-App. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>Yesim:</strong> {{ providerB.primaryCode }}, {{ yesimDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Keiner der beiden Anbieter betreibt ein Partnerprogramm, das einen eigenen Code von uns unterstützen würde, daher sind das jeweils die besten öffentlichen Codes, die wir geprüft haben.</p>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Yesims Guthaben verfällt nicht am Ende deiner Reise; Instabridges Daten schon.</strong> Yesims Pay-&amp;-Fly-Guthaben wird bis zu 12 Monate lang übertragen, wer also mehrfach im Jahr dasselbe Guthaben auffüllt, startet nicht jedes Mal bei null. Instabridge verkauft feste 1-GB-Blöcke ohne Übertragung: Was auf dieser Reise nicht verbraucht wird, verfällt, und ein aufgebrauchter Tarif füllt sich auch nicht automatisch wieder auf.
+  </p>
+  <p>
+    <strong>Nur einer der beiden erstattet dir tatsächlich Geld, wenn sich deine Pläne ändern.</strong> Yesim wirbt mit einer 30-Tage-Geld-zurück-Garantie auf ungenutzte Tarife, was weiter geht als bei den meisten eSIM-Anbietern auf dieser Seite, die nur einen Tarif erstatten, der sich nie verbunden hat. Instabridge hat keine klar bestätigte Rückerstattungsrichtlinie für eSIM-Käufe, rechne also nicht damit, dein Geld zurückzubekommen, wenn du vorab kaufst und den Tarif am Ende nicht brauchst.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch).
+  </p>
+
+  <h2>Ist Instabridge oder Yesim die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm Instabridge, wenn&hellip;</h3>
+      <ul>
+        <li>Der Preis entscheidend ist: Instabridge ist in jedem geprüften Zielland günstiger, auch schon vor jedem Code</li>
+        <li>Du irgendwohin reist mit guter kostenloser WLAN-Hotspot-Abdeckung und die eSIM nur als Backup willst, nicht als Hauptverbindung</li>
+        <li>Du dir bei deinem Datenbedarf für diese eine Reise sicher bist und kein übertragbares Guthaben brauchst</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm Yesim, wenn&hellip;</h3>
+      <ul>
+        <li>Du oft genug reist, dass sich ein übertragbares Guthaben für dich finanziell lohnt</li>
+        <li>Du die Möglichkeit einer echten Rückerstattung willst, falls deine Pläne doch nicht klappen</li>
+        <li>Du lieber in Dollar für verbrauchte Daten zahlst, statt ein festes GB-Kontingent im Blick zu behalten</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Instabridge vs Yesim: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, Instabridge oder Yesim?</h3>
+      <p>Instabridge, und zwar deutlich, in jedem geprüften Zielland. Yesims höherer Preis bezahlt das übertragbare Guthaben und die Rückerstattungsgarantie, nicht einen besseren Tarif.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bekomme ich mein Geld zurück, wenn ich den Tarif nicht nutze?</h3>
+      <p>Yesim wirbt mit einer 30-Tage-Geld-zurück-Garantie auf ungenutzte Tarife. Instabridge hat keine klar bestätigte Rückerstattungsrichtlinie für eSIM-Käufe, rechne also nicht damit.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bietet einer der beiden kostenloses WLAN?</h3>
+      <p>Instabridge schon: Das Kernprodukt ist eine Datenbank mit über 20 Millionen von der Community eingereichten WLAN-Hotspot-Passwörtern, kostenlos nutzbar ohne Kauf. Yesim hat hierzu kein Gegenstück.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Wird das Guthaben zwischen Reisen übertragen?</h3>
+      <p>Yesims Pay-&amp;-Fly-Guthaben schon, bis zu 12 Monate lang. Instabridge verkauft feste 1-GB-Blöcke, die nicht übertragen oder automatisch aufgefüllt werden, sobald sie verbraucht sind.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Kann ich den Code in der App des jeweiligen Anbieters eingeben?</h3>
+      <p>Bei Instabridge nicht: Die Rabattcodes funktionieren nur an der Kasse im Webshop, nicht in der Handy-App. Yesims Code wird an der Kasse beim Tarifkauf auf der eigenen Website oder in der App eingegeben.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, Instabridge oder Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Instabridge, und zwar deutlich, in jedem geprüften Zielland. Yesims höherer Preis bezahlt das übertragbare Guthaben und die Rückerstattungsgarantie, nicht einen besseren Tarif."}
+      },
+      {
+        "@type":"Question",
+        "name":"Bekomme ich eine Rückerstattung, wenn ich einen Instabridge- oder Yesim-Tarif nicht nutze?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim wirbt mit einer 30-Tage-Geld-zurück-Garantie auf ungenutzte Tarife. Instabridge hat keine klar bestätigte Rückerstattungsrichtlinie für eSIM-Käufe."}
+      },
+      {
+        "@type":"Question",
+        "name":"Bieten Instabridge oder Yesim kostenloses WLAN?",
+        "acceptedAnswer":{"@type":"Answer","text":"Instabridge schon, über eine Datenbank mit mehr als 20 Millionen von der Community eingereichten WLAN-Hotspot-Passwörtern, kostenlos nutzbar ohne Kauf. Yesim hat hierzu kein Gegenstück."}
+      },
+      {
+        "@type":"Question",
+        "name":"Wird das Datenguthaben bei einem der beiden Anbieter zwischen Reisen übertragen?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesims Pay-&-Fly-Guthaben wird bis zu 12 Monate lang übertragen. Instabridge verkauft feste 1-GB-Blöcke, die weder übertragen noch nach Verbrauch automatisch aufgefüllt werden."}
+      },
+      {
+        "@type":"Question",
+        "name":"Kann der Instabridge- oder Yesim-Rabattcode in der App eingegeben werden?",
+        "acceptedAnswer":{"@type":"Answer","text":"Instabridges Rabattcodes funktionieren nur an der Kasse im Webshop, nicht in der Handy-App. Yesims Code wird an der Kasse beim Tarifkauf auf der eigenen Website oder in der App eingegeben."}
+      }
+    ]
+  }
+  </script>
+</div>
