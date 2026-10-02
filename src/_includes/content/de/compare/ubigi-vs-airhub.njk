@@ -1,0 +1,150 @@
+<!-- Ubigi vs Airhub Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set ubigiPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set airhubBest = providerB.codes | findCode("ESIMOFFER5") %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set ubigiDeCode = deA.codes[providerA.primaryCode] if (deA and deA.codes and deA.codes[providerA.primaryCode]) else null %}
+  {% set airhubDeCode = deB.codes["ESIMOFFER5"] if (deB and deB.codes and deB.codes["ESIMOFFER5"]) else null %}
+  {% set ubigiDiscount = (ubigiDeCode.discount if ubigiDeCode) or ubigiPrimary.discount %}
+  {% set airhubDiscount = (airhubDeCode.discount if airhubDeCode) or airhubBest.discount %}
+  {% set altHolafly = collections.i18nMap | i18nAlternates("provider:holafly") %}
+  {% set holaflyUrl = altHolafly.de or altHolafly.en or "/holafly/" %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Wähle <strong>Ubigi</strong>, wenn dir ein etabliertes Telekommunikationsunternehmen hinter deiner eSIM wichtig ist und du eventuell einen wiederkehrenden Monatstarif für ein Land willst, das du oft besuchst. Wähle <strong>Airhub</strong>, wenn du einfach den niedrigsten Preis pro Gigabyte willst und eine schlichte Daten-App in Kauf nimmst. Beim reinen Preisvergleich gewinnt Airhub fast überall; Ubigis Argument stützt sich ganz auf den Betreiber und das Zusatzangebot, nicht auf einen niedrigen Preis.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Telekom-Stammbaum vs. Tiefstpreise</h2>
+  <p>
+    Ubigi ist eine Marke von Transatel, einem französischen MVNO-Enabler, der seit den frühen 2000er-Jahren Mobilfunkanbindung betreibt und heute zur NTT Group gehört. Dasselbe Netz versorgt auch die eingebaute SIM-Konnektivität vernetzter Autos von BMW, Toyota, Jeep, Maserati, Fiat, Alfa Romeo, Mini, Jaguar und Land Rover. Airhub hat keine vergleichbare Vorgeschichte: Es ist eine schlichte Budget-eSIM-App, die Daten in mehreren Gigabyte-Blöcken (3 GB, 4 GB) statt in Einzel-GB-Einheiten verkauft und in günstigeren Zielen fast jeden auf dieser Seite unterbietet.
+  </p>
+  <p>
+    Dieser Stammbaum macht Ubigi aber nicht günstiger. In Japan, wo die Tarifgrößen tatsächlich übereinstimmen (je 1 GB), verlangt Ubigi 4 $ gegenüber Airhubs 1,55 $, also etwa das 2,6-Fache für dieselbe Datenmenge. Airhub bündelt außerdem SMS und, in vielen Zielen, eine lokale Telefonnummer ohne Aufpreis in seine Tarife, etwas, das Ubigi gar nicht anbietet. Telefonie ist bei keinem der beiden enthalten.
+  </p>
+
+  <h2>Preis-Schnappschuss (vor jedem Code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Ziel</th>
+          <th>Ubigi</th>
+          <th>Airhub</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>USA</td><td>4 $ (1 GB)</td><td>2,82 $ (3 GB)</td></tr>
+        <tr><td>Europa (regional)</td><td>9 $ (3 GB)</td><td>4,50 $ (4 GB)</td></tr>
+        <tr><td>Japan</td><td>4 $ (1 GB)</td><td>1,55 $ (1 GB)</td></tr>
+        <tr><td>Weltweit</td><td>25 $ (1 GB)</td><td>11,50 $ (3 GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Die Tarifgrößen unterscheiden sich zwischen beiden (Ubigi verkauft meist 1- bis 3-GB-Einheiten, Airhub 3- bis 4-GB-Blöcke), die Zahlen sind also nicht immer direkt vergleichbar, außer in Japan, wo beide 1 GB verkaufen und der Abstand am klarsten ist.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Ubigi:</strong> {{ providerA.primaryCode }}, {{ ubigiDiscount | lower }}. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>Airhub:</strong> {{ airhubBest.code }}, {{ airhubDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Beide Anbieter haben uns unseren eigenen ADAMANDLINDS-Code gegeben, aber Airhubs Version davon wendet an der Kasse aktuell keinen Rabatt an (wir haben es gemeldet und erwarten eine baldige Behebung), daher ist {{ airhubBest.code }} der Airhub-Code, den wir aktuell empfehlen. Ubigis ADAMANDLINDS funktioniert normal.</p>
+  </div>
+
+  <h2>Ist Ubigi oder Airhub die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm Ubigi, wenn&hellip;</h3>
+      <ul>
+        <li>Du dasselbe Land oft genug besuchst, dass ein wiederkehrender Monatstarif günstiger sein könnte als jedes Mal eine neue eSIM zu kaufen</li>
+        <li>Du lieber bei einem etablierten MVNO kaufst, das zu einem großen Telekom-Konzern gehört, auch zu einem höheren Preis</li>
+        <li>Du die Option auf 18 Monate Gültigkeit bei einem Einmal-Tarif willst statt Airhubs 1-Jahres-Fenster</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm Airhub, wenn&hellip;</h3>
+      <ul>
+        <li>Der Preis pro Gigabyte dein Hauptkriterium ist, besonders in Asien oder Nordamerika</li>
+        <li>Du SMS und eine lokale Nummer ohne Aufpreis gebündelt haben willst</li>
+        <li>Es dir nichts ausmacht, gerade einen anderen Code als unseren eigenen zu nutzen, da aktuell ESIMOFFER5 funktioniert</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Ubigis wiederkehrende Tarife binden dich stärker als ein normaler eSIM-Kauf.</strong> Ein Monatstarif lässt sich erst nach mindestens drei Monaten Laufzeit kündigen, und ein Jahrestarif wird im Voraus für das ganze Jahr bezahlt und kann während dieser Zeit weder gekündigt noch erstattet werden. Wenn du nur eine einmalige Daten-Menge für eine einzelne Reise willst, bleib bei Ubigis Einmal-Tarif und lass die wiederkehrenden Optionen komplett weg.
+  </p>
+  <p>
+    <strong>Airhubs eigener Rabattcode ist aktuell defekt, nicht eingestellt.</strong> Wir haben ADAMANDLINDS direkt an Airhubs Kasse getestet, bestätigt, dass er keinen Rabatt anwendet, und es Airhub gemeldet. Wir zeigen ihn weiterhin als unseren Code, während wir auf eine Behebung warten, aber ESIMOFFER5 ist der Code, der heute tatsächlich funktioniert.
+  </p>
+  <p>
+    Für niemanden von beiden ist das die richtige Wahl, wenn man gar keine Daten-Menge im Blick behalten will: <a href="{{ holaflyUrl }}">Holaflys</a> pauschale Unbegrenzt-Tarife lösen genau dieses Problem, zu einem höheren Grundpreis als Ubigi oder Airhub. Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Ubigi vs Airhub: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, Ubigi oder Airhub?</h3>
+      <p>Airhub, in fast jedem geprüften Ziel. In Japan, wo beide 1-GB-Einheiten verkaufen, verlangt Ubigi 4 $ gegenüber Airhubs 1,55 $ für dieselbe Datenmenge.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Warum sollte man dann überhaupt Ubigi statt Airhub wählen?</h3>
+      <p>Vor allem wegen des Betreibers: Ubigi ist eine Marke von Transatel, einem etablierten französischen MVNO-Enabler, der heute zur NTT Group gehört, im Gegensatz zu Airhubs eher schlichtem Budget-App-Aufbau. Ubigi bietet außerdem wiederkehrende Monats- und Jahrestarife an, die Airhub gar nicht verkauft.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Funktioniert Ubigis ADAMANDLINDS-Code?</h3>
+      <p>Ja, 10% Rabatt, bestätigt aktiv. Airhubs Version desselben Codes wendet an der Kasse aktuell keinen Rabatt an; nutze stattdessen ESIMOFFER5 für Airhub, bis das behoben ist.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bieten Ubigi oder Airhub eine Telefonnummer oder SMS?</h3>
+      <p>Airhub bündelt SMS und, in vielen Zielen, eine lokale Telefonnummer ohne Aufpreis in seine Tarife. Ubigi bietet keines von beidem. Telefonie ist bei keinem der beiden enthalten.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Kann ich einen wiederkehrenden Ubigi-Tarif kündigen, wenn ich es mir anders überlege?</h3>
+      <p>Ein Monatstarif lässt sich kündigen, aber erst nach mindestens 3 Monaten Laufzeit. Ein Jahrestarif kann während seiner 12-monatigen Laufzeit weder gekündigt noch erstattet werden. Einmal-Tarife haben dieses Problem nicht, da es sich um einen einmaligen Kauf handelt.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, Ubigi oder Airhub?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub ist in fast jedem geprüften Ziel günstiger. In Japan, wo beide 1-GB-Einheiten verkaufen, verlangt Ubigi 4 $ gegenüber Airhubs 1,55 $ für dieselbe Datenmenge."}
+      },
+      {
+        "@type":"Question",
+        "name":"Warum sollte man Ubigi statt Airhub wählen?",
+        "acceptedAnswer":{"@type":"Answer","text":"Vor allem wegen des Betreibers: Ubigi ist eine Marke von Transatel, einem etablierten französischen MVNO-Enabler, der heute zur NTT Group gehört, im Gegensatz zu Airhubs schlichterem Budget-App-Aufbau. Ubigi bietet zudem wiederkehrende Monats- und Jahrestarife an, die Airhub nicht verkauft."}
+      },
+      {
+        "@type":"Question",
+        "name":"Funktioniert Ubigis Rabattcode ADAMANDLINDS?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ja, er gibt 10% Rabatt und ist bestätigt aktiv. Airhubs Version desselben Codes wendet an der Kasse aktuell keinen Rabatt an; ESIMOFFER5 wird für Airhub empfohlen, bis das behoben ist."}
+      },
+      {
+        "@type":"Question",
+        "name":"Bieten Ubigi oder Airhub eine Telefonnummer oder SMS?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub bündelt SMS und, in vielen Zielen, eine lokale Telefonnummer ohne Aufpreis. Ubigi bietet keines von beidem an. Telefonie ist bei keinem der beiden enthalten."}
+      },
+      {
+        "@type":"Question",
+        "name":"Kann ein wiederkehrender Ubigi-Tarif gekündigt werden?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ein Monatstarif kann nach einer Mindestlaufzeit von 3 Monaten gekündigt werden. Ein Jahrestarif kann während seiner 12-monatigen Laufzeit weder gekündigt noch erstattet werden. Einmal-Tarife sind ein einmaliger Kauf und betroffen davon nicht."}
+      }
+    ]
+  }
+  </script>
+</div>

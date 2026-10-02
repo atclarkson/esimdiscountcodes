@@ -1,0 +1,137 @@
+<!-- ByteSIM vs AloSIM Comparativa (Español) -->
+<div class="content-section">
+
+  {% set bytesimPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set alosimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set bytesimEsCode = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
+  {% set alosimEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set alosimDiscount = (alosimEsCode.discount if alosimEsCode) or alosimPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Ambos incluyen un número de teléfono junto con los datos, pero lo resuelven de forma distinta. <strong>ByteSIM</strong> te da un número local real en un puñado de países, a cambio de verificación de identidad. <strong>AloSIM</strong> te da una segunda línea virtual gratuita a través de Hushed, en cualquier país, sin ningún control de identidad. Cuál te conviene depende de si necesitas un número al que un negocio o banco local pueda llamar de verdad, o simplemente un número que puedas dar sin ceder el tuyo real.
+    </p>
+  </div>
+
+  <h2>La diferencia clave: un número local real frente a uno virtual</h2>
+  <p>
+    ByteSIM vende planes con un número de teléfono local genuino en países seleccionados (Estados Unidos, Canadá, Reino Unido, Francia, España, Australia, Vietnam, Corea del Sur y Tailandia), junto con llamadas locales, mensajes, uso compartido por hotspot y una IP local. Conseguir ese número implica subir una foto del pasaporte y un selfie para la verificación de identidad, una práctica habitual para que te asignen un número real según la normativa local de telecomunicaciones, pero un paso adicional real frente a comprar solo datos.
+  </p>
+  <p>
+    El número de AloSIM viene en cambio de una alianza con Hushed: un número virtual internacional gratuito que se configura dentro de la app de AloSIM después de comprar cualquier plan, sin necesidad de verificación de identidad. Es genuinamente útil para recibir un código de verificación o dar a un hotel un número que no sea el tuyo real, pero es una segunda línea para mensajes y llamadas por app, no un número local real que se conecta a la red telefónica normal como el de ByteSIM.
+  </p>
+
+  <h2>Comparativa de precios</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo de plan</th>
+          <th>ByteSIM</th>
+          <th>AloSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Solo datos, equivalente a 1GB</td><td>Varía según el destino</td><td>4,50$ (1GB)</td></tr>
+        <tr><td>Ejemplo de plan con número incluido</td><td>España: 13,90$ (100GB + llamadas locales + roaming UE, 27 días)</td><td>Número Hushed gratis con cualquier plan</td></tr>
+        <tr><td>Verificación de identidad requerida</td><td>Solo para planes con número</td><td>No</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">No son comparables en igualdad de condiciones: los planes con número de ByteSIM incluyen minutos de llamadas locales y una asignación de datos mucho mayor para un país concreto, mientras que el número Hushed de AloSIM va gratis encima de un plan de datos normal. Compara el plan concreto que comprarías en cada web en lugar de una única cifra por GB.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>ByteSIM:</strong> {{ providerA.primaryCode }}, anunciado como 10% de descuento pero probado en torno al 5% en la práctica. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>AloSIM:</strong> {{ providerB.primaryCode }}, {{ alosimDiscount | lower }}. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">El código de AloSIM es el descuento más claro de los dos. El ahorro real de ByteSIM quedó cerca de lo que su propia oferta automática de todo el sitio ya aplica sin ningún código, así que comprueba el precio en el checkout antes de dar por hecho el porcentaje anunciado.</p>
+  </div>
+
+  <h2>¿ByteSIM o AloSIM, cuál elegir?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige ByteSIM si&hellip;</h3>
+      <ul>
+        <li>Necesitas un número al que un banco, servicio de entregas o casero local pueda llamar o escribir de verdad</li>
+        <li>Tu destino es uno de los países con número local que admite ByteSIM</li>
+        <li>No te importa subir tu identificación para conseguir un número real</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige AloSIM si&hellip;</h3>
+      <ul>
+        <li>Solo necesitas un número para códigos de verificación o para no dar el tuyo real</li>
+        <li>Prefieres no pasar por ninguna verificación de identidad</li>
+        <li>Quieres la opción de un plan de GB fijos o ilimitado, no solo planes con número incluido</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>Los planes con número de ByteSIM se facturan a tu ritmo.</strong> Según el propio soporte de ByteSIM, un plan no empieza a descontar datos ni minutos hasta que realmente pulsas activar, incluso después de completar la verificación de identidad, así que no hay prisa una vez instalado. AloSIM funciona de forma parecida pero en el lado del reembolso: anuncia una devolución sin preguntas si una eSIM no llega a conectar o el dispositivo resulta incompatible, siempre que no le hayas dado uso real todavía.
+  </p>
+  <p>
+    <strong>El estilo de soporte también difiere.</strong> ByteSIM atiende por WhatsApp con una persona real, incluyendo un seguimiento proactivo ante problemas de activación en lugar de esperar a que escribas de nuevo. La política de reembolso de AloSIM cubre ese mismo tipo de problema de activación desde otro ángulo: en vez de una conversación de soporte, recuperas tu dinero.
+  </p>
+  <p>
+    Para la configuración del dispositivo y conceptos básicos de eSIM que aplican a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre ByteSIM vs AloSIM</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Cuál da un número de teléfono más útil, ByteSIM o AloSIM?</h3>
+      <p>Depende del uso. El número de ByteSIM es real y se conecta como un número local normal, pero solo en sus países admitidos y solo tras verificar la identidad. El número Hushed de AloSIM es gratis y no necesita identificación, pero es una segunda línea virtual, no un número local completo.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Hay que verificar la identidad con alguno de los dos?</h3>
+      <p>Solo con ByteSIM, y solo si compras un plan que incluya número de teléfono local. AloSIM no exige verificación de identidad ni para su número Hushed ni para los planes de datos estándar.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál es más barato?</h3>
+      <p>No son realmente comparables a nivel de número: ByteSIM incluye llamadas locales y una gran asignación de datos en sus planes con número, mientras que el número de AloSIM va gratis sobre un plan de datos normal. Compara el plan concreto que comprarías en cada web.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Qué pasa si la eSIM no funciona?</h3>
+      <p>AloSIM anuncia un reembolso sencillo para eSIMs que no lleguen a conectar o sean incompatibles con el dispositivo. ByteSIM se apoya en cambio en un soporte receptivo por WhatsApp, y sus planes no empiezan a facturarse hasta que se pulsa activar, así que hay menos presión si la activación se retrasa.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Cuál da un número de teléfono más útil, ByteSIM o AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"El número de ByteSIM es real y se conecta como un número local normal, pero solo en sus países admitidos y solo tras verificar la identidad. El número Hushed de AloSIM es gratis y no requiere identificación, pero es una segunda línea virtual en lugar de un número local completo."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Hay que verificar la identidad con ByteSIM o AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Solo con ByteSIM, y solo para los planes que incluyen número de teléfono local. AloSIM no exige verificación de identidad para su número Hushed ni para los planes de datos estándar."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Es más barato ByteSIM o AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"No son directamente comparables a nivel de número, ya que ByteSIM incluye llamadas locales y una gran asignación de datos en sus planes con número mientras que el número de AloSIM va gratis sobre un plan de datos normal. Debe compararse el plan concreto que se compraría en cada web."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Qué ocurre si una eSIM de ByteSIM o AloSIM no funciona?",
+        "acceptedAnswer":{"@type":"Answer","text":"AloSIM anuncia un reembolso para eSIMs que no lleguen a conectar o sean incompatibles con el dispositivo. ByteSIM ofrece en cambio un soporte receptivo por WhatsApp, y sus planes no empiezan a facturarse hasta que se pulsa activar."}
+      }
+    ]
+  }
+  </script>
+</div>

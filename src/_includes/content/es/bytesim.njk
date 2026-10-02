@@ -1,0 +1,172 @@
+<!-- ByteSIM Content (Spanish) -->
+<div class="content-section">
+
+  <!-- Quick Answer -->
+  {% set primary = provider.codes | findCode(provider.primaryCode) %}
+  <div class="content-callout">
+    <h2>Mejor código promocional de ByteSIM &bull; {{ buildMonthYear }}</h2>
+    <p>
+      <strong>{{ provider.primaryCode }}</strong> se anuncia en otros sitios como un 10% de descuento, pero lo probamos nosotros mismos y solo rebajó <strong>alrededor de un 5%</strong> en un pedido real, prácticamente lo mismo que la oferta de verano que ByteSIM ya aplica automáticamente en todo el sitio sin necesidad de código. Lo decimos claramente porque tampoco nos gustan las afirmaciones engañosas.
+      <span class="callout-meta">Confirmado activo el <time datetime="{{ (primary.lastTested or buildTime) | fmtISO }}">{{ (primary.lastTested or buildTime) | fmtDate("d 'de' LLLL 'de' yyyy") }}</time>.</span>
+    </p>
+  </div>
+
+  <!-- Headline -->
+  <h2>Qué hace a ByteSIM realmente diferente</h2>
+  <p>
+    La mayoría de apps de eSIM de esta web solo venden datos y nada más. ByteSIM vende números de teléfono locales reales en países seleccionados, incluyendo Estados Unidos, Canadá, Reino Unido, Francia, España, Australia, Vietnam, Corea del Sur y Tailandia, incluidos en planes que añaden llamadas, mensajes, uso compartido por hotspot y una dirección IP local además de los datos. Es un producto genuinamente distinto a una eSIM solo de datos, y es la razón por la que compramos una nosotros mismos.
+  </p>
+  <p>
+    La propia web de ByteSIM deja claro que la mayoría de sus planes de eSIM de viaje no requieren verificación de identidad, pero los planes con número local sí, según la normativa local de telecomunicaciones. Esa distinción importa porque no es una política de "pasaporte obligatorio para cualquier eSIM" como podría parecer a primera vista, sino algo específico de conseguir un número real.
+  </p>
+
+  <!-- Real first-hand purchase writeup -->
+  <h2>Qué implicó realmente comprar un número de España</h2>
+  <p>
+    Compramos el "Mega Plan con llamadas ilimitadas y roaming UE" de España de ByteSIM (SKU spain-eSIM-LBES60GB-27): 100GB de datos en España, 15GB de datos en roaming UE, llamadas ilimitadas dentro de España y 500 minutos de llamadas en roaming UE, durante 27 días. Con un precio de 13,90$, se quedó en <strong>13,20$</strong> tras el descuento automático de la oferta de verano de ByteSIM, sin necesidad de código. El motivo por el que elegimos este plan concreto en lugar de uno solo de datos: incluye un <strong>número de teléfono español real (+34)</strong>.
+  </p>
+
+  <img class="content-photo"
+       src="/assets/bytesim/bytesim_purchase_reciept.png"
+       alt="Resumen del pedido de ByteSIM mostrando el Mega Plan de España con llamadas ilimitadas en España y roaming UE, rebajado de 13,90$ a 13,20$ por la oferta de verano automática"
+       width="660" height="559">
+  <p class="content-photo-caption">Nuestra confirmación de pedido. Con un precio de 13,90$, la oferta de verano automática lo dejó en 13,20$ sin introducir ningún código.</p>
+
+  <p>
+    Conseguir ese número implicó verificación de identidad: subir una foto del pasaporte y un selfie, una práctica habitual para obtener un número de teléfono real en muchos países, no una peculiaridad de ByteSIM. Tras la verificación, la eSIM no se activó de inmediato, lo que nos preocupó por un momento. Usamos el botón "Obtener ayuda" en WhatsApp y una persona real respondió en minutos, explicando que el plan no empieza a facturarse hasta que realmente pulsas activar, y que conviene esperar de 2 a 10 minutos tras la verificación antes de hacerlo. Aun así, seguía sin aparecer como activa. Lo que realmente lo resolvió fue que el soporte de ByteSIM volvió a escribirnos por iniciativa propia, sin que lo pidiéramos, unas dos horas después, para preguntar si ya funcionaba. Funcionaba. Ese tipo de seguimiento proactivo, de una persona real y no de un bucle de bot, es una experiencia de soporte mejor que la de la mayoría de apps de eSIM con las que hemos tratado.
+  </p>
+
+  <img class="content-photo"
+       src="/assets/help2.PNG"
+       alt="Conversación de WhatsApp con el soporte de ByteSIM, donde un agente explica que el plan solo se factura tras la activación y vuelve a escribir casi dos horas después para comprobar si la eSIM ya funcionaba"
+       width="1179" height="2556">
+  <p class="content-photo-caption">El soporte de ByteSIM volviendo a escribir por iniciativa propia, sin que se lo pidiéramos, unas dos horas después de nuestro primer mensaje.</p>
+
+  <!-- Codes -->
+  <div class="content-box content-box--tan">
+    <h3>Códigos activos</h3>
+    <ul>
+      <li><strong>TPDBYTE</strong>: alrededor de un 5% de descuento (anunciado como 10%, el ahorro real probado fue aproximadamente la mitad)</li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">ByteSIM también aplica una oferta de verano en todo el sitio que descuenta un 5% en planes locales y regionales automáticamente en el checkout, sin necesidad de código. En el pedido que probamos, el descuento real de TPDBYTE quedó en el mismo rango que esa oferta automática.</p>
+  </div>
+
+  <!-- Speed test -->
+  <h2>Test de velocidad en el plan de España</h2>
+  <img class="content-photo"
+       src="/assets/bytesim/bytesim_ookla_spain_alicante.PNG"
+       alt="Resultados de Ookla Speedtest en la eSIM de España de ByteSIM mostrando 127 Mbps de bajada y 14,1 Mbps de subida, conectado a la red de Yoigo cerca de Valencia en un iPhone 15 Pro"
+       width="1179" height="2556">
+  <p class="content-photo-caption">127 Mbps de bajada, 14,1 de subida en Ookla, sobre la red de Yoigo (parte de Grupo MásMóvil) cerca de Valencia.</p>
+  <div class="content-box">
+    <ul>
+      <li>Ookla Speedtest: 127 Mbps de bajada / 14,1 Mbps de subida, en la red de Yoigo</li>
+      <li>Fast.com, mismo teléfono y ubicación, minutos después: 5,4 Mbps de bajada</li>
+    </ul>
+    <p class="content-note">Sí, esas dos cifras de descarga son muy distintas desde el mismo teléfono en el mismo lugar. Es normal: cada herramienta de test de velocidad conecta con servidores distintos y mide de forma diferente, así que trata cualquier test individual como una foto puntual, no como una garantía, y espera que la velocidad real varíe según la ubicación, la hora del día y la carga de la red, sea cual sea el proveedor.</p>
+  </div>
+
+  <!-- How to -->
+  <h2>Aplicar un código de ByteSIM en 3 pasos</h2>
+  <div class="content-box">
+    <ol>
+      <li>Copia <strong>TPDBYTE</strong></li>
+      <li>Elige un plan para tu destino en ByteSIM</li>
+      <li>Pega el código en el campo de cupón al pagar, pero comprueba la rebaja real antes de dar por hecho que coincide con el porcentaje anunciado</li>
+    </ol>
+    <p class="content-note">El descuento se muestra antes de completar el pago.</p>
+  </div>
+
+  <!-- Decision help -->
+  <h2>¿Es ByteSIM la opción adecuada para tu viaje?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--good">
+      <h3>Encaja bien si&hellip;</h3>
+      <ul>
+        <li>Necesitas un número de teléfono local real, no solo datos, en uno de los países que ByteSIM admite</li>
+        <li>Quieres un plan que combine datos, llamadas locales y minutos de roaming</li>
+        <li>Prefieres tener una persona real en WhatsApp si algo falla durante la activación</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--alt">
+      <h3>Considera alternativas si&hellip;</h3>
+      <ul>
+        <li>Solo quieres datos, sin número de teléfono ni verificación de identidad: mira <a href="/es/alosim/">AloSIM</a>, que incluye un número virtual gratuito de Hushed en su lugar</li>
+        <li>Buscas específicamente ese 10% anunciado; el ahorro real que encontramos fue más cercano al 5%</li>
+        <li>Tu destino no está entre los países con número local de ByteSIM</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>
+    ¿Dudas entre un número local real y uno virtual gratuito? Consulta nuestra <a href="/compare/bytesim-vs-alosim/">comparativa ByteSIM vs AloSIM</a> (en inglés). Para la compatibilidad de dispositivos con eSIM, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- CTA -->
+  <div class="content-cta">
+    <h2>Usa el código al pagar</h2>
+    <p>Copia <code>TPDBYTE</code> y pégalo en el campo de cupón</p>
+    <p>Alrededor de un 5% de descuento, no el 10% anunciado en otros sitios.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre el código de ByteSIM</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Cuál es el mejor código ahora mismo?</h3>
+      <p><strong>TPDBYTE</strong>. Se anuncia como un 10% de descuento, pero al probarlo en un pedido real solo ahorró alrededor de un 5%, similar a la oferta de verano automática de ByteSIM.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿ByteSIM da un número de teléfono real?</h3>
+      <p>Sí, en países seleccionados como Estados Unidos, Canadá, Reino Unido, Francia, España, Australia, Vietnam, Corea del Sur y Tailandia. Los planes con número incluyen llamadas, mensajes, uso compartido por hotspot y una dirección IP local junto con los datos.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Hay que verificar la identidad para usar ByteSIM?</h3>
+      <p>Solo para los planes con número local, según la normativa local de telecomunicaciones; la mayoría de eSIMs de ByteSIM que son solo de datos no lo requieren. Un plan con número implica subir una foto del pasaporte y un selfie.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Qué pasa si la activación no funciona de inmediato?</h3>
+      <p>En nuestra propia prueba, la eSIM no se activó justo después de la verificación de identidad. El soporte de ByteSIM por WhatsApp nos conectó con una persona real en minutos, que explicó que puede tardar de 2 a 10 minutos tras la verificación y que la facturación solo empieza al pulsar activar. Aun así seguía sin aparecer como activa, y lo que realmente lo solucionó fue que el soporte volvió a escribir por iniciativa propia unas dos horas después.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuándo empieza a facturarse un plan de ByteSIM?</h3>
+      <p>Solo tras pulsar activar, según el propio soporte de ByteSIM. Se puede completar la verificación de identidad y dejar la eSIM instalada sin que cuente contra el plan hasta que realmente se active.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Cuál es el mejor código promocional de ByteSIM ahora mismo?",
+        "acceptedAnswer":{"@type":"Answer","text":"TPDBYTE. Se anuncia como un 10% de descuento, pero probado en un pedido real solo ahorró alrededor de un 5%, similar al descuento automático de la oferta de verano de ByteSIM."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿ByteSIM da un número de teléfono real?",
+        "acceptedAnswer":{"@type":"Answer","text":"Sí, en países seleccionados como Estados Unidos, Canadá, Reino Unido, Francia, España, Australia, Vietnam, Corea del Sur y Tailandia. Los planes con número incluyen llamadas, mensajes, uso compartido por hotspot y una dirección IP local junto con los datos."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Es necesario verificar la identidad para usar ByteSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Solo para los planes con número local, según la normativa local de telecomunicaciones. La mayoría de eSIMs de ByteSIM que son solo de datos no requieren verificación; un plan con número requiere una foto del pasaporte y un selfie."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Qué ocurre si una eSIM de ByteSIM no se activa de inmediato?",
+        "acceptedAnswer":{"@type":"Answer","text":"El soporte de ByteSIM por WhatsApp conecta con una persona real en minutos, que explica que la activación puede tardar de 2 a 10 minutos tras la verificación de identidad. En nuestra propia prueba seguía sin aparecer como activa tras ese tiempo, y el soporte lo resolvió volviendo a escribir por iniciativa propia unas dos horas después."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuándo empieza a facturarse un plan de ByteSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Solo tras pulsar activar, según el propio soporte de ByteSIM. La verificación de identidad se puede completar y dejar la eSIM instalada sin que la facturación empiece hasta que realmente se active."}
+      }
+    ]
+  }
+  </script>
+</div>

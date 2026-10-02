@@ -278,5 +278,13 @@
     "title": "SimLocal vs eSIM Card: Bundled UK Number or a Pay-As-You-Go Add-On? (2026 Comparison)",
     "description": "SimLocal vs eSIM Card compared: SimLocal's UK plans with a real phone number built in and a no-quibble refund policy vs eSIM Card's granular per-GB, per-day plan sizing with a separate paid virtual number add-on, plus each one's discount code and which fits your trip.",
     "lastUpdated": "2026-10-02"
+  },
+  {
+    "slug": "ubigi-vs-airhub",
+    "providerA": "ubigi",
+    "providerB": "airhub",
+    "title": "Ubigi vs Airhub: Established MVNO or Cheapest Per-GB Price? (2026 Comparison)",
+    "description": "Ubigi vs Airhub compared: Ubigi's Transatel/NTT backing and recurring-plan options against Airhub's rock-bottom per-GB pricing with SMS and a local number bundled in, plus each provider's current working discount code.",
+    "lastUpdated": "2026-10-02"
   }
 ]

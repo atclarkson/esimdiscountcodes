@@ -1,0 +1,143 @@
+<!-- Ubigi vs Airhub Comparison Content -->
+<div class="content-section">
+
+  {% set ubigiPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set airhubPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set airhubBest = providerB.codes | findCode("ESIMOFFER5") %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>Ubigi</strong> if you want an established telecom behind your eSIM and might actually want a recurring monthly plan for a country you visit often. Pick <strong>Airhub</strong> if you just want the lowest per-GB price and don't mind a bare-bones data app. On a straight price comparison Airhub wins almost everywhere; Ubigi's case rests entirely on who runs it and what else it sells, not on being cheap.
+    </p>
+  </div>
+
+  <h2>The Core Difference: Telecom Pedigree vs Rock-Bottom Pricing</h2>
+  <p>
+    Ubigi is a brand of Transatel, a French MVNO enabler running cellular connectivity since the early 2000s and now part of NTT Group. The same underlying network also powers the built-in SIM connectivity in connected cars from BMW, Toyota, Jeep, Maserati, Fiat, Alfa Romeo, Mini, Jaguar, and Land Rover. Airhub has no equivalent backstory: it's a straightforward budget eSIM app that sells data in multi-gigabyte blocks (3GB, 4GB) instead of single-GB units, and undercuts almost everyone on this site in cheaper destinations.
+  </p>
+  <p>
+    That pedigree doesn't make Ubigi cheaper. In Japan, where the plan sizes actually line up at 1GB each, Ubigi charges $4 against Airhub's $1.55, roughly 2.6 times more for the identical amount of data. Airhub also bundles SMS and, in many destinations, a local phone number into its plans at no extra cost, something Ubigi doesn't offer at all. Neither provider includes voice calls.
+  </p>
+
+  <h2>Price Snapshot (before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Ubigi</th>
+          <th>Airhub</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States</td><td>$4 (1GB)</td><td>$2.82 (3GB)</td></tr>
+        <tr><td>Europe regional</td><td>$9 (3GB)</td><td>$4.50 (4GB)</td></tr>
+        <tr><td>Japan</td><td>$4 (1GB)</td><td>$1.55 (1GB)</td></tr>
+        <tr><td>Global</td><td>$25 (1GB)</td><td>$11.50 (3GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Plan sizes differ between the two (Ubigi mostly sells in 1 to 3GB units, Airhub in 3 to 4GB blocks), so these aren't always apples-to-apples except Japan, where both sell 1GB and the gap is clearest.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Ubigi:</strong> {{ providerA.primaryCode }}, {{ ubigiPrimary.discount | lower }}. <a href="/ubigi/">Full code list &rarr;</a></li>
+      <li><strong>Airhub:</strong> {{ airhubBest.code }}, {{ airhubBest.discount | lower }}. <a href="/airhub/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Both providers have given us our own ADAMANDLINDS code, but Airhub's copy of it isn't currently applying a discount at checkout (we've reported it and expect it fixed soon), so {{ airhubBest.code }} is the Airhub code we recommend until that changes. Ubigi's ADAMANDLINDS is working normally.</p>
+  </div>
+
+  <h2>Is Ubigi or Airhub the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Ubigi if&hellip;</h3>
+      <ul>
+        <li>You visit the same country often enough that a recurring monthly plan could beat buying a fresh eSIM each time</li>
+        <li>You'd rather buy from an established MVNO backed by a major telecom group than a smaller reseller, even at a higher price</li>
+        <li>You want the option of an 18-month validity window on a one-off plan instead of Airhub's 1-year window</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with Airhub if&hellip;</h3>
+      <ul>
+        <li>Price per gigabyte is your main concern, especially in Asia or North America</li>
+        <li>You want SMS and a local number bundled in without paying extra for them</li>
+        <li>You're fine applying a different code than our own right now, since ESIMOFFER5 is what currently works</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Ubigi's recurring plans lock you in more than a typical eSIM purchase.</strong> A monthly plan can't be cancelled until you've held it for three months minimum, and an annual plan is paid upfront for the full year and can't be cancelled or refunded at all during that term. If you just want a one-off bucket of data for a single trip, stick to Ubigi's one-off plan type and skip the recurring options entirely.
+  </p>
+  <p>
+    <strong>Airhub's own discount code is currently broken, not discontinued.</strong> We tested ADAMANDLINDS directly at Airhub's checkout, confirmed it isn't applying a discount, and flagged it with Airhub. We're still showing it as our code while we wait on a fix, but ESIMOFFER5 is the one that actually works today.
+  </p>
+  <p>
+    Neither of these is the pick for someone who'd rather not track a data allowance at all: <a href="/holafly/">Holafly</a>'s flat-rate unlimited plans solve that problem, at a higher base price than either Ubigi or Airhub charges. For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Ubigi vs Airhub FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Ubigi or Airhub</h3>
+      <p>Airhub, in almost every destination we checked. In Japan, where both sell 1GB units, Ubigi charges $4 against Airhub's $1.55 for the same amount of data.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Why would anyone pick Ubigi over Airhub then</h3>
+      <p>Mainly for who runs it: Ubigi is a brand of Transatel, an established French MVNO enabler now part of NTT Group, versus Airhub's more straightforward budget-app setup. Ubigi also offers recurring monthly and annual plans that Airhub doesn't sell at all.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Is Ubigi's ADAMANDLINDS code working</h3>
+      <p>Yes, 10% off, confirmed active. Airhub's copy of the same code is not currently applying a discount at checkout; use ESIMOFFER5 for Airhub instead until that's fixed.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either Ubigi or Airhub include a phone number or SMS</h3>
+      <p>Airhub bundles SMS and, in many destinations, a local phone number into its plans at no extra cost. Ubigi doesn't offer either. Neither provider includes voice calls.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I cancel a Ubigi recurring plan if I change my mind</h3>
+      <p>A monthly plan can be cancelled, but not until you've held it for at least 3 months. An annual plan can't be cancelled or refunded at all during its 12-month term. One-off plans don't have this issue since they're a single purchase.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Ubigi or Airhub?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub is cheaper in almost every destination checked. In Japan, where both sell 1GB units, Ubigi charges $4 against Airhub's $1.55 for the same amount of data."}
+      },
+      {
+        "@type":"Question",
+        "name":"Why would anyone pick Ubigi over Airhub?",
+        "acceptedAnswer":{"@type":"Answer","text":"Mainly for who runs it: Ubigi is a brand of Transatel, an established French MVNO enabler now part of NTT Group, versus Airhub's more straightforward budget-app setup. Ubigi also offers recurring monthly and annual plans that Airhub does not sell at all."}
+      },
+      {
+        "@type":"Question",
+        "name":"Is Ubigi's ADAMANDLINDS discount code working?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes, it gives 10% off and is confirmed active. Airhub's copy of the same code is not currently applying a discount at checkout; ESIMOFFER5 is the Airhub code recommended until that is fixed."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Ubigi or Airhub include a phone number or SMS?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub bundles SMS and, in many destinations, a local phone number into its plans at no extra cost. Ubigi offers neither. Neither provider includes voice calls."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can a Ubigi recurring plan be cancelled?",
+        "acceptedAnswer":{"@type":"Answer","text":"A monthly plan can be cancelled after a 3-month minimum commitment. An annual plan cannot be cancelled or refunded during its 12-month term. One-off plans are a single purchase and do not have this issue."}
+      }
+    ]
+  }
+  </script>
+</div>

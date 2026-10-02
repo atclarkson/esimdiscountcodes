@@ -269,5 +269,14 @@
         "description": "Mejor código de descuento de Saily, 15% de descuento"
       }
     }
+  },
+  "bytesim": {
+    "description": "Planes de datos eSIM para viajes internacionales, con números de teléfono locales reales en países seleccionados",
+    "codes": {
+      "TPDBYTE": {
+        "discount": "~5% DE DESCUENTO (ANUNCIADO COMO 10%)",
+        "description": "Anunciado en otros sitios como un 10% de descuento en planes de eSIM de viaje. Probado al pagar en un pedido de 2,90$ y solo rebajó 0,15$, alrededor de un 5%, prácticamente lo mismo que la oferta de verano automática que la propia web de ByteSIM ya aplica en todo el sitio sin ningún código."
+      }
+    }
   }
 }
