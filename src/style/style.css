@@ -137,6 +137,7 @@ input:focus-visible,
   font-size: 0.95rem;
   padding: 0.55rem 1rem;
   border-radius: 9999px;
+  white-space: nowrap;
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 
@@ -1635,7 +1636,7 @@ main {
   font-size: 1.1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1180px) {
   .nav-menu {
     gap: 1rem;
     font-size: 0.9rem;
@@ -1699,7 +1700,7 @@ main {
 }
 
 /* Mobile styles */
-@media (max-width: 768px) {
+@media (max-width: 1180px) {
   .nav-container {
     flex-wrap: wrap;
   }
@@ -1757,7 +1758,7 @@ main {
 }
 
 /* Existing nav styles - make sure these work on desktop */
-@media (min-width: 769px) {
+@media (min-width: 1181px) {
   .nav-menu {
     display: flex !important;
   }
