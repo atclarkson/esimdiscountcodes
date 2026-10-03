@@ -1,0 +1,138 @@
+<!-- Comparativa eSIM Card vs AloSIM (Español) -->
+<div class="content-section">
+
+  {% set esimcardusPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set alosimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set esimcardusEsCode = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
+  {% set alosimEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set esimcardusDiscount = (esimcardusEsCode.discount if esimcardusEsCode) or esimcardusPrimary.discount %}
+  {% set alosimDiscount = (alosimEsCode.discount if alosimEsCode) or alosimPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>eSIM Card</strong> si conoces tu necesidad exacta de datos y la duración de tu viaje y quieres un plan ajustado a eso, hasta el día. Elige <strong>AloSIM</strong> si prefieres tener menos opciones entre las que elegir y que te incluyan un número de teléfono internacional gratis. Ambos venden planes de GB fijos e ilimitados, así que la diferencia real no está en el modelo de precios, sino en qué tan detallado es el tamaño de los planes y qué viene incluido junto con los datos.
+    </p>
+  </div>
+
+  <h2>La diferencia principal: decenas de niveles ajustados o una lista sencilla</h2>
+  <p>
+    Solo la página de Estados Unidos de eSIM Card enumera unas 30 combinaciones: siete niveles de datos fijos de 1GB a 100GB, cada uno disponible con varias ventanas de validez de 3 a 90 días, más dos niveles ilimitados ("Unlimited" y "Unlimited Plus") de 1 a 30 días. AloSIM lo mantiene más simple: un puñado de tamaños fijos en GB por país más una opción ilimitada, sin un descuento adicional por validez corta si compras menos tiempo. Si sabes que solo necesitas 1GB para una escala de 3 días, eSIM Card tiene un nivel cuyo precio corresponde exactamente a eso. Si prefieres no comparar tantas opciones, la lista más corta de AloSIM es más fácil de revisar.
+    </p>
+  <p>
+    Esa granularidad se refleja en el precio. El nivel de 1GB/3 días de eSIM Card para EE. UU. cuesta $1.92, más barato que el 1GB de AloSIM a $4.50, pero el 1GB de AloSIM incluye una validez mínima más larga (7 días) en lugar de venderse como un nivel aparte de validez corta. No son exactamente el mismo producto: eSIM Card cobra por una ventana más corta, AloSIM por una más larga, en ese mismo tamaño.
+  </p>
+
+  <h2>Comparación de precios (Estados Unidos, antes de aplicar cualquier código)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>eSIM Card</th>
+          <th>AloSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1GB</td><td>$1.92 (validez de 3 días)</td><td>$4.50 (validez mínima de 7 días)</td></tr>
+        <tr><td>10GB</td><td>$12.86 (validez de 30 días)</td><td>No se vende como nivel fijo de 10GB</td></tr>
+        <tr><td>Ilimitado</td><td>$12.05 (validez de 7 días)</td><td>Disponible, el precio exacto varía según la validez</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Los precios de eSIM Card son sus propias tarifas en EE. UU. publicadas en el momento en que revisamos; los de AloSIM provienen de su lista de precios por país publicada. Ambos cambian con el tiempo y según el destino, y los niveles adicionales de validez de eSIM Card hacen que no siempre se esté comparando la misma ventana de días.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>eSIM Card:</strong> {{ providerA.primaryCode }}, {{ esimcardusDiscount | lower }}. <a href="{{ providerAUrl }}">Ver todos los códigos &rarr;</a></li>
+      <li><strong>AloSIM:</strong> {{ providerB.primaryCode }}, {{ alosimDiscount | lower }}. <a href="{{ providerBUrl }}">Ver todos los códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ninguno de los dos proveedores tiene un programa de afiliados que nos permita tener un código propio, así que ambos códigos aquí son los mejores públicos que hemos verificado, no códigos exclusivos nuestros.</p>
+  </div>
+
+  <h2>¿eSIM Card o AloSIM es la opción correcta?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige eSIM Card si&hellip;</h3>
+      <ul>
+        <li>Conoces tu necesidad exacta de datos y la duración de tu viaje y quieres un nivel ajustado a eso, en lugar de redondear hacia arriba</li>
+        <li>Estás seguro del plan antes de comprar, ya que los reembolsos de eSIM Card se limitan a casos puntuales como una falla real de cobertura</li>
+        <li>Quieres la opción de añadir un número de teléfono virtual o una eSIM con voz desde la misma aplicación</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige AloSIM si&hellip;</h3>
+      <ul>
+        <li>Prefieres elegir entre una lista de planes más corta y sencilla</li>
+        <li>Quieres un número de teléfono incluido gratis en lugar de comprado como complemento aparte</li>
+        <li>Quieres margen para cambiar de opinión: AloSIM reembolsa eSIMs que no logran conectarse o resultan incompatibles</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>El número de teléfono no es gratis en ambos.</strong> AloSIM incluye un número internacional a través de Hushed sin costo adicional con un plan de datos. eSIM Card vende su propio número virtual como complemento aparte desde unos $2.40, dentro de la misma aplicación que sus eSIM de datos, así que es una compra y no un extra incluido.
+  </p>
+  <p>
+    <strong>Las políticas de reembolso apuntan en direcciones opuestas.</strong> La propia política de eSIM Card describe las eSIM como fundamentalmente no reembolsables una vez instaladas o usadas, con excepciones limitadas a casos como una falla real de cobertura reclamada dentro de 30 días. AloSIM anuncia un reembolso sin preguntas para una eSIM que no logra activarse o resulta incompatible con tu dispositivo, aunque esa ventana se cierra en ambos proveedores una vez que ya se usaron los datos de verdad.
+  </p>
+  <p>
+    Para la configuración básica de eSIM y la compatibilidad de dispositivos, válida para ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre eSIM Card vs AloSIM</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, eSIM Card o AloSIM?</h3>
+      <p>Depende del tamaño y la duración que necesites. Los niveles de validez corta de eSIM Card (como su 1GB de 3 días) son más baratos que el mismo tamaño en AloSIM con su validez mínima más larga. Para una estancia más larga en un solo país, conviene comparar el nivel y la duración específicos en cada sitio, ya que los precios de eSIM Card cambian según la ventana de validez de una forma que los de AloSIM no.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Ambos ofrecen planes ilimitados?</h3>
+      <p>Sí. eSIM Card vende dos niveles ilimitados ("Unlimited" y "Unlimited Plus") en varias duraciones de validez. AloSIM también vende planes ilimitados junto a sus opciones de GB fijos.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál incluye un número de teléfono?</h3>
+      <p>AloSIM incluye un número internacional gratis gracias a su asociación con Hushed. eSIM Card vende su propio número virtual como complemento aparte desde unos $2.40, en lugar de incluir uno gratis.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál tiene la mejor política de reembolso?</h3>
+      <p>La de AloSIM es más generosa sobre el papel: un reembolso sin preguntas si la eSIM no logra conectarse o es incompatible con tu dispositivo. La política de eSIM Card trata las eSIM como mayormente no reembolsables una vez instaladas o usadas, con excepciones puntuales como una falla real de cobertura reclamada dentro de 30 días.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, eSIM Card o AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Depende del tamaño y la duración necesarios. Los niveles de validez corta de eSIM Card, como su plan de 1GB a 3 días, son más baratos que el mismo tamaño en AloSIM con su validez mínima más larga. Para una estancia más larga conviene comparar el nivel y la duración específicos en cada sitio."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿eSIM Card y AloSIM ofrecen ambos planes ilimitados?",
+        "acceptedAnswer":{"@type":"Answer","text":"Sí. eSIM Card vende dos niveles ilimitados, Unlimited y Unlimited Plus, en varias duraciones de validez. AloSIM también vende planes ilimitados junto a sus opciones de GB fijos."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Qué proveedor incluye un número de teléfono, eSIM Card o AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"AloSIM incluye un número internacional gratis gracias a su asociación con Hushed. eSIM Card vende su propio número virtual como complemento aparte desde unos $2.40 en lugar de incluir uno gratis."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál tiene la mejor política de reembolso, eSIM Card o AloSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"La de AloSIM es más generosa sobre el papel, con un reembolso sin preguntas si la eSIM no logra conectarse o es incompatible con el dispositivo. eSIM Card trata las eSIM como mayormente no reembolsables una vez instaladas o usadas, con excepciones puntuales como una falla real de cobertura reclamada dentro de 30 días."}
+      }
+    ]
+  }
+  </script>
+</div>

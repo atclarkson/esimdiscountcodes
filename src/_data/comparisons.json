@@ -286,5 +286,13 @@
     "title": "Ubigi vs Airhub: Established MVNO or Cheapest Per-GB Price? (2026 Comparison)",
     "description": "Ubigi vs Airhub compared: Ubigi's Transatel/NTT backing and recurring-plan options against Airhub's rock-bottom per-GB pricing with SMS and a local number bundled in, plus each provider's current working discount code.",
     "lastUpdated": "2026-10-02"
+  },
+  {
+    "slug": "ubigi-vs-yesim",
+    "providerA": "ubigi",
+    "providerB": "yesim",
+    "title": "Ubigi vs Yesim: Recurring Subscription or Rollover Balance? (2026 Comparison)",
+    "description": "Ubigi vs Yesim compared: Ubigi's recurring monthly/annual MVNO subscriptions against Yesim's Pay & Fly rollover balance and 30-day refund guarantee, both pricier than most providers on this site, plus each one's current discount code.",
+    "lastUpdated": "2026-10-03"
   }
 ]

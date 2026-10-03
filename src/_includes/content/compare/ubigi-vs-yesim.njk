@@ -1,0 +1,132 @@
+<!-- Ubigi vs Yesim Comparison Content -->
+<div class="content-section">
+
+  {% set ubigiPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set yesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>Ubigi</strong> if you visit the same country often enough that a recurring monthly plan beats buying a fresh eSIM every time, or if you'd rather buy from an established MVNO than a smaller reseller. Pick <strong>Yesim</strong> if you travel often to different places and want a data balance that rolls over between trips, backed by a real refund guarantee if your plans change. Both sit in the pricier bracket on this site, so neither is the pick if rock-bottom cost per gigabyte is your main concern.
+    </p>
+  </div>
+
+  <h2>The Core Difference: Recurring Subscription vs. Rollover Balance</h2>
+  <p>
+    Ubigi sells data the way a phone carrier does: one-off fixed-GB plans, or recurring monthly and annual subscriptions that renew and bill automatically. Ubigi's own help center is explicit that a monthly plan can't be cancelled until you've held it for three months minimum, and an annual plan is paid upfront and can't be cancelled or refunded at all during its 12-month term. Whatever data goes unused in a given period is gone either way; Ubigi doesn't roll it over.
+  </p>
+  <p>
+    Yesim takes a different approach with its "Pay & Fly" plans: you top up a dollar balance instead of buying a fixed block, priced from $1.10/GB, and unused balance carries over to your next trip rather than expiring. There's no multi-month lock-in to worry about, and Yesim backs it with a 30-day money-back guarantee on unused plans, a step further than most eSIM providers on this site, which only refund a plan that never activated in the first place.
+  </p>
+
+  <h2>Price Snapshot (before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Ubigi</th>
+          <th>Yesim</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States</td><td>$4 (1GB)</td><td>$8.40 (1 day)</td></tr>
+        <tr><td>Europe regional</td><td>$9 (3GB)</td><td>$7.70 (1 day, unlimited)</td></tr>
+        <tr><td>Global</td><td>$25 (1GB)</td><td>$20.90 (3GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">These aren't directly comparable units: Ubigi prices by the gigabyte, Yesim's country plans price by the day (its Pay &amp; Fly balance option prices by the gigabyte instead, from $1.10/GB). Both land in the "Expensive" price bracket on this site, well above what <a href="/airhub/">Airhub</a> charges for the same gigabyte.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Ubigi:</strong> {{ providerA.primaryCode }}, {{ ubigiPrimary.discount | lower }}. <a href="/ubigi/">Full code list &rarr;</a></li>
+      <li><strong>Yesim:</strong> {{ providerB.primaryCode }}, {{ yesimPrimary.discount | lower }}. <a href="/yesim/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ubigi's code is ours. We're now a Yesim affiliate too, but Yesim hasn't issued us our own branded code yet, so its code is the best public one we've verified; it only applies to a first purchase, after which WELCOMETOYESIM (15% off) and TRAVELFREE (a flat &euro;3 off) are worth trying instead.</p>
+  </div>
+
+  <h2>Is Ubigi or Yesim the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Ubigi if&hellip;</h3>
+      <ul>
+        <li>You visit the same country on a regular schedule and a recurring monthly plan beats buying fresh each time</li>
+        <li>You already drive a connected car from one of Ubigi's automaker partners (BMW, Toyota, Jeep, and others run on the same Transatel network)</li>
+        <li>You'd rather buy from an established MVNO, even at a higher price, than a smaller reseller</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with Yesim if&hellip;</h3>
+      <ul>
+        <li>You travel frequently to different places and want a balance that rolls over instead of a plan tied to one trip</li>
+        <li>You want the option of a real refund if you buy ahead and end up not needing the plan</li>
+        <li>You'd rather not commit to Ubigi's 3-month minimum on a monthly plan or its non-refundable annual term</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Ubigi's recurring plans are a real commitment, not just a label.</strong> A monthly subscription locks you in for three months before you can cancel it, and an annual plan can't be cancelled or refunded at all during its 12-month term. Yesim's Pay &amp; Fly balance has no equivalent lock-in; you top up and spend down at your own pace.
+  </p>
+  <p>
+    <strong>Neither provider is the cheap option here.</strong> Ubigi runs roughly double what <a href="/airhub/">Airhub</a> or <a href="/redteago/">RedteaGO</a> charge per gigabyte, and Yesim's day-based plans run from roughly $1.56 to $31 depending on destination, also well above what those two charge. If price per GB is what matters most, check Airhub or Holafly before buying either.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Ubigi vs Yesim FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Ubigi or Yesim</h3>
+      <p>Neither is cheap compared to most providers on this site. On a straight per-GB basis Ubigi tends to come out ahead for data-heavy use; Yesim's day-based plans can work out cheaper for a short light-use trip, and its rollover Pay &amp; Fly balance avoids wasting unused data between trips.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either data allowance roll over between trips</h3>
+      <p>Yesim's Pay &amp; Fly balance does: unused balance carries over to your next top-up instead of expiring. Ubigi's data does not roll over on any plan type, one-off, monthly, or annual.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I cancel or get a refund if I change my mind</h3>
+      <p>Yesim advertises a 30-day money-back guarantee on unused plans. Ubigi's one-off plans follow its standard policy, but a recurring monthly plan can't be cancelled until three months in, and an annual plan can't be cancelled or refunded at all during its 12-month term.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Who actually runs each of these</h3>
+      <p>Ubigi is a brand of Transatel, a French MVNO enabler now part of NTT Group, which also supplies the connectivity behind connected-car systems for automakers including BMW, Toyota, and Jeep. Yesim markets itself on automatic network switching across a claimed 800+ partner networks, a claim we haven't independently verified.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Ubigi or Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Neither is cheap compared to most providers on this site. Ubigi tends to come out ahead on a straight per-GB basis for data-heavy use; Yesim's day-based plans can be cheaper for a short light-use trip, and its rollover Pay & Fly balance avoids wasting unused data between trips."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does either Ubigi or Yesim roll data over between trips?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim's Pay & Fly balance rolls over to the next top-up instead of expiring. Ubigi's data does not roll over on any plan type, one-off, monthly, or annual."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I cancel or get a refund from Ubigi or Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim advertises a 30-day money-back guarantee on unused plans. A Ubigi monthly plan can't be cancelled until three months in, and an annual plan can't be cancelled or refunded at all during its 12-month term."}
+      },
+      {
+        "@type":"Question",
+        "name":"Who runs Ubigi and Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ubigi is a brand of Transatel, a French MVNO enabler now part of NTT Group, which also supplies connectivity for connected-car systems from automakers including BMW, Toyota, and Jeep. Yesim markets automatic switching across a claimed 800+ partner networks, a claim not independently verified by us."}
+      }
+    ]
+  }
+  </script>
+</div>
