@@ -1,0 +1,138 @@
+<!-- Airalo vs eSIM Card Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set airaloPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set esimcardusPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set airaloDeCode = deA.codes[providerA.primaryCode] if (deA and deA.codes and deA.codes[providerA.primaryCode]) else null %}
+  {% set esimcardusDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set airaloDiscount = (airaloDeCode.discount if airaloDeCode) or airaloPrimary.discount %}
+  {% set esimcardusDiscount = (esimcardusDeCode.discount if esimcardusDeCode) or esimcardusPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Beide verkaufen Daten pro Gigabyte ohne einen zentralen unbegrenzten Haupttarif, hier geht es also nicht um Unbegrenzt gegen Bezahlung-pro-GB wie bei <a href="/de/compare/holafly-vs-airalo/">Holafly vs Airalo</a>. Es ist eine Frage, wie genau du einkaufen willst. <strong>Airalo</strong> verkauft pro Land eine Handvoll fester Tarifgrößen und ist der bekanntere Name mit dem größeren Katalog. <strong>eSIM Card</strong> verkauft pro Land deutlich mehr Größen- und Laufzeit-Kombinationen, dazu eine optionale virtuelle Telefonnummer, für Reisende, die genau wissen, was sie brauchen.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Feste Tarife vs. feingranulare Größenwahl</h2>
+  <p>
+    Airalos Modell ist einfach: Land oder Region wählen, eine von wenigen festen Datengrößen wählen (etwa 1 GB, 3 GB, 5 GB), eine Laufzeit wählen, fertig. Airalo verkauft außerdem <strong>unbegrenzte regionale eSIMs</strong> (Europa, Asien, Nordamerika, Lateinamerika, die Karibik, MENA, Afrika, Australien), die laut Airalos eigener Fair-Use-Richtlinie die ersten 3 GB pro Tag mit voller Geschwindigkeit laufen, danach bis Mitternacht auf 1 Mbit/s gedrosselt werden.
+  </p>
+  <p>
+    eSIM Card geht bewusst feiner vor. Allein die USA-Seite listet etwa 30 Kombinationen: sieben feste Datenstufen (1 GB bis 100 GB), jeweils über mehrere Laufzeiten von 3 bis 90 Tagen verkauft, dazu zwei Unbegrenzt-Stufen ("Unlimited" und "Unlimited Plus") mit 1 bis 30 Tagen Laufzeit. Auch eSIM Cards Unbegrenzt-Tarife drosseln nach einem täglichen Vollgeschwindigkeits-Kontingent, aber anders als Airalo nennt eSIM Card die tatsächliche GB-Zahl nicht, sondern spricht nur von "einem erlaubten Limit an Daten mit voller Geschwindigkeit pro 24 Stunden".
+  </p>
+
+  <h2>Preis-Schnappschuss (USA, vor jedem Code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Tarif</th>
+          <th>Airalo</th>
+          <th>eSIM Card</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Kleinste Stufe</td><td>4,50 $ (1 GB, keine feste Tagesgrenze genannt)</td><td>1,92 $ (1 GB, 3 Tage)</td></tr>
+        <tr><td>Mittlere Stufe</td><td>&mdash; (keine direkte 10-GB-Entsprechung für die USA)</td><td>12,86 $ (10 GB, 30 Tage)</td></tr>
+        <tr><td>Unbegrenzt</td><td>Nur regional, nicht für die USA allein</td><td>12,05 $ (Unlimited, 7 Tage)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Airalo berechnet den Preis pro Gigabyte, ohne eSIM Cards breites Menü an Laufzeiten pro Stufe. eSIM Card berechnet Gigabyte und Tage zusammen. Ein fairer Vergleich muss sowohl die Datenmenge als auch die Anzahl der Tage abgleichen, nicht nur den Preis auf den ersten Blick.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airalo:</strong> {{ providerA.primaryCode }}, {{ airaloDiscount | lower }}. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>eSIM Card:</strong> {{ providerB.primaryCode }}, {{ esimcardusDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Keiner der beiden Codes ist unser eigener: Airalos Code ist ein 3-$-Airmoney-Empfehlungscode (unser eigener heißt ADAMLINDS3, auf der Airalo-Seite aufgeführt), und eSIM Cards ESIM10 ist ein öffentlicher Code, der direkt auf der eigenen Startseite beworben wird. Keiner der beiden Anbieter betreibt ein Partnerprogramm, das einen Code wie bei <a href="/holafly/">Holafly</a> oder <a href="/ubigi/">Ubigi</a> unterstützt.</p>
+  </div>
+
+  <h2>Ist Airalo oder eSIM Card die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm Airalo, wenn&hellip;</h3>
+      <ul>
+        <li>Du den größeren, bekannteren Katalog und das App-Ökosystem willst</li>
+        <li>Bei einer Mehrländer-Reise ein regionaler Unbegrenzt-Tarif mehrere Stopps auf einmal abdeckt</li>
+        <li>Du damit einverstanden bist, auf die nächste feste Tarifgröße aufzurunden</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm eSIM Card, wenn&hellip;</h3>
+      <ul>
+        <li>Du deine genaue GB-Zahl und Reisedauer kennst und einen passend zugeschnittenen Tarif willst, statt aufzurunden</li>
+        <li>Du die Option willst, aus derselben App gegen Aufpreis eine virtuelle Telefonnummer dazuzukaufen</li>
+        <li>Du dir vor dem Kauf sicher bist, denn eSIM Cards Rückgaberichtlinie ist streng, sobald die eSIM installiert oder genutzt wurde</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Airalos "viele verschiedene Codes" sind kein unübersichtliches Partnerprogramm, sondern einzelne Empfehlungslinks.</strong> Airalos Airmoney-Programm gibt jedem Nutzer seinen eigenen 3-$-Rabattcode, deshalb kursieren Dutzende verschiedene Codes statt einer offiziellen Aktion. eSIM Card hat genau einen öffentlichen Code, ESIM10, der auf der eigenen Startseite beworben wird.
+  </p>
+  <p>
+    <strong>Nur Airalo nennt die tägliche Unbegrenzt-Geschwindigkeitszahl.</strong> Airalos regionale Unbegrenzt-Tarife laufen 3 GB pro Tag mit voller Geschwindigkeit, danach gedrosselt auf 1 Mbit/s. eSIM Cards Unbegrenzt-Stufen drosseln ebenfalls täglich, veröffentlichen die GB-Zahl aber nicht, du verlässt dich also auf ein ungenanntes statt ein konkret genanntes Limit.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Airalo vs eSIM Card: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, Airalo oder eSIM Card?</h3>
+      <p>Das kommt auf die genaue Tarifgröße an, die du vergleichst. eSIM Cards kleinste USA-Stufe (1 GB, 3 Tage für 1,92 $) unterbietet Airalos kleinste USA-Stufe (1 GB für 4,50 $), aber eSIM Card verkauft deutlich mehr Größen- und Laufzeit-Kombinationen. Ein echter Vergleich muss also sowohl GB als auch Tage abgleichen, nicht nur die günstigste Zahl herauspicken.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Hat einer der beiden wirklich unbegrenzte Daten ganz ohne Deckelung?</h3>
+      <p>Nein, beide drosseln nach hohem Verbrauch am selben Tag. Airalo veröffentlicht für seine regionalen Unbegrenzt-Tarife eine konkrete Zahl (3 GB/Tag volle Geschwindigkeit, danach 1 Mbit/s). eSIM Cards Unbegrenzt-Stufen drosseln ebenfalls, nennen die tägliche GB-Zahl aber nicht, nur "ein erlaubtes Limit an Daten mit voller Geschwindigkeit pro 24 Stunden".</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Kann ich bei einem der beiden eine Telefonnummer bekommen?</h3>
+      <p>eSIM Card verkauft eine separate virtuelle Telefonnummer als Zusatzoption ab etwa 2,40 $ in der eigenen App. Airalo hat kein vergleichbares Telefonnummer-Produkt.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Von welchem bekommt man leichter eine Rückerstattung?</h3>
+      <p>Keiner der beiden ist großzügig, sobald ein Tarif installiert oder genutzt wurde. eSIM Cards eigene Richtlinie beschränkt Rückerstattungen auf enge Ausnahmen wie einen echten Netzausfall oder einen technischen Fehler bei null verbrauchten Daten, beantragt innerhalb von 30 Tagen. Kauf auf beiden Plattformen nur den Tarif, bei dem du dir sicher bist.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, Airalo oder eSIM Card?",
+        "acceptedAnswer":{"@type":"Answer","text":"Das kommt auf die genaue Tarifgröße an, die man vergleicht. eSIM Cards kleinste USA-Stufe, 1 GB für 3 Tage zu 1,92 $, unterbietet Airalos kleinste USA-Stufe, 1 GB für 4,50 $, aber eSIM Card verkauft deutlich mehr Größen- und Laufzeit-Kombinationen, weshalb ein fairer Vergleich sowohl GB als auch Tage abgleichen muss, nicht nur die günstigste Zahl."}
+      },
+      {
+        "@type":"Question",
+        "name":"Haben Airalo oder eSIM Card wirklich unbegrenzte Daten ganz ohne Deckelung?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nein, beide drosseln nach hohem Verbrauch am selben Tag. Airalo veröffentlicht für seine regionalen Unbegrenzt-Tarife eine konkrete Zahl, 3 GB pro Tag mit voller Geschwindigkeit und danach 1 Mbit/s. eSIM Cards Unbegrenzt-Stufen drosseln ebenfalls, nennen die tägliche GB-Zahl aber nicht, nur ein erlaubtes Limit an Daten mit voller Geschwindigkeit pro 24 Stunden."}
+      },
+      {
+        "@type":"Question",
+        "name":"Kann man bei Airalo oder eSIM Card eine Telefonnummer bekommen?",
+        "acceptedAnswer":{"@type":"Answer","text":"eSIM Card verkauft eine separate virtuelle Telefonnummer als Zusatzoption ab etwa 2,40 $ in der eigenen App. Airalo hat kein vergleichbares Telefonnummer-Produkt."}
+      },
+      {
+        "@type":"Question",
+        "name":"Von welchem Anbieter bekommt man leichter eine Rückerstattung, Airalo oder eSIM Card?",
+        "acceptedAnswer":{"@type":"Answer","text":"Keiner der beiden ist großzügig, sobald ein Tarif installiert oder genutzt wurde. eSIM Cards Richtlinie beschränkt Rückerstattungen auf enge Ausnahmen wie einen echten Netzausfall oder einen technischen Fehler bei null verbrauchten Daten, beantragt innerhalb von 30 Tagen nach dem Kauf."}
+      }
+    ]
+  }
+  </script>
+</div>
