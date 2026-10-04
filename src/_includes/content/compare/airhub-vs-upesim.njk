@@ -1,0 +1,134 @@
+<!-- Airhub vs UPeSIM Comparison Content -->
+<div class="content-section">
+
+  {% set airhubPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set airhubBest = providerA.codes | bestValidCode %}
+  {% set upesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>Airhub</strong> if you want the lowest possible per-GB price and like having SMS plus a local number bundled in. Pick <strong>UPeSIM</strong> if you want an established French MVNO with 200+ destinations and don't mind a data-only plan. Both are budget picks sold in fixed data blocks rather than unlimited, so the real decision is about what's bundled in, not which one is "better data."
+    </p>
+  </div>
+
+  <h2>The Core Difference: What's Bundled With the Data</h2>
+  <p>
+    Airhub plans include SMS and, in most destinations, a local phone number alongside the data, which is unusual at this price point. UPeSIM is data-only: no SMS, no local number, calls and texts route through your home carrier's roaming rates instead. If you need to receive a verification text or hand out a number that isn't your own while traveling, Airhub covers that without an add-on; UPeSIM doesn't do it at all.
+  </p>
+  <p>
+    UPeSIM's edge is timing and footprint. Its plans don't start counting down until your phone actually connects to the destination network, so you can install the eSIM at home, well before you fly, with no rush at the airport. Airhub doesn't advertise the same delayed-start mechanic. UPeSIM also covers 200+ countries and territories as a Paris-based MVNO running since 2018, versus Airhub's 190+.
+  </p>
+
+  <h2>Price Snapshot (per GB, before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Airhub</th>
+          <th>UPeSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States</td><td>$2.82 (3GB)</td><td>$5.55 (1GB)</td></tr>
+        <tr><td>Thailand</td><td>$0.85 (1GB)</td><td>$3.50 (1GB)</td></tr>
+        <tr><td>Japan</td><td>$1.55 (1GB)</td><td>$5.80 (1GB)</td></tr>
+        <tr><td>Europe regional</td><td>$4.50 (4GB)</td><td>$3.15 (1GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Airhub sells data in multi-gigabyte blocks (3GB, 4GB) where UPeSIM mostly sells by the single GB, so these aren't always apples-to-apples. In most of the countries above, Airhub's per-GB rate still comes out cheaper once you divide it out.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airhub:</strong> {{ airhubBest.code }}, {{ airhubBest.discount | lower }}. Our own code ({{ providerA.primaryCode }}) isn't currently applying at checkout, so {{ airhubBest.code }} is the one we recommend. <a href="/airhub/">Full code list &rarr;</a></li>
+        <li><strong>UPeSIM:</strong> {{ providerB.primaryCode }}, {{ upesimPrimary.discount | lower }}. It's a public code, not ours. <a href="/upesim/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">UPeSIM's 10% code is the bigger percentage, but Airhub's base prices run low enough in many countries that the smaller 5% still lands cheaper in dollars. Check both against your actual destination before assuming the bigger code wins.</p>
+  </div>
+
+  <h2>Is Airhub or UPeSIM the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Airhub if&hellip;</h3>
+      <ul>
+        <li>You want SMS and a local number included, not sold separately</li>
+        <li>You're headed somewhere Airhub prices sharply, like Thailand or Japan</li>
+        <li>You know roughly how much data you'll use and want the lowest per-GB rate</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with UPeSIM if&hellip;</h3>
+      <ul>
+        <li>You want to install the eSIM weeks ahead of a trip without burning validity early</li>
+        <li>Your destination isn't one of Airhub's cheap-rate countries</li>
+        <li>You'd rather use an established MVNO than a reseller app</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>UPeSIM's "doesn't start until you land" mechanic has a catch.</strong> Per UPeSIM's own FAQ, an eSIM that's installed but never activated goes stale after 60 days and shows as expired. It's a real convenience for trips a few weeks out, not a reason to install one for a trip that's still months away.
+  </p>
+  <p>
+    <strong>Neither provider publishes a refund guarantee the way some competitors do.</strong> If that matters to you more than price, <a href="/alosim/">AloSIM</a> advertises one; <a href="/simlocal/">SimLocal</a>'s No Quibble Refunds policy is another option if you also want a real UK phone number bundled in.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Airhub vs UPeSIM FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Airhub or UPeSIM</h3>
+      <p>Usually Airhub, country by country. Its multi-gigabyte blocks price out lower per GB in most of the destinations we checked, including Thailand and Japan. UPeSIM's Europe regional rate is one spot where it comes out ahead.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either include calls or texts</h3>
+      <p>Airhub includes SMS and, on most plans, a local number, but not voice calls. UPeSIM is data-only with no SMS or local number at all; both route voice calls through your home carrier's roaming rate.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I install the eSIM before I leave</h3>
+      <p>With UPeSIM, yes, and it won't start the clock until your phone connects to the destination network, as long as that's within 60 days of installing. Airhub doesn't advertise the same delayed-start behavior.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either offer a refund if it doesn't work</h3>
+      <p>Neither Airhub nor UPeSIM publicly advertises a refund guarantee. If a guaranteed refund matters to you, AloSIM or SimLocal are the options on this site that offer one.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Airhub or UPeSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Usually Airhub, country by country. Its multi-gigabyte blocks price out lower per GB in most destinations checked, including Thailand and Japan. UPeSIM's Europe regional rate is one spot where it comes out ahead."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Airhub or UPeSIM include calls or texts?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub includes SMS and, on most plans, a local number, but not voice calls. UPeSIM is data-only with no SMS or local number at all. Both route voice calls through the traveler's home carrier roaming rate."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I install a UPeSIM or Airhub eSIM before I leave?",
+        "acceptedAnswer":{"@type":"Answer","text":"UPeSIM's plan doesn't start counting until the phone connects to the destination network, as long as that happens within 60 days of installing. Airhub does not advertise the same delayed-start mechanic."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Airhub or UPeSIM offer a refund guarantee?",
+        "acceptedAnswer":{"@type":"Answer","text":"Neither provider publicly advertises a refund guarantee. AloSIM and SimLocal are the providers on this site that do."}
+      }
+    ]
+  }
+  </script>
+</div>

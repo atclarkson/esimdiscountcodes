@@ -310,5 +310,13 @@
     "title": "Airalo vs Airhub: Preset Bundles or Cheapest Per-GB? (2026 Comparison)",
     "description": "Airalo vs Airhub compared: Airalo's preset GB bundles and Airmoney referral codes against Airhub's rock-bottom per-GB pricing with SMS and a local number bundled in, plus each provider's current discount code.",
     "lastUpdated": "2026-10-04"
+  },
+  {
+    "slug": "airhub-vs-upesim",
+    "providerA": "airhub",
+    "providerB": "upesim",
+    "title": "Airhub vs UPeSIM: Cheapest Per-GB or Established MVNO? (2026 Comparison)",
+    "description": "Airhub vs UPeSIM compared: Airhub's rock-bottom per-GB pricing with bundled SMS and a local number vs UPeSIM's data-only plans from a 200+ country French MVNO that won't start the clock until you land, plus each one's discount code.",
+    "lastUpdated": "2026-10-04"
   }
 ]

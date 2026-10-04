@@ -1,0 +1,140 @@
+<!-- Comparativa Airhub vs UPeSIM (Español) -->
+<div class="content-section">
+
+  {% set airhubPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set airhubBest = providerA.codes | bestValidCode %}
+  {% set upesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set airhubEsCode = esA.codes[airhubBest.code] if (esA and esA.codes and esA.codes[airhubBest.code]) else null %}
+  {% set upesimEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set airhubDiscount = (airhubEsCode.discount if airhubEsCode) or airhubBest.discount %}
+  {% set upesimDiscount = (upesimEsCode.discount if upesimEsCode) or upesimPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>Airhub</strong> si quieres el precio por GB más bajo posible y te gusta tener SMS y un número local incluidos. Elige <strong>UPeSIM</strong> si prefieres un MVNO francés ya establecido con más de 200 destinos y no te importa un plan solo de datos. Ambos son opciones económicas con bloques de datos fijos en lugar de ilimitados, así que la decisión real está en qué incluye cada uno, no en cuáles datos son "mejores".
+    </p>
+  </div>
+
+  <h2>La diferencia principal: qué viene incluido además de los datos</h2>
+  <p>
+    Los planes de Airhub incluyen SMS y, en la mayoría de los destinos, un número de teléfono local junto con los datos, algo inusual en este rango de precio. UPeSIM es solo de datos: sin SMS, sin número local, las llamadas y los textos pasan por la tarifa de roaming de tu operador habitual. Si necesitas recibir un código de verificación por SMS o dar un número que no sea el tuyo mientras viajas, Airhub lo cubre sin complementos; UPeSIM directamente no lo ofrece.
+  </p>
+  <p>
+    La ventaja de UPeSIM está en el momento de activación y en su cobertura. Sus planes no empiezan a contar hasta que tu teléfono se conecta realmente a la red del destino, así que puedes instalar la eSIM en casa, mucho antes de volar, sin prisas en el aeropuerto. Airhub no anuncia un mecanismo de inicio retrasado equivalente. UPeSIM también cubre más de 200 países y territorios como MVNO con sede en París que funciona desde 2018, frente a los más de 190 de Airhub.
+  </p>
+
+  <h2>Resumen de precios (por GB, antes de aplicar código)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Airhub</th>
+          <th>UPeSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Estados Unidos</td><td>2,82 $ (3 GB)</td><td>5,55 $ (1 GB)</td></tr>
+        <tr><td>Tailandia</td><td>0,85 $ (1 GB)</td><td>3,50 $ (1 GB)</td></tr>
+        <tr><td>Japón</td><td>1,55 $ (1 GB)</td><td>5,80 $ (1 GB)</td></tr>
+        <tr><td>Europa (regional)</td><td>4,50 $ (4 GB)</td><td>3,15 $ (1 GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Airhub vende datos en bloques de varios gigabytes (3 GB, 4 GB), mientras que UPeSIM suele vender por GB individual, así que las cifras no siempre son directamente comparables. En la mayoría de los países de la tabla, el precio por GB de Airhub sigue saliendo más barato una vez haces el cálculo.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airhub:</strong> {{ airhubBest.code }}, {{ airhubDiscount | lower }}. Nuestro propio código ({{ providerA.primaryCode }}) no está aplicando descuento en el checkout ahora mismo, por lo que recomendamos {{ airhubBest.code }}. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>UPeSIM:</strong> {{ providerB.primaryCode }}, {{ upesimDiscount | lower }}. Es un código público, no el nuestro. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">El código del 10% de UPeSIM es el porcentaje más alto, pero los precios base de Airhub son tan bajos en muchos países que el 5% más pequeño sigue saliendo más barato en dólares. Comprueba ambos para tu destino real antes de asumir que el código más grande gana.</p>
+  </div>
+
+  <h2>¿Airhub o UPeSIM es la opción correcta?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige Airhub si&hellip;</h3>
+      <ul>
+        <li>Quieres SMS y un número local incluidos, no vendidos por separado</li>
+        <li>Viajas a un destino donde Airhub tiene precios muy ajustados, como Tailandia o Japón</li>
+        <li>Sabes más o menos cuántos datos vas a usar y quieres el precio por GB más bajo</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige UPeSIM si&hellip;</h3>
+      <ul>
+        <li>Quieres instalar la eSIM semanas antes del viaje sin gastar validez antes de tiempo</li>
+        <li>Tu destino no es uno de los países donde Airhub tiene precios agresivos</li>
+        <li>Prefieres un MVNO establecido en lugar de una app revendedora</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>El mecanismo de UPeSIM de "no empieza hasta que aterrizas" tiene una trampa.</strong> Según el propio FAQ de UPeSIM, una eSIM instalada pero nunca activada caduca a los 60 días y aparece como expirada. Es una ventaja real para viajes que están a pocas semanas, no un motivo para instalar una eSIM pensando en un viaje que todavía está a meses de distancia.
+  </p>
+  <p>
+    <strong>Ninguno de los dos proveedores anuncia una garantía de reembolso</strong> como sí hacen otros competidores. Si eso te importa más que el precio: <a href="/alosim/">AloSIM</a> anuncia una; la política de reembolso sin preguntas de <a href="/simlocal/">SimLocal</a> es otra opción si además quieres un número de teléfono real del Reino Unido incluido.
+  </p>
+  <p>
+    Para la configuración del dispositivo y conceptos básicos de eSIM que aplican a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre Airhub vs UPeSIM</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, Airhub o UPeSIM?</h3>
+      <p>Normalmente Airhub, según el país. Sus bloques de varios gigabytes salen más baratos por GB en la mayoría de los destinos comprobados, incluidos Tailandia y Japón. La tarifa regional de Europa de UPeSIM es un caso en el que sale ganando.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos incluye llamadas o mensajes?</h3>
+      <p>Airhub incluye SMS y, en la mayoría de los planes, un número local, pero no llamadas de voz. UPeSIM es solo de datos, sin SMS ni número local; ambos enrutan las llamadas de voz por la tarifa de roaming del operador habitual.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo instalar la eSIM antes de salir de viaje?</h3>
+      <p>Con UPeSIM sí, y el contador no empieza hasta que el teléfono se conecta a la red del destino, siempre que eso ocurra dentro de los 60 días siguientes a la instalación. Airhub no anuncia un comportamiento de inicio retrasado equivalente.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno ofrece reembolso si no funciona?</h3>
+      <p>Ni Airhub ni UPeSIM anuncian públicamente una garantía de reembolso. Si una devolución garantizada te importa, AloSIM y SimLocal son los proveedores de este sitio que sí la ofrecen.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, Airhub o UPeSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Normalmente Airhub, según el país. Sus bloques de varios gigabytes salen más baratos por GB en la mayoría de los destinos comprobados, incluidos Tailandia y Japón. La tarifa regional de Europa de UPeSIM es un caso en el que sale ganando."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Airhub o UPeSIM incluyen llamadas o mensajes?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub incluye SMS y, en la mayoría de los planes, un número local, pero no llamadas de voz. UPeSIM es solo de datos, sin SMS ni número local. Ambos enrutan las llamadas de voz por la tarifa de roaming del operador habitual."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se puede instalar una eSIM de UPeSIM o Airhub antes de salir de viaje?",
+        "acceptedAnswer":{"@type":"Answer","text":"El plan de UPeSIM no empieza a contar hasta que el teléfono se conecta a la red del destino, siempre que ocurra dentro de los 60 días posteriores a la instalación. Airhub no anuncia un mecanismo de inicio retrasado equivalente."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Airhub o UPeSIM ofrecen una garantía de reembolso?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ninguno de los dos proveedores anuncia públicamente una garantía de reembolso. AloSIM y SimLocal son los proveedores de este sitio que sí la ofrecen."}
+      }
+    ]
+  }
+  </script>
+</div>

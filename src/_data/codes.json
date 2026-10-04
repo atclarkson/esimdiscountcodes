@@ -1154,7 +1154,7 @@
   },
   "globalesim": {
     "name": "GlobaleSIM",
-    "lastModified": "2026-10-03",
+    "lastModified": "2026-10-04",
     "description": "Global eSIM connectivity",
     "url": "https://globalesim.com",
     "affiliateUrl": null,
@@ -1173,7 +1173,7 @@
         "discount": "10% OFF ALL PLANS",
         "description": "GlobaleSIM's own domain is still unreachable as a working eSIM store (503 error on this check, a parking page on earlier checks), so the site and this code still cannot be confirmed working.",
         "verified": true,
-        "lastTested": "2026-10-03",
+        "lastTested": "2026-10-04",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public",

@@ -1,0 +1,139 @@
+<!-- Comparativa Airhub vs Yesim (Español) -->
+<div class="content-section">
+
+  {% set airhubBest = providerA.codes | bestValidCode %}
+  {% set yesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set airhubEsCode = esA.codes[airhubBest.code] if (esA and esA.codes and esA.codes[airhubBest.code]) else null %}
+  {% set yesimEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set airhubDiscount = (airhubEsCode.discount if airhubEsCode) or airhubBest.discount %}
+  {% set yesimDiscount = (yesimEsCode.discount if yesimEsCode) or yesimPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>Airhub</strong> si quieres el precio por GB más bajo para un solo viaje y te basta con un código de descuento modesto. Elige <strong>Yesim</strong> si viajas con frecuencia y quieres un saldo de datos que se mantenga entre viajes, además de una garantía de reembolso real si tus planes cambian. En realidad no compiten por lo mismo: Airhub compite en precio de lista, Yesim compite en flexibilidad.
+    </p>
+  </div>
+
+  <h2>La diferencia principal: bloques fijos de GB frente a un saldo acumulable</h2>
+  <p>
+    Airhub vende datos en bloques fijos de varios gigabytes (3 GB, 4 GB) que siguen siendo utilizables hasta un año después de la compra, pero que no trasladan ningún crédito una vez que se activan y se consumen. Los planes "Pay & Fly" de Yesim funcionan de otra forma: recargas un saldo en dólares desde 1,10 $/GB, y lo que no uses se traslada a tu próximo viaje en lugar de caducar. Si viajas una vez al año, esa diferencia apenas importa. Si eres un viajero frecuente que recarga el mismo saldo cada pocos meses, el modelo de Yesim significa que no empiezas de cero cada vez, como sí ocurriría al comprar un bloque nuevo de Airhub.
+  </p>
+  <p>
+    La contrapartida es el precio. Airhub está en nuestra categoría "Económico" y Yesim en "Caro": por GB o por día, Airhub cuesta sistemáticamente menos. Con Yesim pagas un extra por el saldo acumulable y por la política de reembolso descrita más abajo, no por una mejor tarifa base.
+  </p>
+
+  <h2>Resumen de precios (antes de aplicar código)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Airhub</th>
+          <th>Yesim</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Estados Unidos</td><td>2,82 $ (3 GB)</td><td>8,40 $ (1 día)</td></tr>
+        <tr><td>Japón</td><td>1,55 $ (1 GB)</td><td>19,80 $ (7 días)</td></tr>
+        <tr><td>Europa (regional)</td><td>4,50 $ (4 GB)</td><td>7,70 $ (1 día, ilimitado)</td></tr>
+        <tr><td>Global</td><td>11,50 $ (3 GB)</td><td>20,90 $ (3 GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">La mayoría de estas cifras no son directamente comparables: Airhub cobra por gigabyte, Yesim cobra sobre todo por día (excepto su plan Global, que se cobra por GB y sí se alinea directamente con Airhub arriba). Un viaje corto y de poco consumo de datos favorece a Airhub en la comparación; la fila Global es la lectura directa más justa.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airhub:</strong> {{ airhubBest.code }}, {{ airhubDiscount | lower }}. El propio código de Airhub, ADAMANDLINDS, no está aplicando descuento en el checkout ahora mismo; ESIMOFFER5 arriba es el único que hemos confirmado que sigue funcionando. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>Yesim:</strong> {{ providerB.primaryCode }}, {{ yesimDiscount | lower }}, solo en tu primera compra. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">El código de Yesim es el descuento más grande sobre el papel, pero solo ayuda una vez. El 5% más pequeño de Airhub se aplica en cada pedido, lo cual importa más si compras varias veces en lugar de una sola vez como cliente nuevo.</p>
+  </div>
+
+  <h2>¿Airhub o Yesim es la opción correcta?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige Airhub si&hellip;</h3>
+      <ul>
+        <li>Quieres el precio de lista por GB más bajo para un solo viaje</li>
+        <li>Necesitas SMS o un número local incluidos con tus datos</li>
+        <li>Te basta con un código de descuento más pequeño pero repetible</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige Yesim si&hellip;</h3>
+      <ul>
+        <li>Viajas a menudo y quieres que el saldo no usado se traslade en lugar de caducar</li>
+        <li>Quieres una opción de reembolso real si compras con antelación y al final no necesitas el plan</li>
+        <li>Prefieres un descuento único más grande antes que uno recurrente más pequeño</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>El propio código de afiliado de Airhub está roto ahora mismo.</strong> ADAMANDLINDS no está aplicando descuento en el checkout de Airhub en este momento; se lo hemos reportado a Airhub y se espera que lo solucionen, pero hasta entonces ESIMOFFER5 es el único código de Airhub confirmado como funcional. El TEE20 de Yesim funciona hoy sin ese problema, solo con el límite de una compra.
+  </p>
+  <p>
+    <strong>La garantía de reembolso de Yesim va más allá que la de Airhub.</strong> Yesim anuncia una garantía de devolución de 30 días en planes que nunca se usaron, no solo los que no llegaron a activarse. Airhub, como la mayoría de los proveedores económicos por GB de este sitio, generalmente solo reembolsa un plan que nunca llegó a conectarse. Si sueles comprar eSIMs con antelación para un viaje que podría cambiar, esa es una razón real para pagar el extra de Yesim.
+  </p>
+  <p>
+    Para la configuración del dispositivo y conceptos básicos de eSIM que aplican a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre Airhub vs Yesim</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, Airhub o Yesim?</h3>
+      <p>Airhub, en casi todos los destinos comprobados. Yesim está en nuestra categoría "Caro" mientras que Airhub está en "Económico"; el precio más alto de Yesim compra un saldo acumulable y una garantía de reembolso real, no una mejor tarifa.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos traslada datos entre viajes?</h3>
+      <p>Yesim sí, a través de su saldo Pay & Fly: los dólares no usados se trasladan a tu próximo viaje en lugar de caducar. Los bloques de datos de Airhub siguen siendo comprables y utilizables hasta un año, pero una vez activados no trasladan saldo sobrante a una compra futura.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo obtener un reembolso si no uso el plan?</h3>
+      <p>Yesim anuncia una garantía de devolución de 30 días en planes que nunca se usaron en absoluto. La política de reembolso de Airhub, como la mayoría de los proveedores económicos por GB de este sitio, generalmente solo cubre un plan que nunca llegó a conectarse.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál tiene el código de descuento más grande?</h3>
+      <p>El TEE20 de Yesim da un 20% de descuento, más que el 5% actual de Airhub con ESIMOFFER5. Sin embargo, el código de Yesim solo se aplica a la primera compra, mientras que el descuento más pequeño de Airhub se aplica a cada pedido.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, Airhub o Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub, en casi todos los destinos comprobados. Yesim está en la categoría Caro mientras que Airhub está en Económico; el precio más alto de Yesim compra un saldo acumulable y una garantía de reembolso real, no una mejor tarifa."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Airhub o Yesim trasladan datos entre viajes?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim sí, a través de su saldo Pay & Fly, donde los dólares no usados se trasladan al próximo viaje en lugar de caducar. Los bloques de datos de Airhub siguen siendo utilizables hasta un año después de la compra, pero no trasladan saldo sobrante a una compra futura una vez activados."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se puede obtener un reembolso de Airhub o Yesim si no se usa el plan?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim anuncia una garantía de devolución de 30 días en planes que nunca se usaron en absoluto. La política de reembolso de Airhub generalmente solo cubre un plan que nunca llegó a conectarse, igual que la mayoría de los proveedores económicos por GB de este sitio."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál tiene el código de descuento más grande, Airhub o Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"El código TEE20 de Yesim da un 20% de descuento, más que el código ESIMOFFER5 de Airhub, actualmente del 5%. El código de Yesim solo se aplica a la primera compra, mientras que el descuento más pequeño de Airhub se aplica a cada pedido."}
+      }
+    ]
+  }
+  </script>
+</div>
