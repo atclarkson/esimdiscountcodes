@@ -1,0 +1,134 @@
+<!-- Airalo vs Airhub Comparison Content -->
+<div class="content-section">
+
+  {% set airaloPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set airhubBest = providerB.codes | bestValidCode %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>Airalo</strong> if you want a well-known name with simple preset data bundles and don't mind the sticker price. Pick <strong>Airhub</strong> if you want the lowest price per gigabyte and don't mind a plainer app. Both sell data in capped blocks rather than true unlimited, so this comparison comes down almost entirely to price and what's bundled alongside the data.
+    </p>
+  </div>
+
+  <h2>The Core Difference: Brand Pricing vs. Rock-Bottom Pricing</h2>
+  <p>
+    Airalo and Airhub both sell fixed data blocks instead of Holafly-style unlimited, but they land in very different price brackets for the same GB. In Thailand, Airhub charges $0.85 for 1GB against Airalo's $4.50. In Japan, it's $1.55 versus $4.50. That's not a rounding difference, it's Airhub pricing at roughly a fifth of Airalo's rate in some of the countries we checked directly on both sites. Airalo's tradeoff for the higher price is a more polished app and wider name recognition, plus unlimited regional eSIMs that Airhub doesn't offer at all.
+  </p>
+  <p>
+    Airhub also bundles in SMS and, in many destinations, a real local phone number on top of the data, something Airalo's standard plans don't include (SMS and calls on Airalo are limited to its Global plan only). Neither provider bundles voice calls as standard, so if you need an actual phone number with calls guaranteed, <a href="/simlocal/">SimLocal</a>'s UK plans are a better fit than either.
+  </p>
+
+  <h2>Price Snapshot (per-GB, before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Airalo</th>
+          <th>Airhub</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Thailand</td><td>$4.50 (1GB)</td><td>$0.85 (1GB)</td></tr>
+        <tr><td>Japan</td><td>$4.50 (1GB)</td><td>$1.55 (1GB)</td></tr>
+        <tr><td>United States</td><td>$4.50 (1GB)</td><td>$2.82 (3GB)</td></tr>
+        <tr><td>Europe regional</td><td>$5.27 (1GB)</td><td>$4.50 (4GB)</td></tr>
+        <tr><td>Global</td><td>$9.49 (1GB)</td><td>$11.50 (3GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Airhub sells in multi-GB blocks (3GB, 4GB) rather than Airalo's 1GB units, so per-GB math is what actually matters here, not the sticker price. Airhub wins clearly on single-country plans in cheaper destinations; the two are close on global and regional packages.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airalo:</strong> {{ providerA.primaryCode }}, {{ airaloPrimary.discount | lower }}. <a href="/airalo/">Full code list &rarr;</a></li>
+      <li><strong>Airhub:</strong> {{ airhubBest.code }}, {{ airhubBest.discount | lower }}. <a href="/airhub/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Neither code here is huge on its own; Airalo's referral-style codes top out around 15% off a first order, and Airhub's prices are already so low before any code that the percentage matters less than the per-GB rate itself. See each provider's own page for why Airhub's own code isn't the one we're recommending right now.</p>
+  </div>
+
+  <h2>Is Airalo or Airhub the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Airalo if&hellip;</h3>
+      <ul>
+        <li>You want a bigger, more established app with a polished interface</li>
+        <li>You're headed somewhere on Airalo's unlimited regional list and want to size up instead of per-GB</li>
+        <li>Price per gigabyte isn't your main concern</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with Airhub if&hellip;</h3>
+      <ul>
+        <li>You're chasing the lowest cost per gigabyte, especially in Southeast Asia or Japan</li>
+        <li>You want SMS and a local number bundled in, not sold separately</li>
+        <li>You're fine with a less polished app in exchange for a cheaper plan</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Airhub's per-GB advantage shrinks on global and regional plans.</strong> The gap that's huge on single-country plans (Thailand, Japan) narrows a lot on bigger multi-country packages, where Airalo's $9.49 global 1GB rate and Airhub's $11.50 global 3GB rate land much closer together per gigabyte. Compare the specific destination you need rather than assuming Airhub automatically wins everywhere.
+  </p>
+  <p>
+    <strong>Airalo's "many different codes" and Airhub's own code not working right now are two separate stories.</strong> Airalo's scattered codes are mostly individual users' Airmoney referral links worth $3 each, a quirk of its referral program rather than a problem. Airhub's own code (ADAMANDLINDS) has stopped applying a discount at checkout and has been reported to Airhub as a likely temporary issue; until that's fixed, the public code ESIMOFFER5 is the one that actually works on Airhub.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Airalo vs Airhub FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Airalo or Airhub</h3>
+      <p>Airhub, usually by a wide margin on single-country plans. In Thailand and Japan specifically, Airhub's per-GB rate runs at roughly a fifth of Airalo's. The gap narrows on global and regional multi-country plans.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either include a phone number or calls</h3>
+      <p>Airhub includes SMS and, in many destinations, a local number, but not calls. Airalo's standard plans don't include SMS or calls at all; only its Global plan does. Neither is a full phone replacement; see SimLocal's UK plans if you need calls guaranteed.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which has unlimited data</h3>
+      <p>Airalo, on a regional basis (Europe, Asia, North America, Latin America, the Caribbean, MENA, Africa, and Australia), throttled to 1Mbps after 3GB of full-speed use per day. Airhub doesn't sell unlimited plans at all, only fixed multi-GB blocks.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Is Airhub's own discount code working</h3>
+      <p>Not currently. Airhub's own code, ADAMANDLINDS, isn't applying a discount at checkout right now; it's been reported to Airhub and the public code ESIMOFFER5 is the one that currently works.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Airalo or Airhub?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub, usually by a wide margin on single-country plans. In Thailand and Japan, Airhub's per-GB rate runs at roughly a fifth of Airalo's. The gap narrows on global and regional multi-country plans."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Airalo or Airhub include a phone number or calls?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub includes SMS and, in many destinations, a local number, but not calls. Airalo's standard plans don't include SMS or calls at all; only its Global plan does."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Airalo or Airhub offer unlimited data?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airalo does, on a regional basis, throttled to 1Mbps after 3GB of full-speed use per day. Airhub only sells fixed multi-GB blocks, not unlimited plans."}
+      },
+      {
+        "@type":"Question",
+        "name":"Is Airhub's own discount code currently working?",
+        "acceptedAnswer":{"@type":"Answer","text":"Not currently. Airhub's own code, ADAMANDLINDS, is not applying a discount at checkout; it has been reported to Airhub, and the public code ESIMOFFER5 is the one currently confirmed to work."}
+      }
+    ]
+  }
+  </script>
+</div>
