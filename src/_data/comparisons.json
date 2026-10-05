@@ -326,5 +326,13 @@
     "title": "Airhub vs UPeSIM: Cheapest Per-GB or Established MVNO? (2026 Comparison)",
     "description": "Airhub vs UPeSIM compared: Airhub's rock-bottom per-GB pricing with bundled SMS and a local number vs UPeSIM's data-only plans from a 200+ country French MVNO that won't start the clock until you land, plus each one's discount code.",
     "lastUpdated": "2026-10-04"
+  },
+  {
+    "slug": "simlocal-vs-bytesim",
+    "providerA": "simlocal",
+    "providerB": "bytesim",
+    "title": "SimLocal vs ByteSIM: Free Bundled UK Number or Verified Real Number Elsewhere? (2026 Comparison)",
+    "description": "SimLocal vs ByteSIM compared: SimLocal's UK plans with a full UK phone number bundled in free and no ID check, vs ByteSIM's ID-verified real local numbers across nine countries, each one's discount code, and which real-number setup actually fits your trip.",
+    "lastUpdated": "2026-10-05"
   }
 ]

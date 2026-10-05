@@ -508,7 +508,7 @@
   },
   "nomad": {
     "name": "Nomad",
-    "lastModified": "2025-08-09",
+    "lastModified": "2026-10-05",
     "description": "eSIM for digital nomads",
     "url": "https://www.nomadesim.com",
     "affiliateUrl": "https://lotusflareinc.pxf.io/0GnvzL",
@@ -1154,7 +1154,7 @@
   },
   "globalesim": {
     "name": "GlobaleSIM",
-    "lastModified": "2026-10-04",
+    "lastModified": "2026-10-05",
     "description": "Global eSIM connectivity",
     "url": "https://globalesim.com",
     "affiliateUrl": null,
@@ -1171,9 +1171,9 @@
       {
         "code": "ESIMSIO10",
         "discount": "10% OFF ALL PLANS",
-        "description": "GlobaleSIM's own domain is still unreachable as a working eSIM store (503 error on this check, a parking page on earlier checks), so the site and this code still cannot be confirmed working.",
+        "description": "GlobaleSIM's own domain is still unreachable as a working eSIM store (503 error again on this check, a parking page on earlier checks), so the site and this code still cannot be confirmed working.",
         "verified": true,
-        "lastTested": "2026-10-04",
+        "lastTested": "2026-10-05",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public",
@@ -1327,7 +1327,7 @@
   },
   "orange": {
     "name": "Orange",
-    "lastModified": "2026-10-03",
+    "lastModified": "2026-10-05",
     "description": "European eSIM plans",
     "url": "https://travel.orange.com/en",
     "affiliateUrl": null,
@@ -1346,7 +1346,7 @@
         "discount": "5% OFF",
         "description": "We checked Orange Travel's own store (travel.orange.com) directly and found no promo code field or code-based discount system anywhere in the checkout flow; its discounts are automatic strike-through sale prices on larger plans instead (currently advertising up to 50% off as a site-wide sale, no code required). We could not find AW0 advertised or working anywhere on the real site, so we're marking it invalid.",
         "verified": false,
-        "lastTested": "2026-10-04",
+        "lastTested": "2026-10-05",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public",

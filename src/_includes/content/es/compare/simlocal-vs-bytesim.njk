@@ -1,0 +1,149 @@
+<!-- Comparativa SimLocal vs ByteSIM (Español) -->
+<div class="content-section">
+
+  {% set simlocalPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set bytesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set simlocalEsCode = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
+  {% set bytesimEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set simlocalDiscount = (simlocalEsCode.discount if simlocalEsCode) or simlocalPrimary.discount %}
+  {% set bytesimDiscount = (bytesimEsCode.discount if bytesimEsCode) or bytesimPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      SimLocal y ByteSIM son dos casos raros en esta web porque venden un número de teléfono real, no solo datos. Elige <strong>SimLocal</strong> si tu viaje es a Reino Unido y quieres ese número incluido gratis en el plan, sin verificación de identidad. Elige <strong>ByteSIM</strong> si necesitas un número en otro sitio, ya que cubre nueve países, incluidos Reino Unido, Estados Unidos, Canadá, Francia, España, Australia, Vietnam, Corea del Sur y Tailandia, a cambio de un paso de verificación con pasaporte y selfie.
+    </p>
+  </div>
+
+  <h2>La diferencia principal: gratis e incluido frente a verificado y más amplio</h2>
+  <p>
+    Los planes de SimLocal para Reino Unido incluyen un número de teléfono británico completo directamente en el plan: sin producto aparte, sin subir documentos, sin paso adicional. Compramos uno nosotros mismos para un viaje a Reino Unido precisamente por esto, y confirmamos que funciona para llamadas y mensajes, no solo datos. El inconveniente es que es exclusivo de Reino Unido; SimLocal no vende un número incluido para ningún otro país.
+  </p>
+  <p>
+    ByteSIM hace lo contrario: un número real es un plan específico que eliges, disponible en nueve países, con verificación de identidad exigida por la normativa local de telecomunicaciones (una foto del pasaporte y un selfie) antes de que se active el número. Eso supone más fricción que el número de SimLocal en Reino Unido, pero también es la única de las dos opciones que puede darte un número estadounidense, canadiense o del sudeste asiático, no solo uno británico.
+  </p>
+
+  <h2>Resumen de funciones</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>&nbsp;</th>
+          <th>SimLocal</th>
+          <th>ByteSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Número de teléfono real</td><td>Solo Reino Unido, incluido gratis en los planes de Reino Unido</td><td>9 países, vendido como un tipo de plan propio</td></tr>
+        <tr><td>Verificación de identidad para el número</td><td>Ninguna</td><td>Foto de pasaporte + selfie</td></tr>
+        <tr><td>Política de reembolso</td><td>"No Quibble Refunds", sin necesidad de justificación</td><td>Estándar, caso por caso</td></tr>
+        <tr><td>Canal de soporte</td><td>WhatsApp, correo electrónico, centro de ayuda</td><td>WhatsApp (seguimiento proactivo, confirmado de primera mano)</td></tr>
+        <tr><td>Tiendas físicas</td><td>Un puñado de puntos en aeropuertos (confirmado: Heathrow)</td><td>Ninguna, solo app y web</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Ninguno de los dos proveedores publica una tarifa por GB directamente comparable para el mismo destino y tamaño de plan, así que esta tabla compara las funciones que realmente los diferencian en lugar de una columna de precios que de todos modos compararía cosas distintas.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>SimLocal:</strong> {{ providerA.primaryCode }}, {{ simlocalDiscount | lower }}. <a href="{{ providerAUrl }}">Ver lista completa de códigos &rarr;</a></li>
+      <li><strong>ByteSIM:</strong> {{ providerB.primaryCode }}, {{ bytesimDiscount | lower }}. <a href="{{ providerBUrl }}">Ver lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">El código de SimLocal es el nuestro y es el mejor de sus cinco códigos activos. El TPDBYTE de ByteSIM se anuncia en otros sitios como un 10% de descuento, pero lo probamos en un pedido real y solo ahorró alrededor de un 5%, así que cuenta con esa cifra más baja.</p>
+  </div>
+
+  <h2>¿SimLocal o ByteSIM es la mejor opción?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige SimLocal si&hellip;</h3>
+      <ul>
+        <li>Tu viaje es específicamente a Reino Unido</li>
+        <li>No quieres subir documentos de identidad solo para conseguir un número</li>
+        <li>Quieres una opción de reembolso sin preguntas si no te convence</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige ByteSIM si&hellip;</h3>
+      <ul>
+        <li>Tu destino es Estados Unidos, Canadá, Francia, España, Australia, Vietnam, Corea del Sur o Tailandia</li>
+        <li>No te importa completar una verificación de identidad para tener un número real</li>
+        <li>Quieres llamadas, mensajes, compartir datos por hotspot y una IP local incluidos con el número, no solo datos</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>El número de SimLocal es realmente gratuito; el de ByteSIM tampoco es un cargo aparte, pero conlleva un proceso.</strong> SimLocal simplemente te da el número de Reino Unido como parte del plan que ya ibas a comprar. Los planes con número de ByteSIM son una referencia de producto propia con minutos de llamadas y roaming incluidos. En el plan de España que compramos, costó 13,20 $ tras la Summer Sale automática de ByteSIM, no un cargo adicional, pero conseguir que funcionara requirió una verificación de identidad, una breve espera y un mensaje de WhatsApp al soporte antes de que la eSIM se activara de verdad.
+  </p>
+  <p>
+    <strong>La capacidad de respuesta del soporte parece similar sobre el papel, pero se nota distinta en la práctica.</strong> Ambos usan WhatsApp como canal en tiempo real. En nuestra propia prueba con ByteSIM, el soporte no solo respondió cuando escribimos, sino que volvió a contactarnos por su cuenta unas dos horas después para comprobar si la eSIM ya había activado. No hemos tenido ocasión de probar el soporte de WhatsApp de SimLocal de la misma manera, así que no podemos decir si funciona igual.
+  </p>
+  <p>
+    Para conocer los fundamentos de configuración y compatibilidad de eSIM que aplican a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés). Si te bastaría con un número virtual gratuito en lugar de uno local real, mira nuestra <a href="/compare/bytesim-vs-alosim/">comparativa ByteSIM vs AloSIM</a>.
+  </p>
+
+  <!-- FAQ -->
+  <h2>SimLocal vs ByteSIM: Preguntas frecuentes</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Cuál ofrece un número de teléfono gratuito?</h3>
+      <p>SimLocal, solo en planes de Reino Unido: un número británico completo viene incluido sin coste adicional y sin verificación de identidad. Los números de ByteSIM cubren más países, pero se venden como un plan propio y requieren verificación de identidad.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Necesito verificación de identidad con SimLocal o ByteSIM?</h3>
+      <p>No para el número de Reino Unido de SimLocal. Con ByteSIM, solo si quieres específicamente un plan con número: una foto de pasaporte y un selfie, según la normativa local de telecomunicaciones. Los planes de solo datos de ByteSIM no lo requieren.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál tiene mejor política de reembolso?</h3>
+      <p>SimLocal, sobre el papel: anuncia una política "No Quibble Refunds" sin necesidad de justificación. El proceso de reembolso de ByteSIM es estándar y se evalúa caso por caso.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo conseguir un número fuera de Reino Unido con alguno de los dos?</h3>
+      <p>No con SimLocal, cuyo número incluido es exclusivo de Reino Unido. ByteSIM cubre Estados Unidos, Canadá, Reino Unido, Francia, España, Australia, Vietnam, Corea del Sur y Tailandia.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Qué código de descuento es mayor?</h3>
+      <p>El ADAMANDLINDS de SimLocal, con un 10% de descuento. El TPDBYTE de ByteSIM se anuncia en otros sitios como un 10%, pero al probarlo nosotros mismos en un pedido real solo ahorró alrededor de un 5%.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Cuál ofrece un número de teléfono gratuito, SimLocal o ByteSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal, solo en planes de Reino Unido: un número británico completo viene incluido sin coste adicional y sin verificación de identidad. Los números de ByteSIM cubren más países, pero se venden como un plan propio y requieren verificación de identidad."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Necesito verificación de identidad para el número de teléfono con SimLocal o ByteSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"No para el número de Reino Unido de SimLocal. Con ByteSIM, solo para un plan con número específicamente, una foto de pasaporte y un selfie, según la normativa local de telecomunicaciones. Los planes de solo datos de ByteSIM no lo requieren."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál tiene mejor política de reembolso, SimLocal o ByteSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal, sobre el papel: anuncia una política de reembolsos sin preguntas y sin necesidad de justificación. El proceso de reembolso de ByteSIM es estándar y se evalúa caso por caso."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Puedo conseguir un número de teléfono fuera de Reino Unido con SimLocal o ByteSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"No con SimLocal, cuyo número incluido es exclusivo de Reino Unido. ByteSIM cubre Estados Unidos, Canadá, Reino Unido, Francia, España, Australia, Vietnam, Corea del Sur y Tailandia."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Qué código de descuento es mayor, el de SimLocal o el de ByteSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"El ADAMANDLINDS de SimLocal da un 10% de descuento. El TPDBYTE de ByteSIM se anuncia en otros sitios como un 10%, pero probado en un pedido real solo ahorró alrededor de un 5%."}
+      }
+    ]
+  }
+  </script>
+</div>

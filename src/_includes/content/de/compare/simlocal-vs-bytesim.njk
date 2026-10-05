@@ -1,0 +1,149 @@
+<!-- SimLocal vs ByteSIM Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set simlocalPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set bytesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set simlocalDeCode = deA.codes[providerA.primaryCode] if (deA and deA.codes and deA.codes[providerA.primaryCode]) else null %}
+  {% set bytesimDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set simlocalDiscount = (simlocalDeCode.discount if simlocalDeCode) or simlocalPrimary.discount %}
+  {% set bytesimDiscount = (bytesimDeCode.discount if bytesimDeCode) or bytesimPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      SimLocal und ByteSIM sind auf dieser Seite beide selten, weil sie eine echte Telefonnummer verkaufen, nicht nur Daten. Wähle <strong>SimLocal</strong>, wenn deine Reise nach Großbritannien geht und du die Nummer kostenlos im Tarif enthalten haben willst, ohne Ausweisprüfung. Wähle <strong>ByteSIM</strong>, wenn du eine Nummer anderswo brauchst: es deckt neun Länder ab, darunter Großbritannien, die USA, Kanada, Frankreich, Spanien, Australien, Vietnam, Südkorea und Thailand, dafür musst du einen Ausweis und ein Selfie hochladen.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Kostenlos und gebündelt vs. verifiziert und breiter</h2>
+  <p>
+    SimLocals UK-Tarife enthalten eine vollständige britische Telefonnummer direkt im Tarif: kein separates Produkt, kein Ausweis-Upload, kein zusätzlicher Schritt. Wir haben selbst eines für eine UK-Reise genau deswegen gekauft und bestätigt, dass es für Anrufe und SMS funktioniert, nicht nur für Daten. Der Haken: Es gilt nur für Großbritannien; SimLocal verkauft keine gebündelte Nummer für irgendein anderes Land.
+  </p>
+  <p>
+    ByteSIM geht den umgekehrten Weg: Eine echte Nummer ist ein eigener Tarif, den man auswählt, verfügbar in neun Ländern, mit einer von der lokalen Telekom-Regulierung vorgeschriebenen Identitätsprüfung (ein Passfoto und ein Selfie), bevor die Nummer aktiviert wird. Das ist mehr Aufwand als SimLocals UK-Nummer, aber auch die einzige der beiden Optionen, die eine US-amerikanische, kanadische oder südostasiatische Nummer liefern kann, nicht nur eine britische.
+  </p>
+
+  <h2>Funktions-Schnappschuss</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>&nbsp;</th>
+          <th>SimLocal</th>
+          <th>ByteSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Echte Telefonnummer</td><td>Nur Großbritannien, kostenlos in UK-Tarifen enthalten</td><td>9 Länder, als eigener Tariftyp verkauft</td></tr>
+        <tr><td>Ausweisprüfung für die Nummer</td><td>Keine</td><td>Passfoto + Selfie</td></tr>
+        <tr><td>Rückgaberichtlinie</td><td>"No Quibble Refunds", keine Begründung nötig</td><td>Standard, Einzelfallprüfung</td></tr>
+        <tr><td>Support-Kanal</td><td>WhatsApp, E-Mail, Hilfecenter</td><td>WhatsApp (proaktive Nachverfolgung, selbst bestätigt)</td></tr>
+        <tr><td>Physische Filialen</td><td>Eine Handvoll Flughafen-Kioske (bestätigt: Heathrow)</td><td>Keine, nur App und Web</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Keiner der beiden Anbieter veröffentlicht eine direkt vergleichbare Preis-pro-GB-Angabe für dasselbe Ziel und dieselbe Tarifgröße, daher vergleicht diese Tabelle die tatsächlich unterscheidenden Funktionen statt einer Preisspalte, die ohnehin Äpfel mit Birnen vergleichen würde.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>SimLocal:</strong> {{ providerA.primaryCode }}, {{ simlocalDiscount | lower }}. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>ByteSIM:</strong> {{ providerB.primaryCode }}, {{ bytesimDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">SimLocals Code ist unser eigener und der beste von seinen fünf funktionierenden Codes. ByteSIMs TPDBYTE wird andernorts als 10% Rabatt beworben, aber wir haben ihn bei einer echten Bestellung getestet und er hat nur rund 5% gespart, plane also mit der kleineren Zahl.</p>
+  </div>
+
+  <h2>Ist SimLocal oder ByteSIM die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm SimLocal, wenn&hellip;</h3>
+      <ul>
+        <li>Deine Reise speziell nach Großbritannien geht</li>
+        <li>Du keinen Ausweis hochladen willst, nur um eine Nummer zu bekommen</li>
+        <li>Du eine Rückgabeoption ohne Rückfragen willst, falls es nicht passt</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm ByteSIM, wenn&hellip;</h3>
+      <ul>
+        <li>Dein Ziel die USA, Kanada, Frankreich, Spanien, Australien, Vietnam, Südkorea oder Thailand ist</li>
+        <li>Dir eine Identitätsprüfung für eine echte Nummer nichts ausmacht</li>
+        <li>Du Anrufe, SMS, Hotspot-Freigabe und eine lokale IP-Adresse zusammen mit der Nummer willst, nicht nur Daten</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>SimLocals Nummer ist wirklich kostenlos, ByteSIMs ist auch kein separater Aufpreis, kommt aber mit einem Prozess.</strong> SimLocal gibt dir die UK-Nummer einfach als Teil des Tarifs, den du sowieso kaufen wolltest. ByteSIMs Nummer-Tarife sind eine eigene Produktvariante mit eingebauten Anrufminuten und Roaming. Beim Spanien-Tarif, den wir gekauft haben, kostete das 13,20 $ nach ByteSIMs automatischem Summer Sale, kein separater Posten, aber bis die Nummer lief, brauchte es eine Identitätsprüfung, eine kurze Wartezeit und eine WhatsApp-Nachricht an den Support, bevor die eSIM tatsächlich online ging.
+  </p>
+  <p>
+    <strong>Die Support-Reaktionsfähigkeit sieht auf dem Papier ähnlich aus, fühlt sich in der Praxis aber anders an.</strong> Beide betreiben WhatsApp als Echtzeit-Kanal. In unserem eigenen ByteSIM-Test hat der Support nicht nur geantwortet, als wir geschrieben haben, sondern sich rund zwei Stunden später von selbst zurückgemeldet, um zu prüfen, ob die eSIM online gegangen war. Wir hatten bisher keinen Anlass, SimLocals WhatsApp-Support auf die gleiche Weise zu testen, können also nicht sagen, ob es dort genauso läuft.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch). Würde dir stattdessen eine kostenlose virtuelle Nummer (keine echte lokale) reichen? Dann sieh dir unseren <a href="/compare/bytesim-vs-alosim/">ByteSIM vs AloSIM Vergleich</a> an.
+  </p>
+
+  <!-- FAQ -->
+  <h2>SimLocal vs ByteSIM: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Welcher Anbieter gibt eine kostenlose Telefonnummer?</h3>
+      <p>SimLocal, nur für UK-Tarife: eine vollständige britische Nummer ist kostenlos enthalten und ohne Ausweisprüfung. ByteSIMs Nummern decken mehr Länder ab, werden aber als eigener Tarif verkauft und erfordern eine Identitätsprüfung.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Brauche ich bei SimLocal oder ByteSIM eine Ausweisprüfung?</h3>
+      <p>Nicht für SimLocals UK-Nummer. Bei ByteSIM nur, wenn du gezielt einen Nummer-Tarif willst: ein Passfoto und ein Selfie, gemäß lokaler Telekom-Regulierung. ByteSIMs reine Daten-Tarife brauchen das nicht.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Wer hat die bessere Rückgaberichtlinie?</h3>
+      <p>SimLocal, auf dem Papier: Es wirbt mit "No Quibble Refunds" ohne nötige Begründung. ByteSIMs Rückgabeprozess ist Standard und wird im Einzelfall geprüft.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Kann ich bei einem der beiden eine Nummer außerhalb Großbritanniens bekommen?</h3>
+      <p>Nicht bei SimLocal, dessen gebündelte Nummer nur für Großbritannien gilt. ByteSIM deckt die USA, Kanada, Großbritannien, Frankreich, Spanien, Australien, Vietnam, Südkorea und Thailand ab.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welcher Rabattcode ist größer?</h3>
+      <p>SimLocals ADAMANDLINDS, 10% Rabatt. ByteSIMs TPDBYTE wird andernorts als 10% beworben, aber bei einer echten Bestellung von uns getestet, hat er nur rund 5% gespart.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Welcher Anbieter gibt eine kostenlose Telefonnummer, SimLocal oder ByteSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal, nur für UK-Tarife: eine vollständige britische Nummer ist kostenlos enthalten und ohne Ausweisprüfung. ByteSIMs Nummern decken mehr Länder ab, werden aber als eigener Tarif verkauft und erfordern eine Identitätsprüfung."}
+      },
+      {
+        "@type":"Question",
+        "name":"Brauche ich bei SimLocal oder ByteSIM eine Ausweisprüfung für die Telefonnummer?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nicht für SimLocals UK-Nummer. Bei ByteSIM nur für einen Nummer-Tarif, ein Passfoto und ein Selfie, gemäß lokaler Telekom-Regulierung. ByteSIMs reine Daten-Tarife brauchen das nicht."}
+      },
+      {
+        "@type":"Question",
+        "name":"Wer hat die bessere Rückgaberichtlinie, SimLocal oder ByteSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal, auf dem Papier: Es wirbt mit einer No-Quibble-Refunds-Richtlinie ohne nötige Begründung. ByteSIMs Rückgabeprozess ist Standard und wird im Einzelfall geprüft."}
+      },
+      {
+        "@type":"Question",
+        "name":"Kann ich bei SimLocal oder ByteSIM eine Telefonnummer außerhalb Großbritanniens bekommen?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nicht bei SimLocal, dessen gebündelte Nummer nur für Großbritannien gilt. ByteSIM deckt die USA, Kanada, Großbritannien, Frankreich, Spanien, Australien, Vietnam, Südkorea und Thailand ab."}
+      },
+      {
+        "@type":"Question",
+        "name":"Welcher Rabattcode ist größer, SimLocals oder ByteSIMs?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocals ADAMANDLINDS gibt 10% Rabatt. ByteSIMs TPDBYTE wird andernorts als 10% beworben, bei einer echten Bestellung getestet hat er aber nur rund 5% gespart."}
+      }
+    ]
+  }
+  </script>
+</div>
