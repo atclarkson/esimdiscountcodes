@@ -1,0 +1,150 @@
+<!-- Airhub vs Saily Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set airhubPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set airhubBest = providerA.codes | bestValidCode %}
+  {% set sailyPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set airhubDeCode = deA.codes[airhubBest.code] if (deA and deA.codes and deA.codes[airhubBest.code]) else null %}
+  {% set sailyDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set airhubDiscount = (airhubDeCode.discount if airhubDeCode) or airhubBest.discount %}
+  {% set sailyDiscount = (sailyDeCode.discount if sailyDeCode) or sailyPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Wähle <strong>Airhub</strong>, wenn du den günstigsten Preis pro Gigabyte willst und es dir gefällt, dass SMS und eine lokale Nummer im Paket enthalten sind, statt als Extra verkauft zu werden. Wähle <strong>Saily</strong>, wenn du unterwegs sowieso für ein VPN und einen Werbeblocker bezahlen würdest, oder wenn du auf einer Reise mehrere Länder durchquerst und nicht an jeder Grenze eine neue eSIM einrichten willst. Beide liegen in unserer Preiskategorie "Günstig", kommen dort aber auf unterschiedlichen Wegen hin.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Pro-GB-Pakete mit Extras oder eine grenzenlose eSIM mit eingebautem VPN</h2>
+  <p>
+    Airhub verkauft Daten in mehreren Gigabyte-Paketen (3 GB, 4 GB) statt der Einzeltag- oder Einzel-GB-Einheiten, die die meisten Mitbewerber nutzen, und das landet in günstigeren Zielen bei wirklich niedrigen Preisen pro Gigabyte. Dazu gibt es SMS und, in vielen Zielen, eine lokale Telefonnummer zur Daten-SIM dazu, was die meisten günstigen eSIM-Apps nicht bieten. Was Airhub nicht bietet, sind Sicherheitsfunktionen, und du wählst weiterhin pro Ziel ein neues Paket aus.
+  </p>
+  <p>
+    Saily ist der eSIM-Ableger von NordVPN, entwickelt vom selben Unternehmen (Nord Security), daher ist in jedem Tarif Werbeblocker, Schutz vor Malware- und Phishing-Seiten sowie ein virtuelles Standort-Tool bereits eingebaut. Außerdem verkauft Saily eine einzige, universelle eSIM statt eines separaten Profils pro Region: einmal installiert, funktioniert sie weiter, wenn du in ein neues unterstütztes Land einreist. Der Nachteil ist der Preis pro Gigabyte, der in den meisten von uns geprüften Zielen deutlich höher liegt als bei Airhub.
+  </p>
+
+  <h2>Preis-Schnappschuss (vor jedem Code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Ziel</th>
+          <th>Airhub</th>
+          <th>Saily</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Thailand</td><td>0,85 $ (1 GB)</td><td>2,99 $ (1 GB)</td></tr>
+        <tr><td>Japan</td><td>1,55 $ (1 GB)</td><td>3,99 $ (1 GB)</td></tr>
+        <tr><td>USA</td><td>2,82 $ (3 GB)</td><td>3,99 $ (1 GB)</td></tr>
+        <tr><td>Europa (regional)</td><td>4,50 $ (4 GB)</td><td>4,99 $ (1 GB)</td></tr>
+        <tr><td>Weltweit</td><td>11,50 $ (3 GB)</td><td>8,99 $ (1 GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Airhub verkauft in Mehr-GB-Paketen, daher fällt der Preis pro Gigabyte in den meisten Zeilen oben günstiger aus, als es der Listenpreis vermuten lässt; beim weltweiten Tarif ist Saily das einzige Ziel hier, bei dem der Preis pro GB tatsächlich niedriger ausfällt. Die Preise sind die eigenen, zum Zeitpunkt unserer Prüfung gelisteten Preise der jeweiligen Anbieter und ändern sich mit der Zeit.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airhub:</strong> {{ airhubBest.code }}, {{ airhubDiscount | lower }}. Unser eigener Code, {{ providerA.primaryCode }}, wird an der Kasse derzeit nicht angewendet; wir haben das gemeldet und zeigen bis zur Behebung {{ airhubBest.code }} an. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>Saily:</strong> {{ providerB.primaryCode }}, {{ sailyDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Keiner der beiden Codes ist für sich genommen ein großer Rabatt; die eigentliche Ersparnis bei beiden Anbietern kommt von der Grundpreisstruktur, nicht vom Prozentsatz.</p>
+  </div>
+
+  <h2>Ist Airhub oder Saily die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm Airhub, wenn&hellip;</h3>
+      <ul>
+        <li>Du den niedrigsten Preis pro GB willst, besonders in günstigen Zielen wie Thailand oder Japan</li>
+        <li>Du SMS und eine lokale Nummer im Datenpaket willst, statt sie als Extra zu kaufen</li>
+        <li>Du ungefähr weißt, wie viele Daten du pro Ziel brauchst, und es dir nichts ausmacht, pro Ziel ein neues Paket zu wählen</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm Saily, wenn&hellip;</h3>
+      <ul>
+        <li>Du unterwegs sowieso für ein VPN oder einen Werbeblocker bezahlen würdest</li>
+        <li>Es eine Reise durch mehrere Länder ist und du nicht an jeder Grenze eine neue eSIM einrichten willst</li>
+        <li>Du Vielflieger bist und die Lounge-Pässe der Ultra-Stufe tatsächlich nutzen würdest</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Sailys "unbegrenzt" hat eine tägliche Obergrenze.</strong> Die Fair-Use-Richtlinie deckelt die volle Geschwindigkeit in den meisten Zielen auf 5 GB in einem rollierenden 24-Stunden-Fenster (3 GB in manchen), danach wird bis zur Mitternachts-Rücksetzung vor Ort auf 1 Mbit/s gedrosselt. Airhub verkauft gar keine Unbegrenzt-Tarife, es gibt dort also keine vergleichbare Obergrenze, dafür aber auch nicht die Sorglosigkeit: Du kaufst ein festes Paket und musst im Blick behalten, wann es aufgebraucht ist.
+  </p>
+  <p>
+    <strong>Keiner der beiden ersetzt vollständig eine Telefonnummer.</strong> Airhubs lokale Nummer deckt SMS ab, aber keine Anrufe. Saily bietet weder eine lokale Nummer noch SMS. Wer wirklich eine Nummer mit garantierten Anrufen braucht, findet bei <a href="/de/simlocal/">SimLocal</a>s UK-Tarifen eine solche, die wir selbst gekauft und bestätigt haben. Wer sich bei beiden lieber das GB-Zählen ganz sparen will, sollte sich <a href="/de/holafly/">Holaflys</a> Pauschaltarife mit unbegrenzten Daten ansehen.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Airhub vs Saily: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, Airhub oder Saily?</h3>
+      <p>In den meisten geprüften Zielen Airhub. Es verkauft Daten in Mehr-GB-Paketen, die zu einem niedrigeren Preis pro GB führen als Sailys Einzel-GB-Preise, besonders in günstigen Zielen wie Thailand und Japan. Beim weltweiten Tarif ist Sailys Preis pro GB die eine Ausnahme, bei der er niedriger ausfällt.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bietet Airhub ein VPN oder Sicherheitsfunktionen?</h3>
+      <p>Nein. Airhub bietet Daten, plus in vielen Zielen SMS und eine lokale Nummer, aber keine eingebauten Sicherheitstools. Saily bringt in jedem Tarif Werbeblocker, Schutz vor Malware- und Phishing-Seiten sowie ein virtuelles Standort-Tool mit, da es vom Mutterunternehmen von NordVPN entwickelt wird.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Ist Sailys unbegrenzte Datennutzung wirklich unbegrenzt?</h3>
+      <p>Für normale Nutzung ja. Sailys Fair-Use-Richtlinie erlaubt volle Geschwindigkeit bis 5 GB in einem rollierenden 24-Stunden-Fenster in den meisten Zielen, 3 GB in manchen, danach wird bis zur Mitternachts-Rücksetzung vor Ort auf 1 Mbit/s gedrosselt. Airhub bietet keine Unbegrenzt-Tarife an, das betrifft also nur Saily.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welcher Anbieter gibt mir eine lokale Telefonnummer?</h3>
+      <p>Airhub, in vielen Zielen, im Datenpaket enthalten, deckt aber nur SMS ab und keine Anrufe. Saily bietet gar keine lokale Nummer an. Für eine Nummer mit garantierten Anrufen siehe stattdessen SimLocals UK-Tarife.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Kann ich bei einem der beiden Anbieter eine eSIM über mehrere Länder hinweg nutzen?</h3>
+      <p>Ja, bei Saily: Es ist eine einzige, universelle eSIM, die weiter funktioniert, wenn du in ein neues unterstütztes Land einreist. Airhub verkauft ein Paket pro Land, Region oder weltweit, bei einer Reise durch mehrere Länder wählst du also meist vorab ein regionales oder weltweites Paket, statt an jeder Grenze zu wechseln.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, Airhub oder Saily?",
+        "acceptedAnswer":{"@type":"Answer","text":"In den meisten geprüften Zielen Airhub. Es verkauft Daten in Mehr-GB-Paketen, die zu einem niedrigeren Preis pro GB führen als Sailys Einzel-GB-Preise, besonders in günstigen Zielen wie Thailand und Japan. Beim weltweiten Tarif ist Sailys Preis pro GB die eine Ausnahme, bei der er niedriger ausfällt."}
+      },
+      {
+        "@type":"Question",
+        "name":"Bietet Airhub ein VPN oder Sicherheitsfunktionen?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nein. Airhub bietet Daten, plus in vielen Zielen SMS und eine lokale Nummer, aber keine eingebauten Sicherheitstools. Saily bringt in jedem Tarif Werbeblocker, Schutz vor Malware- und Phishing-Seiten sowie ein virtuelles Standort-Tool mit, da es vom Mutterunternehmen von NordVPN entwickelt wird."}
+      },
+      {
+        "@type":"Question",
+        "name":"Ist Sailys unbegrenzte Datennutzung wirklich unbegrenzt?",
+        "acceptedAnswer":{"@type":"Answer","text":"Für normale Nutzung ja. Sailys Fair-Use-Richtlinie erlaubt volle Geschwindigkeit bis 5 GB in einem rollierenden 24-Stunden-Fenster in den meisten Zielen, 3 GB in manchen, danach wird bis zur Mitternachts-Rücksetzung vor Ort auf 1 Mbit/s gedrosselt. Airhub bietet keine Unbegrenzt-Tarife an, das betrifft also nur Saily."}
+      },
+      {
+        "@type":"Question",
+        "name":"Welcher Anbieter gibt eine lokale Telefonnummer, Airhub oder Saily?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub, in vielen Zielen, im Datenpaket enthalten, deckt aber nur SMS ab und keine Anrufe. Saily bietet gar keine lokale Nummer an."}
+      },
+      {
+        "@type":"Question",
+        "name":"Kann ich bei Airhub oder Saily eine eSIM über mehrere Länder hinweg nutzen?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ja, bei Saily: Es ist eine einzige, universelle eSIM, die weiter funktioniert, wenn in ein neues unterstütztes Land eingereist wird. Airhub verkauft ein Paket pro Land, Region oder weltweit, daher wird bei einer Reise durch mehrere Länder meist vorab ein regionales oder weltweites Paket gewählt."}
+      }
+    ]
+  }
+  </script>
+</div>
