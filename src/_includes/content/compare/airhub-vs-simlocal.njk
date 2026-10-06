@@ -1,0 +1,114 @@
+<!-- Airhub vs SimLocal Comparison Content -->
+<div class="content-section">
+
+  {% set airhubPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set airhubBest = providerA.codes | bestValidCode %}
+  {% set simlocalPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Both sit in our "Cheap" price bracket, but they're cheap in different ways. Pick <strong>Airhub</strong> if you just want the lowest per-gigabyte price and don't mind tracking usage. Pick <strong>SimLocal</strong> if you're headed to the UK specifically and want a real phone number bundled into the plan, plus a no-questions refund if it doesn't work out.
+    </p>
+  </div>
+
+  <h2>The Core Difference: Lowest Price-Per-GB vs. a Free Bundled UK Number</h2>
+  <p>
+    Airhub's whole pitch is per-GB pricing that undercuts most of the competition: $0.85 for 1GB in Thailand, $1.55 for 1GB in Japan, numbers that beat what <a href="/airalo/">Airalo</a> or <a href="/saily/">Saily</a> charge for the same amount in the same countries. It sells multi-gigabyte blocks (3GB, 4GB) rather than single-day or single-GB units, and most plans bundle SMS and, in many destinations, a local phone number alongside the data, though not voice calls.
+  </p>
+  <p>
+    SimLocal takes a narrower but more complete approach to the number question: most of its UK plans include a full UK phone number capable of calls and texts, not just SMS, bundled directly into the plan at no extra cost. We bought one ourselves for a UK trip specifically for that reason and confirmed it worked. The catch is it's UK-only; SimLocal doesn't sell a bundled number for any other country the way it does for the UK.
+  </p>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airhub:</strong> our own code, {{ providerA.primaryCode }}, currently isn't applying at checkout. <strong>{{ airhubBest.code }}</strong> is the code we actually recommend right now, for {{ airhubBest.discount | lower }}. <a href="/airhub/">Full code list &rarr;</a></li>
+      <li><strong>SimLocal:</strong> {{ providerB.primaryCode }}, {{ simlocalPrimary.discount | lower }}. <a href="/simlocal/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Both codes are ours, but only SimLocal's is currently working at checkout. We've flagged the Airhub issue directly with Airhub and expect it to be fixed; until then, {{ airhubBest.code }} is the Airhub code to use.</p>
+  </div>
+
+  <h2>Is Airhub or SimLocal the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Airhub if&hellip;</h3>
+      <ul>
+        <li>You want the lowest price per gigabyte and are comfortable tracking usage</li>
+        <li>You're headed somewhere Airhub prices sharply, like Thailand or Japan</li>
+        <li>SMS is enough; you don't need a number that takes voice calls</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with SimLocal if&hellip;</h3>
+      <ul>
+        <li>Your trip is specifically to the UK</li>
+        <li>You want calls and texts on a real local number, not just SMS</li>
+        <li>You want a no-questions refund policy as a safety net</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Airhub's data is cheaper almost everywhere, but its number coverage is wider and shallower.</strong> Airhub's local numbers (where offered) handle SMS across many destinations; SimLocal's bundled number is deeper (actual calls, not just texts) but limited to one country. If you need a real number for Thailand or Japan rather than the UK, Airhub's SMS-only number is the closer fit by default, since SimLocal doesn't offer one there at all.
+  </p>
+  <p>
+    <strong>SimLocal's refund policy is a genuine safety net Airhub doesn't match.</strong> SimLocal advertises "No Quibble Refunds," no explanation required. Airhub's own site advertises a 200MB no-commitment free trial instead, which is a different kind of risk reduction (try before you commit, rather than get your money back after).
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Airhub vs SimLocal FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Airhub or SimLocal</h3>
+      <p>Airhub, on a pure per-GB basis in most destinations. SimLocal's value comes from the bundled UK number rather than beating Airhub on price per gigabyte.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which one gives me a real phone number</h3>
+      <p>SimLocal, if you're going to the UK: most UK plans include a full number for calls and texts. Airhub bundles a local number on many plans too, but it's SMS-only, no voice calls, and the destination lineup is different from SimLocal's UK-only offer.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I get a refund if I change my mind</h3>
+      <p>SimLocal advertises a "No Quibble Refunds" policy with no explanation required. Airhub doesn't advertise an equivalent refund policy; it instead offers a 200MB free trial for new users to test before committing.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Is either provider's own discount code currently working</h3>
+      <p>SimLocal's is. Airhub's own code, {{ providerA.primaryCode }}, currently isn't applying at checkout; we've reported it to Airhub and recommend using {{ airhubBest.code }} in the meantime.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Airhub or SimLocal?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub, on a pure per-GB basis in most destinations. SimLocal's value comes from its bundled UK phone number rather than beating Airhub on price per gigabyte."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which gives a real phone number, Airhub or SimLocal?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal, for UK trips: most UK plans include a full number for calls and texts. Airhub bundles a local number on many plans too, but it is SMS-only with no voice calls, and its destination lineup differs from SimLocal's UK-only offer."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Airhub or SimLocal offer a refund?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal advertises a No Quibble Refunds policy with no explanation required. Airhub does not advertise an equivalent refund policy, offering a 200MB free trial for new users instead."}
+      },
+      {
+        "@type":"Question",
+        "name":"Is Airhub's or SimLocal's own discount code currently working?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal's own code is currently working at checkout. Airhub's own code is not currently applying a discount and has been reported to Airhub; ESIMOFFER5 is the Airhub code currently recommended instead."}
+      }
+    ]
+  }
+  </script>
+</div>
