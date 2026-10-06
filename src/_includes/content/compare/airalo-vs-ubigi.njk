@@ -1,0 +1,133 @@
+<!-- Airalo vs Ubigi Comparison Content -->
+<div class="content-section">
+
+  {% set airaloPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set ubigiPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>Airalo</strong> if you want a one-off eSIM for a specific trip at the lowest per-GB price. Pick <strong>Ubigi</strong> if you'd rather set up a recurring plan for a country you visit often, or you want connectivity from an established telecom (Transatel, part of NTT Group) rather than a smaller reseller. They're built around genuinely different buying patterns, not just a price difference.
+    </p>
+  </div>
+
+  <h2>The Core Difference: One-Off Marketplace vs Recurring Plans</h2>
+  <p>
+    Airalo is a marketplace: pick a country or region, buy a fixed GB bucket (or an unlimited regional plan), use it, and buy a fresh one next time. There's no account relationship beyond that single purchase. Ubigi sells the same kind of one-off bucket too, but it also sells <strong>recurring</strong> plans that renew automatically: monthly (locked in for a 3-month minimum before you can cancel) or annual (paid upfront for 12 months, non-cancellable and non-refundable during that year). If you fly to the same country every month for work, that recurring structure can beat buying a new Airalo eSIM every single trip. If you're a one-and-done traveler, it's just an extra commitment you don't need.
+  </p>
+  <p>
+    Airalo also sells <strong>unlimited regional eSIMs</strong> (Europe, Asia, North America, Latin America, the Caribbean, MENA, Africa, Australia), throttled to 1Mbps after 3GB of full-speed use each day. Ubigi doesn't publish an equivalent unlimited product: every Ubigi plan, one-off or recurring, is a fixed data allowance that doesn't roll over once the period ends.
+  </p>
+
+  <h2>Price Snapshot (1GB-equivalent, before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Airalo</th>
+          <th>Ubigi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States</td><td>$4.50 (1GB)</td><td>$4.00 (1GB)</td></tr>
+        <tr><td>France</td><td>&mdash;</td><td>$4.00 (3GB)</td></tr>
+        <tr><td>Europe regional</td><td>$5.27 (1GB)</td><td>&mdash;</td></tr>
+        <tr><td>Global</td><td>$9.49 (1GB)</td><td>$25.00 (1GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">On a single-country US plan the two are close, Ubigi is actually a touch cheaper per GB there. The gap opens wide on global coverage: Ubigi's global plan runs well over double Airalo's per-GB global rate. Ubigi's France plan also bundles 3GB at the same price Airalo charges for 1GB in the US, which is the kind of destination-specific pricing quirk that's worth checking before assuming either provider is uniformly cheaper.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airalo:</strong> {{ providerA.primaryCode }}, {{ airaloPrimary.discount | lower }}. <a href="/airalo/">Full code list &rarr;</a></li>
+      <li><strong>Ubigi:</strong> {{ providerB.primaryCode }}, {{ ubigiPrimary.discount | lower }}. <a href="/ubigi/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ubigi's code is ours, which is why it's shown first on Ubigi's own page. Airalo doesn't run an affiliate program that supports a code like that, so its code is the best public one we've verified; see the <a href="/airalo/">Airalo page</a> for why so many different codes circulate for it.</p>
+  </div>
+
+  <h2>Is Airalo or Ubigi the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Airalo if&hellip;</h3>
+      <ul>
+        <li>You need a one-off eSIM for a single upcoming trip</li>
+        <li>You want the lowest per-GB price on a global or multi-region plan</li>
+        <li>You'd rather not deal with a recurring billing commitment at all</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with Ubigi if&hellip;</h3>
+      <ul>
+        <li>You visit the same country often enough that a recurring monthly plan beats buying a fresh eSIM each time</li>
+        <li>You'd rather buy from an established MVNO (Transatel, part of NTT Group) than a smaller reseller</li>
+        <li>You already use Ubigi-connected-car data (BMW, Toyota, Jeep, and others run on the same network) and like one provider</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Ubigi's recurring plans lock you in more than a typical eSIM purchase.</strong> A monthly plan can't be cancelled until you've held it for at least three months, and an annual plan can't be cancelled or refunded at all during its twelve-month term. Airalo has no recurring product, so there's nothing to lock into either way: every purchase is a standalone eSIM.
+  </p>
+  <p>
+    <strong>Airalo's many different discount codes are personal referral codes, not one official deal.</strong> Airalo's Airmoney program gives each user their own $3-off code to share, which is why codes like NEWTOAIRALO15 (new customers) and AIRALOESIM10 (existing customers, $10+ orders) exist side by side. Ubigi runs a conventional affiliate program instead, so ADAMANDLINDS is a single code covering every plan type, one-off or recurring.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide. Want the no-data-meter option instead of either? See our <a href="/holafly/">Holafly</a> page.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Airalo vs Ubigi FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Airalo or Ubigi</h3>
+      <p>It depends on the destination. For a single-country US plan they're close (Ubigi is actually a touch cheaper per GB there). For global coverage, Airalo is far cheaper per GB than Ubigi.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either have a recurring monthly plan</h3>
+      <p>Ubigi does: a monthly plan that renews automatically but can't be cancelled until you've held it for at least 3 months, or an annual plan paid upfront and non-cancellable for 12 months. Airalo only sells one-off eSIMs, no recurring billing.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does unused data roll over on either provider</h3>
+      <p>No, on neither. Airalo's GB buckets expire with the plan's validity window, and Ubigi doesn't carry unused data into the next billing period on any plan type.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Who actually runs Ubigi, and is Airalo similar</h3>
+      <p>Ubigi is a brand of Transatel, a French MVNO enabler now part of NTT Group, which also supplies the connectivity behind connected-car systems for automakers including BMW, Toyota, and Jeep. Airalo is a dedicated eSIM marketplace without that telecom-operator pedigree, reselling capacity across many networks instead.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Airalo or Ubigi?",
+        "acceptedAnswer":{"@type":"Answer","text":"It depends on the destination. For a single-country US plan the two are close, with Ubigi actually a touch cheaper per GB there. For global coverage, Airalo is far cheaper per GB than Ubigi."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does either Airalo or Ubigi have a recurring monthly plan?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ubigi does: a monthly plan that renews automatically but can't be cancelled until held for at least 3 months, or an annual plan paid upfront and non-cancellable for 12 months. Airalo only sells one-off eSIMs with no recurring billing."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does unused data roll over on Airalo or Ubigi?",
+        "acceptedAnswer":{"@type":"Answer","text":"No, on neither. Airalo's GB buckets expire with the plan's validity window, and Ubigi does not carry unused data into the next billing period on any plan type."}
+      },
+      {
+        "@type":"Question",
+        "name":"Who runs Ubigi, and is Airalo similar?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ubigi is a brand of Transatel, a French MVNO enabler now part of NTT Group, which also supplies connectivity for connected-car systems from automakers including BMW, Toyota, and Jeep. Airalo is a dedicated eSIM marketplace without that telecom-operator pedigree, reselling capacity across many networks instead."}
+      }
+    ]
+  }
+  </script>
+</div>

@@ -1173,7 +1173,7 @@
         "discount": "10% OFF ALL PLANS",
         "description": "GlobaleSIM's own domain is still unreachable as a working eSIM store (503 error again on this check, a parking page on earlier checks), so the site and this code still cannot be confirmed working.",
         "verified": true,
-        "lastTested": "2026-10-05",
+        "lastTested": "2026-10-06",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public",
@@ -1440,7 +1440,7 @@
         "discount": "10% OFF ESIM",
         "description": "Public discount code advertised on eSIM Card's site",
         "verified": true,
-        "lastTested": "2026-10-04",
+        "lastTested": "2026-10-06",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public"
