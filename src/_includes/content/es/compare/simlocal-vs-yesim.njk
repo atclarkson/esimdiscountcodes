@@ -1,0 +1,141 @@
+<!-- SimLocal vs Yesim Comparación (Español) -->
+<div class="content-section">
+
+  {% set simlocalPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set yesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set simlocalEsCode = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
+  {% set yesimEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set simlocalDiscount = (simlocalEsCode.discount if simlocalEsCode) or simlocalPrimary.discount %}
+  {% set yesimDiscount = (yesimEsCode.discount if yesimEsCode) or yesimPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>SimLocal</strong> si quieres el plan más económico, un número de teléfono real de Reino Unido incluido y una política de reembolso que puedes cancelar cuando quieras. Elige <strong>Yesim</strong> si viajas con frecuencia y quieres un saldo en dólares que se traslada entre viajes, además de una garantía de reembolso que cubre planes que simplemente no llegaste a usar. Ambos anuncian un reembolso sencillo, pero no significan lo mismo con eso.
+    </p>
+  </div>
+
+  <h2>La diferencia principal: plan fijo económico frente a saldo Pay &amp; Fly trasladable</h2>
+  <p>
+    SimLocal vende un plan fijo sencillo: eliges una eSIM de país, regional o para estudiantes, pagas una vez, y caduca 14 días después de la compra si no se usa. Está en nuestra categoría "Económico". Yesim funciona más como una cuenta prepago: recargas un saldo en dólares (desde 1,10 $/GB) en lugar de comprar un bloque fijo, y lo que te sobra se traslada a tu siguiente viaje en vez de caducar. Esa flexibilidad coloca a Yesim en nuestra categoría "Caro", ya que los planes por días cuestan entre aproximadamente 1,56 $ y 31 $ según el destino, notablemente por encima de lo que cobran SimLocal o la mayoría de los demás proveedores de esta web por una cobertura comparable.
+  </p>
+  <p>
+    Ninguno de los dos modelos está mal, están pensados para hábitos de viaje distintos. Un viaje puntual suele salir más barato con SimLocal. Quien viaja cada pocos meses y odia volver a comprar un bloque nuevo cada vez saca más partido al saldo de Yesim, que no se reinicia a cero.
+  </p>
+
+  <h2>Resumen de características</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>SimLocal</th>
+          <th>Yesim</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Categoría de precio</td><td>Económico</td><td>Caro</td></tr>
+        <tr><td>Modelo de precios</td><td>Plan fijo de país/regional/estudiante</td><td>Saldo Pay &amp; Fly en dólares, desde 1,10 $/GB</td></tr>
+        <tr><td>Política de reembolso</td><td>"No Quibble Refunds": cancela cuando quieras, sin dar explicaciones</td><td>Garantía de devolución de 30 días, solo para planes sin usar</td></tr>
+        <tr><td>Número de teléfono real</td><td>Sí, gratis en la mayoría de planes de Reino Unido (llamadas y mensajes)</td><td>No, solo datos</td></tr>
+        <tr><td>Destinos</td><td>200+</td><td>200+</td></tr>
+        <tr><td>Validez tras la compra</td><td>14 días</td><td>12 meses</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Los planes de SimLocal no trasladan saldo sin usar entre compras; todo el modelo de Yesim se basa precisamente en ese traslado. Decide según si compras una vez por viaje o recargas repetidamente la misma cuenta.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>SimLocal:</strong> {{ providerA.primaryCode }}, {{ simlocalDiscount | lower }}. <a href="/es/simlocal/">Lista completa de códigos &rarr;</a></li>
+      <li><strong>Yesim:</strong> {{ providerB.primaryCode }}, {{ yesimDiscount | lower }}. <a href="/es/yesim/">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">El código de SimLocal es nuestro propio código, confirmado al comprar un plan real de Reino Unido con él. El código de Yesim es el mejor público que hemos verificado; ahora somos afiliados de Yesim, pero todavía no nos han dado un código propio.</p>
+  </div>
+
+  <h2>¿SimLocal o Yesim, cuál elegir</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige SimLocal si&hellip;</h3>
+      <ul>
+        <li>Quieres el plan más económico para un solo viaje</li>
+        <li>Vas a Reino Unido y quieres un número local real para llamadas y mensajes</li>
+        <li>Prefieres poder cancelar por cualquier motivo en vez de depender de un reembolso más limitado "solo si no se usa"</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige Yesim si&hellip;</h3>
+      <ul>
+        <li>Viajas con frecuencia y quieres un saldo que se mantenga en vez de reiniciarse</li>
+        <li>Quieres una garantía de reembolso que cubra explícitamente un plan comprado pero nunca usado</li>
+        <li>No te importa pagar más por día a cambio de esa flexibilidad</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>Las dos políticas de reembolso no son la misma garantía.</strong> La política "No Quibble Refunds" de SimLocal te permite cancelar y recuperar tu dinero sin justificarlo. La garantía de devolución de 30 días de Yesim es más limitada: cubre planes que quedan sin usar, no un cambio de opinión después de haber empezado a usar uno. Si para ti pesa más poder cancelar sin condiciones que el plazo de devolución, esa diferencia importa.
+  </p>
+  <p>
+    <strong>Solo uno de los dos te da un número de teléfono real.</strong> La mayoría de los planes de SimLocal para Reino Unido incluyen un número británico real para llamadas y mensajes, algo que confirmamos comprando uno nosotros mismos. Yesim es solo datos; las llamadas tienen que pasar por una app como WhatsApp o Viber usando la conexión de datos, igual que la mayoría de las demás eSIM de esta web.
+  </p>
+  <p>
+    Para la configuración del dispositivo y lo básico sobre eSIM que aplica a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre SimLocal vs Yesim</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más económico, SimLocal o Yesim?</h3>
+      <p>SimLocal. Está en nuestra categoría "Económico", mientras que Yesim está en "Caro". El precio más alto de Yesim paga su saldo trasladable y su garantía de reembolso más amplia, no un mejor precio para un solo viaje.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos incluye un número de teléfono real?</h3>
+      <p>SimLocal sí, en la mayoría de sus planes de Reino Unido: un número británico completo para llamadas y mensajes, confirmado comprando uno directamente. Yesim es solo datos, sin número incluido.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál tiene la mejor política de reembolso?</h3>
+      <p>Depende de lo que necesites. La política "No Quibble Refunds" de SimLocal permite cancelar por cualquier motivo, sin dar explicaciones. La garantía de devolución de 30 días de Yesim solo cubre planes que nunca se usaron, lo cual es más limitado, pero sigue siendo más amplio que proveedores que solo reembolsan un plan que nunca llegó a conectarse.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿El saldo sin usar se traslada al siguiente viaje en alguno de los dos?</h3>
+      <p>Solo en Yesim. Su saldo Pay &amp; Fly se traslada entre viajes por diseño. SimLocal vende un plan fijo que caduca 14 días después de la compra sin traslado.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más económico, SimLocal o Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal está en la categoría Económico, mientras que Yesim está en Caro. El precio más alto de Yesim paga su saldo trasladable y su garantía de reembolso más amplia, no un mejor precio para un solo viaje."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿SimLocal o Yesim incluyen un número de teléfono real?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal incluye un número británico completo para llamadas y mensajes en la mayoría de sus planes de Reino Unido, confirmado mediante una compra directa. Yesim es solo datos, sin número de teléfono incluido."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál tiene la mejor política de reembolso, SimLocal o Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"La política No Quibble Refunds de SimLocal permite cancelar por cualquier motivo sin dar explicaciones. La garantía de devolución de 30 días de Yesim solo cubre planes nunca usados, lo cual es más limitado pero más amplio que proveedores que solo reembolsan un plan que nunca se conectó."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿El saldo sin usar se traslada al siguiente viaje en SimLocal o Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Solo el saldo Pay & Fly de Yesim se traslada entre viajes. SimLocal vende un plan fijo que caduca 14 días después de la compra sin traslado."}
+      }
+    ]
+  }
+  </script>
+</div>

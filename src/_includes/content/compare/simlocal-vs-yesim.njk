@@ -1,0 +1,135 @@
+<!-- SimLocal vs Yesim Comparison Content -->
+<div class="content-section">
+
+  {% set simlocalPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set yesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>SimLocal</strong> if you want the cheaper plan, a real UK phone number bundled in, and a cancel-anytime refund policy. Pick <strong>Yesim</strong> if you're a repeat traveler who wants a dollar balance that rolls over between trips and a refund guarantee that covers plans you simply never got around to using. Both advertise an easy refund, but they mean different things by it.
+    </p>
+  </div>
+
+  <h2>The Core Difference: Fixed Cheap Plan vs. Rolling Pay &amp; Fly Balance</h2>
+  <p>
+    SimLocal sells a straightforward fixed plan: pick a country, regional, or student eSIM, pay once, and it expires 14 days after purchase if unused. It sits in our "Cheap" price bracket. Yesim works more like a prepaid account: you top up a dollar balance (from $1.10/GB) instead of buying a fixed block, and whatever's left over rolls into your next trip instead of expiring. That flexibility puts Yesim in our "Expensive" bracket, since day-based plans run roughly $1.56 to $31 depending on destination, noticeably above what SimLocal or most other providers on this site charge for comparable coverage.
+  </p>
+  <p>
+    Neither model is wrong, they're built for different travel habits. A one-off trip usually costs less on SimLocal. Someone who travels every couple of months and hates re-buying a fresh block each time gets more out of Yesim's balance that doesn't reset to zero.
+  </p>
+
+  <h2>Feature Snapshot</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>SimLocal</th>
+          <th>Yesim</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Price bracket</td><td>Cheap</td><td>Expensive</td></tr>
+        <tr><td>Pricing model</td><td>Fixed country/regional/student plan</td><td>Pay &amp; Fly dollar balance, from $1.10/GB</td></tr>
+        <tr><td>Refund policy</td><td>"No Quibble Refunds": cancel anytime, no explanation required</td><td>30-day money-back guarantee on unused plans only</td></tr>
+        <tr><td>Real phone number</td><td>Yes, bundled free on most UK plans (calls and texts)</td><td>No, data-only</td></tr>
+        <tr><td>Destinations</td><td>200+</td><td>200+</td></tr>
+        <tr><td>Validity after purchase</td><td>14 days</td><td>12 months</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">SimLocal's plans don't roll over unused balance between purchases; Yesim's whole model is built around that rollover. Pick based on whether you buy once per trip or top up the same account repeatedly.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>SimLocal:</strong> {{ providerA.primaryCode }}, {{ simlocalPrimary.discount | lower }}. <a href="/simlocal/">Full code list &rarr;</a></li>
+      <li><strong>Yesim:</strong> {{ providerB.primaryCode }}, {{ yesimPrimary.discount | lower }}. <a href="/yesim/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">SimLocal's code is ours, confirmed by buying a real UK plan with it. Yesim's code is the best public one we've verified; we're now a Yesim affiliate, but they haven't issued us our own code yet.</p>
+  </div>
+
+  <h2>Is SimLocal or Yesim the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with SimLocal if&hellip;</h3>
+      <ul>
+        <li>You want the cheaper plan for a single trip</li>
+        <li>You're heading to the UK and want a real local number for calls and texts</li>
+        <li>You'd rather cancel for any reason than rely on a narrower "unused plan" refund</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with Yesim if&hellip;</h3>
+      <ul>
+        <li>You travel repeatedly and want a balance that carries over instead of resetting</li>
+        <li>You want a refund guarantee that explicitly covers a plan you bought but never used</li>
+        <li>You're fine paying more per day for that flexibility</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>The two refund policies aren't the same guarantee.</strong> SimLocal's "No Quibble Refunds" policy lets you cancel and get your money back without justifying why. Yesim's 30-day money-back guarantee is narrower: it covers plans that go unused, not a change of mind after you've already started using one. If unconditional cancellation matters more to you than the refund window, that difference matters.
+  </p>
+  <p>
+    <strong>Only one of them gives you an actual phone number.</strong> Most SimLocal UK plans bundle a real UK number for calls and texts, which we confirmed by buying one ourselves. Yesim is data-only; voice has to go through an app like WhatsApp or Viber over the data connection, the same as most other eSIMs on this site.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>SimLocal vs Yesim FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, SimLocal or Yesim</h3>
+      <p>SimLocal. It sits in our "Cheap" price bracket, while Yesim sits in "Expensive." Yesim's higher price pays for its rollover balance and broader refund guarantee, not for being the better deal on a single trip.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either one include a real phone number</h3>
+      <p>SimLocal does on most UK plans: a full UK number for calls and texts, confirmed by buying one ourselves. Yesim is data-only, with no bundled number.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which has the better refund policy</h3>
+      <p>It depends what you need. SimLocal's "No Quibble Refunds" policy lets you cancel for any reason, no explanation needed. Yesim's 30-day money-back guarantee only covers plans you never actually used, which is narrower but still better than providers that only refund a plan that never connected at all.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can unused data roll over to my next trip on either one</h3>
+      <p>Only on Yesim. Its Pay &amp; Fly balance carries over between trips by design. SimLocal sells a fixed plan that expires 14 days after purchase with no rollover.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, SimLocal or Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal sits in the Cheap price bracket, while Yesim sits in Expensive. Yesim's higher price pays for its rollover balance and broader refund guarantee, not for being the better deal on a single trip."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does SimLocal or Yesim include a real phone number?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal includes a full UK phone number for calls and texts on most UK plans, confirmed by buying one directly. Yesim is data-only, with no bundled phone number."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which has the better refund policy, SimLocal or Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal's No Quibble Refunds policy allows cancellation for any reason with no explanation required. Yesim's 30-day money-back guarantee only covers plans that were never used, which is narrower but still broader than providers that only refund a plan that never connected."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can unused data roll over to the next trip on SimLocal or Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Only Yesim's Pay & Fly balance carries over between trips. SimLocal sells a fixed plan that expires 14 days after purchase with no rollover."}
+      }
+    ]
+  }
+  </script>
+</div>

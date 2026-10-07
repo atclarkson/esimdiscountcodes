@@ -1,0 +1,141 @@
+<!-- SimLocal vs Yesim Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set simlocalPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set yesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set simlocalDeCode = deA.codes[providerA.primaryCode] if (deA and deA.codes and deA.codes[providerA.primaryCode]) else null %}
+  {% set yesimDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set simlocalDiscount = (simlocalDeCode.discount if simlocalDeCode) or simlocalPrimary.discount %}
+  {% set yesimDiscount = (yesimDeCode.discount if yesimDeCode) or yesimPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Wähle <strong>SimLocal</strong>, wenn du den günstigeren Tarif, eine echte britische Telefonnummer inklusive und eine jederzeit kündbare Rückerstattungsrichtlinie willst. Wähle <strong>Yesim</strong>, wenn du ein Vielreisender bist und ein Dollar-Guthaben willst, das zwischen Reisen erhalten bleibt, plus eine Rückerstattungsgarantie, die auch Tarife abdeckt, die du einfach nie genutzt hast. Beide werben mit einer unkomplizierten Rückerstattung, meinen damit aber nicht dasselbe.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Fester günstiger Tarif vs. übertragbares Pay-&amp;-Fly-Guthaben</h2>
+  <p>
+    SimLocal verkauft einen einfachen Festtarif: Land-, Regional- oder Studierenden-eSIM auswählen, einmal zahlen, und er verfällt 14 Tage nach dem Kauf, falls ungenutzt. Das liegt bei uns in der Kategorie "Günstig". Yesim funktioniert eher wie ein Prepaid-Konto: Du lädst ein Dollar-Guthaben auf (ab 1,10 $/GB) statt ein festes Paket zu kaufen, und was übrig bleibt, wird auf die nächste Reise übertragen statt zu verfallen. Diese Flexibilität bringt Yesim in unsere Kategorie "Teuer", da Tagestarife je nach Ziel etwa 1,56 $ bis 31 $ kosten, spürbar mehr als SimLocal oder die meisten anderen Anbieter auf dieser Seite für vergleichbare Abdeckung verlangen.
+  </p>
+  <p>
+    Keines der beiden Modelle ist falsch, sie sind einfach für unterschiedliche Reisegewohnheiten gemacht. Eine einmalige Reise kostet auf SimLocal meist weniger. Wer alle paar Monate verreist und es hasst, jedes Mal ein neues Paket zu kaufen, profitiert mehr von Yesims Guthaben, das nicht auf null zurückgesetzt wird.
+  </p>
+
+  <h2>Funktions-Schnappschuss</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>SimLocal</th>
+          <th>Yesim</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Preiskategorie</td><td>Günstig</td><td>Teuer</td></tr>
+        <tr><td>Preismodell</td><td>Fester Länder-/Regional-/Studierendentarif</td><td>Pay-&amp;-Fly-Dollar-Guthaben, ab 1,10 $/GB</td></tr>
+        <tr><td>Rückerstattungsrichtlinie</td><td>"No Quibble Refunds": jederzeit kündbar, keine Begründung nötig</td><td>30-tägige Geld-zurück-Garantie, nur für ungenutzte Tarife</td></tr>
+        <tr><td>Echte Telefonnummer</td><td>Ja, kostenlos bei den meisten UK-Tarifen (Anrufe und SMS)</td><td>Nein, reine Daten</td></tr>
+        <tr><td>Reiseziele</td><td>200+</td><td>200+</td></tr>
+        <tr><td>Gültigkeit nach Kauf</td><td>14 Tage</td><td>12 Monate</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">SimLocals Tarife übertragen kein ungenutztes Guthaben zwischen Käufen; Yesims gesamtes Modell basiert genau auf dieser Übertragung. Entscheide danach, ob du einmal pro Reise kaufst oder wiederholt dasselbe Konto auflädst.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>SimLocal:</strong> {{ providerA.primaryCode }}, {{ simlocalDiscount | lower }}. <a href="/de/simlocal/">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>Yesim:</strong> {{ providerB.primaryCode }}, {{ yesimDiscount | lower }}. <a href="/de/yesim/">Vollständige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">SimLocals Code ist unser eigener, bestätigt durch den Kauf eines echten UK-Tarifs damit. Yesims Code ist der beste öffentliche, den wir geprüft haben; wir sind inzwischen Yesim-Partner, aber einen eigenen Code haben sie uns noch nicht gegeben.</p>
+  </div>
+
+  <h2>Ist SimLocal oder Yesim die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm SimLocal, wenn&hellip;</h3>
+      <ul>
+        <li>Du den günstigeren Tarif für eine einzelne Reise willst</li>
+        <li>Du nach UK reist und eine echte lokale Nummer für Anrufe und SMS willst</li>
+        <li>Du lieber aus jedem Grund kündigen kannst, statt dich auf eine engere "nur ungenutzt"-Rückerstattung zu verlassen</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm Yesim, wenn&hellip;</h3>
+      <ul>
+        <li>Du häufig reist und ein Guthaben willst, das erhalten bleibt statt zurückgesetzt zu werden</li>
+        <li>Du eine Rückerstattungsgarantie willst, die ausdrücklich einen gekauften, aber nie genutzten Tarif abdeckt</li>
+        <li>Dir diese Flexibilität einen höheren Preis pro Tag wert ist</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Die beiden Rückerstattungsrichtlinien sind nicht dieselbe Garantie.</strong> SimLocals "No Quibble Refunds"-Richtlinie lässt dich kündigen und dein Geld zurückbekommen, ohne das zu begründen. Yesims 30-tägige Geld-zurück-Garantie ist enger gefasst: Sie deckt Tarife ab, die ungenutzt bleiben, nicht einen Meinungswechsel, nachdem du einen Tarif bereits genutzt hast. Wenn dir eine bedingungslose Kündigung wichtiger ist als das Rückerstattungsfenster, zählt dieser Unterschied.
+  </p>
+  <p>
+    <strong>Nur einer der beiden gibt dir eine echte Telefonnummer.</strong> Die meisten SimLocal-UK-Tarife enthalten eine echte britische Nummer für Anrufe und SMS, was wir durch einen eigenen Kauf bestätigt haben. Yesim ist reine Daten; Telefonate müssen über eine App wie WhatsApp oder Viber über die Datenverbindung laufen, genau wie bei den meisten anderen eSIMs auf dieser Seite.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>SimLocal vs Yesim: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, SimLocal oder Yesim?</h3>
+      <p>SimLocal. Es liegt bei uns in der Kategorie "Günstig", Yesim in "Teuer". Yesims höherer Preis bezahlt das übertragbare Guthaben und die breitere Rückerstattungsgarantie, nicht einen besseren Deal für eine einzelne Reise.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Hat einer der beiden eine echte Telefonnummer inklusive?</h3>
+      <p>SimLocal bei den meisten UK-Tarifen: eine vollständige britische Nummer für Anrufe und SMS, bestätigt durch einen eigenen Kauf. Yesim ist reine Daten, ohne enthaltene Nummer.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welcher hat die bessere Rückerstattungsrichtlinie?</h3>
+      <p>Das kommt darauf an, was du brauchst. SimLocals "No Quibble Refunds"-Richtlinie erlaubt eine Kündigung aus jedem Grund, ohne Begründung. Yesims 30-tägige Geld-zurück-Garantie deckt nur Tarife ab, die nie genutzt wurden, was enger ist, aber immer noch weiter geht als bei Anbietern, die nur einen Tarif erstatten, der sich nie verbunden hat.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Kann ungenutztes Datenguthaben bei einem der beiden auf die nächste Reise übertragen werden?</h3>
+      <p>Nur bei Yesim. Dessen Pay-&amp;-Fly-Guthaben wird planmäßig zwischen Reisen übertragen. SimLocal verkauft einen Festtarif, der 14 Tage nach dem Kauf ohne Übertragung verfällt.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, SimLocal oder Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal liegt in der Kategorie Günstig, Yesim in Teuer. Yesims höherer Preis bezahlt das übertragbare Guthaben und die breitere Rückerstattungsgarantie, nicht einen besseren Deal für eine einzelne Reise."}
+      },
+      {
+        "@type":"Question",
+        "name":"Haben SimLocal oder Yesim eine echte Telefonnummer inklusive?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal enthält bei den meisten UK-Tarifen eine vollständige britische Telefonnummer für Anrufe und SMS, bestätigt durch einen direkten Kauf. Yesim ist reine Daten, ohne enthaltene Telefonnummer."}
+      },
+      {
+        "@type":"Question",
+        "name":"Welcher hat die bessere Rückerstattungsrichtlinie, SimLocal oder Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocals No-Quibble-Refunds-Richtlinie erlaubt eine Kündigung aus jedem Grund ohne Begründung. Yesims 30-tägige Geld-zurück-Garantie deckt nur nie genutzte Tarife ab, was enger ist, aber weiter geht als bei Anbietern, die nur einen nie verbundenen Tarif erstatten."}
+      },
+      {
+        "@type":"Question",
+        "name":"Kann ungenutztes Datenguthaben bei SimLocal oder Yesim auf die nächste Reise übertragen werden?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nur Yesims Pay-&-Fly-Guthaben wird zwischen Reisen übertragen. SimLocal verkauft einen Festtarif, der 14 Tage nach dem Kauf ohne Übertragung verfällt."}
+      }
+    ]
+  }
+  </script>
+</div>
