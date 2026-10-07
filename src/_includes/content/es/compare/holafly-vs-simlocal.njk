@@ -1,0 +1,119 @@
+<!-- Comparativa Holafly vs SimLocal (Español) -->
+<div class="content-section">
+
+  {% set holaflyPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set simlocalPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set holaflyEsCode = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
+  {% set simlocalEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set holaflyDiscount = (holaflyEsCode.discount if holaflyEsCode) or holaflyPrimary.discount %}
+  {% set simlocalDiscount = (simlocalEsCode.discount if simlocalEsCode) or simlocalPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>Holafly</strong> si quieres un precio fijo por datos ilimitados y no quieres volver a pensar en un contador de datos. Elige <strong>SimLocal</strong> si viajas específicamente a Reino Unido y quieres un número de teléfono británico real para llamadas y mensajes incluido en el plan, no solo datos. En realidad no compiten por lo mismo: uno vende un modelo de precios, el otro una ventaja concreta para un destino.
+    </p>
+  </div>
+
+  <h2>La diferencia principal: tarifa plana ilimitada frente a pago por GB más un número de Reino Unido</h2>
+  <p>
+    Holafly cobra un precio fijo por día (o por mes, en sus planes Plans) por datos ilimitados, sin contar gigabytes en absoluto. SimLocal cobra por gigabyte, como la mayoría del mercado, pero sus planes de eSIM para Reino Unido añaden algo que la mayoría de los competidores de pago por GB no ofrecen: un número de teléfono británico completo incluido gratis, con el que puedes recibir llamadas y mensajes reales en lugar de depender solo de los datos. Si no viajas a Reino Unido, esa ventaja concreta no aplica, y la decisión se reduce a la clásica disyuntiva entre ilimitado y medido por GB.
+  </p>
+  <p>
+    Ninguna de las dos empresas publica cifras que permitan aquí una tabla de precios limpia y directamente comparable. Los precios ilimitados de Holafly son públicos y por día (por ejemplo, 1,99 $/día para una eSIM regional de EE. UU. o Europa); SimLocal fija el precio de sus planes según el destino y el nivel de datos en lugar de anunciar una tarifa plana por GB, así que la comparación justa es lo que incluye realmente cada plan y no una cifra concreta. Revisa la página de cada proveedor para ver los precios actuales en tu destino antes de comprar.
+  </p>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Holafly:</strong> {{ providerA.primaryCode }}, {{ holaflyDiscount | lower }}. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>SimLocal:</strong> {{ providerB.primaryCode }}, {{ simlocalDiscount | lower }}. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Los dos códigos que mostramos aquí son los nuestros. SimLocal tiene además otros cuatro códigos públicos, pero solo dan un 5%, así que no hay ningún motivo real para seguir buscando ahí.</p>
+  </div>
+
+  <h2>¿Holafly o SimLocal es la mejor opción?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige Holafly si&hellip;</h3>
+      <ul>
+        <li>Realmente no sabes cuántos datos vas a necesitar</li>
+        <li>Vas a hacer mucho streaming, videollamadas o usar el hotspot</li>
+        <li>Viajas por varios países de una región con un único plan ilimitado</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige SimLocal si&hellip;</h3>
+      <ul>
+        <li>Viajas a Reino Unido y quieres un número británico real para llamadas y mensajes</li>
+        <li>Prefieres contactar con soporte por WhatsApp en vez de un widget de chat</li>
+        <li>Quieres una devolución sin preguntas si al final no te convence</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>El número de Reino Unido de SimLocal va realmente incluido en el plan, no en una app aparte.</strong> Compramos un plan de SimLocal para Reino Unido precisamente para comprobarlo: la mayoría de sus eSIM de Reino Unido incluyen, junto a los datos, un número de teléfono británico completo con el que se pueden recibir llamadas y mensajes reales. Eso es distinto de un proveedor como <a href="/es/alosim/">AloSIM</a>, cuyo número basado en Hushed es una línea internacional aparte que se configura dentro de su propia app, no un número específico de Reino Unido incluido directamente en el plan.
+  </p>
+  <p>
+    <strong>Lo "ilimitado" de Holafly no es inquebrantable, y la política de devoluciones de SimLocal es inusualmente flexible.</strong> Holafly puede aplicar una reducción de velocidad por uso justo en algunos planes tras un consumo muy alto en el mismo día. SimLocal, en cambio, anuncia una política de "No Quibble Refunds": te devuelven el dinero si cambias de opinión, sin necesidad de justificarlo, algo más flexible que en la mayoría de los vendedores de eSIM de este sitio, donde una devolución suele depender de que la eSIM nunca se haya activado.
+  </p>
+  <p>
+    Para la configuración del dispositivo y lo básico sobre eSIM que aplica a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre Holafly vs SimLocal</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, Holafly o SimLocal?</h3>
+      <p>Depende del consumo y del destino. El precio fijo e ilimitado de Holafly suele merecer la pena con un consumo alto de datos; los planes de pago por GB de SimLocal suelen ser más baratos para quien consume poco, y solo SimLocal añade un número británico gratis para los viajes a Reino Unido.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿El número de Reino Unido de SimLocal sirve para llamadas y mensajes, o solo para datos?</h3>
+      <p>También para llamadas y mensajes. La mayoría de los planes de SimLocal para Reino Unido incluyen, junto a los datos, un número de teléfono británico completo, no solo una eSIM de datos. Compramos uno y lo confirmamos.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál tiene mejor soporte si algo sale mal?</h3>
+      <p>El canal de soporte 24/7 de SimLocal es WhatsApp, además de correo electrónico y un centro de ayuda, no un widget de chat en la web, respaldado por una devolución sin preguntas. Holafly, en cambio, ofrece chat en vivo directamente en su propia web.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo usar uno para el tramo de Reino Unido de un viaje y el otro para el resto?</h3>
+      <p>Sí. Un enfoque habitual es usar SimLocal específicamente para una parada en Reino Unido (por el número incluido) y el plan regional ilimitado de Holafly para el resto de un viaje por varios países donde el consumo de datos es más difícil de prever.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, Holafly o SimLocal?",
+        "acceptedAnswer":{"@type":"Answer","text":"Depende del consumo y del destino. El precio fijo e ilimitado de Holafly suele merecer la pena con un consumo alto de datos; los planes de pago por GB de SimLocal suelen ser más baratos para quien consume poco, y solo SimLocal añade un número británico gratis para los viajes a Reino Unido."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿El número de Reino Unido de SimLocal sirve para llamadas y mensajes, o solo para datos?",
+        "acceptedAnswer":{"@type":"Answer","text":"También para llamadas y mensajes. La mayoría de los planes de SimLocal para Reino Unido incluyen, junto a los datos, un número de teléfono británico completo, confirmado con una compra propia."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál tiene mejor soporte, Holafly o SimLocal?",
+        "acceptedAnswer":{"@type":"Answer","text":"El canal de soporte 24/7 de SimLocal es WhatsApp, además de correo electrónico y un centro de ayuda, respaldado por una devolución sin preguntas. Holafly ofrece chat en vivo directamente en su propia web."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Puedo usar Holafly y SimLocal en el mismo viaje?",
+        "acceptedAnswer":{"@type":"Answer","text":"Sí. Un enfoque habitual es usar SimLocal específicamente para una parada en Reino Unido por el número incluido, y el plan regional ilimitado de Holafly para el resto de un viaje por varios países."}
+      }
+    ]
+  }
+  </script>
+</div>
