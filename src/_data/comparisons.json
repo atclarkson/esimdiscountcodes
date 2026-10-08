@@ -350,5 +350,13 @@
     "title": "SimLocal vs ByteSIM: Free Bundled UK Number or Verified Real Number Elsewhere? (2026 Comparison)",
     "description": "SimLocal vs ByteSIM compared: SimLocal's UK plans with a full UK phone number bundled in free and no ID check, vs ByteSIM's ID-verified real local numbers across nine countries, each one's discount code, and which real-number setup actually fits your trip.",
     "lastUpdated": "2026-10-05"
+  },
+  {
+    "slug": "orange-vs-simlocal",
+    "providerA": "orange",
+    "providerB": "simlocal",
+    "title": "Orange vs SimLocal: Carrier Calling Bundle or a Real UK Number for Less? (2026 Comparison)",
+    "description": "Orange vs SimLocal compared: Orange's carrier-backed unlimited calls, SMS and hotspot bundle across Europe at a premium price with no working code, vs SimLocal's cheaper UK plans with a real bundled phone number and a working 10% code, and which one actually fits your trip.",
+    "lastUpdated": "2026-10-08"
   }
 ]

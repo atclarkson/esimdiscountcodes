@@ -1,0 +1,146 @@
+<!-- Orange vs SimLocal Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set orangePrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set simlocalPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set orangeDeCode = deA.codes[providerA.primaryCode] if (deA and deA.codes and deA.codes[providerA.primaryCode]) else null %}
+  {% set simlocalDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set simlocalDiscount = (simlocalDeCode.discount if simlocalDeCode) or simlocalPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Wähle <strong>Orange</strong>, wenn du Anrufe und SMS als Standardleistung eines Mobilfunkanbieters in ganz Europa willst und dafür mehr bezahlen kannst. Wähle <strong>SimLocal</strong>, wenn du eine echte lokale Telefonnummer in einer UK-eSIM willst, deutlich günstiger und mit einem funktionierenden 10%-Rabattcode. Die beiden konkurrieren nicht wirklich um denselben Reisenden: Der eine ist das Bündelangebot eines Mobilfunkanbieters, der andere ein Budget-Spezialist mit einem engeren, aber konkreteren Nummern-Vorteil.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Anruf-Bündel des Netzbetreibers vs. gebündelte lokale Nummer</h2>
+  <p>
+    Orange Travel ist der internationale eSIM-Zweig von Orange, einem der größten Telekommunikationskonzerne Europas. Die Europa-Tarife beinhalten standardmäßig unbegrenzte Anrufe und SMS sowie Hotspot-Tethering, in 39 konkret genannten Ländern und Gebieten bei dem von uns geprüften Tarif. Das ist eine Anruf-<em>Leistung</em>, die zusätzlich zu den Daten angeboten wird, keine eigene Telefonnummer.
+  </p>
+  <p>
+    SimLocal funktioniert anders und enger gefasst: Die meisten UK-eSIM-Tarife von SimLocal kommen mit einer echten UK-Telefonnummer, nicht nur mit Daten oder einem allgemeinen Anrufkontingent. Wir haben selbst einen UK-Tarif gekauft, um das zu bestätigen. Das ist eine echte Nummer, die man weitergeben kann und auf der man Anrufe und SMS empfängt, aber sie ist spezifisch für UK-Tarife, nicht eine europaweite Anruffunktion, die wie bei Orange in jedem Zielland eingebaut ist.
+  </p>
+
+  <h2>Funktions-Überblick</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>&nbsp;</th>
+          <th>Orange</th>
+          <th>SimLocal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Preiskategorie</td><td>Teuer</td><td>Günstig</td></tr>
+        <tr><td>Anrufe/SMS</td><td>Unbegrenzt, in Europa-Tarifen enthalten</td><td>Echte UK-Nummer bei den meisten UK-Tarifen</td></tr>
+        <tr><td>Funktionierender Rabattcode</td><td>Keiner bestätigt</td><td>Ja, 10% Rabatt (unser eigener)</td></tr>
+        <tr><td>Rückgaberichtlinie</td><td>Volle Rückerstattung bei ungenutzter eSIM</td><td>"No Quibble Refunds", ohne Angabe von Gründen</td></tr>
+        <tr><td>Support</td><td>Standard-Netzbetreiber-Support</td><td>24/7 WhatsApp, E-Mail, Hilfecenter</td></tr>
+        <tr><td>90-Tage/500-GB-Europa-Tarif</td><td>99,99 &euro; (40% Rabatt auf 169,99 &euro; Listenpreis)</td><td>Kein vergleichbarer Langzeit-Tarif veröffentlicht</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Orange gewährt automatische Streichpreis-Rabatte auf größere Tarife, keinen Code. SimLocals 10% kommen durch Eingabe eines Codes an der Kasse.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Orange:</strong> kein funktionierender Code bestätigt. Der früher kursierende Code <strong>{{ providerA.primaryCode }}</strong> taucht auf der echten Seite nicht auf und ist als ungültig markiert; die Ersparnis kommt stattdessen aus automatischer Mengenstaffel-Preisgestaltung. <a href="{{ providerAUrl }}">Alle Details &rarr;</a></li>
+        <li><strong>SimLocal:</strong> {{ providerB.primaryCode }}, {{ simlocalDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">SimLocals Code ist unser eigener, bestätigt durch den tatsächlichen Kauf eines Tarifs damit. Orange hat überhaupt kein Rabattcode-Feld im Bestellvorgang; der Rabatt steckt bei größeren Tarifen bereits im Verkaufspreis.</p>
+  </div>
+
+  <h2>Ist Orange oder SimLocal die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm Orange, wenn&hellip;</h3>
+      <ul>
+        <li>Du mehrere europäische Länder besuchst und Anrufe/SMS überall willst, nicht nur in UK</li>
+        <li>Du einen längeren Aufenthalt buchst, bei dem die automatischen Mengenrabatte greifen</li>
+        <li>Dir die Absicherung durch einen etablierten Netzbetreiber wichtiger ist als ein kleinerer Anbieter</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm SimLocal, wenn&hellip;</h3>
+      <ul>
+        <li>Deine Reise speziell nach UK geht und du eine echte UK-Nummer willst, nicht nur Daten</li>
+        <li>Du einen funktionierenden Rabattcode willst statt dich auf einen festen Verkaufspreis zu verlassen</li>
+        <li>Du es dir anders überlegen könntest und eine Rückerstattung ohne Rückfragen willst</li>
+      </ul>
+    </div>
+  </div>
+
+  <img class="content-photo"
+       src="https://media.adamandlinds.com/photos/large/ab82ac50-08d1-42fc-abf1-af2c5119b790.jpg"
+       alt="Ein SimLocal-eSIM-Verkaufsstand im Flughafen Heathrow mit Bildschirmen, auf denen &quot;Buy your local eSIM here&quot; steht, einem besetzten Schalter und Regalen mit SIM-Karten"
+       width="3024" height="4032">
+  <p class="content-photo-caption">SimLocals besetzter eSIM-Schalter am Flughafen Heathrow, aufgenommen auf einer kürzlichen Reise durch London.</p>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Orange hat gar keinen Rabattcode.</strong> Wir haben den Bestellvorgang direkt geprüft und nirgends ein Rabattcode-Feld gefunden. Die Ersparnis bei größeren Europa-Tarifen entsteht durch automatische Streichpreis-Rabatte, bis zu 40% auf den Listenpreis beim größten geprüften 90-Tage/500-GB-Tarif, je nachdem wie viel man im Voraus bucht.
+  </p>
+  <p>
+    <strong>SimLocals Telefonnummer gilt nur für UK, nicht weltweit.</strong> Wenn deine Reise mehrere europäische Länder umfasst, wie es Oranges Anruf-Bündel abdeckt, gilt SimLocals Nummern-Vorteil nicht auf die gleiche Weise, er ist an die UK-Tarife gebunden. Für ein breiteres Anruf-/SMS-Bündel über den ganzen Kontinent deckt Oranges Ansatz als Netzbetreiber mehr ab, nur zu einem höheren Preis und ohne anwendbaren Code.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Orange vs SimLocal: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, Orange oder SimLocal?</h3>
+      <p>SimLocal, mit deutlichem Abstand. Orange liegt in unserer Preiskategorie "Teuer", SimLocal in "Günstig". Oranges höherer Preis bezahlt ein vom Netzbetreiber gestütztes Anruf-, SMS- und Hotspot-Bündel in ganz Europa statt nur Daten.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Hat Orange oder SimLocal gerade einen funktionierenden Rabattcode?</h3>
+      <p>SimLocal ja: der eigene Code gibt 10% Rabatt, bestätigt durch den Kauf eines Tarifs damit. Orange hat überhaupt kein Rabattcode-Feld im Bestellvorgang; die einzige Ersparnis sind automatische Preisnachlässe bei größeren Tarifen.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Wer gibt mir eine echte Telefonnummer?</h3>
+      <p>SimLocal, aber nur bei den UK-Tarifen, wo die meisten Tarife eine echte UK-Nummer für Anrufe und SMS enthalten. Orange bietet stattdessen unbegrenzte Anrufe und SMS als Standardfunktion in seinen Europa-Tarifen, anstatt eine eigene Nummer.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Was, wenn ich stornieren oder eine Rückerstattung brauche?</h3>
+      <p>Beide bieten das an. Orange gewährt eine volle Rückerstattung bei einer ungenutzten eSIM. SimLocal betreibt die Richtlinie "No Quibble Refunds" ohne Angabe von Gründen.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, Orange oder SimLocal?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal, mit deutlichem Abstand. Orange liegt in der Preiskategorie Teuer, SimLocal in Günstig. Oranges höherer Preis bezahlt ein vom Netzbetreiber gestütztes Anruf-, SMS- und Hotspot-Bündel in ganz Europa statt nur Daten."}
+      },
+      {
+        "@type":"Question",
+        "name":"Haben Orange oder SimLocal einen funktionierenden Rabattcode?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal ja, der eigene Code gibt 10% Rabatt, bestätigt durch den Kauf eines Tarifs damit. Orange hat überhaupt kein Rabattcode-Feld im Bestellvorgang; die einzige Ersparnis sind automatische Preisnachlässe bei größeren Tarifen."}
+      },
+      {
+        "@type":"Question",
+        "name":"Geben Orange oder SimLocal eine echte Telefonnummer?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal schon, aber nur bei den UK-Tarifen, wo die meisten eine echte UK-Nummer für Anrufe und SMS enthalten. Orange bietet stattdessen unbegrenzte Anrufe und SMS als Standardfunktion in seinen Europa-Tarifen anstatt einer eigenen Nummer."}
+      },
+      {
+        "@type":"Question",
+        "name":"Kann ich bei Orange oder SimLocal eine Rückerstattung bekommen?",
+        "acceptedAnswer":{"@type":"Answer","text":"Beide bieten das an. Orange gewährt eine volle Rückerstattung bei einer ungenutzten eSIM. SimLocal betreibt die Richtlinie No Quibble Refunds ohne Angabe von Gründen."}
+      }
+    ]
+  }
+  </script>
+</div>
