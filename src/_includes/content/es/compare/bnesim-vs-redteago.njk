@@ -1,0 +1,144 @@
+<!-- Comparativa BNEsim vs RedteaGO (Español) -->
+<div class="content-section">
+
+  {% set redteagoPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set redteagoEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set redteagoDiscount = (redteagoEsCode.discount if redteagoEsCode) or redteagoPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>BNEsim</strong> si prefieres ver un descuento ya incluido en el precio en lugar de buscar un código, y te gusta la idea de un saldo de crédito que puedes usar en varios viajes. Elige <strong>RedteaGO</strong> si quieres el precio inicial por GB más bajo posible, más un código que resta un poco más encima. Ninguno de los dos necesita un código para ser barato, simplemente llegan ahí por caminos distintos.
+    </p>
+  </div>
+
+  <h2>La diferencia principal: precio de oferta automático o un código que se suma</h2>
+  <p>
+    BNEsim no tiene ningún sistema de códigos promocionales. Sus páginas de precios muestran un precio original tachado junto a un precio de oferta más bajo, descuentos de hasta el 70% aplicados automáticamente antes de que escribas nada. No encontramos ningún código de BNEsim que funcionara, ni siquiera los que listan algunas webs de cupones de terceros, así que aquí literalmente no hay nada que aplicar. RedteaGO funciona al revés: sus precios iniciales por GB ya son bajos, y el código público <strong>{{ providerB.primaryCode }}</strong> resta otro {{ redteagoDiscount | lower }} sobre el plan que elijas.
+  </p>
+  <p>
+    La comparación justa es entonces "el precio de oferta de BNEsim" frente a "el precio de RedteaGO más su código", no una comparación directa de precios de lista. Haz esa cuenta con el destino y la cantidad de GB que realmente necesitas, en lugar de asumir que el marketing de una web es automáticamente la mejor oferta.
+  </p>
+
+  <h2>Precio de referencia (1 GB, precio de oferta de BNEsim frente a RedteaGO con código)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>BNEsim</th>
+          <th>RedteaGO (con {{ providerB.primaryCode }})</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Estados Unidos</td><td>1,48 $</td><td>1,90 $</td></tr>
+        <tr><td>España</td><td>1,74 $</td><td>1,90 $</td></tr>
+        <tr><td>Turquía</td><td>0,92 $</td><td>1,43 $</td></tr>
+        <tr><td>Europa (regional)</td><td>0,95 $</td><td>2,65 $</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Las cifras de BNEsim son sus propios precios de oferta publicados, porque así funciona realmente su descuento; en RedteaGO ya está restado el código del 5%. BNEsim sale más barato en todos los destinos que comprobamos, pero los paquetes regionales y globales de RedteaGO vienen en cantidades de GB mayores que BNEsim no vende de la misma forma, así que comprueba el tamaño real del plan antes de asumir que el precio por GB se traslada tal cual.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>BNEsim:</strong> no encontramos ningún código que funcione. El descuento ya está incluido en el precio de oferta que muestra su propia web. <a href="{{ providerAUrl }}">Ver el desglose completo &rarr;</a></li>
+      <li><strong>RedteaGO:</strong> {{ providerB.primaryCode }}, {{ redteagoDiscount | lower }}. <a href="{{ providerBUrl }}">Ver la lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ninguno de los dos códigos es nuestro: RedteaGO no tiene el tipo de programa de afiliados que respalde un código propio, y BNEsim simplemente no trabaja con códigos. El código de RedteaGO es el mejor público que hemos verificado en el proceso de pago.</p>
+  </div>
+
+  <h2>¿BNEsim o RedteaGO es la opción adecuada?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige BNEsim si&hellip;</h3>
+      <ul>
+        <li>Visitas el mismo país de forma irregular y quieres datos que no caduquen mientras esperas (pagando un poco más)</li>
+        <li>Prefieres pagar con criptomonedas o mantener un saldo de cuenta en lugar de pagar por separado en cada viaje</li>
+        <li>Quieres programar el plan para que empiece en una fecha futura en vez de justo al comprarlo</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige RedteaGO si&hellip;</h3>
+      <ul>
+        <li>Prefieres introducir un código real al pagar en lugar de confiar en que un precio de oferta sea realmente el mejor</li>
+        <li>Puede que necesites llamadas o SMS en algún momento del viaje, no solo datos (comprueba antes la etiqueta "Calls/Texts Available" de RedteaGO)</li>
+        <li>No te importa que el plan se active de inmediato y ya no se pueda reembolsar después</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>BNEsim es solo de datos, sin ninguna opción de llamadas o SMS</strong>, mientras que RedteaGO al menos vende algunos planes etiquetados como "Calls/Texts Available" para quienes necesitan un número que funcione de verdad. Ninguno de los dos es por defecto un proveedor completo de voz y SMS, pero RedteaGO ofrece esa vía en planes concretos y BNEsim no la ofrece en ninguno.
+  </p>
+  <p>
+    <strong>La política de reembolsos va justo al contrario.</strong> BNEsim anuncia reembolsos sencillos. El propio FAQ de RedteaGO dice que las recargas de datos no son reembolsables porque el plan se activa en el momento en que se completa la compra. Si no estás seguro de que vayas a usar el plan, vale la pena tenerlo en cuenta aparte del precio de cualquiera de los dos.
+  </p>
+  <p>
+    Para conocer la configuración básica del eSIM y la compatibilidad de dispositivos, válida para ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>BNEsim vs RedteaGO: Preguntas frecuentes</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, BNEsim o RedteaGO?</h3>
+      <p>BNEsim, en todos los destinos que comprobamos, al comparar su precio de oferta automático con el precio de RedteaGO después de su código del 5%. RedteaGO no vende sus paquetes regionales y globales más grandes de la misma forma que BNEsim, así que conviene revisar el tamaño real del plan antes de asumir que esto se cumple en cualquier viaje.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿BNEsim tiene código de descuento?</h3>
+      <p>No. Revisamos directamente la página principal, la de precios y la de cupones de BNEsim y no encontramos nada anunciado. Sus descuentos aparecen como un precio de oferta tachado automático, no como un código que se aplica al pagar.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo tener llamadas o SMS con alguno de los dos?</h3>
+      <p>Con BNEsim no, que es solo de datos en todos sus planes. RedteaGO vende algunos planes etiquetados como "Calls/Texts Available" para quienes necesitan un número real, aunque la mayoría de sus planes también son solo de datos.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Con cuál puedo comprar antes de un viaje sin que empiece a correr el plazo?</h3>
+      <p>Con BNEsim, si se compra su variante más cara sin fecha de caducidad; también permite programar una fecha de inicio futura. Los planes de RedteaGO se activan de inmediato al comprarlos y tienen una validez estándar de 30 días.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Hay reembolso si no llego a usar el plan?</h3>
+      <p>BNEsim anuncia reembolsos sencillos. RedteaGO no: su propio FAQ indica que las recargas de datos no son reembolsables una vez que el plan se activa al comprarlo.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, BNEsim o RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"BNEsim, en todos los destinos comprobados, al comparar su precio de oferta automático con el precio de RedteaGO tras su código del 5%. RedteaGO no vende sus paquetes regionales y globales más grandes de la misma forma que BNEsim, por lo que conviene revisar el tamaño real del plan antes de generalizar."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Tiene BNEsim código de descuento?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. La página principal, de precios y de cupones de BNEsim no muestran ningún código promocional anunciado. Sus descuentos aparecen como un precio de oferta tachado automático en lugar de un código que se aplica al pagar."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se pueden tener llamadas o SMS con BNEsim o RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"Con BNEsim no, ya que es solo de datos en todos sus planes. RedteaGO vende algunos planes etiquetados como 'Calls/Texts Available' para quienes necesitan un número real, aunque la mayoría de sus planes también son solo de datos."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Con cuál se puede comprar antes de un viaje sin que corra la validez?",
+        "acceptedAnswer":{"@type":"Answer","text":"Con BNEsim, si se compra la variante más cara sin fecha de caducidad; también permite programar una fecha de inicio futura. Los planes de RedteaGO se activan de inmediato al comprarlos y tienen una validez estándar de 30 días."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Hay reembolso si no se llega a usar el plan?",
+        "acceptedAnswer":{"@type":"Answer","text":"BNEsim anuncia reembolsos sencillos. RedteaGO no: su propio FAQ indica que las recargas de datos no son reembolsables una vez que el plan se activa al comprarlo."}
+      }
+    ]
+  }
+  </script>
+</div>

@@ -1,0 +1,141 @@
+<!-- BNEsim vs RedteaGO Comparison Content -->
+<div class="content-section">
+
+  {% set redteagoPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>BNEsim</strong> if you'd rather see a discount already baked into the price than hunt for a code, and you like the idea of topping up a credit balance you can spend across trips. Pick <strong>RedteaGO</strong> if you want the lowest realistic per-GB starting price plus a code that stacks a little more off on top. Neither needs a code to be cheap; they just get there differently.
+    </p>
+  </div>
+
+  <h2>The Core Difference: Automatic Sale Price vs a Stacking Code</h2>
+  <p>
+    BNEsim doesn't run a promo-code system at all. Its pricing pages show a struck-through original price next to a lower sale price, discounts of up to 70% applied automatically before you type anything in. We couldn't find a single working BNEsim code anywhere, including the ones third-party coupon sites list for it, so there's genuinely nothing to apply here. RedteaGO works the other way: its starting per-GB prices are already low, and the public code <strong>{{ providerB.primaryCode }}</strong> takes a further {{ redteagoPrimary.discount | lower }} off whatever plan you pick.
+  </p>
+  <p>
+    That makes the fair comparison "BNEsim's sale price" against "RedteaGO's price plus its code," not a straight sticker-price match. Do that math on the specific destination and GB amount you actually need rather than assuming one site's marketing is automatically the better deal.
+  </p>
+
+  <h2>Price Snapshot (1GB, BNEsim's sale price vs RedteaGO after its code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>BNEsim</th>
+          <th>RedteaGO (after {{ providerB.primaryCode }})</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States</td><td>$1.48</td><td>$1.90</td></tr>
+        <tr><td>Spain</td><td>$1.74</td><td>$1.90</td></tr>
+        <tr><td>Turkey</td><td>$0.92</td><td>$1.43</td></tr>
+        <tr><td>Europe regional</td><td>$0.95</td><td>$2.65</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">BNEsim's numbers are its own listed sale prices, since that's how its discounting actually works; RedteaGO's numbers already have the 5% code subtracted. BNEsim comes out cheaper on every destination we checked, but RedteaGO's regional and global bundles are priced in bigger GB chunks that BNEsim doesn't sell the same way, so check the actual plan size before assuming the per-GB number carries straight over.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>BNEsim:</strong> no working code found. The discount is already in the sale price shown on its own site. <a href="/bnesim/">Full breakdown &rarr;</a></li>
+      <li><strong>RedteaGO:</strong> {{ providerB.primaryCode }}, {{ redteagoPrimary.discount | lower }}. <a href="/redteago/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Neither code here is ours: RedteaGO doesn't run the kind of affiliate program that supports a code like that, and BNEsim doesn't use codes at all. RedteaGO's code is the best public one we've verified at checkout.</p>
+  </div>
+
+  <h2>Is BNEsim or RedteaGO the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with BNEsim if&hellip;</h3>
+      <ul>
+        <li>You visit the same country on an irregular schedule and want data that doesn't expire while you wait (at a higher price tier)</li>
+        <li>You'd rather pay with crypto or keep a running account balance than check out separately every trip</li>
+        <li>You want the plan scheduled to start on a future date instead of the moment you buy it</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with RedteaGO if&hellip;</h3>
+      <ul>
+        <li>You want an actual code to apply at checkout rather than trusting a sale price is really the best one</li>
+        <li>You might need calls or texts on some of the trip, not just data (check for RedteaGO's "Calls/Texts Available" label first)</li>
+        <li>You're fine with a plan that activates immediately and can't be refunded once it does</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>BNEsim is data-only with no calls or texts option at all</strong>, while RedteaGO at least sells some plans labeled "Calls/Texts Available" for travelers who need a working number. Neither is a full voice-and-SMS provider by default, but RedteaGO gives you a path to one on specific plans and BNEsim doesn't give you one on any plan.
+  </p>
+  <p>
+    <strong>Refund policy cuts the other way.</strong> BNEsim advertises easy refunds. RedteaGO's own FAQ says data top-ups are non-refundable because the plan activates the moment you complete the purchase. If you're not sure you'll use a plan, that's worth weighing on its own, separate from either provider's price.
+  </p>
+  <p>
+    For eSIM device compatibility, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>BNEsim vs RedteaGO FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, BNEsim or RedteaGO</h3>
+      <p>BNEsim, on every destination we checked, once you compare its automatic sale price against RedteaGO's price after its 5% code. RedteaGO's bigger regional and global bundles aren't sold the same way by BNEsim, so check the actual plan size before assuming that holds for every trip.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does BNEsim have a discount code</h3>
+      <p>No. We checked BNEsim's homepage, pricing page, and coupon page directly and found nothing advertised. Its discounts show up as an automatic strike-through sale price instead of a code you apply at checkout.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I get calls or texts with either provider</h3>
+      <p>Not with BNEsim, which is data-only on every plan. RedteaGO sells some plans labeled "Calls/Texts Available" for travelers who need a real number, though most of its plans are data-only too.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which one lets me buy ahead of a trip without the clock running</h3>
+      <p>BNEsim, if you pay for its pricier no-expiration tier; it also lets you schedule a plan to start on a future date. RedteaGO's plans activate immediately on purchase and run on a standard 30-day validity window.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I get a refund if I don't end up using the plan</h3>
+      <p>BNEsim advertises easy refunds. RedteaGO does not: its FAQ states data top-ups are non-refundable once the plan activates at purchase.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, BNEsim or RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"BNEsim, on every destination checked, once its automatic sale price is compared against RedteaGO's price after its 5% code. RedteaGO's bigger regional and global bundles are not sold the same way by BNEsim, so the actual plan size should be checked before assuming this holds for every trip."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does BNEsim have a discount code?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. BNEsim's homepage, pricing page, and coupon page show no promo code advertised. Its discounts appear as an automatic strike-through sale price rather than a checkout code."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I get calls or texts with BNEsim or RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"Not with BNEsim, which is data-only on every plan. RedteaGO sells some plans labeled 'Calls/Texts Available' for travelers who need a real number, though most of its plans are data-only too."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which lets me buy ahead of a trip without the validity clock running?",
+        "acceptedAnswer":{"@type":"Answer","text":"BNEsim, if the pricier no-expiration tier is purchased; it also allows scheduling a plan to start on a future date. RedteaGO's plans activate immediately on purchase and run on a standard 30-day validity window."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I get a refund if I don't use the plan?",
+        "acceptedAnswer":{"@type":"Answer","text":"BNEsim advertises easy refunds. RedteaGO does not: its FAQ states data top-ups are non-refundable once the plan activates at purchase."}
+      }
+    ]
+  }
+  </script>
+</div>

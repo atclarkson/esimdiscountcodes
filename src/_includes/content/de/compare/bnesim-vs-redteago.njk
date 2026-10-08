@@ -1,0 +1,144 @@
+<!-- BNEsim vs RedteaGO Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set redteagoPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set redteagoDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set redteagoDiscount = (redteagoDeCode.discount if redteagoDeCode) or redteagoPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Wähle <strong>BNEsim</strong>, wenn du lieber einen bereits eingepreisten Rabatt siehst, statt nach einem Code zu suchen, und dir die Idee eines Guthabens gefällt, das du über mehrere Reisen hinweg nutzen kannst. Wähle <strong>RedteaGO</strong>, wenn du den niedrigsten realistischen Pro-GB-Startpreis willst, plus einen Code, der nochmal etwas obendrauf spart. Keiner der beiden braucht einen Code, um günstig zu sein, sie kommen nur auf unterschiedlichen Wegen dorthin.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Automatischer Verkaufspreis vs. ein stapelbarer Code</h2>
+  <p>
+    BNEsim betreibt überhaupt kein Promo-Code-System. Auf seinen Preisseiten steht ein durchgestrichener Originalpreis neben einem niedrigeren Verkaufspreis, Rabatte von bis zu 70% werden automatisch angewendet, bevor du irgendetwas eingibst. Wir konnten keinen einzigen funktionierenden BNEsim-Code finden, auch nicht die, die Drittanbieter-Gutschein-Seiten dafür listen, es gibt hier also tatsächlich nichts zum Einlösen. RedteaGO funktioniert andersrum: Die Pro-GB-Startpreise sind bereits niedrig, und der öffentliche Code <strong>{{ providerB.primaryCode }}</strong> zieht nochmal {{ redteagoDiscount | lower }} von jedem gewählten Tarif ab.
+  </p>
+  <p>
+    Der faire Vergleich ist also "BNEsims Verkaufspreis" gegen "RedteaGOs Preis plus seinen Code", kein direkter Vergleich der Listenpreise. Rechne das für das konkrete Ziel und die GB-Menge durch, die du tatsächlich brauchst, statt davon auszugehen, dass das Marketing einer Seite automatisch das bessere Angebot ist.
+  </p>
+
+  <h2>Preis-Schnappschuss (1 GB, BNEsims Verkaufspreis vs. RedteaGO nach Code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Ziel</th>
+          <th>BNEsim</th>
+          <th>RedteaGO (nach {{ providerB.primaryCode }})</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>USA</td><td>1,48 $</td><td>1,90 $</td></tr>
+        <tr><td>Spanien</td><td>1,74 $</td><td>1,90 $</td></tr>
+        <tr><td>Türkei</td><td>0,92 $</td><td>1,43 $</td></tr>
+        <tr><td>Europa (regional)</td><td>0,95 $</td><td>2,65 $</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">BNEsims Zahlen sind seine eigenen angezeigten Verkaufspreise, so funktioniert seine Rabattierung ja tatsächlich; bei RedteaGO ist der 5%-Code schon abgezogen. BNEsim liegt bei jedem von uns geprüften Ziel günstiger, aber RedteaGOs regionale und globale Pakete sind in größeren GB-Mengen gepreist, die BNEsim nicht auf dieselbe Weise verkauft, also prüfe die tatsächliche Tarifgröße, bevor du annimmst, dass sich der Pro-GB-Preis direkt übertragen lässt.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>BNEsim:</strong> kein funktionierender Code gefunden. Der Rabatt steckt bereits im angezeigten Verkaufspreis auf der eigenen Seite. <a href="{{ providerAUrl }}">Vollständige Übersicht &rarr;</a></li>
+      <li><strong>RedteaGO:</strong> {{ providerB.primaryCode }}, {{ redteagoDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Keiner der beiden Codes ist unser eigener: RedteaGO betreibt kein Partnerprogramm, das einen solchen Code unterstützt, und BNEsim arbeitet überhaupt nicht mit Codes. RedteaGOs Code ist der beste öffentliche, den wir an der Kasse geprüft haben.</p>
+  </div>
+
+  <h2>Ist BNEsim oder RedteaGO die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm BNEsim, wenn&hellip;</h3>
+      <ul>
+        <li>Du ein Land unregelmäßig besuchst und Daten willst, die nicht verfallen, während du wartest (gegen Aufpreis)</li>
+        <li>Du lieber mit Krypto zahlst oder ein laufendes Guthaben führst, statt bei jeder Reise einzeln zu bezahlen</li>
+        <li>Du den Tarif erst zu einem späteren Datum starten lassen willst, statt genau im Moment des Kaufs</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm RedteaGO, wenn&hellip;</h3>
+      <ul>
+        <li>Du lieber einen echten Code an der Kasse eingibst, statt darauf zu vertrauen, dass ein Verkaufspreis wirklich der beste ist</li>
+        <li>Du auf der Reise eventuell Anrufe oder SMS brauchst, nicht nur Daten (prüfe vorher RedteaGOs Label "Calls/Texts Available")</li>
+        <li>Es dir nichts ausmacht, dass ein Tarif sofort aktiviert wird und danach nicht mehr erstattet werden kann</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>BNEsim ist komplett reines Datenprodukt ohne jede Option für Anrufe oder SMS</strong>, während RedteaGO zumindest einige Tarife mit dem Label "Calls/Texts Available" für Reisende verkauft, die eine funktionierende Nummer brauchen. Keiner der beiden ist standardmäßig ein vollwertiger Sprach- und SMS-Anbieter, aber RedteaGO bietet bei bestimmten Tarifen einen Weg dorthin, BNEsim bei keinem.
+  </p>
+  <p>
+    <strong>Bei der Rückerstattung ist es genau umgekehrt.</strong> BNEsim wirbt mit einfachen Rückerstattungen. RedteaGOs eigenes FAQ sagt, dass Daten-Aufladungen nicht erstattet werden, weil der Tarif in dem Moment aktiviert wird, in dem der Kauf abgeschlossen ist. Wenn du nicht sicher bist, ob du einen Tarif wirklich nutzt, solltest du das unabhängig vom Preis beider Anbieter mit einplanen.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>BNEsim vs RedteaGO: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, BNEsim oder RedteaGO?</h3>
+      <p>BNEsim, bei jedem von uns geprüften Ziel, sobald man seinen automatischen Verkaufspreis mit RedteaGOs Preis nach dem 5%-Code vergleicht. RedteaGOs größere regionale und globale Pakete verkauft BNEsim nicht auf dieselbe Weise, prüfe also die tatsächliche Tarifgröße, bevor du annimmst, das gelte für jede Reise.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Hat BNEsim einen Rabattcode?</h3>
+      <p>Nein. Wir haben BNEsims Startseite, Preisseite und Gutschein-Seite direkt geprüft und nichts beworben gefunden. Die Rabatte zeigen sich als automatischer durchgestrichener Verkaufspreis statt als Code an der Kasse.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bekomme ich bei einem der beiden Anrufe oder SMS?</h3>
+      <p>Nicht bei BNEsim, das bei jedem Tarif reines Datenprodukt ist. RedteaGO verkauft einige Tarife mit dem Label "Calls/Texts Available" für Reisende, die eine echte Nummer brauchen, auch wenn die meisten seiner Tarife ebenfalls reine Datentarife sind.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Mit welchem kann ich vor einer Reise kaufen, ohne dass die Uhr schon läuft?</h3>
+      <p>Mit BNEsim, wenn du die teurere Variante ohne Verfallsdatum kaufst; es lässt sich außerdem ein Starttermin in der Zukunft einstellen. RedteaGOs Tarife aktivieren sich sofort beim Kauf und laufen mit einer Standard-Gültigkeit von 30 Tagen.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bekomme ich eine Rückerstattung, wenn ich den Tarif nicht nutze?</h3>
+      <p>BNEsim wirbt mit einfachen Rückerstattungen. RedteaGO nicht: Laut eigenem FAQ werden Daten-Aufladungen nicht erstattet, sobald der Tarif beim Kauf aktiviert wird.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, BNEsim oder RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"BNEsim, bei jedem geprüften Ziel, sobald der automatische Verkaufspreis mit RedteaGOs Preis nach dem 5%-Code verglichen wird. RedteaGOs größere regionale und globale Pakete werden von BNEsim nicht auf dieselbe Weise verkauft, daher sollte die tatsächliche Tarifgröße vor einer Verallgemeinerung geprüft werden."}
+      },
+      {
+        "@type":"Question",
+        "name":"Hat BNEsim einen Rabattcode?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nein. Auf BNEsims Startseite, Preisseite und Gutschein-Seite ist kein Promo-Code beworben. Die Rabatte erscheinen als automatischer durchgestrichener Verkaufspreis statt als Code an der Kasse."}
+      },
+      {
+        "@type":"Question",
+        "name":"Gibt es bei BNEsim oder RedteaGO Anrufe oder SMS?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nicht bei BNEsim, das bei jedem Tarif ein reines Datenprodukt ist. RedteaGO verkauft einige mit 'Calls/Texts Available' gelabelte Tarife für Reisende, die eine echte Nummer brauchen, auch wenn die meisten seiner Tarife ebenfalls reine Datentarife sind."}
+      },
+      {
+        "@type":"Question",
+        "name":"Mit welchem Anbieter kann vor einer Reise gekauft werden, ohne dass die Gültigkeit schon läuft?",
+        "acceptedAnswer":{"@type":"Answer","text":"Mit BNEsim, wenn die teurere Variante ohne Verfallsdatum gekauft wird; zusätzlich lässt sich ein zukünftiger Starttermin einstellen. RedteaGOs Tarife aktivieren sich sofort beim Kauf und laufen mit einer Standard-Gültigkeit von 30 Tagen."}
+      },
+      {
+        "@type":"Question",
+        "name":"Gibt es eine Rückerstattung, wenn der Tarif nicht genutzt wird?",
+        "acceptedAnswer":{"@type":"Answer","text":"BNEsim wirbt mit einfachen Rückerstattungen. RedteaGO nicht: Laut eigenem FAQ werden Daten-Aufladungen nicht erstattet, sobald der Tarif beim Kauf aktiviert wird."}
+      }
+    ]
+  }
+  </script>
+</div>
