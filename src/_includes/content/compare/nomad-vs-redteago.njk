@@ -1,0 +1,132 @@
+<!-- Nomad vs RedteaGO Comparison Content -->
+<div class="content-section">
+
+  {% set nomadBest = providerA.codes | findCode("NOMTRAVEL20") %}
+  {% set redteaPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>Nomad</strong> if you're traveling or living abroad for months and want one bundle that lasts up to a year. Pick <strong>RedteaGO</strong> if you just want the lowest realistic starting price for a shorter trip and don't mind buying data in smaller chunks more often. Both are data-only by default; neither is the pick if you specifically need a working phone number out of the box.
+    </p>
+  </div>
+
+  <h2>The Core Difference: One Big Bundle vs. Cheapest Entry Price</h2>
+  <p>
+    Nomad's regular plans work like most eSIM apps: pick a country, region, or global bundle, pay, scan, go. Its real differentiator is <strong>Global-EX</strong>, a second line of 10GB to 50GB bundles valid for up to a year, priced as low as roughly $2.58/GB on the largest sizes versus about $5.15/GB on Nomad's standard Global plan. That's built for someone actually living out of a bag for months, not a two-week trip.
+  </p>
+  <p>
+    RedteaGO doesn't compete on bundle size or validity length; it competes on the sticker price. Its own shop advertises eSIMs from as little as $0.52 for a Europe-wide plan, $0.70 for a US, Japan, or Thailand plan, and $2.90 for a global plan, across a claimed 180+ countries and regions. Those are entry-level, smallest-data-tier prices, so the actual GB amount matters more than the headline number, but RedteaGO is routinely one of the cheapest per-GB options on this site for a standard short trip. It has nothing like Nomad's year-long Global-EX line.
+  </p>
+
+  <h2>Price Snapshot (1GB, before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Nomad</th>
+          <th>RedteaGO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States</td><td>$4.50 (1GB)</td><td>$2 (1GB)</td></tr>
+        <tr><td>Europe regional</td><td>$5 (1GB)</td><td>$2.79 (1GB)</td></tr>
+        <tr><td>Global</td><td>$12 (1GB)</td><td>$31 (6GB, roughly $5.17/GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">RedteaGO's standard-plan per-GB price runs well below Nomad's on single-country destinations. Nomad only closes that gap, and eventually overtakes it, once you need enough total data and enough validity that a Global-EX bundle makes sense; RedteaGO has no bundle like that to compare against.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Nomad:</strong> NOMTRAVEL20 or NOMCYBER20, {{ nomadBest.discount | lower }}. <a href="/nomad/">Full code list &rarr;</a></li>
+      <li><strong>RedteaGO:</strong> {{ providerB.primaryCode }}, {{ redteaPrimary.discount | lower }}. <a href="/redteago/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Neither code is ours. Nomad and RedteaGO don't run the kind of affiliate program that supports a code like that, so both are the best public codes we've verified for each. Nomad's 20% rate is bigger than RedteaGO's 5%, but RedteaGO's underlying price is already low enough that a smaller percentage off a cheaper base can still come out ahead; run the math on the specific plan you want.</p>
+  </div>
+
+  <h2>Is Nomad or RedteaGO the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Nomad if&hellip;</h3>
+      <ul>
+        <li>You're traveling or living abroad for months, not weeks</li>
+        <li>You want one eSIM that doesn't expire on a 30-day clock</li>
+        <li>You want to hotspot a laptop without checking plan rules first</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with RedteaGO if&hellip;</h3>
+      <ul>
+        <li>You want the lowest realistic starting price on a short trip</li>
+        <li>You're fine buying data upfront with no refund on unused top-ups</li>
+        <li>You've checked for the "Calls/Texts Available" label if you need a number</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Neither one hands you a working phone number by default.</strong> RedteaGO's own FAQ says call and text service only exists on plans explicitly marked "Calls/Texts Available," plus a separate Call & Text eSIM package sold on its own. Nomad doesn't include calls or SMS on its standard or Global-EX plans either. If you specifically need a real number for calls and texts, see our <a href="/simlocal/">SimLocal</a> comparison instead: we bought a UK plan there ourselves and confirmed the bundled number works.
+  </p>
+  <p>
+    <strong>Refund policies point in opposite directions.</strong> Nomad advertises an easy refund policy on unused plans. RedteaGO's FAQ is explicit that data top-ups are non-refundable because the plan activates immediately once you complete the purchase. If there's any chance your trip gets cancelled or changes, that difference is worth more than either provider's price.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Nomad vs RedteaGO FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Nomad or RedteaGO</h3>
+      <p>For a standard single-country plan, RedteaGO is usually cheaper per GB. For a long trip where a Nomad Global-EX bundle makes sense, Nomad's per-GB rate can drop low enough to close or close that gap, something RedteaGO has no equivalent bundle to compete with.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either one include calls or texts by default</h3>
+      <p>No. RedteaGO only includes them on plans labeled "Calls/Texts Available" or its separate Call & Text eSIM package. Nomad's plans, including Global-EX, are data-only.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I get a refund if my trip changes</h3>
+      <p>Possibly with Nomad, which advertises an easy refund policy on unused plans. Not with RedteaGO: its FAQ states data top-ups are non-refundable once the plan activates.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which one is better for long-term travel</h3>
+      <p>Nomad, specifically because of its Global-EX bundles, which run up to a year and get cheaper per GB the larger they are. RedteaGO has nothing built for that use case; its plans are sized for a single trip.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Nomad or RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"For a standard single-country plan, RedteaGO is usually cheaper per GB. For a long trip where a Nomad Global-EX bundle makes sense, Nomad's per-GB rate can drop low enough to close that gap, something RedteaGO has no equivalent bundle to compete with."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does either Nomad or RedteaGO include calls or texts by default?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. RedteaGO only includes them on plans labeled 'Calls/Texts Available' or its separate Call & Text eSIM package. Nomad's plans, including Global-EX, are data-only."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I get a refund if my trip changes with Nomad or RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"Possibly with Nomad, which advertises an easy refund policy on unused plans. Not with RedteaGO, whose FAQ states data top-ups are non-refundable once the plan activates."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which is better for long-term travel, Nomad or RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad, because of its Global-EX bundles, which run up to a year and get cheaper per GB the larger they are. RedteaGO has no equivalent; its plans are sized for a single trip."}
+      }
+    ]
+  }
+  </script>
+</div>
