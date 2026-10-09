@@ -1,0 +1,141 @@
+<!-- BNEsim vs UPeSIM Comparison Content -->
+<div class="content-section">
+
+  {% set upesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>BNEsim</strong> if you want the lowest per-GB price and you're fine trusting an automatic sale price instead of a code, especially if you travel the same country on an irregular schedule. Pick <strong>UPeSIM</strong> if you want an actual discount code to apply today and you're installing the eSIM within about two months of your trip. Both let you buy ahead of a trip without the clock starting early, just on different terms.
+    </p>
+  </div>
+
+  <h2>The Core Difference: No Code at All vs a Working 10% Code</h2>
+  <p>
+    BNEsim doesn't run a promo-code system. Its pricing pages show a struck-through original price next to a lower sale price, with discounts of up to 70% applied automatically before you type anything in; we couldn't find a single working BNEsim code anywhere, including the ones third-party coupon sites list for it. UPeSIM works the normal way: <strong>{{ providerB.primaryCode }}</strong> takes {{ upesimPrimary.discount | lower }}, and two backup codes (ESIMDB10, T-DEALZ-10) give the same 10% if that one ever stops applying.
+  </p>
+  <p>
+    That makes the fair comparison "BNEsim's listed sale price" against "UPeSIM's price after its 10% code," not a straight sticker match. On every overlapping destination we checked, BNEsim still comes out ahead per gigabyte even after UPeSIM's code is applied.
+  </p>
+
+  <h2>Price Snapshot (1GB, BNEsim's sale price vs UPeSIM after its code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>BNEsim</th>
+          <th>UPeSIM (after {{ providerB.primaryCode }})</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States</td><td>$1.48</td><td>$5.55</td></tr>
+        <tr><td>Japan</td><td>$2.81</td><td>$5.80</td></tr>
+        <tr><td>China</td><td>$3.74</td><td>$5.80</td></tr>
+        <tr><td>Europe regional</td><td>$0.95</td><td>$3.15</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">BNEsim's numbers are its own listed sale prices, since that's how its discounting actually works; UPeSIM's numbers already have the 10% code subtracted. BNEsim is cheaper per gigabyte on every destination we checked here, which tracks with its "Cheap" price bracket on this site against UPeSIM's "Average" one.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>BNEsim:</strong> no working code found. The discount is already in the sale price shown on its own site. <a href="/bnesim/">Full breakdown &rarr;</a></li>
+      <li><strong>UPeSIM:</strong> {{ providerB.primaryCode }}, {{ upesimPrimary.discount | lower }}. <a href="/upesim/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Neither code here is ours. BNEsim doesn't use codes at all, and UPeSIM's REDDIT10 is the best public code we've verified at checkout.</p>
+  </div>
+
+  <h2>Is BNEsim or UPeSIM the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with BNEsim if&hellip;</h3>
+      <ul>
+        <li>You want the lowest realistic per-GB price without needing a code to get there</li>
+        <li>You visit the same country on an irregular schedule and want data that doesn't expire while you wait (pricier no-expiration tier)</li>
+        <li>You'd rather pay with crypto or keep a running account balance than check out separately every trip</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with UPeSIM if&hellip;</h3>
+      <ul>
+        <li>You want an actual code to apply at checkout rather than trusting a sale price is really the best one</li>
+        <li>You're installing the eSIM within about 60 days of your trip and don't need the longer buy-ahead window</li>
+        <li>You want a plan that starts counting down only once your phone connects at the destination, with no account balance to manage</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Both let you buy well before you fly, but the safety margin is different.</strong> BNEsim lets you schedule a plan to start activating on a future date, and its pricier no-expiration tier sits ready indefinitely. UPeSIM's plans also don't start counting down until your phone actually connects to the destination network, but its own FAQ says an installed-but-never-activated profile goes stale after 60 days and shows as expired. Book further out than that on UPeSIM and the eSIM may already look dead by the time you land.
+  </p>
+  <p>
+    <strong>Refund policy cuts in BNEsim's favor.</strong> BNEsim advertises easy refunds. UPeSIM doesn't publicly advertise a refund guarantee at all, so a UPeSIM purchase should be treated as final the moment you buy it.
+  </p>
+  <p>
+    For eSIM device compatibility, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>BNEsim vs UPeSIM FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, BNEsim or UPeSIM</h3>
+      <p>BNEsim, per gigabyte, on every destination we checked, even after UPeSIM's 10% code is applied. BNEsim sits in our "Cheap" price bracket and UPeSIM in our "Average" one.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does BNEsim have a discount code</h3>
+      <p>No. We checked BNEsim's homepage, pricing page, and coupon page directly and found nothing advertised. Its discounts show up as an automatic strike-through sale price instead of a code you apply at checkout.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I install either eSIM weeks before my trip</h3>
+      <p>Yes for both, since neither starts counting validity until the phone actually connects to the destination network. UPeSIM is explicit that an installed-but-inactive profile expires after 60 days; BNEsim instead lets you schedule a future start date or pay for a no-expiration tier that sits ready indefinitely.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which one can I get a refund from</h3>
+      <p>BNEsim advertises easy refunds. UPeSIM does not publicly offer an equivalent, so treat a UPeSIM purchase as final.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I pay with crypto</h3>
+      <p>BNEsim accepts a wider range of payment methods than most eSIM sellers on this site, crypto included. UPeSIM doesn't advertise crypto as a payment option.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, BNEsim or UPeSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"BNEsim, per gigabyte, on every destination checked, even after UPeSIM's 10% code is applied. BNEsim sits in the Cheap price bracket on this site and UPeSIM in the Average one."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does BNEsim have a discount code?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. BNEsim's homepage, pricing page, and coupon page show no promo code advertised. Its discounts appear as an automatic strike-through sale price rather than a checkout code."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can a BNEsim or UPeSIM eSIM be installed weeks before a trip?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes for both, since validity only starts once the phone connects to the destination network. UPeSIM states an installed-but-inactive profile expires after 60 days; BNEsim instead allows scheduling a future start date or buying a no-expiration tier that sits ready indefinitely."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which one offers a refund, BNEsim or UPeSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"BNEsim advertises easy refunds. UPeSIM does not publicly offer an equivalent, so a UPeSIM purchase should be treated as final."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I pay BNEsim or UPeSIM with crypto?",
+        "acceptedAnswer":{"@type":"Answer","text":"BNEsim accepts a wider range of payment methods than most eSIM sellers, including crypto. UPeSIM does not advertise crypto as a payment option."}
+      }
+    ]
+  }
+  </script>
+</div>
