@@ -1,0 +1,147 @@
+<!-- Comparativa Saily vs SimLocal (Español) -->
+<div class="content-section">
+
+  {% set sailyPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set simlocalPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set sailyEsCode = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
+  {% set simlocalEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set sailyDiscount = (sailyEsCode.discount if sailyEsCode) or sailyPrimary.discount %}
+  {% set simlocalDiscount = (simlocalEsCode.discount if simlocalEsCode) or simlocalPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>Saily</strong> si quieres una VPN y un bloqueador de anuncios integrados en la misma eSIM y no quieres instalar un perfil nuevo en cada frontera durante un viaje por varios países. Elige <strong>SimLocal</strong> si quieres un número de teléfono real en un viaje al Reino Unido, una política de reembolso sin preguntas, o la opción de acudir a un mostrador con personal en el aeropuerto en lugar de resolverlo tú mismo. Ambos están en la misma categoría de precio "Económico" en esta web y los dos venden planes de GB fijos en lugar de datos verdaderamente ilimitados, así que la decisión real está en qué extras necesitas de verdad, no en cuál es más barato sobre el papel.
+    </p>
+  </div>
+
+  <h2>La diferencia principal: paquete de seguridad o paquete con número local</h2>
+  <p>
+    Saily es la rama de eSIM de NordVPN (creada por la propia Nord Security, no una simple alianza), así que cada plan incluye bloqueo de anuncios, bloqueo de sitios con malware o phishing y una herramienta de ubicación virtual. Además, vende una única eSIM universal que sigue funcionando al cruzar a otro país compatible, así que no cambias de perfil en cada frontera.
+  </p>
+  <p>
+    La ventaja de SimLocal es distinta: la mayoría de sus planes para el Reino Unido incluyen un número de teléfono real del Reino Unido para llamadas y SMS, no solo datos, algo que Saily no ofrece en absoluto. SimLocal respalda esto con una política de "No Quibble Refunds" (cancela por cualquier motivo, sin dar explicaciones) y, algo inusual para un vendedor solo de eSIM, un mostrador con personal en Heathrow si prefieres que alguien te ayude en persona con la configuración.
+  </p>
+
+  <h2>Precio de referencia (equivalente a 1 GB, antes de código)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Saily</th>
+          <th>SimLocal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Estados Unidos</td><td>3,99 $ (1 GB)</td><td>No publica una tarifa fija por GB</td></tr>
+        <tr><td>Europa (regional)</td><td>4,99 $ (1 GB)</td><td>No publica una tarifa fija por GB</td></tr>
+        <tr><td>Global</td><td>8,99 $ (1 GB)</td><td>No publica una tarifa fija por GB</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">SimLocal no publica una lista de precios simple por GB y país como sí hace Saily; sus planes se tarifican por destino y duración al pagar. Ambos se sitúan en la misma categoría "Económico" en conjunto, así que el factor de coste más determinante suele ser el código que aplicas, no una diferencia de precio por GB.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Saily:</strong> {{ providerA.primaryCode }}, {{ sailyDiscount | lower }}. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>SimLocal:</strong> {{ providerB.primaryCode }}, {{ simlocalDiscount | lower }}, nuestro propio código. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">El código de SimLocal es el nuestro, la mejor tarifa que ofrece (sus otros cuatro códigos públicos solo dan un 5%). Saily no tiene el tipo de programa de afiliados que sostenga un código de marca así, por lo que HELLOSAILY es el mejor código público que hemos verificado, y aun así supera en porcentaje a los códigos no principales de SimLocal.</p>
+  </div>
+
+  <h2>¿Saily o SimLocal es la mejor opción?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige Saily si&hellip;</h3>
+      <ul>
+        <li>Normalmente pagarías una VPN o un bloqueador de anuncios por separado al viajar</li>
+        <li>Vas a cruzar varios países y no quieres una eSIM nueva en cada frontera</li>
+        <li>No necesitas un número de teléfono real, solo datos y extras de seguridad</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige SimLocal si&hellip;</h3>
+      <ul>
+        <li>Viajas al Reino Unido y quieres un número de teléfono real, no solo datos</li>
+        <li>Quieres una política de reembolso sin preguntas si cambian tus planes</li>
+        <li>Vuelas por Heathrow y prefieres ayuda en persona en vez de seguir un artículo de soporte</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>Los planes "ilimitados" de Saily no son realmente sin tope.</strong> Su propia política de uso justo da velocidad completa en los primeros 5 GB dentro de una ventana móvil de 24 horas en la mayoría de destinos (3 GB en algunos), y después reduce la velocidad a 1 Mbps hasta el reinicio a medianoche local. Suficiente para un uso normal del móvil, pero conviene saberlo si varias personas comparten un mismo hotspot. SimLocal no vende planes ilimitados en absoluto; son paquetes de GB fijos con una ventana de caducidad relativamente corta de 14 días tras la compra, así que no conviene comprar un plan de SimLocal con demasiada antelación a tu viaje.
+  </p>
+  <p>
+    <strong>Los canales de soporte funcionan de forma distinta.</strong> Ni Saily ni SimLocal tienen una línea telefónica tradicional, pero Saily se apoya en soporte dentro de la app y la web, mientras que el canal 24/7 de SimLocal es específicamente WhatsApp, además de una pequeña red de mostradores con personal en aeropuertos, incluido Heathrow, algo que Saily no ofrece.
+  </p>
+  <p>
+    Para la configuración del dispositivo y lo básico sobre eSIM que aplica a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés). Si te importa más un número incluido que los extras de seguridad, pero no necesitas que sea específicamente del Reino Unido, nuestra <a href="/compare/airhub-vs-simlocal/">comparativa Airhub vs SimLocal</a> muestra cómo se compara el número de SimLocal con una alternativa más barata por GB.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre Saily vs SimLocal</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, Saily o SimLocal?</h3>
+      <p>Ambos están en la categoría "Económico" de esta web. Saily publica precios fijos por GB y país; SimLocal tarifica por destino y duración del plan al pagar en lugar de una tarifa fija por GB, así que no hay una cifra única directamente comparable. La diferencia mayor suele estar en el código: el propio código de SimLocal da un 10% de descuento, mientras que el mejor código público de Saily da un 15% en todo el catálogo.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos incluye un número de teléfono real?</h3>
+      <p>SimLocal sí, en la mayoría de sus planes para el Reino Unido: un número británico completo para llamadas y SMS, no solo datos. Saily no ofrece número de teléfono en absoluto, solo datos (más la VPN y el bloqueador de anuncios integrados).</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál es mejor para un viaje por varios países?</h3>
+      <p>Por lo general, Saily. Vende una única eSIM universal que sigue funcionando al cruzar a otro país compatible, sin tener que cambiar de perfil específico de país en cada frontera.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo conseguir un reembolso si cambio de opinión?</h3>
+      <p>La política "No Quibble Refunds" de SimLocal significa que sí, por cualquier motivo, sin necesidad de dar explicaciones. Saily ofrece un reembolso completo si la eSIM nunca se instaló ni activó dentro de los 30 días, o si se usó menos del 1% de los datos, una ventana más estrecha que la de SimLocal.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Hay soporte disponible si algo falla a mitad del viaje?</h3>
+      <p>Sí, en ambos casos, pero de forma distinta. El canal 24/7 de SimLocal es específicamente WhatsApp, además de un mostrador con personal en Heathrow. Saily ofrece soporte a través de su app y su web en lugar de una app de mensajería específica o un lugar físico.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, Saily o SimLocal?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ambos están en la categoría Económico. Saily publica precios fijos por GB y país; SimLocal tarifica por destino y duración del plan al pagar. El propio código de SimLocal da un 10% de descuento, mientras que el mejor código público de Saily da un 15% en todo el catálogo."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Saily o SimLocal incluyen un número de teléfono real?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal sí, en la mayoría de sus planes para el Reino Unido: un número británico completo para llamadas y SMS. Saily no ofrece número de teléfono, solo datos más una VPN y un bloqueador de anuncios integrados."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál es mejor para un viaje por varios países, Saily o SimLocal?",
+        "acceptedAnswer":{"@type":"Answer","text":"Por lo general Saily, ya que vende una única eSIM universal que sigue funcionando al cruzar a otro país compatible, en lugar de requerir un cambio de perfil específico de país en cada frontera."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Puedo obtener un reembolso de Saily o SimLocal si cambio de opinión?",
+        "acceptedAnswer":{"@type":"Answer","text":"La política No Quibble Refunds de SimLocal permite un reembolso por cualquier motivo, sin dar explicaciones. Saily ofrece un reembolso completo si la eSIM nunca se instaló ni activó dentro de los 30 días, o si se usó menos del 1% de los datos, una ventana más estrecha que la de SimLocal."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Hay soporte disponible a mitad de viaje con Saily o SimLocal?",
+        "acceptedAnswer":{"@type":"Answer","text":"Sí, en ambos casos, pero de forma distinta. El canal 24/7 de SimLocal es específicamente WhatsApp, además de un mostrador con personal en Heathrow. Saily ofrece soporte a través de su app y su web en lugar de una app de mensajería específica o un lugar físico."}
+      }
+    ]
+  }
+  </script>
+</div>
