@@ -1,0 +1,156 @@
+<!-- Comparativa Nomad vs Saily (Español) -->
+<div class="content-section">
+
+  {% set nomadBest = providerA.codes | findCode("NOMTRAVEL20") %}
+  {% set sailyPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set nomadEsCode = esA.codes["NOMTRAVEL20"] if (esA and esA.codes and esA.codes["NOMTRAVEL20"]) else null %}
+  {% set sailyEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set nomadDiscount = (nomadEsCode.discount if nomadEsCode) or nomadBest.discount %}
+  {% set sailyDiscount = (sailyEsCode.discount if sailyEsCode) or sailyPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>Nomad</strong> si viajas o vives en el extranjero durante meses y quieres un paquete de datos que no caduque con el típico ciclo de 30 días. Elige <strong>Saily</strong> si vas a moverte entre varios países en un mismo viaje y prefieres llevar un conjunto de seguridad y un bloqueador de anuncios integrados en lugar de buscar una app de VPN por separado. Ambos funcionan con precios por GB, pero están pensados para tipos de viaje distintos.
+    </p>
+  </div>
+
+  <h2>La diferencia principal: paquetes de larga duración frente a una sola eSIM universal</h2>
+  <p>
+    Los planes normales de Nomad funcionan como la mayoría de eSIMs por GB de este sitio: elige país, región o paquete global, paga, escanea y listo. Lo que distingue a Nomad es una segunda línea de producto llamada <strong>Global-EX</strong>: paquetes más grandes de 10 GB a 50 GB que permanecen válidos hasta un año en lugar de los habituales 7 a 30 días, con un precio por GB que baja hasta aproximadamente 2,58 $/GB en los paquetes más grandes. Nada en la oferta de Saily se acerca a eso; sus planes funcionan con las mismas ventanas de validez cortas que la mayoría de otros proveedores de este sitio.
+  </p>
+  <p>
+    La diferencia estructural de Saily va por otro lado: vende una única eSIM universal en lugar de un perfil separado por país o región. Una vez instalada, sigue funcionando al cruzar a un nuevo país compatible, sin reinstalar ni cambiar de eSIM en cada frontera. Con Nomad hay que elegir un nuevo plan de país, región o global según cambie el viaje, aunque los datos de un plan de Nomad se pueden compartir entre varios dispositivos a la vez, algo que no está garantizado en todos los proveedores de este sitio.
+  </p>
+
+  <h2>Comparativa de precios (equivalente a 1 GB, antes de cualquier código)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Nomad</th>
+          <th>Saily</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Estados Unidos</td><td>4,50 $ (1 GB)</td><td>3,99 $ (1 GB)</td></tr>
+        <tr><td>Europa (regional)</td><td>5 $ (1 GB)</td><td>4,99 $ (1 GB)</td></tr>
+        <tr><td>Global</td><td>12 $ (1 GB)</td><td>8,99 $ (1 GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Son precios por GB individual con validez corta. Los paquetes Global-EX de Nomad se calculan de otra forma por GB (hasta unos 2,58 $/GB antes de cualquier código en los tamaños más grandes), así que para una estancia larga conviene calcular según el tamaño y duración concretos del paquete en lugar de comparar directamente la fila de arriba.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Nomad:</strong> {{ nomadBest.code }}, {{ nomadDiscount | lower }}. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>Saily:</strong> {{ providerB.primaryCode }}, {{ sailyDiscount | lower }}. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ninguno de los dos códigos es nuestro. Ni Nomad ni Saily tienen el tipo de programa de afiliados que nos daría un código personalizado, como sí hacen Holafly o Ubigi, así que los dos códigos de arriba son los mejores códigos públicos que hemos verificado que siguen funcionando.</p>
+  </div>
+
+  <h2>¿Nomad o Saily, cuál es la opción correcta?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige Nomad si&hellip;</h3>
+      <ul>
+        <li>Viajas o vives en el extranjero durante meses, no solo semanas</li>
+        <li>Quieres compartir datos como punto de acceso con un portátil o repartir el plan entre varios dispositivos</li>
+        <li>Prefieres hablar con una persona por chat en vivo en lugar de esperar una respuesta por correo</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige Saily si&hellip;</h3>
+      <ul>
+        <li>De todos modos pagarías una VPN y un bloqueador de anuncios por separado al viajar</li>
+        <li>Cruzas varias fronteras en un mismo viaje y no quieres una eSIM nueva en cada una</li>
+        <li>Quieres un precio por GB algo más bajo en un viaje puntual normal</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>La línea Global-EX de Nomad es la única opción realmente de larga duración entre los dos.</strong> Un paquete Global-EX dura hasta un año sin caducar, pensado para alguien que realmente vive de la maleta durante meses, no para unas vacaciones de dos semanas. Saily no vende nada con una ventana de validez comparable.
+  </p>
+  <p>
+    <strong>El sitio web y la app de Saily estuvieron entre los bloqueados por el regulador de telecomunicaciones de Turquía (BTK) desde mediados de 2025.</strong> Una eSIM comprada e instalada antes de llegar sigue funcionando una vez allí; el bloqueo afecta a la compra o recarga mientras se está físicamente en Turquía, no a las eSIM ya activas. No hemos verificado de forma independiente si Nomad tiene la misma restricción, así que si Turquía está en el itinerario, comprar cualquiera de las dos eSIM antes de llegar es la opción más segura.
+  </p>
+  <p>
+    Para la compatibilidad de dispositivos con eSIM, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés). ¿Prefieres comparar un plan con seguridad incluida frente a un precio ilimitado fijo? Consulta nuestra comparativa <a href="{{ (collections.i18nMap | i18nAlternates('compare:holafly-vs-saily')).es or '/compare/holafly-vs-saily/' }}">Holafly vs Saily</a>.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre Nomad vs Saily</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, Nomad o Saily?</h3>
+      <p>Para un viaje puntual normal, Saily suele ser algo más barato por GB. Para una estancia de meses, los paquetes Global-EX de Nomad son más baratos que ambos, ya que el precio por GB baja cuanto mayor es el tamaño y la duración del paquete.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos tiene datos realmente ilimitados?</h3>
+      <p>Saily comercializa algunos planes como ilimitados, pero su propia política de uso justo limita la velocidad después de 5 GB en una ventana móvil de 24 horas en la mayoría de destinos (3 GB en algunos) a 1 Mbit/s. Nomad no se presenta como ilimitado; vende planes normales por GB, incluidos los paquetes de larga duración Global-EX.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál es mejor para un viaje largo de varios meses?</h3>
+      <p>Nomad, en concreto sus paquetes Global-EX, que duran hasta un año sin caducar y se abaratan por GB cuanto más grandes son. Saily no tiene una opción de larga duración equivalente.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál es mejor para moverse entre varios países en un mismo viaje?</h3>
+      <p>Saily, porque es una eSIM universal que sigue funcionando al cruzar a un nuevo país compatible. Con Nomad hay que elegir un nuevo plan de país, región o global según cambie el viaje, aunque sus datos se pueden compartir entre varios dispositivos.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos incluye VPN o funciones de seguridad?</h3>
+      <p>Saily sí: cada plan viene con bloqueo de anuncios basado en NordVPN, bloqueo de sitios de malware y phishing, y una herramienta de ubicación virtual. Nomad no tiene nada equivalente integrado.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo usar alguno de los dos en Turquía?</h3>
+      <p>El sitio web y la app de Saily fueron bloqueados por el regulador de telecomunicaciones de Turquía desde mediados de 2025, así que no se puede comprar ni recargar mientras se está físicamente en el país, aunque una eSIM instalada antes de llegar sigue funcionando. No se ha verificado de forma independiente si Nomad tiene la misma restricción, así que comprar cualquiera de las dos antes de llegar es la opción más segura.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, Nomad o Saily?",
+        "acceptedAnswer":{"@type":"Answer","text":"Para un viaje puntual normal, Saily suele ser algo más barato por GB. Para una estancia de meses, los paquetes Global-EX de Nomad son más baratos que ambos, ya que el precio por GB baja cuanto mayor es el tamaño y la duración del paquete."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Tienen Nomad o Saily datos realmente ilimitados?",
+        "acceptedAnswer":{"@type":"Answer","text":"Saily comercializa algunos planes como ilimitados, pero su política de uso justo limita la velocidad después de 5 GB en una ventana móvil de 24 horas en la mayoría de destinos, 3 GB en algunos, a 1 Mbit/s. Nomad no se presenta como ilimitado; vende planes normales por GB, incluidos los paquetes de larga duración Global-EX."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál es mejor para un viaje largo de varios meses, Nomad o Saily?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad, en concreto sus paquetes Global-EX, que duran hasta un año sin caducar y se abaratan por GB cuanto más grandes son. Saily no tiene una opción de larga duración equivalente."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál es mejor para moverse entre varios países en un mismo viaje?",
+        "acceptedAnswer":{"@type":"Answer","text":"Saily, porque es una eSIM universal que sigue funcionando al cruzar a un nuevo país compatible. Con Nomad hay que elegir un nuevo plan de país, región o global según cambie el viaje, aunque sus datos se pueden compartir entre varios dispositivos."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Incluyen Nomad o Saily VPN o funciones de seguridad?",
+        "acceptedAnswer":{"@type":"Answer","text":"Saily sí: cada plan viene con bloqueo de anuncios basado en NordVPN, bloqueo de sitios de malware y phishing, y una herramienta de ubicación virtual. Nomad no tiene nada equivalente integrado."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Puedo usar Nomad o Saily en Turquía?",
+        "acceptedAnswer":{"@type":"Answer","text":"El sitio web y la app de Saily fueron bloqueados por el regulador de telecomunicaciones de Turquía desde mediados de 2025, así que no se puede comprar ni recargar mientras se está físicamente en el país, aunque una eSIM instalada antes de llegar sigue funcionando. No se ha verificado de forma independiente si Nomad tiene la misma restricción, así que comprar cualquiera de las dos antes de llegar es la opción más segura."}
+      }
+    ]
+  }
+  </script>
+</div>
