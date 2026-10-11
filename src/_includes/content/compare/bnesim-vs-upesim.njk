@@ -1,0 +1,133 @@
+<!-- BNEsim vs UPeSIM Comparison Content -->
+<div class="content-section">
+
+  {% set upesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>BNEsim</strong> if you travel to the same country on an irregular schedule and want data that's already discounted at checkout, no code hunting required. Pick <strong>UPeSIM</strong> if you want a cheaper sticker price backed by a working discount code and you're fine with your data simply expiring if you don't use it. Neither provider has figured out a working referral code for us to show you here, so this one comes down to how each handles pricing and expiry, not which code is bigger.
+    </p>
+  </div>
+
+  <h2>The Core Difference: Automatic Sale Price vs. a Stacking Code</h2>
+  <p>
+    BNEsim doesn't run a discount-code system at all. Its own pricing pages show up to 70% off as a struck-through original price next to a lower sale price, applied automatically before you type anything in. UPeSIM runs the opposite model: its sticker price is the real price, and getting it down to the actual cost requires one of three working 10% codes (REDDIT10, ESIMDB10, or T-DEALZ-10) at checkout. If you forget the code, you pay full UPeSIM price; BNEsim's discount is already baked in whether you remember a code or not.
+  </p>
+  <p>
+    That changes how you should actually compare the two: don't just hold the raw sticker prices side by side. Compare BNEsim's already-discounted sale price against UPeSIM's price after one of its codes is applied, since that's the number each traveler actually pays.
+  </p>
+
+  <h2>Data Expiry: Pay More to Never Expire, or Pay Less and Watch the Clock</h2>
+  <p>
+    This is the real decision point between these two. BNEsim sells every data pack twice: a cheaper version that expires in 30 days, and a pricier version of the exact same pack with no expiration at all. UPeSIM sells one version only, a fixed block of days at a flat price, no auto-renewal and no option to pay extra for it to stick around longer. Buy a UPeSIM block and don't use it before the window closes, and it's gone; buy BNEsim's no-expiration tier and it sits ready for whenever you land, however long that takes.
+  </p>
+  <p>
+    Both also let you buy ahead of a trip without burning the clock early, but the mechanics differ. BNEsim lets you schedule a plan to start activating on a future date you pick. UPeSIM instead waits for your phone to actually register on the destination network before the countdown starts, but its own FAQ warns that an eSIM profile installed and never activated goes stale and shows as expired after 60 days regardless. If you're buying more than two months out, BNEsim's explicit scheduling is the safer bet of the two.
+  </p>
+
+  <h2>Price and Payment Snapshot</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>BNEsim</th>
+          <th>UPeSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Discount</td><td>Up to 70% off, shown automatically as a sale price</td><td>10% off with a working code</td></tr>
+        <tr><td>Data expiry</td><td>Choice of 30-day or no-expiration version of the same pack</td><td>Fixed block of days, no option to extend</td></tr>
+        <tr><td>Buy-ahead handling</td><td>Schedule activation for a specific future date</td><td>Starts on network connection, but stales out after 60 days uninstalled-but-unactivated</td></tr>
+        <tr><td>Payment methods</td><td>Card plus a wider range including crypto</td><td>Card only</td></tr>
+        <tr><td>Account model</td><td>Credit balance you top up and draw from</td><td>One-off checkout per plan</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">BNEsim's discount is already in the price shown on its site; UPeSIM's 10% only applies once one of its codes is entered at checkout.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>BNEsim:</strong> No working code found. We checked BNEsim's homepage, pricing page, and coupon page directly; any discount you get comes from its automatic sale pricing, not a code. See the <a href="/bnesim/">BNEsim page</a> for the full writeup.</li>
+      <li><strong>UPeSIM:</strong> {{ providerB.primaryCode }}, {{ upesimPrimary.discount | lower }}. Two backup codes give the same rate if this one stops working. <a href="/upesim/">Full code list &rarr;</a></li>
+    </ul>
+  </div>
+
+  <h2>Is BNEsim or UPeSIM the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with BNEsim if&hellip;</h3>
+      <ul>
+        <li>You visit the same country occasionally rather than on a set schedule, and want data that doesn't expire while you wait</li>
+        <li>You'd rather pay with crypto or run a top-up balance than check out fresh every trip</li>
+        <li>You want to lock in a specific future activation date rather than rely on network detection</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with UPeSIM if&hellip;</h3>
+      <ul>
+        <li>You want the lower sticker price and don't mind applying a code to get it</li>
+        <li>You're installing the eSIM within about two months of departure, where its stale-after-60-days limit isn't a problem</li>
+        <li>You'd rather a plan simply expire on a fixed schedule than pay a premium for one that doesn't</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>
+    Neither of these fits everyone. If you want the lowest raw per-GB price with a working code and don't care about no-expiration tiers or sale pricing, check <a href="/airhub/">Airhub</a> or <a href="/redteago/">RedteaGO</a> instead; both run cheaper straight per-GB pricing with a code that applies at checkout. For eSIM device compatibility, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>BNEsim vs UPeSIM FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, BNEsim or UPeSIM</h3>
+      <p>It depends on the pack. Compare BNEsim's already-discounted sale price against UPeSIM's price after applying REDDIT10, ESIMDB10, or T-DEALZ-10, since those are the real numbers each traveler pays. Neither sticker price alone tells the full story.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either provider's data expire</h3>
+      <p>UPeSIM's always does, on a fixed schedule with no auto-renewal. BNEsim sells both a cheaper 30-day version and a pricier no-expiration version of the same pack, so you can choose which tradeoff you want.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I buy either one well ahead of my trip</h3>
+      <p>Yes, but they handle it differently. BNEsim lets you schedule a specific future activation date. UPeSIM waits for network connection to start the clock, but its own FAQ warns an installed-and-never-activated profile goes stale after 60 days, so it's the riskier choice for a trip still months away.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either have a discount code</h3>
+      <p>UPeSIM does: REDDIT10 and two backups all give 10% off. BNEsim doesn't run codes at all; its discounts of up to 70% show up automatically as a struck-through sale price instead.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, BNEsim or UPeSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"It depends on the pack. Compare BNEsim's already-discounted sale price against UPeSIM's price after applying one of its 10% codes (REDDIT10, ESIMDB10, or T-DEALZ-10), since those are the real numbers each traveler pays."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does BNEsim or UPeSIM data expire?",
+        "acceptedAnswer":{"@type":"Answer","text":"UPeSIM's data always expires on a fixed schedule with no auto-renewal. BNEsim sells both a cheaper 30-day version and a pricier no-expiration version of the same data pack."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I buy a BNEsim or UPeSIM plan well ahead of my trip?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes, but the mechanics differ. BNEsim lets a plan be scheduled to start on a specific future date. UPeSIM starts counting once the phone connects to the destination network, but an installed-and-never-activated profile goes stale after 60 days per UPeSIM's own FAQ."}
+      },
+      {
+        "@type":"Question",
+        "name":"Do BNEsim or UPeSIM have discount codes?",
+        "acceptedAnswer":{"@type":"Answer","text":"UPeSIM does: REDDIT10, ESIMDB10, and T-DEALZ-10 each give 10% off. BNEsim does not run a discount code system; its discounts of up to 70% appear automatically as a struck-through sale price instead."}
+      }
+    ]
+  }
+  </script>
+</div>

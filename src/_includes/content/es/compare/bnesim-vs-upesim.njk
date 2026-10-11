@@ -1,0 +1,136 @@
+<!-- Comparativa BNEsim vs UPeSIM (Español) -->
+<div class="content-section">
+
+  {% set upesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set upesimEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set upesimDiscount = (upesimEsCode.discount if upesimEsCode) or upesimPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>BNEsim</strong> si viajas al mismo país con calendario irregular y quieres datos que ya salgan rebajados al pagar, sin tener que buscar ningún código. Elige <strong>UPeSIM</strong> si prefieres un precio de venta más bajo respaldado por un código de descuento que funciona, y no te importa que tus datos simplemente caduquen si no los usas. Ninguno de los dos proveedores tiene un código de referido que funcione y que podamos mostrarte aquí, así que esta elección depende de cómo gestiona cada uno el precio y la caducidad, no de qué código es más grande.
+    </p>
+  </div>
+
+  <h2>La diferencia clave: precio de venta automático frente a un código acumulable</h2>
+  <p>
+    BNEsim no tiene ningún sistema de códigos de descuento. Sus propias páginas de precios muestran hasta un 70% de descuento como un precio original tachado junto a un precio de venta más bajo, aplicado automáticamente antes de que escribas nada. UPeSIM funciona con el modelo opuesto: su precio de venta es el precio real, y para bajarlo al coste de verdad necesitas uno de tres códigos del 10% que funcionan (REDDIT10, ESIMDB10 o T-DEALZ-10) al pagar. Si olvidas el código, pagas el precio completo de UPeSIM; el descuento de BNEsim ya está incluido, te acuerdes de un código o no.
+  </p>
+  <p>
+    Eso cambia cómo deberías comparar realmente ambos: no pongas simplemente los precios de venta en bruto uno junto al otro. Compara el precio de venta ya rebajado de BNEsim con el precio de UPeSIM después de aplicar uno de sus códigos, porque ese es el número que de verdad paga cada viajero.
+  </p>
+
+  <h2>Caducidad de los datos: pagar más por datos que nunca caducan, o pagar menos y vigilar el reloj</h2>
+  <p>
+    Este es el verdadero punto de decisión entre los dos. BNEsim vende cada bolsa de datos por duplicado: una versión más barata que caduca a los 30 días, y una versión más cara de esa misma bolsa sin caducidad alguna. UPeSIM solo vende una versión, un bloque fijo de días a precio plano, sin renovación automática ni opción de pagar más para que dure más. Si compras un bloque de UPeSIM y no lo usas antes de que se cierre la ventana, lo pierdes; si compras la versión sin caducidad de BNEsim, queda lista para cuando de verdad aterrices, por mucho que tarde.
+  </p>
+  <p>
+    Ambos permiten también comprar con antelación a un viaje sin que el reloj empiece antes de tiempo, pero la mecánica es distinta. BNEsim te deja programar que un plan empiece a activarse en una fecha futura que tú eliges. UPeSIM, en cambio, espera a que tu teléfono se conecte de verdad a la red del destino para empezar a contar, pero sus propias preguntas frecuentes avisan de que un perfil de eSIM instalado y nunca activado caduca igualmente a los 60 días y aparece como expirado. Si compras con más de dos meses de antelación, la programación explícita de BNEsim es la opción más segura de las dos.
+  </p>
+
+  <h2>Resumen de precio y pago</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>BNEsim</th>
+          <th>UPeSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Descuento</td><td>Hasta 70% de descuento, mostrado automáticamente como precio de venta</td><td>10% de descuento con un código que funciona</td></tr>
+        <tr><td>Caducidad de datos</td><td>Elección entre versión de 30 días o sin caducidad de la misma bolsa</td><td>Bloque fijo de días, sin opción de ampliarlo</td></tr>
+        <tr><td>Gestión de compra anticipada</td><td>Se puede programar la activación para una fecha futura concreta</td><td>Empieza al conectar con la red, pero caduca a los 60 días si no se activa</td></tr>
+        <tr><td>Métodos de pago</td><td>Tarjeta más una gama más amplia, incluidas criptomonedas</td><td>Solo tarjeta</td></tr>
+        <tr><td>Modelo de cuenta</td><td>Saldo que recargas y del que vas tirando</td><td>Pago único por cada plan</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">El descuento de BNEsim ya está incluido en el precio que muestra su web; el 10% de UPeSIM solo se aplica cuando se introduce uno de sus códigos al pagar.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>BNEsim:</strong> No hemos encontrado ningún código que funcione. Hemos revisado directamente la página de inicio, la página de precios y la página de cupones de BNEsim; cualquier descuento viene de su precio de venta automático, no de un código. Consulta la <a href="{{ providerAUrl }}">página de BNEsim</a> para el análisis completo.</li>
+      <li><strong>UPeSIM:</strong> {{ providerB.primaryCode }}, {{ upesimDiscount | lower }}. Otros dos códigos de respaldo dan el mismo porcentaje si este deja de funcionar. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+  </div>
+
+  <h2>¿Es BNEsim o UPeSIM la opción adecuada?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige BNEsim si&hellip;</h3>
+      <ul>
+        <li>Visitas un país de forma ocasional en lugar de con calendario fijo y quieres datos que no caduquen mientras esperas</li>
+        <li>Prefieres pagar con cripto o mantener un saldo de cuenta en lugar de pagar por separado en cada viaje</li>
+        <li>Quieres fijar una fecha de activación futura concreta en lugar de depender de la detección de red</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige UPeSIM si&hellip;</h3>
+      <ul>
+        <li>Quieres el precio de venta más bajo y no te importa introducir un código para conseguirlo</li>
+        <li>Vas a instalar la eSIM dentro de unos dos meses antes de la salida, donde el límite de 60 días no supone un problema</li>
+        <li>Prefieres que un plan simplemente caduque en un plazo fijo antes que pagar un extra por uno que no caduque</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>
+    Ninguno de los dos encaja para todo el mundo. Si quieres el precio puro por GB más bajo con un código que funcione, sin necesitar ni un nivel sin caducidad ni precios de venta automáticos, mira <a href="/airhub/">Airhub</a> o <a href="/redteago/">RedteaGO</a>; ambos tienen precios por GB más baratos con un código que se aplica al pagar. Para la compatibilidad de dispositivos con eSIM, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre BNEsim vs UPeSIM</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, BNEsim o UPeSIM?</h3>
+      <p>Depende de la bolsa. Compara el precio de venta ya rebajado de BNEsim con el precio de UPeSIM después de aplicar REDDIT10, ESIMDB10 o T-DEALZ-10, porque esos son los números que de verdad paga cada viajero. Ninguno de los dos precios de venta por sí solo cuenta toda la historia.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Caducan los datos de alguno de los dos?</h3>
+      <p>Los de UPeSIM siempre, con un plazo fijo y sin renovación automática. BNEsim vende tanto una versión más barata de 30 días como una versión más cara sin caducidad de la misma bolsa, así que puedes elegir qué compromiso prefieres.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo comprar cualquiera de los dos con mucha antelación a mi viaje?</h3>
+      <p>Sí, pero lo gestionan de forma distinta. BNEsim te permite programar una fecha de activación futura concreta. UPeSIM espera a la conexión de red para empezar a contar, pero sus propias preguntas frecuentes avisan de que un perfil instalado y nunca activado caduca a los 60 días, así que es la opción más arriesgada para un viaje que todavía queda a meses vista.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos tiene código de descuento?</h3>
+      <p>UPeSIM sí: REDDIT10 y dos códigos de respaldo dan cada uno un 10% de descuento. BNEsim no tiene ningún sistema de códigos; sus descuentos de hasta el 70% aparecen automáticamente como precio de venta tachado.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es mas barato, BNEsim o UPeSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Depende de la bolsa. Hay que comparar el precio de venta ya rebajado de BNEsim con el precio de UPeSIM tras aplicar uno de sus codigos del 10% (REDDIT10, ESIMDB10 o T-DEALZ-10), porque esos son los numeros que de verdad paga cada viajero."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Caducan los datos de BNEsim o UPeSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"Los datos de UPeSIM siempre caducan con un plazo fijo y sin renovacion automatica. BNEsim vende tanto una version mas barata de 30 dias como una version mas cara sin caducidad de la misma bolsa de datos."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Se puede comprar un plan de BNEsim o UPeSIM con mucha antelacion al viaje?",
+        "acceptedAnswer":{"@type":"Answer","text":"Si, pero la mecanica es distinta. BNEsim permite programar una fecha de inicio futura concreta. UPeSIM empieza a contar solo al conectar con la red de destino, pero un perfil instalado y nunca activado caduca a los 60 dias segun las propias preguntas frecuentes de UPeSIM."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Tienen BNEsim o UPeSIM codigo de descuento?",
+        "acceptedAnswer":{"@type":"Answer","text":"UPeSIM si: REDDIT10, ESIMDB10 y T-DEALZ-10 dan cada uno un 10% de descuento. BNEsim no tiene sistema de codigos de descuento; sus descuentos de hasta el 70% aparecen automaticamente como precio de venta tachado."}
+      }
+    ]
+  }
+  </script>
+</div>
