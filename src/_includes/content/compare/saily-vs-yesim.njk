@@ -1,0 +1,133 @@
+<!-- Saily vs Yesim Comparison Content -->
+<div class="content-section">
+
+  {% set sailyPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set yesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>Saily</strong> if you want the cheaper option and would normally pay for a VPN/ad-blocker separately when traveling anyway. Pick <strong>Yesim</strong> if you're a repeat traveler who wants a data balance that rolls over between trips and a real refund if you don't end up using it. Saily wins on price almost everywhere; Yesim's pitch is flexibility and a refund policy that goes further than most providers on this site.
+    </p>
+  </div>
+
+  <h2>The Core Difference: A Security Bundle or a Rollover Balance</h2>
+  <p>
+    Saily is NordVPN's own eSIM product (built in-house by Nord Security, not a licensing deal), so every plan ships with ad blocking, malware/phishing site blocking, and a virtual-location tool on top of the data connection. It also sells one universal eSIM that keeps working as you cross into a new supported country, instead of swapping profiles at each border.
+  </p>
+  <p>
+    Yesim works differently: its "Pay & Fly" plans are a prepaid dollar balance, priced from $1.10/GB, rather than a fixed GB block, and whatever you don't use rolls over to your next trip instead of expiring. Yesim also claims automatic switching across 800+ partner networks ("SwitchLess Networks") so the eSIM hops to whichever local carrier has the best signal; that's Yesim's own claim, not something we've independently measured.
+  </p>
+
+  <h2>Price Snapshot (before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Saily</th>
+          <th>Yesim</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>United States</td><td>$3.99 (1GB)</td><td>$8.40 (1 day)</td></tr>
+        <tr><td>Europe regional</td><td>$4.99 (1GB)</td><td>$7.70 (1 day, unlimited)</td></tr>
+        <tr><td>Japan</td><td>$3.99 (1GB)</td><td>$19.80 (7 days)</td></tr>
+        <tr><td>Global</td><td>$8.99 (1GB)</td><td>$20.90 (3GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Saily prices by the gigabyte; Yesim prices by the day or by a rollover dollar balance (from $1.10/GB on Pay &amp; Fly). The numbers above aren't directly comparable units, but Saily lands cheaper across every destination in this snapshot, which tracks with Saily sitting in our "Cheap" price bracket and Yesim in "Expensive."</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Saily:</strong> {{ providerA.primaryCode }}, {{ sailyPrimary.discount | lower }}. <a href="/saily/">Full code list &rarr;</a></li>
+      <li><strong>Yesim:</strong> {{ providerB.primaryCode }}, {{ yesimPrimary.discount | lower }}. <a href="/yesim/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Neither code is ours; both are the best public codes we've verified still work. Saily's applies storewide on every purchase. Yesim's is first-purchase only: returning customers should try WELCOMETOYESIM (15% off) or TRAVELFREE (a flat &euro;3 off) instead, both covered on the <a href="/yesim/">Yesim page</a>.</p>
+  </div>
+
+  <h2>Is Saily or Yesim the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Saily if&hellip;</h3>
+      <ul>
+        <li>You want the lower price for comparable data, almost everywhere</li>
+        <li>You'd normally pay for a VPN/ad-blocker separately when traveling anyway</li>
+        <li>You're on a multi-country trip and don't want a new eSIM at every border</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with Yesim if&hellip;</h3>
+      <ul>
+        <li>You travel often and want a balance that carries over instead of expiring per trip</li>
+        <li>You might not use the whole plan and want a real refund option, not just a failed-activation refund</li>
+        <li>You'd rather buy data in dollars than track a fixed GB allowance</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Saily can't be bought or topped up while you're physically inside Turkey.</strong> Its website and app were among those blocked by Turkey's telecom regulator (BTK) starting mid-2025. An eSIM purchased and installed before you land still works once you're there, so this only matters if you're planning to buy on arrival. We haven't found the same restriction reported for Yesim.
+  </p>
+  <p>
+    <strong>Yesim's refund guarantee is genuinely unusual for this category.</strong> Most eSIM providers on this site, Saily included, only refund a plan that never activated at all. Yesim advertises a 30-day money-back guarantee on plans you simply didn't end up using, which is the kind of flexibility that can offset its higher per-GB price if you tend to buy ahead of a trip and aren't sure you'll need the full plan.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Saily vs Yesim FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Saily or Yesim</h3>
+      <p>Saily, in every destination we checked. Saily sits in our "Cheap" price bracket; Yesim sits in "Expensive." Yesim's rollover balance and refund guarantee are the trade-off for the higher price, not a cheaper rate per GB.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does either one include a VPN</h3>
+      <p>Saily does: every plan bundles ad blocking, malware/phishing blocking, and a virtual-location tool, since Saily is built in-house by NordVPN's parent company. Yesim has no equivalent security bundle.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which one is better for a frequent traveler who buys data often</h3>
+      <p>Yesim's Pay &amp; Fly balance rolls over between trips instead of expiring, which suits someone topping up the same balance repeatedly. Saily sells by the GB per plan instead, so unused data on one plan doesn't carry into the next purchase.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I get a refund if I don't use the plan</h3>
+      <p>Yesim's 30-day money-back guarantee covers plans that were never used, not just ones that failed to activate. Saily's refund policy is narrower: a full refund if the eSIM was never installed or activated, or if less than 1% of the data was used, or there was a genuine service-quality issue.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Saily or Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Saily is cheaper across every destination checked. Saily sits in the Cheap price bracket on this site, while Yesim sits in Expensive; Yesim's rollover balance and refund guarantee are the trade-off for the higher price, not a cheaper rate per GB."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Saily or Yesim include a VPN?",
+        "acceptedAnswer":{"@type":"Answer","text":"Saily does. Every plan bundles ad blocking, malware and phishing site blocking, and a virtual-location tool, since Saily is built in-house by NordVPN's parent company. Yesim has no equivalent security bundle."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which is better for a frequent traveler, Saily or Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim's Pay & Fly balance rolls over between trips instead of expiring, which suits someone topping up the same balance repeatedly. Saily sells by the GB per plan instead, so unused data on one plan does not carry into the next purchase."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I get a refund if I don't use a Saily or Yesim plan?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim's 30-day money-back guarantee covers plans that were simply never used, not only ones that failed to activate. Saily's refund policy is narrower: a full refund applies if the eSIM was never installed or activated, if less than 1% of the data was used, or if there was a genuine service-quality issue."}
+      }
+    ]
+  }
+  </script>
+</div>
