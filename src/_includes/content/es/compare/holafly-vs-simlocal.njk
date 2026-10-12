@@ -1,0 +1,141 @@
+<!-- Comparativa Holafly vs SimLocal (Español) -->
+<div class="content-section">
+
+  {% set holaflyPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set simlocalPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set holaflyEsCode = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
+  {% set simlocalEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set holaflyDiscount = (holaflyEsCode.discount if holaflyEsCode) or holaflyPrimary.discount %}
+  {% set simlocalDiscount = (simlocalEsCode.discount if simlocalEsCode) or simlocalPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>Holafly</strong> si quieres un único precio fijo con datos ilimitados y no quieres preocuparte nunca más por un límite de gigabytes, en cualquiera de sus más de 200 destinos. Elige <strong>SimLocal</strong> si viajas específicamente al Reino Unido y quieres un número de teléfono británico real incluido en tu plan, además de una devolución de dinero sin preguntas si no te convence. En realidad, no buscan al mismo tipo de viajero.
+    </p>
+  </div>
+
+  <h2>La diferencia principal: ilimitado en todas partes frente a un número de Reino Unido incluido</h2>
+  <p>
+    La propuesta de Holafly es datos ilimitados a un precio fijo por día, país o región, sin contar gigabytes. SimLocal, en cambio, vende planes con GB fijos, pero sus planes para el Reino Unido incluyen algo que Holafly no ofrece en absoluto: un número de teléfono británico real para llamadas y mensajes, no solo una eSIM de datos. Si el viaje es al Reino Unido y quieres recibir llamadas y mensajes en un número británico de verdad, SimLocal ofrece algo que Holafly no puede ofrecer por su propia estructura. Si el viaje pasa por varios países y prefieres no controlar el consumo, el precio fijo e ilimitado de Holafly es la opción más sencilla.
+  </p>
+  <p>
+    Ninguno de los dos proveedores es la opción perfecta para todo el mundo. SimLocal también vende planes específicos para estudiantes pensados para estancias más largas y cuenta con algunos quioscos en aeropuertos (confirmado en Heathrow), algo que Holafly no tiene. El punto fuerte de Holafly es la VPN integrada en su eSIM para China, que los planes de SimLocal no ofrecen.
+  </p>
+
+  <h2>Comparativa de características</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Característica</th>
+          <th>Holafly</th>
+          <th>SimLocal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Modelo de precios</td><td>Datos ilimitados, precio fijo por día/región</td><td>Planes con GB fijos por país o región</td></tr>
+        <tr><td>Destinos</td><td>200+</td><td>200+</td></tr>
+        <tr><td>Número de teléfono local</td><td>No disponible</td><td>La mayoría de los planes de Reino Unido incluyen un número británico gratis</td></tr>
+        <tr><td>Política de devoluciones</td><td>Sin garantía general publicitada</td><td>"No Quibble Refunds", devolución sin necesidad de justificar nada</td></tr>
+        <tr><td>Canal de soporte en vivo</td><td>Chat en vivo en la web, 24/7</td><td>WhatsApp, correo y centro de ayuda, 24/7 (sin widget de chat en la web)</td></tr>
+        <tr><td>eSIM para China</td><td>VPN integrada</td><td>Sin equivalente</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">SimLocal no publica precios por país y GB como sí hacen otros competidores, así que esta es una comparación de características en lugar de una tabla de precios lado a lado.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Holafly:</strong> {{ providerA.primaryCode }}, {{ holaflyDiscount | lower }}. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>SimLocal:</strong> {{ providerB.primaryCode }}, {{ simlocalDiscount | lower }}. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ambos códigos son nuestros, por eso los mostramos primero en sus respectivas páginas. El ADAMANDLINDS de SimLocal supera a los otros cuatro códigos públicos, que solo dan un 5%.</p>
+  </div>
+
+  <h2>¿Holafly o SimLocal es la opción correcta?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige Holafly si&hellip;</h3>
+      <ul>
+        <li>Viajas a varios países y no quieres controlar el consumo en cada parada</li>
+        <li>Realmente no sabes cuántos datos vas a necesitar</li>
+        <li>China está en el itinerario y quieres la VPN integrada</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige SimLocal si&hellip;</h3>
+      <ul>
+        <li>Viajas al Reino Unido y quieres un número británico real para llamadas y mensajes</li>
+        <li>Quieres una devolución sin preguntas si la eSIM no funciona como esperabas</li>
+        <li>Estudias en el extranjero y quieres un plan pensado para una estancia más larga</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>El número de teléfono de SimLocal solo viene con sus planes de Reino Unido.</strong> No es una característica universal en todos los destinos de SimLocal, así que revisa la página del plan concreto si un número local real te importa fuera del Reino Unido. Holafly no ofrece un número incluido en ningún plan, ni en el Reino Unido ni en ningún otro sitio; es una eSIM solo de datos en todos los casos.
+  </p>
+  <p>
+    <strong>Tanto el "ilimitado" de Holafly como los planes de GB fijo de SimLocal tienen un límite en algún momento,</strong> solo que en puntos distintos. Holafly puede reducir la velocidad en algunos planes tras un uso muy intenso el mismo día; los planes de SimLocal simplemente se agotan cuando se consume el volumen de GB comprado, como la mayoría de los proveedores de datos fijos. Ninguno de los dos es una trampa, pero "ilimitado" en Holafly no significa "sin control".
+  </p>
+  <p>
+    ¿Buscas una alternativa más económica a SimLocal con GB fijos y otro tipo de número incluido? Consulta nuestra <a href="/compare/simlocal-vs-bytesim/">comparativa SimLocal vs ByteSIM</a> (en inglés). Para la configuración del dispositivo y conceptos básicos de eSIM que aplican a ambos proveedores, consulta nuestra <a href="/compatible-devices/">guía de dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre Holafly vs SimLocal</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más económico, Holafly o SimLocal?</h3>
+      <p>Depende del consumo y del destino. Los planes de SimLocal con GB limitados pueden salir más baratos para un uso ligero en un solo país, especialmente en el Reino Unido, donde el número de teléfono incluido gratis añade valor. El precio fijo e ilimitado de Holafly compensa más cuanto mayor sea el consumo de datos, o en un viaje por varios países.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿SimLocal ofrece número de teléfono fuera del Reino Unido?</h3>
+      <p>La mayoría de los planes de Reino Unido de SimLocal incluyen un número británico real para llamadas y mensajes. Eso es específico de la gama de Reino Unido; conviene revisar la página del plan para otros destinos antes de asumir que incluye lo mismo.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo obtener una devolución si cambio de opinión?</h3>
+      <p>SimLocal publicita una política "No Quibble Refunds", devolución sin necesidad de justificar nada. Holafly no publicita una garantía general equivalente.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál es mejor para un viaje a China?</h3>
+      <p>Holafly, si no quieres configurar una VPN por tu cuenta: su eSIM para China ya incluye una. SimLocal no ofrece nada equivalente, así que necesitarías tu propia solución de VPN sea cual sea el plan.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más económico, Holafly o SimLocal?",
+        "acceptedAnswer":{"@type":"Answer","text":"Depende del consumo y del destino. Los planes de SimLocal con GB limitados pueden salir más baratos para un uso ligero en un solo país, especialmente en el Reino Unido, donde el número de teléfono incluido gratis añade valor. El precio fijo e ilimitado de Holafly compensa más cuanto mayor sea el consumo de datos, o en un viaje por varios países."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿SimLocal ofrece número de teléfono fuera del Reino Unido?",
+        "acceptedAnswer":{"@type":"Answer","text":"La mayoría de los planes de Reino Unido de SimLocal incluyen un número británico real para llamadas y mensajes. Eso es específico de la gama de Reino Unido; conviene revisar la página del plan para otros destinos antes de asumir que incluye lo mismo."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Puedo obtener una devolución con Holafly o SimLocal si cambio de opinión?",
+        "acceptedAnswer":{"@type":"Answer","text":"SimLocal publicita una política No Quibble Refunds, devolución sin necesidad de justificar nada. Holafly no publicita una garantía general equivalente."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál es mejor para un viaje a China, Holafly o SimLocal?",
+        "acceptedAnswer":{"@type":"Answer","text":"Holafly, para quienes no quieren configurar una VPN por su cuenta, ya que su eSIM para China incluye una. SimLocal no ofrece nada equivalente, por lo que se necesitaría una solución de VPN propia sea cual sea el plan."}
+      }
+    ]
+  }
+  </script>
+</div>

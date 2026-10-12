@@ -406,5 +406,13 @@
     "title": "Airhub vs Orange: Cheapest Per-GB or a Carrier's Calls-and-SMS Bundle? (2026 Comparison)",
     "description": "Airhub vs Orange compared: Airhub's rock-bottom per-GB pricing with a working discount code and bundled SMS/local number versus Orange's carrier-backed unlimited calls, SMS and hotspot bundle for Europe with no working code, and which one actually fits your trip.",
     "lastUpdated": "2026-10-12"
+  },
+  {
+    "slug": "holafly-vs-simlocal",
+    "providerA": "holafly",
+    "providerB": "simlocal",
+    "title": "Holafly vs SimLocal: Unlimited Data or a Bundled UK Phone Number? (2026 Comparison)",
+    "description": "Holafly vs SimLocal compared: Holafly's flat-rate unlimited data in 200+ destinations versus SimLocal's fixed-GB UK plans with a free bundled phone number and no-quibble refunds, discount codes, and which one actually fits your trip.",
+    "lastUpdated": "2026-10-12"
   }
 ]
