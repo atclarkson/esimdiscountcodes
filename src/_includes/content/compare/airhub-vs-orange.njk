@@ -1,0 +1,136 @@
+<!-- Airhub vs Orange Comparison Content -->
+<div class="content-section">
+
+  {% set airhubPrimary = providerA.codes | findCode("ESIMOFFER5") %}
+  {% set orangePrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>Airhub</strong> if you just need data and want the cheapest per-GB price with a working discount code. Pick <strong>Orange</strong> if you want real phone calls and texting bundled in as standard, not sold separately, and you're willing to pay a lot more for it. They're not really competing for the same traveler.
+    </p>
+  </div>
+
+  <h2>The Core Difference: Cheap Data-Only vs a Carrier's Full Bundle</h2>
+  <p>
+    Airhub sells fixed data blocks with SMS and a local number thrown in, no voice calls, at some of the lowest per-GB prices on this site. Orange Travel is the international eSIM arm of Orange, one of Europe's largest telecom groups, and its plans include unlimited calls, unlimited SMS, and hotspot tethering standard, not as a paid add-on. That bundle is also why Orange sits in our "Expensive" price bracket while Airhub sits in "Cheap": you're paying for carrier-grade voice service, not just data.
+  </p>
+  <p>
+    Airhub's own code, <strong>ADAMANDLINDS</strong>, currently isn't applying a discount at checkout (we've reported it to Airhub). The public code <strong>ESIMOFFER5</strong> is the one we've confirmed actually knocks 5% off before payment, so that's the code to use. Orange has no promo code system at all in its checkout; the code we previously listed for it, AW0, doesn't appear anywhere on the real site.
+  </p>
+
+  <h2>Price Snapshot (before any code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Airhub</th>
+          <th>Orange</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>France</td><td>$3.50 (3GB)</td><td>$5.99 (1GB)</td></tr>
+        <tr><td>Italy</td><td>$5 (3GB)</td><td>$8.99 (1GB)</td></tr>
+        <tr><td>Europe regional</td><td>$4.50 (4GB)</td><td>$5.99 (1GB)</td></tr>
+        <tr><td>Global</td><td>$11.50 (3GB)</td><td>$52.99 (20GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Even before Airhub's code, it's cheaper per gigabyte almost everywhere we checked. Orange's Europe plans do get automatic strike-through markdowns on bigger tiers (up to roughly 40% off list price on its largest 90-day/500GB plan), but that's a volume discount for a long stay, not a way to match Airhub's rate on a short trip.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airhub:</strong> ESIMOFFER5, {{ airhubPrimary.discount | lower }}. <a href="/airhub/">Full code list &rarr;</a></li>
+      <li><strong>Orange:</strong> No working code. <a href="/orange/">See why &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Airhub's own branded code (ADAMANDLINDS) isn't applying a discount right now, so use the public ESIMOFFER5 code instead. Orange doesn't run a promo-code checkout field; its only real "discount" is the automatic sale pricing built into bigger plans.</p>
+  </div>
+
+  <h2>Is Airhub or Orange the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Airhub if&hellip;</h3>
+      <ul>
+        <li>You only need data, not a working phone number for calls</li>
+        <li>You want the lowest realistic per-GB price with a code that actually works</li>
+        <li>Your trip is short: Airhub's minimum plan validity is 5 days against Orange's 14</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with Orange if&hellip;</h3>
+      <ul>
+        <li>You need real unlimited calls and texts, not an add-on or a separate purchase</li>
+        <li>You're staying in Europe specifically and want a carrier-backed network behind the eSIM</li>
+        <li>You're booking a long, high-data stay where the automatic bulk markdown actually kicks in</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Airhub's plans last up to a year after purchase; Orange's expire in 6 months.</strong> If you buy ahead of a trip that might get delayed or extended, Airhub gives you a lot more room before the data goes stale.
+  </p>
+  <p>
+    <strong>"190+ destinations" and "200+ destinations" aren't the same kind of claim here.</strong> Airhub's figure covers data-only eSIMs across that whole range. Orange's broader marketing number covers its full network, but the calls/SMS/hotspot bundle and the pricing above is specific to its Europe plan lineup, 39 named countries and territories, not a flat global rate. If calls and texts matter to you outside Europe, check Orange's plan page for that destination directly before assuming the same bundle applies.
+  </p>
+  <p>
+    Neither provider is the cheapest option on this site if raw per-GB price is all you care about: see <a href="/redteago/">RedteaGO</a> for that. And if you'd rather pay one flat unlimited price than track either provider's GB buckets, see <a href="/holafly/">Holafly</a>.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>Airhub vs Orange FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Airhub or Orange</h3>
+      <p>Airhub, by a wide margin on a per-gigabyte basis, with a working 5% code on top. Orange only closes part of that gap on its biggest, longest plans, where an automatic bulk discount kicks in.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does Airhub include phone calls</h3>
+      <p>No. Airhub bundles SMS and a local number, but voice calls aren't included. Orange's Europe plans include unlimited calls and SMS standard.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Is there a working Orange discount code</h3>
+      <p>Not one we could verify. Orange's checkout has no promo code field at all; its discounts are automatic strike-through sale prices on bigger plans instead.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which one should I use outside Europe</h3>
+      <p>Airhub, generally. Orange's calls/SMS/hotspot bundle and pricing we've verified is specific to its Europe plan lineup; check its own site for your exact destination before assuming the same bundle applies elsewhere.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Airhub or Orange?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub, by a wide margin on a per-gigabyte basis, with a working 5% code on top. Orange only closes part of that gap on its biggest, longest plans, where an automatic bulk discount applies."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Airhub include phone calls?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. Airhub bundles SMS and a local number but not voice calls. Orange's Europe plans include unlimited calls and SMS as standard."}
+      },
+      {
+        "@type":"Question",
+        "name":"Is there a working Orange discount code?",
+        "acceptedAnswer":{"@type":"Answer","text":"Not one that could be verified. Orange's checkout has no promo code field; its discounts are automatic strike-through sale prices built into bigger plans instead."}
+      },
+      {
+        "@type":"Question",
+        "name":"Should I use Airhub or Orange outside Europe?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airhub, generally, since the verified Orange pricing and calls/SMS/hotspot bundle is specific to its Europe plan lineup. Check Orange's own site for the exact destination before assuming the same bundle applies elsewhere."}
+      }
+    ]
+  }
+  </script>
+</div>
