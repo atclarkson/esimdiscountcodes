@@ -1,0 +1,133 @@
+<!-- ByteSIM vs UPeSIM Comparison Content -->
+<div class="content-section">
+
+  {% set bytesimPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set upesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>ByteSIM</strong> if you need a real local phone number for calls and texts, not just data, in one of its supported countries. Pick <strong>UPeSIM</strong> if you just want cheap prepaid data with zero identity checks and a code that actually gives you the full discount it advertises. They're not really competing for the same trip: one sells a number, the other sells data you can install weeks ahead of time.
+    </p>
+  </div>
+
+  <h2>The Core Difference: A Real Phone Number vs. Pure Prepaid Data</h2>
+  <p>
+    ByteSIM's whole pitch is bundling a real local number (calls, texts, hotspot, a local IP address) on top of data, in select countries including the US, Canada, UK, France, Spain, Australia, Vietnam, South Korea, and Thailand. Getting that number means identity verification: a passport photo and a selfie, standard for getting an actual phone number in most countries. UPeSIM doesn't offer a number at all. It's a French MVNO selling strictly data-only, prepaid, no subscription, and no ID check of any kind, in 200+ countries and territories.
+  </p>
+  <p>
+    That makes this less of a head-to-head and more of a "what do you actually need" question. If you only want data and don't want to hand over a passport photo, UPeSIM is the simpler buy almost everywhere. If you specifically need a working local number to receive a verification text or make a local call, ByteSIM is the only one of the two that solves that at all, but only in its supported countries.
+  </p>
+
+  <h2>Spain, Side by Side</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>ByteSIM</th>
+          <th>UPeSIM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Spain plan we checked</td><td>100GB + 15GB EU roaming, 27 days</td><td>5GB, no fixed duration listed</td></tr>
+        <tr><td>Price</td><td>$13.90 list, $13.20 after automatic Summer Sale (no code)</td><td>$13 (before any code)</td></tr>
+        <tr><td>Local phone number</td><td>Yes, +34 Spanish number, unlimited Spain calls included</td><td>No, data-only</td></tr>
+        <tr><td>ID verification required</td><td>Yes, for the number</td><td>No</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">These aren't equivalent products at a similar price. ByteSIM's Spain plan is the one we actually bought and verified ourselves; it bundles far more data plus a working phone number for roughly the same money as UPeSIM's plain 5GB. The trade is the ID verification and being limited to ByteSIM's supported number countries.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>ByteSIM:</strong> {{ providerA.primaryCode }}, {{ bytesimPrimary.discount | lower }}. <a href="/bytesim/">Full code details &rarr;</a></li>
+      <li><strong>UPeSIM:</strong> {{ providerB.primaryCode }}, {{ upesimPrimary.discount | lower }}. <a href="/upesim/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">This is the sharpest difference between the two. We tested ByteSIM's {{ providerA.primaryCode }} on a real order and it only knocked off about 5%, despite being advertised elsewhere as 10% off. UPeSIM's {{ providerB.primaryCode }} applies a clean, verified 10% at checkout, no asterisk.</p>
+  </div>
+
+  <h2>Is ByteSIM or UPeSIM the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with ByteSIM if&hellip;</h3>
+      <ul>
+        <li>You need a real local number for calls or texts, not just data, in one of its supported countries</li>
+        <li>You want data, calls, and hotspot sharing bundled into one purchase</li>
+        <li>You're fine uploading a passport photo and a selfie to get that number</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with UPeSIM if&hellip;</h3>
+      <ul>
+        <li>You just want data and would rather not do any identity verification at all</li>
+        <li>You want to install the eSIM weeks before your trip without it burning days early</li>
+        <li>You want a code that actually gives the full advertised discount</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>ByteSIM's advertised discount doesn't match what we measured.</strong> {{ providerA.primaryCode }} is advertised as 10% off elsewhere, but on our own test order it only saved about 5%, roughly the same cut ByteSIM's site already applies automatically through its ongoing Summer Sale. UPeSIM's {{ providerB.primaryCode }} gave the full 10% with nothing held back.
+  </p>
+  <p>
+    <strong>Only UPeSIM's plan can sit installed for weeks without starting.</strong> UPeSIM's validity clock starts when your phone actually connects to the destination network, not when you install the eSIM, so you can set it up at home before you fly. It does go stale after 60 days if never activated, per UPeSIM's own FAQ. ByteSIM's plans are also set up to not bill until you tap activate, per its own support, but its product is built around getting a working number quickly after you land, not sitting dormant for weeks.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <!-- FAQ -->
+  <h2>ByteSIM vs UPeSIM FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, ByteSIM or UPeSIM</h3>
+      <p>Depends what you're buying. For plain data with no number, UPeSIM's per-GB rates in its pricing table are generally cheaper. But ByteSIM's Spain plan we tested bundled far more data (100GB plus 15GB EU roaming) and a real phone number for about the same $13-ish price as UPeSIM's plain 5GB, so the comparison flips once you need a number.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Do I need ID verification for either one</h3>
+      <p>Only for ByteSIM, and only on its local-number plans (a passport photo and a selfie). ByteSIM's data-only plans don't require it. UPeSIM never requires identity verification for any plan.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which discount code actually works as advertised</h3>
+      <p>UPeSIM's REDDIT10. We tested ByteSIM's TPDBYTE on a real order and it only saved about 5%, not the 10% it's advertised as elsewhere.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I install either eSIM before I travel</h3>
+      <p>UPeSIM is built for this: its plan doesn't start counting until your phone connects to the destination network, so installing weeks ahead costs you nothing, as long as you activate within 60 days. ByteSIM is more built around activating soon after you land to get a working number quickly.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD aligned with on-page copy -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, ByteSIM or UPeSIM?",
+        "acceptedAnswer":{"@type":"Answer","text":"It depends on what's being bought. For plain data with no phone number, UPeSIM's per-GB rates are generally cheaper. But ByteSIM's tested Spain plan bundled far more data plus a real phone number for about the same price as UPeSIM's plain 5GB plan, so the comparison flips once a number is needed."}
+      },
+      {
+        "@type":"Question",
+        "name":"Do ByteSIM or UPeSIM require ID verification?",
+        "acceptedAnswer":{"@type":"Answer","text":"Only ByteSIM, and only for its local-number plans, which require a passport photo and a selfie. ByteSIM's data-only plans don't require it, and UPeSIM never requires identity verification for any plan."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which discount code actually delivers the advertised discount?",
+        "acceptedAnswer":{"@type":"Answer","text":"UPeSIM's REDDIT10 code. ByteSIM's TPDBYTE code was tested on a real order and only saved about 5%, not the 10% advertised elsewhere."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can a ByteSIM or UPeSIM eSIM be installed before traveling?",
+        "acceptedAnswer":{"@type":"Answer","text":"UPeSIM is built for this: its plan validity starts only once the phone connects to the destination network, so installing weeks ahead costs nothing as long as it's activated within 60 days. ByteSIM is built more around activating soon after landing to get a working number quickly."}
+      }
+    ]
+  }
+  </script>
+</div>

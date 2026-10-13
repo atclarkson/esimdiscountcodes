@@ -1,5 +1,13 @@
 [
   {
+    "slug": "bytesim-vs-upesim",
+    "providerA": "bytesim",
+    "providerB": "upesim",
+    "title": "ByteSIM vs UPeSIM: Real Phone Number or Pure Prepaid Data? (2026 Comparison)",
+    "description": "ByteSIM vs UPeSIM compared: ByteSIM's bundled local phone number with ID verification versus UPeSIM's no-ID prepaid data from a French MVNO, discount codes tested against their advertised savings, and which one actually fits your trip.",
+    "lastUpdated": "2026-10-13"
+  },
+  {
     "slug": "airalo-vs-ubigi",
     "providerA": "airalo",
     "providerB": "ubigi",
