@@ -1,0 +1,144 @@
+<!-- Comparativa Nomad vs Saily (Español) -->
+<div class="content-section">
+
+  {% set nomadBest = providerA.codes | findCode("NOMTRAVEL20") %}
+  {% set sailyPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set nomadEsCode = esA.codes["NOMTRAVEL20"] if (esA and esA.codes and esA.codes["NOMTRAVEL20"]) else null %}
+  {% set sailyEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set nomadDiscount = (nomadEsCode.discount if nomadEsCode) or nomadBest.discount %}
+  {% set sailyDiscount = (sailyEsCode.discount if sailyEsCode) or sailyPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>Saily</strong> si compras datos para un viaje normal y quieres el precio más bajo, además de bloqueo de anuncios y protección contra phishing por los que, de otro modo, pagarías una VPN. Elige <strong>Nomad</strong> si vas a pasar meses fuera y prefieres pagar una sola vez por un paquete grande que sigue siendo válido hasta un año, en lugar de ir comprando planes pequeños o contratar una suscripción mensual. En un plan pequeño suelto, Saily es más barato en todos los destinos de abajo, incluso después de aplicar los dos códigos de descuento.
+    </p>
+  </div>
+
+  <h2>La diferencia clave: un gran paquete prepago o una suscripción mensual</h2>
+  <p>
+    Los dos venden planes normales por país, por región y globales desde una app, así que la diferencia interesante está en lo que cada uno ofrece a quien viaja durante mucho tiempo. La respuesta de Nomad es <strong>Global-EX</strong>: un paquete prepago que compras una vez. Según la página de planes de Nomad hoy, son 10 GB por 180 días a 39 $, o 20 GB, 30 GB o 50 GB válidos 365 días a 59 $, 79 $ y 129 $, con cobertura en 98 países. El paquete de 50 GB sale a 2,58 $/GB, frente a 5,15 $/GB en el extremo más barato del plan Global estándar de Nomad. No se renueva nada y no se te vuelve a cobrar nada.
+  </p>
+  <p>
+    La respuesta de Saily es, en cambio, una suscripción: <strong>Saily Ultra</strong>, a 59,99 $/mes, incluye 30 GB de datos de alta velocidad en más de 121 destinos (después, ilimitado a 1 Mbps), el paquete completo de NordVPN/NordPass/NordLayer/Incogni, un 8 % de reembolso en crédito de Saily y, cada mes, un pase de sala VIP en el aeropuerto y un pase de control de seguridad rápido. Solo compensa si de verdad vas a usar esos extras. Si lo único que quieres son muchos datos para un viaje largo, el paquete único de Nomad es la compra más sencilla.
+  </p>
+  <p>
+    Saily lo desarrolla internamente Nord Security (la empresa detrás de NordVPN), así que todos los planes, no solo Ultra, incluyen bloqueo de anuncios, bloqueo de webs de malware y phishing y una herramienta de ubicación virtual. Además usa una sola eSIM universal que sigue funcionando al cruzar a otro país compatible, en lugar de un perfil distinto por región.
+  </p>
+
+  <h2>Comparación rápida de precios (antes de cualquier código)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>Nomad</th>
+          <th>Saily</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Estados Unidos, 1 GB</td><td>5 $ (7 días)</td><td>3,99 $</td></tr>
+        <tr><td>Europa regional, 1 GB</td><td>5,50 $ (7 días)</td><td>4,99 $</td></tr>
+        <tr><td>Global, 1 GB</td><td>12 $ (7 días)</td><td>8,99 $</td></tr>
+        <tr><td>Estancia larga</td><td>129 $ (50 GB, 365 días, Global-EX)</td><td>59,99 $/mes (Ultra, 30 GB de alta velocidad)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Con los códigos aplicados (20 % en Nomad, 15 % en Saily), los planes de 1 GB quedan en 4,00 $ frente a unos 3,39 $ en Estados Unidos, 4,40 $ frente a unos 4,24 $ en Europa y 9,60 $ frente a unos 7,64 $ en el plan Global, así que Saily sigue siendo más barato en planes pequeños. Los precios de Nomad son de sus propias páginas de planes este mes; los de Saily, de nuestra <a href="{{ providerBUrl }}">página de Saily</a>, ya que saily.com bloquea nuestras comprobaciones automáticas. En cualquier caso, confirma el precio real al pagar.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Nomad:</strong> NOMTRAVEL20 o NOMCYBER20, {{ nomadDiscount | lower }}. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>Saily:</strong> {{ providerB.primaryCode }}, {{ sailyDiscount | lower }}. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ninguno de los dos códigos es nuestro. Ni Nomad ni Saily tienen un programa de afiliados que nos dé un código propio, así que estos son los mejores códigos públicos de la página de cada proveedor. Los dos códigos del 20 % de Nomad están empatados, así que sirve cualquiera.</p>
+  </div>
+
+  <h2>¿Nomad o Saily, cuál te conviene</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige Nomad si&hellip;</h3>
+      <ul>
+        <li>Vas a pasar meses fuera y quieres un solo paquete prepago válido hasta 365 días, sin suscripción</li>
+        <li>Quieres probar el servicio antes: los clientes nuevos pueden conseguir una eSIM de prueba gratuita de 1 GB</li>
+        <li>Quieres soporte 24/7 por chat en vivo además de por correo electrónico</li>
+        <li>Solo necesitas unos pocos datos para Europa de forma continua: el Nomad Pass, una suscripción de 3 $ que se renueva cada 30 días, da 1 GB de datos regionales de Europa en cada ciclo</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige Saily si&hellip;</h3>
+      <ul>
+        <li>Quieres el precio más bajo en un viaje de duración normal, incluso después del código más alto de Nomad</li>
+        <li>Normalmente pagarías aparte una VPN o un bloqueador de anuncios cuando viajas</li>
+        <li>Vas a cruzar varias fronteras y no quieres una eSIM nueva en cada región</li>
+        <li>Vuelas lo bastante a menudo como para usar de verdad los pases mensuales de sala VIP y control rápido de Ultra</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>Los dos venden ya planes ilimitados, pero solo Saily publica el punto de reducción de velocidad.</strong> Las páginas de planes de Nomad muestran pases ilimitados cortos (en Estados Unidos: 3 días por 11 $, 5 días por 16 $, 7 días por 23 $; en Europa: 5 días por 19 $, 10 días por 34 $) sin indicar en la página un límite de uso razonable. La política de uso razonable de Saily es concreta: velocidad máxima durante los primeros 5 GB en una ventana móvil de 24 horas en la mayoría de destinos (3 GB en algunos) y después 1 Mbps hasta el reinicio a medianoche hora local. Si piensas compartir datos con un portátil todo el día, conviene conocer esa cifra de antemano.
+  </p>
+  <p>
+    <strong>Saily no se puede comprar ni recargar mientras estés físicamente en Turquía.</strong> Su web y su app están entre las que el regulador de telecomunicaciones turco (BTK) bloquea desde mediados de 2025. Una eSIM de Saily comprada e instalada antes de aterrizar sigue funcionando, así que solo te afecta si pensabas comprarla al llegar.
+  </p>
+  <p>
+    Los dos proveedores permiten punto de acceso/tethering. Si lo decisivo son los datos a largo plazo, nuestra <a href="/es/compare/nomad-vs-ubigi/">comparativa de Nomad vs Ubigi</a> enfrenta Global-EX a otra opción de tipo suscripción. Para configurar tu dispositivo, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes: Nomad vs Saily</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, Nomad o Saily?</h3>
+      <p>Saily, en planes pequeños sueltos. Un plan de 1 GB cuesta en Saily 3,99 $ en Estados Unidos, 4,99 $ para Europa y 8,99 $ global, frente a 5 $, 5,50 $ y 12 $ en Nomad. Saily sigue siendo más barato incluso después del código del 20 % de Nomad y el del 15 % de Saily. Nomad gana con grandes cantidades de datos para estancias largas: su paquete Global-EX de 50 GB sale a 2,58 $/GB.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál es mejor para pasar meses fuera?</h3>
+      <p>Nomad, si solo quieres datos. Sus paquetes Global-EX (de 10 GB a 50 GB, hasta 365 días, 98 países) son una sola compra prepago sin nada que cancelar. La opción a largo plazo de Saily es la suscripción Ultra de 59,99 $/mes, que solo tiene sentido si vas a usar el paquete de NordVPN incluido y las ventajas en aeropuertos.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Tienen Nomad y Saily planes ilimitados?</h3>
+      <p>Los dos. Nomad vende pases ilimitados cortos, por ejemplo de 3, 5 o 7 días en Estados Unidos y de 5 o 10 días en Europa, y no indica un límite de uso razonable en esas páginas de planes. Los planes ilimitados de Saily van a velocidad máxima durante 5 GB por cada 24 horas móviles en la mayoría de destinos (3 GB en algunos) y después a 1 Mbps hasta la medianoche local.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo compartir datos (hotspot) con Nomad y Saily?</h3>
+      <p>Sí. Los dos proveedores permiten punto de acceso/tethering, y Nomad además deja repartir los datos de un plan entre varios dispositivos.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, Nomad o Saily?",
+        "acceptedAnswer":{"@type":"Answer","text":"Saily, en planes pequeños sueltos. Un plan de 1 GB cuesta en Saily 3,99 $ en Estados Unidos, 4,99 $ para Europa y 8,99 $ global, frente a 5 $, 5,50 $ y 12 $ en Nomad, y Saily sigue siendo más barato incluso después del código del 20 % de Nomad y el del 15 % de Saily. Nomad gana con grandes cantidades de datos para estancias largas: su paquete Global-EX de 50 GB sale a 2,58 $/GB."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Es mejor Nomad o Saily para pasar meses fuera?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad, si solo quieres datos. Sus paquetes Global-EX (de 10 GB a 50 GB, válidos hasta 365 días, 98 países) son una sola compra prepago sin nada que cancelar. La opción a largo plazo de Saily es la suscripción Ultra de 59,99 $ al mes, que solo tiene sentido si vas a usar el paquete de NordVPN incluido y las ventajas en aeropuertos."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Tienen Nomad y Saily planes ilimitados?",
+        "acceptedAnswer":{"@type":"Answer","text":"Los dos. Nomad vende pases ilimitados cortos, por ejemplo de 3, 5 o 7 días en Estados Unidos y de 5 o 10 días en Europa, y no indica un límite de uso razonable en esas páginas de planes. Los planes ilimitados de Saily van a velocidad máxima durante 5 GB por cada 24 horas móviles en la mayoría de destinos (3 GB en algunos) y después a 1 Mbps hasta la medianoche local."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Puedo compartir datos (hotspot) con Nomad y Saily?",
+        "acceptedAnswer":{"@type":"Answer","text":"Sí. Los dos proveedores permiten punto de acceso y tethering, y Nomad además deja repartir los datos de un plan entre varios dispositivos."}
+      }
+    ]
+  }
+  </script>
+</div>
