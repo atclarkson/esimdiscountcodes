@@ -1,0 +1,134 @@
+<!-- Comparativa Ubigi vs BNEsim (Español) -->
+<div class="content-section">
+
+  {% set ubigiPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set ubigiEsCode = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
+  {% set ubigiDiscount = (ubigiEsCode.discount if ubigiEsCode) or ubigiPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>Ubigi</strong> si prefieres comprar con una marca de telecomunicaciones establecida y tener un código de descuento real que aplicar al pagar. Elige <strong>BNEsim</strong> si lo que más te importa es el precio más bajo por GB y no te molesta que el descuento ya venga incluido en el precio en lugar de algo que tú mismo introduces. En realidad no compiten por lo mismo: uno vende trayectoria y un código que funciona, el otro un precio más bajo sin necesidad de código.
+    </p>
+  </div>
+
+  <h2>La diferencia clave: trayectoria de operador con código, o precios económicos ya rebajados</h2>
+  <p>
+    Ubigi es una marca de Transatel, un operador de red móvil virtual francés que opera conectividad celular desde principios de los años 2000 y que ahora forma parte de NTT Group, uno de los mayores grupos de telecomunicaciones del mundo. Transatel también suministra la conectividad SIM de los coches conectados de BMW, Toyota, Jeep, Maserati, Fiat, Alfa Romeo, Mini, Jaguar y Land Rover, así que la eSIM de tu teléfono funciona sobre la misma infraestructura de red que el módem del salpicadero de un coche. Esa trayectoria se nota en el precio: un plan de 1 GB para Estados Unidos cuesta unos 4 $ antes de aplicar cualquier código, y {{ providerA.primaryCode }} (nuestro propio código) añade otro 10% de descuento.
+  </p>
+  <p>
+    BNEsim no tiene ese respaldo corporativo, y tampoco anuncia ningún código de descuento en su propia web. Lo que hace en cambio es aplicar el descuento directamente sobre el precio de venta: sus páginas de precios muestran hasta un 70% de descuento como un precio original tachado junto a un precio de oferta más bajo, sin necesidad de código. En pura base de precio por GB, eso hace que BNEsim sea notablemente más barato que Ubigi en la mayoría de los destinos que hemos revisado.
+  </p>
+
+  <h2>Comparativa de precios (1 GB, antes de cualquier código cuando aplica)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Ubigi</th>
+          <th>BNEsim</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Estados Unidos</td><td>4,00 $</td><td>1,48 $</td></tr>
+        <tr><td>Europa (regional)</td><td>&mdash;</td><td>0,95 $</td></tr>
+        <tr><td>Asia (regional)</td><td>&mdash;</td><td>2,82 $</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">El precio de Ubigi para Estados Unidos viene de nuestra <a href="{{ providerAUrl }}">página de Ubigi</a>; no hemos verificado de forma independiente sus planes regionales para Europa y Asia, así que dejamos esas celdas en blanco en lugar de inventar una cifra. Los precios de BNEsim ya son el precio de oferta que muestra en su propia web, según nuestra <a href="{{ providerBUrl }}">página de BNEsim</a>; aplicando el código del 10% de Ubigi, su precio en Estados Unidos baja a 3,60 $, aún muy por encima de los 1,48 $ de BNEsim.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Ubigi:</strong> {{ providerA.primaryCode }}, {{ ubigiDiscount | lower }}. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>BNEsim:</strong> No hay ningún código que aplicar. Los descuentos de hasta el 70% aparecen automáticamente como precio de oferta tachado en las páginas de precios de BNEsim. <a href="{{ providerBUrl }}">Todos los detalles &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">{{ providerA.primaryCode }} es nuestro propio código en Ubigi, por eso lo mostramos primero. Revisamos directamente la página principal, la de precios y la de cupones de BNEsim, y no encontramos ningún código de descuento anunciado en la web real, así que no hay nada que combinar con su precio ya rebajado.</p>
+  </div>
+
+  <h2>¿Ubigi o BNEsim es la mejor opción?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige Ubigi si&hellip;</h3>
+      <ul>
+        <li>Prefieres comprar con un operador MVNO establecido y respaldado por un gran grupo de telecomunicaciones, en lugar de un revendedor más pequeño</li>
+        <li>Visitas el mismo país con la frecuencia suficiente como para que un plan mensual recurrente compense frente a comprar una eSIM nueva cada vez</li>
+        <li>Quieres un código de descuento real que aplicar al pagar, no solo un precio que ya viene rebajado</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige BNEsim si&hellip;</h3>
+      <ul>
+        <li>El precio por GB te importa más que la trayectoria de la marca</li>
+        <li>Prefieres pagar con criptomonedas o mantener un saldo acumulado en lugar de pagar por separado en cada viaje</li>
+        <li>Quieres la opción de un paquete sin fecha de caducidad para un país que visitas de forma irregular, o alternativas más baratas que Ubigi: mira <a href="/airhub/">Airhub</a> o <a href="/redteago/">RedteaGO</a> para precios igual de bajos por GB con un código que puedes combinar</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>Los planes recurrentes de Ubigi te atan, los paquetes de BNEsim no.</strong> Un plan mensual de Ubigi no se puede cancelar hasta que lo hayas tenido al menos tres meses, y un plan anual no se puede cancelar ni reembolsar en absoluto durante sus 12 meses de duración. BNEsim, en cambio, vende paquetes únicos por país, cada uno disponible en una versión más barata que caduca en 30 días o en una versión más cara sin fecha de caducidad, sin ningún compromiso de suscripción en ninguno de los dos casos.
+  </p>
+  <p>
+    <strong>Ninguna de las dos empresas publica mucho sobre sus relaciones de red más allá de su propia trayectoria.</strong> Ubigi es explícito al afirmar que es una marca de Transatel/NTT, algo poco habitual de transparencia en este mercado. BNEsim no hace una afirmación equivalente sobre sobre qué antenas corren sus datos, así que si la trayectoria de red te importa específicamente, Ubigi es la de las dos que tiene una respuesta documentada.
+  </p>
+  <p>
+    Para la configuración básica de eSIM y la compatibilidad de dispositivos, que aplica a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Preguntas frecuentes sobre Ubigi vs BNEsim</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, Ubigi o BNEsim?</h3>
+      <p>BNEsim, por un margen amplio en base de precio por GB. Un plan de 1 GB para Estados Unidos cuesta unos 1,48 $ en BNEsim frente a 4,00 $ en Ubigi (3,60 $ tras el código del 10% de Ubigi). El descuento de BNEsim ya está incluido en ese precio de oferta; el de Ubigi hay que aplicarlo al pagar.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Ubigi o BNEsim tienen un código de descuento que funcione?</h3>
+      <p>Ubigi sí: {{ providerA.primaryCode }}, nuestro propio código, para un 10% de descuento. BNEsim no anuncia ningún código en su web real; sus descuentos ya aparecen como un precio de oferta rebajado.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál de los dos está respaldado por una empresa más grande?</h3>
+      <p>Ubigi. Es una marca de Transatel, un operador MVNO francés que forma parte de NTT Group, uno de los mayores grupos de telecomunicaciones del mundo. BNEsim no publica una afirmación equivalente sobre su empresa matriz o sus socios de red.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos planes puede evitar la caducidad?</h3>
+      <p>BNEsim vende una versión más cara sin fecha de caducidad para la mayoría de sus paquetes por país, de modo que los datos pueden quedar disponibles indefinidamente. Los planes únicos de Ubigi caducan tras su periodo de validez indicado; sus planes recurrentes se renuevan mensualmente en su lugar, pero no acumulan los datos no usados, y el plan mensual no se puede cancelar durante tres meses.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, Ubigi o BNEsim?",
+        "acceptedAnswer":{"@type":"Answer","text":"BNEsim, por un margen amplio en base de precio por GB. Un plan de 1 GB para Estados Unidos cuesta unos 1,48 $ en BNEsim frente a 4,00 $ en Ubigi (3,60 $ tras el código del 10% de Ubigi). El descuento de BNEsim ya está incluido en ese precio de oferta, mientras que el de Ubigi hay que aplicarlo al pagar."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Ubigi o BNEsim tienen un código de descuento que funcione?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ubigi sí, un código propio para un 10% de descuento. BNEsim no anuncia ningún código en su web real; sus descuentos ya aparecen como un precio de oferta rebajado."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál de los dos está respaldado por una empresa más grande?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ubigi. Es una marca de Transatel, un operador MVNO francés que forma parte de NTT Group, uno de los mayores grupos de telecomunicaciones del mundo. BNEsim no publica una afirmación equivalente sobre su empresa matriz o sus socios de red."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Puede un plan de Ubigi o BNEsim evitar la caducidad?",
+        "acceptedAnswer":{"@type":"Answer","text":"BNEsim vende una versión más cara sin fecha de caducidad para la mayoría de sus paquetes por país. Los planes únicos de Ubigi caducan tras su periodo de validez indicado; sus planes recurrentes se renuevan mensualmente en su lugar, pero no acumulan los datos no usados, y el plan mensual no se puede cancelar durante tres meses."}
+      }
+    ]
+  }
+  </script>
+</div>

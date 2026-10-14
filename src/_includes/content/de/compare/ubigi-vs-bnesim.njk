@@ -1,0 +1,134 @@
+<!-- Ubigi vs BNEsim Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set ubigiPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set ubigiDeCode = deA.codes[providerA.primaryCode] if (deA and deA.codes and deA.codes[providerA.primaryCode]) else null %}
+  {% set ubigiDiscount = (ubigiDeCode.discount if ubigiDeCode) or ubigiPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Wähle <strong>Ubigi</strong>, wenn du lieber bei einer etablierten Telekommarke kaufst und einen echten Rabattcode an der Kasse einlösen willst. Wähle <strong>BNEsim</strong>, wenn dir der günstigste Preis pro GB wichtiger ist und es dich nicht stört, dass der Rabatt bereits im Preisschild steckt, statt etwas, das du selbst eingibst. Beide konkurrieren nicht wirklich um dasselbe: Der eine verkauft Herkunft und einen funktionierenden Code, der andere einen niedrigeren Preis ganz ohne Code.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Telekom-Herkunft mit Code, oder bereits reduzierte Budgetpreise</h2>
+  <p>
+    Ubigi ist eine Marke von Transatel, einem französischen MVNO-Dienstleister, der seit den frühen 2000er-Jahren Mobilfunkkonnektivität betreibt und inzwischen zur NTT Group gehört, einem der größten Telekommunikationskonzerne der Welt. Transatel liefert außerdem die SIM-Konnektivität in vernetzten Fahrzeugen von BMW, Toyota, Jeep, Maserati, Fiat, Alfa Romeo, Mini, Jaguar und Land Rover, die eSIM deines Telefons läuft also auf derselben Infrastruktur wie das Modem im Armaturenbrett eines Autos. Diese Herkunft zeigt sich auch im Preis: Ein 1-GB-Tarif für die USA kostet vor jedem Code etwa 4 $, und {{ providerA.primaryCode }} (unser eigener Code) bringt weitere 10% Rabatt.
+  </p>
+  <p>
+    BNEsim hat diesen konzernartigen Hintergrund nicht, und das Unternehmen bewirbt auf der eigenen Website auch keinen Rabattcode. Stattdessen wird der Rabatt direkt auf den Listenpreis angewendet: Die Preisseiten zeigen bis zu 70% Rabatt als durchgestrichenen Originalpreis neben einem niedrigeren Verkaufspreis an, ganz ohne Code. Auf reiner Pro-GB-Basis macht das BNEsim in den meisten von uns geprüften Zielen deutlich günstiger als Ubigi.
+  </p>
+
+  <h2>Preis-Schnappschuss (1 GB, vor jedem Code, sofern zutreffend)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Ziel</th>
+          <th>Ubigi</th>
+          <th>BNEsim</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>USA</td><td>4,00 $</td><td>1,48 $</td></tr>
+        <tr><td>Europa (regional)</td><td>&mdash;</td><td>0,95 $</td></tr>
+        <tr><td>Asien (regional)</td><td>&mdash;</td><td>2,82 $</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Ubigis USA-Preis stammt von unserer <a href="{{ providerAUrl }}">Ubigi-Seite</a>; die regionalen Tarife für Europa und Asien haben wir nicht eigenständig geprüft, daher lassen wir diese Felder leer statt sie zu schätzen. BNEsims Preise sind bereits der auf der eigenen Website gezeigte Verkaufspreis, von unserer <a href="{{ providerBUrl }}">BNEsim-Seite</a>; mit Ubigis 10%-Code sinkt der USA-Preis auf 3,60 $, immer noch deutlich über BNEsims 1,48 $.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Ubigi:</strong> {{ providerA.primaryCode }}, {{ ubigiDiscount | lower }}. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>BNEsim:</strong> Kein Code nötig. Rabatte von bis zu 70% erscheinen automatisch als durchgestrichener Verkaufspreis auf BNEsims eigenen Preisseiten. <a href="{{ providerBUrl }}">Alle Details &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">{{ providerA.primaryCode }} ist unser eigener Code bei Ubigi, deshalb zeigen wir ihn zuerst. Wir haben BNEsims Startseite, Preisseite und Coupon-Seite direkt geprüft und keinen beworbenen Rabattcode auf der echten Website gefunden, es gibt also nichts, was man auf den bereits reduzierten Preis stapeln könnte.</p>
+  </div>
+
+  <h2>Ist Ubigi oder BNEsim die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm Ubigi, wenn&hellip;</h3>
+      <ul>
+        <li>Du lieber bei einem etablierten MVNO kaufst, der von einem großen Telekomkonzern gestützt wird, statt bei einem kleineren Wiederverkäufer</li>
+        <li>Du dasselbe Land so oft besuchst, dass sich ein wiederkehrender Monatstarif mehr lohnt als jedes Mal eine neue eSIM zu kaufen</li>
+        <li>Du einen funktionierenden Rabattcode an der Kasse einlösen willst, statt nur einen bereits herabgesetzten Preis zu bekommen</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm BNEsim, wenn&hellip;</h3>
+      <ul>
+        <li>Dir der Preis pro GB wichtiger ist als die Herkunft der Marke</li>
+        <li>Du lieber mit Krypto bezahlst oder ein laufendes Guthaben führst, statt bei jeder Reise separat zu bezahlen</li>
+        <li>Du die Option auf einen nicht ablaufenden Tarif für ein Land willst, das du unregelmäßig besuchst, oder Ubigis günstigere Alternativen: siehe <a href="/airhub/">Airhub</a> oder <a href="/redteago/">RedteaGO</a> für ähnlich niedrige Preise pro GB mit einem stapelbaren Code</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Ubigis wiederkehrende Tarife binden dich, BNEsims Pakete nicht.</strong> Ein Ubigi-Monatstarif kann frühestens nach drei Monaten gekündigt werden, ein Jahrestarif lässt sich während der gesamten 12-monatigen Laufzeit gar nicht kündigen oder erstatten. BNEsim verkauft stattdessen einmalige Länderpakete, jeweils als günstigere 30-Tage-Version oder als teurere Version ohne Ablaufdatum, ohne Abo-Bindung in beiden Fällen.
+  </p>
+  <p>
+    <strong>Keines der beiden Unternehmen veröffentlicht viel über seine Netzbeziehungen jenseits der eigenen Herkunft.</strong> Ubigi ist offen damit, eine Transatel/NTT-Marke zu sein, was für diesen Markt eine ungewöhnliche Transparenz ist. BNEsim macht keine vergleichbare Aussage darüber, über wessen Funkmasten die eigenen Daten laufen. Wenn dir die Netz-Herkunft konkret wichtig ist, hat Ubigi von den beiden die dokumentierte Antwort.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Ubigi vs BNEsim: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, Ubigi oder BNEsim?</h3>
+      <p>BNEsim, und das mit deutlichem Abstand auf reiner Pro-GB-Basis. Ein 1-GB-Tarif für die USA kostet bei BNEsim etwa 1,48 $, bei Ubigi 4,00 $ (3,60 $ nach Ubigis 10%-Code). BNEsims Rabatt steckt schon im Verkaufspreis, Ubigis Rabatt muss an der Kasse eingegeben werden.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Haben Ubigi oder BNEsim einen funktionierenden Rabattcode?</h3>
+      <p>Ubigi schon: {{ providerA.primaryCode }}, unser eigener Code, für 10% Rabatt. BNEsim bewirbt auf der echten Website keinen Code, dort erscheinen Rabatte bereits als herabgesetzter Verkaufspreis.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welcher der beiden steht hinter einem größeren Unternehmen?</h3>
+      <p>Ubigi. Es ist eine Marke von Transatel, einem französischen MVNO-Dienstleister, der zur NTT Group gehört, einem der größten Telekomkonzerne der Welt. BNEsim veröffentlicht keine vergleichbare Aussage zu Mutterkonzern oder Netzpartner.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Kann einer der beiden Tarife das Ablaufen vermeiden?</h3>
+      <p>BNEsim verkauft für die meisten seiner Länderpakete eine teurere Version ohne Ablaufdatum, sodass Daten unbegrenzt lange bereitliegen können. Ubigis einmalige Tarife laufen nach ihrer angegebenen Gültigkeitsdauer ab; die wiederkehrenden Tarife erneuern sich stattdessen monatlich, übertragen aber keine ungenutzten Daten, und der Monatstarif kann drei Monate lang nicht gekündigt werden.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, Ubigi oder BNEsim?",
+        "acceptedAnswer":{"@type":"Answer","text":"BNEsim, mit deutlichem Abstand auf reiner Pro-GB-Basis. Ein 1-GB-Tarif für die USA kostet bei BNEsim etwa 1,48 $, bei Ubigi 4,00 $ (3,60 $ nach Ubigis 10%-Code). BNEsims Rabatt steckt bereits im Verkaufspreis, während Ubigis Rabatt an der Kasse eingegeben werden muss."}
+      },
+      {
+        "@type":"Question",
+        "name":"Haben Ubigi oder BNEsim einen funktionierenden Rabattcode?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ubigi schon, einen eigenen Code für 10% Rabatt. BNEsim bewirbt auf der echten Website keinen Code, dort erscheinen Rabatte bereits als herabgesetzter Verkaufspreis."}
+      },
+      {
+        "@type":"Question",
+        "name":"Welcher der beiden steht hinter einem größeren Unternehmen?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ubigi. Es ist eine Marke von Transatel, einem französischen MVNO-Dienstleister, der zur NTT Group gehört, einem der größten Telekomkonzerne der Welt. BNEsim veröffentlicht keine vergleichbare Aussage zu Mutterkonzern oder Netzpartner."}
+      },
+      {
+        "@type":"Question",
+        "name":"Kann ein Ubigi- oder BNEsim-Tarif das Ablaufen vermeiden?",
+        "acceptedAnswer":{"@type":"Answer","text":"BNEsim verkauft für die meisten seiner Länderpakete eine teurere Version ohne Ablaufdatum. Ubigis einmalige Tarife laufen nach ihrer angegebenen Gültigkeitsdauer ab; die wiederkehrenden Tarife erneuern sich stattdessen monatlich, übertragen aber keine ungenutzten Daten, und der Monatstarif kann drei Monate lang nicht gekündigt werden."}
+      }
+    ]
+  }
+  </script>
+</div>
