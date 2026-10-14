@@ -1,0 +1,138 @@
+<!-- Comparativa Ubigi vs RedteaGO (Español) -->
+<div class="content-section">
+
+  {% set ubigiPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set redteagoPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set ubigiEsCode = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
+  {% set redteagoEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set ubigiDiscount = (ubigiEsCode.discount if ubigiEsCode) or ubigiPrimary.discount %}
+  {% set redteagoDiscount = (redteagoEsCode.discount if redteagoEsCode) or redteagoPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>Ubigi</strong> si quieres la red de una operadora establecida detrás de tu eSIM y no te importa pagar casi el doble por ello. Elige <strong>RedteaGO</strong> si lo que más te importa es el precio más bajo posible por GB y no te molesta revisar la letra pequeña sobre llamadas y mensajes. En realidad no compiten por el mismo comprador: uno vende tranquilidad, el otro vende un número bajo.
+    </p>
+  </div>
+
+  <h2>La diferencia principal: operador establecido vs. precio más bajo</h2>
+  <p>
+    Ubigi es una marca de Transatel, un operador móvil virtual (MVNO) francés que opera conectividad celular desde principios de los años 2000 y que ahora forma parte del grupo NTT. Esa misma red subyacente también da servicio a las SIM de coches conectados de BMW, Toyota, Jeep, Maserati, Fiat, Alfa Romeo, Mini, Jaguar y Land Rover. RedteaGO no hace ninguna afirmación equivalente sobre su trayectoria en su propia web; su argumento es simplemente el precio de entrada más bajo que puede anunciar, desde 0,52 $ para un plan válido en toda Europa.
+  </p>
+  <p>
+    Esa diferencia de posicionamiento se traduce directamente en el precio. Ubigi cuesta aproximadamente el doble que RedteaGO por GB en planes comparables, y ese es el verdadero intercambio aquí: pagar más por la trayectoria de red y la flexibilidad de planes de Ubigi, o pagar menos y aceptar la estructura más limitada de RedteaGO.
+  </p>
+
+  <h2>Comparativa de precios (antes de aplicar cualquier código)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Ubigi</th>
+          <th>RedteaGO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Estados Unidos</td><td>4 $ (1 GB)</td><td>2 $ (1 GB)</td></tr>
+        <tr><td>Europa (regional)</td><td>9 $ (3 GB)</td><td>2,79 $ (1 GB)</td></tr>
+        <tr><td>Mundial</td><td>25 $ (1 GB)</td><td>31 $ (6 GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Los tamaños de los paquetes son distintos, así que compara por GB en lugar del precio total: el plan mundial de RedteaGO sale más barato por gigabyte que el de Ubigi pese a su precio total más alto, porque incluye 6 GB en lugar de solo 1 GB.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Ubigi:</strong> {{ providerA.primaryCode }}, {{ ubigiDiscount | lower }}. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>RedteaGO:</strong> {{ providerB.primaryCode }}, {{ redteagoDiscount | lower }}. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">El código de Ubigi es el nuestro. RedteaGO no tiene el tipo de programa de afiliados que respalde un código así, así que el suyo es el mejor código público que hemos verificado, y no está anunciado en la propia web de RedteaGO.</p>
+  </div>
+
+  <h2>¿Ubigi o RedteaGO, cuál elegir?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige Ubigi si&hellip;</h3>
+      <ul>
+        <li>Visitas el mismo país con la frecuencia suficiente como para que un plan mensual recurrente compense frente a comprar una eSIM nueva cada vez</li>
+        <li>Quieres una validez mínima de solo 1 día en lugar de comprometerte de antemano a una ventana más larga</li>
+        <li>Prefieres comprar a un MVNO establecido antes que a un revendedor más barato, aunque cueste más</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige RedteaGO si&hellip;</h3>
+      <ul>
+        <li>Quieres el precio de entrada más bajo posible y no te importa comprobar el GB real antes de comprar</li>
+        <li>Podrías necesitar un número local real: RedteaGO lo ofrece, Ubigi no</li>
+        <li>No te importa una validez mínima de 15 días en lugar de la opción de 1 día de Ubigi</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>Ninguno incluye llamadas o mensajes por defecto, pero RedteaGO tiene una vía para conseguirlos y Ubigi no.</strong> RedteaGO etiqueta ciertos planes como "Calls/Texts Available" y vende un paquete eSIM de llamadas y mensajes aparte; si necesitas un número que funcione, primero tienes que comprobar esa etiqueta. Ubigi no ofrece llamadas ni SMS en ningún plan, etiquetado o no, es solo datos en todos sus planes.
+  </p>
+  <p>
+    <strong>Las condiciones de permanencia van en direcciones opuestas.</strong> Los planes de un solo uso de Ubigi tienen una validez mínima de solo 1 día, pero sus planes mensuales recurrentes te atan durante 3 meses antes de poder cancelarlos, y sus planes anuales no se pueden cancelar ni reembolsar en absoluto durante ese año. RedteaGO no tiene planes recurrentes de los que preocuparse, pero cada recarga deja de ser reembolsable en el momento en que se activa, y sus planes tienen una validez mínima de 15 días incluso para un viaje corto. Lee las condiciones de lo que realmente vas a comprar, no solo el precio llamativo.
+  </p>
+  <p>
+    ¿Prefieres datos ilimitados en lugar de un paquete fijo en cualquiera de los dos? Mira <a href="{{ (collections.i18nMap | i18nAlternates('provider:holafly')).es or '/holafly/' }}">Holafly</a>. ¿Quieres los precios bajos de RedteaGO con un precio por GB aún más bajo en la mayoría de países? Mira <a href="{{ (collections.i18nMap | i18nAlternates('provider:airhub')).es or '/airhub/' }}">Airhub</a>. Para la compatibilidad de dispositivos con eSIM, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Ubigi vs RedteaGO: preguntas frecuentes</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Qué es más barato, Ubigi o RedteaGO?</h3>
+      <p>RedteaGO, aproximadamente la mitad por GB. El precio más alto de Ubigi compra la red de un MVNO establecido y una opción de plan recurrente que RedteaGO no ofrece.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Alguno de los dos incluye llamadas o mensajes?</h3>
+      <p>Por defecto, ninguno. RedteaGO al menos tiene una vía para conseguirlo: planes etiquetados como "Calls/Texts Available" o su paquete eSIM aparte de llamadas y mensajes. Ubigi no tiene opción de llamadas o SMS en ningún plan.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál tiene el compromiso mínimo más corto?</h3>
+      <p>Los planes de un solo uso de Ubigi, con una validez mínima de 1 día. Los planes de RedteaGO tienen una validez mínima de 15 días incluso para un viaje corto. Los planes recurrentes de Ubigi funcionan al revés: un mínimo de 3 meses antes de poder cancelar un plan mensual, y ninguna cancelación posible en un plan anual.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Cuál ofrece un número de teléfono local real?</h3>
+      <p>RedteaGO. Ubigi no ofrece un número local en ningún plan.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD alineado con el contenido de la página -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Qué es más barato, Ubigi o RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"RedteaGO es más barato, aproximadamente la mitad por GB. El precio más alto de Ubigi compra la red de un MVNO establecido y una opción de plan recurrente que RedteaGO no ofrece."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Ubigi o RedteaGO incluyen llamadas o mensajes?",
+        "acceptedAnswer":{"@type":"Answer","text":"Por defecto, ninguno de los dos. RedteaGO ofrece una vía para conseguirlo mediante planes etiquetados como 'Calls/Texts Available' o su paquete eSIM aparte de llamadas y mensajes. Ubigi no tiene opción de llamadas o SMS en ningún plan."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Cuál tiene el compromiso mínimo más corto, Ubigi o RedteaGO?",
+        "acceptedAnswer":{"@type":"Answer","text":"Los planes de un solo uso de Ubigi tienen una validez mínima de 1 día. Los planes de RedteaGO tienen una validez mínima de 15 días incluso para un viaje corto. Los planes recurrentes de Ubigi funcionan al revés: un mínimo de 3 meses antes de cancelar un plan mensual, y ninguna cancelación posible en un plan anual."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Ubigi o RedteaGO ofrecen un número de teléfono local real?",
+        "acceptedAnswer":{"@type":"Answer","text":"RedteaGO ofrece una opción de número local. Ubigi no ofrece un número local en ningún plan."}
+      }
+    ]
+  }
+  </script>
+</div>
