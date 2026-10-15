@@ -40,9 +40,12 @@ module.exports = function (eleventyConfig) {
   });
 
   // NEW: pretty and ISO date helpers (used in templates)
-  eleventyConfig.addFilter("fmtDate", (d, fmt = "LLLL d, yyyy") =>
-    DateTime.fromJSDate(new Date(d), { zone: "utc" }).toFormat(fmt)
-  );
+  // Month/day names follow the page's locale (third arg, else the page's own
+  // `locale` data) so /de/ and /es/ pages never show "October" in English.
+  eleventyConfig.addFilter("fmtDate", function (d, fmt = "LLLL d, yyyy", loc) {
+    const l = loc || (this && this.ctx && this.ctx.locale) || "en";
+    return DateTime.fromJSDate(new Date(d), { zone: "utc" }).setLocale(l).toFormat(fmt);
+  });
   eleventyConfig.addFilter("fmtISO", (d) =>
     DateTime.fromJSDate(new Date(d), { zone: "utc" }).toISO()
   );

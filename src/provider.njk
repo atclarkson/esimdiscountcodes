@@ -7,8 +7,8 @@ pagination:
   addAllPagesToCollections: true
 permalink: "/{{ providerEntry[0] }}/"
 eleventyComputed:
-  title: "{% if providerEntry[1].primaryCode %}{{ providerEntry[1].primaryCode }} - {{ providerEntry[1].codes[0].discount }} Off {{ providerEntry[1].name }} eSIM (Verified {{ buildTime | fmtDate('LLLL yyyy') }}){% else %}{{ providerEntry[1].name }} Discount Codes - Checked {{ buildTime | fmtDate('LLLL yyyy') }}{% endif %}"
-  description: "{% if providerEntry[1].primaryCode %}{{ providerEntry[1].primaryCode }}: {{ providerEntry[1].codes[0].discount }} off {{ providerEntry[1].name }} eSIM plans. Verified {{ buildTime | fmtDate('LLLL d, yyyy') }}. Save on travel data with tested codes.{% else %}We haven't found a verified {{ providerEntry[1].name }} discount code yet - checked {{ buildTime | fmtDate('LLLL d, yyyy') }}. {{ providerEntry[1].description }}{% endif %}"
+  title: "{% if providerEntry[1].primaryCode %}{{ providerEntry[1].name }} Discount Code: {{ providerEntry[1].primaryCode }} for {{ providerEntry[1].codes[0].discount }} ({{ buildTime | fmtDate('LLLL yyyy') }}){% else %}{{ providerEntry[1].name }} Discount Code & Promo Code - Checked {{ buildTime | fmtDate('LLLL yyyy') }}{% endif %}"
+  description: "{% if providerEntry[1].primaryCode %}{{ providerEntry[1].name }} discount code {{ providerEntry[1].primaryCode }} - {{ providerEntry[1].codes[0].discount }}. Verified {{ buildTime | fmtDate('LLLL d, yyyy') }}. Every working {{ providerEntry[1].name }} promo code we have found, best one first.{% else %}We haven't found a verified {{ providerEntry[1].name }} discount code yet - checked {{ buildTime | fmtDate('LLLL d, yyyy') }}. {{ providerEntry[1].description }}{% endif %}"
   canonical: "{{ page.url | url | absoluteUrl(site.url) }}"
   providerKey: "{{ providerEntry[0] }}"
   provider: "{{ providerEntry[1] }}"
