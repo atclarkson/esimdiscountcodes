@@ -1,0 +1,139 @@
+<!-- Holafly vs Yesim Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set holaflyPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set yesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set holaflyDeCode = deA.codes[providerA.primaryCode] if (deA and deA.codes and deA.codes[providerA.primaryCode]) else null %}
+  {% set yesimDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set holaflyDiscount = (holaflyDeCode.discount if holaflyDeCode) or holaflyPrimary.discount %}
+  {% set yesimDiscount = (yesimDeCode.discount if yesimDeCode) or yesimPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Wähle <strong>Holafly</strong>, wenn du einen Festpreis willst und dir nie wieder Gedanken über einen Datenzähler machen möchtest. Wähle <strong>Yesim</strong>, wenn du häufig reist und lieber ein Datenguthaben aufbaust, das übertragen werden kann, mit einer echten Rückerstattungsoption. Die beiden verkaufen eigentlich nicht dasselbe: Holafly verkauft unbegrenzten Zugang pro Tag, Yesim verkauft ein Dollar-Guthaben, das du Gigabyte für Gigabyte aufbrauchst.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Unbegrenzter Festpreis oder ein Pay-&-Fly-Guthaben</h2>
+  <p>
+    Holaflys gesamtes Produkt ist unbegrenzte Daten zu einem Festpreis pro Tag oder Region, ohne Gigabyte-Zählen. In den USA, dem Großteil Europas und Asien sind das <strong>1,99 $/Tag</strong>; ein globaler Tarif für 200+ Ziele kostet <strong>9,90 $/Tag</strong>. Nach sehr hohem Verbrauch am selben Tag gibt es eine Fair-Use-Drosselung, Holafly veröffentlicht die genaue Schwelle aber nicht so konkret wie manche Mitbewerber.
+  </p>
+  <p>
+    Yesim geht mit seinen "Pay & Fly"-Tarifen den entgegengesetzten Weg: Du kaufst ein Dollar-Guthaben, ab 1,10 $/GB, und was du nicht verbrauchst, wird auf deine nächste Reise übertragen, statt mit der aktuellen Reise zu verfallen. Yesim bewirbt außerdem automatisches Netzwechseln über angeblich 800+ Partnernetze ("SwitchLess Networks"), sodass die eSIM sich mit dem lokalen Netz mit dem besten Signal verbindet; das ist Yesims eigene Angabe, die wir nicht unabhängig geprüft haben. In beiden Fällen ist Yesim reines Daten-Produkt, genau wie Holafly: Keine der beiden Seiten bietet eine eingebaute Telefonnummer, Sprachanrufe laufen bei beiden über Apps wie WhatsApp per Datenverbindung.
+  </p>
+
+  <h2>Preis-Schnappschuss (vor jedem Code)</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Ziel</th>
+          <th>Holafly</th>
+          <th>Yesim</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>USA</td><td>1,99 $/Tag (unbegrenzt)</td><td>8,40 $ (1 Tag)</td></tr>
+        <tr><td>Europa (regional)</td><td>1,99 $/Tag (unbegrenzt)</td><td>7,70 $ (1 Tag, unbegrenzt)</td></tr>
+        <tr><td>Japan</td><td>1,99 $/Tag (unbegrenzt)</td><td>19,80 $ (7 Tage)</td></tr>
+        <tr><td>Weltweit</td><td>9,90 $/Tag (unbegrenzt)</td><td>20,90 $ (3 GB)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Holaflys Preis ist ein Festpreis pro Tag für unbegrenzte Daten. Yesims Preis ist ein tages- oder GB-basierter Tarifpreis, alternativ kannst du ein Pay-&-Fly-Guthaben ab 1,10 $/GB kaufen. Die Zahlen sind nicht direkt vergleichbar, aber Holafly liegt in jedem Ziel oben günstiger, was dazu passt, dass Holafly bei uns in der Kategorie "Günstig" liegt und Yesim in "Teuer".</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Holafly:</strong> {{ providerA.primaryCode }}, {{ holaflyDiscount | lower }}. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>Yesim:</strong> {{ providerB.primaryCode }}, {{ yesimDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Holaflys Code ist unser eigener, deshalb zeigen wir ihn zuerst; er gilt sowohl für Einzel-eSIMs als auch für Monatstarife. Yesims Code ist ein öffentlicher Code nur für den ersten Kauf, nicht unser eigener. Bestandskunden bei Yesim sollten stattdessen <strong>WELCOMETOYESIM</strong> (15 % Rabatt) oder <strong>TRAVELFREE</strong> (3 € pauschal) versuchen, beide auf der <a href="{{ providerBUrl }}">Yesim-Seite</a> erklärt.</p>
+  </div>
+
+  <h2>Ist Holafly oder Yesim die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm Holafly, wenn&hellip;</h3>
+      <ul>
+        <li>Du wirklich nicht weißt, wie viele Daten du brauchst, und sie nicht zählen willst</li>
+        <li>Viel Streaming, Videoanrufe oder Hotspot-Nutzung auf einer Reise anstehen</li>
+        <li>China auf dem Reiseplan steht und du das integrierte VPN willst</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm Yesim, wenn&hellip;</h3>
+      <ul>
+        <li>Du häufig reist und ein Guthaben willst, das übertragen wird statt pro Reise zu verfallen</li>
+        <li>Du den Tarif eventuell nicht komplett verbrauchst und eine echte Rückerstattungsoption willst, nicht nur bei fehlgeschlagener Aktivierung</li>
+        <li>Du lieber in Dollar für Daten zahlst, statt einen Festpreis pro Tag zu verfolgen</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Holaflys eSIM für China hat ein eingebautes VPN.</strong> Google Maps, WhatsApp und Gmail funktionieren einfach, ohne vorher eine separate VPN-App zu installieren. Yesim bietet hier nichts Vergleichbares, eine China-Reise mit Yesim bedeutet also, dich unabhängig vom Tarif selbst um ein VPN zu kümmern.
+  </p>
+  <p>
+    <strong>Yesims Rückerstattungsgarantie ist in dieser Kategorie wirklich ungewöhnlich.</strong> Die meisten eSIM-Anbieter auf dieser Seite erstatten nur einen Tarif, der nie aktiviert wurde. Yesim bewirbt eine 30-tägige Geld-zurück-Garantie für Tarife, die du einfach nicht verbraucht hast, was den höheren Tagespreis ausgleichen kann, wenn du gerne im Voraus kaufst und dir nicht sicher bist, ob du den ganzen Tarif brauchst. Wenn dir eine günstigere Festpreis-Alternative zu Holafly lieber ist, lohnt sich auch ein Blick auf <a href="/airhub/">Airhubs</a> Pro-GB-Preise.
+  </p>
+  <p>
+    Grundlagen zu eSIM-Einrichtung und Gerätekompatibilität, die für beide Anbieter gelten, findest du in unserem <a href="/compatible-devices/">Guide zu kompatiblen Geräten</a> (auf Englisch).
+  </p>
+
+  <!-- FAQ -->
+  <h2>Holafly vs Yesim: Häufige Fragen</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, Holafly oder Yesim?</h3>
+      <p>Holafly, in jedem von uns geprüften Ziel. Holafly liegt bei uns in der Kategorie "Günstig", Yesim in "Teuer". Yesims übertragbares Guthaben und die Rückerstattungsgarantie sind der Ausgleich für den höheren Preis, nicht ein günstigerer Tarif.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Überträgt einer der beiden ungenutzte Daten auf eine künftige Reise?</h3>
+      <p>Yesim schon, über sein Pay-&-Fly-Guthaben: Du kaufst einen Dollar-Betrag, und was übrig bleibt, wird auf die nächste Reise übertragen. Holafly verkauft stattdessen unbegrenzten Zugang pro Tag oder Region, es gibt also von vornherein kein ungenutztes Guthaben zu übertragen.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Welcher ist besser für China?</h3>
+      <p>Holafly, wenn du kein separates VPN einrichten willst: seine eSIM für China hat eins bereits eingebaut. Yesim bietet hier nichts Vergleichbares, du brauchst also unabhängig vom Tarif eine eigene VPN-Lösung.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Bekomme ich eine Rückerstattung, wenn ich den Tarif nicht nutze?</h3>
+      <p>Yesims 30-tägige Geld-zurück-Garantie deckt Tarife ab, die einfach nie genutzt wurden, nicht nur solche, bei denen die Aktivierung fehlschlug. Für Holafly haben wir keine vergleichbare Regelung über den üblichen Fall einer fehlgeschlagenen Aktivierung hinaus gefunden.</p>
+    </div>
+  </div>
+
+  <!-- JSON-LD passend zum Seiteninhalt -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, Holafly oder Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Holafly ist in jedem geprüften Ziel günstiger. Holafly liegt in der Kategorie Günstig, Yesim in Teuer; Yesims übertragbares Guthaben und die Rückerstattungsgarantie sind der Ausgleich für den höheren Preis, nicht ein günstigerer Tarif."}
+      },
+      {
+        "@type":"Question",
+        "name":"Übertragen Holafly oder Yesim ungenutzte Daten auf eine künftige Reise?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim schon, über das Pay-&-Fly-Guthaben: Ein Dollar-Betrag wird gekauft, und was übrig bleibt, wird auf die nächste Reise übertragen. Holafly verkauft stattdessen unbegrenzten Zugang pro Tag oder Region, es gibt also kein ungenutztes Guthaben zu übertragen."}
+      },
+      {
+        "@type":"Question",
+        "name":"Welcher ist besser für eine Reise nach China, Holafly oder Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Holafly, für Reisende, die kein separates VPN einrichten wollen, da seine eSIM für China eins bereits eingebaut hat. Yesim bietet hier nichts Vergleichbares, weshalb unabhängig vom Tarif eine eigene VPN-Lösung nötig ist."}
+      },
+      {
+        "@type":"Question",
+        "name":"Bekomme ich eine Rückerstattung, wenn ich einen Holafly- oder Yesim-Tarif nicht nutze?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesims 30-tägige Geld-zurück-Garantie deckt Tarife ab, die einfach nie genutzt wurden, nicht nur solche mit fehlgeschlagener Aktivierung. Für Holafly wurde keine vergleichbare Regelung über die übliche Rückerstattung bei fehlgeschlagener Aktivierung hinaus gefunden."}
+      }
+    ]
+  }
+  </script>
+</div>
