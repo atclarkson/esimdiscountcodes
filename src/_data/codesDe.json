@@ -107,6 +107,14 @@
       "NOMCYBER20": {
         "discount": "20% RABATT",
         "description": "Nomad eSIM Cybernews-Aktionscode, 20% Rabatt"
+      },
+      "BEYOND20": {
+        "discount": "20% RABATT",
+        "description": "Auf der Nomad-Startseite im Herbstbanner beworben: 20% Rabatt. Als öffentlich beworben bestätigt, von uns nicht an der Kasse getestet."
+      },
+      "FALL30": {
+        "discount": "30% RABATT AB 2 ESIMS",
+        "description": "Auf der Nomad-Startseite im Herbstbanner beworben: 30% Rabatt beim Kauf von 2 oder mehr eSIMs. Als öffentlich beworben bestätigt, von uns nicht an der Kasse getestet."
       }
     }
   },
