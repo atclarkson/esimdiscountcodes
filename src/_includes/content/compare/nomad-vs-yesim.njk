@@ -1,0 +1,132 @@
+<!-- Nomad vs Yesim Comparison Content -->
+<div class="content-section">
+
+  {% set nomadBest = providerA.codes | findCode("BEYOND20") %}
+  {% set nomadBundle = providerA.codes | findCode("FALL30") %}
+  {% set yesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>Nomad</strong> if you're abroad for months and want one prepaid bundle that stays valid for up to a year. Pick <strong>Yesim</strong> if you fly often and would rather keep one dollar balance that rolls over between trips, or if you want the option of a refund on a plan you never used. Neither is the cheap choice for a single short trip, so check <a href="/airhub/">Airhub</a> first if price per GB is all you care about.
+    </p>
+  </div>
+
+  <h2>The Core Difference: A Fixed Bundle or a Rolling Balance</h2>
+  <p>
+    Both are app-based eSIMs aimed at people who travel more than once, but they solve it in opposite ways. Nomad's <strong>Global-EX</strong> is a bundle you buy once: on Nomad's own plan page that's 10GB for 180 days at $39, or 20GB, 30GB, or 50GB valid for 365 days at $59, $79, and $129, covering 98 countries. Nothing renews, and the 50GB bundle works out to $2.58/GB.
+  </p>
+  <p>
+    Yesim's <strong>Pay &amp; Fly</strong> is closer to a prepaid balance. You buy data in dollars rather than gigabytes, it's priced from $1.10/GB, and whatever you don't use rolls over to your next trip instead of expiring when this one ends. The catch is that Yesim's ordinary day-based plans sit in our "Expensive" bracket, roughly $1.56 to $31 depending on destination.
+  </p>
+
+  <h2>Snapshot</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Nomad</th>
+          <th>Yesim</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Long-stay option</td><td>Global-EX: 10GB/180 days $39, up to 50GB/365 days $129</td><td>Pay &amp; Fly balance from $1.10/GB, unused balance carries over</td></tr>
+        <tr><td>Refund</td><td>Not covered in this comparison, check Nomad's policy</td><td>30-day money-back guarantee on unused plans, advertised by Yesim</td></tr>
+        <tr><td>Try before buying</td><td>Free 1GB trial eSIM for new customers</td><td>None that we've seen</td></tr>
+        <tr><td>Support</td><td>24/7 live chat and email</td><td>See Yesim's help center</td></tr>
+        <tr><td>Network</td><td>Local partner networks per country</td><td>Advertises automatic switching across 800+ partner networks (Yesim's claim, not measured by us)</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Figures come from each provider's own site and our <a href="/nomad/">Nomad</a> and <a href="/yesim/">Yesim</a> pages. Confirm the live price at checkout.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Nomad:</strong> BEYOND20, {{ nomadBest.discount | lower }}, or FALL30, {{ nomadBundle.discount | lower }}. <a href="/nomad/">Full code list &rarr;</a></li>
+      <li><strong>Yesim:</strong> {{ providerB.primaryCode }}, {{ yesimPrimary.discount | lower }}. First purchase only. <a href="/yesim/">Full code list &rarr;</a></li>
+    </ul>
+    <p class="content-note">Neither code is ours. These are public codes shown on each provider's own site or promo page. FALL30 needs two or more eSIMs in the same order, so it only helps if you're buying more than one.</p>
+  </div>
+
+  <h2>Is Nomad or Yesim the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Nomad if&hellip;</h3>
+      <ul>
+        <li>You'll be away for months and want one prepaid bundle valid for up to 365 days</li>
+        <li>You want to test the service first with the free 1GB trial eSIM</li>
+        <li>You want 24/7 live chat support</li>
+        <li>You're buying two or more eSIMs at once and can use FALL30</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with Yesim if&hellip;</h3>
+      <ul>
+        <li>You fly often and want unused data to carry over to the next trip</li>
+        <li>You buy ahead and want a 30-day money-back option on a plan you never used</li>
+        <li>You'd rather pay in dollars for data used than track a fixed GB allowance</li>
+        <li>You want an alternative to a single-carrier eSIM and are happy to rely on Yesim's network-switching claim</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Yesim's first-purchase code is the biggest of the four.</strong> TEE20 gives 20% off, but only on your first order. After that, Yesim's other public codes are smaller: WELCOMETOYESIM at 15% and TRAVELFREE at a flat &euro;3 off. Nomad's BEYOND20 isn't limited that way on its homepage banner.
+  </p>
+  <p>
+    <strong>Neither is built for one cheap week away.</strong> If you only need data for a single short trip, <a href="/airhub/">Airhub</a> or <a href="/holafly/">Holafly</a> are the first places to look. If you'd rather buy data for one country now and use it with no deadline, <a href="/bnesim/">BNEsim</a> sells no-expiration packs. For device setup, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <h2>Nomad vs Yesim FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is better for months abroad</h3>
+      <p>Nomad, if you want a single purchase. Its Global-EX bundles run from 10GB for 180 days to 50GB for 365 days across 98 countries. Yesim's Pay &amp; Fly balance suits repeat trips better, since unused balance carries over.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does Yesim offer a refund</h3>
+      <p>Yesim advertises a 30-day money-back guarantee on unused plans, which goes further than providers that only refund an eSIM that never connected. Refunds run through Yesim's own policy, not through us.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I try either one for free</h3>
+      <p>Nomad offers new customers a free 1GB trial eSIM. We haven't seen an equivalent from Yesim.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Which discount code is bigger</h3>
+      <p>Nomad's FALL30 is 30% off when you buy two or more eSIMs, and BEYOND20 is 20% off. Yesim's TEE20 is 20% off your first purchase only.</p>
+    </div>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is better for months abroad, Nomad or Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad, if you want a single purchase. Its Global-EX bundles run from 10GB for 180 days to 50GB for 365 days across 98 countries. Yesim's Pay & Fly balance suits repeat trips better, since unused balance carries over."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Yesim offer a refund?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim advertises a 30-day money-back guarantee on unused plans, which goes further than providers that only refund an eSIM that never connected."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I try Nomad or Yesim for free?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad offers new customers a free 1GB trial eSIM. We have not seen an equivalent from Yesim."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which discount code is bigger, Nomad or Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad's FALL30 is 30% off when you buy two or more eSIMs, and BEYOND20 is 20% off. Yesim's TEE20 is 20% off your first purchase only."}
+      }
+    ]
+  }
+  </script>
+</div>
