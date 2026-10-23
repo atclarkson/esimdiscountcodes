@@ -1,0 +1,136 @@
+<!-- AloSIM vs Ubigi Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set alosimPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set ubigiPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set deA = codesDe[providerAKey] %}
+  {% set deB = codesDe[providerBKey] %}
+  {% set alosimL = deA.codes[providerA.primaryCode] if (deA and deA.codes and deA.codes[providerA.primaryCode]) else null %}
+  {% set ubigiL = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set alosimDiscount = (alosimL.discount if alosimL) or alosimPrimary.discount %}
+  {% set ubigiDiscount = (ubigiL.discount if ubigiL) or ubigiPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Wähle <strong>AloSIM</strong>, wenn du eine einfache einmalige eSIM mit dem größeren Code (15 %), einer kostenlosen zweiten Telefonnummer über Hushed und der Wahl zwischen festem Datenvolumen und unbegrenzt bei einem Anbieter willst. Wähle <strong>Ubigi</strong>, wenn du dasselbe Land regelmäßig besuchst und einen wiederkehrenden Tarif möchtest, oder lieber bei einem etablierten Unternehmen auf Netzbetreiber-Seite (Transatel, Teil der NTT Group) kaufst. Für eine einzelne günstige Reise sieh dir zuerst <a href="/de/airhub/">Airhub</a> oder <a href="/de/redteago/">RedteaGO</a> an, denn besonders Ubigi hat selten den niedrigsten Preis pro GB.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Zusatzfunktionen oder Tarifstruktur</h2>
+  <p>
+    AloSIM stammt von AffinityClick Inc., einem Team aus Ottawa, das den Dienst 2022 gestartet hat. Der Reiz liegt in den Extras rund um eine ansonsten normale eSIM: eine kostenlose internationale Nummer über eine Partnerschaft mit Hushed (nach dem Kauf separat in der AloSIM-App einzurichten) sowie Tarife mit festem Datenvolumen und unbegrenzte Tarife auf derselben Seite. Ein ungenutzter AloSIM-Tarif läuft nicht ab, du kannst also im Voraus kaufen und erst bei der Ankunft aktivieren.
+  </p>
+  <p>
+    Ubigis Stärke sind Herkunft und Tarifart. Ubigi ist eine Marke von Transatel, und Transatel liefert auch Konnektivität für vernetzte Autos. Neben Einmal-Tarifen verkauft Ubigi <strong>wiederkehrende</strong> Tarife: einen Monatstarif, der sich automatisch verlängert und in den ersten drei Monaten nicht kündbar ist, und einen Jahrestarif, der 12 Monate im Voraus bezahlt wird und während des Jahres weder kündbar noch erstattungsfähig ist. Ungenutztes Datenvolumen wird bei keinem Ubigi-Tarif übertragen.
+  </p>
+
+  <h2>Schnappschuss</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>AloSIM</th>
+          <th>Ubigi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Code</td><td>ALOSAVE, 15 % Rabatt (öffentlicher Code, nicht unser eigener)</td><td>ADAMANDLINDS, 10 % Rabatt (unser eigener Code)</td></tr>
+        <tr><td>Tarifarten</td><td>Festes Datenvolumen und unbegrenzt</td><td>Einmalig und wiederkehrend (monatlich oder jährlich)</td></tr>
+        <tr><td>Ablauf vor der Aktivierung</td><td>Ungenutzte Tarife laufen nicht ab</td><td>Tarif beim Checkout prüfen</td></tr>
+        <tr><td>Extra</td><td>Kostenlose internationale Nummer über Hushed</td><td>Netzbetreiber-nah (Transatel, NTT Group)</td></tr>
+        <tr><td>Erstattung</td><td>Beworben für eSIMs, die sich nicht verbinden oder inkompatibel sind</td><td>Jahrestarife während des Jahres nicht erstattungsfähig</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Die Angaben stammen von unseren Seiten zu <a href="/de/alosim/">AloSIM</a> und <a href="/de/ubigi/">Ubigi</a>. Den aktuellen Preis bitte beim Checkout prüfen.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>AloSIM:</strong> {{ providerA.primaryCode }}, {{ alosimDiscount | lower }}. Wir haben einen echten Tarif damit gekauft, um das zu bestätigen. <a href="/de/alosim/">Alle Codes &rarr;</a></li>
+      <li><strong>Ubigi:</strong> {{ providerB.primaryCode }}, {{ ubigiDiscount | lower }}. Das ist unser eigener Code, deshalb zeigen wir ihn zuerst. <a href="/de/ubigi/">Alle Codes &rarr;</a></li>
+    </ul>
+    <p class="content-note">Der Ubigi-Code ist unser eigener, der AloSIM-Code ein öffentlicher. Ein höherer Prozentsatz bedeutet nicht automatisch einen niedrigeren Endpreis, vergleiche daher zuerst den Tarifpreis für dein Reiseziel.</p>
+  </div>
+
+  <h2>Passt AloSIM oder Ubigi besser zu dir</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm AloSIM, wenn&hellip;</h3>
+      <ul>
+        <li>du eine temporäre internationale Nummer für Bestätigungs-SMS oder Buchungsanrufe willst</li>
+        <li>du im Voraus kaufen und bis zur Aktivierung die Erstattungsoption behalten willst</li>
+        <li>du einen einzelnen Einmalkauf ohne wiederkehrende Bindung willst</li>
+        <li>du den größeren Code (15 %) willst</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm Ubigi, wenn&hellip;</h3>
+      <ul>
+        <li>du dasselbe Land regelmäßig besuchst und ein Monatstarif günstiger ist, als jedes Mal eine neue eSIM zu kaufen</li>
+        <li>du ein etabliertes Unternehmen auf Netzbetreiber-Seite einem kleineren Wiederverkäufer vorziehst</li>
+        <li>dir eine Mindestlaufzeit von 3 Monaten beim Monatstarif oder eine nicht erstattungsfähige Jahreslaufzeit nichts ausmacht</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Prüfe bei Ubigi vor der Zahlung die Tarifart.</strong> Ein wiederkehrender Tarif sieht beim Checkout aus wie jeder andere Kauf, bringt aber eine Bindung mit. Wenn du nur eine Reise planst, achte darauf, einen Einmal-Tarif gewählt zu haben.
+  </p>
+  <p>
+    <strong>Bei AloSIM hängt das Erstattungsfenster an der Aktivierung.</strong> Die Garantie gilt für eSIMs, die sich nicht verbinden, nicht für aktivierte und genutzte. Willst du unbegrenztes Datenvolumen ohne Zähler? <a href="/de/holafly/">Holafly</a> ist genau darauf ausgelegt. Zur Geräte-Einrichtung siehe unsere Anleitung zu <a href="/compatible-devices/">eSIM-kompatiblen Geräten</a>.
+  </p>
+
+  <h2>AloSIM vs Ubigi FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, AloSIM oder Ubigi</h3>
+      <p>Das hängt vom Reiseziel ab, vergleiche also beide beim Checkout. Der AloSIM-Code gibt 15 %, der von Ubigi 10 %, aber Ubigis Preis pro GB liegt tendenziell über den meisten Anbietern auf dieser Seite.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Enthält einer von beiden eine Telefonnummer</h3>
+      <p>AloSIM bietet eine kostenlose internationale Nummer über Hushed, die nach dem Kauf in der AloSIM-App eingerichtet wird. Etwas Vergleichbares haben wir bei Ubigi nicht gesehen.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Kann ich einen Ubigi-Tarif kündigen</h3>
+      <p>Einmal-Tarife sind ein einzelner Kauf. Ein wiederkehrender Monatstarif ist in den ersten drei Monaten nicht kündbar, ein Jahrestarif ist während des Jahres weder kündbar noch erstattungsfähig.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Läuft ein ungenutzter Tarif ab</h3>
+      <p>Ein ungenutzter AloSIM-Tarif läuft nicht ab. Prüfe bei Ubigi die Tarifdetails, bevor du im Voraus kaufst.</p>
+    </div>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, AloSIM oder Ubigi?",
+        "acceptedAnswer":{"@type":"Answer","text":"Das hängt vom Reiseziel ab, vergleiche also beide beim Checkout. Der AloSIM-Code gibt 15 %, der von Ubigi 10 %, aber Ubigis Preis pro GB liegt tendenziell über den meisten Anbietern auf dieser Seite."}
+      },
+      {
+        "@type":"Question",
+        "name":"Enthält AloSIM oder Ubigi eine Telefonnummer?",
+        "acceptedAnswer":{"@type":"Answer","text":"AloSIM bietet eine kostenlose internationale Nummer über Hushed, die nach dem Kauf in der AloSIM-App eingerichtet wird. Etwas Vergleichbares haben wir bei Ubigi nicht gesehen."}
+      },
+      {
+        "@type":"Question",
+        "name":"Kann ich einen Ubigi-Tarif kündigen?",
+        "acceptedAnswer":{"@type":"Answer","text":"Einmal-Tarife sind ein einzelner Kauf. Ein wiederkehrender Monatstarif ist in den ersten drei Monaten nicht kündbar, ein Jahrestarif ist während des Jahres weder kündbar noch erstattungsfähig."}
+      },
+      {
+        "@type":"Question",
+        "name":"Läuft ein ungenutzter AloSIM- oder Ubigi-Tarif ab?",
+        "acceptedAnswer":{"@type":"Answer","text":"Ein ungenutzter AloSIM-Tarif läuft nicht ab. Prüfe bei Ubigi die Tarifdetails, bevor du im Voraus kaufst."}
+      }
+    ]
+  }
+  </script>
+</div>

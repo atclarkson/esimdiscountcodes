@@ -1,0 +1,136 @@
+<!-- Comparativa AloSIM vs Ubigi (Español) -->
+<div class="content-section">
+
+  {% set alosimPrimary = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set ubigiPrimary = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set alosimL = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
+  {% set ubigiL = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set alosimDiscount = (alosimL.discount if alosimL) or alosimPrimary.discount %}
+  {% set ubigiDiscount = (ubigiL.discount if ubigiL) or ubigiPrimary.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>AloSIM</strong> si quieres una eSIM sencilla de un solo uso con el código más grande (15%), un segundo número de teléfono gratis a través de Hushed y la opción de comprar datos fijos o ilimitados en un mismo vendedor. Elige <strong>Ubigi</strong> si visitas el mismo país con regularidad y quieres un plan recurrente, o si prefieres comprar a una empresa consolidada del lado de los operadores (Transatel, parte de NTT Group). Para un solo viaje barato, mira primero <a href="/es/airhub/">Airhub</a> o <a href="/es/redteago/">RedteaGO</a>, ya que Ubigi rara vez tiene el precio por GB más bajo.
+    </p>
+  </div>
+
+  <h2>La diferencia de fondo: extras o estructura de planes</h2>
+  <p>
+    AloSIM está creada por AffinityClick Inc., un equipo de Ottawa que la lanzó en 2022. Su gancho son los extras en torno a una eSIM por lo demás normal: un número internacional gratis mediante una alianza con Hushed (se configura aparte dentro de la app de AloSIM tras comprar un plan) y planes de datos fijos e ilimitados en el mismo sitio. Un plan de AloSIM sin usar no caduca, así que puedes comprarlo con antelación y activarlo al llegar.
+  </p>
+  <p>
+    El punto fuerte de Ubigi es su trayectoria y el tipo de plan. Es una marca de Transatel, que también suministra conectividad a coches conectados. Además de planes de un solo uso, Ubigi vende planes <strong>recurrentes</strong>: un plan mensual que se renueva solo y no se puede cancelar durante los tres primeros meses, y un plan anual que se paga por adelantado durante 12 meses y no se puede cancelar ni reembolsar durante ese año. Los datos sin usar no se acumulan en ningún plan de Ubigi.
+  </p>
+
+  <h2>Resumen</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>AloSIM</th>
+          <th>Ubigi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Código</td><td>ALOSAVE, 15% de descuento (código público, no es nuestro)</td><td>ADAMANDLINDS, 10% de descuento (nuestro propio código)</td></tr>
+        <tr><td>Tipos de plan</td><td>Datos fijos e ilimitados</td><td>De un solo uso y recurrentes (mensuales o anuales)</td></tr>
+        <tr><td>Caducidad antes de activar</td><td>Los planes sin usar no caducan</td><td>Revisa el plan al pagar</td></tr>
+        <tr><td>Extra</td><td>Número internacional gratis con Hushed</td><td>Respaldo de operador (Transatel, NTT Group)</td></tr>
+        <tr><td>Reembolso</td><td>Anunciado para eSIM que no se conectan o son incompatibles</td><td>Los planes anuales no se reembolsan durante el año</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Los datos proceden de nuestras páginas de <a href="/es/alosim/">AloSIM</a> y <a href="/es/ubigi/">Ubigi</a>. Confirma el precio actual al pagar.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>AloSIM:</strong> {{ providerA.primaryCode }}, {{ alosimDiscount | lower }}. Compramos un plan real con él para confirmarlo. <a href="/es/alosim/">Lista completa de códigos &rarr;</a></li>
+      <li><strong>Ubigi:</strong> {{ providerB.primaryCode }}, {{ ubigiDiscount | lower }}. Es nuestro propio código, por eso lo mostramos primero. <a href="/es/ubigi/">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p class="content-note">El código de Ubigi es nuestro y el de AloSIM es público. Un porcentaje mayor no significa automáticamente un precio final menor, así que compara primero el precio del plan para tu destino.</p>
+  </div>
+
+  <h2>Es AloSIM o Ubigi la mejor opción</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige AloSIM si&hellip;</h3>
+      <ul>
+        <li>quieres un número internacional temporal para mensajes de verificación o llamadas de reserva</li>
+        <li>quieres comprar con antelación y conservar la opción de reembolso hasta activar</li>
+        <li>quieres una sola compra sin compromiso recurrente</li>
+        <li>quieres el código más grande (15%)</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige Ubigi si&hellip;</h3>
+      <ul>
+        <li>visitas el mismo país con regularidad y un plan mensual sale mejor que comprar una eSIM nueva cada vez</li>
+        <li>prefieres una empresa consolidada del lado de los operadores a un revendedor más pequeño</li>
+        <li>no te importa un mínimo de 3 meses en el plan mensual o un plazo anual sin reembolso</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>Revisa el tipo de plan de Ubigi antes de pagar.</strong> Un plan recurrente se ve como cualquier otra compra al pagar, pero implica una permanencia. Si solo quieres un viaje, asegúrate de haber elegido un plan de un solo uso.
+  </p>
+  <p>
+    <strong>En AloSIM, la ventana de reembolso depende de la activación.</strong> La garantía cubre eSIM que no se conectan, no las que ya activaste y usaste. Si quieres datos ilimitados sin contador, <a href="/es/holafly/">Holafly</a> está pensada para eso. Para configurar tu dispositivo, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a>.
+  </p>
+
+  <h2>Preguntas frecuentes sobre AloSIM vs Ubigi</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Cuál es más barata, AloSIM o Ubigi</h3>
+      <p>Depende del destino, así que compara ambas al pagar. El código de AloSIM da un 15% frente al 10% de Ubigi, pero el precio por GB de Ubigi tiende a estar por encima de la mayoría de proveedores de este sitio.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Alguna incluye un número de teléfono</h3>
+      <p>AloSIM ofrece un número internacional gratis a través de Hushed, que se configura en la app de AloSIM tras la compra. No hemos visto algo equivalente en Ubigi.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Puedo cancelar un plan de Ubigi</h3>
+      <p>Los planes de un solo uso son una compra única. Un plan mensual recurrente no se puede cancelar durante los tres primeros meses, y un plan anual no se puede cancelar ni reembolsar durante el año.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Caduca un plan sin usar</h3>
+      <p>Un plan de AloSIM sin usar no caduca. Revisa los detalles del plan en Ubigi antes de comprar con antelación.</p>
+    </div>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Cuál es más barata, AloSIM o Ubigi?",
+        "acceptedAnswer":{"@type":"Answer","text":"Depende del destino, así que compara ambas al pagar. El código de AloSIM da un 15% frente al 10% de Ubigi, pero el precio por GB de Ubigi tiende a estar por encima de la mayoría de proveedores de este sitio."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿AloSIM o Ubigi incluyen un número de teléfono?",
+        "acceptedAnswer":{"@type":"Answer","text":"AloSIM ofrece un número internacional gratis a través de Hushed, que se configura en la app de AloSIM tras la compra. No hemos visto algo equivalente en Ubigi."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Puedo cancelar un plan de Ubigi?",
+        "acceptedAnswer":{"@type":"Answer","text":"Los planes de un solo uso son una compra única. Un plan mensual recurrente no se puede cancelar durante los tres primeros meses, y un plan anual no se puede cancelar ni reembolsar durante el año."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Caduca un plan de AloSIM o Ubigi sin usar?",
+        "acceptedAnswer":{"@type":"Answer","text":"Un plan de AloSIM sin usar no caduca. Revisa los detalles del plan en Ubigi antes de comprar con antelación."}
+      }
+    ]
+  }
+  </script>
+</div>
