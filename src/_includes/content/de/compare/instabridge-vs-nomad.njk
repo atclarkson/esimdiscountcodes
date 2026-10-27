@@ -1,0 +1,135 @@
+<!-- Instabridge vs Nomad Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set instaBest = providerA.codes | findCode("SP20") %}
+  {% set nomadBest = providerB.codes | findCode("NOMTRAVEL20") %}
+  {% set xA = codesDe[providerAKey] %}
+  {% set xB = codesDe[providerBKey] %}
+  {% set iDc = xA.codes["SP20"] if (xA and xA.codes and xA.codes["SP20"]) else null %}
+  {% set nDc = xB.codes["NOMTRAVEL20"] if (xB and xB.codes and xB.codes["NOMTRAVEL20"]) else null %}
+  {% set iDisc = (iDc.discount if iDc) or instaBest.discount %}
+  {% set nDisc = (nDc.discount if nDc) or nomadBest.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Wähle <strong>Instabridge</strong>, wenn du vor allem kostenloses WLAN nutzen willst und nur für die Lücken einen kleinen, günstigen Datentarif brauchst. Wähle <strong>Nomad</strong>, wenn du eine eigene Reise-eSIM-App mit kostenloser 1-GB-Test-eSIM, 24/7 Live-Chat und Paketen willst, die bis zu einem Jahr gültig bleiben. Wenn bei einer einzelnen kurzen Reise nur der Preis pro GB zählt, schau zuerst bei <a href="/de/airhub/">Airhub</a> vorbei.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: WLAN-App mit eSIM oder reine eSIM-App</h2>
+  <p>
+    Instabridge ist als App zum Teilen von WLAN-Zugängen gestartet. Die eigene Seite wirbt mit über 20 Millionen kostenlosen Hotspots, und die eSIM wird als Reserve verkauft, wenn es kein freies WLAN gibt oder es zu langsam ist. Die Tarife sind reine Daten-Tarife, und auf der US-Seite klein und kurz: 1 GB für 7 Tage zu 2 $, 3 GB für 15 Tage zu 4,50 $, 10 GB für 30 Tage zu 12 $ und 20 GB für 7 Tage zu 18 $ (so im Webshop von Instabridge in diesem Monat angezeigt).
+  </p>
+  <p>
+    Nomad verkauft nur eSIM-Daten. Neben den normalen Länder-, Regional- und Global-Tarifen gibt es <strong>Global-EX</strong>-Pakete mit 10 GB bis 50 GB, die bis zu einem Jahr gültig bleiben. Das ist ein anderes Produkt für Leute, die monatelang statt tagelang unterwegs sind. Die beiden richten sich an unterschiedliche Leser: Instabridge an Wenignutzer, die ein günstiges Sicherheitsnetz wollen, Nomad an Reisende, für die die eSIM die Hauptverbindung ist.
+  </p>
+
+  <h2>Schnappschuss</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Instabridge</th>
+          <th>Nomad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Ausgangspunkt</td><td>Kostenlose WLAN-Hotspot-App, eSIM als Reserve</td><td>Nur eSIM-App</td></tr>
+        <tr><td>Beispieltarife</td><td>USA: 1 GB/7 Tage 2 $, 10 GB/30 Tage 12 $</td><td>Global-EX-Pakete mit 10 GB bis 50 GB, bis zu einem Jahr gültig</td></tr>
+        <tr><td>Vorher testen</td><td>Kostenlose WLAN-Karte in der App, uns ist keine kostenlose eSIM bekannt</td><td>Kostenlose 1-GB-Test-eSIM für Neukunden</td></tr>
+        <tr><td>Support</td><td>Support-Chat (er sagte uns, dass Codes nur im Webshop funktionieren)</td><td>24/7 Live-Chat und E-Mail</td></tr>
+        <tr><td>Rabattcodes</td><td>Nur im Webshop, nicht in der App</td><td>Wird an der Kasse eingegeben</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Die Angaben stammen von den Seiten der Anbieter und unseren Seiten zu <a href="/de/instabridge/">Instabridge</a> und <a href="/de/nomad/">Nomad</a>. Prüfe den aktuellen Preis an der Kasse.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Instabridge:</strong> SP20, {{ iDisc | lower }}. Gib ihn im Webshop ein, nicht in der App. <a href="/de/instabridge/">Alle Codes &rarr;</a></li>
+      <li><strong>Nomad:</strong> NOMTRAVEL20, {{ nDisc | lower }}. <a href="/de/nomad/">Alle Codes &rarr;</a></li>
+    </ul>
+    <p class="content-note">Keiner der Codes stammt von uns. Es sind öffentliche Codes. SP20 haben wir an der Instabridge-Kasse bestätigt, doch Nomads Startseiten-Banner zeigt seine Codes nicht mehr, prüfe also vor der Zahlung, ob der Rabatt erscheint.</p>
+  </div>
+
+  <h2>Ist Instabridge oder Nomad die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Wähle Instabridge, wenn&hellip;</h3>
+      <ul>
+        <li>Du in eine Gegend reist, in der es viele von der Community erfasste Hotspots gibt, und Daten nur als Reserve willst</li>
+        <li>Du einen kleinen Tarif wie 1 GB oder 3 GB zu einem niedrigen Preis willst</li>
+        <li>Du gern im Webshop kaufst, damit der 20-%-Code greift</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Wähle Nomad, wenn&hellip;</h3>
+      <ul>
+        <li>Du den Dienst zuerst mit der kostenlosen 1-GB-Test-eSIM ausprobieren willst</li>
+        <li>Du monatelang weg bist und ein Paket willst, das bis zu einem Jahr gültig ist</li>
+        <li>Du 24/7 Live-Chat und Hotspot-Sharing über die Daten deines Handys willst</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Eine Hotspot-Datenbank ist nur so gut wie ihre Community.</strong> Sie ist in belebten, viel bereisten Städten am stärksten und auf dem Land schwächer. Wenn du abseits der Touristenpfade unterwegs bist, hängt Nomads eSIM nicht davon ab, dass andere Reisende vor dir dort waren.
+  </p>
+  <p>
+    <strong>Keiner von beiden ist der günstigste für eine datenhungrige Reise.</strong> <a href="/de/airhub/">Airhub</a> ist pro Gigabyte meist günstiger. Wenn du unbegrenzte Daten statt eines GB-Kontingents willst, sieh dir <a href="/de/holafly/">Holafly</a> an. Zur Geräteeinrichtung sieh dir unseren <a href="/compatible-devices/">eSIM compatible devices</a>-Guide an (auf Englisch).
+  </p>
+
+  <h2>Instabridge vs Nomad FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, Instabridge oder Nomad</h3>
+      <p>Bei kleinen Tarifen Instabridge: 1 GB für 7 Tage in den USA kostet 2 $, 10 GB für 30 Tage 12 $. Nomads Stärke liegen in den einjährigen Global-EX-Paketen, nicht in günstigen kleinen Tarifen. Preise ändern sich, prüfe sie also an der Kasse.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Kann ich einen Instabridge-Code in der App eingeben</h3>
+      <p>Nein. Der Support von Instabridge sagte uns, dass Rabattcodes nur an der Kasse im Webshop funktionieren, store.instabridge.com/mobile-data.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Kann ich einen der beiden kostenlos testen</h3>
+      <p>Nomad bietet Neukunden eine kostenlose 1-GB-Test-eSIM. Instabridges WLAN-Karte ist kostenlos nutzbar, eine kostenlose eSIM haben wir dort aber nicht gesehen.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Was ist besser für Monate im Ausland</h3>
+      <p>Nomad. Die Global-EX-Pakete mit 10 GB bis 50 GB bleiben bis zu einem Jahr gültig, während die geprüften Instabridge-Tarife 7 bis 30 Tage laufen.</p>
+    </div>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, Instabridge oder Nomad?",
+        "acceptedAnswer":{"@type":"Answer","text":"Bei kleinen Tarifen Instabridge: 1 GB für 7 Tage in den USA kostet 2 $, 10 GB für 30 Tage 12 $. Nomads Stärke liegen in den einjährigen Global-EX-Paketen, nicht in günstigen kleinen Tarifen. Preise ändern sich, prüfe sie also an der Kasse."}
+      },
+      {
+        "@type":"Question",
+        "name":"Kann ich einen Instabridge-Rabattcode in der App eingeben?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nein. Der Support von Instabridge sagte uns, dass Rabattcodes nur an der Kasse im Webshop funktionieren, store.instabridge.com/mobile-data."}
+      },
+      {
+        "@type":"Question",
+        "name":"Kann ich Instabridge oder Nomad kostenlos testen?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad bietet Neukunden eine kostenlose 1-GB-Test-eSIM. Instabridges WLAN-Karte ist kostenlos nutzbar, eine kostenlose eSIM haben wir dort aber nicht gesehen."}
+      },
+      {
+        "@type":"Question",
+        "name":"Was ist besser für Monate im Ausland, Instabridge oder Nomad?",
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad. Die Global-EX-Pakete mit 10 GB bis 50 GB bleiben bis zu einem Jahr gültig, während die geprüften Instabridge-Tarife 7 bis 30 Tage laufen."}
+      }
+    ]
+  }
+  </script>
+</div>
