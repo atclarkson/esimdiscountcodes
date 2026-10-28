@@ -2,11 +2,11 @@
 <div class="content-section">
 
   {% set holaflyPrimary = providerA.codes | findCode(providerA.primaryCode) %}
-  {% set nomadBest = providerB.codes | findCode("NOMTRAVEL20") %}
+  {% set nomadBest = providerB.codes | findCode("TRAVELESIMEXPERT") %}
   {% set deA = codesDe[providerAKey] %}
   {% set deB = codesDe[providerBKey] %}
   {% set holaflyDeCode = deA.codes[providerA.primaryCode] if (deA and deA.codes and deA.codes[providerA.primaryCode]) else null %}
-  {% set nomadDeCode = deB.codes["NOMTRAVEL20"] if (deB and deB.codes and deB.codes["NOMTRAVEL20"]) else null %}
+  {% set nomadDeCode = deB.codes["TRAVELESIMEXPERT"] if (deB and deB.codes and deB.codes["TRAVELESIMEXPERT"]) else null %}
   {% set holaflyDiscount = (holaflyDeCode.discount if holaflyDeCode) or holaflyPrimary.discount %}
   {% set nomadDiscount = (nomadDeCode.discount if nomadDeCode) or nomadBest.discount %}
 
@@ -49,9 +49,9 @@
   <div class="content-box content-box--tan">
     <ul>
       <li><strong>Holafly:</strong> {{ providerA.primaryCode }}, {{ holaflyDiscount | lower }}. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
-      <li><strong>Nomad:</strong> NOMTRAVEL20 oder NOMCYBER20, {{ nomadDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>Nomad:</strong> TRAVELESIMEXPERT, {{ nomadDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
     </ul>
-    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Holaflys Code ist unser eigener. Nomad betreibt kein Partnerprogramm, das einen solchen Code unterstützt, daher sind die hier genannten Codes die besten öffentlichen, die wir geprüft haben, und zwei davon liegen gleichauf beim selben Rabattsatz.</p>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Holaflys Code ist unser eigener. Nomad betreibt kein Partnerprogramm, das einen solchen Code unterstützt, daher sind die hier genannten Codes die besten öffentlichen, die wir geprüft haben, und der beste davon (TRAVELESIMEXPERT) gilt nur für Global-Tarife.</p>
   </div>
 
   <h2>Ist Holafly oder Nomad die richtige Wahl</h2>

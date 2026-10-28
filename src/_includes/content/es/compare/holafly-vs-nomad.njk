@@ -2,11 +2,11 @@
 <div class="content-section">
 
   {% set holaflyPrimary = providerA.codes | findCode(providerA.primaryCode) %}
-  {% set nomadBest = providerB.codes | findCode("NOMTRAVEL20") %}
+  {% set nomadBest = providerB.codes | findCode("TRAVELESIMEXPERT") %}
   {% set esA = codesEs[providerAKey] %}
   {% set esB = codesEs[providerBKey] %}
   {% set holaflyEsCode = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
-  {% set nomadEsCode = esB.codes["NOMTRAVEL20"] if (esB and esB.codes and esB.codes["NOMTRAVEL20"]) else null %}
+  {% set nomadEsCode = esB.codes["TRAVELESIMEXPERT"] if (esB and esB.codes and esB.codes["TRAVELESIMEXPERT"]) else null %}
   {% set holaflyDiscount = (holaflyEsCode.discount if holaflyEsCode) or holaflyPrimary.discount %}
   {% set nomadDiscount = (nomadEsCode.discount if nomadEsCode) or nomadBest.discount %}
 
@@ -49,9 +49,9 @@
   <div class="content-box content-box--tan">
     <ul>
       <li><strong>Holafly:</strong> {{ providerA.primaryCode }}, {{ holaflyDiscount | lower }}. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
-      <li><strong>Nomad:</strong> NOMTRAVEL20 o NOMCYBER20, {{ nomadDiscount | lower }}. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>Nomad:</strong> TRAVELESIMEXPERT, {{ nomadDiscount | lower }}. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
     </ul>
-    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">El código de Holafly es el nuestro. Nomad no tiene el tipo de programa de afiliados que sostenga un código así, por lo que los suyos aquí son los mejores públicos verificados, y hay dos empatados con la misma tasa.</p>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">El código de Holafly es el nuestro. Nomad no tiene el tipo de programa de afiliados que sostenga un código así, por lo que los suyos aquí son los mejores públicos verificados, y el mejor de ellos (TRAVELESIMEXPERT) solo se aplica a planes Global.</p>
   </div>
 
   <h2>¿Holafly o Nomad es la mejor opción?</h2>

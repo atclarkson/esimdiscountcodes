@@ -1,7 +1,7 @@
 <!-- BNEsim vs Nomad Comparison Content -->
 <div class="content-section">
 
-  {% set nomadBest = providerB.codes | findCode("NOMTRAVEL20") %}
+  {% set nomadBest = providerB.codes | findCode("TRAVELESIMEXPERT") %}
 
   <div class="content-callout">
     <h2>The Short Answer</h2>
@@ -71,7 +71,7 @@
     <strong>BNEsim's no-expiration option is per pack, not automatic.</strong> You have to choose the pricier no-expiration version of a given country pack at checkout; the standard version still expires in 30 days like most eSIMs on this site. Nomad's long-validity option works the other way: buy a Global-EX bundle and the up-to-a-year validity is just how that product line works, no extra tier to pick.
   </p>
   <p>
-    <strong>Nomad has a real discount code stack and BNEsim doesn't.</strong> BNEsim's pricing already reflects its sale price with nothing to type in at checkout, while Nomad's {{ providerB.primaryCode }} (or NOMCYBER20, same rate) takes another 20% off any plan including Global-EX. If a working code matters to you, that's a point in Nomad's favor regardless of which pricing structure otherwise fits your trip better.
+    <strong>Nomad has a real discount code stack and BNEsim doesn't.</strong> BNEsim's pricing already reflects its sale price with nothing to type in at checkout, while Nomad's {{ providerB.primaryCode }} takes another 20% off Global plans including Global-EX (single-country plans can use REG3 for $3 USD off instead). If a working code matters to you, that's a point in Nomad's favor regardless of which pricing structure otherwise fits your trip better.
   </p>
   <p>
     For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
@@ -90,7 +90,7 @@
     </div>
     <div class="content-faq-item">
       <h3>Does BNEsim or Nomad have a working discount code</h3>
-      <p>Nomad does: {{ providerB.primaryCode }} or NOMCYBER20, both 20% off. BNEsim doesn't advertise a code anywhere on its real site; its discounts are already applied as a sale price.</p>
+      <p>Nomad does: {{ providerB.primaryCode }}, 20% off Global plans, or REG3, $3 USD off any plan. BNEsim doesn't advertise a code anywhere on its real site; its discounts are already applied as a sale price.</p>
     </div>
     <div class="content-faq-item">
       <h3>Which one is better for a digital nomad covering several countries</h3>
@@ -118,7 +118,7 @@
       {
         "@type":"Question",
         "name":"Does BNEsim or Nomad have a working discount code?",
-        "acceptedAnswer":{"@type":"Answer","text":"Nomad does, currently 20% off with its best public code. BNEsim doesn't advertise a promo code anywhere on its real site; its discounts already show as a marked-down sale price."}
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad does, currently 20% off Global plans with its best public code, or $3 USD off any plan with REG3. BNEsim doesn't advertise a promo code anywhere on its real site; its discounts already show as a marked-down sale price."}
       },
       {
         "@type":"Question",

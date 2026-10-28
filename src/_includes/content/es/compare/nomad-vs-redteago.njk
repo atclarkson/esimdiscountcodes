@@ -1,11 +1,11 @@
 <!-- Comparativa Nomad vs RedteaGO (Español) -->
 <div class="content-section">
 
-  {% set nomadBest = providerA.codes | findCode("NOMTRAVEL20") %}
+  {% set nomadBest = providerA.codes | findCode("TRAVELESIMEXPERT") %}
   {% set redteaPrimary = providerB.codes | findCode(providerB.primaryCode) %}
   {% set esA = codesEs[providerAKey] %}
   {% set esB = codesEs[providerBKey] %}
-  {% set nomadEsCode = esA.codes["NOMTRAVEL20"] if (esA and esA.codes and esA.codes["NOMTRAVEL20"]) else null %}
+  {% set nomadEsCode = esA.codes["TRAVELESIMEXPERT"] if (esA and esA.codes and esA.codes["TRAVELESIMEXPERT"]) else null %}
   {% set redteaEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
   {% set nomadDiscount = (nomadEsCode.discount if nomadEsCode) or nomadBest.discount %}
   {% set redteaDiscount = (redteaEsCode.discount if redteaEsCode) or redteaPrimary.discount %}
@@ -47,7 +47,7 @@
   <h2>Códigos de descuento</h2>
   <div class="content-box content-box--tan">
     <ul>
-      <li><strong>Nomad:</strong> NOMTRAVEL20 o NOMCYBER20, {{ nomadDiscount | lower }}. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>Nomad:</strong> TRAVELESIMEXPERT, {{ nomadDiscount | lower }}. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
       <li><strong>RedteaGO:</strong> {{ providerB.primaryCode }}, {{ redteaDiscount | lower }}. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
     </ul>
     <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ninguno de los dos códigos es nuestro. Ni Nomad ni RedteaGO tienen el tipo de programa de afiliados que admite un código propio como el nuestro, así que ambos son los mejores códigos públicos que hemos verificado para cada uno. El 20% de Nomad es mayor que el 5% de RedteaGO, pero el precio base de RedteaGO ya es tan bajo que un porcentaje menor sobre una base más barata puede seguir ganando; haz el cálculo para el plan concreto que quieras.</p>

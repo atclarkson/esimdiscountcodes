@@ -1,13 +1,13 @@
 <!-- Nomad vs Saily Comparison Content -->
 <div class="content-section">
 
-  {% set nomadBest = providerA.codes | findCode("NOMTRAVEL20") %}
+  {% set nomadBest = providerA.codes | findCode("TRAVELESIMEXPERT") %}
   {% set sailyPrimary = providerB.codes | findCode(providerB.primaryCode) %}
 
   <div class="content-callout">
     <h2>The Short Answer</h2>
     <p>
-      Pick <strong>Saily</strong> if you're buying data for a normal trip and want the lower price, plus ad blocking and phishing protection you'd otherwise pay a VPN for. Pick <strong>Nomad</strong> if you'll be abroad for months and would rather pay once for a big bundle that stays valid for up to a year than keep buying small plans or sign up for a monthly subscription. On a single small plan, Saily is cheaper in every destination below, even after both discount codes.
+      Pick <strong>Saily</strong> if you're buying data for a normal trip and want the lower price, plus ad blocking and phishing protection you'd otherwise pay a VPN for. Pick <strong>Nomad</strong> if you'll be abroad for months and would rather pay once for a big bundle that stays valid for up to a year than keep buying small plans or sign up for a monthly subscription. On a single small plan, Saily is cheaper in every destination below, even after Nomad's 20% Global-plan code. On US and Europe plans, Nomad's flat $3 USD REG3 code could close the gap.
     </p>
   </div>
 
@@ -39,16 +39,16 @@
         <tr><td>Long stay</td><td>$129 (50GB, 365 days, Global-EX)</td><td>$59.99/month (Ultra, 30GB high-speed)</td></tr>
       </tbody>
     </table>
-    <p class="content-note">With codes applied (20% off Nomad, 15% off Saily), the 1GB plans come to $4.00 vs about $3.39 in the US, $4.40 vs about $4.24 in Europe, and $9.60 vs about $7.64 on Global, so Saily stays cheaper on small plans. Nomad's prices are from its own plan pages this month; Saily's are from our <a href="/saily/">Saily page</a>, since saily.com blocks our automated checks. Confirm the live price at checkout either way.</p>
+    <p class="content-note">With Saily's 15% code, its 1GB plans come to about $3.39 in the US, $4.24 in Europe and $7.64 on Global. Nomad's 20% code (TRAVELESIMEXPERT) only applies to Global plans, which puts a 1GB Global plan at $9.60, so Saily stays cheaper there. On US and Europe plans, Nomad's only working code is REG3, a flat $3 USD off that we tested on a larger plan, so confirm what it does to a 1GB plan before assuming either side wins. Nomad's prices are from its own plan pages this month; Saily's are from our <a href="/saily/">Saily page</a>, since saily.com blocks our automated checks. Confirm the live price at checkout either way.</p>
   </div>
 
   <h2>Discount Codes</h2>
   <div class="content-box content-box--tan">
     <ul>
-      <li><strong>Nomad:</strong> NOMTRAVEL20 or NOMCYBER20, {{ nomadBest.discount | lower }}. <a href="/nomad/">Full code list &rarr;</a></li>
+      <li><strong>Nomad:</strong> TRAVELESIMEXPERT, {{ nomadBest.discount | lower }}. <a href="/nomad/">Full code list &rarr;</a></li>
       <li><strong>Saily:</strong> {{ providerB.primaryCode }}, {{ sailyPrimary.discount | lower }}. <a href="/saily/">Full code list &rarr;</a></li>
     </ul>
-    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Neither code is ours. Neither Nomad nor Saily runs the kind of affiliate program that gives us a code of our own, so these are the best public codes on each provider's page. Nomad's two 20% codes are tied, so either works.</p>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Neither code is ours. Neither Nomad nor Saily runs the kind of affiliate program that gives us a code of our own, so these are the best public codes on each provider's page. Nomad's best code only applies to Global plans, and its flat $3 USD code (REG3) works on any plan.</p>
   </div>
 
   <h2>Is Nomad or Saily the Right Pick</h2>
@@ -89,7 +89,7 @@
   <div class="content-faq">
     <div class="content-faq-item">
       <h3>Which is cheaper, Nomad or Saily</h3>
-      <p>Saily, on single small plans. A 1GB plan costs $3.99 in the US, $4.99 for Europe, and $8.99 global on Saily, versus $5, $5.50, and $12 on Nomad. Saily stays cheaper even after Nomad's 20% code and Saily's 15% code. Nomad wins on bulk long-stay data: its 50GB Global-EX bundle works out to $2.58/GB.</p>
+      <p>Saily, on single small plans. A 1GB plan costs $3.99 in the US, $4.99 for Europe, and $8.99 global on Saily, versus $5, $5.50, and $12 on Nomad. On a 1GB Global plan Saily stays cheaper even after Nomad's 20% code (Global plans only) and Saily's 15% code; on US and Europe plans, Nomad's flat $3 USD REG3 code could close the gap, and we have only tested it on a larger plan. Nomad wins on bulk long-stay data: its 50GB Global-EX bundle works out to $2.58/GB.</p>
     </div>
     <div class="content-faq-item">
       <h3>Which is better for months abroad</h3>
@@ -115,7 +115,7 @@
       {
         "@type":"Question",
         "name":"Which is cheaper, Nomad or Saily?",
-        "acceptedAnswer":{"@type":"Answer","text":"Saily, on single small plans. A 1GB plan costs $3.99 in the US, $4.99 for Europe, and $8.99 global on Saily, versus $5, $5.50, and $12 on Nomad, and Saily stays cheaper even after Nomad's 20% code and Saily's 15% code. Nomad wins on bulk long-stay data: its 50GB Global-EX bundle works out to $2.58/GB."}
+        "acceptedAnswer":{"@type":"Answer","text":"Saily, on single small plans. A 1GB plan costs $3.99 in the US, $4.99 for Europe, and $8.99 global on Saily, versus $5, $5.50, and $12 on Nomad, and On a 1GB Global plan Saily stays cheaper even after Nomad's 20% code (Global plans only) and Saily's 15% code; on US and Europe plans, Nomad's flat $3 USD REG3 code could close the gap, and we have only tested it on a larger plan. Nomad wins on bulk long-stay data: its 50GB Global-EX bundle works out to $2.58/GB."}
       },
       {
         "@type":"Question",

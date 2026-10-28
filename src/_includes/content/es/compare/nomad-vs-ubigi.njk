@@ -1,11 +1,11 @@
 <!-- Nomad vs Ubigi Comparativa (Espanol) -->
 <div class="content-section">
 
-  {% set nomadBest = providerA.codes | findCode("NOMTRAVEL20") %}
+  {% set nomadBest = providerA.codes | findCode("TRAVELESIMEXPERT") %}
   {% set ubigiPrimary = providerB.codes | findCode(providerB.primaryCode) %}
   {% set esA = codesEs[providerAKey] %}
   {% set esB = codesEs[providerBKey] %}
-  {% set nomadEsCode = esA.codes["NOMTRAVEL20"] if (esA and esA.codes and esA.codes["NOMTRAVEL20"]) else null %}
+  {% set nomadEsCode = esA.codes["TRAVELESIMEXPERT"] if (esA and esA.codes and esA.codes["TRAVELESIMEXPERT"]) else null %}
   {% set ubigiEsCode = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
   {% set nomadDiscount = (nomadEsCode.discount if nomadEsCode) or nomadBest.discount %}
   {% set ubigiDiscount = (ubigiEsCode.discount if ubigiEsCode) or ubigiPrimary.discount %}
@@ -47,10 +47,10 @@
   <h2>C&oacute;digos de descuento</h2>
   <div class="content-box content-box--tan">
     <ul>
-      <li><strong>Nomad:</strong> NOMTRAVEL20 o NOMCYBER20, {{ nomadDiscount | lower }}. <a href="{{ providerAUrl }}">Ver lista completa de c&oacute;digos &rarr;</a></li>
+      <li><strong>Nomad:</strong> TRAVELESIMEXPERT, {{ nomadDiscount | lower }}. <a href="{{ providerAUrl }}">Ver lista completa de c&oacute;digos &rarr;</a></li>
       <li><strong>Ubigi:</strong> {{ providerB.primaryCode }}, {{ ubigiDiscount | lower }}. <a href="{{ providerBUrl }}">Ver lista completa de c&oacute;digos &rarr;</a></li>
     </ul>
-    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">El c&oacute;digo de Ubigi es nuestro. Nomad no tiene el tipo de programa de afiliados que permita un c&oacute;digo as&iacute;, as&iacute; que sus c&oacute;digos aqu&iacute; son los mejores p&uacute;blicos que hemos verificado, y hay dos empatados con el mismo porcentaje.</p>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">El c&oacute;digo de Ubigi es nuestro. Nomad no tiene el tipo de programa de afiliados que permita un c&oacute;digo as&iacute;, as&iacute; que sus c&oacute;digos aqu&iacute; son los mejores p&uacute;blicos que hemos verificado, y el mejor de ellos (TRAVELESIMEXPERT) solo se aplica a planes Global.</p>
   </div>
 
   <h2>&iquest;Es Nomad o Ubigi la opci&oacute;n adecuada?</h2>

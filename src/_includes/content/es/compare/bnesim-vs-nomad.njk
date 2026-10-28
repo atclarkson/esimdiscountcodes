@@ -2,8 +2,8 @@
 <div class="content-section">
 
   {% set esB = codesEs[providerBKey] %}
-  {% set nomadEsCode = esB.codes["NOMTRAVEL20"] if (esB and esB.codes and esB.codes["NOMTRAVEL20"]) else null %}
-  {% set nomadBestEn = providerB.codes | findCode("NOMTRAVEL20") %}
+  {% set nomadEsCode = esB.codes["TRAVELESIMEXPERT"] if (esB and esB.codes and esB.codes["TRAVELESIMEXPERT"]) else null %}
+  {% set nomadBestEn = providerB.codes | findCode("TRAVELESIMEXPERT") %}
   {% set nomadDiscount = (nomadEsCode.discount if nomadEsCode) or nomadBestEn.discount %}
 
   <div class="content-callout">
@@ -74,7 +74,7 @@
     <strong>La opción sin caducidad de BNEsim es por paquete, no automática.</strong> Tienes que elegir la versión más cara sin caducidad de un paquete de país concreto al pagar; la versión estándar sigue caducando a los 30 días como la mayoría de las eSIM de esta web. La opción de larga validez de Nomad funciona al revés: compras un paquete Global-EX y la validez de hasta un año es simplemente cómo funciona esa línea de producto, sin ningún nivel adicional que elegir.
   </p>
   <p>
-    <strong>Nomad tiene un código de descuento real y BNEsim no.</strong> Los precios de BNEsim ya reflejan su precio de oferta sin nada que escribir al pagar, mientras que el {{ providerB.primaryCode }} de Nomad (o NOMCYBER20, mismo porcentaje) resta otro 20% en cualquier plan, Global-EX incluido. Si tener un código que funcione te importa, eso juega a favor de Nomad, sin importar qué estructura de precios encaje mejor por lo demás con tu viaje.
+    <strong>Nomad tiene un código de descuento real y BNEsim no.</strong> Los precios de BNEsim ya reflejan su precio de oferta sin nada que escribir al pagar, mientras que el {{ providerB.primaryCode }} de Nomad resta otro 20% en los planes Global, Global-EX incluido (los planes de un solo país pueden usar REG3, con 3 USD de descuento). Si tener un código que funcione te importa, eso juega a favor de Nomad, sin importar qué estructura de precios encaje mejor por lo demás con tu viaje.
   </p>
   <p>
     Para la configuración del dispositivo y lo básico sobre eSIM que aplica a ambos proveedores, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a> (en inglés).
@@ -93,7 +93,7 @@
     </div>
     <div class="content-faq-item">
       <h3>¿Tienen BNEsim o Nomad un código de descuento que funcione?</h3>
-      <p>Nomad sí: {{ providerB.primaryCode }} o NOMCYBER20, ambos con un 20% de descuento. BNEsim no anuncia ningún código en su web real; sus descuentos ya aparecen como precio de oferta rebajado.</p>
+      <p>Nomad sí: {{ providerB.primaryCode }}, 20% de descuento en planes Global, o REG3, 3 USD de descuento en cualquier plan. BNEsim no anuncia ningún código en su web real; sus descuentos ya aparecen como precio de oferta rebajado.</p>
     </div>
     <div class="content-faq-item">
       <h3>¿Cuál es mejor para un nómada digital que recorre varios países?</h3>
@@ -121,7 +121,7 @@
       {
         "@type":"Question",
         "name":"¿Tienen BNEsim o Nomad un código de descuento que funcione?",
-        "acceptedAnswer":{"@type":"Answer","text":"Nomad sí, actualmente un 20% de descuento con su mejor código público. BNEsim no anuncia ningún código de descuento en su web real; sus descuentos ya aparecen como precio de oferta rebajado."}
+        "acceptedAnswer":{"@type":"Answer","text":"Nomad sí, actualmente un 20% de descuento en planes Global con su mejor código público, o 3 USD de descuento en cualquier plan con REG3. BNEsim no anuncia ningún código de descuento en su web real; sus descuentos ya aparecen como precio de oferta rebajado."}
       },
       {
         "@type":"Question",

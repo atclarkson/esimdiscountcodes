@@ -2,12 +2,12 @@
 <div class="content-section">
 
   <!-- Respuesta rápida -->
-  {% set best1 = provider.codes | findCode("NOMTRAVEL20") %}
-  {% set best2 = provider.codes | findCode("NOMCYBER20") %}
+  {% set best1 = provider.codes | findCode("TRAVELESIMEXPERT") %}
+  {% set best2 = provider.codes | findCode("REG3") %}
   <div class="content-callout">
     <h2>Mejor código promocional de Nomad &bull; {{ buildMonthYear }}</h2>
     <p>
-      Usa <strong>NOMTRAVEL20</strong> o <strong>NOMCYBER20</strong> para conseguir <strong>20% de descuento</strong>, la mejor tasa de los cuatro códigos públicos de Nomad que funcionan. Ambos son códigos encontrados, no nuestros (el programa de afiliados de Nomad no nos da uno propio como sí hacen otros proveedores de esta web), y los dos aplican actualmente el mismo descuento, así que da igual cuál uses.
+      Usa <strong>TRAVELESIMEXPERT</strong> para conseguir <strong>20% de descuento en los planes Global de Nomad</strong>. Lo probamos al pagar el 28/10/2026: un plan Global-EX de 10 GB (180 días) bajó de EUR 34,82 a EUR 27,86. Es un código encontrado, no nuestro (el programa de afiliados de Nomad no nos da uno propio como sí hacen otros proveedores de esta web), y según la caja de Nomad solo es válido en planes Global, así que no cabe esperar que funcione en un plan de un solo país. Para cualquier otro plan, <strong>REG3</strong> descuenta 3 USD en cualquier eSIM.
       <span class="callout-meta">Confirmado activo el <time datetime="{{ (best1.lastTested or buildTime) | fmtISO }}">{{ (best1.lastTested or buildTime) | fmtDate("d 'de' LLLL 'de' yyyy") }}</time>.</span>
     </p>
   </div>
@@ -31,6 +31,7 @@
       {% endif %}
       {% endfor %}
     </ul>
+    <p class="content-note">Comprobado en la caja de Nomad el 28/10/2026: WOLF fue rechazado por no ser válido, y BEYOND20, FALL30, NOMTRAVEL20 y NOMCYBER20 salieron como caducados, así que ya no se muestran aquí.</p>
     <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Si un código no se aplica, recarga el carrito o pruébalo en una ventana privada, y vuelve a intentarlo.</p>
   </div>
 
@@ -47,9 +48,9 @@
   <h2>Cómo aplicar un código de Nomad en 3 pasos</h2>
   <div class="content-box">
     <ol>
-      <li>Copia <strong>NOMTRAVEL20</strong> o <strong>NOMCYBER20</strong></li>
+      <li>Copia <strong>TRAVELESIMEXPERT</strong> (planes Global, 20% de descuento) o <strong>REG3</strong> (3 USD de descuento en cualquier eSIM)</li>
       <li>Elige un plan por país, regional, global o Global-EX en Nomad</li>
-      <li>Pega el código en el campo de promoción al pagar y confirma la rebaja del 20% antes de pagar</li>
+      <li>Pega el código en el campo de promoción al pagar y confirma la rebaja antes de pagar</li>
     </ol>
     <p class="content-note">El descuento se muestra antes de completar el pago.</p>
   </div>
@@ -81,11 +82,10 @@
   <h2>Así es el descuento en la práctica</h2>
   <div class="content-box">
     <ul>
-      <li>Estados Unidos 1 GB (7 días) a 5 $ &rarr; 20% de descuento ahorra 1,00 $</li>
-      <li>Europa regional 1 GB (7 días) a 5,50 $ &rarr; 20% de descuento ahorra 1,10 $</li>
-      <li>Global 1 GB (7 días) a 12 $ &rarr; 20% de descuento ahorra 2,40 $</li>
+      <li>Global-EX 10 GB, 180 días, EUR 34,82 &rarr; TRAVELESIMEXPERT: EUR 27,86 (ahorra EUR 6,96)</li>
+      <li>El mismo plan con REG3: EUR 32,14 (ahorra EUR 2,68)</li>
     </ul>
-    <p class="content-note">Esos son precios de un solo GB con validez corta. Un paquete Global-EX se tarifica por GB de otra forma (hasta unos 2,58 $/GB antes del código), así que haz el cálculo con el tamaño y la duración concretos que necesites en lugar de asumir que se aplica el precio por GB de arriba.</p>
+    <p class="content-note">Ambos son resultados reales al pagar del 28/10/2026. REG3 es un importe fijo de 3 USD, así que compensa sobre todo en planes pequeños, y TRAVELESIMEXPERT solo se aplica a planes Global. Un plan de un solo país solo puede usar REG3.</p>
   </div>
 
   <p>
@@ -95,8 +95,8 @@
   <!-- CTA -->
   <div class="content-cta">
     <h2>Usa el código al pagar</h2>
-    <p>Copia <code>NOMTRAVEL20</code> o <code>NOMCYBER20</code> y pégalo en el campo de promoción</p>
-    <p>20% de descuento en cualquier plan de Nomad, incluido Global-EX.</p>
+    <p>Copia <code>TRAVELESIMEXPERT</code> (planes Global) o <code>REG3</code> (cualquier plan) y pégalo en el campo de promoción</p>
+    <p>20% de descuento en los planes Global de Nomad, incluido Global-EX, o 3 USD de descuento en cualquier eSIM.</p>
   </div>
 
   <!-- FAQ -->
@@ -104,7 +104,7 @@
   <div class="content-faq">
     <div class="content-faq-item">
       <h3>¿Cuál es el mejor código ahora mismo?</h3>
-      <p><strong>NOMTRAVEL20</strong> o <strong>NOMCYBER20</strong>: ambos con 20% de descuento, el mejor de los cuatro códigos que funcionan en Nomad.</p>
+      <p><strong>TRAVELESIMEXPERT</strong>: 20% de descuento, pero solo en planes Global, probado al pagar el 28/10/2026. Para cualquier otro plan, <strong>REG3</strong> da 3 USD de descuento. WOLF, BEYOND20, FALL30, NOMTRAVEL20 y NOMCYBER20 fallaron al pagar ese mismo día (no válidos o caducados) y ya no se muestran.</p>
     </div>
     <div class="content-faq-item">
       <h3>¿Qué es Global-EX?</h3>
@@ -134,7 +134,7 @@
       {
         "@type":"Question",
         "name":"¿Cuál es el mejor código promocional de Nomad ahora mismo?",
-        "acceptedAnswer":{"@type":"Answer","text":"NOMTRAVEL20 o NOMCYBER20, ambos con 20% de descuento, el mejor de los cuatro codigos que funcionan en Nomad."}
+        "acceptedAnswer":{"@type":"Answer","text":"TRAVELESIMEXPERT, 20% de descuento, pero solo en planes Global, probado al pagar el 28/10/2026. Para cualquier otro plan, REG3 da 3 USD de descuento. WOLF, BEYOND20, FALL30, NOMTRAVEL20 y NOMCYBER20 fallaron al pagar ese mismo dia y ya no se muestran."}
       },
       {
         "@type":"Question",

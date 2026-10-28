@@ -1,11 +1,11 @@
 <!-- Nomad vs RedteaGO Vergleich (Deutsch) -->
 <div class="content-section">
 
-  {% set nomadBest = providerA.codes | findCode("NOMTRAVEL20") %}
+  {% set nomadBest = providerA.codes | findCode("TRAVELESIMEXPERT") %}
   {% set redteaPrimary = providerB.codes | findCode(providerB.primaryCode) %}
   {% set deA = codesDe[providerAKey] %}
   {% set deB = codesDe[providerBKey] %}
-  {% set nomadDeCode = deA.codes["NOMTRAVEL20"] if (deA and deA.codes and deA.codes["NOMTRAVEL20"]) else null %}
+  {% set nomadDeCode = deA.codes["TRAVELESIMEXPERT"] if (deA and deA.codes and deA.codes["TRAVELESIMEXPERT"]) else null %}
   {% set redteaDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
   {% set nomadDiscount = (nomadDeCode.discount if nomadDeCode) or nomadBest.discount %}
   {% set redteaDiscount = (redteaDeCode.discount if redteaDeCode) or redteaPrimary.discount %}
@@ -47,7 +47,7 @@
   <h2>Rabattcodes</h2>
   <div class="content-box content-box--tan">
     <ul>
-      <li><strong>Nomad:</strong> NOMTRAVEL20 oder NOMCYBER20, {{ nomadDiscount | lower }}. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>Nomad:</strong> TRAVELESIMEXPERT, {{ nomadDiscount | lower }}. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
       <li><strong>RedteaGO:</strong> {{ providerB.primaryCode }}, {{ redteaDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
     </ul>
     <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Keiner der beiden Codes ist unser eigener. Weder Nomad noch RedteaGO betreiben ein Partnerprogramm, das einen solchen Code unterstützt, daher sind beide die besten öffentlichen Codes, die wir für den jeweiligen Anbieter geprüft haben. Nomads 20 % sind höher als RedteaGOs 5 %, aber RedteaGOs Grundpreis ist schon so niedrig, dass ein kleinerer Prozentsatz auf eine günstigere Basis trotzdem vorne liegen kann; rechne das für den konkreten Tarif durch, den du willst.</p>

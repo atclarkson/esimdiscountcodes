@@ -508,11 +508,11 @@
   },
   "nomad": {
     "name": "Nomad",
-    "lastModified": "2026-10-05",
+    "lastModified": "2026-10-28",
     "description": "eSIM for digital nomads",
     "url": "https://www.nomadesim.com",
     "affiliateUrl": "https://lotusflareinc.pxf.io/0GnvzL",
-    "primaryCode": "WOLF",
+    "primaryCode": "TRAVELESIMEXPERT",
     "rating": 3.6,
     "priceCategory": "Average",
     "brandColors": {
@@ -523,70 +523,70 @@
     "logo": "/assets/nomad_logo.png",
     "codes": [
       {
-        "code": "WOLF",
-        "discount": "10% OFF ALL PLANS",
-        "description": "Nomad discount code - 10% off",
+        "code": "TRAVELESIMEXPERT",
+        "discount": "20% OFF GLOBAL PLANS",
+        "description": "Tested at checkout on 2026-10-28: 20% off a Global-EX 10GB (180 days) plan, EUR 34.82 down to EUR 27.86. Nomad's checkout says it is only valid on Global plans, so do not expect it to apply to single-country plans.",
         "verified": true,
-        "lastTested": "2026-10-11",
+        "lastTested": "2026-10-28",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public",
         "isInvalid": false
       },
       {
-        "code": "BEYOND20",
-        "discount": "20% OFF",
-        "description": "Advertised on Nomad's own homepage in its autumn banner: 20% off. Confirmed as publicly advertised, not checkout-tested by us.",
+        "code": "WOLF",
+        "discount": "10% OFF ALL PLANS",
+        "description": "Checkout test on 2026-10-28: Nomad rejected it as not a valid code.",
         "verified": true,
-        "lastTested": "2026-10-19",
+        "lastTested": "2026-10-28",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public",
-        "isInvalid": false
+        "isInvalid": true
+      },
+      {
+        "code": "BEYOND20",
+        "discount": "20% OFF",
+        "description": "Checkout test on 2026-10-28: Nomad reported this code as expired.",
+        "verified": true,
+        "lastTested": "2026-10-28",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public",
+        "isInvalid": true
       },
       {
         "code": "FALL30",
         "discount": "30% OFF 2+ ESIMS",
-        "description": "Advertised on Nomad's own homepage in its autumn banner: 30% off when you buy 2 or more eSIMs. Confirmed as publicly advertised, not checkout-tested by us.",
+        "description": "Checkout test on 2026-10-28: Nomad reported this code as expired.",
         "verified": true,
-        "lastTested": "2026-10-19",
+        "lastTested": "2026-10-28",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public",
-        "isInvalid": false
+        "isInvalid": true
       },
       {
         "code": "NOMTRAVEL20",
         "discount": "20% OFF",
-        "description": "Nomad eSIM promo code - 20% off",
+        "description": "Checkout test on 2026-10-28: Nomad reported this code as expired.",
         "verified": true,
-        "lastTested": "2026-10-11",
+        "lastTested": "2026-10-28",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public",
-        "isInvalid": false
-      },
-      {
-        "code": "TRAVELESIMEXPERT",
-        "discount": "15% OFF",
-        "description": "Nomad eSIM coupon - 15% off all regular plans",
-        "verified": true,
-        "lastTested": "2026-10-11",
-        "expiryDate": null,
-        "isPrimary": false,
-        "type": "public",
-        "isInvalid": false
+        "isInvalid": true
       },
       {
         "code": "NOMCYBER20",
         "discount": "20% OFF",
-        "description": "Nomad eSIM Cybernews promo code - 20% off",
+        "description": "Checkout test on 2026-10-28: Nomad reported this code as expired.",
         "verified": true,
-        "lastTested": "2026-10-11",
+        "lastTested": "2026-10-28",
         "expiryDate": null,
         "isPrimary": false,
         "type": "public",
-        "isInvalid": false
+        "isInvalid": true
       },
       {
         "code": "MEMORY20",
@@ -598,6 +598,17 @@
         "isPrimary": false,
         "type": "public",
         "isInvalid": true
+      },
+      {
+        "code": "REG3",
+        "discount": "$3 OFF ANY ESIM",
+        "description": "Tested at checkout on 2026-10-28: a welcome discount of $3 USD off any Nomad eSIM (EUR 2.68 off a EUR 34.82 Global-EX plan). A flat amount, so it matters most on small plans.",
+        "verified": true,
+        "lastTested": "2026-10-28",
+        "expiryDate": null,
+        "isPrimary": false,
+        "type": "public",
+        "isInvalid": false
       }
     ],
     "totalScore": "3.6",

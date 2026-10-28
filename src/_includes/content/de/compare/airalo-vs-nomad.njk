@@ -2,11 +2,11 @@
 <div class="content-section">
 
   {% set airaloPrimary = providerA.codes | findCode(providerA.primaryCode) %}
-  {% set nomadBest = providerB.codes | findCode("NOMTRAVEL20") %}
+  {% set nomadBest = providerB.codes | findCode("TRAVELESIMEXPERT") %}
   {% set deA = codesDe[providerAKey] %}
   {% set deB = codesDe[providerBKey] %}
   {% set airaloDeCode = deA.codes[providerA.primaryCode] if (deA and deA.codes and deA.codes[providerA.primaryCode]) else null %}
-  {% set nomadDeCode = deB.codes["NOMTRAVEL20"] if (deB and deB.codes and deB.codes["NOMTRAVEL20"]) else null %}
+  {% set nomadDeCode = deB.codes["TRAVELESIMEXPERT"] if (deB and deB.codes and deB.codes["TRAVELESIMEXPERT"]) else null %}
   {% set airaloDiscount = (airaloDeCode.discount if airaloDeCode) or airaloPrimary.discount %}
   {% set nomadDiscount = (nomadDeCode.discount if nomadDeCode) or nomadBest.discount %}
 
@@ -49,9 +49,9 @@
   <div class="content-box content-box--tan">
     <ul>
       <li><strong>Airalo:</strong> {{ providerA.primaryCode }}, {{ airaloDiscount | lower }}. Bestandskunden können AIRALOESIM10 für 10% Rabatt ab 10 $ Bestellwert nutzen. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
-      <li><strong>Nomad:</strong> NOMTRAVEL20 oder NOMCYBER20, {{ nomadDiscount | lower }}, der beste von Nomads vier funktionierenden Codes. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>Nomad:</strong> TRAVELESIMEXPERT, {{ nomadDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
     </ul>
-    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Keiner der Codes hier ist unser eigener. Airalo betreibt kein Partnerprogramm, das einen solchen Code unterstützt, und die meisten anderen Airalo-Codes sind persönliche 3-$-Airmoney-Empfehlungscodes einzelner Nutzer statt eines offiziellen Rabatts. Auch Nomads Codes sind gefundene öffentliche Codes, zwei davon liegen gleichauf bei 20%.</p>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Keiner der Codes hier ist unser eigener. Airalo betreibt kein Partnerprogramm, das einen solchen Code unterstützt, und die meisten anderen Airalo-Codes sind persönliche 3-$-Airmoney-Empfehlungscodes einzelner Nutzer statt eines offiziellen Rabatts. Auch Nomads Codes sind gefundene öffentliche Codes, der beste davon gilt nur für Global-Tarife.</p>
   </div>
 
   <h2>Ist Airalo oder Nomad die richtige Wahl</h2>
@@ -102,7 +102,7 @@
     </div>
     <div class="content-faq-item">
       <h3>Wer hat den besseren Rabattcode?</h3>
-      <p>Nomads beste öffentliche Codes, NOMTRAVEL20 und NOMCYBER20, geben jeweils 20% Rabatt. Airalos bester ist NEWTOAIRALO15 mit 15% Rabatt auf den ersten Kauf, oder AIRALOESIM10 mit 10% Rabatt für Bestandskunden ab 10 $ Bestellwert; die meisten anderen Airalo-Codes sind persönliche 3-$-Empfehlungscodes einzelner Nutzer statt eines offiziellen Rabatts.</p>
+      <p>Nomads bester funktionierender öffentlicher Code, TRAVELESIMEXPERT, gibt 20% Rabatt nur auf Global-Tarife (REG3 nimmt 3 USD auf jeden Tarif ab). Airalos bester ist NEWTOAIRALO15 mit 15% Rabatt auf den ersten Kauf, oder AIRALOESIM10 mit 10% Rabatt für Bestandskunden ab 10 $ Bestellwert; die meisten anderen Airalo-Codes sind persönliche 3-$-Empfehlungscodes einzelner Nutzer statt eines offiziellen Rabatts.</p>
     </div>
     <div class="content-faq-item">
       <h3>Geht Hotspot oder Daten-Teilen bei beiden?</h3>
@@ -135,7 +135,7 @@
       {
         "@type":"Question",
         "name":"Wer hat den besseren Rabattcode, Airalo oder Nomad?",
-        "acceptedAnswer":{"@type":"Answer","text":"Nomads beste öffentliche Codes, NOMTRAVEL20 und NOMCYBER20, geben jeweils 20% Rabatt. Airalos bester ist NEWTOAIRALO15 mit 15% Rabatt auf den ersten Kauf, oder AIRALOESIM10 mit 10% Rabatt für Bestandskunden ab 10 $ Bestellwert; die meisten anderen Airalo-Codes sind persönliche 3-$-Empfehlungscodes einzelner Nutzer statt eines offiziellen Rabatts."}
+        "acceptedAnswer":{"@type":"Answer","text":"Nomads bester funktionierender öffentlicher Code, TRAVELESIMEXPERT, gibt 20% Rabatt nur auf Global-Tarife (REG3 nimmt 3 USD auf jeden Tarif ab). Airalos bester ist NEWTOAIRALO15 mit 15% Rabatt auf den ersten Kauf, oder AIRALOESIM10 mit 10% Rabatt für Bestandskunden ab 10 $ Bestellwert; die meisten anderen Airalo-Codes sind persönliche 3-$-Empfehlungscodes einzelner Nutzer statt eines offiziellen Rabatts."}
       },
       {
         "@type":"Question",

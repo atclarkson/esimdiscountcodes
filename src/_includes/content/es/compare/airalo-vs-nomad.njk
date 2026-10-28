@@ -2,11 +2,11 @@
 <div class="content-section">
 
   {% set airaloPrimary = providerA.codes | findCode(providerA.primaryCode) %}
-  {% set nomadBest = providerB.codes | findCode("NOMTRAVEL20") %}
+  {% set nomadBest = providerB.codes | findCode("TRAVELESIMEXPERT") %}
   {% set esA = codesEs[providerAKey] %}
   {% set esB = codesEs[providerBKey] %}
   {% set airaloEsCode = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
-  {% set nomadEsCode = esB.codes["NOMTRAVEL20"] if (esB and esB.codes and esB.codes["NOMTRAVEL20"]) else null %}
+  {% set nomadEsCode = esB.codes["TRAVELESIMEXPERT"] if (esB and esB.codes and esB.codes["TRAVELESIMEXPERT"]) else null %}
   {% set airaloDiscount = (airaloEsCode.discount if airaloEsCode) or airaloPrimary.discount %}
   {% set nomadDiscount = (nomadEsCode.discount if nomadEsCode) or nomadBest.discount %}
 
@@ -49,9 +49,9 @@
   <div class="content-box content-box--tan">
     <ul>
       <li><strong>Airalo:</strong> {{ providerA.primaryCode }}, {{ airaloDiscount | lower }}. Los clientes existentes pueden usar AIRALOESIM10 para un 10% de descuento en pedidos de 10 $ o más. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
-      <li><strong>Nomad:</strong> NOMTRAVEL20 o NOMCYBER20, {{ nomadDiscount | lower }}, el mejor de los cuatro códigos activos de Nomad. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>Nomad:</strong> TRAVELESIMEXPERT, {{ nomadDiscount | lower }}. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
     </ul>
-    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ninguno de los dos códigos es el nuestro. Airalo no tiene el tipo de programa de afiliados que sostenga un código así, y la mayoría de sus otros códigos son códigos de referido Airmoney de 3 $ de usuarios concretos, no un descuento oficial único. Los códigos de Nomad también son códigos públicos encontrados, con dos empatados en el mismo 20%.</p>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ninguno de los dos códigos es el nuestro. Airalo no tiene el tipo de programa de afiliados que sostenga un código así, y la mayoría de sus otros códigos son códigos de referido Airmoney de 3 $ de usuarios concretos, no un descuento oficial único. Los códigos de Nomad también son códigos públicos encontrados, y el mejor de ellos solo se aplica a planes Global.</p>
   </div>
 
   <h2>¿Airalo o Nomad es la mejor opción?</h2>
@@ -102,7 +102,7 @@
     </div>
     <div class="content-faq-item">
       <h3>¿Cuál tiene el mejor código de descuento?</h3>
-      <p>Los mejores códigos públicos de Nomad, NOMTRAVEL20 y NOMCYBER20, dan un 20% de descuento cada uno. El mejor de Airalo es NEWTOAIRALO15, con un 15% de descuento en la primera compra, o AIRALOESIM10, con un 10% para clientes existentes en pedidos de 10 $ o más; la mayoría de los demás códigos de Airalo son códigos de referido de 3 $ de usuarios concretos, no un descuento oficial único.</p>
+      <p>El mejor código público de Nomad que funciona, TRAVELESIMEXPERT, da un 20% de descuento solo en planes Global (REG3 descuenta 3 USD en cualquier plan). El mejor de Airalo es NEWTOAIRALO15, con un 15% de descuento en la primera compra, o AIRALOESIM10, con un 10% para clientes existentes en pedidos de 10 $ o más; la mayoría de los demás códigos de Airalo son códigos de referido de 3 $ de usuarios concretos, no un descuento oficial único.</p>
     </div>
     <div class="content-faq-item">
       <h3>¿Se puede usar hotspot o compartir datos entre dispositivos con alguno de los dos?</h3>
@@ -135,7 +135,7 @@
       {
         "@type":"Question",
         "name":"¿Cuál tiene el mejor código de descuento, Airalo o Nomad?",
-        "acceptedAnswer":{"@type":"Answer","text":"Los mejores codigos publicos de Nomad, NOMTRAVEL20 y NOMCYBER20, dan un 20% de descuento cada uno. El mejor de Airalo es NEWTOAIRALO15, con un 15% de descuento en la primera compra, o AIRALOESIM10, con un 10% para clientes existentes en pedidos de 10 $ o mas; la mayoria de los demas codigos de Airalo son codigos de referido de 3 $ de usuarios concretos, no un descuento oficial unico."}
+        "acceptedAnswer":{"@type":"Answer","text":"El mejor codigo publico de Nomad que funciona, TRAVELESIMEXPERT, da un 20% de descuento solo en planes Global (REG3 descuenta 3 USD en cualquier plan). El mejor de Airalo es NEWTOAIRALO15, con un 15% de descuento en la primera compra, o AIRALOESIM10, con un 10% para clientes existentes en pedidos de 10 $ o mas; la mayoria de los demas codigos de Airalo son codigos de referido de 3 $ de usuarios concretos, no un descuento oficial unico."}
       },
       {
         "@type":"Question",

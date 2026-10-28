@@ -1,7 +1,7 @@
 <!-- Nomad vs RedteaGO Comparison Content -->
 <div class="content-section">
 
-  {% set nomadBest = providerA.codes | findCode("NOMTRAVEL20") %}
+  {% set nomadBest = providerA.codes | findCode("TRAVELESIMEXPERT") %}
   {% set redteaPrimary = providerB.codes | findCode(providerB.primaryCode) %}
 
   <div class="content-callout">
@@ -41,7 +41,7 @@
   <h2>Discount Codes</h2>
   <div class="content-box content-box--tan">
     <ul>
-      <li><strong>Nomad:</strong> NOMTRAVEL20 or NOMCYBER20, {{ nomadBest.discount | lower }}. <a href="/nomad/">Full code list &rarr;</a></li>
+      <li><strong>Nomad:</strong> TRAVELESIMEXPERT, {{ nomadBest.discount | lower }}. <a href="/nomad/">Full code list &rarr;</a></li>
       <li><strong>RedteaGO:</strong> {{ providerB.primaryCode }}, {{ redteaPrimary.discount | lower }}. <a href="/redteago/">Full code list &rarr;</a></li>
     </ul>
     <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Neither code is ours. Nomad and RedteaGO don't run the kind of affiliate program that supports a code like that, so both are the best public codes we've verified for each. Nomad's 20% rate is bigger than RedteaGO's 5%, but RedteaGO's underlying price is already low enough that a smaller percentage off a cheaper base can still come out ahead; run the math on the specific plan you want.</p>

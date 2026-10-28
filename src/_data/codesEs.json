@@ -75,27 +75,31 @@
     "codes": {
       "WOLF": {
         "discount": "10% DE DESCUENTO EN TODOS LOS PLANES",
-        "description": "Código de descuento de Nomad, 10% de descuento"
+        "description": "Prueba al pagar el 28/10/2026: Nomad rechazó este código por no ser válido."
       },
       "NOMTRAVEL20": {
         "discount": "20% DE DESCUENTO",
-        "description": "Código promocional de Nomad eSIM, 20% de descuento"
+        "description": "Prueba al pagar el 28/10/2026: Nomad indicó que este código ha caducado."
       },
       "TRAVELESIMEXPERT": {
-        "discount": "15% DE DESCUENTO",
-        "description": "Cupón de Nomad eSIM, 15% de descuento en todos los planes regulares"
+        "discount": "20% DE DESCUENTO EN PLANES GLOBAL",
+        "description": "Probado al pagar el 28/10/2026: 20% de descuento en un plan Global-EX de 10 GB (180 días), de EUR 34,82 a EUR 27,86. Según la caja de Nomad, solo es válido en planes Global, así que no cabe esperar que se aplique a planes de un solo país."
       },
       "NOMCYBER20": {
         "discount": "20% DE DESCUENTO",
-        "description": "Código promocional Cybernews de Nomad eSIM, 20% de descuento"
+        "description": "Prueba al pagar el 28/10/2026: Nomad indicó que este código ha caducado."
       },
       "BEYOND20": {
         "discount": "20% DE DESCUENTO",
-        "description": "Anunciado en el banner de otoño de la página principal de Nomad: 20% de descuento. Confirmado como anunciado públicamente, no probado por nosotros al pagar."
+        "description": "Prueba al pagar el 28/10/2026: Nomad indicó que este código ha caducado."
       },
       "FALL30": {
         "discount": "30% DE DESCUENTO CON 2+ ESIMS",
-        "description": "Anunciado en el banner de otoño de la página principal de Nomad: 30% de descuento al comprar 2 o más eSIMs. Confirmado como anunciado públicamente, no probado por nosotros al pagar."
+        "description": "Prueba al pagar el 28/10/2026: Nomad indicó que este código ha caducado."
+      },
+      "REG3": {
+        "discount": "3 $ DE DESCUENTO EN CUALQUIER ESIM",
+        "description": "Probado al pagar el 28/10/2026: descuento de bienvenida de 3 USD en cualquier eSIM de Nomad (EUR 2,68 de descuento en un plan Global-EX de EUR 34,82). Es un importe fijo, así que compensa sobre todo en planes pequeños."
       }
     }
   },

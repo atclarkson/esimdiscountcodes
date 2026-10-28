@@ -1,11 +1,11 @@
 <!-- Nomad vs Saily Vergleich (Deutsch) -->
 <div class="content-section">
 
-  {% set nomadBest = providerA.codes | findCode("NOMTRAVEL20") %}
+  {% set nomadBest = providerA.codes | findCode("TRAVELESIMEXPERT") %}
   {% set sailyPrimary = providerB.codes | findCode(providerB.primaryCode) %}
   {% set deA = codesDe[providerAKey] %}
   {% set deB = codesDe[providerBKey] %}
-  {% set nomadDeCode = deA.codes["NOMTRAVEL20"] if (deA and deA.codes and deA.codes["NOMTRAVEL20"]) else null %}
+  {% set nomadDeCode = deA.codes["TRAVELESIMEXPERT"] if (deA and deA.codes and deA.codes["TRAVELESIMEXPERT"]) else null %}
   {% set sailyDeCode = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
   {% set nomadDiscount = (nomadDeCode.discount if nomadDeCode) or nomadBest.discount %}
   {% set sailyDiscount = (sailyDeCode.discount if sailyDeCode) or sailyPrimary.discount %}
@@ -13,7 +13,7 @@
   <div class="content-callout">
     <h2>Die kurze Antwort</h2>
     <p>
-      Wähle <strong>Saily</strong>, wenn du Daten für eine normale Reise kaufst und den niedrigeren Preis willst, dazu Werbeblocker und Phishing-Schutz, für die du sonst ein VPN bezahlen würdest. Wähle <strong>Nomad</strong>, wenn du monatelang unterwegs bist und lieber einmal für ein großes Paket zahlst, das bis zu einem Jahr gültig bleibt, statt ständig kleine Tarife nachzukaufen oder ein Monatsabo abzuschließen. Bei einem einzelnen kleinen Tarif ist Saily in jedem Ziel unten günstiger, selbst nach Abzug beider Rabattcodes.
+      Wähle <strong>Saily</strong>, wenn du Daten für eine normale Reise kaufst und den niedrigeren Preis willst, dazu Werbeblocker und Phishing-Schutz, für die du sonst ein VPN bezahlen würdest. Wähle <strong>Nomad</strong>, wenn du monatelang unterwegs bist und lieber einmal für ein großes Paket zahlst, das bis zu einem Jahr gültig bleibt, statt ständig kleine Tarife nachzukaufen oder ein Monatsabo abzuschließen. Bei einem einzelnen kleinen Tarif ist Saily in jedem Ziel unten günstiger, selbst nach Nomads 20-%-Code für Global-Tarife. Bei US- und Europa-Tarifen könnte Nomads fester 3-USD-Code REG3 den Abstand verkleinern.
     </p>
   </div>
 
@@ -45,16 +45,16 @@
         <tr><td>Langzeitaufenthalt</td><td>129 $ (50 GB, 365 Tage, Global-EX)</td><td>59,99 $/Monat (Ultra, 30 GB Highspeed)</td></tr>
       </tbody>
     </table>
-    <p class="content-note">Mit Codes (20 % Rabatt bei Nomad, 15 % bei Saily) kosten die 1-GB-Tarife in den USA 4,00 $ gegenüber etwa 3,39 $, in Europa 4,40 $ gegenüber etwa 4,24 $ und weltweit 9,60 $ gegenüber etwa 7,64 $. Saily bleibt bei kleinen Tarifen also günstiger. Nomads Preise stammen diesen Monat von Nomads eigenen Tarifseiten; Sailys Preise von unserer <a href="{{ providerBUrl }}">Saily-Seite</a>, da saily.com unsere automatischen Prüfungen blockiert. Prüfe den aktuellen Preis so oder so an der Kasse.</p>
+    <p class="content-note">Mit Sailys 15-%-Code kosten die 1-GB-Tarife bei Saily etwa 3,39 $ in den USA, 4,24 $ in Europa und 7,64 $ weltweit. Nomads 20-%-Code (TRAVELESIMEXPERT) gilt nur für Global-Tarife und bringt einen 1-GB-Global-Tarif auf 9,60 $, Saily bleibt dort also günstiger. Bei US- und Europa-Tarifen ist Nomads einziger funktionierender Code REG3, ein fester Rabatt von 3 USD, den wir bei einem größeren Tarif getestet haben. Prüfe also, was er bei einem 1-GB-Tarif bewirkt, bevor du annimmst, dass eine Seite gewinnt. Nomads Preise stammen diesen Monat von Nomads eigenen Tarifseiten; Sailys Preise von unserer <a href="{{ providerBUrl }}">Saily-Seite</a>, da saily.com unsere automatischen Prüfungen blockiert. Prüfe den aktuellen Preis so oder so an der Kasse.</p>
   </div>
 
   <h2>Rabattcodes</h2>
   <div class="content-box content-box--tan">
     <ul>
-      <li><strong>Nomad:</strong> NOMTRAVEL20 oder NOMCYBER20, {{ nomadDiscount | lower }}. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
+      <li><strong>Nomad:</strong> TRAVELESIMEXPERT, {{ nomadDiscount | lower }}. <a href="{{ providerAUrl }}">Vollständige Codeliste &rarr;</a></li>
       <li><strong>Saily:</strong> {{ providerB.primaryCode }}, {{ sailyDiscount | lower }}. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
     </ul>
-    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Keiner der beiden Codes ist unser eigener. Weder Nomad noch Saily hat ein Partnerprogramm, über das wir einen eigenen Code bekommen, deshalb sind das die besten öffentlichen Codes auf der jeweiligen Anbieterseite. Nomads zwei 20-%-Codes sind gleichwertig, du kannst also einen von beiden nehmen.</p>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Keiner der beiden Codes ist unser eigener. Weder Nomad noch Saily hat ein Partnerprogramm, über das wir einen eigenen Code bekommen, deshalb sind das die besten öffentlichen Codes auf der jeweiligen Anbieterseite. Nomads bester Code gilt nur für Global-Tarife, und sein fester 3-USD-Code (REG3) funktioniert bei jedem Tarif.</p>
   </div>
 
   <h2>Ist Nomad oder Saily die richtige Wahl</h2>
@@ -95,7 +95,7 @@
   <div class="content-faq">
     <div class="content-faq-item">
       <h3>Was ist günstiger, Nomad oder Saily</h3>
-      <p>Saily, bei einzelnen kleinen Tarifen. Ein 1-GB-Tarif kostet bei Saily 3,99 $ in den USA, 4,99 $ für Europa und 8,99 $ weltweit, gegenüber 5 $, 5,50 $ und 12 $ bei Nomad. Saily bleibt auch nach Nomads 20-%-Code und Sailys 15-%-Code günstiger. Nomad gewinnt bei großen Datenmengen für lange Aufenthalte: Das 50-GB-Global-EX-Paket kommt auf 2,58 $/GB.</p>
+      <p>Saily, bei einzelnen kleinen Tarifen. Ein 1-GB-Tarif kostet bei Saily 3,99 $ in den USA, 4,99 $ für Europa und 8,99 $ weltweit, gegenüber 5 $, 5,50 $ und 12 $ bei Nomad. Bei einem 1-GB-Global-Tarif bleibt Saily auch nach Nomads 20-%-Code (nur Global-Tarife) und Sailys 15-%-Code günstiger; bei US- und Europa-Tarifen könnte Nomads fester 3-USD-Code REG3 den Abstand verkleinern, und wir haben ihn nur bei einem größeren Tarif getestet. Nomad gewinnt bei großen Datenmengen für lange Aufenthalte: Das 50-GB-Global-EX-Paket kommt auf 2,58 $/GB.</p>
     </div>
     <div class="content-faq-item">
       <h3>Was ist besser für mehrere Monate im Ausland</h3>
@@ -121,7 +121,7 @@
       {
         "@type":"Question",
         "name":"Was ist günstiger, Nomad oder Saily?",
-        "acceptedAnswer":{"@type":"Answer","text":"Saily, bei einzelnen kleinen Tarifen. Ein 1-GB-Tarif kostet bei Saily 3,99 $ in den USA, 4,99 $ für Europa und 8,99 $ weltweit, gegenüber 5 $, 5,50 $ und 12 $ bei Nomad, und Saily bleibt auch nach Nomads 20-%-Code und Sailys 15-%-Code günstiger. Nomad gewinnt bei großen Datenmengen für lange Aufenthalte: Das 50-GB-Global-EX-Paket kommt auf 2,58 $/GB."}
+        "acceptedAnswer":{"@type":"Answer","text":"Saily, bei einzelnen kleinen Tarifen. Ein 1-GB-Tarif kostet bei Saily 3,99 $ in den USA, 4,99 $ für Europa und 8,99 $ weltweit, gegenüber 5 $, 5,50 $ und 12 $ bei Nomad, und bei einem 1-GB-Global-Tarif bleibt Saily auch nach Nomads 20-%-Code (nur Global-Tarife) und Sailys 15-%-Code günstiger; bei US- und Europa-Tarifen könnte Nomads fester 3-USD-Code REG3 den Abstand verkleinern, und wir haben ihn nur bei einem größeren Tarif getestet. Nomad gewinnt bei großen Datenmengen für lange Aufenthalte: Das 50-GB-Global-EX-Paket kommt auf 2,58 $/GB."}
       },
       {
         "@type":"Question",

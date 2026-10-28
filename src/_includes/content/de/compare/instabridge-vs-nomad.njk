@@ -2,11 +2,11 @@
 <div class="content-section">
 
   {% set instaBest = providerA.codes | findCode("SP20") %}
-  {% set nomadBest = providerB.codes | findCode("NOMTRAVEL20") %}
+  {% set nomadBest = providerB.codes | findCode("TRAVELESIMEXPERT") %}
   {% set xA = codesDe[providerAKey] %}
   {% set xB = codesDe[providerBKey] %}
   {% set iDc = xA.codes["SP20"] if (xA and xA.codes and xA.codes["SP20"]) else null %}
-  {% set nDc = xB.codes["NOMTRAVEL20"] if (xB and xB.codes and xB.codes["NOMTRAVEL20"]) else null %}
+  {% set nDc = xB.codes["TRAVELESIMEXPERT"] if (xB and xB.codes and xB.codes["TRAVELESIMEXPERT"]) else null %}
   {% set iDisc = (iDc.discount if iDc) or instaBest.discount %}
   {% set nDisc = (nDc.discount if nDc) or nomadBest.discount %}
 
@@ -50,7 +50,7 @@
   <div class="content-box content-box--tan">
     <ul>
       <li><strong>Instabridge:</strong> SP20, {{ iDisc | lower }}. Gib ihn im Webshop ein, nicht in der App. <a href="/de/instabridge/">Alle Codes &rarr;</a></li>
-      <li><strong>Nomad:</strong> NOMTRAVEL20, {{ nDisc | lower }}. <a href="/de/nomad/">Alle Codes &rarr;</a></li>
+      <li><strong>Nomad:</strong> TRAVELESIMEXPERT, {{ nDisc | lower }}. <a href="/de/nomad/">Alle Codes &rarr;</a></li>
     </ul>
     <p class="content-note">Keiner der Codes stammt von uns. Es sind öffentliche Codes. SP20 haben wir an der Instabridge-Kasse bestätigt, doch Nomads Startseiten-Banner zeigt seine Codes nicht mehr, prüfe also vor der Zahlung, ob der Rabatt erscheint.</p>
   </div>

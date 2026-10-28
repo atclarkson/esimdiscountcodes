@@ -1,13 +1,13 @@
 <!-- Nomad vs Yesim Vergleich (Deutsch) -->
 <div class="content-section">
 
-  {% set nomadBest = providerA.codes | findCode("BEYOND20") %}
-  {% set nomadBundle = providerA.codes | findCode("FALL30") %}
+  {% set nomadBest = providerA.codes | findCode("TRAVELESIMEXPERT") %}
+  {% set nomadBundle = providerA.codes | findCode("REG3") %}
   {% set yesimPrimary = providerB.codes | findCode(providerB.primaryCode) %}
   {% set xA = codesDe[providerAKey] %}
   {% set xB = codesDe[providerBKey] %}
-  {% set bDc = xA.codes["BEYOND20"] if (xA and xA.codes and xA.codes["BEYOND20"]) else null %}
-  {% set fDc = xA.codes["FALL30"] if (xA and xA.codes and xA.codes["FALL30"]) else null %}
+  {% set bDc = xA.codes["TRAVELESIMEXPERT"] if (xA and xA.codes and xA.codes["TRAVELESIMEXPERT"]) else null %}
+  {% set fDc = xA.codes["REG3"] if (xA and xA.codes and xA.codes["REG3"]) else null %}
   {% set yDc = xB.codes[providerB.primaryCode] if (xB and xB.codes and xB.codes[providerB.primaryCode]) else null %}
   {% set bDisc = (bDc.discount if bDc) or nomadBest.discount %}
   {% set fDisc = (fDc.discount if fDc) or nomadBundle.discount %}
@@ -52,10 +52,10 @@
   <h2>Rabattcodes</h2>
   <div class="content-box content-box--tan">
     <ul>
-      <li><strong>Nomad:</strong> BEYOND20, {{ bDisc | lower }}, oder FALL30, {{ fDisc | lower }}. <a href="/de/nomad/">Alle Codes &rarr;</a></li>
+      <li><strong>Nomad:</strong> TRAVELESIMEXPERT, {{ bDisc | lower }}, oder REG3, {{ fDisc | lower }}. <a href="/de/nomad/">Alle Codes &rarr;</a></li>
       <li><strong>Yesim:</strong> {{ providerB.primaryCode }}, {{ yDisc | lower }}. Nur beim ersten Kauf. <a href="/de/yesim/">Alle Codes &rarr;</a></li>
     </ul>
-    <p class="content-note">Keiner der Codes stammt von uns. Es sind öffentliche Codes von der jeweiligen Anbieterseite oder Aktionsseite. FALL30 braucht zwei oder mehr eSIMs in derselben Bestellung und hilft dir nur, wenn du mehr als eine kaufst.</p>
+    <p class="content-note">Keiner der Codes stammt von uns. Es sind öffentliche Codes von der jeweiligen Anbieterseite oder Aktionsseite. TRAVELESIMEXPERT gilt nur für Nomads Global-Tarife, und REG3 ist ein fester Rabatt von 3 USD, lohnt sich also vor allem bei kleinen Tarifen.</p>
   </div>
 
   <h2>Ist Nomad oder Yesim die richtige Wahl</h2>
@@ -66,7 +66,7 @@
         <li>Du monatelang weg bist und ein Prepaid-Paket mit bis zu 365 Tagen Gültigkeit willst</li>
         <li>Du den Dienst zuerst mit der kostenlosen 1-GB-Test-eSIM ausprobieren willst</li>
         <li>Du 24/7 Live-Chat-Support willst</li>
-        <li>Du zwei oder mehr eSIMs auf einmal kaufst und FALL30 nutzen kannst</li>
+        <li>Du einen Nomad-Global-Tarif willst und TRAVELESIMEXPERT nutzen kannst</li>
       </ul>
     </div>
     <div class="decision-card decision-card--secondary">
@@ -82,7 +82,7 @@
 
   <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
   <p>
-    <strong>Yesims Code für den ersten Kauf ist der größte der vier.</strong> TEE20 gibt 20 % Rabatt, aber nur auf deine erste Bestellung. Danach sind Yesims andere öffentliche Codes kleiner: WELCOMETOYESIM mit 15 % und TRAVELFREE mit pauschal 3 &euro; Rabatt. Nomads BEYOND20 ist laut Banner auf der Startseite nicht so eingeschränkt.
+    <strong>Yesims Code für den ersten Kauf ist der größte der vier.</strong> TEE20 gibt 20 % Rabatt, aber nur auf deine erste Bestellung. Danach sind Yesims andere öffentliche Codes kleiner: WELCOMETOYESIM mit 15 % und TRAVELFREE mit pauschal 3 &euro; Rabatt. Nomads TRAVELESIMEXPERT ist nicht auf die erste Bestellung beschränkt, gilt aber nur für Global-Tarife.
   </p>
   <p>
     <strong>Keiner von beiden ist für eine einzelne günstige Woche gedacht.</strong> Brauchst du nur Daten für eine kurze Reise, schau zuerst bei <a href="/de/airhub/">Airhub</a> oder <a href="/de/holafly/">Holafly</a> nach. Willst du jetzt Daten für ein Land kaufen und später ohne Frist nutzen, verkauft <a href="/de/bnesim/">BNEsim</a> Pakete ohne Ablaufdatum. Zur Geräteeinrichtung siehe unsere <a href="/compatible-devices/">Übersicht kompatibler eSIM-Geräte</a>.
@@ -104,7 +104,7 @@
     </div>
     <div class="content-faq-item">
       <h3>Welcher Rabattcode ist größer</h3>
-      <p>Nomads FALL30 gibt 30 % bei zwei oder mehr eSIMs, BEYOND20 gibt 20 %. Yesims TEE20 gibt 20 % nur auf den ersten Kauf.</p>
+      <p>Nomads TRAVELESIMEXPERT gibt 20 % nur auf Global-Tarife, REG3 gibt 3 USD Rabatt auf jede eSIM. Yesims TEE20 gibt 20 % nur auf den ersten Kauf.</p>
     </div>
   </div>
 
@@ -132,7 +132,7 @@
       {
         "@type":"Question",
         "name":"Welcher Rabattcode ist größer, Nomad oder Yesim?",
-        "acceptedAnswer":{"@type":"Answer","text":"Nomads FALL30 gibt 30 % bei zwei oder mehr eSIMs, BEYOND20 gibt 20 %. Yesims TEE20 gibt 20 % nur auf den ersten Kauf."}
+        "acceptedAnswer":{"@type":"Answer","text":"Nomads TRAVELESIMEXPERT gibt 20 % nur auf Global-Tarife, REG3 gibt 3 USD Rabatt auf jede eSIM. Yesims TEE20 gibt 20 % nur auf den ersten Kauf."}
       }
     ]
   }
