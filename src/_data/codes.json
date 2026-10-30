@@ -120,10 +120,10 @@
       {
         "code": "NEWTOAIRALO15",
         "discount": "15% OFF FIRST ESIM PURCHASE",
-        "description": "15% discount for new Airalo users",
+        "description": "15% discount on eSIMs for new Airalo customers at airalo.com. Confirmed as Airalo's official affiliate-program new-customer code in its November 2026 affiliate update, valid 1 July to 31 December 2026.",
         "verified": true,
-        "lastTested": "2026-09-27",
-        "expiryDate": null,
+        "lastTested": "2026-10-30",
+        "expiryDate": "2026-12-31",
         "isPrimary": true,
         "type": "public"
       },

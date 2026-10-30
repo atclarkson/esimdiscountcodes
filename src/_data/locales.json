@@ -22,5 +22,13 @@
     "ogLocale": "es_ES",
     "prefix": "es",
     "default": false
+  },
+  {
+    "code": "fr",
+    "hreflang": "fr",
+    "label": "Français",
+    "ogLocale": "fr_FR",
+    "prefix": "fr",
+    "default": false
   }
 ]

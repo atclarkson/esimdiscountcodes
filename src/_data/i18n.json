@@ -55,5 +55,24 @@
     "footer.rightsReserved": "Todos los derechos reservados.",
     "meta.home": "Inicio",
     "meta.discountCodesSuffix": "Códigos de descuento"
+  },
+  "fr": {
+    "header.toggleNav": "Afficher ou masquer la navigation",
+    "header.moreProviders": "Plus d'opérateurs",
+    "header.language": "Langue",
+    "header.guides": "Guides",
+    "header.compare": "Comparer",
+    "header.findACode": "Trouver un code",
+    "footer.providers": "Opérateurs eSIM",
+    "footer.codesSuffix": "Codes promo",
+    "footer.about": "À propos",
+    "footer.resources": "Ressources",
+    "footer.compareProviders": "Comparer les opérateurs",
+    "footer.viewAllComparisons": "Voir toutes les comparaisons →",
+    "footer.disclosure": "Certains codes et liens de ce site sont des codes d'affiliation, dont le nôtre (ADAMANDLINDS, le cas échéant). Nous pouvons toucher une commission si vous en utilisez un, sans frais supplémentaires pour vous. Nous affichons notre propre code plus en évidence, pas parce que c'est automatiquement la meilleure offre.",
+    "footer.fullBreakdown": "Détail complet →",
+    "footer.rightsReserved": "Tous droits réservés.",
+    "meta.home": "Accueil",
+    "meta.discountCodesSuffix": "Codes promo"
   }
 }

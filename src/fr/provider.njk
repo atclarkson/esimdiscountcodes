@@ -1,0 +1,209 @@
+---
+layout: base.njk
+pagination:
+  data: frProviderEntries
+  size: 1
+  alias: providerEntry
+  addAllPagesToCollections: true
+permalink: "/fr/{{ providerEntry[0] }}/"
+eleventyComputed:
+  title: "{% set frO = codesFr[providerEntry[0]] %}{% if providerEntry[1].primaryCode %}Code promo {{ providerEntry[1].name }} : {{ providerEntry[1].primaryCode }} pour {{ (frO.codes[providerEntry[1].primaryCode].discount if (frO and frO.codes and frO.codes[providerEntry[1].primaryCode])) or providerEntry[1].codes[0].discount }} ({{ buildTime | fmtDate('LLLL yyyy', 'fr') }}){% else %}Code promo et coupon {{ providerEntry[1].name }} - Vérifié en {{ buildTime | fmtDate('LLLL yyyy', 'fr') }}{% endif %}"
+  description: "{% set frO = codesFr[providerEntry[0]] %}{% if providerEntry[1].primaryCode %}Code promo {{ providerEntry[1].name }} {{ providerEntry[1].primaryCode }} : {{ (frO.codes[providerEntry[1].primaryCode].discount if (frO and frO.codes and frO.codes[providerEntry[1].primaryCode])) or providerEntry[1].codes[0].discount }}. Vérifié le {{ buildTime | fmtDate('d LLLL yyyy', 'fr') }}. Tous les codes {{ providerEntry[1].name }} qui fonctionnent, le meilleur en premier.{% else %}Nous n'avons pas encore trouvé de code promo {{ providerEntry[1].name }} vérifié - à jour au {{ buildTime | fmtDate('d LLLL yyyy', 'fr') }}. {{ (frO.description if frO) or providerEntry[1].description }}{% endif %}"
+  canonical: "{{ page.url | url | absoluteUrl(site.url) }}"
+  providerKey: "{{ providerEntry[0] }}"
+  provider: "{{ providerEntry[1] }}"
+  providerName: "{{ providerEntry[1].name }}"
+  ogImage: "{{ providerEntry[1].ogImage or '/assets/og-image.jpg' }}"
+  ogLocale: "fr_FR"
+  modifiedISO: "{{ (providerEntry[1].codesLastUpdated or buildTime) | fmtISO }}"
+  buildPretty: "{{ buildTime | fmtDate('LLLL d, yyyy') }}"
+  renderFaq: true
+  translationKey: "provider:{{ providerEntry[0] }}"
+  locale: "fr"
+---
+
+{% set providerKey = providerEntry[0] %}
+{% set provider = providerEntry[1] %}
+{% set buildPretty = buildTime | fmtDate("d 'de' LLLL 'de' yyyy") %}
+{% set buildMonthYear = buildTime | fmtDate("LLLL yyyy") %}
+{% set lastModISO = (provider.codesLastUpdated or buildTime) | fmtISO %}
+{% set locale = "fr" %}
+{# Spanish text overrides for this provider's discount/description fields,
+   from src/_data/codesFr.json - codes.json itself stays English-only and
+   untouched. Falls back to the English text for any code not yet
+   overridden here, so a partially-translated provider never renders
+   blank. #}
+{% set frOverride = codesFr[providerKey] %}
+{% set providerDescription = (frOverride.description if frOverride) or provider.description %}
+{% set hasContent = providerKey | hasContentFile("fr") %}
+
+
+<div class="provider-page" data-provider="{{ providerKey }}">
+    <!-- Breadcrumbs for SEO and UX -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="{{ 'fr' | homeUrl }}">Accueil</a></li>
+            <li><span aria-current="page">Codes promo {{ provider.name }}</span></li>
+        </ol>
+    </nav>
+
+    <!-- Provider Header with Logo (for all pages) -->
+    <header class="provider-header">
+        <div class="provider-logo">
+            {% if provider.logo %}
+                <img src="{{ provider.logo }}" alt="Logo de {{ provider.name }}" class="logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="logo-fallback" style="display: none;">{{ provider.name }}</div>
+            {% else %}
+                <div class="logo-fallback">{{ provider.name }}</div>
+            {% endif %}
+        </div>
+        <h1>Codes promo {{ provider.name }}</h1>
+        <p class="subtitle">{{ providerDescription }}</p>
+    </header>
+
+    {% if provider.codes and provider.codes.length > 0 %}
+        <!-- Has Codes -->
+        <section class="codes-section">
+            <h2>Les meilleurs codes promo {{ provider.name }}</h2>
+
+
+           {% set outUrl = provider.affiliateUrl or provider.url %}
+           {% set isAffiliateOut = provider.affiliateUrl and outUrl == provider.affiliateUrl %}
+           {% for code in provider.codes | sortedCodes %}
+  {% set isInvalid = code.isInvalid or false %}
+  {% set verifiedISO = (code.lastTested or provider.codesLastUpdated or buildTime) | fmtISO %}
+  {% set verifiedPretty = (code.lastTested or provider.codesLastUpdated or buildTime) | fmtDate("d 'de' LLLL 'de' yyyy") %}
+  {% set frCode = frOverride.codes[code.code] if (frOverride and frOverride.codes and frOverride.codes[code.code]) else null %}
+  {% set codeDiscount = (frCode.discount if frCode) or code.discount %}
+  {% set codeDescription = (frCode.description if frCode) or code.description %}
+
+  <div class="coupon-card {% if code.isPrimary and not isInvalid %}primary-code{% endif %} {% if isInvalid %}invalid-code{% endif %}">
+    <div class="coupon-header">
+      <h3>
+        {% if isInvalid %}<s>{{ codeDiscount }}</s>{% else %}{{ codeDiscount }}{% endif %}
+      </h3>
+      {% if code.type == "affiliate" and not isInvalid %}
+      <span class="our-code-badge">
+        <i class="fas fa-star"></i> Notre code
+      </span>
+      {% endif %}
+      {% if code.verified and not isInvalid %}
+      <span class="verified-badge">
+        <i class="fas fa-circle-check" style="color:#4D8374;"></i>
+        <time datetime="{{ verifiedISO }}">Confirmé actif le {{ verifiedPretty }}</time>
+      </span>
+      {% elif isInvalid %}
+      <span class="invalid-badge">
+        <i class="fas fa-circle-xmark" style="color:#79252F;"></i>
+        <span>Ne fonctionne plus</span>
+      </span>
+      {% endif %}
+    </div>
+
+    <div class="coupon-code">
+      <button class="copy-code-btn {% if isInvalid %}invalid-btn{% endif %}"
+              data-code="{{ code.code }}"
+              {% if isInvalid %}disabled{% endif %}>
+        <i class="fas fa-{% if isInvalid %}times{% else %}copy{% endif %}"></i>
+        <span class="code-text {% if isInvalid %}strikethrough{% endif %}">{{ code.code }}</span>
+        <span class="copy-label">{% if isInvalid %}Invalide{% else %}Copier le code{% endif %}</span>
+      </button>
+      {% if outUrl %}
+      <a class="get-deal-btn"
+         href="{{ outUrl }}"
+         target="_blank"
+         rel="{% if isAffiliateOut %}sponsored noopener{% else %}noopener{% endif %}">
+        <i class="fas fa-arrow-up-right-from-square"></i>
+        <span>Aller sur {{ provider.name }}<span class="sr-only"> (ouvre le site de {{ provider.name }} dans un nouvel onglet)</span></span>
+      </a>
+      {% endif %}
+    </div>
+
+    <p class="coupon-description {% if isInvalid %}invalid-description{% endif %}">
+      {% if isInvalid %}
+        <strong>Ce code ne fonctionne plus.</strong> {{ codeDescription }}
+      {% else %}
+        {{ codeDescription }}
+      {% endif %}
+    </p>
+
+    <!-- Show proof section for all codes; hidden entirely if the image fails to load -->
+    <div class="proof-section {% if isInvalid %}invalid-proof{% endif %}">
+      <div class="proof-label {% if isInvalid %}invalid-label{% endif %}">
+        <i class="fas fa-{% if isInvalid %}times-circle{% else %}camera{% endif %}"></i>
+        {% if isInvalid %}Preuve qu'il ne fonctionne pas{% else %}Preuve qu'il fonctionne{% endif %}
+      </div>
+      <div class="proof-thumbnail {% if isInvalid %}invalid-thumbnail{% endif %}"
+           data-provider="{{ providerKey }}"
+           data-code="{{ code.code }}"
+           data-invalid="{{ isInvalid }}">
+        <img src="/assets/{{ providerKey }}/{{ code.code }}.png"
+             alt="Preuve que le code {{ provider.name }} {{ code.code }} {% if isInvalid %}ne fonctionne pas{% else %}fonctionne{% endif %}"
+             onerror="this.closest('.proof-section').style.display='none';">
+      </div>
+    </div>
+
+    <!-- Only show feedback for valid codes -->
+    {% if not isInvalid %}
+    <div class="feedback-buttons">
+      <button class="feedback-btn thumbs-up" data-feedback="up">
+        <i class="fas fa-thumbs-up"></i>
+      </button>
+      <button class="feedback-btn thumbs-down" data-feedback="down">
+        <i class="fas fa-thumbs-down"></i>
+      </button>
+    </div>
+    {% endif %}
+  </div>
+{% endfor %}
+
+        </section>
+{# Affiliate disclosure #}
+<section class="code-disclosure">
+  <p>
+    <i class="fas fa-circle-info"></i>
+    Information : certains codes de cette page sont des codes et liens d'affiliation, dont le nôtre (<strong>ADAMANDLINDS</strong>, le cas échéant). Si vous en utilisez un, nous pouvons toucher une commission. Nous affichons notre propre code en premier parce que c'est le nôtre, pas parce que c'est automatiquement la meilleure offre. Nous avons confirmé que chaque code ici est toujours actif, mais parcourez la liste avant de copier : un code public plus bas pourrait vous faire économiser davantage. Consultez notre <a href="/about/">page À propos</a> (en anglais) pour le détail complet.
+  </p>
+</section>
+    {% endif %}
+
+    {% if hasContent %}
+        <!-- Content Section (real French article, shown even for a provider with no working code right now) -->
+        <section class="content-section">
+            {% include "content/fr/" + providerKey + ".njk" %}
+        </section>
+
+    {% elif not (provider.codes and provider.codes.length > 0) %}
+        <!-- No code and no article yet, but still send the click somewhere -->
+        {% set outUrl = provider.affiliateUrl or provider.url %}
+        {% set isAffiliateOut = provider.affiliateUrl and outUrl == provider.affiliateUrl %}
+        <section class="coming-soon-section">
+            <div class="coming-soon-content">
+                <h2>Pas encore de code promo</h2>
+                <p>Nous n'avons pas encore trouvé de code promo {{ provider.name }} qui fonctionne. Ils proposent parfois leurs propres offres, alors cela vaut la peine de regarder au moment du paiement.</p>
+
+                {% if outUrl %}
+                <a class="get-deal-btn coming-soon-shop-btn"
+                   href="{{ outUrl }}"
+                   target="_blank"
+                   rel="{% if isAffiliateOut %}sponsored noopener{% else %}noopener{% endif %}">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                    <span>Voir les réductions chez {{ provider.name }}<span class="sr-only"> (ouvre le site de {{ provider.name }} dans un nouvel onglet)</span></span>
+                </a>
+                {% if isAffiliateOut %}
+                <p class="coming-soon-disclosure">Ceci est notre lien d'affiliation. Nous pouvons toucher une commission si vous achetez via ce lien, sans frais supplémentaires pour vous.</p>
+                {% endif %}
+                {% endif %}
+            </div>
+        </section>
+    {% endif %}
+</div>
+
+<!-- Modal for enlarged proof image -->
+<div class="proof-modal" id="proofModal">
+  <div class="proof-modal-content">
+    <button class="modal-close" aria-label="Fermer" onclick="closeProofModal()">&times;</button>
+    <h3 class="modal-title" id="modalTitle">Capture d'écran</h3>
+    <img id="modalImage" src="" alt="">
+  </div>
+</div>

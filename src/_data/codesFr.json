@@ -1,0 +1,15 @@
+{
+  "bnesim": {
+    "description": "Forfaits eSIM abordables dans le monde entier",
+    "codes": {}
+  },
+  "orange": {
+    "description": "Forfaits eSIM européens",
+    "codes": {
+      "AW0": {
+        "discount": "5 % DE RÉDUCTION",
+        "description": "Nous avons vérifié directement la boutique d'Orange Travel (travel.orange.com) et n'avons trouvé aucun champ de code promo ni système de réduction par code au paiement ; ses réductions sont des prix barrés automatiques sur les plus gros forfaits (elle annonce actuellement jusqu'à 50 % de réduction comme offre temporaire, sans code). Nous n'avons pas trouvé AW0 annoncé ni fonctionnel sur le vrai site, nous l'avons donc marqué comme invalide."
+      }
+    }
+  }
+}
