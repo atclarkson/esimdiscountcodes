@@ -462,5 +462,13 @@
     "title": "Instabridge vs Nomad: Free-WiFi Backup or Dedicated Travel eSIM? (2026 Comparison)",
     "description": "Instabridge vs Nomad compared: Instabridge's small, cheap data plans on top of a free WiFi app versus Nomad's free 1GB trial, 24/7 live chat and year-long Global-EX bundles, discount codes, and which fits your trip.",
     "lastUpdated": "2026-10-27"
+  },
+  {
+    "slug": "bnesim-vs-yesim",
+    "providerA": "bnesim",
+    "providerB": "yesim",
+    "title": "BNEsim vs Yesim: Fixed No-Expiry Packs or a Rolling Balance? (2026 Comparison)",
+    "description": "BNEsim vs Yesim compared: BNEsim's per-country packs with an optional no-expiration tier versus Yesim's Pay & Fly rolling balance, refunds, discount codes, and which fits your trips.",
+    "lastUpdated": "2026-10-31"
   }
 ]

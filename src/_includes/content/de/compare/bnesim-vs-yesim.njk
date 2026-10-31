@@ -1,0 +1,134 @@
+<!-- BNEsim vs Yesim Vergleich (Deutsch) -->
+<div class="content-section">
+
+  {% set deB = codesDe[providerBKey] %}
+  {% set yesimEn = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set yesimDe = deB.codes[providerB.primaryCode] if (deB and deB.codes and deB.codes[providerB.primaryCode]) else null %}
+  {% set yesimDiscount = (yesimDe.discount if yesimDe) or yesimEn.discount %}
+
+  <div class="content-callout">
+    <h2>Die kurze Antwort</h2>
+    <p>
+      Wähle <strong>BNEsim</strong>, wenn du weißt, in welche Länder du reist, aber nicht wann, und ein festes Paket willst, das bereitliegt, ohne dass eine Frist läuft (die Version ohne Ablauf kostet mehr). Wähle <strong>Yesim</strong>, wenn du lieber ein Pay-as-you-go-Guthaben über mehrere Reisen behältst und einen Code willst, der heute funktioniert. Beide versuchen, ablaufende Daten zu verhindern, aber BNEsim pro Länderpaket und Yesim mit einem rollenden Guthaben.
+    </p>
+  </div>
+
+  <h2>Der Kernunterschied: Feste Pakete oder rollendes Guthaben</h2>
+  <p>
+    BNEsim verkauft Daten-Pakete pro Land und Region. Die meisten gibt es in zwei Versionen: eine günstigere, die 30 Tage nach dem Kauf abläuft, und eine teurere Version desselben Pakets ohne Ablauf. Kaufst du die zweite für ein Land, liegt sie auf deinem Konto, bis du landest. Du kannst einen Tarif auch auf ein zukünftiges Datum vorplanen, statt ihn im Moment des Kaufs zu starten.
+  </p>
+  <p>
+    Yesims "Pay &amp; Fly" funktioniert wie ein Prepaid-Guthaben. Du kaufst Daten in Dollar statt in Gigabyte, ab 1,10 $/GB laut Yesims eigener Seite, und die Seite sagt, du kannst ungenutztes Guthaben für die nächste Reise behalten. Eine Ablaufregel für dieses Guthaben nennt sie nicht, prüfe also die Bedingungen, bevor du einen großen Betrag lädst. Yesim verkauft außerdem normale tagesbasierte und GB-basierte Länder-Tarife, du bist also nicht an das Guthabenmodell gebunden.
+  </p>
+
+  <h2>Überblick</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>BNEsim</th>
+          <th>Yesim</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Preismodell</td><td>Pakete pro Land und Region, 30 Tage oder ohne Ablauf</td><td>Tages- und GB-Tarife, dazu ein Pay-&amp;-Fly-Guthaben ab 1,10 $/GB</td></tr>
+        <tr><td>Rabatte</td><td>Bis zu 70% als Verkaufspreis, kein Code</td><td>Öffentliche Codes an der Kasse</td></tr>
+        <tr><td>Rückerstattung</td><td>Hier nicht abgedeckt</td><td>Ungenutzte Tarife und Aufladungen binnen 30 Tagen nach Kauf erstattbar</td></tr>
+        <tr><td>Hotspot</td><td>Hier nicht abgedeckt</td><td>Standardmäßig an, getetherte Daten zählen zum Tarif</td></tr>
+        <tr><td>Zahlung</td><td>Breiter als bei den meisten, inklusive Krypto</td><td>Karten, Apple Pay, Google Pay, PayPal und weitere</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Yesims Angaben zu Rückerstattung, Hotspot und Zahlung stammen von Yesims eigener Website im Oktober 2026. Wo "hier nicht abgedeckt" steht, haben wir es auf BNEsims öffentlichen Seiten nicht gefunden und raten deshalb nicht.</p>
+  </div>
+
+  <h2>Rabattcodes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>BNEsim:</strong> Kein Code nötig. Rabatte von bis zu 70% erscheinen automatisch als durchgestrichener Verkaufspreis auf BNEsims eigenen Preisseiten. <a href="{{ providerAUrl }}">Alle Details &rarr;</a></li>
+      <li><strong>Yesim:</strong> {{ providerB.primaryCode }}, {{ yesimDiscount | lower }}. Es ist ein öffentlicher Code, keiner von uns. <a href="{{ providerBUrl }}">Vollständige Codeliste &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Auf BNEsims echter Website haben wir keinen beworbenen Rabattcode gefunden, es gibt also nichts, womit man einen Code vergleichen könnte. Vergleiche BNEsims Verkaufspreis mit Yesims Preis nach Code, nicht die Listenpreise.</p>
+  </div>
+
+  <h2>Ist BNEsim oder Yesim die richtige Wahl</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Nimm BNEsim, wenn&hellip;</h3>
+      <ul>
+        <li>Du unregelmäßig dasselbe Land oder zwei bereist und willst, dass die Daten auf dich warten</li>
+        <li>Du mit Krypto zahlen oder einen Tarif auf ein zukünftiges Datum vorplanen willst</li>
+        <li>Du einen bereits angewandten Verkaufspreis der Codesuche vorziehst</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Nimm Yesim, wenn&hellip;</h3>
+      <ul>
+        <li>Du oft fliegst und ein Guthaben willst, das du Reise für Reise in der App auflädst</li>
+        <li>Du eine Rückerstattungsoption willst, falls du vorab kaufst und den Tarif nicht nutzt</li>
+        <li>Du einen Code willst, den du heute nutzen kannst</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Zwei Dinge, die du vor der Entscheidung wissen solltest</h2>
+  <p>
+    <strong>Keiner von beiden ist auf dem Papier der günstigste.</strong> Yesim liegt bei den tagesbasierten Tarifen im teuren Bereich, und BNEsims Version ohne Ablauf kostet mehr als die 30-Tage-Version. Brauchst du nur die Daten für eine Reise, sind <a href="/de/airhub/">Airhub</a> oder <a href="/de/holafly/">Holafly</a> meist der günstigere Ausgangspunkt.
+  </p>
+  <p>
+    <strong>Yesim-Tarife sind reine Datentarife.</strong> Es gibt keine Telefonnummer, Anrufe und Nachrichten laufen also über Apps wie WhatsApp. Wenn du Anrufe und SMS für Europa inklusive willst, schau dir stattdessen <a href="/de/orange/">Orange Travel</a> an.
+  </p>
+  <p>
+    Für Geräte-Einrichtung und eSIM-Grundlagen, die für beide Anbieter gelten, siehe unsere <a href="/compatible-devices/">Übersicht kompatibler eSIM-Geräte</a>.
+  </p>
+
+  <h2>BNEsim vs Yesim FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Was ist günstiger, BNEsim oder Yesim</h3>
+      <p>Das hängt vom Ziel und vom Paket ab. BNEsim zeigt seinen Rabatt als Verkaufspreis (bis zu 70%), während Yesim Pay &amp; Fly ab 1,10 $/GB anbietet und öffentliche Codes hat. Vergleiche den Endpreis für dein genaues Land, bevor du kaufst.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Laufen die Daten von BNEsim oder Yesim ab</h3>
+      <p>BNEsims Standardpakete laufen 30 Tage nach dem Kauf ab, für die meisten gibt es eine teurere Version ohne Ablauf. Yesim sagt, ungenutztes Pay-&amp;-Fly-Guthaben lässt sich für die nächste Reise behalten, nennt aber auf seiner Seite keine Ablaufregel.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Kann ich bei einem der beiden Geld zurückbekommen</h3>
+      <p>Yesim erstattet ungenutzte Tarife und Aufladungen binnen 30 Tagen nach dem Kauf; genutzte oder abgelaufene Tarife sind in der Regel nicht erstattbar. Eine vergleichbare Regel haben wir auf BNEsims öffentlichen Seiten nicht gefunden, lies also die Bedingungen vor dem Kauf.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Haben BNEsim oder Yesim einen Rabattcode</h3>
+      <p>Yesim ja: {{ providerB.primaryCode }}, {{ yesimDiscount | lower }}. BNEsim bewirbt keinen; die Rabatte sind bereits als Verkaufspreis angewendet.</p>
+    </div>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Was ist günstiger, BNEsim oder Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Das hängt vom Ziel und vom Paket ab. BNEsim zeigt seinen Rabatt als Verkaufspreis (bis zu 70%), während Yesim Pay & Fly ab 1,10 $/GB anbietet und öffentliche Codes hat. Vergleiche den Endpreis für dein genaues Land, bevor du kaufst."}
+      },
+      {
+        "@type":"Question",
+        "name":"Laufen die Daten von BNEsim oder Yesim ab?",
+        "acceptedAnswer":{"@type":"Answer","text":"BNEsims Standardpakete laufen 30 Tage nach dem Kauf ab, für die meisten gibt es eine teurere Version ohne Ablauf. Yesim sagt, ungenutztes Pay-&-Fly-Guthaben lässt sich für die nächste Reise behalten, nennt aber auf seiner Seite keine Ablaufregel."}
+      },
+      {
+        "@type":"Question",
+        "name":"Kann ich bei BNEsim oder Yesim Geld zurückbekommen?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim erstattet ungenutzte Tarife und Aufladungen binnen 30 Tagen nach dem Kauf; genutzte oder abgelaufene Tarife sind in der Regel nicht erstattbar. Eine vergleichbare Regel wurde auf BNEsims öffentlichen Seiten nicht gefunden."}
+      },
+      {
+        "@type":"Question",
+        "name":"Haben BNEsim oder Yesim einen Rabattcode?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim hat öffentliche Codes. BNEsim bewirbt keinen; die Rabatte sind bereits als Verkaufspreis angewendet."}
+      }
+    ]
+  }
+  </script>
+</div>

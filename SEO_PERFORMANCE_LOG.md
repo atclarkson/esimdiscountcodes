@@ -9,3 +9,5 @@
 - Countries: UK 987 impressions, Spain 493, US 221, Germany 170 (2 clicks), France 47 impressions (1 click, position 33.5), Italy 18.
 - Devices: mobile 1,676 impressions (position 70.7), desktop 801 (position 52.8).
 - Read: small-provider and German pages are the only ones getting clicks. France already shows 47 impressions at position 33.5 with no French pages, which supports adding French.
+
+(2026-10-31 run: no new Search Console data supplied. Internal links between the ranking pages /bnesim/, /orange/ and the buried /airalo/, /yesim/, /nomad/, /ubigi/ were already in place in both directions; only a new BNEsim vs Yesim comparison link was added on the BNEsim and Yesim articles.)

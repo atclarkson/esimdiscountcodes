@@ -1,0 +1,134 @@
+<!-- BNEsim vs Yesim Comparativa (Español) -->
+<div class="content-section">
+
+  {% set esB = codesEs[providerBKey] %}
+  {% set yesimEn = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set yesimEs = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set yesimDiscount = (yesimEs.discount if yesimEs) or yesimEn.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>BNEsim</strong> si sabes a qué países vas pero no cuándo, y quieres un paquete fijo que espere sin que corra un plazo (la versión sin caducidad cuesta más). Elige <strong>Yesim</strong> si prefieres mantener un saldo de pago por uso a lo largo de varios viajes y quieres un código que funcione hoy. Los dos intentan evitar que los datos caduquen antes de usarlos, pero BNEsim lo hace por paquete de país y Yesim con un saldo acumulable.
+    </p>
+  </div>
+
+  <h2>La diferencia clave: paquetes fijos o saldo acumulable</h2>
+  <p>
+    BNEsim vende paquetes de datos por país y por región. La mayoría vienen en dos versiones: una más barata que caduca 30 días después de la compra y una versión más cara del mismo paquete sin caducidad. Si compras la segunda para un país, queda en tu cuenta hasta que aterrices. También puedes programar un plan para que empiece en una fecha futura en lugar de en el momento de la compra.
+  </p>
+  <p>
+    El "Pay &amp; Fly" de Yesim funciona como un saldo prepago. Compras datos en dólares en lugar de gigas, desde 1,10 $/GB según la propia página de Yesim, y la página dice que puedes guardar el saldo sin usar para el próximo viaje. No indica ninguna regla de caducidad para ese saldo, así que revisa las condiciones antes de cargar una cantidad grande. Yesim también vende planes normales por día y por GB para cada país, así que no estás obligado a usar el modelo de saldo.
+  </p>
+
+  <h2>Resumen</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>BNEsim</th>
+          <th>Yesim</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Modelo de precios</td><td>Paquetes por país y región, de 30 días o sin caducidad</td><td>Planes por día y por GB, más un saldo Pay &amp; Fly desde 1,10 $/GB</td></tr>
+        <tr><td>Descuentos</td><td>Hasta 70% como precio rebajado, sin código</td><td>Códigos públicos en el pago</td></tr>
+        <tr><td>Reembolsos</td><td>No cubierto aquí</td><td>Planes y recargas sin usar reembolsables dentro de los 30 días de la compra</td></tr>
+        <tr><td>Hotspot</td><td>No cubierto aquí</td><td>Activado por defecto, los datos compartidos cuentan contra tu plan</td></tr>
+        <tr><td>Pago</td><td>Más amplio que la mayoría, incluido cripto</td><td>Tarjetas, Apple Pay, Google Pay, PayPal y otros</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Los datos de reembolso, hotspot y pago de Yesim vienen del propio sitio de Yesim en octubre de 2026. Donde dice "no cubierto aquí", no lo encontramos en las páginas públicas de BNEsim, así que no lo adivinamos.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>BNEsim:</strong> No hay código que aplicar. Los descuentos de hasta 70% aparecen automáticamente como precio tachado en las páginas de precios de BNEsim. <a href="{{ providerAUrl }}">Todos los detalles &rarr;</a></li>
+      <li><strong>Yesim:</strong> {{ providerB.primaryCode }}, {{ yesimDiscount | lower }}. Es un código público, no uno nuestro. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">No encontramos ningún código promocional anunciado en el sitio real de BNEsim, así que no hay un código con el que comparar. Compara el precio rebajado de BNEsim con el precio de Yesim tras su código, no los precios de lista.</p>
+  </div>
+
+  <h2>¿Es BNEsim o Yesim la mejor opción?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige BNEsim si&hellip;</h3>
+      <ul>
+        <li>Vuelves a uno o dos países con un calendario irregular y quieres que los datos te esperen</li>
+        <li>Quieres pagar con cripto o programar un plan para una fecha futura</li>
+        <li>Prefieres un precio rebajado ya aplicado a buscar un código</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige Yesim si&hellip;</h3>
+      <ul>
+        <li>Vuelas a menudo y quieres un saldo que recargas en la app viaje tras viaje</li>
+        <li>Quieres la opción de un reembolso si compras con antelación y no usas el plan</li>
+        <li>Quieres un código que puedas usar hoy</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>Ninguno es el más barato sobre el papel.</strong> Yesim está en el tramo caro en planes por día, y la versión sin caducidad de BNEsim cuesta más que la de 30 días. Si solo necesitas datos para un viaje, <a href="/es/airhub/">Airhub</a> o <a href="/es/holafly/">Holafly</a> suelen ser el punto de partida más barato.
+  </p>
+  <p>
+    <strong>Los planes de Yesim son solo de datos.</strong> No incluyen número de teléfono, así que las llamadas y los mensajes van por apps como WhatsApp. Si quieres llamadas y SMS incluidos para Europa, mira <a href="/es/orange/">Orange Travel</a>.
+  </p>
+  <p>
+    Para la configuración del dispositivo y los conceptos básicos de eSIM que valen para ambos, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a>.
+  </p>
+
+  <h2>BNEsim vs Yesim: preguntas frecuentes</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Cuál es más barato, BNEsim o Yesim?</h3>
+      <p>Depende del destino y del paquete. BNEsim muestra su descuento como precio rebajado (hasta 70%), mientras que Yesim empieza Pay &amp; Fly en 1,10 $/GB y tiene códigos públicos. Compara el precio final para tu país exacto antes de comprar.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Caducan los datos de BNEsim o Yesim?</h3>
+      <p>Los paquetes estándar de BNEsim caducan 30 días después de la compra, y para la mayoría hay una versión más cara sin caducidad. Yesim dice que el saldo Pay &amp; Fly sin usar se puede guardar para el próximo viaje, pero no indica una regla de caducidad en su página.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo conseguir un reembolso en alguno de los dos?</h3>
+      <p>Yesim reembolsa planes y recargas sin usar dentro de los 30 días de la compra; los planes usados o caducados en general no se reembolsan. No encontramos una política comparable en las páginas públicas de BNEsim, así que lee sus condiciones antes de comprar.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Tienen BNEsim o Yesim un código de descuento?</h3>
+      <p>Yesim sí: {{ providerB.primaryCode }}, {{ yesimDiscount | lower }}. BNEsim no anuncia ninguno; sus descuentos ya están aplicados como precio rebajado.</p>
+    </div>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Cuál es más barato, BNEsim o Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Depende del destino y del paquete. BNEsim muestra su descuento como precio rebajado (hasta 70%), mientras que Yesim empieza Pay & Fly en 1,10 $/GB y tiene códigos públicos. Compara el precio final para tu país exacto antes de comprar."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Caducan los datos de BNEsim o Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Los paquetes estándar de BNEsim caducan 30 días después de la compra, y para la mayoría hay una versión más cara sin caducidad. Yesim dice que el saldo Pay & Fly sin usar se puede guardar para el próximo viaje, pero no indica una regla de caducidad en su página."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Puedo conseguir un reembolso en BNEsim o Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim reembolsa planes y recargas sin usar dentro de los 30 días de la compra; los planes usados o caducados en general no se reembolsan. No se encontró una política comparable en las páginas públicas de BNEsim."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Tienen BNEsim o Yesim un código de descuento?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim tiene códigos públicos. BNEsim no anuncia ninguno; sus descuentos ya están aplicados como precio rebajado."}
+      }
+    ]
+  }
+  </script>
+</div>
