@@ -11,3 +11,5 @@
 - Read: small-provider and German pages are the only ones getting clicks. France already shows 47 impressions at position 33.5 with no French pages, which supports adding French.
 
 (2026-10-31 run: no new Search Console data supplied. Internal links between the ranking pages /bnesim/, /orange/ and the buried /airalo/, /yesim/, /nomad/, /ubigi/ were already in place in both directions; only a new BNEsim vs Yesim comparison link was added on the BNEsim and Yesim articles.)
+
+(2026-11-02 run: no new Search Console data supplied. Added honest cross-links between the buried /airalo/ and /yesim/ pages in EN/DE/ES decision grids: Airalo points to Yesim for people who want a rolling dollar balance, Yesim points to Airalo for people who prefer a fixed per-GB plan.)
