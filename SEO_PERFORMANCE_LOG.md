@@ -15,3 +15,5 @@
 (2026-11-02 run: no new Search Console data supplied. Added honest cross-links between the buried /airalo/ and /yesim/ pages in EN/DE/ES decision grids: Airalo points to Yesim for people who want a rolling dollar balance, Yesim points to Airalo for people who prefer a fixed per-GB plan.)
 
 (2026-11-02 second run: no new Search Console data supplied. Added honest cross-links between the buried /ubigi/ and /nomad/ pages in EN/DE/ES decision grids, pointing at the existing Nomad vs Ubigi comparison: Ubigi points to Nomad for people who want to skip a recurring commitment, Nomad points to Ubigi for people who keep returning to one country.)
+
+(2026-11-03 run: no new Search Console data supplied. Internal links between the ranking pages /bnesim/, /orange/ and the buried /airalo/, /yesim/, /nomad/, /ubigi/ already exist in both directions in the EN/DE/ES decision grids, so no further links were added; adding more would be link stuffing rather than honest alternatives.)
