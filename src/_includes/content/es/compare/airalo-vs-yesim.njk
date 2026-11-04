@@ -1,0 +1,139 @@
+<!-- Airalo vs Yesim Comparación (Español) -->
+<div class="content-section">
+
+  {% set airaloEn = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set yesimEn = providerB.codes | findCode(providerB.primaryCode) %}
+  {% set esA = codesEs[providerAKey] %}
+  {% set esB = codesEs[providerBKey] %}
+  {% set airaloEs = esA.codes[providerA.primaryCode] if (esA and esA.codes and esA.codes[providerA.primaryCode]) else null %}
+  {% set yesimEs = esB.codes[providerB.primaryCode] if (esB and esB.codes and esB.codes[providerB.primaryCode]) else null %}
+  {% set airaloDiscount = (airaloEs.discount if airaloEs) or airaloEn.discount %}
+  {% set yesimDiscount = (yesimEs.discount if yesimEs) or yesimEn.discount %}
+
+  <div class="content-callout">
+    <h2>La respuesta corta</h2>
+    <p>
+      Elige <strong>Airalo</strong> si quieres un plan fijo por gigabyte para un viaje cuyo consumo ya puedes calcular, normalmente con un precio de lista más bajo. Elige <strong>Yesim</strong> si vuelas a menudo y prefieres mantener un único saldo en dólares que se conserva entre viajes, y valoras una ventana de reembolso de 30 días para los planes sin usar. Ninguno es la opción más barata del mercado, así que revisa el precio final para tu destino antes de comprar.
+    </p>
+  </div>
+
+  <h2>La diferencia clave: un plan fijo o un saldo que se acumula</h2>
+  <p>
+    Airalo vende datos por gigabyte. Eliges un plan por país, región o global con una cantidad fija de datos y un periodo de validez (normalmente de 7 a 30 días tras la activación). La eSIM en sí no caduca antes de activarla, así que puedes comprarla antes del viaje. Cuando se acaba el periodo o los datos, el plan termina.
+  </p>
+  <p>
+    "Pay &amp; Fly" de Yesim funciona más como un saldo prepago. Compras datos en dólares en lugar de gigabytes, desde 1,10 $/GB según la propia página de Yesim, y el saldo sin usar se conserva para tu próximo viaje en lugar de caducar al volver a casa. Yesim también vende planes normales por día y por GB en cada país, así que el modelo de saldo es opcional.
+  </p>
+
+  <h2>Resumen</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Airalo</th>
+          <th>Yesim</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Modelo de precio</td><td>Planes fijos por GB por país, región o global</td><td>Planes por día y por GB, más un saldo Pay &amp; Fly desde 1,10 $/GB</td></tr>
+        <tr><td>Precio de ejemplo</td><td>Estados Unidos 1GB a 4,50 $</td><td>Estados Unidos 1 día a 8,40 $ (antes de cualquier código)</td></tr>
+        <tr><td>Ilimitado</td><td>Planes ilimitados regionales: velocidad completa durante los primeros 3GB de cada día, luego 1Mbps hasta medianoche</td><td>No tratado aquí</td></tr>
+        <tr><td>Reembolsos</td><td>No tratado aquí</td><td>Planes sin usar reembolsables dentro de los 30 días posteriores a la compra</td></tr>
+        <tr><td>Punto de acceso</td><td>Compatible en los planes de Airalo en general</td><td>Activado por defecto, los datos compartidos cuentan contra tu plan</td></tr>
+        <tr><td>Número de teléfono</td><td>Solo datos, como la mayoría de las eSIM de este sitio</td><td>Solo datos, las llamadas van por apps como WhatsApp</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Los precios y detalles de los planes proceden de los sitios de cada proveedor y de nuestros artículos en noviembre de 2026 y cambian a menudo. Donde pone "no tratado aquí", no encontramos el dato con claridad suficiente para repetirlo, así que no adivinamos.</p>
+  </div>
+
+  <h2>Códigos de descuento</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airalo:</strong> {{ providerA.primaryCode }}, {{ airaloDiscount | lower }}. Es el código oficial para nuevos clientes que Airalo da a sus afiliados, no uno nuestro. <a href="{{ providerAUrl }}">Lista completa de códigos &rarr;</a></li>
+      <li><strong>Yesim:</strong> {{ providerB.primaryCode }}, {{ yesimDiscount | lower }}. Es un código público, no uno nuestro. <a href="{{ providerBUrl }}">Lista completa de códigos &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Ambos códigos están pensados para compradores nuevos. Un porcentaje de descuento sobre un plan pequeño por GB ahorra menos dólares que el mismo porcentaje sobre un paquete más grande, así que compara el precio tras el código, no el precio de lista.</p>
+  </div>
+
+  <h2>¿Es Airalo o Yesim la opción adecuada?</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Elige Airalo si&hellip;</h3>
+      <ul>
+        <li>Sabes más o menos cuántos datos necesita un solo viaje</li>
+        <li>No te importa revisar el contador de datos durante el viaje</li>
+        <li>Quieres un precio fijo por GB y un tope claro</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Elige Yesim si&hellip;</h3>
+      <ul>
+        <li>Viajas a menudo y quieres un saldo que recargas viaje tras viaje</li>
+        <li>Quieres la opción de un reembolso si compras con antelación y el plan queda sin usar</li>
+        <li>Prefieres pagar en dólares por los datos que usas en lugar de controlar una cantidad fija</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Dos cosas que conviene saber antes de decidir</h2>
+  <p>
+    <strong>Yesim es el más caro de los dos en planes por día.</strong> Yesim está en el tramo caro de este sitio, y pagas más por la ventana de reembolso y el modelo de saldo que por la tarifa más baja por GB. Si lo único que te importa es el precio por GB, <a href="/es/airhub/">Airhub</a> o <a href="/es/holafly/">Holafly</a> suelen ser un punto de partida más barato.
+  </p>
+  <p>
+    <strong>El "ilimitado" de Airalo tiene un techo diario.</strong> Los planes ilimitados regionales van a velocidad completa durante los primeros 3GB de cada día y después se reducen a 1Mbps hasta que se reinicia la cuota a medianoche. Si quieres un precio fijo para un mes de uso intenso, mira nuestra comparación <a href="/es/compare/holafly-vs-airalo/">Holafly vs Airalo</a>.
+  </p>
+  <p>
+    Para la configuración del dispositivo y los conceptos básicos de eSIM que valen para ambos, consulta nuestra guía de <a href="/compatible-devices/">dispositivos compatibles con eSIM</a>.
+  </p>
+
+  <h2>Airalo vs Yesim: preguntas frecuentes</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>¿Cuál es más barato, Airalo o Yesim?</h3>
+      <p>Para un solo viaje, los planes fijos por GB de Airalo suelen ser más baratos en precio de lista. Yesim está en el tramo caro en planes por día, aunque su saldo Pay &amp; Fly empieza en 1,10 $/GB. Compara el precio para tu país exacto tras el código.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Caducan los datos de Airalo o Yesim?</h3>
+      <p>La eSIM de Airalo no caduca antes de activarse, pero una vez activada corre la validez del plan (normalmente de 7 a 30 días). Yesim dice que el saldo Pay &amp; Fly sin usar se conserva para el próximo viaje.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Puedo conseguir un reembolso en alguno de los dos?</h3>
+      <p>Yesim anuncia una garantía de devolución de 30 días en planes sin usar. No encontramos una promesa de reembolso comparable en Airalo, así que lee sus condiciones antes de comprar.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>¿Tienen código de descuento Airalo o Yesim?</h3>
+      <p>Los dos. Airalo: {{ providerA.primaryCode }}, {{ airaloDiscount | lower }}. Yesim: {{ providerB.primaryCode }}, {{ yesimDiscount | lower }}. Ambos están pensados para compradores nuevos.</p>
+    </div>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"es",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Cuál es más barato, Airalo o Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Para un solo viaje, los planes fijos por GB de Airalo suelen ser más baratos en precio de lista. Yesim está en el tramo caro en planes por día, aunque su saldo Pay & Fly empieza en 1,10 $/GB. Compara el precio para tu país exacto tras el código."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Caducan los datos de Airalo o Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"La eSIM de Airalo no caduca antes de activarse, pero una vez activada corre la validez del plan, normalmente de 7 a 30 días. Yesim dice que el saldo Pay & Fly sin usar se conserva para el próximo viaje."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Puedo conseguir un reembolso en Airalo o Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim anuncia una garantía de devolución de 30 días en planes sin usar. No se encontró una promesa de reembolso comparable en Airalo."}
+      },
+      {
+        "@type":"Question",
+        "name":"¿Tienen código de descuento Airalo o Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Los dos. Airalo tiene NEWTOAIRALO15 y Yesim tiene TEE20, ambos para compradores nuevos."}
+      }
+    ]
+  }
+  </script>
+</div>

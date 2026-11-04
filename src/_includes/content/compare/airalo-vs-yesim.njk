@@ -1,0 +1,133 @@
+<!-- Airalo vs Yesim Comparison Content -->
+<div class="content-section">
+
+  {% set airaloBest = providerA.codes | findCode(providerA.primaryCode) %}
+  {% set yesimBest = providerB.codes | findCode(providerB.primaryCode) %}
+
+  <div class="content-callout">
+    <h2>The Short Answer</h2>
+    <p>
+      Pick <strong>Airalo</strong> if you want a fixed, per-gigabyte plan for a trip you can already size, usually at a lower sticker price. Pick <strong>Yesim</strong> if you fly often and would rather keep one dollar balance that carries over between trips, and you value a 30-day refund window on unused plans. Neither is the cheapest option on the market, so check the final price for your destination before you buy.
+    </p>
+  </div>
+
+  <h2>The Core Difference: A Fixed Plan or a Rolling Balance</h2>
+  <p>
+    Airalo sells data by the gigabyte. You choose a country, region or global plan with a set amount of data and a validity window (typically 7 to 30 days once activated). The eSIM itself does not expire before you activate it, so you can buy ahead of a trip. When the window or the data runs out, the plan is done.
+  </p>
+  <p>
+    Yesim's "Pay &amp; Fly" works more like a prepaid balance. You buy data in dollars rather than gigabytes, priced from $1.10/GB on Yesim's own page, and unused balance carries over to your next trip instead of expiring when you land back home. Yesim also sells ordinary day-based and per-GB country plans, so the balance model is optional.
+  </p>
+
+  <h2>Snapshot</h2>
+  <div class="content-box">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Airalo</th>
+          <th>Yesim</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Pricing model</td><td>Fixed per-GB plans by country, region or globally</td><td>Day-based and per-GB plans, plus a Pay &amp; Fly balance from $1.10/GB</td></tr>
+        <tr><td>Example price</td><td>United States 1GB at $4.50</td><td>United States 1 day at $8.40 (before any code)</td></tr>
+        <tr><td>Unlimited</td><td>Regional unlimited plans: full speed for the first 3GB each day, then 1Mbps until midnight</td><td>Not covered here</td></tr>
+        <tr><td>Refunds</td><td>Not covered here</td><td>Unused plans refundable within 30 days of purchase</td></tr>
+        <tr><td>Hotspot</td><td>Supported on Airalo plans generally</td><td>On by default, tethered data counts against your plan</td></tr>
+        <tr><td>Phone number</td><td>Data only, as on most eSIMs on this site</td><td>Data only, calls run through apps like WhatsApp</td></tr>
+      </tbody>
+    </table>
+    <p class="content-note">Prices and plan details come from each provider's own site and our articles as of November 2026 and change often. Where a cell says "not covered here," we did not find it stated clearly enough to repeat, so we are not guessing.</p>
+  </div>
+
+  <h2>Discount Codes</h2>
+  <div class="content-box content-box--tan">
+    <ul>
+      <li><strong>Airalo:</strong> {{ providerA.primaryCode }}, {{ airaloBest.discount | lower }}. It is Airalo's official new-customer code for affiliate partners, not one of ours. <a href="/airalo/">Full code list &rarr;</a></li>
+      <li><strong>Yesim:</strong> {{ providerB.primaryCode }}, {{ yesimBest.discount | lower }}. It is a public code, not one of ours. <a href="/yesim/">Full code list &rarr;</a></li>
+    </ul>
+    <p style="margin-top:.75rem;margin-bottom:0;color:#63553F;">Both codes are aimed at first-time buyers. A percentage off a small per-GB plan saves less in dollars than the same percentage off a bigger bundle, so compare the price after the code, not the sticker price.</p>
+  </div>
+
+  <h2>Is Airalo or Yesim the Right Pick</h2>
+  <div class="decision-grid">
+    <div class="decision-card decision-card--primary">
+      <h3>Go with Airalo if&hellip;</h3>
+      <ul>
+        <li>You know roughly how much data a single trip needs</li>
+        <li>You are comfortable checking a data meter mid-trip</li>
+        <li>You want a fixed price per GB and a clear cap</li>
+      </ul>
+    </div>
+    <div class="decision-card decision-card--secondary">
+      <h3>Go with Yesim if&hellip;</h3>
+      <ul>
+        <li>You travel often and want one balance you top up trip after trip</li>
+        <li>You want the option of a refund if you buy ahead and the plan goes unused</li>
+        <li>You would rather pay in dollars for data used than track a fixed allowance</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Two Things Worth Knowing Before You Decide</h2>
+  <p>
+    <strong>Yesim is the pricier of the two on day-based plans.</strong> Yesim sits in the expensive bracket on this site, and you are paying for the refund window and the balance model more than for the lowest rate per GB. If price per GB is your only concern, <a href="/airhub/">Airhub</a> or <a href="/holafly/">Holafly</a> are usually cheaper places to start.
+  </p>
+  <p>
+    <strong>Airalo's "unlimited" has a daily ceiling.</strong> Regional unlimited plans run at full speed for the first 3GB each day, then throttle to 1Mbps until the allowance resets at midnight. If you want a single fixed price for a month of heavy use, see our <a href="/compare/holafly-vs-airalo/">Holafly vs Airalo</a> comparison.
+  </p>
+  <p>
+    For device setup and eSIM basics that apply to both providers, see our <a href="/compatible-devices/">eSIM compatible devices</a> guide.
+  </p>
+
+  <h2>Airalo vs Yesim FAQ</h2>
+  <div class="content-faq">
+    <div class="content-faq-item">
+      <h3>Which is cheaper, Airalo or Yesim</h3>
+      <p>For a single trip, Airalo's fixed per-GB plans are usually the cheaper of the two on sticker price. Yesim sits in the expensive bracket for day-based plans, though its Pay &amp; Fly balance starts at $1.10/GB. Compare the price for your exact country after the code.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does Airalo or Yesim data expire</h3>
+      <p>Airalo's eSIM does not expire before activation, but once activated the plan's validity window (typically 7 to 30 days) starts counting down. Yesim says unused Pay &amp; Fly balance carries over to your next trip.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Can I get a refund on either one</h3>
+      <p>Yesim advertises a 30-day money-back guarantee on unused plans. We did not find a comparable refund promise for Airalo, so read its terms before buying.</p>
+    </div>
+    <div class="content-faq-item">
+      <h3>Does Airalo or Yesim have a discount code</h3>
+      <p>Both do. Airalo: {{ providerA.primaryCode }}, {{ airaloBest.discount | lower }}. Yesim: {{ providerB.primaryCode }}, {{ yesimBest.discount | lower }}. Both are aimed at first-time buyers.</p>
+    </div>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"en",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which is cheaper, Airalo or Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"For a single trip, Airalo's fixed per-GB plans are usually cheaper on sticker price. Yesim sits in the expensive bracket for day-based plans, though its Pay & Fly balance starts at $1.10/GB. Compare the price for your exact country after the code."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Airalo or Yesim data expire?",
+        "acceptedAnswer":{"@type":"Answer","text":"Airalo's eSIM does not expire before activation, but once activated the plan's validity window, typically 7 to 30 days, starts counting down. Yesim says unused Pay & Fly balance carries over to the next trip."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I get a refund on Airalo or Yesim?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yesim advertises a 30-day money-back guarantee on unused plans. No comparable refund promise was found for Airalo."}
+      },
+      {
+        "@type":"Question",
+        "name":"Does Airalo or Yesim have a discount code?",
+        "acceptedAnswer":{"@type":"Answer","text":"Both do. Airalo has NEWTOAIRALO15 and Yesim has TEE20, both aimed at first-time buyers."}
+      }
+    ]
+  }
+  </script>
+</div>

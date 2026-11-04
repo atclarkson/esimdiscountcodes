@@ -470,5 +470,13 @@
     "title": "BNEsim vs Yesim: Fixed No-Expiry Packs or a Rolling Balance? (2026 Comparison)",
     "description": "BNEsim vs Yesim compared: BNEsim's per-country packs with an optional no-expiration tier versus Yesim's Pay & Fly rolling balance, refunds, discount codes, and which fits your trips.",
     "lastUpdated": "2026-10-31"
+  },
+  {
+    "slug": "airalo-vs-yesim",
+    "providerA": "airalo",
+    "providerB": "yesim",
+    "title": "Airalo vs Yesim: Fixed Per-GB Plans or a Rolling Balance? (2026 Comparison)",
+    "description": "Airalo vs Yesim compared: Airalo's fixed per-GB plans versus Yesim's Pay & Fly rolling balance, refunds, unlimited limits, discount codes, and which fits how you travel.",
+    "lastUpdated": "2026-11-04"
   }
 ]
