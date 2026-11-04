@@ -21,3 +21,5 @@
 (2026-11-03 second run: no new Search Console data supplied. The ranking pages (/bnesim/, /orange/) and buried pages (/airalo/, /yesim/, /nomad/, /ubigi/) are already cross-linked both ways in EN/DE/ES, so no link was added.)
 
 (2026-11-04 run: no new Search Console data supplied. Used the new Airalo vs Yesim comparison to link the two buried pages, /airalo/ and /yesim/, to each other's comparison from their decision grids in EN/DE/ES. Both were already cross-linked as plain alternatives; the comparison link adds a genuine deeper read for a reader weighing a fixed per-GB plan against a rolling balance.)
+
+(2026-11-04 second run: no new Search Console data supplied. The ranking pages (/bnesim/, /orange/) and buried pages (/airalo/, /yesim/, /nomad/, /ubigi/) are already cross-linked both ways in EN/DE/ES, so no link was added.)
