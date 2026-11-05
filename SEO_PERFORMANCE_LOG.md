@@ -25,3 +25,5 @@
 (2026-11-04 second run: no new Search Console data supplied. The ranking pages (/bnesim/, /orange/) and buried pages (/airalo/, /yesim/, /nomad/, /ubigi/) are already cross-linked both ways in EN/DE/ES, so no link was added.)
 
 (2026-11-05 run: no new Search Console data supplied. Ranking pages (/bnesim/, /orange/) and buried pages (/airalo/, /yesim/, /nomad/, /ubigi/) are already cross-linked both ways in EN/DE/ES, so no link was added.)
+
+(2026-11-05 second run: no new Search Console data supplied. Ranking pages (/bnesim/, /orange/) and buried pages (/airalo/, /yesim/, /nomad/, /ubigi/) remain cross-linked both ways in EN/DE/ES, so no link was added.)
