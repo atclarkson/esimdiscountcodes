@@ -1473,7 +1473,7 @@
         "discount": "10% OFF ESIM",
         "description": "Public discount code advertised on eSIM Card's site",
         "verified": true,
-        "lastTested": "2026-11-14",
+        "lastTested": "2026-11-15",
         "expiryDate": null,
         "isPrimary": true,
         "type": "public"
